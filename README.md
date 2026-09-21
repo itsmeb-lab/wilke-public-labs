@@ -1,4 +1,4 @@
-﻿# Wilke Public Labs
+# Wilke Public Labs
 
 Public, inspectable capability demos for automation, workflow reliability, and AI-assisted systems.
 
@@ -47,4 +47,3 @@ This repository is intentionally separate from private Wilke ecosystem repositor
 ## License
 
 MIT. See [LICENSE](./LICENSE).
-
