@@ -23,6 +23,8 @@ Interactive browser sandbox demonstrating:
 
 **Public lab index:** https://itsmeb-lab.github.io/wilke-public-labs/
 
+![Automation Reliability Lab](./automation-reliability-lab/real-demo.png)
+
 ## Run locally
 
 ```bash

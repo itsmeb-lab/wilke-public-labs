@@ -10,96 +10,125 @@
 <body>
   <header class="topbar">
     <a class="brand" href="../">Wilke Public Labs</a>
-    <div class="top-actions"><a class="repo-link" href="https://github.com/itsmeb-lab/wilke-public-labs" target="_blank" rel="noreferrer">View source &#8599;</a><span class="sandbox">Sandbox only &middot; no real external actions</span></div>
+    <div class="top-actions">
+      <a class="repo-link" href="https://github.com/itsmeb-lab/wilke-public-labs" target="_blank" rel="noreferrer">Source ↗</a>
+      <span class="sandbox">Sandbox · no external side effects</span>
+    </div>
   </header>
+
   <main class="shell">
-    <section class="hero">
-      <div>
-        <p class="eyebrow">Interactive capability demo</p>
+    <section class="hero-grid">
+      <div class="hero-copy">
+        <p class="context-label">Wilke Labs · public proof 01</p>
         <h1>Automation Reliability Lab</h1>
-        <p class="lede">Recovery paths &middot; Approval gates &middot; Duplicate suppression &middot; Audit receipts</p>
+        <p class="lede">Break the workflow on purpose. Watch it recover, stop for approval, suppress the replay, and leave a receipt you can inspect.</p>
+        <div class="health" id="healthBadge"><span></span> Browser sandbox ready</div>
       </div>
-      <div class="health" id="healthBadge"><span></span> Ready</div>
-    </section>
-    <section class="stats" aria-label="Demo statistics">
-      <article><small>Runs</small><strong id="runsStat">0</strong></article>
-      <article><small>Recovered</small><strong id="recoveredStat">0</strong></article>
-      <article><small>Duplicates blocked</small><strong id="duplicateStat">0</strong></article>
-      <article><small>Pending approvals</small><strong id="approvalStat">0</strong></article>
-    </section>    <section class="workspace">
-      <aside class="control-panel">
-        <h2>Test the controls</h2>
-        <p>Each button executes real browser-side logic and writes an inspectable event trail.</p>
-        <label for="requestKey">Idempotency key</label>
-        <input id="requestKey" value="demo-order-001" autocomplete="off">
-        <button class="primary" id="successBtn">Run successful workflow</button>
-        <button id="failureBtn">Inject failure + recover</button>
-        <button id="approvalBtn">Run gated action</button>
-        <button id="replayBtn">Replay same request</button>
-        <div class="button-row">
-          <button class="secondary" id="downloadBtn">Download receipts</button>
-          <button class="danger ghost" id="resetBtn">Reset</button>
-        </div>
-        <div class="explain">
-          <strong>What is real here?</strong>
-          <p>The state machine, retry/fallback logic, approval gate, idempotency check, and receipt generation are executable code. External side effects are intentionally simulated.</p>
-        </div>
+      <aside class="start-note">
+        <span class="note-index">START HERE</span>
+        <h2>Make it fail.</h2>
+        <p>The fastest way to understand the lab is to inject a failure, then follow the recovery trace into the evidence ledger.</p>
+        <a href="#scenarios">Run the recovery scenario ↓</a>
       </aside>
-      <section class="main-panel">
-        <div class="panel-header">
-          <div>
-            <h2>Live workflow state</h2>
-            <p id="stateSubtitle">No run started yet.</p>
-          </div>
-          <div class="state-chip" id="stateChip">IDLE</div>
+    </section>
+
+    <section class="run-meta" aria-label="Demo statistics">
+      <span><b id="runsStat">0</b> runs</span><i>/</i>
+      <span><b id="recoveredStat">0</b> recovered</span><i>/</i>
+      <span><b id="duplicateStat">0</b> replay blocked</span><i>/</i>
+      <span><b id="approvalStat">0</b> waiting</span>
+    </section>
+
+    <section class="instrument">
+      <div class="panel-header">
+        <div>
+          <p class="section-kicker">Current run</p>
+          <h2>Live workflow state</h2>
+          <p id="stateSubtitle">No run started yet.</p>
         </div>
-        <div class="flow" id="flow">
-          <div class="flow-step" data-step="received">1<span>Received</span></div>
-          <div class="flow-line"></div>
-          <div class="flow-step" data-step="validated">2<span>Validated</span></div>
-          <div class="flow-line"></div>
-          <div class="flow-step" data-step="guarded">3<span>Guarded</span></div>
-          <div class="flow-line"></div>
-          <div class="flow-step" data-step="dispatched">4<span>Dispatched</span></div>
-          <div class="flow-line"></div>
-          <div class="flow-step" data-step="completed">5<span>Completed</span></div>
-        </div>        <section class="approval-box hidden" id="approvalBox">
-          <div>
-            <strong>Human approval required</strong>
-            <p id="approvalText">A consequential action is waiting for explicit approval.</p>
-          </div>
-          <div class="button-row">
-            <button class="primary" id="approveBtn">Approve</button>
-            <button class="danger" id="rejectBtn">Reject</button>
-          </div>
-        </section>
-        <section class="receipt-panel">
-          <div class="panel-header compact">
-            <div>
-              <h2>Event receipts</h2>
-              <p>Append-only evidence generated by this demo session.</p>
-            </div>
-            <span id="receiptCount">0 events</span>
-          </div>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>#</th><th>Time</th><th>Event</th><th>Detail</th><th>State</th></tr></thead>
-              <tbody id="receiptBody"><tr class="empty-row"><td colspan="5">Run a scenario to generate evidence.</td></tr></tbody>
-            </table>
-          </div>
-        </section>
+        <div class="state-chip" id="stateChip">IDLE</div>
+      </div>
+
+      <div class="flow" id="flow" aria-label="Workflow steps">
+        <div class="flow-step" data-step="received"><span class="step-number">01</span><span class="step-copy"><strong>Received</strong><small>Request accepted</small></span></div>
+        <div class="flow-line"></div>
+        <div class="flow-step" data-step="validated"><span class="step-number">02</span><span class="step-copy"><strong>Validated</strong><small>Input and policy checked</small></span></div>
+        <div class="flow-line"></div>
+        <div class="flow-step" data-step="guarded"><span class="step-number">03</span><span class="step-copy"><strong>Guarded</strong><small>Approval and idempotency gates</small></span></div>
+        <div class="flow-line"></div>
+        <div class="flow-step" data-step="dispatched"><span class="step-number">04</span><span class="step-copy"><strong>Dispatched</strong><small>Sandbox side effect recorded</small></span></div>
+        <div class="flow-line"></div>
+        <div class="flow-step" data-step="completed"><span class="step-number">05</span><span class="step-copy"><strong>Completed</strong><small>Terminal receipt written</small></span></div>
+      </div>
+
+      <section class="approval-box hidden" id="approvalBox">
+        <div>
+          <strong>Human approval required</strong>
+          <p id="approvalText">A consequential action is waiting for explicit approval.</p>
+        </div>
+        <div class="button-row">
+          <button class="primary" id="approveBtn">Approve dispatch</button>
+          <button class="danger" id="rejectBtn">Reject</button>
+        </div>
       </section>
     </section>
-    <section class="proof">
-      <h2>What this demonstrates</h2>
-      <div class="proof-grid">
-        <article><strong>Deterministic recovery</strong><p>Bounded retry then explicit fallback instead of silent failure.</p></article>
-        <article><strong>Approval before consequence</strong><p>Gated actions cannot dispatch until a human decision exists.</p></article>
-        <article><strong>Idempotency</strong><p>Replaying the same completed request is suppressed rather than duplicated.</p></article>
-        <article><strong>Auditability</strong><p>Every state transition emits a downloadable timestamped receipt.</p></article>
+
+    <section class="controls" id="scenarios">
+      <div class="controls-intro">
+        <p class="section-kicker">Try it yourself</p>
+        <h2>Run a scenario</h2>
+        <p>The engine below is executable browser-side logic. External systems are deliberately simulated so you can test the controls safely.</p>
+      </div>
+      <div class="key-row">
+        <label for="requestKey">Idempotency key</label>
+        <input id="requestKey" value="demo-order-001" autocomplete="off">
+      </div>
+      <div class="scenario-row">
+        <button class="primary" id="failureBtn">Inject failure + recover</button>
+        <button id="successBtn">Run success path</button>
+        <button id="approvalBtn">Run approval gate</button>
+        <button id="replayBtn">Replay same request</button>
+      </div>
+      <div class="utility-row">
+        <button class="text-button" id="downloadBtn">Download receipts</button>
+        <button class="text-button danger-text" id="resetBtn">Reset demo</button>
       </div>
     </section>
+
+    <section class="receipt-panel">
+      <div class="panel-header compact">
+        <div>
+          <p class="section-kicker">Evidence</p>
+          <h2>Event receipts</h2>
+          <p>Append-only evidence from this browser session. Times and states are generated by the live demo.</p>
+        </div>
+        <span id="receiptCount">0 events</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Time</th><th>Event</th><th>Detail</th><th>State</th></tr></thead>
+          <tbody id="receiptBody"><tr class="empty-row"><td colspan="5">Run a scenario to generate evidence.</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="proof">
+      <p class="section-kicker">What this proves</p>
+      <h2>Four controls buyers should be able to inspect, not just hear about.</h2>
+      <ol class="proof-list">
+        <li><div><strong>Deterministic recovery</strong><p>Bounded retry and explicit fallback instead of silent failure or endless retry loops.</p></div></li>
+        <li><div><strong>Approval before consequence</strong><p>Gated actions cannot dispatch until a human decision exists.</p></div></li>
+        <li><div><strong>Idempotency</strong><p>Replaying the same completed request is suppressed rather than duplicated.</p></div></li>
+        <li><div><strong>Auditability</strong><p>Every meaningful transition emits a timestamped receipt you can download and inspect.</p></div></li>
+      </ol>
+    </section>
+
+    <footer>
+      <span>Internal capability sample · not a paid-client production deployment.</span>
+      <a href="https://github.com/itsmeb-lab/wilke-public-labs" target="_blank" rel="noreferrer">Inspect the source ↗</a>
+    </footer>
   </main>
+
   <script type="module" src="./app.js"></script>
 </body>
 </html>
