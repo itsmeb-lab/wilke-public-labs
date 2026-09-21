@@ -1,4 +1,4 @@
-# Wilke Public Labs
+﻿# Wilke Public Labs
 
 Public, inspectable capability demos for automation, workflow reliability, and AI-assisted systems.
 
@@ -19,7 +19,7 @@ Interactive browser sandbox demonstrating:
 - timestamped, downloadable event receipts
 - safe no-side-effect sandbox behavior
 
-Open the deployed demo from this repository's GitHub Pages site.
+**Live demo:** https://itsmeb-lab.github.io/wilke-public-labs/automation-reliability-lab/`n`n**Public lab index:** https://itsmeb-lab.github.io/wilke-public-labs/
 
 ## Run locally
 
@@ -47,3 +47,4 @@ This repository is intentionally separate from private Wilke ecosystem repositor
 ## License
 
 MIT. See [LICENSE](./LICENSE).
+
