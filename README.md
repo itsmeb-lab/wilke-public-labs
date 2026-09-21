@@ -19,7 +19,9 @@ Interactive browser sandbox demonstrating:
 - timestamped, downloadable event receipts
 - safe no-side-effect sandbox behavior
 
-**Live demo:** https://itsmeb-lab.github.io/wilke-public-labs/automation-reliability-lab/`n`n**Public lab index:** https://itsmeb-lab.github.io/wilke-public-labs/
+**Live demo:** https://itsmeb-lab.github.io/wilke-public-labs/automation-reliability-lab/
+
+**Public lab index:** https://itsmeb-lab.github.io/wilke-public-labs/
 
 ## Run locally
 
