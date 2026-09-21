@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Windows Process Recovery Watchdog</title><meta name="description" content="Interactive public demo of deterministic Windows process recovery."><link rel="stylesheet" href="./styles.css"></head>
+<body>
+<header class="topbar"><a href="../" class="brand">Wilke Public Labs</a><div class="top-actions"><a href="https://github.com/itsmeb-lab/wilke-public-labs/tree/main/windows-process-recovery-watchdog" target="_blank" rel="noreferrer">Source ↗</a><span>Browser mirror · no real Windows process control</span></div></header>
+<main class="shell">
+<section class="hero"><p class="eyebrow">Wilke Labs · public proof 02</p><h1>Windows Process Recovery Watchdog</h1><p class="lede">A real PowerShell watchdog, mirrored here as a safe recovery instrument: start when absent, never duplicate a healthy process, then restart after a crash.</p></section>
+
+<section class="instrument">
+  <div class="instrument-head"><div><span id="beat">01 / ABSENT</span><h2 id="state">ABSENT</h2><p id="instruction">No process is running. The watchdog should start exactly one.</p></div><div class="pid-block"><small>PID</small><strong id="pid">—</strong></div></div>
+  <button id="stepBtn" class="primary-action">Run watchdog check</button>
+  <button id="resetBtn" class="reset-action">Reset demo</button>
+  <div class="tally"><span><b id="starts">0</b> starts</span><span><b id="restarts">0</b> restarts</span><span><b id="dupes">0</b> duplicates avoided</span></div>
+  <div class="truth">This browser instrument mirrors the public state model only. It cannot inspect or restart your Windows processes.</div>
+</section>
+
+<section class="evidence">
+  <div class="evidence-head"><div><p class="eyebrow">Run log</p><h2>What just happened</h2><p>The newest receipt is highlighted. The full sequence stays visible so recovery is inspectable, not implied.</p></div><span id="receiptCount">0 receipts</span></div>
+  <div id="receiptLog" class="receipt-log"></div>
+</section>
+
+<section class="implementation">
+  <div><p class="eyebrow">Real implementation</p><h2>The browser proof is backed by runnable PowerShell.</h2><p>The public repo includes the actual watchdog and a synthetic Windows fixture that verifies absent → started, healthy → unchanged, and crashed → restarted behavior.</p><div class="links"><a href="./powershell/Invoke-ProcessWatchdog.ps1">Watchdog script ↗</a><a href="./powershell/Test-ProcessWatchdog.ps1">Fixture test ↗</a></div></div>
+  <div class="proof-list"><div><span>01</span><p><strong>Start when absent</strong><br>Launch one bounded target and verify it stays alive.</p></div><div><span>02</span><p><strong>Do not duplicate</strong><br>A healthy matching process is logged and left alone.</p></div><div><span>03</span><p><strong>Restart after crash</strong><br>The next missing-process check creates one fresh PID.</p></div></div>
+</section>
+<footer><span>Synthetic capability sample · no customer or production process data.</span><a href="https://github.com/itsmeb-lab/wilke-public-labs" target="_blank" rel="noreferrer">Inspect all public labs ↗</a></footer>
+</main><script type="module" src="./app.js"></script></body></html>

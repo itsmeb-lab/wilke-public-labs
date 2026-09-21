@@ -8,7 +8,7 @@ Freelance profiles and claims are weak evidence. This repository is the opposite
 
 ## Live labs
 
-### Automation Reliability Lab
+### 01 — Automation Reliability Lab
 
 Interactive browser sandbox demonstrating:
 
@@ -21,9 +21,21 @@ Interactive browser sandbox demonstrating:
 
 **Live demo:** https://itsmeb-lab.github.io/wilke-public-labs/automation-reliability-lab/
 
-**Public lab index:** https://itsmeb-lab.github.io/wilke-public-labs/
-
 ![Automation Reliability Lab](./automation-reliability-lab/real-demo.png)
+
+### 02 — Windows Process Recovery Watchdog
+
+Real PowerShell watchdog plus an interactive browser mirror demonstrating:
+
+- start when absent
+- avoid duplicate starts while healthy
+- restart after crash with a fresh PID
+- timestamped watchdog receipts
+- fixture tests covering all three states
+
+**Live demo:** https://itsmeb-lab.github.io/wilke-public-labs/windows-process-recovery-watchdog/
+
+**Public lab index:** https://itsmeb-lab.github.io/wilke-public-labs/
 
 ## Run locally
 
@@ -32,10 +44,22 @@ npm test
 python -m http.server 8080
 ```
 
-Then open `http://localhost:8080/automation-reliability-lab/`.
+Then open either:
+
+- `http://localhost:8080/automation-reliability-lab/`
+- `http://localhost:8080/windows-process-recovery-watchdog/`
+
+## Windows watchdog fixture
+
+On Windows PowerShell:
+
+```powershell
+.\windows-process-recovery-watchdog\powershell\Test-ProcessWatchdog.ps1
+```
+
 ## Truth boundary
 
-These are public capability demonstrations, not paid-client production deployments, customer data, or claims of external ROI. External side effects in the reliability lab are deliberately simulated.
+These are public capability demonstrations, not paid-client production deployments, customer data, or claims of external ROI. External side effects in browser labs are deliberately simulated.
 
 ## Public-safety boundary
 
