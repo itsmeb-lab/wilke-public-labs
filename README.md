@@ -1,5 +1,7 @@
 # Wilke Public Labs
 
+[![Public Labs Verification](https://github.com/itsmeb-lab/wilke-public-labs/actions/workflows/verify.yml/badge.svg)](https://github.com/itsmeb-lab/wilke-public-labs/actions/workflows/verify.yml)
+
 Public, inspectable capability demos for automation, workflow reliability, and AI-assisted systems.
 
 ## Why this repository exists
