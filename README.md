@@ -4,6 +4,8 @@
 
 Public, inspectable capability demos for automation, workflow reliability, and AI-assisted systems.
 
+**Need help building or repairing a real automation workflow?** [View services](https://wilkeway.com/services/) or [message me on Upwork](https://www.upwork.com/freelancers/~019f8d1b56a7ac81d6).
+
 ## Why this repository exists
 
 Freelance profiles and claims are weak evidence. This repository is the opposite: small runnable demos with source code, explicit truth boundaries, and reproducible tests.
@@ -73,6 +75,10 @@ This repository is intentionally separate from private Wilke ecosystem repositor
 - absolute workstation paths
 - private email addresses
 - proprietary source copied from private repositories without review
+
+## Work with me
+
+If you need help with AI agents, API integrations, CRM/lead-routing automation, voice AI, or workflow reliability, [message me on Upwork](https://www.upwork.com/freelancers/~019f8d1b56a7ac81d6) or visit [wilkeway.com/services](https://wilkeway.com/services/).
 
 ## License
 
