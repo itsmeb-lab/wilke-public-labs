@@ -44,7 +44,10 @@ export class SyntheticHandoff {
   #accepted = new Map();
   process(call) {
     const trace=[traceEntry('RECEIVE','OK','Synthetic inbound event received in memory.')];
-    if (!call || typeof call.id!=='string' || !/^DEMO-CALL-\d{4}$/.test(call.id) ||
+    if (!call || typeof call!=='object' || Array.isArray(call) ||
+        !['id','at','caller','intent','consentSms','urgent'].every(key=>Object.hasOwn(call,key)) ||
+        typeof call.consentSms!=='boolean' || typeof call.urgent!=='boolean' ||
+        typeof call.id!=='string' || !/^DEMO-CALL-\d{4}$/.test(call.id) ||
         !validPhone(call.caller) || !['appointment','estimate','urgent'].includes(call.intent) ||
         !call.at || Number.isNaN(Date.parse(call.at))) {
       trace.push(traceEntry('VALIDATE','REJECTED','Malformed or missing synthetic input. No handoff created.'));
@@ -68,7 +71,7 @@ export class SyntheticHandoff {
       status='OWNER_REVIEW_REQUIRED';owner=call.intent==='appointment'?'Scheduling desk':'Estimates desk';
       trace.push(traceEntry('ROUTE','REVIEW','An owner must accept this proposed handoff; no booking confirmed.'));
     }
-    const sms=call.consentSms && !call.urgent && call.intent!=='urgent' ? 'PREVIEW_ONLY':'SUPPRESSED';
+    const sms=call.consentSms===true && call.urgent===false && call.intent!=='urgent' ? 'PREVIEW_ONLY':'SUPPRESSED';
     trace.push(traceEntry('ACKNOWLEDGE',sms,sms==='PREVIEW_ONLY' ?
       'Acknowledgment eligibility preview only; nothing composed, queued or sent.':
       'No SMS action due to consent or escalation safeguards.'));
