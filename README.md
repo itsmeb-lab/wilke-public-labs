@@ -41,6 +41,23 @@ Real PowerShell watchdog plus an interactive browser mirror demonstrating:
 
 **Public lab index:** https://itsmeb-lab.github.io/wilke-public-labs/
 
+### 03 — Voice-to-CRM Handoff Lab
+
+Interactive, **fully synthetic** call-to-scheduling handoff model demonstrating:
+
+- fictional calls, reserved 555-01XX numbers and no third-party requests
+- schema validation and duplicate-call suppression
+- business-hours versus callback routing
+- SMS permission checks and safe human escalation
+- in-memory, transparent structured receipts
+- twelve automated Node.js safety and behavior tests
+
+**Live demo after review and merge:** https://itsmeb-lab.github.io/wilke-public-labs/voice-to-crm-handoff/
+
+**Source and truth boundaries:** [Voice-to-CRM Handoff](./voice-to-crm-handoff/README.md)
+
+**This is a code/test capability demonstration, not a production phone service, paid-client deployment, or realized ROI.**
+
 ## Run locally
 
 ```bash
@@ -48,10 +65,11 @@ npm test
 python -m http.server 8080
 ```
 
-Then open either:
+Then open any of:
 
 - `http://localhost:8080/automation-reliability-lab/`
 - `http://localhost:8080/windows-process-recovery-watchdog/`
+- `http://localhost:8080/voice-to-crm-handoff/`
 
 ## Windows watchdog fixture
 
