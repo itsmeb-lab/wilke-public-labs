@@ -3,9 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Automation Reliability Lab</title>
-  <meta name="description" content="Interactive sandbox for recovery, approval gates, idempotency, and audit receipts.">
+  <title>Automation Reliability Lab | Retries, Approval &amp; Idempotency</title>
+  <meta name="description" content="Run a safe workflow sandbox: inject a failure, test bounded retries and fallback, approve or reject a simulated action, and inspect duplicate suppression.">
   <link rel="stylesheet" href="./styles.css">
+
+<link rel="canonical" href="https://itsmeb-lab.github.io/wilke-public-labs/automation-reliability-lab/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Automation Reliability Lab | Retries, Approval &amp; Idempotency">
+<meta property="og:description" content="Run a safe workflow sandbox: inject a failure, test bounded retries and fallback, approve or reject a simulated action, and inspect duplicate suppression.">
+<meta property="og:url" content="https://itsmeb-lab.github.io/wilke-public-labs/automation-reliability-lab/">
+<meta property="og:image" content="https://itsmeb-lab.github.io/wilke-public-labs/automation-reliability-lab/real-demo.png">
+<meta property="og:image:alt" content="Screenshot of the public sandbox demonstration; not a customer system.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="sitemap" type="application/xml" href="../sitemap.xml">
+<link rel="stylesheet" href="../lab-site.css">
 </head>
 <body>
   <header class="topbar">
@@ -22,6 +33,7 @@
         <p class="context-label">Wilke Labs · public proof 01</p>
         <h1>Automation Reliability Lab</h1>
         <p class="lede">Break the workflow on purpose. Watch it recover, stop for approval, suppress the replay, and leave a receipt you can inspect.</p>
+        <p class="service-inline"><a data-diagnostic-link href="https://wilkeservices.com/software-diagnostic?utm_source=wilke_public_labs&amp;utm_medium=referral&amp;utm_campaign=software_diagnostic&amp;utm_content=automation_lab">For a real API or form issue: see the $150 diagnostic scope</a></p>
         <div class="health" id="healthBadge"><span></span> Browser sandbox ready</div>
       </div>
       <aside class="start-note">
@@ -123,7 +135,16 @@
       </ol>
     </section>
 
-    <footer>
+
+<section class="service-note" aria-labelledby="diagnostic-title">
+  <p class="service-kicker">A small, defined paid service</p>
+  <h2 id="diagnostic-title">Need a diagnosis for a real workflow?</h2>
+  <p><strong>$150 USD, one time.</strong> Diagnose one agreed JavaScript or Node.js API, webhook or lead-form issue. Receive a safe reproduction, focused tests, prioritized repair notes and one clarification. Implementation is separate.</p>
+  <div class="service-actions"><a class="service-cta" data-diagnostic-link href="https://wilkeservices.com/software-diagnostic?utm_source=wilke_public_labs&amp;utm_medium=referral&amp;utm_campaign=software_diagnostic&amp;utm_content=automation_lab">See the scope and prepare an inquiry <span aria-hidden="true">&#8594;</span></a><a href="https://wilkeservices.com/downloads/api-webhook-diagnostic-sample.txt">Read a fictional sample handoff</a></div>
+
+  <p class="service-limit">Inquiry first; no checkout here. The labs are capability demonstrations, not paid-client results. Found us on Upwork? Keep pre-contract discussion and payment in your Upwork conversation.</p>
+</section>
+<footer>
       <span>Internal capability sample · not a paid-client production deployment.</span>
       <a href="https://github.com/itsmeb-lab/wilke-public-labs" target="_blank" rel="noreferrer">Inspect the source ↗</a>
     </footer>
