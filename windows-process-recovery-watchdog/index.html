@@ -1,5 +1,16 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Windows Process Recovery Watchdog</title><meta name="description" content="Interactive public demo of deterministic Windows process recovery."><link rel="stylesheet" href="./styles.css"></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Windows Process Recovery Watchdog | Wilke Public Labs</title><meta name="description" content="Explore a synthetic Windows watchdog state model: start when absent, avoid a duplicate process, and recover after a simulated crash. Source and fixture included."><link rel="stylesheet" href="./styles.css">
+<link rel="canonical" href="https://itsmeb-lab.github.io/wilke-public-labs/windows-process-recovery-watchdog/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Windows Process Recovery Watchdog | Wilke Public Labs">
+<meta property="og:description" content="Explore a synthetic Windows watchdog state model: start when absent, avoid a duplicate process, and recover after a simulated crash. Source and fixture included.">
+<meta property="og:url" content="https://itsmeb-lab.github.io/wilke-public-labs/windows-process-recovery-watchdog/">
+<meta property="og:image" content="https://itsmeb-lab.github.io/wilke-public-labs/windows-process-recovery-watchdog/real-demo.png">
+<meta property="og:image:alt" content="Screenshot of the public sandbox demonstration; not a customer system.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="sitemap" type="application/xml" href="../sitemap.xml">
+<link rel="stylesheet" href="../lab-site.css">
+</head>
 <body>
 <header class="topbar"><a href="../" class="brand">Wilke Public Labs</a><div class="top-actions"><a href="https://github.com/itsmeb-lab/wilke-public-labs/tree/main/windows-process-recovery-watchdog" target="_blank" rel="noreferrer">Source ↗</a><span>Browser mirror · no real Windows process control</span></div></header>
 <main class="shell">
@@ -21,6 +32,15 @@
 <section class="implementation">
   <div><p class="eyebrow">Real implementation</p><h2>The browser proof is backed by runnable PowerShell.</h2><p>The public repo includes the actual watchdog and a synthetic Windows fixture that verifies absent → started, healthy → unchanged, and crashed → restarted behavior.</p><div class="links"><a href="./powershell/Invoke-ProcessWatchdog.ps1">Watchdog script ↗</a><a href="./powershell/Test-ProcessWatchdog.ps1">Fixture test ↗</a></div></div>
   <div class="proof-list"><div><span>01</span><p><strong>Start when absent</strong><br>Launch one bounded target and verify it stays alive.</p></div><div><span>02</span><p><strong>Do not duplicate</strong><br>A healthy matching process is logged and left alone.</p></div><div><span>03</span><p><strong>Restart after crash</strong><br>The next missing-process check creates one fresh PID.</p></div></div>
+</section>
+
+<section class="service-note" aria-labelledby="diagnostic-title">
+  <p class="service-kicker">A small, defined paid service</p>
+  <h2 id="diagnostic-title">Have an API or lead-form problem as well?</h2>
+  <p><strong>$150 USD, one time.</strong> Diagnose one agreed JavaScript or Node.js API, webhook or lead-form issue. Receive a safe reproduction, focused tests, prioritized repair notes and one clarification. Implementation is separate.</p>
+  <div class="service-actions"><a class="service-cta" data-diagnostic-link href="https://wilkeservices.com/software-diagnostic?utm_source=wilke_public_labs&amp;utm_medium=referral&amp;utm_campaign=software_diagnostic&amp;utm_content=windows_lab">See the scope and prepare an inquiry <span aria-hidden="true">&#8594;</span></a><a href="https://wilkeservices.com/downloads/api-webhook-diagnostic-sample.txt">Read a fictional sample handoff</a></div>
+  <p class="service-limit">This is a separate software diagnostic. Windows setup, machine administration and process-recovery implementation are not included.</p>
+  <p class="service-limit">Inquiry first; no checkout here. The labs are capability demonstrations, not paid-client results. Found us on Upwork? Keep pre-contract discussion and payment in your Upwork conversation.</p>
 </section>
 <footer><span>Synthetic capability sample · no customer or production process data.</span><a href="https://github.com/itsmeb-lab/wilke-public-labs" target="_blank" rel="noreferrer">Inspect all public labs ↗</a></footer>
 </main><script type="module" src="./app.js"></script></body></html>

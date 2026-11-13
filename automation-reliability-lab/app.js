@@ -53,20 +53,35 @@ function stateClass(state) {
   if (["FAILED", "BLOCKED", "REJECTED"].includes(state)) return "state-bad";
   if (["WAITING", "RECOVERING", "RECOVERED"].includes(state)) return "state-warn";
   return "state-ok";
-}function renderReceipts() {
+}
+
+function renderReceipts() {
   refs.receiptCount.textContent = `${engine.events.length} event${engine.events.length === 1 ? "" : "s"}`;
+  const rows = document.createDocumentFragment();
   if (!engine.events.length) {
-    refs.receiptBody.innerHTML = '<tr class="empty-row"><td colspan="5">Run a scenario to generate evidence.</td></tr>';
-    return;
+    const row = document.createElement("tr");
+    row.className = "empty-row";
+    const cell = document.createElement("td");
+    cell.colSpan = 5;
+    cell.textContent = "Run a scenario to generate evidence.";
+    row.append(cell);
+    rows.append(row);
+  } else {
+    for (const event of engine.events.slice().reverse()) {
+      const row = document.createElement("tr");
+      const values = [event.seq, new Date(event.at).toLocaleTimeString(), event.event, event.detail, event.state];
+      for (const [index, value] of values.entries()) {
+        const cell = document.createElement("td");
+        // Request names are visitor-controlled text, never HTML markup.
+        cell.textContent = String(value ?? "");
+        if (index === 2) cell.className = "event-name";
+        if (index === 4) cell.className = stateClass(event.state);
+        row.append(cell);
+      }
+      rows.append(row);
+    }
   }
-  refs.receiptBody.innerHTML = engine.events.slice().reverse().map((e) => `
-    <tr>
-      <td>${e.seq}</td>
-      <td>${new Date(e.at).toLocaleTimeString()}</td>
-      <td class="event-name">${e.event}</td>
-      <td>${e.detail}</td>
-      <td class="${stateClass(e.state)}">${e.state}</td>
-    </tr>`).join("");
+  refs.receiptBody.replaceChildren(rows);
 }
 
 function render() {

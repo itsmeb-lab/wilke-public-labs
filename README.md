@@ -4,7 +4,7 @@
 
 Public, inspectable capability demos for automation, workflow reliability, and AI-assisted systems.
 
-**Need help building or repairing a real automation workflow?** [View services](https://wilkeway.com/services/) or [message me on Upwork](https://www.upwork.com/freelancers/~019f8d1b56a7ac81d6).
+**One API, webhook or lead-form problem?** [See the $150 USD diagnostic scope](https://wilkeservices.com/software-diagnostic?utm_source=wilke_public_labs&utm_medium=referral&utm_campaign=software_diagnostic&utm_content=repository_readme). The one-time package covers one agreed JavaScript/Node.js issue: safe reproduction, focused tests, repair notes and one clarification. Implementation is separate. Inquiry first; there is no checkout in this repository.
 
 ## Why this repository exists
 
@@ -78,7 +78,11 @@ This repository is intentionally separate from private Wilke ecosystem repositor
 
 ## Work with me
 
-If you need help with AI agents, API integrations, CRM/lead-routing automation, voice AI, or workflow reliability, [message me on Upwork](https://www.upwork.com/freelancers/~019f8d1b56a7ac81d6) or visit [wilkeway.com/services](https://wilkeway.com/services/).
+Start with the [diagnostic scope and free handoff checklist](https://wilkeservices.com/software-diagnostic). Review the explicitly [fictional sample handoff](https://wilkeservices.com/downloads/api-webhook-diagnostic-sample.txt) before discussing a project. Written scope, permitted access, timing and payment arrangements are agreed before work begins. This diagnostic does not include Windows administration or production implementation.
+
+Found these labs through Upwork? Keep pre-contract discussion and payment in the existing Upwork conversation. Do not use the direct-site contact route to move a marketplace relationship off-platform.
+
+The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the three published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
 
 ## License
 
