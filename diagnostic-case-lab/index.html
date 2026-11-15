@@ -55,10 +55,11 @@
     </section>
 
     <section class="evidence" aria-labelledby="trace-title">
-      <div class="section-head"><div><p class="eyebrow">02 / TRACE</p><h2 id="trace-title">Follow the evidence, not the toast.</h2><p>These observations come from executable, deterministic fixtures—not a customer deployment.</p></div><button type="button" class="download" id="downloadBtn">Download synthetic receipt ↓</button></div>
+      <div class="section-head"><div><p class="eyebrow">02 / TRACE</p><h2 id="trace-title">Follow the evidence, not the toast.</h2><p>These observations come from executable, deterministic fixtures—not a customer deployment.</p></div><div class="receipt-actions"><button type="button" class="download" id="downloadBtn">Download synthetic receipt ↓</button><p id="downloadStatus" role="status" aria-live="polite">Generated locally; no customer data.</p></div></div>
       <div class="table-scroll"><table><caption>Transport-to-owner evidence chain</caption><thead><tr><th scope="col">Layer</th><th scope="col">Observed</th><th scope="col">Evidence state</th></tr></thead><tbody id="traceBody"></tbody></table></div>
       <h3 class="subhead">Acceptance checks</h3>
       <div class="table-scroll"><table><caption>Sample checks for the single agreed issue</caption><thead><tr><th scope="col">Check</th><th scope="col">Result</th><th scope="col">Interpretation</th></tr></thead><tbody id="checkBody"></tbody></table></div>
+      <details class="receipt-details"><summary>Inspect the exact synthetic JSON receipt</summary><pre id="receiptJson"></pre></details>
     </section>
 
     <section class="conclusion" aria-labelledby="decision-title">

@@ -2,6 +2,8 @@ import { diagnose } from "./core.mjs";
 
 const $ = (id) => document.getElementById(id);
 let current = null;
+let currentReceipt = null;
+const columnLabels = { stage: "Layer", observation: "Observed", state: "Evidence state", name: "Check", result: "Result", note: "Interpretation" };
 const actions = [...document.querySelectorAll("[data-case]")];
 
 function renderRows(body, items, columns) {
@@ -11,6 +13,7 @@ function renderRows(body, items, columns) {
     for (const key of columns) {
       const cell = document.createElement("td");
       cell.textContent = String(item[key] ?? "");
+      cell.dataset.label = columnLabels[key];
       if (key === "state" || key === "result") cell.dataset.state = String(item[key] ?? "").toLowerCase();
       row.append(cell);
     }
@@ -44,18 +47,26 @@ function show(fixture, rule) {
     result: item.passed ? "PASS" : "NOT MET",
     note: item.note
   })), ["name", "result", "note"]);
+  currentReceipt = { exportedAt: new Date().toISOString(), ...current };
+  $("receiptJson").textContent = JSON.stringify(currentReceipt, null, 2);
+  $("downloadStatus").textContent = "Generated locally; no customer data.";
 }
 
 actions.forEach(action => action.addEventListener("click", () => show(action.dataset.case, action.dataset.rule)));
 $("downloadBtn").addEventListener("click", () => {
-  if (!current) return;
-  const payload = { exportedAt: new Date().toISOString(), ...current };
-  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  if (!currentReceipt) return;
+  const blob = new Blob([JSON.stringify(currentReceipt, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement("a");
   anchor.href = url;
   anchor.download = "synthetic-diagnostic-" + current.fixture + ".json";
+  anchor.hidden = true;
+  document.body.append(anchor);
   anchor.click();
-  URL.revokeObjectURL(url);
+  $("downloadStatus").textContent = "Download requested locally. If blocked, inspect the JSON receipt below.";
+  setTimeout(() => {
+    anchor.remove();
+    URL.revokeObjectURL(url);
+  }, 10000);
 });
 show("rejected_save", "legacy");

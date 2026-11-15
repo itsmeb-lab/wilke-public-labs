@@ -7,7 +7,7 @@ This is a public, synthetic case and a reusable delivery process for the [Wilke 
 - In a modern browser, serve the repository root over HTTP and open diagnostic-case-lab/index.html.
 - Or run the pure Node checks from the repository root with: npm test.
 - Open the case, choose **False success**, **Truthful failure**, and **Verified record**. The transport is HTTP 200 in each fixture; the application and saved-reference evidence decide what can be truthfully claimed.
-- Download the JSON receipt. It contains a synthetic case identifier, the chosen fixture, exact trace and acceptance results. No request is sent to an API, database or inbox.
+- Download the JSON receipt. It contains a synthetic case identifier, the chosen fixture, exact trace and acceptance results. If the browser blocks downloads, expand **Inspect the exact synthetic JSON receipt** to read the same data on-page. A download click does not guarantee a file was saved. No request is sent to an API, database or inbox.
 
 The code is intentionally narrow. It does not test a live email provider, customer storage, credentials, real network conditions, deployment, legal compliance or security certification.
 

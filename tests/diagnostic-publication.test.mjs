@@ -36,3 +36,20 @@ test("delivery kit includes intake, explicit acceptance and non-sent follow-ups"
   assert.match(read("CUSTOMER_MESSAGES.md"), /not sent messages/);
   assert.match(read("SAMPLE_HANDOFF.md"), /synthetic case SYN-API-001/);
 });
+
+test("mobile evidence is fully readable and shared offer variables resolve", () => {
+  assert.match(css, /--surface:#fffefb;--accent:#174f74;/);
+  assert.match(css, /@media\(max-width:640px\)/);
+  assert.match(css, /td::before\{content:attr\(data-label\)/);
+  assert.match(app, /cell\.dataset\.label = columnLabels\[key\]/);
+  assert.match(css, /footer span\{display:block\}/);
+});
+
+test("synthetic receipt can be inspected without a browser download", () => {
+  assert.match(page, /<details class="receipt-details">/);
+  assert.match(page, /<pre id="receiptJson"><\/pre>/);
+  assert.match(page, /id="downloadStatus" role="status"/);
+  assert.match(app, /receiptJson"\)\.textContent = JSON\.stringify\(currentReceipt/);
+  assert.match(app, /Download requested locally/);
+  assert.match(app, /setTimeout\(\(\) => \{/);
+});
