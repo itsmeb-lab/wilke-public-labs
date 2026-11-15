@@ -5,7 +5,8 @@ This is a public, synthetic case and a reusable delivery process for the [Wilke 
 ## Run the proof
 
 - In a modern browser, serve the repository root over HTTP and open diagnostic-case-lab/index.html.
-- Or run the pure Node checks from the repository root with: npm test.
+- Run the pure Node checks from the repository root with: `npm test`.
+- For independent headless visual/receipt QA, run `npm run verify:browser -- --out-dir <private-existing-or-new-receipt-folder>`. This uses an already-installed Chrome/Edge via Node's built-in CDP interface, starts a short-lived loopback server and isolated browser profile, captures 320px/390px screenshots, checks 1280px too, and intercepts the synthetic JSON download into a unique run subfolder under the chosen folder. No Playwright package, login, browser-profile reuse, customer data or external request is required; the script fails closed if checks fail. Do not put any real customer details in the fixture.
 - Open the case, choose **False success**, **Truthful failure**, and **Verified record**. The transport is HTTP 200 in each fixture; the application and saved-reference evidence decide what can be truthfully claimed.
 - Download the JSON receipt. It contains a synthetic case identifier, the chosen fixture, exact trace and acceptance results. If the browser blocks downloads, expand **Inspect the exact synthetic JSON receipt** to read the same data on-page. A download click does not guarantee a file was saved. No request is sent to an API, database or inbox.
 
@@ -20,6 +21,9 @@ Use these together; the website's email composer is an inquiry preparer, not an 
 3. [Acceptance checklist](./ACCEPTANCE_CHECKLIST.md) — evidence completeness and explicit buyer sign-off.
 4. [Synthetic sample handoff](./SAMPLE_HANDOFF.md) — model the distinction between observed fact, inference and unknown.
 5. [Customer message drafts](./CUSTOMER_MESSAGES.md) — editable templates for qualification, scope confirmation, delivery and clarification.
+6. [Customer scope packet](./CUSTOMER_SCOPE_PACKET.md) — blank one-issue, permission, timeline, $150 terms and affirmative written approval form, not an executed agreement.
+7. [Customer diagnostic report template](./REPORT_TEMPLATE.md) — explicit evidence ledger, unknowns, repair recommendation and acceptance choices; never a paid-client sample.
+8. [Pure engagement gate assessor](./engagement-gates.mjs) — optional, offline decision aid with fail-closed tests; it neither verifies a customer's reply or processor payment nor takes action.
 
 ## One-issue boundary
 

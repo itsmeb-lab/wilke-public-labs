@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "verify:browser": "node diagnostic-case-lab/verify-browser.mjs"
   }
 }

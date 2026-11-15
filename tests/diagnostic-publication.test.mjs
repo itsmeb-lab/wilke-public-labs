@@ -35,6 +35,9 @@ test("delivery kit includes intake, explicit acceptance and non-sent follow-ups"
   assert.match(read("ACCEPTANCE_CHECKLIST.md"), /No automatic acceptance by silence/);
   assert.match(read("CUSTOMER_MESSAGES.md"), /not sent messages/);
   assert.match(read("SAMPLE_HANDOFF.md"), /synthetic case SYN-API-001/);
+  assert.match(read("CUSTOMER_SCOPE_PACKET.md"), /not sent, signed, purchased, or accepted/);
+  assert.match(read("REPORT_TEMPLATE.md"), /Blank customer-facing template/);
+  assert.match(read("DELIVERY_RUNBOOK.md"), /engagement-gate assessor/);
 });
 
 test("mobile evidence is fully readable and shared offer variables resolve", () => {

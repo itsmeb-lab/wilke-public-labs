@@ -6,7 +6,7 @@ Review the customer's non-sensitive brief against the intake template. Ask only 
 
 ## 2. Written offer and explicit acceptance
 
-Complete this offer record before any investigation:
+Complete the [customer-facing scope packet](./CUSTOMER_SCOPE_PACKET.md) and this internal offer record before any investigation. Keep filled customer records private; the optional [engagement-gate assessor](./engagement-gates.mjs) is advisory-only and cannot verify processor evidence or customer consent:
 
 - Scope reference: [DIAG-YYYYMMDD-###]
 - Customer, authorized technical owner and contact channel: [To be confirmed]
@@ -43,7 +43,7 @@ If reproduction is blocked, deliver a documented limitation and a decision about
 
 ## 5. Deliver and request acceptance
 
-Send a concise findings report with the issue, test environment/version, methods, exact evidence, priority, proposed next step, exclusions and unresolved questions. Provide one clarification as agreed. Ask the named reviewer to confirm the report is received and whether the deliverable meets the **documentation** acceptance checklist—not whether a production problem was fixed.
+Use the blank [diagnostic report template](./REPORT_TEMPLATE.md) to send a concise findings report with the issue, test environment/version, methods, exact evidence, priority, proposed next step, exclusions and unresolved questions. Provide one clarification as agreed. Ask the named reviewer to confirm the report is received and whether the deliverable meets the **documentation** acceptance checklist—not whether a production problem was fixed.
 
 Record: [Delivery timestamp], [Channel/message ID], [Recipient acknowledgment], [Accepted / clarification requested / disputed], [Payment evidence]. Do not infer acceptance from silence. Any implementation must be separately quoted and authorized.
 
