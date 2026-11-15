@@ -10,6 +10,7 @@ const pages = [
   ['index.html', '', 'lab_index'],
   ['automation-reliability-lab/index.html', 'automation-reliability-lab/', 'automation_lab'],
   ['windows-process-recovery-watchdog/index.html', 'windows-process-recovery-watchdog/', 'windows_lab'],
+  ['diagnostic-case-lab/index.html', 'diagnostic-case-lab/', 'diagnostic_case_lab'],
 ];
 const decode = (value) => value.replaceAll('&amp;', '&');
 
@@ -64,7 +65,7 @@ for (const [file, slug, content] of pages) {
 }
 
 describe('publication inventory', () => {
-  it('lists precisely the three published canonical URLs, without tracking parameters', () => {
+  it('lists precisely the four proposed canonical URLs, without tracking parameters', () => {
     const xml = readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);

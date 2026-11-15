@@ -39,6 +39,18 @@ Real PowerShell watchdog plus an interactive browser mirror demonstrating:
 
 **Live demo:** https://itsmeb-lab.github.io/wilke-public-labs/windows-process-recovery-watchdog/
 
+### 03 — One-Issue Diagnostic Case
+
+Reproducible synthetic Node-style form-to-storage failure, truthful UI comparison, downloadable evidence and a practical customer-delivery kit:
+
+- HTTP 200 versus application/persistence acceptance
+- misleading-success reproduction and proposed repair condition
+- documented intake, written scope, schedule, sample handoff, acceptance and follow-up templates
+
+**Case demo:** https://itsmeb-lab.github.io/wilke-public-labs/diagnostic-case-lab/
+
+**Customer-delivery kit:** [Diagnostic case directory](./diagnostic-case-lab/README.md)
+
 **Public lab index:** https://itsmeb-lab.github.io/wilke-public-labs/
 
 ## Run locally
@@ -48,10 +60,11 @@ npm test
 python -m http.server 8080
 ```
 
-Then open either:
+Then open a lab:
 
 - `http://localhost:8080/automation-reliability-lab/`
 - `http://localhost:8080/windows-process-recovery-watchdog/`
+- `http://localhost:8080/diagnostic-case-lab/`
 
 ## Windows watchdog fixture
 
@@ -82,7 +95,7 @@ Start with the [diagnostic scope and free handoff checklist](https://wilkeservic
 
 Found these labs through Upwork? Keep pre-contract discussion and payment in the existing Upwork conversation. Do not use the direct-site contact route to move a marketplace relationship off-platform.
 
-The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the three published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
+The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the four public-lab pages once the branch is merged. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
 
 ## License
 
