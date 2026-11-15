@@ -48,6 +48,18 @@ test("mobile evidence is fully readable and shared offer variables resolve", () 
   assert.match(css, /footer span\{display:block\}/);
 });
 
+test("public case CTA deep-links into the already-live, source-attributed inquiry composer", () => {
+  const match = page.match(/data-diagnostic-link href="([^"]+)"/);
+  assert.ok(match, "primary diagnostic CTA exists");
+  const target = new URL(match[1].replaceAll("&amp;", "&"));
+  assert.equal(target.origin, "https://wilkeservices.com");
+  assert.equal(target.pathname, "/software-diagnostic");
+  assert.equal(target.hash, "#scope-request");
+  assert.equal(target.searchParams.get("utm_source"), "wilke_public_labs");
+  assert.equal(target.searchParams.get("utm_content"), "diagnostic_case_lab");
+  assert.doesNotMatch(page, /mailto:/);
+});
+
 test("synthetic receipt can be inspected without a browser download", () => {
   assert.match(page, /<details class="receipt-details">/);
   assert.match(page, /<pre id="receiptJson"><\/pre>/);
