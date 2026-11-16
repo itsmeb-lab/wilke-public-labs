@@ -68,3 +68,15 @@ test("synthetic receipt can be inspected without a browser download", () => {
   assert.match(app, /Download requested locally/);
   assert.match(app, /setTimeout\(\(\) => \{/);
 });
+
+test("keyboard access and reduced-motion behavior are release-checked", () => {
+  const browser = readFileSync(new URL("../diagnostic-case-lab/verify-browser.mjs", import.meta.url), "utf8");
+  assert.match(page, /<html lang="en">/);
+  assert.match(page, /<strong id="resultStatus" role="status" aria-live="polite"/);
+  assert.match(page, /<summary>Inspect the exact synthetic JSON receipt<\/summary>/);
+  assert.match(css, /@media\(prefers-reduced-motion:reduce\)\{html\{scroll-behavior:auto\}/);
+  assert.match(css, /\.scenario-grid button\{transition:none\}/);
+  assert.match(browser, /checkKeyboardAccessibility\(\)/);
+  assert.match(browser, /pressKey\('Enter', 'Enter', 13\)/);
+  assert.match(browser, /pressKey\(' ', 'Space', 32\)/);
+});

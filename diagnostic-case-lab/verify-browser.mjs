@@ -28,7 +28,7 @@ const mime = new Map([['.html', 'text/html; charset=utf-8'], ['.css', 'text/css;
   ['.json', 'application/json; charset=utf-8'], ['.png', 'image/png'], ['.svg', 'image/svg+xml']]);
 const summary = { schema: 'atlas-l04-independent-browser-qa-v1', synthetic: true,
   externalCustomerData: false, source: 'diagnostic-case-lab/', viewports: [], requests: [],
-  receipt: null, screenshots: [], errors: [], result: 'INCOMPLETE' };
+  receipt: null, accessibility: null, screenshots: [], errors: [], result: 'INCOMPLETE' };
 let browserProcess, server, socket;
 let sessionId, nextId = 0;
 const pending = new Map();
@@ -192,6 +192,66 @@ async function checkScenarios() {
   }
 }
 
+async function pressKey(key, code, nativeCode) {
+  const event = { key, code, windowsVirtualKeyCode: nativeCode, nativeVirtualKeyCode: nativeCode };
+  if (key === 'Enter' || key === ' ') {
+    event.text = key === 'Enter' ? '\r' : ' ';
+    event.unmodifiedText = event.text;
+  }
+  await send('Input.dispatchKeyEvent', { type: 'keyDown', ...event }, sessionId);
+  await send('Input.dispatchKeyEvent', { type: 'keyUp', ...event }, sessionId);
+}
+
+async function checkKeyboardAccessibility() {
+  const semantics = await evaluate("(() => ({ lang: document.documentElement.lang, mainCount: document.querySelectorAll('main').length, h1Count: document.querySelectorAll('h1').length, buttonsNamed: [...document.querySelectorAll('[data-case]')].every(button => button.textContent.trim().length > 0), liveStatus: document.querySelector('#resultStatus').getAttribute('role'), receiptSummary: !!document.querySelector('.receipt-details > summary') }))()");
+  assert.equal(semantics.lang, 'en');
+  assert.equal(semantics.mainCount, 1);
+  assert.equal(semantics.h1Count, 1);
+  assert.equal(semantics.buttonsNamed, true);
+  assert.equal(semantics.liveStatus, 'status');
+  assert.equal(semantics.receiptSummary, true);
+
+  await send('Emulation.setEmulatedMedia',
+    { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] }, sessionId);
+  const reduced = await evaluate("({scroll: getComputedStyle(document.documentElement).scrollBehavior, transition: getComputedStyle(document.querySelector('[data-case]')).transitionDuration})");
+  assert.equal(reduced.scroll, 'auto', 'reduced motion must disable smooth scrolling');
+  assert.equal(reduced.transition, '0s', 'reduced motion must disable scenario transitions');
+  await send('Emulation.setEmulatedMedia', { features: [] }, sessionId);
+
+  await evaluate("document.querySelector('.head-link').focus()");
+  await pressKey('Tab', 'Tab', 9);
+  const firstFocus = await evaluate("({ first: document.activeElement === document.querySelectorAll('[data-case]')[0], visible: document.activeElement.matches(':focus-visible'), outline: getComputedStyle(document.activeElement).outlineWidth })");
+  assert.equal(firstFocus.first, true, 'first scenario must follow header link in Tab order');
+  assert.equal(firstFocus.visible, true, 'keyboard focus must use focus-visible');
+  assert.ok(parseFloat(firstFocus.outline) >= 2, 'focus outline must be visible');
+
+  await pressKey('Tab', 'Tab', 9);
+  assert.equal(await evaluate("document.activeElement === document.querySelectorAll('[data-case]')[1]"), true,
+    'second scenario must be next in Tab order');
+  await pressKey('Enter', 'Enter', 13);
+  const second = await evaluate("({pressed: document.querySelectorAll('[data-case]')[1].getAttribute('aria-pressed'), result: document.querySelector('#resultStatus').textContent})");
+  assert.equal(second.pressed, 'true', 'Enter must activate truthful failure');
+  assert.equal(second.result, 'NOT SAVED');
+
+  await pressKey('Tab', 'Tab', 9);
+  await pressKey(' ', 'Space', 32);
+  const third = await evaluate("({pressed: document.querySelectorAll('[data-case]')[2].getAttribute('aria-pressed'), result: document.querySelector('#resultStatus').textContent})");
+  assert.equal(third.pressed, 'true', 'Space must activate verified record');
+  assert.equal(third.result, 'SAVED · NOT DELIVERED');
+
+  await pressKey('Tab', 'Tab', 9);
+  assert.equal(await evaluate("document.activeElement.id"), 'downloadBtn', 'receipt download must be keyboard reachable');
+  await pressKey('Tab', 'Tab', 9);
+  assert.equal(await evaluate("document.activeElement.tagName"), 'SUMMARY', 'receipt details must be keyboard reachable');
+  await pressKey('Enter', 'Enter', 13);
+  const details = await evaluate("({open: document.querySelector('.receipt-details').open, id: JSON.parse(document.querySelector('#receiptJson').textContent).caseId})");
+  assert.equal(details.open, true, 'Enter must expand inspectable receipt');
+  assert.equal(details.id, 'SYN-API-001');
+  summary.accessibility = { ...semantics, keyboardTabOrder: true, visibleFocusOutline: firstFocus.outline,
+    enterActivatesScenario: true, spaceActivatesScenario: true, receiptSummaryExpands: true,
+    reducedMotion: reduced };
+}
+
 async function checkReceiptDownload() {
   await evaluate(`document.querySelector('[data-case="rejected_save"][data-rule="legacy"]').click()`);
   const before = await evaluate('document.querySelector("#receiptJson").textContent');
@@ -242,6 +302,7 @@ try {
   await checkViewport(390, 844);
   await checkViewport(1280, 800);
   await checkScenarios();
+  await checkKeyboardAccessibility();
   await checkReceiptDownload();
   const unexpected = summary.requests.filter(url => !url.startsWith(base) && !url.startsWith('data:') && !url.startsWith('blob:'));
   assert.deepEqual(unexpected, [], 'Page must not request external resources');
