@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test",
-    "verify:browser": "node diagnostic-case-lab/verify-browser.mjs"
+    "verify:browser": "node diagnostic-case-lab/verify-browser.mjs",
+    "verify:inquiry": "node diagnostic-case-lab/verify-inquiry-conversion.mjs"
   }
 }

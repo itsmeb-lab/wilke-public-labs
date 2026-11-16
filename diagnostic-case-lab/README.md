@@ -25,6 +25,12 @@ Use these together; the website's email composer is an inquiry preparer, not an 
 7. [Customer diagnostic report template](./REPORT_TEMPLATE.md) — explicit evidence ledger, unknowns, repair recommendation and acceptance choices; never a paid-client sample.
 8. [Pure engagement gate assessor](./engagement-gates.mjs) — optional, offline decision aid with fail-closed tests; it neither verifies a customer's reply or processor payment nor takes action.
 
+## Live inquiry acceptance check (not a lead)
+
+Use `npm run verify:inquiry -- --out-dir <private-receipt-directory>` only when a fresh source acceptance check is needed. It opens the existing live offer in an isolated installed Chrome/Edge with an exact-allowlist of read-only first-party GET requests. It uses only SYN-API-001 fictional fields in the client-side composer; it never opens an email application, transmits a customer inquiry, charges, or invokes a checkout. The JSON receipt distinguishes usable prepared/copy fallback from a received message, and flags whether allowed referral tags survive into the email draft.
+
+See [the conversion acceptance contract](./INQUIRY_CONVERSION_ACCEPTANCE.md) for current source-level findings, privacy and consent boundaries, and the separate site-owner and merchant release gates. A prepared brief and a passing browser test are **not** a real visitor, received lead or payment.
+
 ## One-issue boundary
 
 Included: one agreed JavaScript/Node.js API, webhook, or lead-form failure; authorized safe reproduction when feasible; focused tests; concise repair decision; written report; one clarification. Not included: a new product, full architecture/security audit, production implementation, recurring support, incident recovery guarantee, account verification or third-party spend.
