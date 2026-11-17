@@ -45,6 +45,8 @@ p { margin: 0 0 12px; color: var(--body); }
 p strong { color: var(--ink); }
 .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
 .explain { font-size: .9rem; }
+.confidence-warning { border-left: 4px solid #b97a17; background: #fff4e3; padding: 11px 13px;
+  color: #5b3a0b; font-weight: 620; font-size: .86rem; }
 .table-wrap { overflow-x: auto; }
 table { border-collapse: collapse; width: 100%; font-size: .87rem; }
 caption { text-align: left; color: var(--muted); font-size: .76rem; margin-bottom: 6px; }
@@ -95,6 +97,7 @@ footer p { margin: 0 0 5px; color: inherit; }
   .page { max-width: none; padding: 0; margin: 0; border: 0; box-shadow: none; }
   .masthead { padding-bottom: 7pt; }
   .warning { margin-top: 9pt; padding: 6pt 9pt; font-size: 7.8pt; }
+  .confidence-warning { padding: 6pt 8pt; font-size: 7.8pt; break-inside: avoid; }
   .hero { grid-template-columns: 1fr 170pt; padding: 16pt 0 14pt; gap: 15pt; }
   h1 { font-size: 26pt; } h2 { font-size: 12pt; margin-bottom: 6pt; }
   .subhead { font-size: 9.5pt; margin-top: 6pt; }

@@ -23,6 +23,21 @@ For independent installed-Chrome rendering, run `npm run verify:handoff -- --rep
 5. **Review and deliver:** open `report.html` locally, inspect on mobile and print, independently review each source reference, and approve the exact file hash before transmitting via the **customer-approved private channel**. The tool will not send, invoice or charge. Only after a real send, record the actual channel and message/attachment ID externally; do **not** change a sample manifest to claim delivery.
 6. **Close with explicit customer decision:** ask the designated reviewer to acknowledge the *written diagnostic report* as accepted, request the one included clarification, or specify a dispute. Silence is never acceptance. Separate payment settlement from report acceptance and repair outcomes. Follow retention/deletion terms in the agreed private records system.
 
+## Evidence confidence rule — reviewer-facing acceptance
+
+A matching evidence reference is **not itself** proof of an observed event. The audit now uses both `facts` and the corresponding row's `state`, and the printable HTTP/application summary visibly qualifies secondhand claims.
+
+| Evidence state | Meaning in this operator-supplied report | Permitted claim audit |
+| --- | --- | --- |
+| `observed` | Operator says they directly inspected the referenced stage | May support a bounded result if the stage, fact and matching reference are consistent; independent source verification is **still required** |
+| `reported` | A secondhand statement or uncorroborated status | May be displayed as `reported, not observed`; **cannot** alone certify a saved record, a proven contradiction, recipient receipt or observed HTTP acceptance |
+| `not_tested` or `unknown` | There is no direct observation to support a concrete result | A concrete HTTP/application/persistence/UI assertion is **rejected at input validation**; keep its fact unknown or obtain authorized evidence |
+
+- **Positive saved result:** only `application: accepted` and `persistence: saved` with a saved reference **and observed matching application/persistence evidence** can produce the bounded `SAVED RECORD PROVEN IN SUPPLIED EVIDENCE` verdict.
+- **Confirmed false success:** the UI success claim must be observed, and the rejected application or unsaved persistence must be observed. Otherwise `UNVERIFIED SUCCESS CLAIM` applies.
+- **Recipient receipt:** remains a separate observed and reference-matched claim. Neither it nor a saved record proves actual delivery or payment independently.
+- **Authority boundary:** operators can lie about `observed`. This tool checks consistency, **not authenticity**; customer delivery requires human source-system readback and authorization, and no report may be promoted as a real client result without those gates.
+
 ## Release and safety contract
 
 - **Public sample and private draft are not sales:** both are watermarked as not delivered, not paid and not accepted, including in print. A `sanitized-private` input still requires real approvals before any customer delivery.

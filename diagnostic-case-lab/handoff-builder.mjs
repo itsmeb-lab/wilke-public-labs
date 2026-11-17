@@ -107,6 +107,18 @@ export function validateReportInput(raw) {
     (receipt.state !== 'observed' || receipt.ref !== record.facts.recipient.receiptRef))) {
     throw new Error('Recipient stage must exist; verified delivery needs its own observed receipt');
   }
+  const concreteClaims = [
+    ['transport', record.facts.transport.httpStatus !== null],
+    ['application', record.facts.application.result !== 'unknown'],
+    ['persistence', record.facts.persistence.result !== 'unknown'],
+    ['ui', record.facts.ui.result !== 'unknown'],
+    ['recipient', record.facts.recipient.result === 'verified']
+  ];
+  for (const [stage, concrete] of concreteClaims) {
+    const stageEvidence = record.evidence.find(e => e.stage === stage);
+    if (concrete && (stageEvidence.state === 'not_tested' || stageEvidence.state === 'unknown'))
+      throw new Error(`${stage} cannot assert a concrete outcome while its evidence is ${stageEvidence.state}`);
+  }
   object(raw.analysis, 'analysis', ['finding', 'likelyCause', 'alternatives', 'unknowns', 'recommendation']);
   record.analysis = Object.fromEntries(['finding', 'likelyCause', 'alternatives', 'unknowns', 'recommendation']
     .map(key => [key, string(raw.analysis[key], `analysis.${key}`, 500)]));
@@ -119,18 +131,23 @@ export function validateReportInput(raw) {
 
 export function auditClaims(record) {
   const { application, persistence, ui, recipient, transport } = record.facts;
-  const verifiedSave = application.result === 'accepted' && persistence.result === 'saved' &&
-    !!persistence.savedReference;
-  const confirmedContradiction = ui.result === 'claimed_success' &&
-    (application.result === 'rejected' || persistence.result === 'not_saved');
+  const evidenceByStage = new Map(record.evidence.map(entry => [entry.stage, entry]));
+  const observed = stage => evidenceByStage.get(stage)?.state === 'observed';
+  const verifiedSave = observed('application') && observed('persistence') &&
+    application.result === 'accepted' && persistence.result === 'saved' && !!persistence.savedReference;
+  const confirmedContradiction = observed('ui') && ui.result === 'claimed_success' &&
+    ((observed('application') && application.result === 'rejected') ||
+      (observed('persistence') && persistence.result === 'not_saved'));
   const unverifiedSuccess = ui.result === 'claimed_success' && !verifiedSave && !confirmedContradiction;
-  const recipientVerified = recipient.result === 'verified' && !!recipient.receiptRef;
+  const recipientVerified = observed('recipient') && recipient.result === 'verified' &&
+    !!recipient.receiptRef && evidenceByStage.get('recipient').ref === recipient.receiptRef;
   return {
-    transportAccepted: transport.httpStatus !== null && transport.httpStatus >= 200 && transport.httpStatus < 300,
+    transportAccepted: observed('transport') && transport.httpStatus !== null &&
+      transport.httpStatus >= 200 && transport.httpStatus < 300,
     verifiedSave, recipientVerified, confirmedContradiction, unverifiedSuccess,
     verdict: confirmedContradiction ? 'CONTRADICTED SUCCESS CLAIM' : unverifiedSuccess ? 'UNVERIFIED SUCCESS CLAIM'
       : verifiedSave ? 'SAVED RECORD PROVEN IN SUPPLIED EVIDENCE' : 'NO VERIFIED SAVE',
-    warning: 'These checks compare operator-supplied sanitized evidence. The tool cannot authenticate source systems, signatures, recipients or payment.'
+    warning: 'These checks compare operator-supplied sanitized evidence. Reported or untested stages cannot establish success, contradiction or delivery. The tool cannot authenticate source systems, signatures, recipients or payment.'
   };
 }
 
@@ -141,7 +158,18 @@ export function renderReportHtml(record, audit, css, preparedAt) {
   const banner = sample ? 'SYNTHETIC TEACHING REPORT · NOT A CLIENT CASE' : 'PRIVATE DRAFT · NOT DELIVERED';
   const rows = record.evidence.map(e => `<tr><th scope="row">${escape(e.stage)}</th><td data-label="State"><span class="state">${escape(e.state.replaceAll("_", " "))}</span></td><td data-label="Observation">${escape(e.summary)}</td><td data-label="Reference"><code>${escape(e.ref)}</code></td></tr>`).join('\n');
   const checks = record.acceptanceTests.map(item => `<li>${escape(item)}</li>`).join('\n');
-  const label = value => escape(value === null ? 'not established' : value);
+  const findingsHeading = audit.unverifiedSuccess
+    ? 'Provisional findings — verify sources before treating these claims as facts'
+    : 'Findings and decision';
+  const findingLabel = audit.unverifiedSuccess ? 'Provisional finding (unverified)' : 'Bounded finding';
+  const confidenceNote = audit.unverifiedSuccess
+    ? '<p class="confidence-warning" role="note">These statements were supplied by an operator. The evidence stages are not sufficiently observed to confirm the claimed cause or outcome; independently verify authorized sources before using this narrative for a customer decision.</p>'
+    : '';
+  const sourceBound = (stage, value) => {
+    const state = record.evidence.find(entry => entry.stage === stage).state;
+    const display = value === null ? 'not established' : value;
+    return escape(state === 'observed' ? display : `${display} (${state.replaceAll('_', ' ')}, not observed)`);
+  };
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
@@ -154,8 +182,8 @@ export function renderReportHtml(record, audit, css, preparedAt) {
 <section><h2>01 / Question and limits</h2><div class="duo"><p><strong>Expected:</strong> ${escape(record.expected)}</p><p><strong>Actual:</strong> ${escape(record.actual)}</p><p><strong>Environment:</strong> ${escape(record.environment)}</p><p><strong>Permission basis:</strong> ${escape(record.permission)}</p></div><p><strong>Reproduction:</strong> ${escape(record.reproduction)}</p></section>
 <section><h2>02 / Independent evidence layers</h2><p class="explain">An HTTP success code cannot establish application acceptance, persistence or a receiving-owner acknowledgment.</p>
 <div class="table-wrap"><table><caption>Operator-supplied sanitized evidence; references must be checked privately</caption><thead><tr><th scope="col">Stage</th><th scope="col">Status</th><th scope="col">Bounded observation</th><th scope="col">Reference</th></tr></thead><tbody>${rows}</tbody></table></div>
-<div class="audit"><div><span>HTTP</span><strong>${label(record.facts.transport.httpStatus)}</strong></div><div><span>Application</span><strong>${escape(record.facts.application.result)}</strong></div><div><span>Saved record</span><strong>${audit.verifiedSave ? 'Verified by supplied references' : 'Not verified'}</strong></div><div><span>Recipient</span><strong>${audit.recipientVerified ? 'Receipt supplied; verify separately' : 'No verified receipt'}</strong></div></div></section>
-<section><h2>03 / Findings and decision</h2><dl><dt>Bounded finding</dt><dd>${escape(record.analysis.finding)}</dd><dt>Likely cause — hypothesis</dt><dd>${escape(record.analysis.likelyCause)}</dd><dt>Alternatives</dt><dd>${escape(record.analysis.alternatives)}</dd><dt>Unresolved</dt><dd>${escape(record.analysis.unknowns)}</dd><dt>Prioritized repair proposal (not implemented)</dt><dd>${escape(record.analysis.recommendation)}</dd></dl></section>
+<div class="audit"><div><span>HTTP</span><strong>${sourceBound("transport", record.facts.transport.httpStatus)}</strong></div><div><span>Application</span><strong>${sourceBound("application", record.facts.application.result)}</strong></div><div><span>Saved record</span><strong>${audit.verifiedSave ? 'Verified by supplied references' : 'Not verified'}</strong></div><div><span>Recipient</span><strong>${audit.recipientVerified ? 'Receipt supplied; verify separately' : 'No verified receipt'}</strong></div></div></section>
+<section><h2>03 / ${findingsHeading}</h2>${confidenceNote}<dl><dt>${findingLabel}</dt><dd>${escape(record.analysis.finding)}</dd><dt>Likely cause — hypothesis</dt><dd>${escape(record.analysis.likelyCause)}</dd><dt>Alternatives</dt><dd>${escape(record.analysis.alternatives)}</dd><dt>Unresolved</dt><dd>${escape(record.analysis.unknowns)}</dd><dt>Prioritized repair proposal (not implemented)</dt><dd>${escape(record.analysis.recommendation)}</dd></dl></section>
 <section><h2>04 / Suggested tests after separately authorized repair</h2><ol>${checks}</ol><p><strong>Included clarification:</strong> ${escape(record.clarification)}</p></section>
 <section class="review"><h2>05 / Real delivery and customer acceptance</h2><p>This output is a <strong>draft</strong>. Before any private send, confirm the real agreed scope, system-owner permission, evidence/source references, approved delivery channel, customer-designated reviewer and payment terms. Do not send secrets or raw production logs.</p><dl><dt>Delivered to reviewer</dt><dd>NOT SENT — no delivery receipt</dd><dt>Reviewer decision</dt><dd>NOT RECORDED — silence is not acceptance</dd><dt>Payment</dt><dd>UNVERIFIED — no settlement evidence</dd><dt>Production implementation</dt><dd>NOT INCLUDED — requires a separate authorized scope</dd></dl><p>Acceptance of a written diagnosis never establishes a deployed repair, downstream message delivery or recovered revenue.</p></section>
 <footer><p>${escape(audit.warning)}</p><p>Generated locally · Private draft or fictional sample · No browser requests, form actions or checkout.</p></footer></main></div></body></html>`;

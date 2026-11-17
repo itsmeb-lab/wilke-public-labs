@@ -113,6 +113,61 @@ test('even a proven saved record does not prove recipient delivery', () => {
   assert.equal(result.recipientVerified, false);
 });
 
+test('reported-only save evidence cannot certify a saved record or happy-path completion', () => {
+  const r = clone();
+  r.facts.application.result = 'accepted';
+  r.facts.persistence.result = 'saved';
+  r.facts.persistence.savedReference = 'SYN-SAVED-ONE';
+  r.evidence.find(e => e.stage === 'persistence').state = 'reported';
+  const result = auditClaims(validateReportInput(r));
+  assert.equal(result.verifiedSave, false);
+  assert.equal(result.unverifiedSuccess, true);
+  assert.equal(result.verdict, 'UNVERIFIED SUCCESS CLAIM');
+  assert.match(renderReportHtml(validateReportInput(r), result, css, '2026-11-17T12:00:00.000Z'),
+    /UNVERIFIED SUCCESS CLAIM/);
+});
+
+test('reported-only rejection cannot certify a contradiction', () => {
+  const r = clone();
+  r.evidence.find(e => e.stage === 'application').state = 'reported';
+  r.evidence.find(e => e.stage === 'persistence').state = 'reported';
+  const result = auditClaims(validateReportInput(r));
+  assert.equal(result.confirmedContradiction, false);
+  assert.equal(result.unverifiedSuccess, true);
+  assert.equal(result.verdict, 'UNVERIFIED SUCCESS CLAIM');
+  const html = renderReportHtml(validateReportInput(r), result, css, '2026-11-17T12:00:00.000Z');
+  assert.equal(html.includes('Provisional findings — verify sources before treating these claims as facts'), true);
+  assert.equal(html.includes('Provisional finding (unverified)'), true);
+});
+
+test('a secondhand UI claim is never a directly observed contradiction', () => {
+  const r = clone();
+  r.evidence.find(e => e.stage === 'ui').state = 'reported';
+  const result = auditClaims(validateReportInput(r));
+  assert.equal(result.confirmedContradiction, false);
+  assert.equal(result.verdict, 'UNVERIFIED SUCCESS CLAIM');
+});
+
+test('customer-facing summary marks reported-only HTTP and application values as unconfirmed', () => {
+  const r = clone();
+  r.evidence.find(e => e.stage === 'transport').state = 'reported';
+  r.evidence.find(e => e.stage === 'application').state = 'reported';
+  const record = validateReportInput(r);
+  const html = renderReportHtml(record, auditClaims(record), css, '2026-11-17T12:00:00.000Z');
+  assert.match(html, /<span>HTTP<\/span><strong>200 \(reported, not observed\)<\/strong>/);
+  assert.match(html, /<span>Application<\/span><strong>rejected \(reported, not observed\)<\/strong>/);
+  assert.equal(auditClaims(record).transportAccepted, false);
+});
+
+test('untested or unknown evidence cannot carry a concrete asserted result', () => {
+  for (const [stage, state] of [['persistence', 'not_tested'], ['application', 'unknown'], ['ui', 'not_tested'],
+    ['transport', 'unknown']]) {
+    const r = clone();
+    r.evidence.find(e => e.stage === stage).state = state;
+    assert.throws(() => validateReportInput(r), /concrete outcome|not observed/i, stage);
+  }
+});
+
 test('verified recipient status without a separate observed receipt fails closed', () => {
   const r = clone();
   r.facts.recipient.result = 'verified';
