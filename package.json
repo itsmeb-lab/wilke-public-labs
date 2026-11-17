@@ -4,6 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "verify:browser": "node diagnostic-case-lab/verify-browser.mjs",
+    "verify:inquiry": "node diagnostic-case-lab/verify-inquiry-conversion.mjs",
+    "build:handoff": "node diagnostic-case-lab/build-handoff.mjs",
+    "verify:handoff": "node diagnostic-case-lab/verify-handoff-browser.mjs"
   }
 }

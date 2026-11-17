@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>One-Issue Diagnostic Case | Wilke Public Labs</title>
+  <meta name="description" content="Run a source-backed synthetic diagnostic: reproduce a false-success form response, inspect storage evidence, and compare a truthful acceptance condition.">
+  <link rel="canonical" href="https://itsmeb-lab.github.io/wilke-public-labs/diagnostic-case-lab/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="One-Issue Diagnostic Case | Wilke Public Labs">
+  <meta property="og:description" content="Reproduce a false-success form in a safe fixture and inspect the exact evidence that changes the repair decision.">
+  <meta property="og:url" content="https://itsmeb-lab.github.io/wilke-public-labs/diagnostic-case-lab/">
+  <meta property="og:image" content="https://itsmeb-lab.github.io/wilke-public-labs/automation-reliability-lab/real-demo.png">
+  <meta property="og:image:alt" content="Related public automation sandbox screenshot, not a paid-client system.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="sitemap" type="application/xml" href="../sitemap.xml">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="../lab-site.css">
+</head>
+<body>
+  <header class="site-head"><a class="brand" href="../">WILKE <span>PUBLIC LABS</span></a><a class="head-link" href="https://github.com/itsmeb-lab/wilke-public-labs/tree/main/diagnostic-case-lab">Source + tests <span aria-hidden="true">↗</span></a></header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">LAB 03 / ONE-ISSUE REPRODUCTION</p>
+        <h1>When “sent” doesn't mean <em>saved.</em></h1>
+        <p class="lede">A green success message can conceal a lost request. This controlled case shows exactly how a $150 diagnostic separates transport, application results, persistence, and delivery evidence.</p>
+        <div class="pills"><span>Fully synthetic</span><span>No network calls</span><span>Run it yourself</span></div>
+      </div>
+      <aside class="case-brief" aria-label="Case question">
+        <span class="case-ref">CASE SYN-API-001</span>
+        <p class="aside-label">The question</p>
+        <h2>Why did the form say “sent” if no record was stored?</h2>
+        <p>One reported failure. One isolated fixture. A trace and an acceptance decision.</p>
+      </aside>
+    </section>
+
+    <section class="workspace" aria-labelledby="scenario-title">
+      <div class="section-head"><div><p class="eyebrow">01 / REPRODUCE</p><h2 id="scenario-title">Choose the evidence path.</h2><p>The same HTTP 200 can lead to very different downstream outcomes.</p></div><span class="sandbox-chip">SANDBOX ONLY</span></div>
+      <div class="scenario-grid" role="group" aria-label="Diagnostic scenarios">
+        <button type="button" data-case="rejected_save" data-rule="legacy" aria-pressed="true"><small>01 · ORIGINAL BUG</small><strong>False success</strong><span>Transport succeeds, save fails, UI still says Sent.</span></button>
+        <button type="button" data-case="rejected_save" data-rule="guarded" aria-pressed="false"><small>02 · SAFER STATE</small><strong>Truthful failure</strong><span>Same save rejection, but the UI refuses to promise success.</span></button>
+        <button type="button" data-case="confirmed_save" data-rule="guarded" aria-pressed="false"><small>03 · ACCEPTED SAVE</small><strong>Verified record</strong><span>One saved row and a matching reference; delivery remains unknown.</span></button>
+      </div>
+      <section class="result" aria-label="Case result">
+        <div class="result-top"><div><p class="eyebrow">LIVE FIXTURE RESULT</p><h3 id="caseName">Save rejected</h3></div><strong id="resultStatus" role="status" aria-live="polite" data-state="bad">FALSE SUCCESS</strong></div>
+        <div class="metrics">
+          <div><span>Transport</span><strong id="transportValue">HTTP 200</strong></div>
+          <div><span>Application</span><strong id="applicationValue">success=false</strong></div>
+          <div><span>Persistence</span><strong id="persistenceValue">0 row(s)</strong></div>
+          <div><span>User sees</span><strong id="uiValue">Sent</strong></div>
+        </div>
+        <p id="finding" class="finding">The UI claims Sent because HTTP succeeded, even though no record was saved.</p>
+      </section>
+    </section>
+
+    <section class="evidence" aria-labelledby="trace-title">
+      <div class="section-head"><div><p class="eyebrow">02 / TRACE</p><h2 id="trace-title">Follow the evidence, not the toast.</h2><p>These observations come from executable, deterministic fixtures—not a customer deployment.</p></div><div class="receipt-actions"><button type="button" class="download" id="downloadBtn">Download synthetic receipt ↓</button><p id="downloadStatus" role="status" aria-live="polite">Generated locally; no customer data.</p></div></div>
+      <div class="table-scroll"><table><caption>Transport-to-owner evidence chain</caption><thead><tr><th scope="col">Layer</th><th scope="col">Observed</th><th scope="col">Evidence state</th></tr></thead><tbody id="traceBody"></tbody></table></div>
+      <h3 class="subhead">Acceptance checks</h3>
+      <div class="table-scroll"><table><caption>Sample checks for the single agreed issue</caption><thead><tr><th scope="col">Check</th><th scope="col">Result</th><th scope="col">Interpretation</th></tr></thead><tbody id="checkBody"></tbody></table></div>
+      <details class="receipt-details"><summary>Inspect the exact synthetic JSON receipt</summary><pre id="receiptJson"></pre></details>
+    </section>
+
+    <section class="conclusion" aria-labelledby="decision-title">
+      <div><p class="eyebrow">03 / HANDOFF DECISION</p><h2 id="decision-title">Diagnose first. Repair with permission.</h2></div>
+      <div><p><strong>Finding:</strong> The original UI equates HTTP success with a completed save. A safe reproduction proves the status mismatch in this fixture.</p><p><strong>Proposed repair:</strong> Show success only when the application result and saved reference meet agreed acceptance criteria; retain user input on failure.</p><p><strong>Unknown:</strong> Sending an email, receiving it, and having a person acknowledge it are distinct events. This fixture checks none of those external steps.</p></div>
+    </section>
+
+    <section class="service-note" aria-labelledby="diagnostic-title">
+      <p class="service-kicker">A small, defined paid service</p>
+      <h2 id="diagnostic-title">Have one real API or form issue?</h2>
+      <p><strong>$150 USD, one time.</strong> One agreed JavaScript or Node.js API, webhook or lead-form issue: safe reproduction, focused tests, repair notes and one clarification. Implementation is separate.</p>
+      <div class="service-actions"><a class="service-cta" data-diagnostic-link href="https://wilkeservices.com/software-diagnostic?utm_source=wilke_public_labs&amp;utm_medium=referral&amp;utm_campaign=software_diagnostic&amp;utm_content=diagnostic_case_lab#scope-request">Prepare a one-issue inquiry <span aria-hidden="true">→</span></a><a href="https://wilkeservices.com/downloads/api-webhook-diagnostic-sample.txt">Read a fictional sample handoff</a><a href="./service-order/">Review proposed $150 service terms</a></div>
+      <p class="service-limit">The inquiry button opens the live brief composer; preparation does not send an email. You must send it yourself. The service-order sheet is an unsigned proposal template, not an accepted order. Inquiry only; no checkout or customer data collection here. These are not paid-client results. Found us on Upwork? Keep pre-contract discussion and payment in your Upwork conversation.</p>
+    </section>
+
+    <footer><span>Case SYN-API-001 · deterministic teaching example · no outside systems touched</span><a href="../">All public labs</a></footer>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
