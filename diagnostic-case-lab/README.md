@@ -25,6 +25,7 @@ Use these together; the website's email composer is an inquiry preparer, not an 
 7. [Customer diagnostic report template](./REPORT_TEMPLATE.md) — explicit evidence ledger, unknowns, repair recommendation and acceptance choices; never a paid-client sample.
 8. [Pure engagement gate assessor](./engagement-gates.mjs) — optional, offline decision aid with fail-closed tests; it neither verifies a customer's reply or processor payment nor takes action.
 9. [Printable client service-order summary](./service-order/) — public, noindex, static proposed terms for a buyer to review or print, not a signature, form, contract execution or payment. Its blanks must be completed privately and reconciled with the longer scope packet before any offer acceptance.
+10. [Offline handoff report builder](./REPORT_WORKFLOW.md) — executable private report assembler for one sanitized evidence package. It produces a printable HTML report, exact-hash manifest and manual acceptance checklist; it never submits a lead, reports an actual customer delivery, or marks payment. Run `npm run build:handoff -- --input diagnostic-case-lab/fixtures/synthetic-false-success.json --out-dir <new-private-dir>` to test the explicitly fictional fixture.
 
 ## Live inquiry acceptance check (not a lead)
 

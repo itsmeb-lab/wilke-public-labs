@@ -1,0 +1,41 @@
+{
+  "schema": "wilke-one-issue-report-input-v1",
+  "classification": "synthetic",
+  "reference": "SYN-API-001",
+  "issueType": "lead-form",
+  "question": "Why did the fictional form say Sent when no record was stored?",
+  "expected": "Accept only a saved row with a matching record reference, or show a recoverable error.",
+  "actual": "The fictional UI displayed Sent when application success was false and persistence had zero rows.",
+  "environment": "Isolated, deterministic local JavaScript teaching fixture; no external services.",
+  "sourceVersion": "SYNTHETIC-CASE-V1",
+  "permission": "Simulation only. No access to customer assets or live systems.",
+  "reproduction": "Choose False success in the local case lab. Inspect the HTTP, application and persistence trace before comparing the visible UI status.",
+  "facts": {
+    "transport": { "httpStatus": 200, "evidenceRef": "SYN-T001" },
+    "application": { "result": "rejected", "evidenceRef": "SYN-A001" },
+    "persistence": { "result": "not_saved", "savedReference": null, "evidenceRef": "SYN-P001" },
+    "ui": { "result": "claimed_success", "evidenceRef": "SYN-U001" },
+    "recipient": { "result": "not_tested", "receiptRef": null }
+  },
+  "evidence": [
+    { "stage": "transport", "state": "observed", "summary": "The synthetic fixture returns HTTP 200; transport acknowledged the request only.", "ref": "SYN-T001" },
+    { "stage": "application", "state": "observed", "summary": "The simulated application result is success=false, not an accepted save.", "ref": "SYN-A001" },
+    { "stage": "persistence", "state": "observed", "summary": "Zero matching rows exist in the simulated store; no persisted reference was created.", "ref": "SYN-P001" },
+    { "stage": "ui", "state": "observed", "summary": "The legacy display rule still claims Sent on HTTP success.", "ref": "SYN-U001" },
+    { "stage": "recipient", "state": "not_tested", "summary": "No real notification, receiving inbox or owner acknowledgment was contacted.", "ref": "SYN-R001" }
+  ],
+  "analysis": {
+    "finding": "Within this fictional fixture, the displayed success statement contradicts the known rejected application and absent record.",
+    "likelyCause": "Hypothesis supported in the fixture: client copy is controlled by HTTP status alone, rather than checking application and persistence evidence.",
+    "alternatives": "Production data-store failures, missing provider callbacks and race conditions remain untested; no real root cause is established.",
+    "unknowns": "Owner receipt and notification delivery are untested. This result does not describe any customer's system.",
+    "recommendation": "Separately authorize an implementation that shows success only after a verified saved reference; preserve the form on rejection and distinguish notification state."
+  },
+  "acceptanceTests": [
+    "Rejected save: display a truthful failure and retain user-entered values.",
+    "Application claims success without a stored reference: do not display saved or delivered.",
+    "Exactly one matching stored row and reference: display saved, but keep recipient delivery unknown.",
+    "Retry the same fixture event: inspect for duplicate side effects if the owner separately authorizes the test."
+  ],
+  "clarification": "One clarification may explain an evidence reference or proposed repair; it does not include implementation."
+}
