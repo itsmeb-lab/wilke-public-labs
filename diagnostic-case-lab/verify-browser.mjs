@@ -28,7 +28,7 @@ const mime = new Map([['.html', 'text/html; charset=utf-8'], ['.css', 'text/css;
   ['.json', 'application/json; charset=utf-8'], ['.png', 'image/png'], ['.svg', 'image/svg+xml']]);
 const summary = { schema: 'atlas-l04-independent-browser-qa-v1', synthetic: true,
   externalCustomerData: false, source: 'diagnostic-case-lab/', viewports: [], requests: [],
-  receipt: null, accessibility: null, screenshots: [], errors: [], result: 'INCOMPLETE' };
+  receipt: null, accessibility: null, serviceOrder: null, screenshots: [], errors: [], result: 'INCOMPLETE' };
 let browserProcess, server, socket;
 let sessionId, nextId = 0;
 const pending = new Map();
@@ -278,6 +278,44 @@ async function checkReceiptDownload() {
     synthetic: parsed.synthetic, externalSideEffects: parsed.externalSideEffects };
 }
 
+async function checkServiceOrder(base) {
+  const href = await evaluate("([...document.querySelectorAll('.service-actions a')].find(a => a.getAttribute('href') === './service-order/')?.getAttribute('href'))");
+  assert.equal(href, './service-order/', 'case must link to a real service-order review page');
+  await send('Page.navigate', { url: base + '/diagnostic-case-lab/service-order/' }, sessionId);
+  await waitUntil(async () => await evaluate("!!document.querySelector('#order-title')"), 'blank printable service order');
+  const semantics = await evaluate("({lang:document.documentElement.lang,robots:document.querySelector('meta[name=robots]')?.content,main:document.querySelectorAll('main').length,headings:document.querySelectorAll('h1').length,forms:document.querySelectorAll('form,input,textarea,button,script').length,price:document.body.textContent.includes('$150 USD'),notOrder:document.body.textContent.includes('NOT AN ORDER')})");
+  assert.equal(semantics.lang, 'en');
+  assert.equal(semantics.robots, 'noindex,nofollow');
+  assert.equal(semantics.main, 1);
+  assert.equal(semantics.headings, 1);
+  assert.equal(semantics.forms, 0, 'no client data collection or acceptance action on this page');
+  assert.equal(semantics.price, true);
+  assert.equal(semantics.notOrder, true);
+
+  const widths = [];
+  for (const width of [320, 390, 1280]) {
+    await send('Emulation.setDeviceMetricsOverride',
+      { width, height: 860, deviceScaleFactor: 1, mobile: width < 700 }, sessionId);
+    const layout = await evaluate("({innerWidth,scrollWidth:document.documentElement.scrollWidth,title:document.querySelector('#order-title').getBoundingClientRect().width})");
+    assert.equal(layout.innerWidth, width);
+    assert.ok(layout.scrollWidth <= width, 'service order must not overflow at ' + width + 'px');
+    assert.ok(layout.title > 200, 'service-order title should have readable space');
+    widths.push(layout);
+  }
+  await send('Emulation.setDeviceMetricsOverride',
+    { width: 1280, height: 860, deviceScaleFactor: 1, mobile: false }, sessionId);
+  const pdf = await send('Page.printToPDF',
+    { preferCSSPageSize: true, printBackground: true, transferMode: 'ReturnAsBase64' }, sessionId);
+  const bytes = Buffer.from(pdf.data, 'base64');
+  assert.equal(bytes.subarray(0, 5).toString(), '%PDF-', 'browser must emit a real PDF');
+  const pageCount = (bytes.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length;
+  assert.equal(pageCount, 1, 'customer scope summary must print on one letter page');
+  await writeFile(join(outputDir, 'unsigned-service-order-print.pdf'), bytes);
+  summary.serviceOrder = { path: 'diagnostic-case-lab/service-order/', staticNoSubmission: true,
+    semantics, widths, printedPdf: 'unsigned-service-order-print.pdf',
+    printedPdfBytes: bytes.length, printedPages: pageCount };
+}
+
 try {
   await mkdir(outputDir, { recursive: true });
   const chrome = await existingChrome();
@@ -304,6 +342,7 @@ try {
   await checkScenarios();
   await checkKeyboardAccessibility();
   await checkReceiptDownload();
+  await checkServiceOrder(base);
   const unexpected = summary.requests.filter(url => !url.startsWith(base) && !url.startsWith('data:') && !url.startsWith('blob:'));
   assert.deepEqual(unexpected, [], 'Page must not request external resources');
   summary.result = 'PASS';
@@ -322,6 +361,7 @@ try {
   if (server) await new Promise(resolveClose => server.close(resolveClose));
   try { await rm(profile, { recursive: true, force: true, maxRetries: 5, retryDelay: 200 }); } catch { /* safely leave isolated profile on lock */ }
   console.log(JSON.stringify({ result: summary.result, browser: summary.browser, viewports: summary.viewports,
-    receipt: summary.receipt, networkRequests: summary.requests, screenshots: summary.screenshots,
+    receipt: summary.receipt, serviceOrder: summary.serviceOrder,
+    networkRequests: summary.requests, screenshots: summary.screenshots,
     errors: summary.errors, outputDir }, null, 2));
 }
