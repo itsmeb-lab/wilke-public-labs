@@ -1,7 +1,7 @@
 // Offline-only diagnostic report packaging. No customer messages, checkout, or network I/O.
 import { createHash } from 'node:crypto';
-import { mkdir, writeFile } from 'node:fs/promises';
-import { dirname, isAbsolute, join, relative, resolve } from 'node:path';
+import { mkdir, realpath, writeFile } from 'node:fs/promises';
+import { basename, dirname, isAbsolute, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const SCHEMA = 'wilke-one-issue-report-input-v1';
@@ -10,6 +10,7 @@ const TYPES = new Set(['node-api', 'webhook', 'lead-form']);
 const STAGES = new Set(['trigger', 'transport', 'application', 'persistence', 'ui', 'retry', 'recipient']);
 const STATES = new Set(['observed', 'reported', 'not_tested', 'unknown']);
 const SENSITIVE = [
+  /\b(?:sk-(?:proj-|[a-z0-9_-]{16,})\S*|gh[ousr]_[a-z0-9_-]{16,}|xapp-[a-z0-9-]{16,}|rk_(?:live|test)_\S+)/i,
   /\b(?:sk_(?:live|test)_|rk_live_|ghp_|github_pat_|xox[baprs]-|AKIA[0-9A-Z]{12})\S*/i,
   /-----BEGIN\s+(?:RSA |EC |OPENSSH )?PRIVATE KEY-----/i,
   /\b(?:password|authorization|api[_ -]?key|access[_ -]?token)\s*[:=]\s*\S+/i,
@@ -191,13 +192,24 @@ export function renderReportHtml(record, audit, css, preparedAt) {
 
 function sha256(value) { return createHash('sha256').update(value).digest('hex').toUpperCase(); }
 
+function insideDirectory(root, target) {
+  const rel = relative(root, target);
+  return rel === '' || (!isAbsolute(rel) && rel !== '..' && !rel.startsWith('..' + sep));
+}
+
 export async function writeHandoffPackage(raw, outDir, { css, preparedAt = new Date().toISOString() } = {}) {
   const report = validateReportInput(raw);
   if (typeof css !== 'string' || !css.includes('@media print')) throw new Error('Local printable report CSS required');
   if (Number.isNaN(Date.parse(preparedAt)) || !/Z$/.test(preparedAt)) throw new Error('preparedAt must be a UTC ISO timestamp');
-  const target = resolve(outDir);
-  const rel = relative(REPO_ROOT, target);
-  if (rel === '' || (!rel.startsWith('..') && !isAbsolute(rel)))
+  const requestedTarget = resolve(outDir);
+  if (insideDirectory(REPO_ROOT, requestedTarget))
+    throw new Error('Private report output must be outside the public Git repository');
+  // Resolve existing ancestors before writing: an outside alias can point into the repository.
+  // mkdir below remains exclusive, and the parent must already exist as in the original API.
+  const canonicalRoot = await realpath(REPO_ROOT);
+  const canonicalParent = await realpath(dirname(requestedTarget));
+  const target = join(canonicalParent, basename(requestedTarget));
+  if (insideDirectory(canonicalRoot, target))
     throw new Error('Private report output must be outside the public Git repository');
   const audit = auditClaims(report);
   const html = renderReportHtml(report, audit, css, preparedAt);
