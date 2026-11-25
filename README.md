@@ -57,6 +57,10 @@ Compare item rules and check-in instructions at seven repair café programs in t
 
 Compare what seven shelters publish about linen donations and find their drop-off instructions. The [guide](https://itsmeb-lab.github.io/wilke-public-labs/shelter-linen-guide/) groups rules by item and keeps animal-care drop-off separate from resale. See the [source catalog and update procedure](./shelter-linen-guide/README.md).
 
+### 06 - Bulky Pickup and Drop-Off
+
+Compare municipal routes for common items and cleanout loads in the City of Milwaukee and the City of Wauwatosa. See the [bulky item guide](https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-bulky-items/) and its [reviewed sources](./milwaukee-bulky-items/README.md).
+
 ## Run locally
 
 ```bash
@@ -71,6 +75,7 @@ Then open a lab:
 - `http://localhost:8080/published-policy-lab/`
 - `http://localhost:8080/repair-cafe-planner/`
 - `http://localhost:8080/shelter-linen-guide/`
+- `http://localhost:8080/milwaukee-bulky-items/`
 
 ## Windows watchdog fixture
 
@@ -101,7 +106,7 @@ Start with the [diagnostic scope and free handoff checklist](https://wilkeservic
 
 Found these labs through Upwork? Keep pre-contract discussion and payment in the existing Upwork conversation. Do not use the direct-site contact route to move a marketplace relationship off-platform.
 
-The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the six published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
+The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the seven published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
 
 ## License
 

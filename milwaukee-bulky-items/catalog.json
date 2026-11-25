@@ -1,0 +1,283 @@
+{
+  "checkedOn": "2026-11-25",
+  "sources": {
+    "mil-bulk": {
+      "label": "City of Milwaukee bulky item pickup",
+      "url": "https://city.milwaukee.gov/sanitation/Bulky-Item-Pickup",
+      "checkedOn": "2026-11-25"
+    },
+    "mil-drop": {
+      "label": "City of Milwaukee Drop Off Centers",
+      "url": "https://city.milwaukee.gov/sanitation/DropOff",
+      "checkedOn": "2026-11-25"
+    },
+    "tosa-bulk": {
+      "label": "Wauwatosa special collection",
+      "url": "https://wauwatosa.gov/departments/public-works/collection-services/special-collection/",
+      "checkedOn": "2026-11-25"
+    },
+    "tosa-drop": {
+      "label": "Wauwatosa Drop Off Center",
+      "url": "https://wauwatosa.gov/departments/public-works/collection-services/drop-off-center/",
+      "checkedOn": "2026-11-25"
+    }
+  },
+  "tasks": [
+    {
+      "id": "sofa-or-mattress",
+      "label": "Sofa or mattress"
+    },
+    {
+      "id": "tv",
+      "label": "Television"
+    },
+    {
+      "id": "large-appliance",
+      "label": "Refrigerator or large appliance"
+    },
+    {
+      "id": "mixed-cleanout",
+      "label": "Mixed cleanout pile"
+    },
+    {
+      "id": "commercial-hauler",
+      "label": "Load handled by a paid hauler"
+    }
+  ],
+  "operators": [
+    {
+      "id": "milwaukee-curb",
+      "name": "Milwaukee curbside",
+      "area": "City of Milwaukee, Wisconsin",
+      "jurisdiction": "us-wi-milwaukee",
+      "country": "US",
+      "visitSource": "mil-bulk",
+      "sourceIds": [
+        "mil-bulk"
+      ],
+      "prep": [
+        {
+          "label": "Who the route is for",
+          "text": "The property must receive solid-waste collection from City of Milwaukee Sanitation Services. A Milwaukee mailing address alone leaves collection service unclear.",
+          "source": "mil-bulk"
+        },
+        {
+          "label": "Amount and request",
+          "text": "For eligible bulky items, the department describes up to 1 cubic yard at the regular collection point. Larger eligible loads need a special request and a fee. Check the current size and fee schedule before setting out a load.",
+          "source": "mil-bulk"
+        }
+      ]
+    },
+    {
+      "id": "milwaukee-drop-off",
+      "name": "Milwaukee Drop Off Centers",
+      "area": "City of Milwaukee, Wisconsin",
+      "jurisdiction": "us-wi-milwaukee",
+      "country": "US",
+      "visitSource": "mil-drop",
+      "sourceIds": [
+        "mil-drop"
+      ],
+      "prep": [
+        {
+          "label": "Proof of access",
+          "text": "The city describes access for its residents and property owners. It asks for government-issued photo ID and lists separate paperwork for owners who live outside the city.",
+          "source": "mil-drop"
+        },
+        {
+          "label": "Load and vehicle",
+          "text": "Center staff set the assessed volume and may decline restricted vehicles or loads. Staff do not unload. Check the current payment and vehicle rules before traveling.",
+          "source": "mil-drop"
+        }
+      ]
+    },
+    {
+      "id": "wauwatosa-curb",
+      "name": "Wauwatosa special collection",
+      "area": "City of Wauwatosa, Wisconsin",
+      "jurisdiction": "us-wi-wauwatosa",
+      "country": "US",
+      "visitSource": "tosa-bulk",
+      "sourceIds": [
+        "tosa-bulk"
+      ],
+      "prep": [
+        {
+          "label": "Scheduling",
+          "text": "Contact Public Works for the fee and collection arrangement. Verify your service address under the city’s program before placing items at the curb.",
+          "source": "tosa-bulk"
+        },
+        {
+          "label": "Fee basis",
+          "text": "The city distinguishes ordinary bulky items from appliances and TVs. Share the complete list when you ask for a quote, including any combination of those types.",
+          "source": "tosa-bulk"
+        }
+      ]
+    },
+    {
+      "id": "wauwatosa-drop-off",
+      "name": "Wauwatosa Drop Off Center",
+      "area": "City of Wauwatosa, Wisconsin",
+      "jurisdiction": "us-wi-wauwatosa",
+      "country": "US",
+      "visitSource": "tosa-drop",
+      "sourceIds": [
+        "tosa-drop"
+      ],
+      "prep": [
+        {
+          "label": "Proof of access",
+          "text": "The center requires a current Wauwatosa address on a valid Wisconsin driver’s license. Commercial and contractor vehicles are excluded.",
+          "source": "tosa-drop"
+        },
+        {
+          "label": "Load",
+          "text": "Sort items for their separate receptacles and check current hours, fees and payment methods on the city’s own page.",
+          "source": "tosa-drop"
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "operator": "milwaukee-curb",
+      "task": "sofa-or-mattress",
+      "fit": "listed",
+      "text": "The city lists furniture and mattresses as bulky items. Check whether the combined pile fits the regular limit or needs a special pickup.",
+      "source": "mil-bulk"
+    },
+    {
+      "operator": "milwaukee-curb",
+      "task": "tv",
+      "fit": "excluded",
+      "text": "The city excludes TVs from bulky pickup and directs them to a Drop Off Center.",
+      "source": "mil-bulk"
+    },
+    {
+      "operator": "milwaukee-curb",
+      "task": "large-appliance",
+      "fit": "excluded",
+      "text": "The city excludes appliances from bulky pickup and directs them to a Drop Off Center.",
+      "source": "mil-bulk"
+    },
+    {
+      "operator": "milwaukee-curb",
+      "task": "mixed-cleanout",
+      "fit": "excluded",
+      "text": "The special bulky service excludes loose material and mixed loads containing items such as construction waste, recyclables, tires, brush or yard waste.",
+      "source": "mil-bulk"
+    },
+    {
+      "operator": "milwaukee-curb",
+      "task": "commercial-hauler",
+      "fit": "ask",
+      "text": "The published service applies to properties that receive city sanitation collection. Ask the city about your property and have the hauler identify its receiving facility separately.",
+      "source": "mil-bulk"
+    },
+    {
+      "operator": "milwaukee-drop-off",
+      "task": "sofa-or-mattress",
+      "fit": "listed",
+      "text": "The city lists old furniture and mattresses. Drop-off fees depend on the volume assessed by staff.",
+      "source": "mil-drop"
+    },
+    {
+      "operator": "milwaukee-drop-off",
+      "task": "tv",
+      "fit": "listed",
+      "text": "The drop-off page gives a per-TV fee and a limit of three. Confirm current charges and the eligible load with the city.",
+      "source": "mil-drop"
+    },
+    {
+      "operator": "milwaukee-drop-off",
+      "task": "large-appliance",
+      "fit": "listed",
+      "text": "Appliances are on the city’s recycling list. Confirm your exact appliance and the receiving rules before loading.",
+      "source": "mil-drop"
+    },
+    {
+      "operator": "milwaukee-drop-off",
+      "task": "mixed-cleanout",
+      "fit": "ask",
+      "text": "The centers separate material streams and inspect loads. Read the accepted-item list and verify every unusual material and the vehicle before departure.",
+      "source": "mil-drop"
+    },
+    {
+      "operator": "milwaukee-drop-off",
+      "task": "commercial-hauler",
+      "fit": "ask",
+      "text": "This city page describes a residential and property-owner program. It leaves the hired hauler’s access unclear. Ask the hauler to identify the receiving facility and confirm the terms.",
+      "source": "mil-drop"
+    },
+    {
+      "operator": "wauwatosa-curb",
+      "task": "sofa-or-mattress",
+      "fit": "listed",
+      "text": "The city lists sofas and mattresses as examples for a paid curbside pickup. The bulky fee is based on item count.",
+      "source": "tosa-bulk"
+    },
+    {
+      "operator": "wauwatosa-curb",
+      "task": "tv",
+      "fit": "listed",
+      "text": "The city lists paid curbside pickup for TVs. The quoted amount depends on the pickup’s other items.",
+      "source": "tosa-bulk"
+    },
+    {
+      "operator": "wauwatosa-curb",
+      "task": "large-appliance",
+      "fit": "listed",
+      "text": "The city lists paid curbside pickup for refrigerators and other major household appliances, with a first-item and additional-item fee.",
+      "source": "tosa-bulk"
+    },
+    {
+      "operator": "wauwatosa-curb",
+      "task": "mixed-cleanout",
+      "fit": "ask",
+      "text": "The published page gives individual item categories and examples. Ask Public Works about the entire mixed load and any items that need a different route.",
+      "source": "tosa-bulk"
+    },
+    {
+      "operator": "wauwatosa-curb",
+      "task": "commercial-hauler",
+      "fit": "ask",
+      "text": "Confirm whether the city will serve the address and what needs a separate hauler. Obtain a written scope from any contractor you separately hire.",
+      "source": "tosa-bulk"
+    },
+    {
+      "operator": "wauwatosa-drop-off",
+      "task": "sofa-or-mattress",
+      "fit": "listed",
+      "text": "The city lists bulky household furniture and mattresses. The posted refuse fee depends on the amount brought in.",
+      "source": "tosa-drop"
+    },
+    {
+      "operator": "wauwatosa-drop-off",
+      "task": "tv",
+      "fit": "listed",
+      "text": "The Drop Off Center page lists TVs at $30–$45 each. Special Collection describes a $30 drop-off charge in its appliances and TV section. Confirm your television’s charge directly.",
+      "source": "tosa-drop"
+    },
+    {
+      "operator": "wauwatosa-drop-off",
+      "task": "large-appliance",
+      "fit": "listed",
+      "text": "The city lists refrigerators and other major appliances. The Drop Off Center page gives a separate per-appliance fee.",
+      "source": "tosa-drop"
+    },
+    {
+      "operator": "wauwatosa-drop-off",
+      "task": "mixed-cleanout",
+      "fit": "ask",
+      "text": "The city describes separate receptacles and asks visitors to keep the material categories apart. Check each item and the household-use limits before loading.",
+      "source": "tosa-drop"
+    },
+    {
+      "operator": "wauwatosa-drop-off",
+      "task": "commercial-hauler",
+      "fit": "excluded",
+      "text": "Wauwatosa limits this center to household use and explicitly excludes commercial and contractor vehicles.",
+      "source": "tosa-drop"
+    }
+  ]
+}
