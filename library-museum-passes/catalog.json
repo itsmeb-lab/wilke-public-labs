@@ -1,0 +1,371 @@
+{
+  "checkedOn": "2026-11-25",
+  "sources": {
+    "boston-library": {
+      "label": "Boston Public Library museum pass instructions",
+      "url": "https://www.bpl.org/museum-passes/",
+      "checkedOn": "2026-11-25"
+    },
+    "aquarium": {
+      "label": "New England Aquarium pass redemption",
+      "url": "https://www.neaq.org/visit/offers-and-discounts/",
+      "checkedOn": "2026-11-25"
+    },
+    "shorewood": {
+      "label": "Shorewood Library attraction passes",
+      "url": "https://www.shorewoodlibrary.org/discover/museum_passes.php",
+      "checkedOn": "2026-11-25"
+    },
+    "betty-brinn": {
+      "label": "Betty Brinn admission instructions",
+      "url": "https://bbcmkids.org/plan-your-visit/",
+      "checkedOn": "2026-11-25"
+    },
+    "athenaeum": {
+      "label": "Berkshire Athenaeum museum passes",
+      "url": "https://www.pittsfieldlibrary.org/how-do-i/museum-passes",
+      "checkedOn": "2026-11-25"
+    },
+    "mass-moca": {
+      "label": "MASS MoCA library pass instructions",
+      "url": "https://massmoca.org/library-pass-program/",
+      "checkedOn": "2026-11-25"
+    },
+    "burlington": {
+      "label": "Burlington County Library System museum-pass terms",
+      "url": "https://bcls.lib.nj.us/museum-passes/",
+      "checkedOn": "2026-11-25"
+    },
+    "toronto-map": {
+      "label": "Toronto Public Library tpl:map and Aga Khan Museum pass terms",
+      "url": "https://tpl.ca/using-the-library/services/map/",
+      "checkedOn": "2026-11-25"
+    },
+    "aga-khan": {
+      "label": "Aga Khan Museum visitor information",
+      "url": "https://agakhanmuseum.org/plan-your-visit/",
+      "checkedOn": "2026-11-25"
+    }
+  },
+  "operators": [
+    {
+      "id": "boston-aquarium",
+      "name": "Boston Public Library → New England Aquarium",
+      "area": "Boston, Massachusetts",
+      "country": "US",
+      "jurisdiction": "us-ma",
+      "visitSource": "boston-library",
+      "sourceIds": [
+        "boston-library",
+        "aquarium"
+      ],
+      "prep": [
+        {
+          "label": "First, reserve the pass",
+          "text": "Use an active physical Boston Public Library card to reserve the digital Aquarium pass for your visit date.",
+          "source": "boston-library",
+          "extraSource": "aquarium"
+        },
+        {
+          "label": "Then pick a time or go to the box office",
+          "text": "Book the same date on the Aquarium site for a specific time. With the pass you can also ask at the box office for the next slot available that day.",
+          "source": "aquarium"
+        },
+        {
+          "label": "Bring the actual pass",
+          "text": "The Aquarium asks to see the digital library pass at the box office and rejects screenshots. An online reservation and its library pass must show the same date.",
+          "source": "aquarium"
+        }
+      ]
+    },
+    {
+      "id": "shorewood-betty-brinn",
+      "name": "Shorewood Library → Betty Brinn Children’s Museum",
+      "area": "Shorewood and Milwaukee, Wisconsin",
+      "country": "US",
+      "jurisdiction": "us-wi",
+      "visitSource": "shorewood",
+      "sourceIds": [
+        "shorewood",
+        "betty-brinn"
+      ],
+      "prep": [
+        {
+          "label": "Collect in person",
+          "text": "Use a valid Milwaukee County Federated Library System card at the Shorewood checkout desk. Passes are first come, first served.",
+          "source": "shorewood"
+        },
+        {
+          "label": "Check the museum rules",
+          "text": "Use the library pass in person. Children need an adult. The museum requires an appointment when adults are visiting without a child.",
+          "source": "betty-brinn"
+        },
+        {
+          "label": "Return to Shorewood",
+          "text": "The normal checkout is three days followed by a three-day grace period. Pick up and return the pass at Shorewood.",
+          "source": "shorewood"
+        }
+      ]
+    },
+    {
+      "id": "berkshire-mass-moca",
+      "name": "Berkshire Athenaeum → MASS MoCA",
+      "area": "Pittsfield and North Adams, Massachusetts",
+      "country": "US",
+      "jurisdiction": "us-ma",
+      "visitSource": "athenaeum",
+      "sourceIds": [
+        "athenaeum",
+        "mass-moca"
+      ],
+      "prep": [
+        {
+          "label": "Reserve the library pass",
+          "text": "Look for MASS MoCA in the Athenaeum’s reservation system. The library excludes children’s cards and limits reservations to one pass a week.",
+          "source": "athenaeum"
+        },
+        {
+          "label": "Redeem at the box office",
+          "text": "The museum accepts the participating library’s physical or digital pass on the visit day for general gallery admission.",
+          "source": "mass-moca"
+        },
+        {
+          "label": "Verify your library’s pass format",
+          "text": "The library publishes different pickup and return rules for facsimile and standard passes. Confirm the version issued with your reservation.",
+          "source": "athenaeum"
+        }
+      ]
+    },
+    {
+      "id": "burlington-partners",
+      "name": "Burlington County Library System → participating venues",
+      "area": "Burlington County, New Jersey",
+      "country": "US",
+      "jurisdiction": "us-nj",
+      "visitSource": "burlington",
+      "sourceIds": [
+        "burlington"
+      ],
+      "prep": [
+        {
+          "label": "Check venue openings and time slots",
+          "text": "For venues that require a timed ticket, check whether the museum has an opening before reserving the library pass.",
+          "source": "burlington"
+        },
+        {
+          "label": "Reserve both for the same day where required",
+          "text": "Reserve the library pass for the day of the visit. Then use the venue’s site to get its timed ticket for the same day when the venue requires it.",
+          "source": "burlington"
+        },
+        {
+          "label": "Check format and return options",
+          "text": "Printable passes are valid for a specific date. Return physical passes to the same library. Review Sunday and New York City exceptions on the library page.",
+          "source": "burlington"
+        }
+      ]
+    },
+    {
+      "id": "toronto-aga-khan",
+      "name": "Toronto Public Library → Aga Khan Museum",
+      "area": "Toronto, Ontario",
+      "country": "CA",
+      "jurisdiction": "ca-on",
+      "visitSource": "toronto-map",
+      "sourceIds": [
+        "toronto-map",
+        "aga-khan"
+      ],
+      "prep": [
+        {
+          "label": "Reserve with an adult library card",
+          "text": "Use tpl:map to choose an available date. Download or print the pass as directed by the library.",
+          "source": "toronto-map"
+        },
+        {
+          "label": "Go to Guest Services",
+          "text": "Redeem the pass for general admission at the museum’s Guest Services Desk. Confirm the museum hours and check ticketed events separately.",
+          "source": "toronto-map",
+          "extraSource": "aga-khan"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "reserve-pass",
+      "label": "Reserve the library pass ahead"
+    },
+    {
+      "id": "book-venue",
+      "label": "Use the pass to book a venue time"
+    },
+    {
+      "id": "at-the-door",
+      "label": "Redeem the pass at the venue"
+    },
+    {
+      "id": "group-entry",
+      "label": "Check how many people it covers"
+    },
+    {
+      "id": "return-pass",
+      "label": "Return a physical pass"
+    }
+  ],
+  "rules": [
+    {
+      "operator": "boston-aquarium",
+      "task": "reserve-pass",
+      "fit": "listed",
+      "text": "Reserve a digital Aquarium pass with an active physical BPL card. A card alone does not redeem admission.",
+      "source": "boston-library"
+    },
+    {
+      "operator": "boston-aquarium",
+      "task": "book-venue",
+      "fit": "listed",
+      "text": "Once you have the digital library pass, book a ticket for the same date to secure your preferred available time.",
+      "source": "aquarium"
+    },
+    {
+      "operator": "boston-aquarium",
+      "task": "at-the-door",
+      "fit": "listed",
+      "text": "Bring the digital pass to the box office. Without an online booking, you can ask for the next available slot on the pass date. Screenshots of the pass are excluded.",
+      "source": "aquarium"
+    },
+    {
+      "operator": "boston-aquarium",
+      "task": "group-entry",
+      "fit": "listed",
+      "text": "The Boston Public Library digital pass covers general admission for up to four people on its date. The Aquarium publishes separate terms for coupons from other libraries.",
+      "source": "aquarium"
+    },
+    {
+      "operator": "boston-aquarium",
+      "task": "return-pass",
+      "fit": "excluded",
+      "text": "This route uses a digital library pass. There is no physical library pass in the Aquarium’s published instructions.",
+      "source": "aquarium"
+    },
+    {
+      "operator": "shorewood-betty-brinn",
+      "task": "reserve-pass",
+      "fit": "excluded",
+      "text": "Passes are held at the checkout desk and offered first come, first served when available.",
+      "source": "shorewood"
+    },
+    {
+      "operator": "shorewood-betty-brinn",
+      "task": "book-venue",
+      "fit": "excluded",
+      "text": "The museum says its online purchase flow does not take library passes. Its appointment rule for adults visiting without a child is separate.",
+      "source": "betty-brinn"
+    },
+    {
+      "operator": "shorewood-betty-brinn",
+      "task": "at-the-door",
+      "fit": "listed",
+      "text": "Use the library pass in person. Check the museum’s child accompaniment and adult-only appointment rules first.",
+      "source": "betty-brinn"
+    },
+    {
+      "operator": "shorewood-betty-brinn",
+      "task": "group-entry",
+      "fit": "listed",
+      "text": "Shorewood lists admission for up to six guests per pass. Children must be accompanied by an adult 18 or older.",
+      "source": "shorewood"
+    },
+    {
+      "operator": "shorewood-betty-brinn",
+      "task": "return-pass",
+      "fit": "listed",
+      "text": "Return it to Shorewood Library. The regular loan period is three days with a three-day grace period.",
+      "source": "shorewood"
+    },
+    {
+      "operator": "berkshire-mass-moca",
+      "task": "reserve-pass",
+      "fit": "listed",
+      "text": "The Athenaeum lists MASS MoCA and accepts advance pass reservations. Children’s cards cannot reserve passes.",
+      "source": "athenaeum"
+    },
+    {
+      "operator": "berkshire-mass-moca",
+      "task": "at-the-door",
+      "fit": "listed",
+      "text": "Present the pass from the named participating library at the museum box office on the day of your visit.",
+      "source": "mass-moca"
+    },
+    {
+      "operator": "berkshire-mass-moca",
+      "task": "group-entry",
+      "fit": "listed",
+      "text": "The pass covers gallery admission for up to two adults and two children under 16. Performances and special events are excluded.",
+      "source": "mass-moca"
+    },
+    {
+      "operator": "berkshire-mass-moca",
+      "task": "return-pass",
+      "fit": "ask",
+      "text": "The library’s standard passes normally come back the next morning. Facsimile passes do not come back. Confirm the format on your booking.",
+      "source": "athenaeum"
+    },
+    {
+      "operator": "burlington-partners",
+      "task": "reserve-pass",
+      "fit": "listed",
+      "text": "Use a library card to reserve a pass for the day of use. The published booking window goes up to 45 days ahead.",
+      "source": "burlington"
+    },
+    {
+      "operator": "burlington-partners",
+      "task": "book-venue",
+      "fit": "ask",
+      "text": "Where a timed ticket is required, check for venue openings, reserve the library pass and then book a venue slot for the same day.",
+      "source": "burlington"
+    },
+    {
+      "operator": "burlington-partners",
+      "task": "at-the-door",
+      "fit": "ask",
+      "text": "A printable library pass alone will not admit you to a venue that requires a separate timed ticket. Check its entry instructions.",
+      "source": "burlington"
+    },
+    {
+      "operator": "burlington-partners",
+      "task": "return-pass",
+      "fit": "ask",
+      "text": "Physical passes go back to the checkout location with the published deadline and route exceptions. Printable passes do not require return.",
+      "source": "burlington"
+    },
+    {
+      "operator": "toronto-aga-khan",
+      "task": "reserve-pass",
+      "fit": "listed",
+      "text": "Reserve through tpl:map with an adult Toronto Public Library card and print or download the pass.",
+      "source": "toronto-map"
+    },
+    {
+      "operator": "toronto-aga-khan",
+      "task": "at-the-door",
+      "fit": "listed",
+      "text": "The library lists the Guest Services Desk as the place to redeem this pass for general admission.",
+      "source": "toronto-map"
+    },
+    {
+      "operator": "toronto-aga-khan",
+      "task": "group-entry",
+      "fit": "listed",
+      "text": "General admission covers up to two adults including the cardholder. Ages 25 and under are free. Children age 14 or younger need an adult.",
+      "source": "toronto-map"
+    },
+    {
+      "operator": "toronto-aga-khan",
+      "task": "return-pass",
+      "fit": "excluded",
+      "text": "The library’s listed route uses a printed or downloaded reservation. No physical pass checkout is part of that route.",
+      "source": "toronto-map"
+    }
+  ]
+}

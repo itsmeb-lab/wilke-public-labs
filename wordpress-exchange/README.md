@@ -1,6 +1,6 @@
 # Stage a comparison in Page Generator Pro
 
-[Download the draft comparison exchange](./comparisons-draft.csv). The seven fields in each row describe one source-linked guide. The CSV contains five rows, one per guide. The data carries a `STAGING_DRAFT_ONLY` value and the existing canonical reference. Keep any imported copy in a private WordPress staging site.
+[Download the draft comparison exchange](./comparisons-draft.csv). The seven fields in each row describe one source-linked guide. The CSV contains six rows, one per guide. The data carries a `STAGING_DRAFT_ONLY` value and the existing canonical reference. Keep any imported copy in a private WordPress staging site.
 
 | Page Generator Pro field | Keyword or setting |
 |---|---|

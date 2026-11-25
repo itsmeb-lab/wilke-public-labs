@@ -1618,3 +1618,264 @@
         <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/"">Check other library and local program rules</a></li>
       </ul>
     </section>"
+"library-museum-passes","Do I need a separate ticket with a library museum pass?","Compare library pickup, separate timed admission, group limits and return rules for selected museums and attractions in the United States and Canada.","https://itsmeb-lab.github.io/wilke-public-labs/library-museum-passes/","2026-11-25","STAGING_DRAFT_ONLY","<div class=""intro"">
+      <p>It depends on the pass and the venue. Some places use it at the door, and others ask you to book a time separately. These five routes show what the libraries and venues actually publish.</p>
+      <p>Check availability and the visit date with both organizations. If the venue requires a separate timed ticket, make sure the pass and ticket dates match.</p>
+    </div>
+    <!-- LIBRARY-MUSEUM-PASSES:START -->
+    <nav id=""items"" class=""choices"" aria-label=""Choose an item"" tabindex=""-1"">
+      <p>Choose an item</p>
+      <ul role=""list"">
+        <li><a href=""#reserve-pass"">Reserve the library pass ahead</a></li>
+        <li><a href=""#book-venue"">Use the pass to book a venue time</a></li>
+        <li><a href=""#at-the-door"">Redeem the pass at the venue</a></li>
+        <li><a href=""#group-entry"">Check how many people it covers</a></li>
+        <li><a href=""#return-pass"">Return a physical pass</a></li>
+        <li><a href=""#plan-your-visit"">Plan your visit in order</a></li>
+      </ul>
+    </nav>
+    <p class=""reviewed"">Snapshot reviewed <time datetime=""2026-11-25"">November 25, 2026</time>.</p>
+    <section id=""reserve-pass"" class=""comparison"" aria-labelledby=""reserve-pass-title"" tabindex=""-1"">
+      <h2 id=""reserve-pass-title"">Reserve the library pass ahead</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""boston-aquarium"" data-fit=""listed"" id=""answer--reserve-pass--boston-aquarium"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--reserve-pass--boston-aquarium"" aria-label=""Boston Public Library → New England Aquarium — Reserve the library pass ahead"">Boston Public Library → New England Aquarium</a></h3><p class=""area"">Boston, Massachusetts</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Reserve a digital Aquarium pass with an active physical BPL card. A card alone does not redeem admission.</p>
+          <p class=""source""><a href=""https://www.bpl.org/museum-passes/"">Boston Public Library museum pass instructions</a></p>
+        </li>
+        <li data-operator=""shorewood-betty-brinn"" data-fit=""excluded"" id=""answer--reserve-pass--shorewood-betty-brinn"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--reserve-pass--shorewood-betty-brinn"" aria-label=""Shorewood Library → Betty Brinn Children’s Museum — Reserve the library pass ahead"">Shorewood Library → Betty Brinn Children’s Museum</a></h3><p class=""area"">Shorewood and Milwaukee, Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>Passes are held at the checkout desk and offered first come, first served when available.</p>
+          <p class=""source""><a href=""https://www.shorewoodlibrary.org/discover/museum_passes.php"">Shorewood Library attraction passes</a></p>
+        </li>
+        <li data-operator=""berkshire-mass-moca"" data-fit=""listed"" id=""answer--reserve-pass--berkshire-mass-moca"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--reserve-pass--berkshire-mass-moca"" aria-label=""Berkshire Athenaeum → MASS MoCA — Reserve the library pass ahead"">Berkshire Athenaeum → MASS MoCA</a></h3><p class=""area"">Pittsfield and North Adams, Massachusetts</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The Athenaeum lists MASS MoCA and accepts advance pass reservations. Children’s cards cannot reserve passes.</p>
+          <p class=""source""><a href=""https://www.pittsfieldlibrary.org/how-do-i/museum-passes"">Berkshire Athenaeum museum passes</a></p>
+        </li>
+        <li data-operator=""burlington-partners"" data-fit=""listed"" id=""answer--reserve-pass--burlington-partners"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--reserve-pass--burlington-partners"" aria-label=""Burlington County Library System → participating venues — Reserve the library pass ahead"">Burlington County Library System → participating venues</a></h3><p class=""area"">Burlington County, New Jersey</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Use a library card to reserve a pass for the day of use. The published booking window goes up to 45 days ahead.</p>
+          <p class=""source""><a href=""https://bcls.lib.nj.us/museum-passes/"">Burlington County Library System museum-pass terms</a></p>
+        </li>
+        <li data-operator=""toronto-aga-khan"" data-fit=""listed"" id=""answer--reserve-pass--toronto-aga-khan"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--reserve-pass--toronto-aga-khan"" aria-label=""Toronto Public Library → Aga Khan Museum — Reserve the library pass ahead"">Toronto Public Library → Aga Khan Museum</a></h3><p class=""area"">Toronto, Ontario</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Reserve through tpl:map with an adult Toronto Public Library card and print or download the pass.</p>
+          <p class=""source""><a href=""https://tpl.ca/using-the-library/services/map/"">Toronto Public Library tpl:map and Aga Khan Museum pass terms</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""book-venue"" class=""comparison"" aria-labelledby=""book-venue-title"" tabindex=""-1"">
+      <h2 id=""book-venue-title"">Use the pass to book a venue time</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""boston-aquarium"" data-fit=""listed"" id=""answer--book-venue--boston-aquarium"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--book-venue--boston-aquarium"" aria-label=""Boston Public Library → New England Aquarium — Use the pass to book a venue time"">Boston Public Library → New England Aquarium</a></h3><p class=""area"">Boston, Massachusetts</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Once you have the digital library pass, book a ticket for the same date to secure your preferred available time.</p>
+          <p class=""source""><a href=""https://www.neaq.org/visit/offers-and-discounts/"">New England Aquarium pass redemption</a></p>
+        </li>
+        <li data-operator=""shorewood-betty-brinn"" data-fit=""excluded"" id=""answer--book-venue--shorewood-betty-brinn"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--book-venue--shorewood-betty-brinn"" aria-label=""Shorewood Library → Betty Brinn Children’s Museum — Use the pass to book a venue time"">Shorewood Library → Betty Brinn Children’s Museum</a></h3><p class=""area"">Shorewood and Milwaukee, Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The museum says its online purchase flow does not take library passes. Its appointment rule for adults visiting without a child is separate.</p>
+          <p class=""source""><a href=""https://bbcmkids.org/plan-your-visit/"">Betty Brinn admission instructions</a></p>
+        </li>
+        <li data-operator=""berkshire-mass-moca"" data-fit=""unknown"" id=""answer--book-venue--berkshire-mass-moca"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--book-venue--berkshire-mass-moca"" aria-label=""Berkshire Athenaeum → MASS MoCA — Use the pass to book a venue time"">Berkshire Athenaeum → MASS MoCA</a></h3><p class=""area"">Pittsfield and North Adams, Massachusetts</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.pittsfieldlibrary.org/how-do-i/museum-passes"">Check with Berkshire Athenaeum → MASS MoCA</a></p>
+        </li>
+        <li data-operator=""burlington-partners"" data-fit=""ask"" id=""answer--book-venue--burlington-partners"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--book-venue--burlington-partners"" aria-label=""Burlington County Library System → participating venues — Use the pass to book a venue time"">Burlington County Library System → participating venues</a></h3><p class=""area"">Burlington County, New Jersey</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>Where a timed ticket is required, check for venue openings, reserve the library pass and then book a venue slot for the same day.</p>
+          <p class=""source""><a href=""https://bcls.lib.nj.us/museum-passes/"">Burlington County Library System museum-pass terms</a></p>
+        </li>
+        <li data-operator=""toronto-aga-khan"" data-fit=""unknown"" id=""answer--book-venue--toronto-aga-khan"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--book-venue--toronto-aga-khan"" aria-label=""Toronto Public Library → Aga Khan Museum — Use the pass to book a venue time"">Toronto Public Library → Aga Khan Museum</a></h3><p class=""area"">Toronto, Ontario</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://tpl.ca/using-the-library/services/map/"">Check with Toronto Public Library → Aga Khan Museum</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""at-the-door"" class=""comparison"" aria-labelledby=""at-the-door-title"" tabindex=""-1"">
+      <h2 id=""at-the-door-title"">Redeem the pass at the venue</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""boston-aquarium"" data-fit=""listed"" id=""answer--at-the-door--boston-aquarium"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--at-the-door--boston-aquarium"" aria-label=""Boston Public Library → New England Aquarium — Redeem the pass at the venue"">Boston Public Library → New England Aquarium</a></h3><p class=""area"">Boston, Massachusetts</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Bring the digital pass to the box office. Without an online booking, you can ask for the next available slot on the pass date. Screenshots of the pass are excluded.</p>
+          <p class=""source""><a href=""https://www.neaq.org/visit/offers-and-discounts/"">New England Aquarium pass redemption</a></p>
+        </li>
+        <li data-operator=""shorewood-betty-brinn"" data-fit=""listed"" id=""answer--at-the-door--shorewood-betty-brinn"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--at-the-door--shorewood-betty-brinn"" aria-label=""Shorewood Library → Betty Brinn Children’s Museum — Redeem the pass at the venue"">Shorewood Library → Betty Brinn Children’s Museum</a></h3><p class=""area"">Shorewood and Milwaukee, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Use the library pass in person. Check the museum’s child accompaniment and adult-only appointment rules first.</p>
+          <p class=""source""><a href=""https://bbcmkids.org/plan-your-visit/"">Betty Brinn admission instructions</a></p>
+        </li>
+        <li data-operator=""berkshire-mass-moca"" data-fit=""listed"" id=""answer--at-the-door--berkshire-mass-moca"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--at-the-door--berkshire-mass-moca"" aria-label=""Berkshire Athenaeum → MASS MoCA — Redeem the pass at the venue"">Berkshire Athenaeum → MASS MoCA</a></h3><p class=""area"">Pittsfield and North Adams, Massachusetts</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Present the pass from the named participating library at the museum box office on the day of your visit.</p>
+          <p class=""source""><a href=""https://massmoca.org/library-pass-program/"">MASS MoCA library pass instructions</a></p>
+        </li>
+        <li data-operator=""burlington-partners"" data-fit=""ask"" id=""answer--at-the-door--burlington-partners"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--at-the-door--burlington-partners"" aria-label=""Burlington County Library System → participating venues — Redeem the pass at the venue"">Burlington County Library System → participating venues</a></h3><p class=""area"">Burlington County, New Jersey</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>A printable library pass alone will not admit you to a venue that requires a separate timed ticket. Check its entry instructions.</p>
+          <p class=""source""><a href=""https://bcls.lib.nj.us/museum-passes/"">Burlington County Library System museum-pass terms</a></p>
+        </li>
+        <li data-operator=""toronto-aga-khan"" data-fit=""listed"" id=""answer--at-the-door--toronto-aga-khan"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--at-the-door--toronto-aga-khan"" aria-label=""Toronto Public Library → Aga Khan Museum — Redeem the pass at the venue"">Toronto Public Library → Aga Khan Museum</a></h3><p class=""area"">Toronto, Ontario</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The library lists the Guest Services Desk as the place to redeem this pass for general admission.</p>
+          <p class=""source""><a href=""https://tpl.ca/using-the-library/services/map/"">Toronto Public Library tpl:map and Aga Khan Museum pass terms</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""group-entry"" class=""comparison"" aria-labelledby=""group-entry-title"" tabindex=""-1"">
+      <h2 id=""group-entry-title"">Check how many people it covers</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""boston-aquarium"" data-fit=""listed"" id=""answer--group-entry--boston-aquarium"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--group-entry--boston-aquarium"" aria-label=""Boston Public Library → New England Aquarium — Check how many people it covers"">Boston Public Library → New England Aquarium</a></h3><p class=""area"">Boston, Massachusetts</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The Boston Public Library digital pass covers general admission for up to four people on its date. The Aquarium publishes separate terms for coupons from other libraries.</p>
+          <p class=""source""><a href=""https://www.neaq.org/visit/offers-and-discounts/"">New England Aquarium pass redemption</a></p>
+        </li>
+        <li data-operator=""shorewood-betty-brinn"" data-fit=""listed"" id=""answer--group-entry--shorewood-betty-brinn"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--group-entry--shorewood-betty-brinn"" aria-label=""Shorewood Library → Betty Brinn Children’s Museum — Check how many people it covers"">Shorewood Library → Betty Brinn Children’s Museum</a></h3><p class=""area"">Shorewood and Milwaukee, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Shorewood lists admission for up to six guests per pass. Children must be accompanied by an adult 18 or older.</p>
+          <p class=""source""><a href=""https://www.shorewoodlibrary.org/discover/museum_passes.php"">Shorewood Library attraction passes</a></p>
+        </li>
+        <li data-operator=""berkshire-mass-moca"" data-fit=""listed"" id=""answer--group-entry--berkshire-mass-moca"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--group-entry--berkshire-mass-moca"" aria-label=""Berkshire Athenaeum → MASS MoCA — Check how many people it covers"">Berkshire Athenaeum → MASS MoCA</a></h3><p class=""area"">Pittsfield and North Adams, Massachusetts</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The pass covers gallery admission for up to two adults and two children under 16. Performances and special events are excluded.</p>
+          <p class=""source""><a href=""https://massmoca.org/library-pass-program/"">MASS MoCA library pass instructions</a></p>
+        </li>
+        <li data-operator=""burlington-partners"" data-fit=""unknown"" id=""answer--group-entry--burlington-partners"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--group-entry--burlington-partners"" aria-label=""Burlington County Library System → participating venues — Check how many people it covers"">Burlington County Library System → participating venues</a></h3><p class=""area"">Burlington County, New Jersey</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://bcls.lib.nj.us/museum-passes/"">Check with Burlington County Library System → participating venues</a></p>
+        </li>
+        <li data-operator=""toronto-aga-khan"" data-fit=""listed"" id=""answer--group-entry--toronto-aga-khan"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--group-entry--toronto-aga-khan"" aria-label=""Toronto Public Library → Aga Khan Museum — Check how many people it covers"">Toronto Public Library → Aga Khan Museum</a></h3><p class=""area"">Toronto, Ontario</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>General admission covers up to two adults including the cardholder. Ages 25 and under are free. Children age 14 or younger need an adult.</p>
+          <p class=""source""><a href=""https://tpl.ca/using-the-library/services/map/"">Toronto Public Library tpl:map and Aga Khan Museum pass terms</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""return-pass"" class=""comparison"" aria-labelledby=""return-pass-title"" tabindex=""-1"">
+      <h2 id=""return-pass-title"">Return a physical pass</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""boston-aquarium"" data-fit=""excluded"" id=""answer--return-pass--boston-aquarium"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--return-pass--boston-aquarium"" aria-label=""Boston Public Library → New England Aquarium — Return a physical pass"">Boston Public Library → New England Aquarium</a></h3><p class=""area"">Boston, Massachusetts</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>This route uses a digital library pass. There is no physical library pass in the Aquarium’s published instructions.</p>
+          <p class=""source""><a href=""https://www.neaq.org/visit/offers-and-discounts/"">New England Aquarium pass redemption</a></p>
+        </li>
+        <li data-operator=""shorewood-betty-brinn"" data-fit=""listed"" id=""answer--return-pass--shorewood-betty-brinn"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--return-pass--shorewood-betty-brinn"" aria-label=""Shorewood Library → Betty Brinn Children’s Museum — Return a physical pass"">Shorewood Library → Betty Brinn Children’s Museum</a></h3><p class=""area"">Shorewood and Milwaukee, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Return it to Shorewood Library. The regular loan period is three days with a three-day grace period.</p>
+          <p class=""source""><a href=""https://www.shorewoodlibrary.org/discover/museum_passes.php"">Shorewood Library attraction passes</a></p>
+        </li>
+        <li data-operator=""berkshire-mass-moca"" data-fit=""ask"" id=""answer--return-pass--berkshire-mass-moca"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--return-pass--berkshire-mass-moca"" aria-label=""Berkshire Athenaeum → MASS MoCA — Return a physical pass"">Berkshire Athenaeum → MASS MoCA</a></h3><p class=""area"">Pittsfield and North Adams, Massachusetts</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The library’s standard passes normally come back the next morning. Facsimile passes do not come back. Confirm the format on your booking.</p>
+          <p class=""source""><a href=""https://www.pittsfieldlibrary.org/how-do-i/museum-passes"">Berkshire Athenaeum museum passes</a></p>
+        </li>
+        <li data-operator=""burlington-partners"" data-fit=""ask"" id=""answer--return-pass--burlington-partners"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--return-pass--burlington-partners"" aria-label=""Burlington County Library System → participating venues — Return a physical pass"">Burlington County Library System → participating venues</a></h3><p class=""area"">Burlington County, New Jersey</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>Physical passes go back to the checkout location with the published deadline and route exceptions. Printable passes do not require return.</p>
+          <p class=""source""><a href=""https://bcls.lib.nj.us/museum-passes/"">Burlington County Library System museum-pass terms</a></p>
+        </li>
+        <li data-operator=""toronto-aga-khan"" data-fit=""excluded"" id=""answer--return-pass--toronto-aga-khan"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--return-pass--toronto-aga-khan"" aria-label=""Toronto Public Library → Aga Khan Museum — Return a physical pass"">Toronto Public Library → Aga Khan Museum</a></h3><p class=""area"">Toronto, Ontario</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The library’s listed route uses a printed or downloaded reservation. No physical pass checkout is part of that route.</p>
+          <p class=""source""><a href=""https://tpl.ca/using-the-library/services/map/"">Toronto Public Library tpl:map and Aga Khan Museum pass terms</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""plan-your-visit"" class=""prep"" aria-labelledby=""plan-your-visit-title"" tabindex=""-1"">
+      <h2 id=""plan-your-visit-title"">Plan your visit in order</h2>
+      <p>Follow the named library and venue instructions. Confirm the date, group limit and pass format before traveling.</p>
+      <ul class=""cards"" role=""list"">
+        <li>
+          <h3>Boston Public Library → New England Aquarium</h3><p class=""area"">Boston, Massachusetts</p>
+          <dl>
+            <dt>First, reserve the pass</dt><dd>Use an active physical Boston Public Library card to reserve the digital Aquarium pass for your visit date. <span class=""source""><a href=""https://www.bpl.org/museum-passes/"">Boston Public Library museum pass instructions</a> · <a href=""https://www.neaq.org/visit/offers-and-discounts/"">New England Aquarium pass redemption</a></span></dd>
+            <dt>Then pick a time or go to the box office</dt><dd>Book the same date on the Aquarium site for a specific time. With the pass you can also ask at the box office for the next slot available that day. <span class=""source""><a href=""https://www.neaq.org/visit/offers-and-discounts/"">New England Aquarium pass redemption</a></span></dd>
+            <dt>Bring the actual pass</dt><dd>The Aquarium asks to see the digital library pass at the box office and rejects screenshots. An online reservation and its library pass must show the same date. <span class=""source""><a href=""https://www.neaq.org/visit/offers-and-discounts/"">New England Aquarium pass redemption</a></span></dd>
+          </dl>
+          <p><a href=""https://www.bpl.org/museum-passes/"">Boston Public Library museum pass instructions</a></p>
+        </li>
+        <li>
+          <h3>Shorewood Library → Betty Brinn Children’s Museum</h3><p class=""area"">Shorewood and Milwaukee, Wisconsin</p>
+          <dl>
+            <dt>Collect in person</dt><dd>Use a valid Milwaukee County Federated Library System card at the Shorewood checkout desk. Passes are first come, first served. <span class=""source""><a href=""https://www.shorewoodlibrary.org/discover/museum_passes.php"">Shorewood Library attraction passes</a></span></dd>
+            <dt>Check the museum rules</dt><dd>Use the library pass in person. Children need an adult. The museum requires an appointment when adults are visiting without a child. <span class=""source""><a href=""https://bbcmkids.org/plan-your-visit/"">Betty Brinn admission instructions</a></span></dd>
+            <dt>Return to Shorewood</dt><dd>The normal checkout is three days followed by a three-day grace period. Pick up and return the pass at Shorewood. <span class=""source""><a href=""https://www.shorewoodlibrary.org/discover/museum_passes.php"">Shorewood Library attraction passes</a></span></dd>
+          </dl>
+          <p><a href=""https://www.shorewoodlibrary.org/discover/museum_passes.php"">Shorewood Library attraction passes</a></p>
+        </li>
+        <li>
+          <h3>Berkshire Athenaeum → MASS MoCA</h3><p class=""area"">Pittsfield and North Adams, Massachusetts</p>
+          <dl>
+            <dt>Reserve the library pass</dt><dd>Look for MASS MoCA in the Athenaeum’s reservation system. The library excludes children’s cards and limits reservations to one pass a week. <span class=""source""><a href=""https://www.pittsfieldlibrary.org/how-do-i/museum-passes"">Berkshire Athenaeum museum passes</a></span></dd>
+            <dt>Redeem at the box office</dt><dd>The museum accepts the participating library’s physical or digital pass on the visit day for general gallery admission. <span class=""source""><a href=""https://massmoca.org/library-pass-program/"">MASS MoCA library pass instructions</a></span></dd>
+            <dt>Verify your library’s pass format</dt><dd>The library publishes different pickup and return rules for facsimile and standard passes. Confirm the version issued with your reservation. <span class=""source""><a href=""https://www.pittsfieldlibrary.org/how-do-i/museum-passes"">Berkshire Athenaeum museum passes</a></span></dd>
+          </dl>
+          <p><a href=""https://www.pittsfieldlibrary.org/how-do-i/museum-passes"">Berkshire Athenaeum museum passes</a></p>
+        </li>
+        <li>
+          <h3>Burlington County Library System → participating venues</h3><p class=""area"">Burlington County, New Jersey</p>
+          <dl>
+            <dt>Check venue openings and time slots</dt><dd>For venues that require a timed ticket, check whether the museum has an opening before reserving the library pass. <span class=""source""><a href=""https://bcls.lib.nj.us/museum-passes/"">Burlington County Library System museum-pass terms</a></span></dd>
+            <dt>Reserve both for the same day where required</dt><dd>Reserve the library pass for the day of the visit. Then use the venue’s site to get its timed ticket for the same day when the venue requires it. <span class=""source""><a href=""https://bcls.lib.nj.us/museum-passes/"">Burlington County Library System museum-pass terms</a></span></dd>
+            <dt>Check format and return options</dt><dd>Printable passes are valid for a specific date. Return physical passes to the same library. Review Sunday and New York City exceptions on the library page. <span class=""source""><a href=""https://bcls.lib.nj.us/museum-passes/"">Burlington County Library System museum-pass terms</a></span></dd>
+          </dl>
+          <p><a href=""https://bcls.lib.nj.us/museum-passes/"">Burlington County Library System museum-pass terms</a></p>
+        </li>
+        <li>
+          <h3>Toronto Public Library → Aga Khan Museum</h3><p class=""area"">Toronto, Ontario</p>
+          <dl>
+            <dt>Reserve with an adult library card</dt><dd>Use tpl:map to choose an available date. Download or print the pass as directed by the library. <span class=""source""><a href=""https://tpl.ca/using-the-library/services/map/"">Toronto Public Library tpl:map and Aga Khan Museum pass terms</a></span></dd>
+            <dt>Go to Guest Services</dt><dd>Redeem the pass for general admission at the museum’s Guest Services Desk. Confirm the museum hours and check ticketed events separately. <span class=""source""><a href=""https://tpl.ca/using-the-library/services/map/"">Toronto Public Library tpl:map and Aga Khan Museum pass terms</a> · <a href=""https://agakhanmuseum.org/plan-your-visit/"">Aga Khan Museum visitor information</a></span></dd>
+          </dl>
+          <p><a href=""https://tpl.ca/using-the-library/services/map/"">Toronto Public Library tpl:map and Aga Khan Museum pass terms</a></p>
+        </li>
+      </ul>
+    </section>
+    <!-- LIBRARY-MUSEUM-PASSES:END -->
+    <section class=""notes"" aria-labelledby=""notes-title"">
+      <h2 id=""notes-title"">Check the pass before buying a ticket</h2>
+      <p>Start with your library’s eligibility rules and look up the exact venue. For the New England Aquarium, <a href=""https://www.neaq.org/visit/offers-and-discounts/"">choose the Boston Public Library pass instructions</a> if that is your library. The Aquarium publishes different terms for coupons issued by other partners.</p>
+      <p>At Betty Brinn, <a href=""https://bbcmkids.org/plan-your-visit/"">the venue’s separate ticket and adult-visit instructions</a> apply. In Burlington County, <a href=""https://bcls.lib.nj.us/museum-passes/"">the library explains how to check time slots first</a> for venues that require a timed ticket.</p>
+    </section>
+    <section class=""notes"" aria-labelledby=""sources-and-data"">
+      <h2 id=""sources-and-data"">Sources and data</h2>
+      <ul class=""utility-links"" role=""list"">
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/library-museum-passes/comparison.csv"" download>Download comparison data (CSV)</a></li>
+        <li><a href=""https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml"">Report a source correction</a> (public GitHub form)</li>
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/library-scanning/"">Check library document scanning options</a></li>
+      </ul>
+    </section>"

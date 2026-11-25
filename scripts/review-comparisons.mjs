@@ -11,6 +11,7 @@ export const comparisonGuides = Object.freeze([
   { slug: 'milwaukee-bulky-items', marker: 'MILWAUKEE-BULKY' },
   { slug: 'food-scrap-drop-off', marker: 'FOOD-SCRAP' },
   { slug: 'library-scanning', marker: 'LIBRARY-SCAN' },
+  { slug: 'library-museum-passes', marker: 'LIBRARY-MUSEUM-PASSES' },
 ]);
 const read = (path) => readFileSync(new URL(path, root), 'utf8');
 
