@@ -15,8 +15,8 @@ test("policy page has one untracked canonical, title, description and heading",(
 });
 test("policy page uses existing local module and stylesheet assets",()=>{
  for(const path of ["../published-policy-lab/app.mjs","../published-policy-lab/style.css","../published-policy-lab/data.mjs","../published-policy-lab/engine.mjs"])assert.ok(existsSync(new URL(path,import.meta.url)));
- assert.match(html,/<script type="module" src="\.\/app\.mjs\?v=20261125-v2"><\/script>/);
- assert.match(html,/<link rel="stylesheet" href="\.\/style\.css\?v=20261125-v2">/);
+ assert.match(html,/<script type="module" src="\.\/app\.mjs\?v=\d{8}-v\d+"><\/script>/);
+ assert.match(html,/<link rel="stylesheet" href="\.\/style\.css\?v=\d{8}-v\d+">/);
  assert.doesNotMatch(html,/<script[^>]+src="https?:/i);
 });
 test("policy page has explicit source-date, limited-coverage and availability boundaries",()=>{

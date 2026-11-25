@@ -1,5 +1,5 @@
 export const catalog = {
-  "snapshotId": "published-policy-examples-20261125-v2",
+  "snapshotId": "published-policy-examples-20261125-v3",
   "checkedOn": "2026-11-25",
   "sources": [
     {

@@ -13,19 +13,22 @@ export function rendererChecks(assert,source,api,catalog) {
   addEventListener(type,fn){(this.listeners[type]||=[]).push(fn);}
   fire(type){for(const fn of this.listeners[type]||[])fn({target:this});}
  }
- function fixture(data=catalog,extraExample) {
+ function fixture(data=catalog,extraExample,fragment="") {
   const elements=new Map([["task",new Element("select")],["place",new Element("select")],["visit-date",new Element("input")],["answer",new Element("div")]]);
   const examples=["tv","title","printing","holiday","hotspot","things"].map(id=>{const e=new Element("button");e.dataset.example=id;return e;});
   if(extraExample){const e=new Element("button");e.dataset.example=extraExample;examples.push(e);}
-  const document={getElementById:id=>elements.get(id),createElement:tag=>new Element(tag),querySelectorAll:selector=>selector==="[data-example]"?examples:[]};
-  const imports=['import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v2";','import { catalog } from "./data.mjs?v=20261125-v2";'];
+  const windowListeners={};
+  const defaultView={location:{hash:fragment},addEventListener:(type,fn)=>{(windowListeners[type]||=[]).push(fn);}};
+  const document={defaultView,getElementById:id=>elements.get(id),createElement:tag=>new Element(tag),querySelectorAll:selector=>selector==="[data-example]"?examples:[]};
+  const imports=['import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v3";','import { catalog } from "./data.mjs?v=20261125-v3";','import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v3";'];
   let body=source;
   for(const line of imports){assert.equal(body.split(line).length,2,"Expected one known import");body=body.replace(line,"");}
   const forbidden=()=>{throw new Error("Unexpected network or storage access");};
-  new Function("document","SERVICES","answerPolicy","validateCatalog","catalog","fetch","XMLHttpRequest","WebSocket","localStorage","navigator",body)(document,api.SERVICES,api.answerPolicy,api.validateCatalog,data,forbidden,forbidden,forbidden,undefined,undefined);
+  new Function("document","SERVICES","answerPolicy","validateCatalog","catalog","parsePolicyView","buildPolicyViewLink","fetch","XMLHttpRequest","WebSocket","localStorage","navigator",body)(document,api.SERVICES,api.answerPolicy,api.validateCatalog,data,api.parsePolicyView,api.buildPolicyViewLink,forbidden,forbidden,forbidden,undefined,undefined);
   const find=(node,predicate)=>{if(predicate(node))return node;for(const child of node.children){const found=find(child,predicate);if(found)return found;}};
   return {
    elements,examples,output:elements.get("answer"),
+   hash:fragment=>{defaultView.location.hash=fragment;for(const fn of windowListeners.hashchange||[])fn();},
    example:id=>examples.find(x=>x.dataset.example===id).fire("click"),
    selectTask:value=>{elements.get("task").value=value;elements.get("task").fire("change");},
    find
@@ -47,6 +50,13 @@ export function rendererChecks(assert,source,api,catalog) {
  ["program selection keeps live stock and date-specific access unverified",()=>{const f=fixture();f.selectTask("hotspot_borrowing");assert.equal(f.elements.get("place").children.length,1);assert.match(f.output.textContent,/No visit window is modeled/);assert.match(f.output.textContent,/Live availability: unverified/);assert.doesNotMatch(f.output.textContent,/in stock|ready for pickup|Published regular pattern/);}],
  ["things preset retains card-specific and separate item-group limits",()=>{const f=fixture();f.example("things");assert.match(f.output.textContent,/Hocutt-Ellington/);assert.match(f.output.textContent,/two kit items plus one technology item/);assert.match(f.output.textContent,/additional lending rules/);}],
  ["an unknown future example fails helpfully without an unhandled event error",()=>{const f=fixture(catalog,"future");f.example("future");assert.match(f.output.textContent,/This example is unavailable/);assert.match(f.output.textContent,/Choose a task above/);assert.doesNotMatch(f.output.textContent,/Service described/);}],
+
+ ["a shared link restores a source-bound task, place and date on load",()=>{const f=fixture(catalog,null,"#task=farmer_oil&place=union-cross-keys&date=2026-11-26");assert.equal(f.elements.get("task").value,"farmer_oil");assert.equal(f.elements.get("place").value,"union-cross-keys");assert.equal(f.elements.get("visit-date").value,"2026-11-26");assert.match(f.output.textContent,/lists this date as a recycling-center closure/);}],
+ ["hash navigation opens another supported view",()=>{const f=fixture();f.hash("#task=things_borrowing&place=clayton-things-program");assert.match(f.output.textContent,/two kit items plus one technology item/);}],
+ ["invalid shared selections refuse instead of showing the default answer",()=>{const f=fixture(catalog,null,"#task=printing&place=union-jonesville");assert.match(f.output.textContent,/shared view could not be opened/);assert.doesNotMatch(f.output.textContent,/Published restriction|Service described in the source/);}],
+ ["a refused shared view can recover through the visible task controls",()=>{const f=fixture(catalog,null,"#task=unknown&place=unknown");f.selectTask("printing");assert.match(f.output.textContent,/Service described in the source/);}],
+ ["each answer links its current selection on the fixed canonical host",()=>{const f=fixture();f.example("holiday");const a=f.find(f.output,n=>n.className==="share-view").children[0];assert.equal(a.href,"https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/#task=farmer_oil&place=union-cross-keys&date=2026-11-26");}],
+ ["the skip-to-checker anchor does not replace the current result",()=>{const f=fixture();f.example("things");f.hash("#checker");assert.match(f.output.textContent,/two kit items plus one technology item/);}],
  ["a broken catalog shows the original-source fallback instead of a fabricated answer",()=>{const c=JSON.parse(JSON.stringify(catalog));c.sources[0].url="http://invalid.example/policy";const f=fixture(c);assert.match(f.output.textContent,/catalog could not be loaded/);assert.doesNotMatch(f.output.textContent,/Service described/);}]
  ];
 }
