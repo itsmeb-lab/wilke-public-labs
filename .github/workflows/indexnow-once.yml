@@ -1,0 +1,26 @@
+name: One-time public lab notification
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'ops-indexnow/submission-20261125.json'
+permissions:
+  contents: read
+concurrency:
+  group: indexnow-wilke-labs-20261125
+  cancel-in-progress: false
+jobs:
+  notify-once:
+    if: github.repository == 'itsmeb-lab/wilke-public-labs' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check scope and submit one batch
+        run: node ops-indexnow/submit-cli.mjs
