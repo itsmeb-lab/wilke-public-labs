@@ -989,3 +989,299 @@
         <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/"">Check other local program rules</a></li>
       </ul>
     </section>"
+"food-scrap-drop-off","What can go in a food-scrap drop-off bin?","Compare published public drop-off rules for raw and cooked meat, paper bags, certified compostable bags and tea bags. Check bin access before you make the trip.","https://itsmeb-lab.github.io/wilke-public-labs/food-scrap-drop-off/","2026-11-25","STAGING_DRAFT_ONLY","<div class=""intro"">
+      <p>Choose a food scrap or bag to compare six public drop-off programs. Check the exact bin’s directions, especially if you use a compostable liner or the cart stays locked.</p>
+      <p>For other North Carolina locations, use the <a href=""https://www.deq.nc.gov/about/divisions/environmental-assistance-and-customer-service/recycling-and-materials-management/use-food-nc/use-food-nc-consumers"">state’s food-scrap drop-off map</a> and confirm the operator’s instructions.</p>
+    </div>
+    <!-- FOOD-SCRAP:START -->
+    <nav id=""items"" class=""choices"" aria-label=""Choose an item"" tabindex=""-1"">
+      <p>Choose an item</p>
+      <ul role=""list"">
+        <li><a href=""#raw-meat"">Raw meat</a></li>
+        <li><a href=""#cooked-meat"">Cooked meat</a></li>
+        <li><a href=""#brown-paper-bag"">Brown paper bag left in the bin</a></li>
+        <li><a href=""#compostable-plastic-bag"">Certified compostable plastic bag</a></li>
+        <li><a href=""#tea-bag"">Used tea bag</a></li>
+        <li><a href=""#before-you-go"">How to use the drop-off</a></li>
+      </ul>
+    </nav>
+    <p class=""reviewed"">Snapshot reviewed <time datetime=""2026-11-25"">November 25, 2026</time>.</p>
+    <section id=""raw-meat"" class=""comparison"" aria-labelledby=""raw-meat-title"" tabindex=""-1"">
+      <h2 id=""raw-meat-title"">Raw meat</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""milwaukee"" data-fit=""excluded"">
+          <h3>Milwaukee food scrap drop-off</h3><p class=""area"">Milwaukee, Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The city excludes raw meat.</p>
+          <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Yard-Food-Waste/Home-Composting"">Milwaukee collection guide and sign-up</a></p>
+        </li>
+        <li data-operator=""madison-streets"" data-fit=""excluded"">
+          <h3>Madison Streets Division sites</h3><p class=""area"">Madison, Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>All meat and bones are excluded.</p>
+          <p class=""source""><a href=""https://www.cityofmadison.com/streets/food-scraps/compost-food-scraps"">Madison Streets Division food-scrap guide</a></p>
+        </li>
+        <li data-operator=""ann-arbor"" data-fit=""ask"">
+          <h3>Ann Arbor community drop-off bins</h3><p class=""area"">Ann Arbor, Michigan</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The bin program says all food scraps and lists meat, bones and seafood. Its drop-off list gives no separate raw-meat instruction. Ask the city if you need to confirm this exact case.</p>
+          <p class=""source""><a href=""https://www.a2gov.org/trash-recycle-and-compost/compost/food-scrap-drop-off-bins/"">Ann Arbor bin access and materials</a></p>
+        </li>
+        <li data-operator=""minneapolis"" data-fit=""ask"">
+          <h3>Minneapolis organics drop-off</h3><p class=""area"">Minneapolis, Minnesota</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The materials list includes meat, fish and bones generally. Confirm raw meat if you are unsure about a particular item.</p>
+          <p class=""source""><a href=""https://www.minneapolismn.gov/resident-services/garbage-recycling-cleanup/organics-recycling/accepted-organics/"">Minneapolis accepted organics</a></p>
+        </li>
+        <li data-operator=""durham"" data-fit=""ask"">
+          <h3>Durham city food-scrap containers</h3><p class=""area"">Durham, North Carolina</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The drop-off list includes meat generally. The city gives different rules for home composting, so confirm this specific case with staff.</p>
+          <p class=""source""><a href=""https://www.durhamnc.gov/935/Composting"">Durham city drop-off instructions</a></p>
+        </li>
+        <li data-operator=""carrboro"" data-fit=""ask"">
+          <h3>Carrboro Town Hall drop-off</h3><p class=""area"">Carrboro, North Carolina</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The county lists meat and fish products. Call the county for confirmation if you need a specific raw-meat rule.</p>
+          <p class=""source""><a href=""https://www.orangecountync.gov/2693/Food-Waste-Drop-Off-Sites"">Orange County food-waste drop-off sites</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""cooked-meat"" class=""comparison"" aria-labelledby=""cooked-meat-title"" tabindex=""-1"">
+      <h2 id=""cooked-meat-title"">Cooked meat</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""milwaukee"" data-fit=""listed"">
+          <h3>Milwaukee food scrap drop-off</h3><p class=""area"">Milwaukee, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Cooked meat and animal or fish bones are on the city’s accepted list.</p>
+          <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Yard-Food-Waste/Home-Composting"">Milwaukee collection guide and sign-up</a></p>
+        </li>
+        <li data-operator=""madison-streets"" data-fit=""excluded"">
+          <h3>Madison Streets Division sites</h3><p class=""area"">Madison, Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The food-scrap carts exclude cooked meat and bones.</p>
+          <p class=""source""><a href=""https://www.cityofmadison.com/streets/food-scraps/compost-food-scraps"">Madison Streets Division food-scrap guide</a></p>
+        </li>
+        <li data-operator=""ann-arbor"" data-fit=""listed"">
+          <h3>Ann Arbor community drop-off bins</h3><p class=""area"">Ann Arbor, Michigan</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The city includes meat and bones in the bin program.</p>
+          <p class=""source""><a href=""https://www.a2gov.org/trash-recycle-and-compost/compost/food-scrap-drop-off-bins/"">Ann Arbor bin access and materials</a></p>
+        </li>
+        <li data-operator=""minneapolis"" data-fit=""listed"">
+          <h3>Minneapolis organics drop-off</h3><p class=""area"">Minneapolis, Minnesota</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The city lists meat, fish and bones among accepted organics.</p>
+          <p class=""source""><a href=""https://www.minneapolismn.gov/resident-services/garbage-recycling-cleanup/organics-recycling/accepted-organics/"">Minneapolis accepted organics</a></p>
+        </li>
+        <li data-operator=""durham"" data-fit=""listed"">
+          <h3>Durham city food-scrap containers</h3><p class=""area"">Durham, North Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The drop-off list includes residential meat scraps.</p>
+          <p class=""source""><a href=""https://www.durhamnc.gov/935/Composting"">Durham city drop-off instructions</a></p>
+        </li>
+        <li data-operator=""carrboro"" data-fit=""listed"">
+          <h3>Carrboro Town Hall drop-off</h3><p class=""area"">Carrboro, North Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The county includes meat and small chicken and fish bones in its accepted list.</p>
+          <p class=""source""><a href=""https://www.orangecountync.gov/2693/Food-Waste-Drop-Off-Sites"">Orange County food-waste drop-off sites</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""brown-paper-bag"" class=""comparison"" aria-labelledby=""brown-paper-bag-title"" tabindex=""-1"">
+      <h2 id=""brown-paper-bag-title"">Brown paper bag left in the bin</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""milwaukee"" data-fit=""listed"">
+          <h3>Milwaukee food scrap drop-off</h3><p class=""area"">Milwaukee, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The city lists brown paper bags among accepted items.</p>
+          <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Yard-Food-Waste/Home-Composting"">Milwaukee collection guide and sign-up</a></p>
+        </li>
+        <li data-operator=""madison-streets"" data-fit=""excluded"">
+          <h3>Madison Streets Division sites</h3><p class=""area"">Madison, Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The city says to empty the contents into the cart and keep paper bags out.</p>
+          <p class=""source""><a href=""https://www.cityofmadison.com/streets/food-scraps/compost-food-scraps"">Madison Streets Division food-scrap guide</a></p>
+        </li>
+        <li data-operator=""ann-arbor"" data-fit=""listed"">
+          <h3>Ann Arbor community drop-off bins</h3><p class=""area"">Ann Arbor, Michigan</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The drop-off announcement allows loose scraps or scraps in brown paper bags.</p>
+          <p class=""source""><a href=""https://www.a2gov.org/news/posts/composting-access-expands-with-community-food-scrap-drop-off-bins/"">Ann Arbor program announcement and bag instructions</a></p>
+        </li>
+        <li data-operator=""minneapolis"" data-fit=""listed"">
+          <h3>Minneapolis organics drop-off</h3><p class=""area"">Minneapolis, Minnesota</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The drop-off instructions allow compostable paper bags.</p>
+          <p class=""source""><a href=""https://www.minneapolismn.gov/resident-services/garbage-recycling-cleanup/organics-recycling/organics-drop-off-sites/"">Minneapolis organics drop-off sites</a></p>
+        </li>
+        <li data-operator=""durham"" data-fit=""unknown"">
+          <h3>Durham city food-scrap containers</h3><p class=""area"">Durham, North Carolina</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.durhamnc.gov/935/Composting"">Check with Durham city food-scrap containers</a></p>
+        </li>
+        <li data-operator=""carrboro"" data-fit=""ask"">
+          <h3>Carrboro Town Hall drop-off</h3><p class=""area"">Carrboro, North Carolina</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The county lists soiled paper food packaging that is entirely paper. Ask about the specific bag before dropping it off.</p>
+          <p class=""source""><a href=""https://www.orangecountync.gov/2693/Food-Waste-Drop-Off-Sites"">Orange County food-waste drop-off sites</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""compostable-plastic-bag"" class=""comparison"" aria-labelledby=""compostable-plastic-bag-title"" tabindex=""-1"">
+      <h2 id=""compostable-plastic-bag-title"">Certified compostable plastic bag</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""milwaukee"" data-fit=""excluded"">
+          <h3>Milwaukee food scrap drop-off</h3><p class=""area"">Milwaukee, Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The city excludes plastic and biodegradable products. The accepted list identifies brown paper bags as its collection option.</p>
+          <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Yard-Food-Waste/Home-Composting"">Milwaukee collection guide and sign-up</a></p>
+        </li>
+        <li data-operator=""madison-streets"" data-fit=""excluded"">
+          <h3>Madison Streets Division sites</h3><p class=""area"">Madison, Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The city explicitly excludes compostable plastic bags.</p>
+          <p class=""source""><a href=""https://www.cityofmadison.com/streets/food-scraps/compost-food-scraps"">Madison Streets Division food-scrap guide</a></p>
+        </li>
+        <li data-operator=""ann-arbor"" data-fit=""ask"">
+          <h3>Ann Arbor community drop-off bins</h3><p class=""area"">Ann Arbor, Michigan</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The city’s drop-off announcement describes loose scraps and brown paper bags. Confirm any certified plastic liner for this route.</p>
+          <p class=""source""><a href=""https://www.a2gov.org/news/posts/composting-access-expands-with-community-food-scrap-drop-off-bins/"">Ann Arbor program announcement and bag instructions</a></p>
+        </li>
+        <li data-operator=""minneapolis"" data-fit=""listed"">
+          <h3>Minneapolis organics drop-off</h3><p class=""area"">Minneapolis, Minnesota</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The city accepts compostable plastic bags with the BPI mark. Check the linked list for its marking requirements.</p>
+          <p class=""source""><a href=""https://www.minneapolismn.gov/resident-services/garbage-recycling-cleanup/organics-recycling/accepted-organics/"">Minneapolis accepted organics</a></p>
+        </li>
+        <li data-operator=""durham"" data-fit=""ask"">
+          <h3>Durham city food-scrap containers</h3><p class=""area"">Durham, North Carolina</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The city excludes plastic generally. Its HTML list does not discuss this exact certification. Follow the specific bin directions before using a liner.</p>
+          <p class=""source""><a href=""https://www.durhamnc.gov/935/Composting"">Durham city drop-off instructions</a></p>
+        </li>
+        <li data-operator=""carrboro"" data-fit=""excluded"">
+          <h3>Carrboro Town Hall drop-off</h3><p class=""area"">Carrboro, North Carolina</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The county excludes compostable plastic bags even when BPI-certified.</p>
+          <p class=""source""><a href=""https://www.orangecountync.gov/2693/Food-Waste-Drop-Off-Sites"">Orange County food-waste drop-off sites</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""tea-bag"" class=""comparison"" aria-labelledby=""tea-bag-title"" tabindex=""-1"">
+      <h2 id=""tea-bag-title"">Used tea bag</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""milwaukee"" data-fit=""excluded"">
+          <h3>Milwaukee food scrap drop-off</h3><p class=""area"">Milwaukee, Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The city excludes tea bags and accepts loose tea leaves.</p>
+          <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Yard-Food-Waste/Home-Composting"">Milwaukee collection guide and sign-up</a></p>
+        </li>
+        <li data-operator=""madison-streets"" data-fit=""excluded"">
+          <h3>Madison Streets Division sites</h3><p class=""area"">Madison, Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The site accepts loose tea and excludes tea bags.</p>
+          <p class=""source""><a href=""https://www.cityofmadison.com/streets/food-scraps/compost-food-scraps"">Madison Streets Division food-scrap guide</a></p>
+        </li>
+        <li data-operator=""ann-arbor"" data-fit=""excluded"">
+          <h3>Ann Arbor community drop-off bins</h3><p class=""area"">Ann Arbor, Michigan</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The bin list identifies loose tea and excludes tea bags.</p>
+          <p class=""source""><a href=""https://www.a2gov.org/trash-recycle-and-compost/compost/food-scrap-drop-off-bins/"">Ann Arbor bin access and materials</a></p>
+        </li>
+        <li data-operator=""minneapolis"" data-fit=""ask"">
+          <h3>Minneapolis organics drop-off</h3><p class=""area"">Minneapolis, Minnesota</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The accepted-organics illustration includes a tea bag. The text list gives no bag-material instructions. Ask about your type before dropping it off.</p>
+          <p class=""source""><a href=""https://www.minneapolismn.gov/resident-services/garbage-recycling-cleanup/organics-recycling/accepted-organics/"">Minneapolis accepted organics</a></p>
+        </li>
+        <li data-operator=""durham"" data-fit=""unknown"">
+          <h3>Durham city food-scrap containers</h3><p class=""area"">Durham, North Carolina</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.durhamnc.gov/935/Composting"">Check with Durham city food-scrap containers</a></p>
+        </li>
+        <li data-operator=""carrboro"" data-fit=""listed"">
+          <h3>Carrboro Town Hall drop-off</h3><p class=""area"">Carrboro, North Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The county includes tea bags and asks users to remove staples.</p>
+          <p class=""source""><a href=""https://www.orangecountync.gov/2693/Food-Waste-Drop-Off-Sites"">Orange County food-waste drop-off sites</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""before-you-go"" class=""prep"" aria-labelledby=""before-you-go-title"" tabindex=""-1"">
+      <h2 id=""before-you-go-title"">How to use the drop-off</h2>
+      <p>Check the current location and whether you need to sign up or unlock a cart. The rules below apply to the named public drop-off routes.</p>
+      <ul class=""cards"" role=""list"">
+        <li>
+          <h3>Milwaukee food scrap drop-off</h3><p class=""area"">Milwaukee, Wisconsin</p>
+          <dl>
+            <dt>Access</dt><dd>Sign up through the partner link on the city’s page and choose a listed drop-off. <span class=""source""><a href=""https://city.milwaukee.gov/sanitation/Yard-Food-Waste/Home-Composting"">Milwaukee collection guide and sign-up</a></span></dd>
+            <dt>Scope</dt><dd>These are food-scrap carts. Use the city’s separate yard-waste route for grass, branches and leaves. <span class=""source""><a href=""https://city.milwaukee.gov/sanitation/Yard-Food-Waste/Home-Composting"">Milwaukee collection guide and sign-up</a></span></dd>
+          </dl>
+          <p><a href=""https://city.milwaukee.gov/sanitation/Yard-Food-Waste/Home-Composting"">Milwaukee collection guide and sign-up</a></p>
+        </li>
+        <li>
+          <h3>Madison Streets Division sites</h3><p class=""area"">Madison, Wisconsin</p>
+          <dl>
+            <dt>Access</dt><dd>The city limits these drop-off locations to Madison residents and taxpayers. Check site hours and what proof to bring. <span class=""source""><a href=""https://www.cityofmadison.com/streets/food-scraps/compost-food-scraps"">Madison Streets Division food-scrap guide</a></span></dd>
+            <dt>Which bin</dt><dd>Use the orange food-scrap carts at Streets Division drop-off sites. The page describes farmers’ markets and county kiosks separately. <span class=""source""><a href=""https://www.cityofmadison.com/streets/food-scraps/compost-food-scraps"">Madison Streets Division food-scrap guide</a></span></dd>
+          </dl>
+          <p><a href=""https://www.cityofmadison.com/streets/food-scraps/compost-food-scraps"">Madison Streets Division food-scrap guide</a></p>
+        </li>
+        <li>
+          <h3>Ann Arbor community drop-off bins</h3><p class=""area"">Ann Arbor, Michigan</p>
+          <dl>
+            <dt>Access</dt><dd>The city currently describes this program for approved residents of multifamily housing. An application by itself does not unlock a bin. <span class=""source""><a href=""https://www.a2gov.org/trash-recycle-and-compost/compost/food-scrap-drop-off-bins/"">Ann Arbor bin access and materials</a></span></dd>
+            <dt>Unlocking</dt><dd>Wait for approval and app instructions. The city describes requesting a separate unlocking method if you cannot use a smartphone. <span class=""source""><a href=""https://www.a2gov.org/trash-recycle-and-compost/compost/food-scrap-drop-off-bins/"">Ann Arbor bin access and materials</a></span></dd>
+          </dl>
+          <p><a href=""https://www.a2gov.org/trash-recycle-and-compost/compost/food-scrap-drop-off-bins/"">Ann Arbor bin access and materials</a></p>
+        </li>
+        <li>
+          <h3>Minneapolis organics drop-off</h3><p class=""area"">Minneapolis, Minnesota</p>
+          <dl>
+            <dt>Access</dt><dd>Choose a site and follow the city’s sign-up and welcome instructions to use the locked cart. <span class=""source""><a href=""https://www.minneapolismn.gov/resident-services/garbage-recycling-cleanup/organics-recycling/organics-drop-off-sites/"">Minneapolis organics drop-off sites</a></span></dd>
+            <dt>Bag</dt><dd>The drop-off instructions discuss both paper and compostable plastic. Use the linked materials guide to check the BPI mark. <span class=""source""><a href=""https://www.minneapolismn.gov/resident-services/garbage-recycling-cleanup/organics-recycling/accepted-organics/"">Minneapolis accepted organics</a></span></dd>
+          </dl>
+          <p><a href=""https://www.minneapolismn.gov/resident-services/garbage-recycling-cleanup/organics-recycling/organics-drop-off-sites/"">Minneapolis organics drop-off sites</a></p>
+        </li>
+        <li>
+          <h3>Durham city food-scrap containers</h3><p class=""area"">Durham, North Carolina</p>
+          <dl>
+            <dt>Access</dt><dd>The city describes free residential drop-off for city residents and city employees. Register in CompostHere to unlock the container. <span class=""source""><a href=""https://www.durhamnc.gov/935/Composting"">Durham city drop-off instructions</a></span></dd>
+            <dt>Amount</dt><dd>The city limits use to two gallons per person per 24-hour or weekend period and excludes commercial and event scraps. <span class=""source""><a href=""https://www.durhamnc.gov/935/Composting"">Durham city drop-off instructions</a></span></dd>
+          </dl>
+          <p><a href=""https://www.durhamnc.gov/935/Composting"">Durham city drop-off instructions</a></p>
+        </li>
+        <li>
+          <h3>Carrboro Town Hall drop-off</h3><p class=""area"">Carrboro, North Carolina</p>
+          <dl>
+            <dt>Location</dt><dd>The town lists roll-out carts behind Town Hall. The market also posts that its compost drop-off moved there. Check the town’s current directions. <span class=""source""><a href=""https://www.carrboronc.gov/2502/Compost-Drop-off"">Carrboro town drop-off locations and access</a> · <a href=""https://www.carrborofarmersmarket.com/compost-program"">Carrboro market’s material list and move notice</a></span></dd>
+            <dt>Access</dt><dd>The town lists an app requirement for the separate BigBelly bins at Jones Ferry and MLK Park. Check the type of bin at the site you plan to use. <span class=""source""><a href=""https://www.carrboronc.gov/2502/Compost-Drop-off"">Carrboro town drop-off locations and access</a></span></dd>
+          </dl>
+          <p><a href=""https://www.carrboronc.gov/2502/Compost-Drop-off"">Carrboro town drop-off locations and access</a></p>
+        </li>
+      </ul>
+    </section>
+    <!-- FOOD-SCRAP:END -->
+    <section class=""notes"" aria-labelledby=""notes-title"">
+      <h2 id=""notes-title"">Keep the route and material together</h2>
+      <p>One city may offer several kinds of composting. These comparisons cover specific public drop-off routes. Follow the instructions for the bin you are using.</p>
+      <p><strong>Carrboro location update.</strong> The county page still lists a seasonal farmers’ market location. Carrboro’s town page and the market’s move notice direct users to the roll-out carts behind Town Hall. Check the town page for the current location and unlock instructions.</p>
+      <p class=""source""><a href=""https://www.carrboronc.gov/2502/Compost-Drop-off"">Town drop-off map and access</a> · <a href=""https://www.carrborofarmersmarket.com/compost-program"">Market move notice</a> · <a href=""https://www.orangecountync.gov/2693/Food-Waste-Drop-Off-Sites"">County material list</a></p>
+    </section>
+    <section class=""notes"" aria-labelledby=""sources-and-data"">
+      <h2 id=""sources-and-data"">Sources and data</h2>
+      <ul class=""utility-links"" role=""list"">
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/food-scrap-drop-off/comparison.csv"" download>Download comparison data (CSV)</a></li>
+        <li><a href=""https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml"">Report a source correction</a> (public GitHub form)</li>
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/"">Check other local program rules</a></li>
+      </ul>
+    </section>"

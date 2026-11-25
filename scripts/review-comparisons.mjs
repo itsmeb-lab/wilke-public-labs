@@ -8,6 +8,7 @@ export const comparisonGuides = Object.freeze([
   { slug: 'repair-cafe-planner', marker: 'REPAIR-CAFE' },
   { slug: 'shelter-linen-guide', marker: 'SHELTER-LINENS' },
   { slug: 'milwaukee-bulky-items', marker: 'MILWAUKEE-BULKY' },
+  { slug: 'food-scrap-drop-off', marker: 'FOOD-SCRAP' },
 ]);
 const read = (path) => readFileSync(new URL(path, root), 'utf8');
 

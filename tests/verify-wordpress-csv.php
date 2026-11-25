@@ -13,11 +13,12 @@ if ($csv === false) {
 }
 $columns = ['slug', 'heading', 'description', 'canonical_reference', 'reviewed_on', 'publication_state', 'comparison_html'];
 requireCondition(fgetcsv($csv, null, ',', '"', '') === $columns, 'Header columns do not match.');
-$slugs = ['repair-cafe-planner', 'shelter-linen-guide', 'milwaukee-bulky-items'];
+$slugs = ['repair-cafe-planner', 'shelter-linen-guide', 'milwaukee-bulky-items', 'food-scrap-drop-off'];
 $expected = [
     'repair-cafe-planner' => ['Repair Café Wales', 'data-operator="toronto" data-fit="unknown"', 'href="#microwave"'],
     'shelter-linen-guide' => ['No current need', 'SPCA Christchurch Centre', 'href="#bath-towels"'],
     'milwaukee-bulky-items' => ['Commercial and contractor vehicles are excluded', '$30–$45 each', 'href="#commercial-hauler"'],
+    'food-scrap-drop-off' => ['Carrboro Town Hall drop-off', 'BPI-certified', 'href="#compostable-plastic-bag"'],
 ];
 foreach ($slugs as $slug) {
     $cells = fgetcsv($csv, null, ',', '"', '');
@@ -34,4 +35,4 @@ foreach ($slugs as $slug) {
 }
 requireCondition(fgetcsv($csv, null, ',', '"', '') === false, 'More than one row per canonical guide.');
 fclose($csv);
-echo 'PHP ' . PHP_VERSION . " read three intact seven-column comparison drafts.\n";
+echo 'PHP ' . PHP_VERSION . " read four intact seven-column comparison drafts.\n";
