@@ -1,0 +1,52 @@
+# Published Policy Lab
+
+A browser-only example of task-specific answers from checked primary policies. Seven sample places in South Carolina, North Carolina and Kentucky cover recycling, notary and printing rules.
+
+**Live page:** https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/
+
+## Use it
+
+Choose a task, place and optional visit date. Each answer separates:
+
+- whether the source describes, excludes or does not settle the requested task;
+- the weekday pattern and applicable supplied closure calendar;
+- live availability, which remains unverified.
+
+A source-directed alternate location is offered only when the snapshot explicitly supports the same task in the same jurisdiction. This is not distance-based routing.
+
+## Scope and privacy
+
+The snapshot was checked on November 25, 2026. It is a limited educational example, not an official directory, legal eligibility decision, live opening-hours feed or booking service. It does not decide whether an individual document can be notarized. Operators may change rules or decline particular requests.
+
+Choices stay in the page. No document upload, login, payment, API call, added analytics or browser storage is used. Hosting providers can record ordinary web requests. Source links open third-party sites.
+
+This independently written module projects a checked data snapshot; it does not run a publishing/scoring system or claim nationwide coverage.
+
+## Sources
+
+All source URLs and check dates are in [data.mjs](./data.mjs). Six sources cover agency or library policies plus the county's dated closure PDF. Check dates describe this lab's review, not the agencies' update dates. A missing field stays unknown; an omitted holiday is not proof a site is open.
+
+The 2026 closure list is not reused for 2027. Printing does not inherit notary-service hours. Morehead, Kentucky is not mapped to a same-named county in another state.
+
+## Run and verify
+
+From the repository root:
+
+```bash
+npm test
+python -m http.server 8080
+```
+
+Open `http://localhost:8080/published-policy-lab/`. Use a server for native ES modules; opening HTML directly from disk may not load them.
+
+Tests cover policy fixtures and the actual browser module with a minimal DOM. That fixture is separate from real-browser review. Tests do not contact agencies or verify present-day service availability.
+
+## Update procedure
+
+1. Reopen the exact primary source; confirm the place, state, task and effective year.
+2. Record the source-check date and change only supported fields.
+3. Preserve exclusions and unknowns; do not infer one branch's policy for another.
+4. Run tests and review browser output before publishing.
+5. Correct or remove unsupported records rather than expanding uncertain combinations.
+
+Report source mismatches through the public repository. Include the public source URL and affected task, never identity documents or private personal details.

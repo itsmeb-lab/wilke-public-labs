@@ -41,6 +41,14 @@ Real PowerShell watchdog plus an interactive browser mirror demonstrating:
 
 **Public lab index:** https://itsmeb-lab.github.io/wilke-public-labs/
 
+### 03 — Published Policy Lab
+
+A source-linked checker for selected recycling, notary and printing tasks at seven sample places across three states. It preserves exclusions, unknown details and the difference between published schedules and live availability. No upload, account, payment or added analytics.
+
+**Live page:** https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/
+
+See [scope, sources and update procedure](./published-policy-lab/README.md).
+
 ## Run locally
 
 ```bash
@@ -48,10 +56,11 @@ npm test
 python -m http.server 8080
 ```
 
-Then open either:
+Then open a lab:
 
 - `http://localhost:8080/automation-reliability-lab/`
 - `http://localhost:8080/windows-process-recovery-watchdog/`
+- `http://localhost:8080/published-policy-lab/`
 
 ## Windows watchdog fixture
 
@@ -82,7 +91,7 @@ Start with the [diagnostic scope and free handoff checklist](https://wilkeservic
 
 Found these labs through Upwork? Keep pre-contract discussion and payment in the existing Upwork conversation. Do not use the direct-site contact route to move a marketplace relationship off-platform.
 
-The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the three published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
+The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the four published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
 
 ## License
 

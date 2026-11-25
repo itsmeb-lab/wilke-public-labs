@@ -1,0 +1,105 @@
+// Published-policy projection for the accompanying source snapshot.
+// No network calls, booking, legal eligibility decision or live availability check.
+export const SERVICES = Object.freeze({
+ electronics: "Electronics and TVs",
+ farmer_oil: "Farmer oil collection",
+ paint: "Paint preparation",
+ vehicle_title: "Vehicle-title notarization",
+ basic_notary: "Basic notary service",
+ printing: "Printing"
+});
+const own = (o,k) => Object.prototype.hasOwnProperty.call(o,k);
+export function parseVisitDate(value) {
+ if (value === "" || value == null) return null;
+ if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) throw new Error("Use a date in YYYY-MM-DD format.");
+ const [y,m,d] = value.split("-").map(Number);
+ if (y < 2000 || y > 2100) throw new Error("This date check covers 2000 through 2100.");
+ const t = new Date(Date.UTC(y,m-1,d));
+ if (t.getUTCFullYear()!==y || t.getUTCMonth()!==m-1 || t.getUTCDate()!==d) throw new Error("Choose a real calendar date.");
+ return Object.freeze({iso:value,year:y,weekday:t.getUTCDay()});
+}
+export function validateCatalog(catalog) {
+ if (!catalog || !Array.isArray(catalog.places) || !Array.isArray(catalog.sources)) throw new Error("Missing policy catalog.");
+ if (typeof catalog.snapshotId!=="string" || !catalog.snapshotId || !parseVisitDate(catalog.checkedOn)) throw new Error("Missing snapshot identity or check date.");
+ if (catalog.places.length > 100 || catalog.sources.length > 100) throw new Error("Catalog outside lab bounds.");
+ const ids = new Set(), src = new Set();
+ for (const s of catalog.sources) {
+  if (!s || typeof s.id!=="string" || !s.id || src.has(s.id) || typeof s.url!=="string" || !/^https:\/\/[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?(?::443)?(?:\/[^\s<>]*)?$/i.test(s.url)) throw new Error("Invalid source record.");
+  if (typeof s.label!=="string" || !s.label || !parseVisitDate(s.checkedOn)) throw new Error("Missing source check date.");
+  if(s.checkedOn>catalog.checkedOn)throw new Error("A source check cannot follow the snapshot check.");
+  src.add(s.id);
+ }
+ for (const p of catalog.places) {
+  if (!p || typeof p.id!=="string" || !p.id || ids.has(p.id) || typeof p.jurisdictionId!=="string" || !p.jurisdictionId || typeof p.region!=="string" || !/^[A-Z]{2}$/.test(p.region) || typeof p.locality!=="string" || !p.locality || typeof p.name!=="string" || !p.name || !p.jurisdictionId.startsWith("us-"+p.region.toLowerCase()+"-")) throw new Error("Invalid place identity.");
+  ids.add(p.id);
+  if (!p.policies || typeof p.policies!=="object" || Array.isArray(p.policies)) throw new Error("Missing policies.");
+  for (const key of Object.keys(p.policies)) {
+   const v=p.policies[key];
+   if (!own(SERVICES,key) || !v || !["described","excluded","unstated"].includes(v.fit) || typeof v.summary!=="string" || !Array.isArray(v.sourceIds) || !v.sourceIds.length || v.sourceIds.some(id=>!src.has(id))) throw new Error("Invalid scoped policy.");
+   if (v.conditions!=null && (!Array.isArray(v.conditions) || v.conditions.some(x=>typeof x!=="string")))throw new Error("Invalid policy conditions.");
+   if (v.fee!=null && typeof v.fee!=="string")throw new Error("Invalid fee description.");
+   if (v.redirectPlaceId != null && (typeof v.redirectPlaceId!=="string" || v.fit!=="excluded")) throw new Error("Invalid policy redirect.");
+  }
+  if(p.schedule) {
+   if(!Array.isArray(p.schedule.days) || !p.schedule.days.length || p.schedule.days.some(d=>!Number.isInteger(d)||d<0||d>6) || !src.has(p.schedule.sourceId)) throw new Error("Invalid published schedule.");
+   if(typeof p.schedule.label!=="string" || !Array.isArray(p.scheduleAppliesTo) || !p.scheduleAppliesTo.length || p.scheduleAppliesTo.some(key=>!own(SERVICES,key)))throw new Error("Missing schedule scope or label.");
+  }
+ }
+ for(const p of catalog.places)for(const [key,policy] of Object.entries(p.policies)) {
+  if(policy.redirectPlaceId != null) {
+   const target=catalog.places.find(x=>x.id===policy.redirectPlaceId);
+   if(!target || target.jurisdictionId!==p.jurisdictionId || target.policies[key]?.fit!=="described") throw new Error("Redirect must reach a described service in the same jurisdiction.");
+  }
+ }
+ const calendarKeys=new Set();
+ if (catalog.closureCalendars!=null && !Array.isArray(catalog.closureCalendars)) throw new Error("Invalid closure calendar list.");
+ for(const c of catalog.closureCalendars||[]) {
+  if(!c || !Number.isInteger(c.year) || !src.has(c.sourceId) || !Array.isArray(c.dates) || !c.jurisdictionId || !c.group) throw new Error("Invalid closure calendar.");
+  if(!catalog.places.some(p=>p.jurisdictionId===c.jurisdictionId && p.scheduleGroup===c.group))throw new Error("Closure calendar has no matching scope.");
+  const calendarKey=JSON.stringify([c.jurisdictionId,c.group,c.year]);
+  if(calendarKeys.has(calendarKey))throw new Error("Ambiguous closure calendars.");
+  calendarKeys.add(calendarKey);
+  for(const day of c.dates)if(parseVisitDate(day)?.year!==c.year)throw new Error("Closure date outside declared year.");
+ }
+ return true;
+}
+function timingFor(catalog, place, serviceId, visit) {
+ const base={availability:"UNVERIFIED",label:"Confirm current hours and staffing with the operator.",kind:"unconfirmed",sourceIds:[]};
+ if (!place.schedule || !place.scheduleAppliesTo.includes(serviceId)) return {...base,detail:"No visit window is modeled for this example."};
+ const regular=place.schedule;
+ base.sourceIds=[regular.sourceId];
+ base.regularLabel=regular.label;
+ if(!visit) return {...base,detail:"Choose a visit date to compare it with the published weekday pattern."};
+ const calendar=(catalog.closureCalendars||[]).find(c=>c.jurisdictionId===place.jurisdictionId&&c.group===place.scheduleGroup&&c.year===visit.year);
+ if(calendar) {
+  base.sourceIds.push(calendar.sourceId);
+  if(calendar.dates.includes(visit.iso))return {...base,kind:"listed_closure",label:"The county lists this date as a recycling-center closure.",detail:"The regular weekday pattern does not override a listed closure."};
+  if(!regular.days.includes(visit.weekday)) return {...base,kind:"regular_day_excluded",label:"The selected weekday is outside the published service pattern.",detail:regular.label};
+  return {...base,kind:"regular_pattern_only",label:"The weekday matches the published pattern; no closure is listed in the supplied calendar.",detail:"This is a policy snapshot, not confirmation that the site will be accessible."};
+ }
+ if(!regular.days.includes(visit.weekday)) return {...base,kind:"regular_day_excluded",label:"The selected weekday is outside the published service pattern.",detail:regular.label};
+ return {...base,kind:"exception_data_unknown",label:"The weekday matches the published pattern; date-specific exceptions are unverified.",detail:"No applicable closure calendar is included for this place and year."};
+}
+export function answerPolicy(catalog,query) {
+ validateCatalog(catalog);
+ if(!query || typeof query!=="object" || typeof query.serviceId!=="string" || !own(SERVICES,query.serviceId))throw new Error("Choose a task from this lab.");
+ const place=catalog.places.find(p=>p.id===query.placeId);
+ if(!place)throw new Error("Choose a place from this snapshot.");
+ if(query.jurisdictionId!==place.jurisdictionId)throw new Error("The selected place and jurisdiction do not match.");
+ const visit=parseVisitDate(query.visitDate);
+ const policy=own(place.policies,query.serviceId)?place.policies[query.serviceId]:null;
+ const effective=policy||{fit:"unstated",summary:"This snapshot does not settle this task at the selected place.",sourceIds:[]};
+ const timing=timingFor(catalog,place,query.serviceId,visit);
+ const sourceIds=[...new Set([...effective.sourceIds,...timing.sourceIds])].sort();
+ const redirect=effective.redirectPlaceId?catalog.places.find(p=>p.id===effective.redirectPlaceId):null;
+ return {
+  kind:"published_policy_projection",snapshotId:catalog.snapshotId,snapshotCheckedOn:catalog.checkedOn,
+  place:{id:place.id,name:place.name,region:place.region,locality:place.locality,jurisdictionId:place.jurisdictionId,address:place.address||null},
+  task:SERVICES[query.serviceId],serviceId:query.serviceId,visitDate:visit?.iso||null,
+  fit:effective.fit,summary:effective.summary,conditions:effective.conditions||[],
+  fee:effective.fee||"Not stated in this checked policy.",timing,
+  redirectedPlace:redirect?{id:redirect.id,name:redirect.name,locality:redirect.locality,region:redirect.region}:null,
+  sources:catalog.sources.filter(s=>sourceIds.includes(s.id)).map(s=>({id:s.id,label:s.label,url:s.url,checkedOn:s.checkedOn})),
+  limits:["Published rules do not establish live availability or a booking.","The operator decides whether a particular request can be handled.","This sample covers selected tasks and places; missing detail remains unknown."]
+ };
+}

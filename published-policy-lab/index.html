@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Published Policy Lab — Check a Task Before a Trip</title>
+<meta name="description" content="Compare source-backed recycling and library rules at seven sample places in South Carolina, North Carolina and Kentucky. Check restrictions, dates and what remains unknown.">
+<link rel="canonical" href="https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/">
+<link rel="sitemap" type="application/xml" href="../sitemap.xml">
+<meta property="og:title" content="Published Policy Lab — Check a Task Before a Trip">
+<meta property="og:description" content="A small, source-linked policy checker for recycling and library tasks. Published rules, explicit restrictions and honest unknowns.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/">
+<link rel="stylesheet" href="./style.css">
+<script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<a class="skip" href="#checker">Skip to checker</a>
+<header class="site-header"><a href="../">Wilke Public Labs</a><span>Small tools. Inspectable rules.</span></header>
+<main>
+<section class="intro" aria-labelledby="page-title">
+<p class="eyebrow">Published Policy Lab · 7 sample places · 3 states</p>
+<h1 id="page-title">Check the rule before you make the trip.</h1>
+<p class="lead">Can that station take your TV? Does that library notarize a vehicle title? Pick a task and see the published rule, its source and the details still worth confirming.</p>
+<p class="snapshot">Sources checked November 25, 2026. This is a limited example set, not a complete directory or a live booking service.</p>
+</section>
+<section class="checker" id="checker" aria-labelledby="checker-title">
+<div class="controls">
+<h2 id="checker-title">What do you need to do?</h2>
+<label for="task">Task</label><select id="task"></select>
+<label for="place">Place and jurisdiction</label><select id="place"></select>
+<label for="visit-date">Visit date <span>(optional)</span></label>
+<input id="visit-date" type="date" min="2000-01-01" max="2100-12-31" aria-describedby="date-help">
+<p class="help" id="date-help">A date checks the published weekday pattern and any supplied closure calendar. It cannot confirm today's staffing or access.</p>
+<div class="example-list" aria-label="Try an example">
+<p>Try an example</p>
+<button type="button" data-example="tv">TV at Jonesville</button>
+<button type="button" data-example="title">Vehicle title in Jacksonville</button>
+<button type="button" data-example="printing">Printing in Waynesville</button>
+<button type="button" data-example="holiday">Thanksgiving at Cross Keys</button>
+</div>
+</div>
+<div class="answer" id="answer" role="status" aria-live="polite" aria-atomic="true"><p>Loading the checked policy examples…</p></div>
+</section>
+<noscript><p class="notice">The interactive comparison needs JavaScript. The source examples and links below remain available without it.</p></noscript>
+<section class="evidence" aria-labelledby="examples-title">
+<h2 id="examples-title">Why the specific task matters</h2>
+<div class="evidence-grid">
+<article><p class="eyebrow">Recycling · Union County, SC</p><h3>A station name is not an accepted-item list.</h3><p>The state directs household electronics to Airport Station 9. Farmer oil has a different designated station. A generic recycling label misses that distinction.</p><a href="https://des.sc.gov/community/recycling-waste-reduction/where-recycle/union-county-recycling-locations" rel="noopener noreferrer" target="_blank">Read the state recycling guide ↗</a></article>
+<article><p class="eyebrow">Notary · North Carolina</p><h3>The same service can have different limits.</h3><p>Perry Memorial describes a vehicle-title process. Onslow excludes vehicle titles. “Notary available” is not enough information to choose between them.</p><a href="https://www.perrylibrary.org/using-the-library/notary-services" rel="noopener noreferrer" target="_blank">Perry Memorial policy ↗</a> · <a href="https://www.onslowcountync.gov/1861/Request-Notary-Service" rel="noopener noreferrer" target="_blank">Onslow policy ↗</a></article>
+<article><p class="eyebrow">Geography · Morehead, KY</p><h3>A familiar county name needs a state.</h3><p>The Rowan library example is in Morehead, Kentucky. This checker keeps that identity separate from places with the same county name elsewhere.</p><a href="https://www.rowancountylibrary.org/clerical" rel="noopener noreferrer" target="_blank">Rowan County, Kentucky policy ↗</a></article>
+</div>
+</section>
+<section class="how" aria-labelledby="limits-title">
+<h2 id="limits-title">What this page can tell you</h2>
+<p>Each answer uses a small, dated policy snapshot. “Described” means a source discusses the service; it does not guarantee your request will be accepted. Missing fees, unsupported document types and unavailable closure calendars stay unknown.</p>
+<p>Your choices are processed on this page. This lab has no document upload, account, payment or added analytics. The hosting provider may record ordinary web requests.</p>
+<p><a href="https://github.com/itsmeb-lab/wilke-public-labs/tree/main/published-policy-lab" rel="noopener noreferrer" target="_blank">Inspect the source and report a policy mismatch ↗</a>. Do not include personal documents or identity details in public issues.</p>
+</section>
+</main>
+<footer><a href="../">Explore the other public labs</a><p>Independent educational prototype by Wilke Services. Not affiliated with the listed agencies.</p></footer>
+</body>
+</html>
