@@ -8,12 +8,12 @@ test("saved no-script policy snapshot exactly matches the reviewed catalog",()=>
  const saved=html.split("<!-- POLICY-SNAPSHOT:START -->\n")[1]?.split("\n<!-- POLICY-SNAPSHOT:END -->")[0];
  assert.equal(saved,renderPolicySnapshot(catalog));
 });
-test("static policy snapshot includes all 21 task-place/program joins once",()=>{
+test("static policy snapshot includes all 25 task-place/program joins once",()=>{
  const markup=renderPolicySnapshot(catalog);
  const expected=catalog.places.flatMap(place=>Object.keys(place.policies).map(task=>place.id+":"+task)).sort();
  const actual=[...markup.matchAll(/data-policy="([^"]+)"/g)].map(match=>match[1]).sort();
- assert.equal(expected.length,21);assert.deepEqual(actual,expected);
- assert.equal((markup.match(/class="policy-card"/g)||[]).length,9);
+ assert.equal(expected.length,25);assert.deepEqual(actual,expected);
+ assert.equal((markup.match(/class="policy-card"/g)||[]).length,11);
 });
 test("static policy snapshot retains named jurisdictions and honest unknowns",()=>{
  const markup=renderPolicySnapshot(catalog);
@@ -44,7 +44,7 @@ test("excluded and unstated tasks cannot inherit a fee from malformed extra data
 
 test("static program entries carry scope notes instead of street-address claims",()=>{
  const markup=renderPolicySnapshot(catalog);
- assert.equal((markup.match(/Program rules ·/g)||[]).length,2);
- assert.equal((markup.match(/Program-level rules\./g)||[]).length,2);
+ assert.equal((markup.match(/Program rules ·/g)||[]).length,4);
+ assert.equal((markup.match(/Program-level rules\./g)||[]).length,4);
  assert.match(markup,/Mecklenburg County, NC/);
 });
