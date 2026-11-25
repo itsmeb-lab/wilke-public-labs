@@ -100,12 +100,14 @@ try{
  for(const [width,height]of [[320,800],[390,844],[1280,900]]){
   const runtime=await session(width,height);
   await check("actual layout and controls at "+width+"px",async()=>{
-   const s=await settled();assert.equal(s.width,width,"Requested viewport did not apply.");assert.equal(s.innerWidth,width);
-   assert.ok(s.scrollWidth<=width+1,"Horizontal document overflow.");
+   const s=await settled();assert.equal(s.innerWidth,width,"Requested viewport did not apply.");
+   if(width<800)assert.equal(s.width,width,"Mobile content viewport did not apply.");
+   else assert.ok(s.width<=width&&s.width>=width-32,"Unexpected desktop scrollbar width.");
+   assert.ok(s.scrollWidth<=s.width+1,"Horizontal document overflow.");
    assert.equal(s.cards,catalog.places.length);assert.equal(s.rows,expectedRows);
-   for(const c of s.controls){assert.ok(c.left>=-1&&c.right<=width+1,"Clipped/outside control: "+JSON.stringify(c));assert.ok(c.height>=42,"Control height below fixture threshold.");}
+   for(const c of s.controls){assert.ok(c.left>=-1&&c.right<=s.width+1,"Clipped/outside control: "+JSON.stringify(c));assert.ok(c.height>=42,"Control height below fixture threshold.");}
    assert.deepEqual(s.resourceOrigins,[origin]);
-   return {requestedWidth:width,observedWidth:s.width,scrollWidth:s.scrollWidth,cards:s.cards,rows:s.rows,controls:s.controls.length,runtime};
+   return {requestedWidth:width,observedInnerWidth:s.innerWidth,observedContentWidth:s.width,scrollWidth:s.scrollWidth,cards:s.cards,rows:s.rows,controls:s.controls.length,runtime};
   });
   await check("task exclusion and source alternate at "+width+"px",async()=>{
    const s=await state();assert.equal(s.place,"union-jonesville");assert.ok(s.answer.includes("Airport"));assert.ok(s.answer.includes("Published restriction"));
