@@ -6,3 +6,41 @@
 .policy-browser{padding:16px 0 30px}.policy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.policy-card{min-width:0;padding:20px;border:1px solid var(--line);border-radius:12px;background:#fff;overflow-wrap:anywhere}.policy-card h3{margin:0}.policy-card>.checked{margin:5px 0 16px}.policy-list{list-style:none;padding:0;margin:0}.policy-list>li{border-top:1px solid var(--line);padding:14px 0}.policy-list h4{font-size:.95rem;margin:0 0 6px}.policy-list p{font-size:.86rem;margin:6px 0}.policy-list .rule-status{font-size:.75rem;font-weight:750;color:var(--muted)}.policy-list .rule-source{font-size:.78rem}@media(max-width:800px){.policy-grid{grid-template-columns:1fr}}
 
 .load-plan{margin-top:22px;padding:26px 30px;border:1px solid var(--line);border-radius:16px;background:#fff}.load-plan h2{margin-top:0}.load-plan .help{max-width:800px}.load-plan-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:650px;margin:22px 0}.load-plan-fields>div{min-width:0}.load-plan label{display:block;font-weight:700;margin-bottom:6px}.plan-result{margin-top:20px;border-left:3px solid var(--accent);padding:1px 18px}.plan-result p{margin:10px 0}@media(max-width:600px){.load-plan{padding:22px}.load-plan-fields{grid-template-columns:1fr}.load-plan button{width:100%}}
+
+.policy-print-title,.policy-print-context{display:none}
+.print-action{margin-top:12px}
+@media print{
+ @page{margin:14mm}
+ html[data-policy-print="ready"]{color-scheme:light}
+ html[data-policy-print="ready"] body{background:#fff;color:#000;font:11pt/1.45 Arial,sans-serif}
+ html[data-policy-print="ready"] .skip,
+ html[data-policy-print="ready"] .intro,
+ html[data-policy-print="ready"] .controls,
+ html[data-policy-print="ready"] .evidence,
+ html[data-policy-print="ready"] .policy-browser,
+ html[data-policy-print="ready"] .how,
+ html[data-policy-print="ready"] .load-plan,
+ html[data-policy-print="ready"] noscript,
+ html[data-policy-print="ready"] .print-action,
+ html[data-policy-print="ready"] .redirect button,
+ html[data-policy-print="ready"] footer>a{display:none!important}
+ html[data-policy-print="ready"] main,
+ html[data-policy-print="ready"] .site-header,
+ html[data-policy-print="ready"] footer{max-width:none;padding:0;margin:0}
+ html[data-policy-print="ready"] .site-header{display:block;border:0;margin-bottom:14pt}
+ html[data-policy-print="ready"] .site-header span{display:none}
+ html[data-policy-print="ready"] .checker{display:block;background:#fff;border:0;border-radius:0;box-shadow:none;overflow:visible}
+ html[data-policy-print="ready"] .answer{padding:0;min-height:0}
+ html[data-policy-print="ready"] .policy-print-title{display:block;font-size:14pt;font-weight:700;margin:0 0 8pt}
+ html[data-policy-print="ready"] .policy-print-context{display:block;font-size:10pt;margin:0 0 12pt}
+ html[data-policy-print="ready"] .answer h2{font-size:13pt;margin:8pt 0}
+ html[data-policy-print="ready"] .fit{background:#fff;border:1px solid #777;color:#000}
+ html[data-policy-print="ready"] .timing,
+ html[data-policy-print="ready"] .sources,
+ html[data-policy-print="ready"] .limits{margin-top:14pt;padding-top:5pt}
+ html[data-policy-print="ready"] .sources p{break-inside:avoid}
+ html[data-policy-print="ready"] a{color:#000;text-decoration:none;overflow-wrap:anywhere}
+ html[data-policy-print="ready"] .sources a::after,
+ html[data-policy-print="ready"] .share-view a::after{content:" (" attr(href) ")";font-size:9pt;font-weight:400}
+ html[data-policy-print="ready"] footer{border-top:1px solid #777;margin-top:14pt;padding-top:8pt}
+}

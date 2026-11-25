@@ -1,6 +1,6 @@
 // Reviewed public-policy examples. Check dates describe this lab's review, not live service availability.
 export const catalog = {
-  "snapshotId": "published-policy-examples-20261125-v8",
+  "snapshotId": "published-policy-examples-20261125-v9",
   "checkedOn": "2026-11-25",
   "sources": [
     {

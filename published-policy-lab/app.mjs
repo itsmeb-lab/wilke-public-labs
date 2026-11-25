@@ -1,7 +1,7 @@
-import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v8";
-import { catalog } from "./data.mjs?v=20261125-v8";
-import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v8";
-import { estimateWholeLoadUse } from "./load-plan.mjs?v=20261125-v8";
+import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v9";
+import { catalog } from "./data.mjs?v=20261125-v9";
+import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v9";
+import { estimateWholeLoadUse } from "./load-plan.mjs?v=20261125-v9";
 
 const task = document.getElementById("task");
 const place = document.getElementById("place");
@@ -67,6 +67,8 @@ function render() {
   const selected=catalog.places.find(p=>p.id===place.value);
   const result=answerPolicy(catalog,{placeId:place.value,jurisdictionId:selected?.jurisdictionId,serviceId:task.value,visitDate:date.value});
   const nodes=[
+   el("p","Published Policy Lab — "+SERVICES[result.serviceId],"policy-print-title"),
+   el("p",date.value?"Date to check: "+date.value:"No visit date supplied.","policy-print-context"),
    el("p",fitLabels[result.fit],"fit "+result.fit),
    el("h2",result.summary),
    el("p",result.place.name+" · "+result.place.locality+", "+result.place.region,"place-label")
@@ -101,10 +103,17 @@ function render() {
   const link=el("a","Link to this policy view");
   link.href=buildPolicyViewLink(catalog,{serviceId:task.value,placeId:place.value,visitDate:date.value});
   shared.append(link);nodes.push(shared);
+  if(typeof document.defaultView?.print==="function"){
+   const print=el("button","Print this policy","print-action");print.type="button";
+   print.addEventListener("click",()=>document.defaultView.print());
+   nodes.push(print);
+  }
   output.replaceChildren(...nodes);
+  if(document.documentElement)document.documentElement.dataset.policyPrint="ready";
   renderWholeLoad(result.wholeLoad);
  }catch(error){
   hideLoadPlan();
+  if(document.documentElement)document.documentElement.dataset.policyPrint="unavailable";
   output.replaceChildren(el("h2","The policy check could not be completed."),el("p",error.message),el("p","Use the original sources below to confirm the details."));
  }
 }
@@ -117,7 +126,7 @@ try{
    const chosen=parsePolicyView(catalog,document.defaultView?.location.hash||"");
    if(!chosen)return;
    task.value=chosen.serviceId;choosePlaces(chosen.placeId);date.value=chosen.visitDate;render();
-  }catch(error){hideLoadPlan();output.replaceChildren(el("h2","This shared view could not be opened."),el("p",error.message),el("p","Choose a task and place above to make a new policy check."));}
+  }catch(error){hideLoadPlan();if(document.documentElement)document.documentElement.dataset.policyPrint="unavailable";output.replaceChildren(el("h2","This shared view could not be opened."),el("p",error.message),el("p","Choose a task and place above to make a new policy check."));}
  }
  render();loadSharedView();
  document.defaultView?.addEventListener("hashchange",loadSharedView);
@@ -137,7 +146,7 @@ try{
  };
  for(const button of document.querySelectorAll("[data-example]"))button.addEventListener("click",()=>{
   const chosen=examples[button.dataset.example];
-  if(!chosen){hideLoadPlan();output.replaceChildren(el("h2","This example is unavailable."),el("p","Choose a task above, or reload the page to see the latest examples."));return;}
+  if(!chosen){hideLoadPlan();if(document.documentElement)document.documentElement.dataset.policyPrint="unavailable";output.replaceChildren(el("h2","This example is unavailable."),el("p","Choose a task above, or reload the page to see the latest examples."));return;}
   const [service,id,day]=chosen;task.value=service;choosePlaces(id);date.value=day;render();
  });
-}catch(error){hideLoadPlan();output.replaceChildren(el("h2","The example catalog could not be loaded."),el("p",error.message));}
+}catch(error){hideLoadPlan();if(document.documentElement)document.documentElement.dataset.policyPrint="unavailable";output.replaceChildren(el("h2","The example catalog could not be loaded."),el("p",error.message));}

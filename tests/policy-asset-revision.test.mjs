@@ -4,7 +4,7 @@ import { readFileSync, existsSync } from "node:fs";
 import { catalog } from "../published-policy-lab/data.mjs";
 const html=readFileSync(new URL("../published-policy-lab/index.html",import.meta.url),"utf8");
 const app=readFileSync(new URL("../published-policy-lab/app.mjs",import.meta.url),"utf8");
-const revision="20261125-v8";
+const revision="20261125-v9";
 test("browser assets use one revision bound to the published data snapshot",()=>{
  assert.equal(catalog.snapshotId,"published-policy-examples-"+revision);
  assert.ok(html.includes('src="./app.mjs?v='+revision+'"'));

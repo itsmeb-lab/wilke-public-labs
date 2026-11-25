@@ -1,6 +1,7 @@
 // Isolated development fixture: preinstalled hosted Edge, localhost files only.
 // No user browser profile, agency visit, account, provider call or artifact upload.
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { createServer } from "node:http";
 import { createServer as createPortProbe } from "node:net";
 import { readFile, access } from "node:fs/promises";
@@ -85,7 +86,7 @@ async function session(width,height,javascript=true){
  return {browser:capabilities.browserName,version:capabilities.browserVersion,platform:capabilities.platformName};
 }
 async function closeSession(){if(sessionId){const closing=sessionId;sessionId=null;await rpc("DELETE","/session/"+closing);}}
-const stateScript="return {\n width:document.documentElement.clientWidth,innerWidth:window.innerWidth,scrollWidth:document.documentElement.scrollWidth,\n cards:document.querySelectorAll(\".policy-card\").length,rows:document.querySelectorAll(\"[data-policy]\").length,\n task:document.getElementById(\"task\").value,place:document.getElementById(\"place\").value,date:document.getElementById(\"visit-date\").value,\n tasks:document.getElementById(\"task\").options.length,answer:document.getElementById(\"answer\").innerText,\n controls:Array.from(document.querySelectorAll(\"select,input,button\")).map(e=>{const r=e.getBoundingClientRect();return {tag:e.tagName,id:e.id,left:r.left,right:r.right,width:r.width,height:r.height};}),\n sources:Array.from(document.querySelectorAll(\"#answer .sources a\")).map(e=>e.href),\n share:document.querySelector(\".share-view a\")?.href||null,\n active:document.activeElement?.id||\"\",\n plannerVisible:!!document.getElementById(\"load-plan\")&&!document.getElementById(\"load-plan\").hidden,\n plannerText:document.getElementById(\"load-plan\")?.innerText||\"\",\n noScriptNotice:Array.from(document.querySelectorAll(\"noscript .notice\")).some(e=>e.getBoundingClientRect().height>0),\n resourceOrigins:Array.from(new Set(performance.getEntriesByType(\"resource\").map(e=>new URL(e.name).origin)))\n};";
+const stateScript="return {\n width:document.documentElement.clientWidth,innerWidth:window.innerWidth,scrollWidth:document.documentElement.scrollWidth,\n cards:document.querySelectorAll(\".policy-card\").length,rows:document.querySelectorAll(\"[data-policy]\").length,\n task:document.getElementById(\"task\").value,place:document.getElementById(\"place\").value,date:document.getElementById(\"visit-date\").value,\n tasks:document.getElementById(\"task\").options.length,answer:document.getElementById(\"answer\").innerText,\n controls:Array.from(document.querySelectorAll(\"select,input,button\")).map(e=>{const r=e.getBoundingClientRect();return {tag:e.tagName,id:e.id,left:r.left,right:r.right,width:r.width,height:r.height};}),\n sources:Array.from(document.querySelectorAll(\"#answer .sources a\")).map(e=>e.href),\n share:document.querySelector(\".share-view a\")?.href||null,\n active:document.activeElement?.id||\"\",printReady:document.documentElement.dataset.policyPrint||\"\",\n plannerVisible:!!document.getElementById(\"load-plan\")&&!document.getElementById(\"load-plan\").hidden,\n plannerText:document.getElementById(\"load-plan\")?.innerText||\"\",\n noScriptNotice:Array.from(document.querySelectorAll(\"noscript .notice\")).some(e=>e.getBoundingClientRect().height>0),\n resourceOrigins:Array.from(new Set(performance.getEntriesByType(\"resource\").map(e=>new URL(e.name).origin)))\n};";
 async function state(){return execute(stateScript);}
 async function settled(){
  const until=Date.now()+10000;
@@ -137,6 +138,44 @@ try{
    await rpc("POST",sid("/url"),{url:page+"#task=electronics&place=perry-memorial"});
    let s=await state();assert.ok(s.answer.includes("shared view could not be opened"));assert.equal(s.plannerVisible,false);
    await click('[data-example="mulch"]');s=await state();assert.equal(s.place,"clemson-mulch-program");assert.ok(s.answer.includes("different closing times"));
+  });
+
+  await check("print action keeps the current policy at "+width+"px",async()=>{
+   await click('[data-example="chips"]');const before=await state();
+   await execute("window.__nativePrint=window.print;window.__printCalls=0;window.print=()=>{window.__printCalls++;};");
+   await click("#answer .print-action");
+   assert.equal(await execute("return window.__printCalls;"),1);
+   await execute("window.print=window.__nativePrint;delete window.__nativePrint;");
+   const after=await state();assert.equal(after.answer,before.answer);assert.equal(after.share,before.share);assert.equal(after.printReady,"ready");
+  });
+  if(width===1280)await check("actual PDF print isolates a dated policy and original sources",async()=>{
+   await input("#plan-area","200");await input("#plan-depth","3");await click("#load-plan button");
+   await execute(`window.__policyPrintSnapshot=null;
+    const capture=()=>{if(!matchMedia("print").matches)return;
+     const display=selector=>getComputedStyle(document.querySelector(selector)).display;
+     window.__policyPrintSnapshot={
+      media:matchMedia("print").matches,
+      hidden:[".controls",".intro",".evidence",".policy-browser",".how","#load-plan",".print-action"].map(selector=>({selector,display:display(selector)})),
+      answerDisplay:display("#answer"),answer:document.getElementById("answer").innerText,
+      titleDisplay:display(".policy-print-title"),contextDisplay:display(".policy-print-context"),
+      sourceURLs:Array.from(document.querySelectorAll("#answer .sources a")).map(a=>a.href),
+      sourceSuffixes:Array.from(document.querySelectorAll("#answer .sources a")).map(a=>getComputedStyle(a,"::after").content),
+      date:document.querySelector(".policy-print-context").innerText
+     };
+    };
+    addEventListener("beforeprint",capture);matchMedia("print").addEventListener("change",capture);`);
+   const base64=await rpc("POST",sid("/print"),{background:false,shrinkToFit:true,page:{width:21,height:29.7},margin:{top:1.2,bottom:1.2,left:1.2,right:1.2}});
+   const pdf=Buffer.from(base64,"base64");assert.equal(pdf.subarray(0,5).toString(),"%PDF-");assert.ok(pdf.length>1000);
+   const pages=[...pdf.toString("latin1").matchAll(/\/Type\s*\/Page\b/g)].length;assert.ok(pages>=1&&pages<=3,"Expected a short selected-policy PDF, observed "+pages+" pages.");
+   const printed=await execute("return window.__policyPrintSnapshot;");
+   assert.ok(printed?.media,"No actual print-media snapshot was observed.");
+   for(const item of printed.hidden)assert.equal(item.display,"none","Still visible in print: "+item.selector);
+   assert.notEqual(printed.answerDisplay,"none");assert.notEqual(printed.titleDisplay,"none");assert.notEqual(printed.contextDisplay,"none");
+   assert.ok(printed.answer.includes("Thanksgiving"));assert.ok(printed.answer.includes("Live availability: unverified"));assert.ok(printed.answer.includes("checked 2026-11-25"));
+   assert.equal(printed.date,"Date to check: 2026-11-26");assert.equal(printed.sourceURLs.length,2);
+   printed.sourceURLs.forEach((url,i)=>assert.ok(printed.sourceSuffixes[i].includes(url),"Printed source URL missing."));
+   const screen=await state();assert.equal(screen.printReady,"ready");assert.ok(screen.plannerVisible);
+   return {pdfBytes:pdf.length,pages,sha256:createHash("sha256").update(pdf).digest("hex"),printMediaObserved:true,sourceURLs:printed.sourceURLs,hidden:printed.hidden.map(x=>x.selector)};
   });
   await closeSession();
  }

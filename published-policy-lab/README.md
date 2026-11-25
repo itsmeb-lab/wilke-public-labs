@@ -94,3 +94,7 @@ The Wake Forest delivery answer offers an optional area/depth illustration tied 
 ## Actual browser fixture
 
 `node scripts/browser-policy-check.mjs` requires an existing Edge WebDriver folder in `EDGEWEBDRIVER`; it never downloads a browser or driver. The existing Windows verification job uses its preinstalled image tools against an allowlist of localhost policy assets. It checks measured 320px/390px mobile emulation, desktop scrollbar-aware layout, task flows, planning inputs and a real JavaScript-disabled session. These checks run separately from `npm test` and are not physical-device, visual-pixel or WCAG conformance tests. No operator site or account is visited by the fixture.
+
+## Print one policy
+
+Choose **Print this policy** in an answer to use the browser's print or Save as PDF controls. The print layout retains the selected task, optional date, restriction, unresolved details, source URLs and source check dates. It hides the catalog, controls and optional whole-load inputs. It is a dated reference copy, not a booking, approval or live status certificate. Reopen the sources before relying on an old copy. With JavaScript disabled, ordinary browser printing retains the static rule browser instead.

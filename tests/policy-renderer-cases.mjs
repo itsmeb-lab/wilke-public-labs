@@ -13,21 +13,23 @@ export function rendererChecks(assert,source,api,catalog) {
   addEventListener(type,fn){(this.listeners[type]||=[]).push(fn);}
   fire(type){for(const fn of this.listeners[type]||[])fn({target:this});}
  }
- function fixture(data=catalog,extraExample,fragment="") {
+ function fixture(data=catalog,extraExample,fragment="",withPrint=true) {
   const elements=new Map([["task",new Element("select")],["place",new Element("select")],["visit-date",new Element("input")],["answer",new Element("div")],["load-plan",new Element("section")]]);
   const examples=["tv","title","printing","holiday","hotspot","things","meeting","early","mulch","chips"].map(id=>{const e=new Element("button");e.dataset.example=id;return e;});
   if(extraExample){const e=new Element("button");e.dataset.example=extraExample;examples.push(e);}
   const windowListeners={};
-  const defaultView={location:{hash:fragment},addEventListener:(type,fn)=>{(windowListeners[type]||=[]).push(fn);}};
-  const document={defaultView,getElementById:id=>elements.get(id),createElement:tag=>new Element(tag),querySelectorAll:selector=>selector==="[data-example]"?examples:[]};
-  const imports=['import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v8";','import { catalog } from "./data.mjs?v=20261125-v8";','import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v8";','import { estimateWholeLoadUse } from "./load-plan.mjs?v=20261125-v8";'];
+  let printCalls=0;
+  const defaultView={print:withPrint?()=>{printCalls++;}:undefined,location:{hash:fragment},addEventListener:(type,fn)=>{(windowListeners[type]||=[]).push(fn);}};
+  const root=new Element("html");
+  const document={defaultView,documentElement:root,getElementById:id=>elements.get(id),createElement:tag=>new Element(tag),querySelectorAll:selector=>selector==="[data-example]"?examples:[]};
+  const imports=['import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v9";','import { catalog } from "./data.mjs?v=20261125-v9";','import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v9";','import { estimateWholeLoadUse } from "./load-plan.mjs?v=20261125-v9";'];
   let body=source;
   for(const line of imports){assert.equal(body.split(line).length,2,"Expected one known import");body=body.replace(line,"");}
   const forbidden=()=>{throw new Error("Unexpected network or storage access");};
   new Function("document","SERVICES","answerPolicy","validateCatalog","catalog","parsePolicyView","buildPolicyViewLink","estimateWholeLoadUse","fetch","XMLHttpRequest","WebSocket","localStorage","navigator",body)(document,api.SERVICES,api.answerPolicy,api.validateCatalog,data,api.parsePolicyView,api.buildPolicyViewLink,api.estimateWholeLoadUse,forbidden,forbidden,forbidden,undefined,undefined);
   const find=(node,predicate)=>{if(predicate(node))return node;for(const child of node.children){const found=find(child,predicate);if(found)return found;}};
   return {
-   elements,examples,output:elements.get("answer"),
+   elements,examples,root,printCalls:()=>printCalls,output:elements.get("answer"),
    hash:fragment=>{defaultView.location.hash=fragment;for(const fn of windowListeners.hashchange||[])fn();},
    example:id=>examples.find(x=>x.dataset.example===id).fire("click"),
    selectTask:value=>{elements.get("task").value=value;elements.get("task").fire("change");},
@@ -35,6 +37,10 @@ export function rendererChecks(assert,source,api,catalog) {
   };
  }
  return [
+ ["printing uses the current checked answer without changing or submitting it",()=>{const f=fixture();f.example("holiday");assert.equal(f.root.dataset.policyPrint,"ready");assert.match(f.output.textContent,/Date to check: 2026-11-26/);assert.match(f.output.textContent,/checked 2026-11-25/);const before=f.output.textContent;f.find(f.output,n=>n.className==="print-action").fire("click");assert.equal(f.printCalls(),1);assert.equal(f.output.textContent,before);}],
+ ["a new policy replaces printed task and date context rather than retaining the previous trip",()=>{const f=fixture();f.example("holiday");f.example("things");assert.doesNotMatch(f.output.textContent,/Date to check: 2026-11-26/);assert.match(f.output.textContent,/No visit date supplied/);assert.match(f.find(f.output,n=>n.className==="policy-print-title").textContent,/Library of Things/);}],
+ ["invalid shared views and render failures remove print readiness and the old print action",()=>{const f=fixture();f.hash("#task=electronics&place=perry-memorial");assert.equal(f.root.dataset.policyPrint,"unavailable");assert.equal(f.find(f.output,n=>n.className==="print-action"),undefined);f.example("chips");assert.equal(f.root.dataset.policyPrint,"ready");f.elements.get("visit-date").validity.valid=false;f.elements.get("visit-date").fire("input");assert.equal(f.root.dataset.policyPrint,"unavailable");assert.equal(f.find(f.output,n=>n.className==="print-action"),undefined);}],
+ ["a surface without native printing retains the policy without a dead print button",()=>{const f=fixture(catalog,null,"",false);assert.equal(f.find(f.output,n=>n.className==="print-action"),undefined);assert.match(f.output.textContent,/Published restriction/);}],
  ["a whole-load illustration is scoped to its reviewed program and stays separate from the policy answer",()=>{const f=fixture();assert.equal(f.elements.get("load-plan").hidden,true);f.example("chips");const plan=f.elements.get("load-plan");assert.equal(plan.hidden,false);assert.match(plan.textContent,/20-cubic-yard whole load/);assert.equal(f.find(f.output,n=>n.id==="plan-area"),undefined);}],
  ["whole-load input is an explicit comparison, with no small-order or booking recommendation",()=>{const f=fixture();f.example("chips");const plan=f.elements.get("load-plan"),area=f.find(plan,n=>n.id==="plan-area"),depth=f.find(plan,n=>n.id==="plan-depth");area.value="200";depth.value="3";f.find(plan,n=>n.tagName==="button").fire("click");assert.match(plan.textContent,/1\.85 cubic yards/);assert.match(plan.textContent,/18\.15 cubic yards would remain/);assert.match(plan.textContent,/does not deliver smaller quantities/);assert.match(plan.textContent,/availability remains unverified/);}],
  ["changed or invalid planning values replace a stale illustration helpfully",()=>{const f=fixture();f.example("chips");const plan=f.elements.get("load-plan"),area=f.find(plan,n=>n.id==="plan-area"),depth=f.find(plan,n=>n.id==="plan-depth"),button=f.find(plan,n=>n.tagName==="button");area.value="200";depth.value="3";button.fire("click");area.value="";area.fire("input");assert.doesNotMatch(plan.textContent,/18\.15/);button.fire("click");assert.match(plan.textContent,/Enter an area/);assert.doesNotMatch(plan.textContent,/Your area\/depth estimate/);}],
