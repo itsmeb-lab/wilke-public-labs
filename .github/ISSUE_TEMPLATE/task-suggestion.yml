@@ -1,0 +1,34 @@
+name: "Useful task suggestion"
+description: "Describe an unanswered practical task and the limits of existing help."
+body:
+  - type: markdown
+    attributes:
+      value: "This creates a public GitHub issue. Describe a general user task without personal documents, exact home addresses or account details. Suggestions help research; they do not guarantee a new page, feature or service. Existing official tools may already be the best route."
+  - type: textarea
+    id: "user-task"
+    attributes:
+      label: "What are you trying to do?"
+      description: "Describe the decision or preparation question, rather than a list of keywords."
+    validations:
+      required: true
+  - type: input
+    id: "area"
+    attributes:
+      label: "Which public area or program?"
+      description: "Country, state and town or the named program. Do not include a home address."
+    validations:
+      required: true
+  - type: textarea
+    id: "existing-help"
+    attributes:
+      label: "What does existing help leave unanswered?"
+      description: "Optional public links to an official page or existing tool and the specific remaining gap."
+    validations:
+      required: false
+  - type: input
+    id: "primary-source"
+    attributes:
+      label: "Public primary source URL"
+      description: "Optional link to the operator's rule or program page."
+    validations:
+      required: false

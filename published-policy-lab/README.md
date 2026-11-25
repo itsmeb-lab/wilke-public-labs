@@ -6,7 +6,7 @@ A browser-only example of task-specific answers from checked primary policies. T
 
 ## Use it
 
-Choose a task, place and optional visit date. Each answer separates:
+Choose a task, place and optional date to check. Each answer separates:
 
 - whether the source describes, excludes or does not settle the requested task;
 - the weekday pattern and applicable supplied closure calendar;
@@ -24,7 +24,7 @@ This independently written module projects a checked data snapshot; it does not 
 
 ## Sources
 
-All source URLs and check dates are in [data.mjs](./data.mjs). Fourteen sources cover agency or library policies plus the county's dated closure PDF. Check dates describe this lab's review, not the agencies' update dates. A missing field stays unknown; an omitted holiday is not proof a site is open.
+All source URLs and check dates are in [data.mjs](./data.mjs). Fourteen sources cover agency, library and municipal program policies plus scoped dated closure notices. Check dates describe this lab's review, not the agencies' update dates. A missing field stays unknown; an omitted holiday is not proof a site is open.
 
 The 2026 closure list is not reused for 2027. Printing does not inherit notary-service hours. Morehead, Kentucky is not mapped to a same-named county in another state.
 
@@ -53,7 +53,7 @@ Tests cover policy fixtures and the actual browser module with a minimal DOM. Th
 4. Run `npm run policy:update` to refresh the ordinary-HTML rule block and joined CSV, then `npm run policy:check` and `npm test`. Review browser output before publishing.
 5. Correct or remove unsupported records rather than expanding uncertain combinations.
 
-Report source mismatches through the public repository. Include the public source URL and affected task, never identity documents or private personal details.
+[Report a source correction](https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml) or [suggest a useful task](https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=task-suggestion.yml). These optional public GitHub forms require a GitHub account to post. Include the affected task and public source; never identity documents or private personal details. Suggestions are research inputs, not promises to launch or evidence of search volume.
 
 ## Plain-text policy snapshot
 
