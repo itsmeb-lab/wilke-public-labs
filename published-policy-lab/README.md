@@ -48,7 +48,7 @@ Tests cover policy fixtures and the actual browser module with a minimal DOM. Th
 ## Update procedure
 
 1. Reopen the exact primary source; confirm the place, state, task and effective year.
-2. Record the source-check date and change only supported fields.
+2. Record the actual check date on each reviewed source and change only supported fields. Preserve older dates on sources that were not rechecked; the CSV uses the oldest policy-source date per row.
 3. Preserve exclusions and unknowns; do not infer one branch's policy for another.
 4. Run `npm run policy:update` to refresh the ordinary-HTML rule block and joined CSV, then `npm run policy:check` and `npm test`. Review browser output before publishing.
 5. Correct or remove unsupported records rather than expanding uncertain combinations.

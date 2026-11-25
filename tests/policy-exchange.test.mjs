@@ -24,7 +24,7 @@ test("every exchange value agrees with its joined source catalog record",()=>{
   task,SERVICES[task],policy.fit,policy.summary,
   (policy.conditions||[]).join(" / ")||"No additional condition recorded; check the source.",
   policy.fee||"Not stated in this snapshot.",policy.redirectPlaceId||"Not applicable",
-  policy.sourceIds.map(id=>sources.get(id)).join(" / "),catalog.checkedOn,
+  policy.sourceIds.map(id=>sources.get(id)).join(" / "),policy.sourceIds.map(id=>catalog.sources.find(source=>source.id===id).checkedOn).sort()[0],
   "UNVERIFIED","EXCHANGE_ONLY_NOT_A_PAGE_APPROVAL",place.recordKind||"place"
  ]));
  assert.deepEqual(rows.slice(1),expected);
