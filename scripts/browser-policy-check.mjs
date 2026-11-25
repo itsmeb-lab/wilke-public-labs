@@ -150,7 +150,11 @@ try{
     await delay(50);
    }
    assert.ok(ready,"The repair café static page did not load.");
-   await click('nav a[href="#microwave"]');
+   const activateLink=async selector=>{
+    assert.equal(await execute("const link=document.querySelector(arguments[0]);link.focus();return document.activeElement===link;",[selector]),true);
+    await rpc("POST",sid("/actions"),{actions:[{type:"key",id:"keyboard",actions:[{type:"keyDown",value:"\uE007"},{type:"keyUp",value:"\uE007"}]}]});
+   };
+   await activateLink('nav a[href="#microwave"]');
    const heading=await execute(`
     const section=document.querySelector(":target");
     const rect=section.querySelector("h2").getBoundingClientRect();
@@ -163,7 +167,7 @@ try{
    assert.ok(heading.top>=0&&heading.top<heading.height);
    assert.deepEqual(heading.statuses,{"san-francisco":"excluded",peninsula:"unknown",toronto:"unknown","york-region":"listed",wales:"excluded","rice-county":"unknown",waverley:"excluded"});
    assert.ok(heading.resources.length>0&&heading.resources.every(resource=>resource===origin));
-   await click('#microwave a[href="#items"]');
+   await activateLink('#microwave a[href="#items"]');
    assert.equal(await execute("return document.querySelector(':target').id;"),"items");
    return {width,content:heading.content,comparison:heading.title,statuses:heading.statuses};
   });
