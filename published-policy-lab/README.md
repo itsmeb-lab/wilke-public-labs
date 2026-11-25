@@ -28,6 +28,10 @@ All source URLs and check dates are in [data.mjs](./data.mjs). Six sources cover
 
 The 2026 closure list is not reused for 2027. Printing does not inherit notary-service hours. Morehead, Kentucky is not mapped to a same-named county in another state.
 
+## Reuse the sample data
+
+The [checked policy CSV](./examples/pgp-policy-source.csv) keeps 19 place/task records joined to their sources. These rows are data, not approved landing pages. See the [optional WordPress exchange guide](./WORDPRESS-EXCHANGE.md) for a bounded Page Generator Pro experiment; no WordPress import has been tested.
+
 ## Run and verify
 
 From the repository root:
