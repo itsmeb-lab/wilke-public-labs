@@ -1,0 +1,374 @@
+{
+  "checkedOn": "2026-11-25",
+  "sources": {
+    "milwaukee-guide": {
+      "label": "Milwaukee Public Library service guide",
+      "url": "https://mpl.org/library/print.php",
+      "checkedOn": "2026-11-25"
+    },
+    "chapel-hill-guide": {
+      "label": "Chapel Hill Public Library service guide",
+      "url": "https://www.chapelhillpubliclibrary.org/computers-printing",
+      "checkedOn": "2026-11-25"
+    },
+    "brunswick-guide": {
+      "label": "Brunswick County Library service guide",
+      "url": "https://brunswickcountync.gov/170/Library-Services",
+      "checkedOn": "2026-11-25"
+    },
+    "addison-guide": {
+      "label": "Addison Public Library service guide",
+      "url": "https://www.addisonlibrary.org/library-services/print-scan-fax",
+      "checkedOn": "2026-11-25"
+    },
+    "durham-guide": {
+      "label": "Durham County Library service guide",
+      "url": "https://durhamcountylibrary.org/technology/scanner/",
+      "checkedOn": "2026-11-25"
+    },
+    "beaufort-guide": {
+      "label": "Beaufort County Library service guide",
+      "url": "https://www.beaufortcountylibrary.org/about/faqs",
+      "checkedOn": "2026-11-25"
+    },
+    "southern-pines-guide": {
+      "label": "Southern Pines Public Library service guide",
+      "url": "https://www.southernpines.net/601/Technology",
+      "checkedOn": "2026-11-25"
+    }
+  },
+  "operators": [
+    {
+      "id": "milwaukee",
+      "name": "Milwaukee Public Library",
+      "area": "Milwaukee, Wisconsin",
+      "jurisdiction": "us-wi-milwaukee",
+      "country": "US",
+      "visitSource": "milwaukee-guide",
+      "sourceIds": [
+        "milwaukee-guide"
+      ],
+      "prep": [
+        {
+          "label": "File type",
+          "text": "The library lists PDF, Word and JPEG as scanner output formats.",
+          "source": "milwaukee-guide"
+        },
+        {
+          "label": "Station",
+          "text": "Use the scan directions on the library’s service page. Ask staff to confirm equipment and access at your branch.",
+          "source": "milwaukee-guide"
+        }
+      ]
+    },
+    {
+      "id": "chapel-hill",
+      "name": "Chapel Hill Public Library",
+      "area": "Chapel Hill, North Carolina",
+      "jurisdiction": "us-nc-chapel-hill",
+      "country": "US",
+      "visitSource": "chapel-hill-guide",
+      "sourceIds": [
+        "chapel-hill-guide"
+      ],
+      "prep": [
+        {
+          "label": "Station",
+          "text": "The library directs scanning users to the printer/copier’s scan option.",
+          "source": "chapel-hill-guide"
+        },
+        {
+          "label": "Fee",
+          "text": "The service guide lists free scanning. Printing and copying have their own prices.",
+          "source": "chapel-hill-guide"
+        }
+      ]
+    },
+    {
+      "id": "brunswick",
+      "name": "Brunswick County Library",
+      "area": "Brunswick County, North Carolina",
+      "jurisdiction": "us-nc-brunswick-county",
+      "country": "US",
+      "visitSource": "brunswick-guide",
+      "sourceIds": [
+        "brunswick-guide"
+      ],
+      "prep": [
+        {
+          "label": "Station",
+          "text": "Check your intended branch for the current scan-to-USB arrangement.",
+          "source": "brunswick-guide"
+        },
+        {
+          "label": "Fee",
+          "text": "The published charge for scan-to-USB is 10 cents per page.",
+          "source": "brunswick-guide"
+        }
+      ]
+    },
+    {
+      "id": "addison",
+      "name": "Addison Public Library",
+      "area": "Addison, Illinois",
+      "jurisdiction": "us-il-addison",
+      "country": "US",
+      "visitSource": "addison-guide",
+      "sourceIds": [
+        "addison-guide"
+      ],
+      "prep": [
+        {
+          "label": "Station",
+          "text": "Find the ScanEZ station near the second-floor Tech Help Desk.",
+          "source": "addison-guide"
+        },
+        {
+          "label": "Time limit",
+          "text": "The library asks users to limit their time to 15 minutes while others are waiting.",
+          "source": "addison-guide"
+        }
+      ]
+    },
+    {
+      "id": "durham",
+      "name": "Durham County Library",
+      "area": "Durham County, North Carolina",
+      "jurisdiction": "us-nc-durham-county",
+      "country": "US",
+      "visitSource": "durham-guide",
+      "sourceIds": [
+        "durham-guide"
+      ],
+      "prep": [
+        {
+          "label": "Station",
+          "text": "The library lists both flatbed and document feeders at all locations.",
+          "source": "durham-guide"
+        },
+        {
+          "label": "Fee",
+          "text": "Scanning is listed as free. The published page lists a maximum document size of 8.5 × 14 inches.",
+          "source": "durham-guide"
+        }
+      ]
+    },
+    {
+      "id": "beaufort",
+      "name": "Beaufort County Library",
+      "area": "Beaufort County, South Carolina",
+      "jurisdiction": "us-sc-beaufort-county",
+      "country": "US",
+      "visitSource": "beaufort-guide",
+      "sourceIds": [
+        "beaufort-guide"
+      ],
+      "prep": [
+        {
+          "label": "Station",
+          "text": "All branches list a self-service scanner. The touchscreen walks users through the process.",
+          "source": "beaufort-guide"
+        },
+        {
+          "label": "What to bring",
+          "text": "The FAQ lists documents, photos and books. Confirm your specific format or size with the branch.",
+          "source": "beaufort-guide"
+        }
+      ]
+    },
+    {
+      "id": "southern-pines",
+      "name": "Southern Pines Public Library",
+      "area": "Southern Pines, North Carolina",
+      "jurisdiction": "us-nc-southern-pines",
+      "country": "US",
+      "visitSource": "southern-pines-guide",
+      "sourceIds": [
+        "southern-pines-guide"
+      ],
+      "prep": [
+        {
+          "label": "Access",
+          "text": "The scan and copy section describes guest access to the scanner. Check the service page before traveling.",
+          "source": "southern-pines-guide"
+        },
+        {
+          "label": "Charges",
+          "text": "The page lists prices for copying and separate information on faxing. Ask the library to confirm a charge if you need one for scanning.",
+          "source": "southern-pines-guide"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "usb",
+      "label": "Scan to a USB drive"
+    },
+    {
+      "id": "email",
+      "label": "Scan directly to email"
+    },
+    {
+      "id": "no-card",
+      "label": "Scan without a library card"
+    },
+    {
+      "id": "tabloid",
+      "label": "Scan an 11 × 17 inch page"
+    },
+    {
+      "id": "duplex",
+      "label": "Scan both sides through a feeder"
+    }
+  ],
+  "rules": [
+    {
+      "operator": "milwaukee",
+      "task": "usb",
+      "fit": "listed",
+      "text": "Save scans to a flash drive at no charge.",
+      "source": "milwaukee-guide"
+    },
+    {
+      "operator": "milwaukee",
+      "task": "email",
+      "fit": "listed",
+      "text": "The library lists free scan-to-email.",
+      "source": "milwaukee-guide"
+    },
+    {
+      "operator": "milwaukee",
+      "task": "no-card",
+      "fit": "ask",
+      "text": "The guest option on the page is for printing. Confirm whether your branch’s scanning station requires a card.",
+      "source": "milwaukee-guide"
+    },
+    {
+      "operator": "chapel-hill",
+      "task": "usb",
+      "fit": "listed",
+      "text": "Use a memory stick at the printer/copier scanner. The library lists scanning as free.",
+      "source": "chapel-hill-guide"
+    },
+    {
+      "operator": "chapel-hill",
+      "task": "email",
+      "fit": "listed",
+      "text": "The printer/copier can send a scan to an email address at no charge.",
+      "source": "chapel-hill-guide"
+    },
+    {
+      "operator": "chapel-hill",
+      "task": "no-card",
+      "fit": "ask",
+      "text": "The page explicitly waives a card for public computers and describes public scanning separately. Confirm the scanner’s access details.",
+      "source": "chapel-hill-guide"
+    },
+    {
+      "operator": "brunswick",
+      "task": "usb",
+      "fit": "listed",
+      "text": "The library lists scan-to-USB at 10 cents per page.",
+      "source": "brunswick-guide"
+    },
+    {
+      "operator": "brunswick",
+      "task": "email",
+      "fit": "excluded",
+      "text": "The library’s service page says it is currently unable to scan directly to email.",
+      "source": "brunswick-guide"
+    },
+    {
+      "operator": "brunswick",
+      "task": "no-card",
+      "fit": "ask",
+      "text": "The county has guest computer access. Its separate USB scanning entry does not specify whether you need a card.",
+      "source": "brunswick-guide"
+    },
+    {
+      "operator": "addison",
+      "task": "usb",
+      "fit": "listed",
+      "text": "The library lists free scan-to-USB.",
+      "source": "addison-guide"
+    },
+    {
+      "operator": "addison",
+      "task": "email",
+      "fit": "listed",
+      "text": "Scan-to-email is free.",
+      "source": "addison-guide"
+    },
+    {
+      "operator": "addison",
+      "task": "no-card",
+      "fit": "listed",
+      "text": "The library says scanning is available without a library card.",
+      "source": "addison-guide"
+    },
+    {
+      "operator": "addison",
+      "task": "tabloid",
+      "fit": "listed",
+      "text": "The library lists a flatbed book scanner for items up to 11 × 17 inches.",
+      "source": "addison-guide"
+    },
+    {
+      "operator": "addison",
+      "task": "duplex",
+      "fit": "listed",
+      "text": "The library lists a duplex document scanner with a feeder.",
+      "source": "addison-guide"
+    },
+    {
+      "operator": "durham",
+      "task": "tabloid",
+      "fit": "excluded",
+      "text": "The published maximum is legal size (8.5 × 14 inches), smaller than 11 × 17.",
+      "source": "durham-guide"
+    },
+    {
+      "operator": "durham",
+      "task": "duplex",
+      "fit": "ask",
+      "text": "The library lists a document feeder. The page does not say whether it scans both sides in one pass.",
+      "source": "durham-guide"
+    },
+    {
+      "operator": "beaufort",
+      "task": "usb",
+      "fit": "listed",
+      "text": "The self-service station can save scans to a USB drive.",
+      "source": "beaufort-guide"
+    },
+    {
+      "operator": "beaufort",
+      "task": "email",
+      "fit": "listed",
+      "text": "The FAQ lists an email option at the self-service station.",
+      "source": "beaufort-guide"
+    },
+    {
+      "operator": "southern-pines",
+      "task": "usb",
+      "fit": "listed",
+      "text": "The technology guide lists scanning to a thumb drive.",
+      "source": "southern-pines-guide"
+    },
+    {
+      "operator": "southern-pines",
+      "task": "email",
+      "fit": "listed",
+      "text": "The technology guide lists scanning directly to an email address.",
+      "source": "southern-pines-guide"
+    },
+    {
+      "operator": "southern-pines",
+      "task": "no-card",
+      "fit": "listed",
+      "text": "The library explicitly says scanning is available without a card.",
+      "source": "southern-pines-guide"
+    }
+  ]
+}

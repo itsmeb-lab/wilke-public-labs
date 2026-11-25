@@ -18,7 +18,8 @@ const served=new Map([
  ["repair-cafe-planner",new Set(["index.html","style.css"])],
  ["shelter-linen-guide",new Set(["index.html"])],
  ["milwaukee-bulky-items",new Set(["index.html"])],
- ["food-scrap-drop-off",new Set(["index.html"])]
+ ["food-scrap-drop-off",new Set(["index.html"])],
+ ["library-scanning",new Set(["index.html"])]
 ]);
 const mime={html:"text/html; charset=utf-8",css:"text/css; charset=utf-8",mjs:"text/javascript; charset=utf-8"};
 const driverFolder=process.env.EDGEWEBDRIVER;
@@ -167,7 +168,8 @@ try{
    {folder:"repair-cafe-planner",name:"repair café",anchor:"microwave",title:"Microwave",statuses:{"san-francisco":"excluded",peninsula:"unknown",toronto:"unknown","york-region":"listed",wales:"excluded","rice-county":"unknown",waverley:"excluded"}},
    {folder:"shelter-linen-guide",name:"shelter linen",anchor:"bath-towels",title:"Large bath towels",statuses:{"wisconsin-humane":"ask",charlotte:"paused","haywood-county":"ask",voorhees:"ask",christchurch:"ask","casa-grande":"listed","silicon-valley":"ask"}},
    {folder:"milwaukee-bulky-items",name:"Milwaukee bulky item",anchor:"commercial-hauler",title:"Load handled by a paid hauler",statuses:{"milwaukee-curb":"ask","milwaukee-drop-off":"ask","wauwatosa-curb":"ask","wauwatosa-drop-off":"excluded"}},
-   {folder:"food-scrap-drop-off",name:"food-scrap drop-off",anchor:"compostable-plastic-bag",title:"Certified compostable plastic bag",statuses:{milwaukee:"excluded","madison-streets":"excluded","ann-arbor":"ask",minneapolis:"listed",durham:"ask",carrboro:"excluded"}}
+   {folder:"food-scrap-drop-off",name:"food-scrap drop-off",anchor:"compostable-plastic-bag",title:"Certified compostable plastic bag",statuses:{milwaukee:"excluded","madison-streets":"excluded","ann-arbor":"ask",minneapolis:"listed",durham:"ask",carrboro:"excluded"}},
+   {folder:"library-scanning",name:"library scanning",anchor:"email",title:"Scan directly to email",statuses:{milwaukee:"listed","chapel-hill":"listed",brunswick:"excluded",addison:"listed",durham:"unknown",beaufort:"listed","southern-pines":"listed"}}
   ];
   await session(width,height,false,origin+"/"+cases[0].folder+"/");
   for(const [index,testCase] of cases.entries()){

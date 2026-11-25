@@ -48,7 +48,7 @@ test('source review finds an alternate mentioned only in the page notes', () => 
 
 test('release verification reads only the exact canonical pages, downloads and sitemap', async () => {
   const reads = await checkServed(fakeResponse);
-  assert.equal(reads.length, 9);
+  assert.equal(reads.length, 11);
   assert.ok(reads.some((entry) => entry.url === base + 'milwaukee-bulky-items/comparison.csv'));
   assert.ok(reads.every((entry) => entry.status === 200 && entry.bytes > 100));
 });
