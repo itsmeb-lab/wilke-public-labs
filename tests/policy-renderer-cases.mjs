@@ -20,7 +20,7 @@ export function rendererChecks(assert,source,api,catalog) {
   const windowListeners={};
   const defaultView={location:{hash:fragment},addEventListener:(type,fn)=>{(windowListeners[type]||=[]).push(fn);}};
   const document={defaultView,getElementById:id=>elements.get(id),createElement:tag=>new Element(tag),querySelectorAll:selector=>selector==="[data-example]"?examples:[]};
-  const imports=['import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v6";','import { catalog } from "./data.mjs?v=20261125-v6";','import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v6";'];
+  const imports=['import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v7";','import { catalog } from "./data.mjs?v=20261125-v7";','import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v7";'];
   let body=source;
   for(const line of imports){assert.equal(body.split(line).length,2,"Expected one known import");body=body.replace(line,"");}
   const forbidden=()=>{throw new Error("Unexpected network or storage access");};

@@ -1,6 +1,6 @@
-import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v6";
-import { catalog } from "./data.mjs?v=20261125-v6";
-import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v6";
+import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v7";
+import { catalog } from "./data.mjs?v=20261125-v7";
+import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v7";
 
 const task = document.getElementById("task");
 const place = document.getElementById("place");
@@ -91,7 +91,7 @@ try{
   meeting:["commercial_meeting","durham-rooms-program",""],
   early:["private_study","durham-rooms-program","2026-11-25"],
   mulch:["mulch_pickup","clemson-mulch-program",""],
-  chips:["mulch_delivery","wakeforest-woodchips-program",""]
+  chips:["mulch_delivery","wakeforest-woodchips-program","2026-11-26"]
  };
  for(const button of document.querySelectorAll("[data-example]"))button.addEventListener("click",()=>{
   const chosen=examples[button.dataset.example];
