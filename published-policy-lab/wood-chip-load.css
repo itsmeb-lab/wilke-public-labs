@@ -1,0 +1,10 @@
+.wood-chip-load { max-width: 54rem; padding: 1.25rem; margin: 2rem 0; border: 1px solid var(--line); border-radius: 14px; background: #fff; scroll-margin-top: 1rem; }
+.wood-chip-load h2 { margin: 0 0 .65rem; }
+.wood-chip-load p { margin: .65rem 0; }
+.wood-chip-load fieldset { min-width: 0; padding: 0; margin: 1rem 0 0; border: 0; }
+.wood-chip-load legend { padding: 0; margin-bottom: .4rem; font-weight: 750; }
+.wood-chip-load label { display: block; font-size: .9rem; font-weight: 650; }
+.wood-chip-load input { display: block; margin-top: .25rem; }
+.wood-chip-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: .55rem .8rem; }
+.wood-chip-load button { margin-top: .65rem; }
+.wood-chip-load [role="status"]:not(:empty) { padding: .8rem; margin-top: .8rem; border-left: 3px solid var(--accent); background: #edf1eb; }

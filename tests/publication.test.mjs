@@ -63,6 +63,22 @@ for (const [file, slug, content] of pages) {
   });
 }
 
+describe('lab index audience navigation', () => {
+  it('groups community resources separately from software demos and the diagnostic offer', () => {
+    const html = readFileSync(path.join(root, 'index.html'), 'utf8');
+    const guides = html.split('<section class="labs" id="community-guides"')[1].split('</section>')[0];
+    const demos = html.split('<section class="labs" id="software-demos"')[1];
+    for (const slug of ['published-policy-lab', 'repair-cafe-planner', 'shelter-linen-guide', 'milwaukee-bulky-items']) {
+      assert.ok(guides.includes('href="./' + slug + '/"'));
+    }
+    assert.ok(guides.includes('href="./published-policy-lab/#wood-chip-load"'));
+    assert.doesNotMatch(guides, /data-diagnostic-link/);
+    assert.ok(demos.includes('href="./automation-reliability-lab/"'));
+    assert.ok(demos.includes('href="./windows-process-recovery-watchdog/"'));
+    assert.match(demos, /data-diagnostic-link/);
+  });
+});
+
 describe('publication inventory', () => {
   it('lists precisely the seven published canonical URLs, without tracking parameters', () => {
     const xml = readFileSync(path.join(root, 'sitemap.xml'), 'utf8');

@@ -12,7 +12,7 @@ import { catalog } from "../published-policy-lab/data.mjs";
 import { SERVICES } from "../published-policy-lab/engine.mjs";
 
 const root=fileURLToPath(new URL("../",import.meta.url));
-const allowed=new Set(["index.html","style.css","app.mjs","data.mjs","engine.mjs","view-link.mjs"]);
+const allowed=new Set(["index.html","style.css","app.mjs","data.mjs","engine.mjs","view-link.mjs","wood-chip-load.css","wood-chip-load.mjs"]);
 const served=new Map([
  ["published-policy-lab",allowed],
  ["repair-cafe-planner",new Set(["index.html","style.css"])],
@@ -91,7 +91,7 @@ async function session(width,height,javascript=true,initialPage=page){
  return {browser:capabilities.browserName,version:capabilities.browserVersion,platform:capabilities.platformName};
 }
 async function closeSession(){if(sessionId){const closing=sessionId;sessionId=null;await rpc("DELETE","/session/"+closing);}}
-const stateScript="return {\n width:document.documentElement.clientWidth,innerWidth:window.innerWidth,scrollWidth:document.documentElement.scrollWidth,\n cards:document.querySelectorAll(\".policy-card\").length,rows:document.querySelectorAll(\"[data-policy]\").length,\n task:document.getElementById(\"task\").value,place:document.getElementById(\"place\").value,date:document.getElementById(\"visit-date\").value,\n tasks:document.getElementById(\"task\").options.length,answer:document.getElementById(\"answer\").innerText,\n controls:Array.from(document.querySelectorAll(\"select,input,button\")).map(e=>{const r=e.getBoundingClientRect();return {tag:e.tagName,id:e.id,left:r.left,right:r.right,width:r.width,height:r.height};}),\n sources:Array.from(document.querySelectorAll(\"#answer .sources a\")).map(e=>e.href),\n share:document.querySelector(\".share-view a\")?.href||null,\n active:document.activeElement?.id||\"\",\n noScriptNotice:Array.from(document.querySelectorAll(\"noscript .notice\")).some(e=>e.getBoundingClientRect().height>0),\n resourceOrigins:Array.from(new Set(performance.getEntriesByType(\"resource\").map(e=>new URL(e.name).origin)))\n};";
+const stateScript="return {\n width:document.documentElement.clientWidth,innerWidth:window.innerWidth,scrollWidth:document.documentElement.scrollWidth,\n cards:document.querySelectorAll(\".policy-card\").length,rows:document.querySelectorAll(\"[data-policy]\").length,\n task:document.getElementById(\"task\").value,place:document.getElementById(\"place\").value,date:document.getElementById(\"visit-date\").value,\n tasks:document.getElementById(\"task\").options.length,answer:document.getElementById(\"answer\").innerText,\n controls:Array.from(document.querySelectorAll(\"#checker select,#checker input,#checker button\")).map(e=>{const r=e.getBoundingClientRect();return {tag:e.tagName,id:e.id,left:r.left,right:r.right,width:r.width,height:r.height};}),\n sources:Array.from(document.querySelectorAll(\"#answer .sources a\")).map(e=>e.href),\n share:document.querySelector(\".share-view a\")?.href||null,\n active:document.activeElement?.id||\"\",\n noScriptNotice:Array.from(document.querySelectorAll(\"noscript .notice\")).some(e=>e.getBoundingClientRect().height>0),\n resourceOrigins:Array.from(new Set(performance.getEntriesByType(\"resource\").map(e=>new URL(e.name).origin)))\n};";
 async function state(){return execute(stateScript);}
 async function settled(){
  const until=Date.now()+10000;
@@ -134,12 +134,30 @@ try{
    let s=await state();assert.ok(s.answer.includes("shared view could not be opened"));
    await click('[data-example="mulch"]');s=await state();assert.equal(s.place,"clemson-mulch-program");assert.ok(s.answer.includes("different closing times"));
   });
+  await check("wood-chip nominal load and clearing stale output at "+width+"px",async()=>{
+   const readyBy=Date.now()+5000;
+   while(await execute("return document.getElementById('wood-chip-controls').hidden;")){
+    if(Date.now()>=readyBy)throw new Error("Wood-chip calculator did not load.");
+    await delay(50);
+   }
+   await click("#wood-chip-calc");
+   const result=async()=>execute("return document.getElementById('wood-chip-result').textContent;");
+   const initial=await result();
+   assert.ok(initial.includes("9.26 cubic yards")&&initial.includes("10.74 cubic yards could be left over"));
+   const geometry=await execute("return [...document.querySelectorAll('#wood-chip-controls input,#wood-chip-controls button')].map(e=>{const r=e.getBoundingClientRect();return {left:r.left,right:r.right,height:r.height,width:document.documentElement.clientWidth};});");
+   assert.ok(geometry.every(r=>r.left>=-1&&r.right<=r.width+1&&r.height>=42));
+   await execute("const field=document.getElementById('wood-chip-area');field.value='4320';field.dispatchEvent(new Event('input'));return true;");
+   assert.equal(await result(),"");
+   await click("#wood-chip-calc");
+   assert.ok((await result()).includes("20 cubic yards of your planned volume would still be needed"));
+  });
   await closeSession();
  }
  const runtime=await session(390,844,false);
  await check("actual JavaScript-disabled static rules",async()=>{
   const s=await state();assert.equal(s.width,390);assert.equal(s.cards,catalog.places.length);assert.equal(s.rows,expectedRows);
   assert.equal(s.tasks,0,"Browser app ran despite the disabled-JavaScript fixture.");assert.ok(s.noScriptNotice,"No-script notice is not displayed.");
+  assert.ok(await execute("return document.getElementById('wood-chip-controls').hidden && document.getElementById('wood-chip-load').innerText.includes('divide by 324');"));
   assert.ok(s.scrollWidth<=391);return {width:s.width,cards:s.cards,rows:s.rows,appTasks:s.tasks,runtime};
  });
  await closeSession();

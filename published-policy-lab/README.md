@@ -14,6 +14,10 @@ Choose a task, place and optional date to check. Each answer separates:
 
 A source-directed alternate location is offered only when the snapshot explicitly supports the same task in the same jurisdiction. This is not distance-based routing.
 
+## Estimate a full wood-chip load
+
+The [Wake Forest comparison](https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/#wood-chip-load) uses the town’s approximate 20 cubic yards as a planning figure. Its math estimates a volume from area and the depth you choose. The result does not predict a delivery size or confirm eligibility or scheduling. The formula and worked example remain visible without JavaScript.
+
 ## Scope and privacy
 
 The snapshot was checked on November 25, 2026. It is a limited educational example, not an official directory, legal eligibility decision, live opening-hours feed or booking service. It does not decide whether an individual document can be notarized. Operators may change rules or decline particular requests.
