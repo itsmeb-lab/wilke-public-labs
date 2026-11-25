@@ -1,0 +1,420 @@
+{
+  "checkedOn": "2026-11-25",
+  "sources": {
+    "milwaukee-program": {
+      "label": "Milwaukee collection guide and sign-up",
+      "url": "https://city.milwaukee.gov/sanitation/Yard-Food-Waste/Home-Composting",
+      "checkedOn": "2026-11-25"
+    },
+    "madison-streets": {
+      "label": "Madison Streets Division food-scrap guide",
+      "url": "https://www.cityofmadison.com/streets/food-scraps/compost-food-scraps",
+      "checkedOn": "2026-11-25"
+    },
+    "ann-arbor-program": {
+      "label": "Ann Arbor bin access and materials",
+      "url": "https://www.a2gov.org/trash-recycle-and-compost/compost/food-scrap-drop-off-bins/",
+      "checkedOn": "2026-11-25"
+    },
+    "ann-arbor-bags": {
+      "label": "Ann Arbor program announcement and bag instructions",
+      "url": "https://www.a2gov.org/news/posts/composting-access-expands-with-community-food-scrap-drop-off-bins/",
+      "checkedOn": "2026-11-25"
+    },
+    "minneapolis-access": {
+      "label": "Minneapolis organics drop-off sites",
+      "url": "https://www.minneapolismn.gov/resident-services/garbage-recycling-cleanup/organics-recycling/organics-drop-off-sites/",
+      "checkedOn": "2026-11-25"
+    },
+    "minneapolis-materials": {
+      "label": "Minneapolis accepted organics",
+      "url": "https://www.minneapolismn.gov/resident-services/garbage-recycling-cleanup/organics-recycling/accepted-organics/",
+      "checkedOn": "2026-11-25"
+    },
+    "durham-program": {
+      "label": "Durham city drop-off instructions",
+      "url": "https://www.durhamnc.gov/935/Composting",
+      "checkedOn": "2026-11-25"
+    },
+    "orange-county-program": {
+      "label": "Orange County food-waste drop-off sites",
+      "url": "https://www.orangecountync.gov/2693/Food-Waste-Drop-Off-Sites",
+      "checkedOn": "2026-11-25"
+    },
+    "carrboro-market": {
+      "label": "Carrboro market’s material list and move notice",
+      "url": "https://www.carrborofarmersmarket.com/compost-program",
+      "checkedOn": "2026-11-25"
+    },
+    "carrboro-town": {
+      "label": "Carrboro town drop-off locations and access",
+      "url": "https://www.carrboronc.gov/2502/Compost-Drop-off",
+      "checkedOn": "2026-11-25"
+    }
+  },
+  "operators": [
+    {
+      "id": "milwaukee",
+      "name": "Milwaukee food scrap drop-off",
+      "area": "Milwaukee, Wisconsin",
+      "jurisdiction": "us-wi-milwaukee",
+      "country": "US",
+      "visitSource": "milwaukee-program",
+      "sourceIds": [
+        "milwaukee-program"
+      ],
+      "prep": [
+        {
+          "label": "Access",
+          "text": "Sign up through the partner link on the city’s page and choose a listed drop-off.",
+          "source": "milwaukee-program"
+        },
+        {
+          "label": "Scope",
+          "text": "These are food-scrap carts. Use the city’s separate yard-waste route for grass, branches and leaves.",
+          "source": "milwaukee-program"
+        }
+      ]
+    },
+    {
+      "id": "madison-streets",
+      "name": "Madison Streets Division sites",
+      "area": "Madison, Wisconsin",
+      "jurisdiction": "us-wi-madison",
+      "country": "US",
+      "visitSource": "madison-streets",
+      "sourceIds": [
+        "madison-streets"
+      ],
+      "prep": [
+        {
+          "label": "Access",
+          "text": "The city limits these drop-off locations to Madison residents and taxpayers. Check site hours and what proof to bring.",
+          "source": "madison-streets"
+        },
+        {
+          "label": "Which bin",
+          "text": "Use the orange food-scrap carts at Streets Division drop-off sites. The page describes farmers’ markets and county kiosks separately.",
+          "source": "madison-streets"
+        }
+      ]
+    },
+    {
+      "id": "ann-arbor",
+      "name": "Ann Arbor community drop-off bins",
+      "area": "Ann Arbor, Michigan",
+      "jurisdiction": "us-mi-ann-arbor",
+      "country": "US",
+      "visitSource": "ann-arbor-program",
+      "sourceIds": [
+        "ann-arbor-program",
+        "ann-arbor-bags"
+      ],
+      "prep": [
+        {
+          "label": "Access",
+          "text": "The city currently describes this program for approved residents of multifamily housing. An application by itself does not unlock a bin.",
+          "source": "ann-arbor-program"
+        },
+        {
+          "label": "Unlocking",
+          "text": "Wait for approval and app instructions. The city describes requesting a separate unlocking method if you cannot use a smartphone.",
+          "source": "ann-arbor-program"
+        }
+      ]
+    },
+    {
+      "id": "minneapolis",
+      "name": "Minneapolis organics drop-off",
+      "area": "Minneapolis, Minnesota",
+      "jurisdiction": "us-mn-minneapolis",
+      "country": "US",
+      "visitSource": "minneapolis-access",
+      "sourceIds": [
+        "minneapolis-access",
+        "minneapolis-materials"
+      ],
+      "prep": [
+        {
+          "label": "Access",
+          "text": "Choose a site and follow the city’s sign-up and welcome instructions to use the locked cart.",
+          "source": "minneapolis-access"
+        },
+        {
+          "label": "Bag",
+          "text": "The drop-off instructions discuss both paper and compostable plastic. Use the linked materials guide to check the BPI mark.",
+          "source": "minneapolis-materials"
+        }
+      ]
+    },
+    {
+      "id": "durham",
+      "name": "Durham city food-scrap containers",
+      "area": "Durham, North Carolina",
+      "jurisdiction": "us-nc-durham",
+      "country": "US",
+      "visitSource": "durham-program",
+      "sourceIds": [
+        "durham-program"
+      ],
+      "prep": [
+        {
+          "label": "Access",
+          "text": "The city describes free residential drop-off for city residents and city employees. Register in CompostHere to unlock the container.",
+          "source": "durham-program"
+        },
+        {
+          "label": "Amount",
+          "text": "The city limits use to two gallons per person per 24-hour or weekend period and excludes commercial and event scraps.",
+          "source": "durham-program"
+        }
+      ]
+    },
+    {
+      "id": "carrboro",
+      "name": "Carrboro Town Hall drop-off",
+      "area": "Carrboro, North Carolina",
+      "jurisdiction": "us-nc-orange-county-carrboro",
+      "country": "US",
+      "visitSource": "carrboro-town",
+      "sourceIds": [
+        "carrboro-town",
+        "orange-county-program",
+        "carrboro-market"
+      ],
+      "prep": [
+        {
+          "label": "Location",
+          "text": "The town lists roll-out carts behind Town Hall. The market also posts that its compost drop-off moved there. Check the town’s current directions.",
+          "source": "carrboro-town",
+          "extraSource": "carrboro-market"
+        },
+        {
+          "label": "Access",
+          "text": "The town lists an app requirement for the separate BigBelly bins at Jones Ferry and MLK Park. Check the type of bin at the site you plan to use.",
+          "source": "carrboro-town"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "raw-meat",
+      "label": "Raw meat"
+    },
+    {
+      "id": "cooked-meat",
+      "label": "Cooked meat"
+    },
+    {
+      "id": "brown-paper-bag",
+      "label": "Brown paper bag left in the bin"
+    },
+    {
+      "id": "compostable-plastic-bag",
+      "label": "Certified compostable plastic bag"
+    },
+    {
+      "id": "tea-bag",
+      "label": "Used tea bag"
+    }
+  ],
+  "rules": [
+    {
+      "operator": "milwaukee",
+      "task": "raw-meat",
+      "fit": "excluded",
+      "text": "The city excludes raw meat.",
+      "source": "milwaukee-program"
+    },
+    {
+      "operator": "milwaukee",
+      "task": "cooked-meat",
+      "fit": "listed",
+      "text": "Cooked meat and animal or fish bones are on the city’s accepted list.",
+      "source": "milwaukee-program"
+    },
+    {
+      "operator": "milwaukee",
+      "task": "brown-paper-bag",
+      "fit": "listed",
+      "text": "The city lists brown paper bags among accepted items.",
+      "source": "milwaukee-program"
+    },
+    {
+      "operator": "milwaukee",
+      "task": "compostable-plastic-bag",
+      "fit": "excluded",
+      "text": "The city excludes plastic and biodegradable products. The accepted list identifies brown paper bags as its collection option.",
+      "source": "milwaukee-program"
+    },
+    {
+      "operator": "milwaukee",
+      "task": "tea-bag",
+      "fit": "excluded",
+      "text": "The city excludes tea bags and accepts loose tea leaves.",
+      "source": "milwaukee-program"
+    },
+    {
+      "operator": "madison-streets",
+      "task": "raw-meat",
+      "fit": "excluded",
+      "text": "All meat and bones are excluded.",
+      "source": "madison-streets"
+    },
+    {
+      "operator": "madison-streets",
+      "task": "cooked-meat",
+      "fit": "excluded",
+      "text": "The food-scrap carts exclude cooked meat and bones.",
+      "source": "madison-streets"
+    },
+    {
+      "operator": "madison-streets",
+      "task": "brown-paper-bag",
+      "fit": "excluded",
+      "text": "The city says to empty the contents into the cart and keep paper bags out.",
+      "source": "madison-streets"
+    },
+    {
+      "operator": "madison-streets",
+      "task": "compostable-plastic-bag",
+      "fit": "excluded",
+      "text": "The city explicitly excludes compostable plastic bags.",
+      "source": "madison-streets"
+    },
+    {
+      "operator": "madison-streets",
+      "task": "tea-bag",
+      "fit": "excluded",
+      "text": "The site accepts loose tea and excludes tea bags.",
+      "source": "madison-streets"
+    },
+    {
+      "operator": "ann-arbor",
+      "task": "raw-meat",
+      "fit": "ask",
+      "text": "The bin program says all food scraps and lists meat, bones and seafood. Its drop-off list gives no separate raw-meat instruction. Ask the city if you need to confirm this exact case.",
+      "source": "ann-arbor-program"
+    },
+    {
+      "operator": "ann-arbor",
+      "task": "cooked-meat",
+      "fit": "listed",
+      "text": "The city includes meat and bones in the bin program.",
+      "source": "ann-arbor-program"
+    },
+    {
+      "operator": "ann-arbor",
+      "task": "brown-paper-bag",
+      "fit": "listed",
+      "text": "The drop-off announcement allows loose scraps or scraps in brown paper bags.",
+      "source": "ann-arbor-bags"
+    },
+    {
+      "operator": "ann-arbor",
+      "task": "compostable-plastic-bag",
+      "fit": "ask",
+      "text": "The city’s drop-off announcement describes loose scraps and brown paper bags. Confirm any certified plastic liner for this route.",
+      "source": "ann-arbor-bags"
+    },
+    {
+      "operator": "ann-arbor",
+      "task": "tea-bag",
+      "fit": "excluded",
+      "text": "The bin list identifies loose tea and excludes tea bags.",
+      "source": "ann-arbor-program"
+    },
+    {
+      "operator": "minneapolis",
+      "task": "raw-meat",
+      "fit": "ask",
+      "text": "The materials list includes meat, fish and bones generally. Confirm raw meat if you are unsure about a particular item.",
+      "source": "minneapolis-materials"
+    },
+    {
+      "operator": "minneapolis",
+      "task": "cooked-meat",
+      "fit": "listed",
+      "text": "The city lists meat, fish and bones among accepted organics.",
+      "source": "minneapolis-materials"
+    },
+    {
+      "operator": "minneapolis",
+      "task": "brown-paper-bag",
+      "fit": "listed",
+      "text": "The drop-off instructions allow compostable paper bags.",
+      "source": "minneapolis-access"
+    },
+    {
+      "operator": "minneapolis",
+      "task": "compostable-plastic-bag",
+      "fit": "listed",
+      "text": "The city accepts compostable plastic bags with the BPI mark. Check the linked list for its marking requirements.",
+      "source": "minneapolis-materials"
+    },
+    {
+      "operator": "minneapolis",
+      "task": "tea-bag",
+      "fit": "ask",
+      "text": "The accepted-organics illustration includes a tea bag. The text list gives no bag-material instructions. Ask about your type before dropping it off.",
+      "source": "minneapolis-materials"
+    },
+    {
+      "operator": "durham",
+      "task": "raw-meat",
+      "fit": "ask",
+      "text": "The drop-off list includes meat generally. The city gives different rules for home composting, so confirm this specific case with staff.",
+      "source": "durham-program"
+    },
+    {
+      "operator": "durham",
+      "task": "cooked-meat",
+      "fit": "listed",
+      "text": "The drop-off list includes residential meat scraps.",
+      "source": "durham-program"
+    },
+    {
+      "operator": "durham",
+      "task": "compostable-plastic-bag",
+      "fit": "ask",
+      "text": "The city excludes plastic generally. Its HTML list does not discuss this exact certification. Follow the specific bin directions before using a liner.",
+      "source": "durham-program"
+    },
+    {
+      "operator": "carrboro",
+      "task": "raw-meat",
+      "fit": "ask",
+      "text": "The county lists meat and fish products. Call the county for confirmation if you need a specific raw-meat rule.",
+      "source": "orange-county-program"
+    },
+    {
+      "operator": "carrboro",
+      "task": "cooked-meat",
+      "fit": "listed",
+      "text": "The county includes meat and small chicken and fish bones in its accepted list.",
+      "source": "orange-county-program"
+    },
+    {
+      "operator": "carrboro",
+      "task": "brown-paper-bag",
+      "fit": "ask",
+      "text": "The county lists soiled paper food packaging that is entirely paper. Ask about the specific bag before dropping it off.",
+      "source": "orange-county-program"
+    },
+    {
+      "operator": "carrboro",
+      "task": "compostable-plastic-bag",
+      "fit": "excluded",
+      "text": "The county excludes compostable plastic bags even when BPI-certified.",
+      "source": "orange-county-program"
+    },
+    {
+      "operator": "carrboro",
+      "task": "tea-bag",
+      "fit": "listed",
+      "text": "The county includes tea bags and asks users to remove staples.",
+      "source": "orange-county-program"
+    }
+  ]
+}

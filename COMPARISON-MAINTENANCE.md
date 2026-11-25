@@ -1,6 +1,6 @@
 # Verify or refresh a public comparison
 
-The three public comparisons share a data projection and retain their own operator rules and URLs.
+The four public comparisons share a data projection and retain their own operator rules and URLs.
 
 ## After a source changes
 

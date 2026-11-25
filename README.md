@@ -61,6 +61,10 @@ Compare what seven shelters publish about linen donations and find their drop-of
 
 Compare municipal routes for common items and cleanout loads in the City of Milwaukee and the City of Wauwatosa. See the [bulky item guide](https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-bulky-items/) and its [reviewed sources](./milwaukee-bulky-items/README.md).
 
+### 07 - Food-Scrap Drop-Off
+
+Compare five materials across six named public drop-off programs, including raw meat, brown paper bags and certified compostable liners. Open the [food-scrap guide](https://itsmeb-lab.github.io/wilke-public-labs/food-scrap-drop-off/) or the [source catalog](./food-scrap-drop-off/README.md).
+
 ## Run locally
 
 ```bash
@@ -76,6 +80,7 @@ Then open a lab:
 - `http://localhost:8080/repair-cafe-planner/`
 - `http://localhost:8080/shelter-linen-guide/`
 - `http://localhost:8080/milwaukee-bulky-items/`
+- `http://localhost:8080/food-scrap-drop-off/`
 
 See [how to verify the public comparisons and trace a source change](./COMPARISON-MAINTENANCE.md).
 
@@ -108,7 +113,7 @@ Start with the [diagnostic scope and free handoff checklist](https://wilkeservic
 
 Found these labs through Upwork? Keep pre-contract discussion and payment in the existing Upwork conversation. Do not use the direct-site contact route to move a marketplace relationship off-platform.
 
-The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the seven published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
+The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the eight published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
 
 ## License
 
