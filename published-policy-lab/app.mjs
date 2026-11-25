@@ -34,7 +34,7 @@ function render() {
   if(result.conditions.length){
    const list=el("ul");for(const rule of result.conditions)list.append(el("li",rule));nodes.push(list);
   }
-  if(result.serviceId==="printing"||result.serviceId==="basic_notary"||result.serviceId==="vehicle_title")nodes.push(el("p","Fee: "+result.fee,"fee"));
+  if(result.fit==="described"&&(result.serviceId==="printing"||result.serviceId==="basic_notary"||result.serviceId==="vehicle_title"))nodes.push(el("p","Fee: "+result.fee,"fee"));
   if(result.redirectedPlace) {
    const next=result.redirectedPlace;
    const card=el("div",null,"redirect");
@@ -44,8 +44,8 @@ function render() {
    card.append(button);nodes.push(card);
   }
   const timing=el("section",null,"timing");
-  timing.append(el("h3","Visit-date check"),el("p",result.timing.label),el("p",result.timing.detail,"help"));
-  if(result.timing.regularLabel)timing.append(el("p","Published pattern: "+result.timing.regularLabel,"help"));
+  timing.append(el("h3","Visit-date check"),el("p",result.timing.label),el("p",result.timing.detail===result.timing.regularLabel?"Use the original source to confirm any exceptions.":result.timing.detail,"help"));
+  if(result.timing.regularLabel)timing.append(el("p",result.timing.regularLabel,"help"));
   timing.append(el("p","Live availability: unverified.","availability"));
   nodes.push(timing);
   const sources=el("section",null,"sources");sources.append(el("h3","Check the original sources"));
