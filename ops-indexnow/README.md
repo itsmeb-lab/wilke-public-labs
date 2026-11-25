@@ -24,3 +24,7 @@ Official references: https://www.indexnow.org/documentation · https://www.index
 The one-time manifest was introduced in commit `91bd6e784563e09be874e9f2b096c215471969cb`. [Run 45629457542](https://github.com/itsmeb-lab/wilke-public-labs/actions/runs/45629457542), job 139258410514, verified the public ownership file and made one POST for the two allowed URLs. It returned **HTTP 202** at 14:01:01.012 UTC: received, with key validation pending. Indexing and traffic remain unverified; zero automatic retries occurred. The job used six seconds of hosted wall time.
 
 The fixed manifest now exists. Do not modify, replace or recreate it to send another request. Later content changes did not trigger the notification workflow. The worker's absolute authorization expiry remains unchanged; there is no recurring timer.
+
+## Separate six-guide release
+
+The guide release uses a separate add-only manifest and the six new canonical comparison URLs. It checks the exact public files, page canonicals and ownership before sending one batch in the first main push run. The new submission window ends November 25, 2026 at 20:33:30 UTC. The earlier manifest, its expiry and its receipt remain in place. Check the Actions receipt for the new batch and its HTTP status.
