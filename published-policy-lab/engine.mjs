@@ -68,6 +68,7 @@ export function validateCatalog(catalog) {
   const calendarKey=JSON.stringify([c.jurisdictionId,c.group,c.year]);
   if(calendarKeys.has(calendarKey))throw new Error("Ambiguous closure calendars.");
   calendarKeys.add(calendarKey);
+  if(c.coverage!=null && !["published_year","listed_dates_only"].includes(c.coverage))throw new Error("Invalid closure-calendar coverage.");
   if(new Set(c.dates).size!==c.dates.length)throw new Error("Duplicate closure dates.");
   for(const day of c.dates)if(parseVisitDate(day)?.year!==c.year)throw new Error("Closure date outside declared year.");
   if(c.closureLabel!=null && (typeof c.closureLabel!=="string" || !c.closureLabel.trim()))throw new Error("Invalid closure label.");
@@ -90,12 +91,14 @@ function timingFor(catalog, place, serviceId, visit, fit) {
  const calendar=(catalog.closureCalendars||[]).find(c=>c.jurisdictionId===place.jurisdictionId&&c.group===place.scheduleGroup&&c.year===visit.year);
  if(calendar){
   base.sourceIds.push(calendar.sourceId);
+  base.calendarCoverage=calendar.coverage||"listed_dates_only";
   if(calendar.dates.includes(visit.iso))return {...base,kind:"listed_closure",label:calendar.closureLabel||"The county lists this date as a recycling-center closure.",detail:"A listed full-day closure takes priority over usual service hours. Confirm current arrangements with the operator."};
   const notice=calendar.dateNotices?.find(n=>n.date===visit.iso);
   if(notice)return {...base,kind:"listed_early_closure",label:notice.label,detail:"This is a partial-day notice, not a full-day closure or confirmation of room availability. Confirm the specific branch and room cutoff with staff."};
  }
  if(!regular)return {...base,detail:"This sample does not establish a service window. An unlisted date is not proof of access."};
  if(!regular.days.includes(visit.weekday))return {...base,kind:"regular_day_excluded",label:"The selected weekday is outside the published service pattern.",detail:regular.label};
+ if(calendar && base.calendarCoverage==="listed_dates_only")return {...base,kind:"exception_data_unknown",label:"The weekday fits the published pattern; other dated exceptions remain unverified.",detail:"Only a partial set of dated exceptions is supplied for this program and year. Confirm the service date with the operator."};
  if(calendar)return {...base,kind:"regular_pattern_only",label:"The weekday matches the published pattern; no closure is listed in the supplied calendar.",detail:"This is a policy snapshot, not confirmation that the site will be accessible."};
  return {...base,kind:"exception_data_unknown",label:"The weekday matches the published pattern; date-specific exceptions are unverified.",detail:"No applicable closure calendar is included for this place and year."};
 }

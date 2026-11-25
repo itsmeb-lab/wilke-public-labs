@@ -1,5 +1,5 @@
 export const catalog = {
-  "snapshotId": "published-policy-examples-20261125-v6",
+  "snapshotId": "published-policy-examples-20261125-v7",
   "checkedOn": "2026-11-25",
   "sources": [
     {
@@ -79,6 +79,12 @@ export const catalog = {
       "label": "Town of Wake Forest — mulch and wood-chip program",
       "url": "https://www.wakeforestnc.gov/public-works/solid-waste/yard-waste/mulch-compost",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "id": "wakeforest-thanksgiving-2026",
+      "label": "Town of Wake Forest — dated 2026 Thanksgiving operations notice",
+      "url": "https://www.wakeforestnc.gov/news/town-offices-closed-november-26-27-thanksgiving-trash-recycling-collection-affected",
+      "checkedOn": "2026-11-25"
     }
   ],
   "closureCalendars": [
@@ -97,7 +103,8 @@ export const catalog = {
         "2026-11-26",
         "2026-12-24",
         "2026-12-25"
-      ]
+      ],
+      "coverage": "published_year"
     },
     {
       "jurisdictionId": "us-nc-durham-county",
@@ -138,7 +145,8 @@ export const catalog = {
           "kind": "early_closure",
           "label": "The library lists an early closing at 6 p.m. local time."
         }
-      ]
+      ],
+      "coverage": "published_year"
     },
     {
       "jurisdictionId": "us-nc-durham-county",
@@ -148,6 +156,19 @@ export const catalog = {
       "closureLabel": "The library lists this date as a full-day closure.",
       "dates": [
         "2027-01-01"
+      ],
+      "coverage": "listed_dates_only"
+    },
+    {
+      "jurisdictionId": "us-nc-wake-forest-town",
+      "group": "wakeforest-woodchip-delivery",
+      "year": 2026,
+      "sourceId": "wakeforest-thanksgiving-2026",
+      "coverage": "listed_dates_only",
+      "closureLabel": "The dated town notice identifies this as a Thanksgiving holiday; the wood-chip program excludes town-holiday delivery.",
+      "dates": [
+        "2026-11-26",
+        "2026-11-27"
       ]
     }
   ],
@@ -674,7 +695,7 @@ export const catalog = {
           "conditions": [
             "The source limits the program to local community members within 15 miles of town limits. Confirm the actual service boundary with the town; this lab does not calculate eligibility from a ZIP code.",
             "No smaller quantity is delivered, and the town will not return to collect the delivered material.",
-            "There is a waiting list. Delivery is not offered on weekends or town holidays. This source snapshot does not establish an arrival date or a complete holiday calendar.",
+            "There is a waiting list. Delivery is not offered on weekends or town holidays. This checker verifies the 2026 Thanksgiving holidays only; confirm other dated exceptions with the town.",
             "Confirm the material offered: the source lists leaf mulch separately from wood chips."
           ],
           "fee": "The checked policy describes this wood-chip delivery program as free."
