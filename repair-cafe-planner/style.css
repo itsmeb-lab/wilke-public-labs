@@ -53,3 +53,8 @@ h3 { margin: 0; font-size: 1rem; line-height: 1.35; }
 .prep dd { margin: 0; }
 .utility-links { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; line-height: 1.8; }
 footer { color: var(--muted); padding-block: 1.25rem; font-size: .9rem; }
+
+.comparison .cards > li { scroll-margin-block: .65rem; }
+.comparison .cards > li:target { border-color: var(--accent); outline: 2px solid var(--accent); }
+.answer-link { text-decoration-thickness: .08em; }
+.answer-link:hover, .answer-link:focus-visible { text-decoration-thickness: .15em; }

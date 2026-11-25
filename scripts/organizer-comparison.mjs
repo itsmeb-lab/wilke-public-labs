@@ -104,8 +104,9 @@ export function project(data, { prepAnchor, prepHeading, prepLead }) {
       const rule = rules.get(`${operator.id}:${task.id}`);
       const fit = rule?.fit ?? 'unknown';
       const detail = rule?.text ?? 'The checked rules leave this item unclear. Confirm with the organizer.';
-      return `        <li data-operator="${operator.id}" data-fit="${fit}">
-          <h3>${escapeHtml(operator.name)}</h3><p class="area">${escapeHtml(operator.area)}</p>
+      const answerId = `answer--${task.id}--${operator.id}`;
+      return `        <li data-operator="${operator.id}" data-fit="${fit}" id="${answerId}" tabindex="-1">
+          <h3><a class="answer-link" href="#${answerId}" aria-label="${escapeHtml(operator.name)} — ${escapeHtml(task.label)}">${escapeHtml(operator.name)}</a></h3><p class="area">${escapeHtml(operator.area)}</p>
           <p><span class="fit ${fit}">${labels[fit]}</span></p>
           <p>${escapeHtml(detail)}</p>
           <p class="source">${rule ? cite(rule.source) : `<a href="${escapeHtml(sources.get(operator.visitSource).url)}">Check with ${escapeHtml(operator.name)}</a>`}</p>

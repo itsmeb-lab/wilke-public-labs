@@ -31,3 +31,5 @@ Run this from the exact deployed revision. It checks the canonical public compar
 ## WordPress staging
 
 The [Page Generator Pro exchange](./wordpress-exchange/README.md) preserves one draft row per guide. Regenerate and check its CSV when changing the published HTML. The original site remains the canonical reference.
+
+Answer-card fragments use the stable task and operator IDs. Use the section URL to compare several providers, or the linked provider heading to share a specific card. Keep existing IDs when updating wording or evidence.

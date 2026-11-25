@@ -201,6 +201,12 @@ try{
     assert.ok(heading.top>=0&&heading.top<heading.height);
     assert.deepEqual(heading.statuses,statuses);
     assert.ok(heading.resources.length>0&&heading.resources.every(resource=>resource===origin));
+    const operator=Object.keys(statuses)[0];
+    const answer="answer--"+anchor+"--"+operator;
+    await activateLink('a.answer-link[href="#'+answer+'"]');
+    const card=await execute("const item=document.querySelector(':target');return {id:item.id,status:item.dataset.fit,top:item.getBoundingClientRect().top,height:innerHeight};");
+    assert.equal(card.id,answer);assert.equal(card.status,statuses[operator]);
+    assert.ok(card.top>=-1&&card.top<card.height);
     await activateLink('#'+anchor+' a[href="#items"]');
     assert.equal(await execute("return document.querySelector(':target').id;"),"items");
     return {width,content:heading.content,comparison:heading.title,statuses:heading.statuses};
