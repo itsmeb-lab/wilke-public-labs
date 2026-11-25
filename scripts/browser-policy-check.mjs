@@ -13,7 +13,11 @@ import { SERVICES } from "../published-policy-lab/engine.mjs";
 
 const root=fileURLToPath(new URL("../",import.meta.url));
 const allowed=new Set(["index.html","style.css","app.mjs","data.mjs","engine.mjs","view-link.mjs"]);
-const served=new Map([["published-policy-lab",allowed],["repair-cafe-planner",new Set(["index.html","style.css"])]]);
+const served=new Map([
+ ["published-policy-lab",allowed],
+ ["repair-cafe-planner",new Set(["index.html","style.css"])],
+ ["shelter-linen-guide",new Set(["index.html"])]
+]);
 const mime={html:"text/html; charset=utf-8",css:"text/css; charset=utf-8",mjs:"text/javascript; charset=utf-8"};
 const driverFolder=process.env.EDGEWEBDRIVER;
 if(!driverFolder)throw new Error("EDGEWEBDRIVER is required; no browser or driver will be downloaded.");
@@ -139,38 +143,45 @@ try{
  });
  await closeSession();
  for(const [width,height] of [[320,800],[1280,900]]){
-  const repair=origin+"/repair-cafe-planner/";
-  await session(width,height,false,repair);
-  await check("repair café static navigation and layout at "+width+"px",async()=>{
-   const until=Date.now()+9000;
-   let ready=false;
-   while(Date.now()<until){
-    ready=await execute("return document.readyState==='complete' && Boolean(document.querySelector('#microwave'));");
-    if(ready)break;
-    await delay(50);
-   }
-   assert.ok(ready,"The repair café static page did not load.");
-   const activateLink=async selector=>{
-    assert.equal(await execute("const link=document.querySelector(arguments[0]);link.focus();return document.activeElement===link;",[selector]),true);
-    await rpc("POST",sid("/actions"),{actions:[{type:"key",id:"keyboard",actions:[{type:"keyDown",value:"\uE007"},{type:"keyUp",value:"\uE007"}]}]});
-   };
-   await activateLink('nav a[href="#microwave"]');
-   const heading=await execute(`
-    const section=document.querySelector(":target");
-    const rect=section.querySelector("h2").getBoundingClientRect();
-    return {id:section.id, title:section.querySelector("h2").innerText, top:rect.top,
-      mobileWidth:window.innerWidth, height:window.innerHeight, content:document.documentElement.clientWidth,
-      scroll:document.documentElement.scrollWidth, statuses:Object.fromEntries([...section.querySelectorAll("[data-fit]")].map(row=>[row.dataset.operator,row.dataset.fit])),
-      resources:performance.getEntriesByType("resource").map(entry=>new URL(entry.name).origin)};`);
-   assert.equal(heading.id,"microwave");assert.equal(heading.title,"Microwave");
-   assert.equal(heading.mobileWidth,width);assert.ok(heading.scroll<=heading.content+1);
-   assert.ok(heading.top>=0&&heading.top<heading.height);
-   assert.deepEqual(heading.statuses,{"san-francisco":"excluded",peninsula:"unknown",toronto:"unknown","york-region":"listed",wales:"excluded","rice-county":"unknown",waverley:"excluded"});
-   assert.ok(heading.resources.length>0&&heading.resources.every(resource=>resource===origin));
-   await activateLink('#microwave a[href="#items"]');
-   assert.equal(await execute("return document.querySelector(':target').id;"),"items");
-   return {width,content:heading.content,comparison:heading.title,statuses:heading.statuses};
-  });
+  const cases=[
+   {folder:"repair-cafe-planner",name:"repair café",anchor:"microwave",title:"Microwave",statuses:{"san-francisco":"excluded",peninsula:"unknown",toronto:"unknown","york-region":"listed",wales:"excluded","rice-county":"unknown",waverley:"excluded"}},
+   {folder:"shelter-linen-guide",name:"shelter linen",anchor:"bath-towels",title:"Large bath towels",statuses:{"wisconsin-humane":"ask",charlotte:"paused","haywood-county":"ask",voorhees:"ask",christchurch:"ask","casa-grande":"listed","silicon-valley":"ask"}}
+  ];
+  await session(width,height,false,origin+"/"+cases[0].folder+"/");
+  for(const [index,testCase] of cases.entries()){
+   const {folder,name,anchor,title,statuses}=testCase;
+   if(index)await rpc("POST",sid("/url"),{url:origin+"/"+folder+"/"});
+   await check(name+" static navigation and layout at "+width+"px",async()=>{
+    const until=Date.now()+9000;
+    let ready=false;
+    while(Date.now()<until){
+     ready=await execute("return document.readyState==='complete' && Boolean(document.getElementById(arguments[0]));",[anchor]);
+     if(ready)break;
+     await delay(50);
+    }
+    assert.ok(ready,"The static comparison did not load.");
+    const activateLink=async selector=>{
+     assert.equal(await execute("const link=document.querySelector(arguments[0]);link.focus();return document.activeElement===link;",[selector]),true);
+     await rpc("POST",sid("/actions"),{actions:[{type:"key",id:"keyboard",actions:[{type:"keyDown",value:"\uE007"},{type:"keyUp",value:"\uE007"}]}]});
+    };
+    await activateLink('nav a[href="#'+anchor+'"]');
+    const heading=await execute(`
+     const section=document.querySelector(":target");
+     const rect=section.querySelector("h2").getBoundingClientRect();
+     return {id:section.id,title:section.querySelector("h2").innerText,top:rect.top,
+       mobileWidth:window.innerWidth,height:window.innerHeight,content:document.documentElement.clientWidth,
+       scroll:document.documentElement.scrollWidth,statuses:Object.fromEntries([...section.querySelectorAll("[data-fit]")].map(row=>[row.dataset.operator,row.dataset.fit])),
+       resources:performance.getEntriesByType("resource").map(entry=>new URL(entry.name).origin)};`);
+    assert.equal(heading.id,anchor);assert.equal(heading.title,title);
+    assert.equal(heading.mobileWidth,width);assert.ok(heading.scroll<=heading.content+1);
+    assert.ok(heading.top>=0&&heading.top<heading.height);
+    assert.deepEqual(heading.statuses,statuses);
+    assert.ok(heading.resources.length>0&&heading.resources.every(resource=>resource===origin));
+    await activateLink('#'+anchor+' a[href="#items"]');
+    assert.equal(await execute("return document.querySelector(':target').id;"),"items");
+    return {width,content:heading.content,comparison:heading.title,statuses:heading.statuses};
+   });
+  }
   await closeSession();
  }
  assert.ok(received.includes("app.mjs")&&received.includes("engine.mjs")&&received.includes("data.mjs"));

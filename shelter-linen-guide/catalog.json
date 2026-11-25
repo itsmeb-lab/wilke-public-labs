@@ -1,0 +1,468 @@
+{
+  "checkedOn": "2026-11-25",
+  "sources": {
+    "whs-list": {
+      "label": "Wisconsin Humane Society wish list",
+      "url": "https://www.wihumane.org/ways-to-give/wish-list/",
+      "checkedOn": "2026-11-25"
+    },
+    "charlotte-list": {
+      "label": "Humane Society of Charlotte donation guide",
+      "url": "https://humanesocietyofcharlotte.org/give/wish-list/",
+      "checkedOn": "2026-11-25"
+    },
+    "haywood-list": {
+      "label": "Haywood County shelter donation guide",
+      "url": "https://www.haywoodcountync.gov/869/Donate",
+      "checkedOn": "2026-11-25"
+    },
+    "voorhees-list": {
+      "label": "Animal Orphanage wish list",
+      "url": "https://www.aonj.org/support/wish-list/",
+      "checkedOn": "2026-11-25"
+    },
+    "spca-national-list": {
+      "label": "SPCA New Zealand animal-centre donation list",
+      "url": "https://www.spca.nz/donate/donate-goods",
+      "checkedOn": "2026-11-25"
+    },
+    "christchurch-dropoff": {
+      "label": "SPCA Christchurch donation instructions",
+      "url": "https://www.spca.nz/centre/christchurch-centre/donations-fundraising",
+      "checkedOn": "2026-11-25"
+    },
+    "casa-grande-list": {
+      "label": "Casa Grande Animal Care donation guide",
+      "url": "https://www.casagrandeaz.gov/570/Donations",
+      "checkedOn": "2026-11-25"
+    },
+    "silicon-valley-list": {
+      "label": "Humane Society Silicon Valley donation guide",
+      "url": "https://www.hssv.org/give/give-items/",
+      "checkedOn": "2026-11-25"
+    }
+  },
+  "tasks": [
+    {
+      "id": "small-towels",
+      "label": "Hand towels or washcloths"
+    },
+    {
+      "id": "bath-towels",
+      "label": "Large bath towels"
+    },
+    {
+      "id": "flat-sheets",
+      "label": "Flat bed sheets"
+    },
+    {
+      "id": "fitted-sheets",
+      "label": "Fitted sheets"
+    },
+    {
+      "id": "comforters",
+      "label": "Filled comforters or duvet inserts"
+    },
+    {
+      "id": "pillows",
+      "label": "Bed pillows"
+    }
+  ],
+  "operators": [
+    {
+      "id": "wisconsin-humane",
+      "name": "Wisconsin Humane Society",
+      "area": "Milwaukee and other Wisconsin campuses, US",
+      "country": "US",
+      "jurisdiction": "us-wi-wisconsin-humane-society",
+      "visitSource": "whs-list",
+      "sourceIds": [
+        "whs-list"
+      ],
+      "prep": [
+        {
+          "label": "Where to go",
+          "text": "Use the wish list’s campus directory to confirm the appropriate drop-off location.",
+          "source": "whs-list"
+        },
+        {
+          "label": "Condition",
+          "text": "The wish list asks for new or gently used towels.",
+          "source": "whs-list"
+        }
+      ]
+    },
+    {
+      "id": "charlotte",
+      "name": "Humane Society of Charlotte",
+      "area": "Charlotte, North Carolina, US",
+      "country": "US",
+      "jurisdiction": "us-nc-charlotte",
+      "visitSource": "charlotte-list",
+      "sourceIds": [
+        "charlotte-list"
+      ],
+      "prep": [
+        {
+          "label": "Where to go",
+          "text": "Bring in-person donations to the Pet Help Center and give them to staff. Keep items with you until the center can receive them.",
+          "source": "charlotte-list"
+        },
+        {
+          "label": "Large donations",
+          "text": "Arrange an appointment with the organization before bringing a large quantity.",
+          "source": "charlotte-list"
+        }
+      ]
+    },
+    {
+      "id": "haywood-county",
+      "name": "Haywood County Animal Shelter",
+      "area": "Clyde, North Carolina, US",
+      "country": "US",
+      "jurisdiction": "us-nc-haywood-county",
+      "visitSource": "haywood-list",
+      "sourceIds": [
+        "haywood-list"
+      ],
+      "prep": [
+        {
+          "label": "Where to go",
+          "text": "The county directs donations to the bench outside its intake area. Follow the published drop-off directions.",
+          "source": "haywood-list"
+        },
+        {
+          "label": "Receipt",
+          "text": "The county directs people who need a receipt to visit during regular business hours.",
+          "source": "haywood-list"
+        }
+      ]
+    },
+    {
+      "id": "voorhees",
+      "name": "Animal Orphanage",
+      "area": "Voorhees, New Jersey, US",
+      "country": "US",
+      "jurisdiction": "us-nj-voorhees",
+      "visitSource": "voorhees-list",
+      "sourceIds": [
+        "voorhees-list"
+      ],
+      "prep": [
+        {
+          "label": "Where to go",
+          "text": "Check the wish list and current visitor information before bringing a donation.",
+          "source": "voorhees-list"
+        },
+        {
+          "label": "Sheets and towels",
+          "text": "The wish list groups several kinds of bedding together. Ask about shape, size or condition if your item is unclear.",
+          "source": "voorhees-list"
+        }
+      ]
+    },
+    {
+      "id": "christchurch",
+      "name": "SPCA Christchurch Centre",
+      "area": "Christchurch, Canterbury, New Zealand",
+      "country": "NZ",
+      "jurisdiction": "nz-can-christchurch",
+      "visitSource": "christchurch-dropoff",
+      "sourceIds": [
+        "christchurch-dropoff",
+        "spca-national-list"
+      ],
+      "prep": [
+        {
+          "label": "Where to go",
+          "text": "The Christchurch page directs linen, towels and blankets for animal care to the centre during opening hours.",
+          "source": "christchurch-dropoff"
+        },
+        {
+          "label": "Channel",
+          "text": "Use the centre’s donation route for pet bedding and its separate Op Shop instructions for goods intended for resale.",
+          "source": "christchurch-dropoff"
+        }
+      ]
+    },
+    {
+      "id": "casa-grande",
+      "name": "Casa Grande Animal Care and Adoption Center",
+      "area": "Casa Grande, Arizona, US",
+      "country": "US",
+      "jurisdiction": "us-az-casa-grande",
+      "visitSource": "casa-grande-list",
+      "sourceIds": [
+        "casa-grande-list"
+      ],
+      "prep": [
+        {
+          "label": "Where to go",
+          "text": "Use the address and contact information on the city’s current donation guide.",
+          "source": "casa-grande-list"
+        },
+        {
+          "label": "Condition",
+          "text": "The city excludes heavily used and unwashed donations.",
+          "source": "casa-grande-list"
+        }
+      ]
+    },
+    {
+      "id": "silicon-valley",
+      "name": "Humane Society Silicon Valley",
+      "area": "Milpitas, California, US",
+      "country": "US",
+      "jurisdiction": "us-ca-milpitas",
+      "visitSource": "silicon-valley-list",
+      "sourceIds": [
+        "silicon-valley-list"
+      ],
+      "prep": [
+        {
+          "label": "Where to go",
+          "text": "Use the marked donation bins at the shelter during its published business hours.",
+          "source": "silicon-valley-list"
+        },
+        {
+          "label": "Condition",
+          "text": "The shelter asks for clean, gently used linens.",
+          "source": "silicon-valley-list"
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "operator": "wisconsin-humane",
+      "task": "small-towels",
+      "fit": "ask",
+      "text": "The wish list names new or gently used towels. It gives no size breakdown for hand towels or washcloths.",
+      "source": "whs-list"
+    },
+    {
+      "operator": "wisconsin-humane",
+      "task": "bath-towels",
+      "fit": "ask",
+      "text": "The wish list names new or gently used towels. Confirm your towel size with the campus.",
+      "source": "whs-list"
+    },
+    {
+      "operator": "wisconsin-humane",
+      "task": "fitted-sheets",
+      "fit": "excluded",
+      "text": "The wish list excludes fitted sheets.",
+      "source": "whs-list"
+    },
+    {
+      "operator": "wisconsin-humane",
+      "task": "comforters",
+      "fit": "excluded",
+      "text": "The wish list excludes comforters, quilts and oversized blankets.",
+      "source": "whs-list"
+    },
+    {
+      "operator": "wisconsin-humane",
+      "task": "pillows",
+      "fit": "excluded",
+      "text": "The wish list excludes pillows.",
+      "source": "whs-list"
+    },
+    {
+      "operator": "charlotte",
+      "task": "small-towels",
+      "fit": "listed",
+      "text": "The published list includes hand towels and washcloths.",
+      "source": "charlotte-list"
+    },
+    {
+      "operator": "charlotte",
+      "task": "bath-towels",
+      "fit": "paused",
+      "text": "The organization’s current needs list says it does not need large towels. Recheck the list before a later trip.",
+      "source": "charlotte-list"
+    },
+    {
+      "operator": "charlotte",
+      "task": "flat-sheets",
+      "fit": "listed",
+      "text": "The organization lists flat bed sheets for bedding.",
+      "source": "charlotte-list"
+    },
+    {
+      "operator": "charlotte",
+      "task": "fitted-sheets",
+      "fit": "excluded",
+      "text": "The list explicitly excludes fitted sheets.",
+      "source": "charlotte-list"
+    },
+    {
+      "operator": "charlotte",
+      "task": "comforters",
+      "fit": "excluded",
+      "text": "The organization lists comforters among items it cannot accept.",
+      "source": "charlotte-list"
+    },
+    {
+      "operator": "charlotte",
+      "task": "pillows",
+      "fit": "excluded",
+      "text": "The list excludes pillows and cushions.",
+      "source": "charlotte-list"
+    },
+    {
+      "operator": "haywood-county",
+      "task": "small-towels",
+      "fit": "listed",
+      "text": "The county lists towels and specifically names washcloths.",
+      "source": "haywood-list"
+    },
+    {
+      "operator": "haywood-county",
+      "task": "bath-towels",
+      "fit": "ask",
+      "text": "The county lists towels generally, without stating a large-towel rule.",
+      "source": "haywood-list"
+    },
+    {
+      "operator": "haywood-county",
+      "task": "flat-sheets",
+      "fit": "listed",
+      "text": "The shelter lists sheets among items it can use and separately excludes fitted sheets.",
+      "source": "haywood-list"
+    },
+    {
+      "operator": "haywood-county",
+      "task": "fitted-sheets",
+      "fit": "excluded",
+      "text": "The county lists fitted sheets among items the shelter cannot use.",
+      "source": "haywood-list"
+    },
+    {
+      "operator": "haywood-county",
+      "task": "pillows",
+      "fit": "excluded",
+      "text": "The county excludes pillows.",
+      "source": "haywood-list"
+    },
+    {
+      "operator": "voorhees",
+      "task": "small-towels",
+      "fit": "ask",
+      "text": "The shelter lists towels in general. Confirm hand-towel or washcloth size with the shelter.",
+      "source": "voorhees-list"
+    },
+    {
+      "operator": "voorhees",
+      "task": "bath-towels",
+      "fit": "ask",
+      "text": "The shelter lists towels in general. Confirm large bath towels before you go.",
+      "source": "voorhees-list"
+    },
+    {
+      "operator": "voorhees",
+      "task": "comforters",
+      "fit": "listed",
+      "text": "The shelter expressly names comforters. Confirm unusually bulky items ahead of a trip.",
+      "source": "voorhees-list"
+    },
+    {
+      "operator": "voorhees",
+      "task": "pillows",
+      "fit": "excluded",
+      "text": "The shelter expressly excludes pillows.",
+      "source": "voorhees-list"
+    },
+    {
+      "operator": "christchurch",
+      "task": "small-towels",
+      "fit": "ask",
+      "text": "The linked national animal-centre list accepts towels generally. Confirm whether the centre can use hand towels or washcloths.",
+      "source": "spca-national-list"
+    },
+    {
+      "operator": "christchurch",
+      "task": "bath-towels",
+      "fit": "ask",
+      "text": "The national list accepts towels generally, without a size breakdown.",
+      "source": "spca-national-list"
+    },
+    {
+      "operator": "christchurch",
+      "task": "flat-sheets",
+      "fit": "ask",
+      "text": "The national list names sheets without distinguishing flat and fitted. Confirm your sheet type with the centre.",
+      "source": "spca-national-list"
+    },
+    {
+      "operator": "christchurch",
+      "task": "fitted-sheets",
+      "fit": "ask",
+      "text": "The national list names sheets generally. It does not specify fitted sheets, so confirm with the centre.",
+      "source": "spca-national-list"
+    },
+    {
+      "operator": "christchurch",
+      "task": "comforters",
+      "fit": "excluded",
+      "text": "The national animal-centre list excludes filled duvet inserts and separately accepts duvet covers.",
+      "source": "spca-national-list"
+    },
+    {
+      "operator": "christchurch",
+      "task": "pillows",
+      "fit": "excluded",
+      "text": "The linked national list excludes pillows for animal-centre donations.",
+      "source": "spca-national-list"
+    },
+    {
+      "operator": "casa-grande",
+      "task": "small-towels",
+      "fit": "listed",
+      "text": "The city expressly lists hand towels. Ask first if bringing washcloths alone.",
+      "source": "casa-grande-list"
+    },
+    {
+      "operator": "casa-grande",
+      "task": "bath-towels",
+      "fit": "listed",
+      "text": "The city expressly includes large bath towels.",
+      "source": "casa-grande-list"
+    },
+    {
+      "operator": "casa-grande",
+      "task": "fitted-sheets",
+      "fit": "excluded",
+      "text": "The city puts fitted sheets in its list of donations it declines.",
+      "source": "casa-grande-list"
+    },
+    {
+      "operator": "silicon-valley",
+      "task": "small-towels",
+      "fit": "ask",
+      "text": "The shelter lists towels without naming hand towels or washcloths separately.",
+      "source": "silicon-valley-list"
+    },
+    {
+      "operator": "silicon-valley",
+      "task": "bath-towels",
+      "fit": "ask",
+      "text": "The shelter lists towels without giving a size boundary. Confirm large bath towels with staff.",
+      "source": "silicon-valley-list"
+    },
+    {
+      "operator": "silicon-valley",
+      "task": "flat-sheets",
+      "fit": "listed",
+      "text": "The shelter lists flat sheets among requested linen donations.",
+      "source": "silicon-valley-list"
+    },
+    {
+      "operator": "silicon-valley",
+      "task": "fitted-sheets",
+      "fit": "excluded",
+      "text": "The shelter limits its stated sheet acceptance to non-fitted sheets.",
+      "source": "silicon-valley-list"
+    }
+  ]
+}
