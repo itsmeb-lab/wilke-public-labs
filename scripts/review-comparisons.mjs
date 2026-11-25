@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { parseVisitDate } from '../published-policy-lab/engine.mjs';
 
 const root = new URL('../', import.meta.url);
 const site = new URL('https://itsmeb-lab.github.io/wilke-public-labs/');
@@ -48,8 +49,37 @@ export function sourceImpact(input) {
   return { source: key, matches };
 }
 
+export function sourcesReviewedBefore(cutoff) {
+  if (!parseVisitDate(cutoff)) throw new Error('Give a calendar date in YYYY-MM-DD format.');
+  return comparisonGuides.flatMap(({ slug }) => {
+    const { sources } = JSON.parse(read(slug + '/catalog.json'));
+    return Object.values(sources).filter(({ checkedOn }) => checkedOn < cutoff).map(({ label, url, checkedOn }) => ({
+      page: new URL(slug + '/', site).href, label, url, checkedOn,
+    }));
+  }).sort((a, b) => a.checkedOn.localeCompare(b.checkedOn) || a.url.localeCompare(b.url));
+}
+
+export async function checkRobots(fetcher = fetch) {
+  const url = new URL('/robots.txt', site);
+  const response = await fetcher(url, { redirect: 'error', signal: AbortSignal.timeout(10000) });
+  if (response.url !== url.href || ![200, 404].includes(response.status)) {
+    throw new Error('Unexpected robots.txt response (HTTP ' + response.status + ').');
+  }
+  const directives = response.ok
+    ? (await response.text()).split(/\r?\n/).filter((line) => /^\s*(?:user-agent|allow|disallow|sitemap)\s*:/i.test(line))
+    : [];
+  return { url: url.href, status: response.status, directives };
+}
+
 export async function checkServed(fetcher = fetch) {
-  const expected = new Map([['sitemap.xml', 'sitemap.xml']]);
+  const expected = new Map([
+    ['', 'index.html'],
+    ['sitemap.xml', 'sitemap.xml'],
+    ['published-policy-lab/', 'published-policy-lab/index.html'],
+    ['published-policy-lab/wood-chip-load.mjs?v=20261125-1', 'published-policy-lab/wood-chip-load.mjs'],
+    ['published-policy-lab/wood-chip-load.css?v=20261125-1', 'published-policy-lab/wood-chip-load.css'],
+    ['wordpress-exchange/comparisons-draft.csv', 'wordpress-exchange/comparisons-draft.csv'],
+  ]);
   for (const { slug } of comparisonGuides) {
     expected.set(slug + '/', slug + '/index.html');
     expected.set(slug + '/comparison.csv', slug + '/comparison.csv');
@@ -66,7 +96,16 @@ export async function checkServed(fetcher = fetch) {
     if (actual.replaceAll('\r\n', '\n') !== expectedText.replaceAll('\r\n', '\n')) {
       throw new Error('Served content differs from the checked-out file at ' + url.href);
     }
-    receipts.push({ url: url.href, status: response.status, bytes: Buffer.byteLength(actual) });
+    const contentType = response.headers.get('content-type');
+    const robotsHeader = response.headers.get('x-robots-tag');
+    if (path.endsWith('.html')) {
+      if (!/^text\/html\b/i.test(contentType ?? '')) throw new Error('Expected HTML for ' + url.href);
+      const canonicals = [...actual.matchAll(/<link rel="canonical" href="([^"]+)">/g)].map((match) => match[1]);
+      if (canonicals.length !== 1 || canonicals[0] !== url.href) throw new Error('Canonical differs for ' + url.href);
+      const pageRobots = [...actual.matchAll(/<meta name="(?:robots|googlebot)" content="([^"]+)"/gi)].map((match) => match[1]).join(',');
+      if (/\b(?:noindex|none)\b/i.test([robotsHeader, pageRobots].join(','))) throw new Error('Indexing exclusion on ' + url.href);
+    }
+    receipts.push({ url: url.href, status: response.status, bytes: Buffer.byteLength(actual), contentType, robotsHeader });
   }
   return receipts;
 }
@@ -77,8 +116,12 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     console.log(JSON.stringify(sourceImpact(arguments_[0]), null, 2));
   } else if (operation === '--served' && arguments_.length === 0) {
     console.log(JSON.stringify(await checkServed(), null, 2));
+  } else if (operation === '--robots' && arguments_.length === 0) {
+    console.log(JSON.stringify(await checkRobots(), null, 2));
+  } else if (operation === '--reviewed-before' && arguments_.length === 1) {
+    console.log(JSON.stringify(sourcesReviewedBefore(arguments_[0]), null, 2));
   } else {
-    console.error('Use --source <HTTPS URL> or --served.');
+    console.error('Use --source <HTTPS URL>, --reviewed-before <YYYY-MM-DD>, --served or --robots.');
     process.exitCode = 1;
   }
 }
