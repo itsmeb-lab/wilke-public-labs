@@ -20,3 +20,6 @@ node scripts/review-comparisons.mjs --served
 
 Run this from the exact deployed revision. It checks the canonical public comparison pages, their CSV downloads, and the sitemap against the checked-out files. It uses ordinary read-only HTTP requests and returns an error for redirects, unavailable URLs, stale responses, or mismatched content. It does not check search indexing, sessions, or referrals.
 
+## WordPress staging
+
+The [Page Generator Pro exchange](./wordpress-exchange/README.md) preserves one draft row per guide. Regenerate and check its CSV when changing the published HTML. The original site remains the canonical reference.

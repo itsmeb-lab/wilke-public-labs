@@ -81,6 +81,13 @@ function validate(data, prepAnchor) {
   return { operators, tasks, sources, rules };
 }
 
+export function serializeCsv(rows) {
+  return rows.map((row) => row.map((value) => {
+    if (/^[\s\uFEFF]*[=+@-]|^[\t\r\n]/u.test(value)) throw new Error('Unsafe spreadsheet cell.');
+    return `"${value.replaceAll('"', '""')}"`;
+  }).join(',')).join('\r\n') + '\r\n';
+}
+
 export function project(data, { prepAnchor, prepHeading, prepLead }) {
   if (!validSlug(prepAnchor) || ['main', 'items'].includes(prepAnchor) || prepAnchor.endsWith('-title') ||
       !hasText(prepHeading) || !hasText(prepLead)) throw new Error('Invalid comparison visit section.');
@@ -149,10 +156,7 @@ ${visits}
         sources.get(operator.visitSource).url, data.checkedOn]);
     }
   }
-  const csv = csvRows.map((row) => row.map((value) => {
-    if (/^[\s\uFEFF]*[=+@-]|^[\t\r\n]/u.test(value)) throw new Error('Unsafe spreadsheet cell.');
-    return `"${value.replaceAll('"', '""')}"`;
-  }).join(',')).join('\r\n') + '\r\n';
+  const csv = serializeCsv(csvRows);
   return { block, csv };
 }
 
