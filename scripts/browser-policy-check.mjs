@@ -16,7 +16,8 @@ const allowed=new Set(["index.html","style.css","app.mjs","data.mjs","engine.mjs
 const served=new Map([
  ["published-policy-lab",allowed],
  ["repair-cafe-planner",new Set(["index.html","style.css"])],
- ["shelter-linen-guide",new Set(["index.html"])]
+ ["shelter-linen-guide",new Set(["index.html"])],
+ ["milwaukee-bulky-items",new Set(["index.html"])]
 ]);
 const mime={html:"text/html; charset=utf-8",css:"text/css; charset=utf-8",mjs:"text/javascript; charset=utf-8"};
 const driverFolder=process.env.EDGEWEBDRIVER;
@@ -145,7 +146,8 @@ try{
  for(const [width,height] of [[320,800],[1280,900]]){
   const cases=[
    {folder:"repair-cafe-planner",name:"repair café",anchor:"microwave",title:"Microwave",statuses:{"san-francisco":"excluded",peninsula:"unknown",toronto:"unknown","york-region":"listed",wales:"excluded","rice-county":"unknown",waverley:"excluded"}},
-   {folder:"shelter-linen-guide",name:"shelter linen",anchor:"bath-towels",title:"Large bath towels",statuses:{"wisconsin-humane":"ask",charlotte:"paused","haywood-county":"ask",voorhees:"ask",christchurch:"ask","casa-grande":"listed","silicon-valley":"ask"}}
+   {folder:"shelter-linen-guide",name:"shelter linen",anchor:"bath-towels",title:"Large bath towels",statuses:{"wisconsin-humane":"ask",charlotte:"paused","haywood-county":"ask",voorhees:"ask",christchurch:"ask","casa-grande":"listed","silicon-valley":"ask"}},
+   {folder:"milwaukee-bulky-items",name:"Milwaukee bulky item",anchor:"commercial-hauler",title:"Load handled by a paid hauler",statuses:{"milwaukee-curb":"ask","milwaukee-drop-off":"ask","wauwatosa-curb":"ask","wauwatosa-drop-off":"excluded"}}
   ];
   await session(width,height,false,origin+"/"+cases[0].folder+"/");
   for(const [index,testCase] of cases.entries()){
