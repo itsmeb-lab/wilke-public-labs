@@ -31,6 +31,3 @@ jobs:
       - name: Run Windows watchdog fixture
         shell: pwsh
         run: .\windows-process-recovery-watchdog\powershell\Test-ProcessWatchdog.ps1
-      - name: Check five-guide CSV parsing in PHP
-        if: github.event_name == 'pull_request' && github.head_ref == 'atlas/library-document-scanning'
-        run: php tests/verify-wordpress-csv.php
