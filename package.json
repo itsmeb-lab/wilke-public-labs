@@ -4,6 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "policy:check": "node scripts/update-policy-projections.mjs --check",
+    "policy:update": "node scripts/update-policy-projections.mjs --write"
   }
 }

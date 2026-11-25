@@ -25,6 +25,8 @@ For a bounded, manually reviewed test on a suitable existing site:
 
 A single-keyword generation uses the vendor's Sequential method. With multiple keywords, Sequential ends when the shortest list is exhausted. All enumerates combinations; neither method proves that a page is useful or supported.
 
+The reviewed exchange can be regenerated locally with `npm run policy:update` and checked with `npm run policy:check`. The helper refreshes the existing joined CSV and plain-HTML snapshot; it does not connect WordPress or publish.
+
 The example is not an import acceptance test. No WordPress import, shortcode escaping, page-builder rendering or plugin execution has been exercised here. Legacy import guidance has different details around quoted and empty cells; test the actual installed CSV source before relying on compatibility.
 
 ## Fields that must survive

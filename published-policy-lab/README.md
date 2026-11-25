@@ -50,7 +50,7 @@ Tests cover policy fixtures and the actual browser module with a minimal DOM. Th
 1. Reopen the exact primary source; confirm the place, state, task and effective year.
 2. Record the source-check date and change only supported fields.
 3. Preserve exclusions and unknowns; do not infer one branch's policy for another.
-4. Run tests and review browser output before publishing.
+4. Run `npm run policy:update` to refresh the ordinary-HTML rule block and joined CSV, then `npm run policy:check` and `npm test`. Review browser output before publishing.
 5. Correct or remove unsupported records rather than expanding uncertain combinations.
 
 Report source mismatches through the public repository. Include the public source URL and affected task, never identity documents or private personal details.
@@ -72,3 +72,7 @@ Use **Link to this policy view** in an answer to copy or bookmark its task, plac
 Durham's commercial meeting fees do not permit private meetings or charging attendees. Individual/private study uses a separate room category. Davidson excludes commercial meetings; its meeting-room source does not settle private study access. Program entries are not branch bookings.
 
 The Durham calendar records the source's 2026 full closures and two early closings, plus its explicit January 1, 2027 closure. Known full closures are displayed even without a weekly schedule. Early closing stays partial-day; unlisted dates stay unknown. Branch-only maintenance notices are not generalized county-wide. The source's relative 'today' badge is not used as date-specific proof.
+
+## Refresh the two saved projections
+
+`npm run policy:check` checks the current HTML rule block and CSV without writing. After reviewing a catalog change, `npm run policy:update` refreshes only those two fixed files. It calculates and validates both outputs before writing, preserves text outside the HTML markers and never publishes or contacts a service. CSV cells remain quoted, single-line text; formula-leading cells are refused rather than silently changed. This helper does not verify a source's truth or prove WordPress import compatibility.
