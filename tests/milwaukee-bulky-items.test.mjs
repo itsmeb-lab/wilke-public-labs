@@ -45,3 +45,14 @@ test('the canonical guide has ordinary links and no intake or booking surface', 
   assert.ok(read('../published-policy-lab/index.html').includes('href="../milwaukee-bulky-items/"'));
   assert.ok(read('../sitemap.xml').includes('<loc>' + canonical + '</loc>'));
 });
+
+test('furniture donation distinguishes stairs, standard pickup and partner routing', () => {
+  const html = read('../milwaukee-bulky-items/index.html');
+  const note = html.split('<section class="notes" id="donation-pickup"')[1].split('</section>')[0];
+  assert.match(note, /first-floor location, a garage or a building with elevator access/);
+  assert.match(note, /ReSupply’s paid route handles stairs/);
+  assert.match(note, /Goodwill Greater Milwaukee &amp; Chicago does not take furniture directly/);
+  assert.match(note, /milwaukeerestore\.org\/donate\/schedule-a-pickup/);
+  assert.match(note, /goodwillgreatermc\.org\/donate\/donate-items/);
+  assert.ok(html.includes('href="#donation-pickup"'));
+});

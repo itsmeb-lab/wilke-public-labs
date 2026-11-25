@@ -977,8 +977,29 @@
         <li><a href=""https://wauwatosa.gov/departments/public-works/collection-services/drop-off-center/"">Drop Off Center page</a></li>
       </ul>
       <p><strong>Hiring a crew.</strong> Ask for a written list of rooms and items, any extra-load charges and the receiving facility. Make sure the person arranging the work has confirmed which belongings may leave.</p>
-      <p><strong>Still usable?</strong> Separate items you may be able to donate. The city provides a starting list of organizations. Check each group’s current rules before moving the items.</p>
+      <p><strong>Still usable?</strong> Separate items you may be able to donate. The city provides a starting list of organizations. <a href=""#donation-pickup"">Check pickup options for furniture and stairs</a>.</p>
       <p class=""source""><a href=""https://city.milwaukee.gov/recycle/Reduce-Reuse/Donating"">City of Milwaukee donation options</a></p>
+    </section>
+    <section class=""notes"" id=""donation-pickup"" aria-labelledby=""donation-pickup-title"" tabindex=""-1"">
+      <h2 id=""donation-pickup-title"">Can a donation pickup move furniture down stairs?</h2>
+      <p class=""reviewed"">Pickup options reviewed <time datetime=""2026-11-25"">November 25, 2026</time>.</p>
+      <ul class=""cards"" role=""list"">
+        <li>
+          <h3>ReStore standard pickup</h3>
+          <p>Milwaukee Habitat ReStore offers free pickup for eligible items. The published route requires a first-floor location, a garage or a building with elevator access. Its donation center excludes mattresses and box springs.</p>
+          <p class=""source""><a href=""https://milwaukeerestore.org/donate/schedule-a-pickup/"">ReStore pickup rules</a> · <a href=""https://milwaukeerestore.org/donate/items-we-accept/"">ReStore item rules</a></p>
+        </li>
+        <li>
+          <h3>ReStore’s paid pickup partner</h3>
+          <p>ReSupply’s paid route handles stairs. Eligible items go to ReStore. Ask the pickup provider for the current quote and where any remaining items will go.</p>
+          <p class=""source""><a href=""https://milwaukeerestore.org/donate/schedule-a-pickup/"">ReStore partner pickup rules</a></p>
+        </li>
+        <li>
+          <h3>Goodwill’s furniture pickup partners</h3>
+          <p>Goodwill Greater Milwaukee &amp; Chicago does not take furniture directly. Its pickup partners can collect furniture and route it to other nonprofits. Check the partner’s charges, access rules and service area before booking.</p>
+          <p class=""source""><a href=""https://www.goodwillgreatermc.org/donate/donate-items"">Goodwill donation and partner rules</a></p>
+        </li>
+      </ul>
     </section>
     <section class=""notes"" aria-labelledby=""sources-and-data"">
       <h2 id=""sources-and-data"">Sources and data</h2>
