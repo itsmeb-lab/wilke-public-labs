@@ -3,7 +3,7 @@ import { test } from "node:test";
 import { readFileSync } from "node:fs";
 import { catalog } from "../published-policy-lab/data.mjs";
 import { renderPolicySnapshot } from "../published-policy-lab/snapshot.mjs";
-const html=readFileSync(new URL("../published-policy-lab/index.html",import.meta.url),"utf8");
+const html=readFileSync(new URL("../published-policy-lab/index.html",import.meta.url),"utf8").replace(/\r\n/g,"\n");
 test("saved no-script policy snapshot exactly matches the reviewed catalog",()=>{
  const saved=html.split("<!-- POLICY-SNAPSHOT:START -->\n")[1]?.split("\n<!-- POLICY-SNAPSHOT:END -->")[0];
  assert.equal(saved,renderPolicySnapshot(catalog));
