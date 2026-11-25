@@ -1,11 +1,13 @@
-import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v7";
-import { catalog } from "./data.mjs?v=20261125-v7";
-import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v7";
+import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v8";
+import { catalog } from "./data.mjs?v=20261125-v8";
+import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v8";
+import { estimateWholeLoadUse } from "./load-plan.mjs?v=20261125-v8";
 
 const task = document.getElementById("task");
 const place = document.getElementById("place");
 const date = document.getElementById("visit-date");
 const output = document.getElementById("answer");
+const loadPlan = document.getElementById("load-plan");
 const el = (tag, text, className) => {
  const node=document.createElement(tag);
  if(text!=null)node.textContent=String(text);
@@ -21,6 +23,44 @@ function choosePlaces(preferred) {
  }));
  if(candidates.some(p=>p.id===preferred))place.value=preferred;
 }
+function hideLoadPlan(){
+ if(loadPlan){loadPlan.hidden=true;loadPlan.replaceChildren();}
+}
+function renderWholeLoad(quantity){
+ hideLoadPlan();
+ if(!quantity||!loadPlan)return;
+ const number=value=>value>0&&value<0.01?"less than 0.01":new Intl.NumberFormat("en-US",{maximumFractionDigits:2}).format(value);
+ const heading=el("h2","Compare your space with a whole delivery");heading.id="load-plan-title";
+ const note=el("p","This program describes an approximate "+number(quantity.approximateCubicYards)+"-cubic-yard whole load. Compare it with your own area and chosen depth before reviewing the Town's request process.","help");
+ const fields=el("div",null,"load-plan-fields");
+ const area=el("input");area.type="number";area.id="plan-area";area.min="1";area.max="1000000";area.step="any";area.inputMode="decimal";
+ const depth=el("input");depth.type="number";depth.id="plan-depth";depth.min="0.25";depth.max="36";depth.step="any";depth.inputMode="decimal";
+ for(const [input,label]of [[area,"Area to cover (square feet)"],[depth,"Your chosen depth (inches)"]]){
+  const group=el("div");const title=el("label",label);title.htmlFor=input.id;group.append(title,input);fields.append(group);
+ }
+ const help=el("p","This is a geometric illustration using 27 cubic feet per cubic yard. Actual load size, coverage and material vary. The depth is your planning input, not an application recommendation.","help");
+ const compare=el("button","Compare with a whole load");compare.type="button";
+ const result=el("div",null,"plan-result");result.id="load-plan-result";result.role="status";result.ariaLive="polite";
+ const initial=()=>result.replaceChildren(el("p","Enter an area and a chosen depth, then compare."));
+ initial();
+ for(const input of [area,depth])input.addEventListener("input",()=>result.replaceChildren(el("p","Values changed. Choose Compare with a whole load to update the illustration.")));
+ compare.addEventListener("click",()=>{
+  try{
+   if(!area.value.trim()||!depth.value.trim()||!area.validity.valid||!depth.validity.valid)throw new Error("Enter an area from 1 to 1,000,000 square feet and a chosen depth from 0.25 to 36 inches.");
+   const r=estimateWholeLoadUse({areaSquareFeet:Number(area.value),depthInches:Number(depth.value),approximateLoadCubicYards:quantity.approximateCubicYards});
+   const lines=[el("p","Your area/depth estimate is about "+number(r.requiredCubicYards)+" cubic yards.")];
+   if(r.kind==="less_than_nominal_load")lines.push(el("p","That is about "+new Intl.NumberFormat("en-US",{maximumFractionDigits:1}).format(r.nominalLoadFraction*100)+"% of the nominal whole load. In this simplified comparison, about "+number(r.nominalRemainderCubicYards)+" cubic yards would remain. The Town does not deliver smaller quantities or return to collect leftovers."));
+   else if(r.kind==="more_than_nominal_load")lines.push(el("p","Your estimate exceeds one nominal load by about "+number(r.nominalShortfallCubicYards)+" cubic yards. Confirm the quantity the program can actually supply with the Town."));
+   else lines.push(el("p","Your estimate matches the nominal load size. This is a mathematical comparison; confirm the actual quantity and service arrangements with the Town."));
+   lines.push(el("p","At your chosen depth, the nominal load has a geometric coverage of about "+number(r.geometricCoverageSquareFeet)+" square feet. Actual coverage may differ.","help"));
+   lines.push(el("p","The program's waiting list, service boundary and current terms still apply. Live availability remains unverified.","help"));
+   result.replaceChildren(...lines);
+  }catch(error){result.replaceChildren(el("p",error.message));}
+ });
+ loadPlan.append(heading,note,fields,help,compare,result,el("p","Planning inputs stay on this page and are not saved or included in the policy share link.","help"));
+ loadPlan.hidden=false;
+}
+
 function render() {
  try {
   if(!date.validity.valid)throw new Error("Choose a date between 2000 and 2100, or leave it empty.");
@@ -62,7 +102,9 @@ function render() {
   link.href=buildPolicyViewLink(catalog,{serviceId:task.value,placeId:place.value,visitDate:date.value});
   shared.append(link);nodes.push(shared);
   output.replaceChildren(...nodes);
+  renderWholeLoad(result.wholeLoad);
  }catch(error){
+  hideLoadPlan();
   output.replaceChildren(el("h2","The policy check could not be completed."),el("p",error.message),el("p","Use the original sources below to confirm the details."));
  }
 }
@@ -75,7 +117,7 @@ try{
    const chosen=parsePolicyView(catalog,document.defaultView?.location.hash||"");
    if(!chosen)return;
    task.value=chosen.serviceId;choosePlaces(chosen.placeId);date.value=chosen.visitDate;render();
-  }catch(error){output.replaceChildren(el("h2","This shared view could not be opened."),el("p",error.message),el("p","Choose a task and place above to make a new policy check."));}
+  }catch(error){hideLoadPlan();output.replaceChildren(el("h2","This shared view could not be opened."),el("p",error.message),el("p","Choose a task and place above to make a new policy check."));}
  }
  render();loadSharedView();
  document.defaultView?.addEventListener("hashchange",loadSharedView);
@@ -95,7 +137,7 @@ try{
  };
  for(const button of document.querySelectorAll("[data-example]"))button.addEventListener("click",()=>{
   const chosen=examples[button.dataset.example];
-  if(!chosen){output.replaceChildren(el("h2","This example is unavailable."),el("p","Choose a task above, or reload the page to see the latest examples."));return;}
+  if(!chosen){hideLoadPlan();output.replaceChildren(el("h2","This example is unavailable."),el("p","Choose a task above, or reload the page to see the latest examples."));return;}
   const [service,id,day]=chosen;task.value=service;choosePlaces(id);date.value=day;render();
  });
-}catch(error){output.replaceChildren(el("h2","The example catalog could not be loaded."),el("p",error.message));}
+}catch(error){hideLoadPlan();output.replaceChildren(el("h2","The example catalog could not be loaded."),el("p",error.message));}

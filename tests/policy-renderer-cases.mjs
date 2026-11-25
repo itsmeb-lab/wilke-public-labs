@@ -14,17 +14,17 @@ export function rendererChecks(assert,source,api,catalog) {
   fire(type){for(const fn of this.listeners[type]||[])fn({target:this});}
  }
  function fixture(data=catalog,extraExample,fragment="") {
-  const elements=new Map([["task",new Element("select")],["place",new Element("select")],["visit-date",new Element("input")],["answer",new Element("div")]]);
+  const elements=new Map([["task",new Element("select")],["place",new Element("select")],["visit-date",new Element("input")],["answer",new Element("div")],["load-plan",new Element("section")]]);
   const examples=["tv","title","printing","holiday","hotspot","things","meeting","early","mulch","chips"].map(id=>{const e=new Element("button");e.dataset.example=id;return e;});
   if(extraExample){const e=new Element("button");e.dataset.example=extraExample;examples.push(e);}
   const windowListeners={};
   const defaultView={location:{hash:fragment},addEventListener:(type,fn)=>{(windowListeners[type]||=[]).push(fn);}};
   const document={defaultView,getElementById:id=>elements.get(id),createElement:tag=>new Element(tag),querySelectorAll:selector=>selector==="[data-example]"?examples:[]};
-  const imports=['import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v7";','import { catalog } from "./data.mjs?v=20261125-v7";','import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v7";'];
+  const imports=['import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v8";','import { catalog } from "./data.mjs?v=20261125-v8";','import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v8";','import { estimateWholeLoadUse } from "./load-plan.mjs?v=20261125-v8";'];
   let body=source;
   for(const line of imports){assert.equal(body.split(line).length,2,"Expected one known import");body=body.replace(line,"");}
   const forbidden=()=>{throw new Error("Unexpected network or storage access");};
-  new Function("document","SERVICES","answerPolicy","validateCatalog","catalog","parsePolicyView","buildPolicyViewLink","fetch","XMLHttpRequest","WebSocket","localStorage","navigator",body)(document,api.SERVICES,api.answerPolicy,api.validateCatalog,data,api.parsePolicyView,api.buildPolicyViewLink,forbidden,forbidden,forbidden,undefined,undefined);
+  new Function("document","SERVICES","answerPolicy","validateCatalog","catalog","parsePolicyView","buildPolicyViewLink","estimateWholeLoadUse","fetch","XMLHttpRequest","WebSocket","localStorage","navigator",body)(document,api.SERVICES,api.answerPolicy,api.validateCatalog,data,api.parsePolicyView,api.buildPolicyViewLink,api.estimateWholeLoadUse,forbidden,forbidden,forbidden,undefined,undefined);
   const find=(node,predicate)=>{if(predicate(node))return node;for(const child of node.children){const found=find(child,predicate);if(found)return found;}};
   return {
    elements,examples,output:elements.get("answer"),
@@ -35,6 +35,11 @@ export function rendererChecks(assert,source,api,catalog) {
   };
  }
  return [
+ ["a whole-load illustration is scoped to its reviewed program and stays separate from the policy answer",()=>{const f=fixture();assert.equal(f.elements.get("load-plan").hidden,true);f.example("chips");const plan=f.elements.get("load-plan");assert.equal(plan.hidden,false);assert.match(plan.textContent,/20-cubic-yard whole load/);assert.equal(f.find(f.output,n=>n.id==="plan-area"),undefined);}],
+ ["whole-load input is an explicit comparison, with no small-order or booking recommendation",()=>{const f=fixture();f.example("chips");const plan=f.elements.get("load-plan"),area=f.find(plan,n=>n.id==="plan-area"),depth=f.find(plan,n=>n.id==="plan-depth");area.value="200";depth.value="3";f.find(plan,n=>n.tagName==="button").fire("click");assert.match(plan.textContent,/1\.85 cubic yards/);assert.match(plan.textContent,/18\.15 cubic yards would remain/);assert.match(plan.textContent,/does not deliver smaller quantities/);assert.match(plan.textContent,/availability remains unverified/);}],
+ ["changed or invalid planning values replace a stale illustration helpfully",()=>{const f=fixture();f.example("chips");const plan=f.elements.get("load-plan"),area=f.find(plan,n=>n.id==="plan-area"),depth=f.find(plan,n=>n.id==="plan-depth"),button=f.find(plan,n=>n.tagName==="button");area.value="200";depth.value="3";button.fire("click");area.value="";area.fire("input");assert.doesNotMatch(plan.textContent,/18\.15/);button.fire("click");assert.match(plan.textContent,/Enter an area/);assert.doesNotMatch(plan.textContent,/Your area\/depth estimate/);}],
+ ["changing policy or refusing a shared view removes the earlier load illustration",()=>{const f=fixture();f.example("chips");f.example("mulch");assert.equal(f.elements.get("load-plan").hidden,true);assert.equal(f.elements.get("load-plan").children.length,0);f.example("chips");f.hash("#task=unknown&place=union-jonesville");assert.equal(f.elements.get("load-plan").hidden,true);}],
+ ["tiny positive volumes never display as zero cubic yards",()=>{const f=fixture();f.example("chips");const plan=f.elements.get("load-plan");f.find(plan,n=>n.id==="plan-area").value="1";f.find(plan,n=>n.id==="plan-depth").value="0.25";f.find(plan,n=>n.tagName==="button").fire("click");assert.match(plan.textContent,/less than 0\.01 cubic yards/);}],
  ["browser module renders the initial Jonesville restriction without HTML sinks",()=>{const f=fixture();assert.match(f.output.textContent,/Published restriction/);assert.match(f.output.textContent,/Airport/);assert.equal(f.elements.get("task").children.length,12);assert.equal(f.elements.get("place").children.length,3);}],
  ["alternate-location control recomputes the selected policy",()=>{const f=fixture();f.find(f.output,n=>n.tagName==="button"&&n.textContent==="Check that location").fire("click");assert.equal(f.elements.get("place").value,"union-airport");assert.match(f.output.textContent,/Service described in the source/);}],
  ["task selection scopes candidates rather than guessing similar places",()=>{const f=fixture();f.selectTask("vehicle_title");assert.equal(f.elements.get("place").children.length,4);assert.ok(f.elements.get("place").children.some(x=>/Morehead, KY/.test(x.textContent)));assert.ok(!f.elements.get("place").children.some(x=>/Jonesville/.test(x.textContent)));}],

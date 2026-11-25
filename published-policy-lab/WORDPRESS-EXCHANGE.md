@@ -40,11 +40,13 @@ The example is not an import acceptance test. No WordPress import, shortcode esc
 | policy_summary / conditions | Limited policy facts; not individual approval. |
 | fee_description | Unknown remains explicit rather than becoming zero. |
 | alternate_place_id | A source-supported alternate in this snapshot, not a nearest-place calculation. |
-| source_urls / checked_on | Primary policy references and the oldest check date among that row\'s sources; a newer snapshot date does not freshen older evidence. |
+| source_urls / checked_on | Primary policy references and the oldest check date among that row's sources; a newer snapshot date does not freshen older evidence. |
 | live_availability | Always UNVERIFIED. |
 | publication_status | Always EXCHANGE_ONLY_NOT_A_PAGE_APPROVAL. |
 
 Keep the accepted snapshot ID and exact repository commit beside any import: checked_on is an evidence date, not an immutable version identifier.
+
+The optional whole-load planner is browser behavior; its user inputs and structured quantity metadata are not executable CSV features. The policy summary still carries the reviewed approximate load statement.
 
 The CSV omits visit windows and closure calendars deliberately; those are separate, scoped data in the browser lab. Do not turn the CSV into opening-hours or holiday claims.
 

@@ -48,6 +48,10 @@ export function validateCatalog(catalog) {
    if (v.conditions!=null && (!Array.isArray(v.conditions) || v.conditions.some(x=>typeof x!=="string")))throw new Error("Invalid policy conditions.");
    if (v.fee!=null && typeof v.fee!=="string")throw new Error("Invalid fee description.");
    if (v.redirectPlaceId != null && (typeof v.redirectPlaceId!=="string" || v.fit!=="excluded")) throw new Error("Invalid policy redirect.");
+   if(v.wholeLoad!=null){
+    const q=v.wholeLoad;
+    if(key!=="mulch_delivery"||v.fit!=="described"||p.recordKind!=="program"||!q||typeof q!=="object"||Array.isArray(q)||q.kind!=="approximate_whole_load"||typeof q.approximateCubicYards!=="number"||!Number.isFinite(q.approximateCubicYards)||q.approximateCubicYards<=0||q.approximateCubicYards>1000||typeof q.sourceId!=="string"||!v.sourceIds.includes(q.sourceId))throw new Error("Invalid source-bound whole-load metadata.");
+   }
   }
   if(p.schedule) {
    if(!Array.isArray(p.schedule.days) || !p.schedule.days.length || p.schedule.days.some(d=>!Number.isInteger(d)||d<0||d>6) || !src.has(p.schedule.sourceId)) throw new Error("Invalid published schedule.");
@@ -121,6 +125,7 @@ export function answerPolicy(catalog,query) {
   task:SERVICES[query.serviceId],serviceId:query.serviceId,visitDate:visit?.iso||null,
   fit:effective.fit,summary:effective.summary,conditions:effective.conditions||[],
   fee:effective.fee||"Not stated in this checked policy.",feeRecorded:effective.fit==="described" && typeof effective.fee==="string",timing,
+  wholeLoad:effective.wholeLoad?{...effective.wholeLoad}:null,
   redirectedPlace:redirect?{id:redirect.id,name:redirect.name,locality:redirect.locality,region:redirect.region}:null,
   sources:catalog.sources.filter(s=>sourceIds.includes(s.id)).map(s=>({id:s.id,label:s.label,url:s.url,checkedOn:s.checkedOn})),
   limits:["Published rules do not establish live availability or a booking.","The operator decides whether a particular request can be handled.","This sample covers selected tasks, places and programs; missing detail remains unknown."]

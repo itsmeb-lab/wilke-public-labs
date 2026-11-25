@@ -1,5 +1,6 @@
+// Reviewed public-policy examples. Check dates describe this lab's review, not live service availability.
 export const catalog = {
-  "snapshotId": "published-policy-examples-20261125-v7",
+  "snapshotId": "published-policy-examples-20261125-v8",
   "checkedOn": "2026-11-25",
   "sources": [
     {
@@ -698,7 +699,12 @@ export const catalog = {
             "There is a waiting list. Delivery is not offered on weekends or town holidays. This checker verifies the 2026 Thanksgiving holidays only; confirm other dated exceptions with the town.",
             "Confirm the material offered: the source lists leaf mulch separately from wood chips."
           ],
-          "fee": "The checked policy describes this wood-chip delivery program as free."
+          "fee": "The checked policy describes this wood-chip delivery program as free.",
+          "wholeLoad": {
+            "kind": "approximate_whole_load",
+            "approximateCubicYards": 20,
+            "sourceId": "wakeforest-woodchips"
+          }
         }
       },
       "schedule": {

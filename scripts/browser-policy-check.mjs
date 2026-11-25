@@ -12,7 +12,7 @@ import { catalog } from "../published-policy-lab/data.mjs";
 import { SERVICES } from "../published-policy-lab/engine.mjs";
 
 const root=fileURLToPath(new URL("../",import.meta.url));
-const allowed=new Set(["index.html","style.css","app.mjs","data.mjs","engine.mjs","view-link.mjs"]);
+const allowed=new Set(["index.html","style.css","app.mjs","data.mjs","engine.mjs","view-link.mjs","load-plan.mjs"]);
 const mime={html:"text/html; charset=utf-8",css:"text/css; charset=utf-8",mjs:"text/javascript; charset=utf-8"};
 const driverFolder=process.env.EDGEWEBDRIVER;
 if(!driverFolder)throw new Error("EDGEWEBDRIVER is required; no browser or driver will be downloaded.");
@@ -66,6 +66,8 @@ const sid=path=>"/session/"+sessionId+path;
 const execute=(script,args=[])=>rpc("POST",sid("/execute/sync"),{script,args});
 const find=async selector=>(await rpc("POST",sid("/element"),{using:"css selector",value:selector}))["element-6066-11e4-a52e-4f735466cecf"];
 const click=async selector=>rpc("POST",sid("/element/"+await find(selector)+"/click"),{});
+const input=async(selector,text)=>rpc("POST",sid("/element/"+await find(selector)+"/value"),{text});
+const clear=async selector=>rpc("POST",sid("/element/"+await find(selector)+"/clear"),{});
 async function session(width,height,javascript=true){
  const opts={
   args:["--headless=new","--disable-background-networking","--disable-component-update","--no-first-run","--disable-sync","--disable-default-apps"],
@@ -83,7 +85,7 @@ async function session(width,height,javascript=true){
  return {browser:capabilities.browserName,version:capabilities.browserVersion,platform:capabilities.platformName};
 }
 async function closeSession(){if(sessionId){const closing=sessionId;sessionId=null;await rpc("DELETE","/session/"+closing);}}
-const stateScript="return {\n width:document.documentElement.clientWidth,innerWidth:window.innerWidth,scrollWidth:document.documentElement.scrollWidth,\n cards:document.querySelectorAll(\".policy-card\").length,rows:document.querySelectorAll(\"[data-policy]\").length,\n task:document.getElementById(\"task\").value,place:document.getElementById(\"place\").value,date:document.getElementById(\"visit-date\").value,\n tasks:document.getElementById(\"task\").options.length,answer:document.getElementById(\"answer\").innerText,\n controls:Array.from(document.querySelectorAll(\"select,input,button\")).map(e=>{const r=e.getBoundingClientRect();return {tag:e.tagName,id:e.id,left:r.left,right:r.right,width:r.width,height:r.height};}),\n sources:Array.from(document.querySelectorAll(\"#answer .sources a\")).map(e=>e.href),\n share:document.querySelector(\".share-view a\")?.href||null,\n active:document.activeElement?.id||\"\",\n noScriptNotice:Array.from(document.querySelectorAll(\"noscript .notice\")).some(e=>e.getBoundingClientRect().height>0),\n resourceOrigins:Array.from(new Set(performance.getEntriesByType(\"resource\").map(e=>new URL(e.name).origin)))\n};";
+const stateScript="return {\n width:document.documentElement.clientWidth,innerWidth:window.innerWidth,scrollWidth:document.documentElement.scrollWidth,\n cards:document.querySelectorAll(\".policy-card\").length,rows:document.querySelectorAll(\"[data-policy]\").length,\n task:document.getElementById(\"task\").value,place:document.getElementById(\"place\").value,date:document.getElementById(\"visit-date\").value,\n tasks:document.getElementById(\"task\").options.length,answer:document.getElementById(\"answer\").innerText,\n controls:Array.from(document.querySelectorAll(\"select,input,button\")).map(e=>{const r=e.getBoundingClientRect();return {tag:e.tagName,id:e.id,left:r.left,right:r.right,width:r.width,height:r.height};}),\n sources:Array.from(document.querySelectorAll(\"#answer .sources a\")).map(e=>e.href),\n share:document.querySelector(\".share-view a\")?.href||null,\n active:document.activeElement?.id||\"\",\n plannerVisible:!!document.getElementById(\"load-plan\")&&!document.getElementById(\"load-plan\").hidden,\n plannerText:document.getElementById(\"load-plan\")?.innerText||\"\",\n noScriptNotice:Array.from(document.querySelectorAll(\"noscript .notice\")).some(e=>e.getBoundingClientRect().height>0),\n resourceOrigins:Array.from(new Set(performance.getEntriesByType(\"resource\").map(e=>new URL(e.name).origin)))\n};";
 async function state(){return execute(stateScript);}
 async function settled(){
  const until=Date.now()+10000;
@@ -111,7 +113,7 @@ try{
   });
   await check("task exclusion and source alternate at "+width+"px",async()=>{
    const s=await state();assert.equal(s.place,"union-jonesville");assert.ok(s.answer.includes("Airport"));assert.ok(s.answer.includes("Published restriction"));
-   await click("#answer button");const changed=await state();assert.equal(changed.place,"union-airport");assert.ok(changed.answer.includes("household electronics"));
+   await click("#answer button");const changed=await state();assert.equal(changed.place,"union-airport");assert.ok(changed.answer.includes("household electronics"));assert.equal(changed.plannerVisible,false);
   });
   await check("program scope and source facts at "+width+"px",async()=>{
    await click('[data-example="hotspot"]');const s=await state();assert.equal(s.task,"hotspot_borrowing");assert.ok(s.answer.includes("Program-level"));assert.ok(s.answer.includes("seven-day"));assert.ok(s.answer.includes("below $10"));assert.equal(s.sources.length,1);
@@ -121,9 +123,19 @@ try{
    await click('[data-example="chips"]');s=await state();assert.equal(s.date,"2026-11-26");assert.ok(s.answer.includes("Thanksgiving"));assert.equal(s.sources.length,2);
    assert.equal(new URL(s.share).origin,"https://itsmeb-lab.github.io");assert.ok(new URL(s.share).hash.includes("date=2026-11-26"));
   });
+  await check("source-bound whole-load inputs and refusal at "+width+"px",async()=>{
+   let s=await state();assert.ok(s.plannerVisible);assert.ok(s.plannerText.includes("20-cubic-yard whole load"));
+   await input("#plan-area","200");await input("#plan-depth","3");await click("#load-plan button");
+   s=await state();assert.ok(s.plannerText.includes("1.85 cubic yards"));assert.ok(s.plannerText.includes("18.15 cubic yards would remain"));
+   assert.ok(s.plannerText.includes("does not deliver smaller quantities"));assert.ok(s.plannerText.includes("availability remains unverified"));
+   for(const c of s.controls){assert.ok(c.left>=-1&&c.right<=s.width+1,"Planning control clipped: "+JSON.stringify(c));assert.ok(c.height>=42);}
+   assert.ok(!new URL(s.share).hash.includes("plan-area"));
+   await clear("#plan-area");await click("#load-plan button");s=await state();
+   assert.ok(s.plannerText.includes("Enter an area"));assert.ok(!s.plannerText.includes("18.15 cubic yards would remain"));
+  });
   await check("unsupported shared view refuses then recovers at "+width+"px",async()=>{
    await rpc("POST",sid("/url"),{url:page+"#task=electronics&place=perry-memorial"});
-   let s=await state();assert.ok(s.answer.includes("shared view could not be opened"));
+   let s=await state();assert.ok(s.answer.includes("shared view could not be opened"));assert.equal(s.plannerVisible,false);
    await click('[data-example="mulch"]');s=await state();assert.equal(s.place,"clemson-mulch-program");assert.ok(s.answer.includes("different closing times"));
   });
   await closeSession();

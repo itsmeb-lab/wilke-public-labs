@@ -86,3 +86,11 @@ Clemson's resident self-pickup rule includes ID, self-loading, a one-truckload l
 Each supplied closure calendar declares either `published_year` or `listed_dates_only`; omitted coverage defaults to `listed_dates_only`. A partial list can establish a named exception but cannot settle unlisted dates. A weekday rule may still exclude a day, but an unlisted weekday stays uncertain. No calendar proves live availability.
 
 Wake Forest's dated November 16, 2026 notice confirms the November 26–27 Thanksgiving holidays. Combined with its wood-chip program's no-town-holiday rule, those dates exclude delivery. Other holiday dates remain unverified here. The annual page's January 1 weekday label conflicts with its 2026 heading, so that entry was not silently corrected or imported. The town's other services can follow different holiday arrangements; this program's date rules do not apply to them.
+
+## Compare planned use with a whole delivery
+
+The Wake Forest delivery answer offers an optional area/depth illustration tied to its reviewed approximate whole-load quantity. It uses cubic geometry rather than weight, payload, cost or an address-based eligibility decision. A small result never becomes a small-order recommendation; the source's whole-load/no-return constraint stays visible. Inputs are not saved or included in policy links. A chosen depth is a calculation input, not a garden-use recommendation, and a nominal match does not establish stock or delivery timing.
+
+## Actual browser fixture
+
+`node scripts/browser-policy-check.mjs` requires an existing Edge WebDriver folder in `EDGEWEBDRIVER`; it never downloads a browser or driver. The existing Windows verification job uses its preinstalled image tools against an allowlist of localhost policy assets. It checks measured 320px/390px mobile emulation, desktop scrollbar-aware layout, task flows, planning inputs and a real JavaScript-disabled session. These checks run separately from `npm test` and are not physical-device, visual-pixel or WCAG conformance tests. No operator site or account is visited by the fixture.
