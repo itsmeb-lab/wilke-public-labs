@@ -63,8 +63,9 @@ export function validateCatalog(catalog) {
  }
  return true;
 }
-function timingFor(catalog, place, serviceId, visit) {
+function timingFor(catalog, place, serviceId, visit, fit) {
  const base={availability:"UNVERIFIED",label:"Confirm current hours and staffing with the operator.",kind:"unconfirmed",sourceIds:[]};
+ if(fit!=="described")return {...base,kind:fit==="excluded"?"task_excluded":"task_unconfirmed",label:fit==="excluded"?"This task is excluded by the published rule.":"Confirm this task before planning a visit.",detail:"General opening hours do not change a task restriction or resolve an unstated policy."};
  if (!place.schedule || !place.scheduleAppliesTo.includes(serviceId)) return {...base,detail:"No visit window is modeled for this example."};
  const regular=place.schedule;
  base.sourceIds=[regular.sourceId];
@@ -89,7 +90,7 @@ export function answerPolicy(catalog,query) {
  const visit=parseVisitDate(query.visitDate);
  const policy=own(place.policies,query.serviceId)?place.policies[query.serviceId]:null;
  const effective=policy||{fit:"unstated",summary:"This snapshot does not settle this task at the selected place.",sourceIds:[]};
- const timing=timingFor(catalog,place,query.serviceId,visit);
+ const timing=timingFor(catalog,place,query.serviceId,visit,effective.fit);
  const sourceIds=[...new Set([...effective.sourceIds,...timing.sourceIds])].sort();
  const redirect=effective.redirectPlaceId?catalog.places.find(p=>p.id===effective.redirectPlaceId):null;
  return {
