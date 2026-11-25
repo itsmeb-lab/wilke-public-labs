@@ -56,7 +56,7 @@ for (const [file, slug, content] of pages) {
     it('uses existing local assets and an accessible contact section', () => {
       assert.equal([...html.matchAll(/id="diagnostic-title"/g)].length, 1);
       assert.match(html, /aria-labelledby="diagnostic-title"/);
-      const css = html.match(/<link rel="stylesheet" href="([^"]*lab-site\.css)">/)[1];
+      const css = html.match(/<link rel="stylesheet" href="([^"]*lab-site\.css)(?:\?v=\d{8}-\d+)?"\s*>/)[1];
       assert.ok(existsSync(path.resolve(root, path.dirname(file), css)));
       assert.ok(html.includes('rel="sitemap"'));
     });

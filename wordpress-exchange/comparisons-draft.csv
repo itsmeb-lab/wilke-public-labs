@@ -20,44 +20,44 @@
     <section id=""bicycle"" class=""comparison"" aria-labelledby=""bicycle-title"" tabindex=""-1"">
       <h2 id=""bicycle-title"">Ordinary bicycle</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""san-francisco"" data-fit=""excluded"">
-          <h3>Repair Café San Francisco</h3><p class=""area"">San Francisco, California, US</p>
+        <li data-operator=""san-francisco"" data-fit=""excluded"" id=""answer--bicycle--san-francisco"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--bicycle--san-francisco"" aria-label=""Repair Café San Francisco — Ordinary bicycle"">Repair Café San Francisco</a></h3><p class=""area"">San Francisco, California, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The café excludes bicycle repairs and points to local bike shops and the public library’s rotating bicycle clinic.</p>
           <p class=""source""><a href=""https://repaircafesf.org/faq"">San Francisco visitor FAQ</a></p>
         </li>
-        <li data-operator=""peninsula"" data-fit=""listed"">
-          <h3>Repair Café of the Peninsula</h3><p class=""area"">San Mateo County, California, US</p>
+        <li data-operator=""peninsula"" data-fit=""listed"" id=""answer--bicycle--peninsula"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--bicycle--peninsula"" aria-label=""Repair Café of the Peninsula — Ordinary bicycle"">Repair Café of the Peninsula</a></h3><p class=""area"">San Mateo County, California, US</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The visitor FAQ lists bicycles. Check the event listing for its repair categories.</p>
           <p class=""source""><a href=""https://repaircafepeninsula.org/faq/"">Peninsula visitor FAQ</a></p>
         </li>
-        <li data-operator=""toronto"" data-fit=""listed"">
-          <h3>Repair Café Toronto</h3><p class=""area"">Toronto, Ontario, Canada</p>
+        <li data-operator=""toronto"" data-fit=""listed"" id=""answer--bicycle--toronto"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--bicycle--toronto"" aria-label=""Repair Café Toronto — Ordinary bicycle"">Repair Café Toronto</a></h3><p class=""area"">Toronto, Ontario, Canada</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The visitor guide lists bikes among volunteer skills. Check which fixers will be at your event.</p>
           <p class=""source""><a href=""https://repaircafetoronto.ca/visit/"">Toronto visitor guide</a></p>
         </li>
-        <li data-operator=""york-region"" data-fit=""listed"">
-          <h3>York Region Repair Cafés</h3><p class=""area"">York Region, Ontario, Canada</p>
+        <li data-operator=""york-region"" data-fit=""listed"" id=""answer--bicycle--york-region"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--bicycle--york-region"" aria-label=""York Region Repair Cafés — Ordinary bicycle"">York Region Repair Cafés</a></h3><p class=""area"">York Region, Ontario, Canada</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The program lists bicycles, subject to volunteers at the specific event.</p>
           <p class=""source""><a href=""https://www.york.ca/newsroom/campaigns-projects/repair-cafe"">York Region dates and program rules</a></p>
         </li>
-        <li data-operator=""wales"" data-fit=""ask"">
-          <h3>Repair Café Wales</h3><p class=""area"">Wales, United Kingdom</p>
+        <li data-operator=""wales"" data-fit=""ask"" id=""answer--bicycle--wales"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--bicycle--wales"" aria-label=""Repair Café Wales — Ordinary bicycle"">Repair Café Wales</a></h3><p class=""area"">Wales, United Kingdom</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>Many local cafés decline adult bicycle repairs. Ask the local organizer what they can do.</p>
           <p class=""source""><a href=""https://repaircafewales.org/house-rules/"">Wales house rules</a></p>
         </li>
-        <li data-operator=""rice-county"" data-fit=""unknown"">
-          <h3>Rice County Fix-It Clinics</h3><p class=""area"">Rice County, Minnesota, US</p>
+        <li data-operator=""rice-county"" data-fit=""unknown"" id=""answer--bicycle--rice-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--bicycle--rice-county"" aria-label=""Rice County Fix-It Clinics — Ordinary bicycle"">Rice County Fix-It Clinics</a></h3><p class=""area"">Rice County, Minnesota, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.ricecountymn.gov/807/Fix-It-Clinics"">Check with Rice County Fix-It Clinics</a></p>
         </li>
-        <li data-operator=""waverley"" data-fit=""listed"">
-          <h3>Waverley Council Repair Café</h3><p class=""area"">Waverley, New South Wales, Australia</p>
+        <li data-operator=""waverley"" data-fit=""listed"" id=""answer--bicycle--waverley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--bicycle--waverley"" aria-label=""Waverley Council Repair Café — Ordinary bicycle"">Waverley Council Repair Café</a></h3><p class=""area"">Waverley, New South Wales, Australia</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The council lists bicycle repair among its event categories.</p>
           <p class=""source""><a href=""https://www.waverley.nsw.gov.au/secondnature/get_involved/circular_economy_opportunities/repair_cafe"">Waverley Council repair café guide</a></p>
@@ -68,44 +68,44 @@
     <section id=""microwave"" class=""comparison"" aria-labelledby=""microwave-title"" tabindex=""-1"">
       <h2 id=""microwave-title"">Microwave</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""san-francisco"" data-fit=""excluded"">
-          <h3>Repair Café San Francisco</h3><p class=""area"">San Francisco, California, US</p>
+        <li data-operator=""san-francisco"" data-fit=""excluded"" id=""answer--microwave--san-francisco"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--microwave--san-francisco"" aria-label=""Repair Café San Francisco — Microwave"">Repair Café San Francisco</a></h3><p class=""area"">San Francisco, California, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The café lists microwaves among its exclusions.</p>
           <p class=""source""><a href=""https://repaircafesf.org/faq"">San Francisco visitor FAQ</a></p>
         </li>
-        <li data-operator=""peninsula"" data-fit=""unknown"">
-          <h3>Repair Café of the Peninsula</h3><p class=""area"">San Mateo County, California, US</p>
+        <li data-operator=""peninsula"" data-fit=""unknown"" id=""answer--microwave--peninsula"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--microwave--peninsula"" aria-label=""Repair Café of the Peninsula — Microwave"">Repair Café of the Peninsula</a></h3><p class=""area"">San Mateo County, California, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://repaircafepeninsula.org/"">Check with Repair Café of the Peninsula</a></p>
         </li>
-        <li data-operator=""toronto"" data-fit=""unknown"">
-          <h3>Repair Café Toronto</h3><p class=""area"">Toronto, Ontario, Canada</p>
+        <li data-operator=""toronto"" data-fit=""unknown"" id=""answer--microwave--toronto"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--microwave--toronto"" aria-label=""Repair Café Toronto — Microwave"">Repair Café Toronto</a></h3><p class=""area"">Toronto, Ontario, Canada</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://repaircafetoronto.ca/upcoming-events/"">Check with Repair Café Toronto</a></p>
         </li>
-        <li data-operator=""york-region"" data-fit=""listed"">
-          <h3>York Region Repair Cafés</h3><p class=""area"">York Region, Ontario, Canada</p>
+        <li data-operator=""york-region"" data-fit=""listed"" id=""answer--microwave--york-region"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--microwave--york-region"" aria-label=""York Region Repair Cafés — Microwave"">York Region Repair Cafés</a></h3><p class=""area"">York Region, Ontario, Canada</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The program names microwaves among small appliances it can consider, depending on available fixers.</p>
           <p class=""source""><a href=""https://www.york.ca/newsroom/campaigns-projects/repair-cafe"">York Region dates and program rules</a></p>
         </li>
-        <li data-operator=""wales"" data-fit=""excluded"">
-          <h3>Repair Café Wales</h3><p class=""area"">Wales, United Kingdom</p>
+        <li data-operator=""wales"" data-fit=""excluded"" id=""answer--microwave--wales"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--microwave--wales"" aria-label=""Repair Café Wales — Microwave"">Repair Café Wales</a></h3><p class=""area"">Wales, United Kingdom</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The network’s house rules exclude microwave repairs.</p>
           <p class=""source""><a href=""https://repaircafewales.org/house-rules/"">Wales house rules</a></p>
         </li>
-        <li data-operator=""rice-county"" data-fit=""unknown"">
-          <h3>Rice County Fix-It Clinics</h3><p class=""area"">Rice County, Minnesota, US</p>
+        <li data-operator=""rice-county"" data-fit=""unknown"" id=""answer--microwave--rice-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--microwave--rice-county"" aria-label=""Rice County Fix-It Clinics — Microwave"">Rice County Fix-It Clinics</a></h3><p class=""area"">Rice County, Minnesota, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.ricecountymn.gov/807/Fix-It-Clinics"">Check with Rice County Fix-It Clinics</a></p>
         </li>
-        <li data-operator=""waverley"" data-fit=""excluded"">
-          <h3>Waverley Council Repair Café</h3><p class=""area"">Waverley, New South Wales, Australia</p>
+        <li data-operator=""waverley"" data-fit=""excluded"" id=""answer--microwave--waverley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--microwave--waverley"" aria-label=""Waverley Council Repair Café — Microwave"">Waverley Council Repair Café</a></h3><p class=""area"">Waverley, New South Wales, Australia</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The council excludes microwaves from the electronics category.</p>
           <p class=""source""><a href=""https://www.waverley.nsw.gov.au/secondnature/get_involved/circular_economy_opportunities/repair_cafe"">Waverley Council repair café guide</a></p>
@@ -116,44 +116,44 @@
     <section id=""toaster"" class=""comparison"" aria-labelledby=""toaster-title"" tabindex=""-1"">
       <h2 id=""toaster-title"">Toaster</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""san-francisco"" data-fit=""ask"">
-          <h3>Repair Café San Francisco</h3><p class=""area"">San Francisco, California, US</p>
+        <li data-operator=""san-francisco"" data-fit=""ask"" id=""answer--toaster--san-francisco"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--toaster--san-francisco"" aria-label=""Repair Café San Francisco — Toaster"">Repair Café San Francisco</a></h3><p class=""area"">San Francisco, California, US</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The FAQ says many toasters are unsuitable for repair. Confirm your item first.</p>
           <p class=""source""><a href=""https://repaircafesf.org/faq"">San Francisco visitor FAQ</a></p>
         </li>
-        <li data-operator=""peninsula"" data-fit=""excluded"">
-          <h3>Repair Café of the Peninsula</h3><p class=""area"">San Mateo County, California, US</p>
+        <li data-operator=""peninsula"" data-fit=""excluded"" id=""answer--toaster--peninsula"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--toaster--peninsula"" aria-label=""Repair Café of the Peninsula — Toaster"">Repair Café of the Peninsula</a></h3><p class=""area"">San Mateo County, California, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The visitor FAQ asks people to leave toasters at home.</p>
           <p class=""source""><a href=""https://repaircafepeninsula.org/faq/"">Peninsula visitor FAQ</a></p>
         </li>
-        <li data-operator=""toronto"" data-fit=""unknown"">
-          <h3>Repair Café Toronto</h3><p class=""area"">Toronto, Ontario, Canada</p>
+        <li data-operator=""toronto"" data-fit=""unknown"" id=""answer--toaster--toronto"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--toaster--toronto"" aria-label=""Repair Café Toronto — Toaster"">Repair Café Toronto</a></h3><p class=""area"">Toronto, Ontario, Canada</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://repaircafetoronto.ca/upcoming-events/"">Check with Repair Café Toronto</a></p>
         </li>
-        <li data-operator=""york-region"" data-fit=""unknown"">
-          <h3>York Region Repair Cafés</h3><p class=""area"">York Region, Ontario, Canada</p>
+        <li data-operator=""york-region"" data-fit=""unknown"" id=""answer--toaster--york-region"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--toaster--york-region"" aria-label=""York Region Repair Cafés — Toaster"">York Region Repair Cafés</a></h3><p class=""area"">York Region, Ontario, Canada</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.york.ca/newsroom/campaigns-projects/repair-cafe"">Check with York Region Repair Cafés</a></p>
         </li>
-        <li data-operator=""wales"" data-fit=""unknown"">
-          <h3>Repair Café Wales</h3><p class=""area"">Wales, United Kingdom</p>
+        <li data-operator=""wales"" data-fit=""unknown"" id=""answer--toaster--wales"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--toaster--wales"" aria-label=""Repair Café Wales — Toaster"">Repair Café Wales</a></h3><p class=""area"">Wales, United Kingdom</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://repaircafewales.org/events/"">Check with Repair Café Wales</a></p>
         </li>
-        <li data-operator=""rice-county"" data-fit=""listed"">
-          <h3>Rice County Fix-It Clinics</h3><p class=""area"">Rice County, Minnesota, US</p>
+        <li data-operator=""rice-county"" data-fit=""listed"" id=""answer--toaster--rice-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--toaster--rice-county"" aria-label=""Rice County Fix-It Clinics — Toaster"">Rice County Fix-It Clinics</a></h3><p class=""area"">Rice County, Minnesota, US</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The county names toasters as items its clinics may be able to repair.</p>
           <p class=""source""><a href=""https://www.ricecountymn.gov/807/Fix-It-Clinics"">Rice County clinic guide and dates</a></p>
         </li>
-        <li data-operator=""waverley"" data-fit=""excluded"">
-          <h3>Waverley Council Repair Café</h3><p class=""area"">Waverley, New South Wales, Australia</p>
+        <li data-operator=""waverley"" data-fit=""excluded"" id=""answer--toaster--waverley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--toaster--waverley"" aria-label=""Waverley Council Repair Café — Toaster"">Waverley Council Repair Café</a></h3><p class=""area"">Waverley, New South Wales, Australia</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The council lists toasters among items it will not assess.</p>
           <p class=""source""><a href=""https://www.waverley.nsw.gov.au/secondnature/get_involved/circular_economy_opportunities/repair_cafe"">Waverley Council repair café guide</a></p>
@@ -164,44 +164,44 @@
     <section id=""phone"" class=""comparison"" aria-labelledby=""phone-title"" tabindex=""-1"">
       <h2 id=""phone-title"">Mobile phone</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""san-francisco"" data-fit=""excluded"">
-          <h3>Repair Café San Francisco</h3><p class=""area"">San Francisco, California, US</p>
+        <li data-operator=""san-francisco"" data-fit=""excluded"" id=""answer--phone--san-francisco"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--phone--san-francisco"" aria-label=""Repair Café San Francisco — Mobile phone"">Repair Café San Francisco</a></h3><p class=""area"">San Francisco, California, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The café excludes phone repairs. The FAQ mentions advice on use.</p>
           <p class=""source""><a href=""https://repaircafesf.org/faq"">San Francisco visitor FAQ</a></p>
         </li>
-        <li data-operator=""peninsula"" data-fit=""excluded"">
-          <h3>Repair Café of the Peninsula</h3><p class=""area"">San Mateo County, California, US</p>
+        <li data-operator=""peninsula"" data-fit=""excluded"" id=""answer--phone--peninsula"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--phone--peninsula"" aria-label=""Repair Café of the Peninsula — Mobile phone"">Repair Café of the Peninsula</a></h3><p class=""area"">San Mateo County, California, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The visitor FAQ asks people to leave phones at home.</p>
           <p class=""source""><a href=""https://repaircafepeninsula.org/faq/"">Peninsula visitor FAQ</a></p>
         </li>
-        <li data-operator=""toronto"" data-fit=""unknown"">
-          <h3>Repair Café Toronto</h3><p class=""area"">Toronto, Ontario, Canada</p>
+        <li data-operator=""toronto"" data-fit=""unknown"" id=""answer--phone--toronto"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--phone--toronto"" aria-label=""Repair Café Toronto — Mobile phone"">Repair Café Toronto</a></h3><p class=""area"">Toronto, Ontario, Canada</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://repaircafetoronto.ca/upcoming-events/"">Check with Repair Café Toronto</a></p>
         </li>
-        <li data-operator=""york-region"" data-fit=""unknown"">
-          <h3>York Region Repair Cafés</h3><p class=""area"">York Region, Ontario, Canada</p>
+        <li data-operator=""york-region"" data-fit=""unknown"" id=""answer--phone--york-region"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--phone--york-region"" aria-label=""York Region Repair Cafés — Mobile phone"">York Region Repair Cafés</a></h3><p class=""area"">York Region, Ontario, Canada</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.york.ca/newsroom/campaigns-projects/repair-cafe"">Check with York Region Repair Cafés</a></p>
         </li>
-        <li data-operator=""wales"" data-fit=""unknown"">
-          <h3>Repair Café Wales</h3><p class=""area"">Wales, United Kingdom</p>
+        <li data-operator=""wales"" data-fit=""unknown"" id=""answer--phone--wales"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--phone--wales"" aria-label=""Repair Café Wales — Mobile phone"">Repair Café Wales</a></h3><p class=""area"">Wales, United Kingdom</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://repaircafewales.org/events/"">Check with Repair Café Wales</a></p>
         </li>
-        <li data-operator=""rice-county"" data-fit=""unknown"">
-          <h3>Rice County Fix-It Clinics</h3><p class=""area"">Rice County, Minnesota, US</p>
+        <li data-operator=""rice-county"" data-fit=""unknown"" id=""answer--phone--rice-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--phone--rice-county"" aria-label=""Rice County Fix-It Clinics — Mobile phone"">Rice County Fix-It Clinics</a></h3><p class=""area"">Rice County, Minnesota, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.ricecountymn.gov/807/Fix-It-Clinics"">Check with Rice County Fix-It Clinics</a></p>
         </li>
-        <li data-operator=""waverley"" data-fit=""listed"">
-          <h3>Waverley Council Repair Café</h3><p class=""area"">Waverley, New South Wales, Australia</p>
+        <li data-operator=""waverley"" data-fit=""listed"" id=""answer--phone--waverley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--phone--waverley"" aria-label=""Waverley Council Repair Café — Mobile phone"">Waverley Council Repair Café</a></h3><p class=""area"">Waverley, New South Wales, Australia</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The council lists phone diagnostics and help with setup, storage and updates. Ask about physical repairs before going.</p>
           <p class=""source""><a href=""https://www.waverley.nsw.gov.au/secondnature/get_involved/circular_economy_opportunities/repair_cafe"">Waverley Council repair café guide</a></p>
@@ -212,44 +212,44 @@
     <section id=""ebike-electrical"" class=""comparison"" aria-labelledby=""ebike-electrical-title"" tabindex=""-1"">
       <h2 id=""ebike-electrical-title"">E-bike with an electrical issue</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""san-francisco"" data-fit=""unknown"">
-          <h3>Repair Café San Francisco</h3><p class=""area"">San Francisco, California, US</p>
+        <li data-operator=""san-francisco"" data-fit=""unknown"" id=""answer--ebike-electrical--san-francisco"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--ebike-electrical--san-francisco"" aria-label=""Repair Café San Francisco — E-bike with an electrical issue"">Repair Café San Francisco</a></h3><p class=""area"">San Francisco, California, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://repaircafesf.org/faq"">Check with Repair Café San Francisco</a></p>
         </li>
-        <li data-operator=""peninsula"" data-fit=""unknown"">
-          <h3>Repair Café of the Peninsula</h3><p class=""area"">San Mateo County, California, US</p>
+        <li data-operator=""peninsula"" data-fit=""unknown"" id=""answer--ebike-electrical--peninsula"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--ebike-electrical--peninsula"" aria-label=""Repair Café of the Peninsula — E-bike with an electrical issue"">Repair Café of the Peninsula</a></h3><p class=""area"">San Mateo County, California, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://repaircafepeninsula.org/"">Check with Repair Café of the Peninsula</a></p>
         </li>
-        <li data-operator=""toronto"" data-fit=""unknown"">
-          <h3>Repair Café Toronto</h3><p class=""area"">Toronto, Ontario, Canada</p>
+        <li data-operator=""toronto"" data-fit=""unknown"" id=""answer--ebike-electrical--toronto"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--ebike-electrical--toronto"" aria-label=""Repair Café Toronto — E-bike with an electrical issue"">Repair Café Toronto</a></h3><p class=""area"">Toronto, Ontario, Canada</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://repaircafetoronto.ca/upcoming-events/"">Check with Repair Café Toronto</a></p>
         </li>
-        <li data-operator=""york-region"" data-fit=""excluded"">
-          <h3>York Region Repair Cafés</h3><p class=""area"">York Region, Ontario, Canada</p>
+        <li data-operator=""york-region"" data-fit=""excluded"" id=""answer--ebike-electrical--york-region"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--ebike-electrical--york-region"" aria-label=""York Region Repair Cafés — E-bike with an electrical issue"">York Region Repair Cafés</a></h3><p class=""area"">York Region, Ontario, Canada</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The program rules exclude electrical e-bike issues. The program lists mechanical issues separately.</p>
           <p class=""source""><a href=""https://www.york.ca/newsroom/campaigns-projects/repair-cafe"">York Region dates and program rules</a></p>
         </li>
-        <li data-operator=""wales"" data-fit=""unknown"">
-          <h3>Repair Café Wales</h3><p class=""area"">Wales, United Kingdom</p>
+        <li data-operator=""wales"" data-fit=""unknown"" id=""answer--ebike-electrical--wales"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--ebike-electrical--wales"" aria-label=""Repair Café Wales — E-bike with an electrical issue"">Repair Café Wales</a></h3><p class=""area"">Wales, United Kingdom</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://repaircafewales.org/events/"">Check with Repair Café Wales</a></p>
         </li>
-        <li data-operator=""rice-county"" data-fit=""unknown"">
-          <h3>Rice County Fix-It Clinics</h3><p class=""area"">Rice County, Minnesota, US</p>
+        <li data-operator=""rice-county"" data-fit=""unknown"" id=""answer--ebike-electrical--rice-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--ebike-electrical--rice-county"" aria-label=""Rice County Fix-It Clinics — E-bike with an electrical issue"">Rice County Fix-It Clinics</a></h3><p class=""area"">Rice County, Minnesota, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.ricecountymn.gov/807/Fix-It-Clinics"">Check with Rice County Fix-It Clinics</a></p>
         </li>
-        <li data-operator=""waverley"" data-fit=""unknown"">
-          <h3>Waverley Council Repair Café</h3><p class=""area"">Waverley, New South Wales, Australia</p>
+        <li data-operator=""waverley"" data-fit=""unknown"" id=""answer--ebike-electrical--waverley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--ebike-electrical--waverley"" aria-label=""Waverley Council Repair Café — E-bike with an electrical issue"">Waverley Council Repair Café</a></h3><p class=""area"">Waverley, New South Wales, Australia</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.waverley.nsw.gov.au/secondnature/get_involved/circular_economy_opportunities/repair_cafe"">Check with Waverley Council Repair Café</a></p>
@@ -260,44 +260,44 @@
     <section id=""clothes-alteration"" class=""comparison"" aria-labelledby=""clothes-alteration-title"" tabindex=""-1"">
       <h2 id=""clothes-alteration-title"">Clothing alteration or hemming</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""san-francisco"" data-fit=""excluded"">
-          <h3>Repair Café San Francisco</h3><p class=""area"">San Francisco, California, US</p>
+        <li data-operator=""san-francisco"" data-fit=""excluded"" id=""answer--clothes-alteration--san-francisco"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--clothes-alteration--san-francisco"" aria-label=""Repair Café San Francisco — Clothing alteration or hemming"">Repair Café San Francisco</a></h3><p class=""area"">San Francisco, California, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The FAQ excludes clothing and curtain alterations.</p>
           <p class=""source""><a href=""https://repaircafesf.org/faq"">San Francisco visitor FAQ</a></p>
         </li>
-        <li data-operator=""peninsula"" data-fit=""unknown"">
-          <h3>Repair Café of the Peninsula</h3><p class=""area"">San Mateo County, California, US</p>
+        <li data-operator=""peninsula"" data-fit=""unknown"" id=""answer--clothes-alteration--peninsula"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--clothes-alteration--peninsula"" aria-label=""Repair Café of the Peninsula — Clothing alteration or hemming"">Repair Café of the Peninsula</a></h3><p class=""area"">San Mateo County, California, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://repaircafepeninsula.org/"">Check with Repair Café of the Peninsula</a></p>
         </li>
-        <li data-operator=""toronto"" data-fit=""ask"">
-          <h3>Repair Café Toronto</h3><p class=""area"">Toronto, Ontario, Canada</p>
+        <li data-operator=""toronto"" data-fit=""ask"" id=""answer--clothes-alteration--toronto"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--clothes-alteration--toronto"" aria-label=""Repair Café Toronto — Clothing alteration or hemming"">Repair Café Toronto</a></h3><p class=""area"">Toronto, Ontario, Canada</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The visitor guide says clothing volunteers focus on mending. Ask before bringing an alteration.</p>
           <p class=""source""><a href=""https://repaircafetoronto.ca/visit/"">Toronto visitor guide</a></p>
         </li>
-        <li data-operator=""york-region"" data-fit=""excluded"">
-          <h3>York Region Repair Cafés</h3><p class=""area"">York Region, Ontario, Canada</p>
+        <li data-operator=""york-region"" data-fit=""excluded"" id=""answer--clothes-alteration--york-region"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--clothes-alteration--york-region"" aria-label=""York Region Repair Cafés — Clothing alteration or hemming"">York Region Repair Cafés</a></h3><p class=""area"">York Region, Ontario, Canada</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The program excludes hems and alterations. It lists small tears and clothing repairs separately.</p>
           <p class=""source""><a href=""https://www.york.ca/newsroom/campaigns-projects/repair-cafe"">York Region dates and program rules</a></p>
         </li>
-        <li data-operator=""wales"" data-fit=""ask"">
-          <h3>Repair Café Wales</h3><p class=""area"">Wales, United Kingdom</p>
+        <li data-operator=""wales"" data-fit=""ask"" id=""answer--clothes-alteration--wales"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--clothes-alteration--wales"" aria-label=""Repair Café Wales — Clothing alteration or hemming"">Repair Café Wales</a></h3><p class=""area"">Wales, United Kingdom</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>Many local cafés decline clothing alterations. Ask the host for its policy.</p>
           <p class=""source""><a href=""https://repaircafewales.org/house-rules/"">Wales house rules</a></p>
         </li>
-        <li data-operator=""rice-county"" data-fit=""listed"">
-          <h3>Rice County Fix-It Clinics</h3><p class=""area"">Rice County, Minnesota, US</p>
+        <li data-operator=""rice-county"" data-fit=""listed"" id=""answer--clothes-alteration--rice-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--clothes-alteration--rice-county"" aria-label=""Rice County Fix-It Clinics — Clothing alteration or hemming"">Rice County Fix-It Clinics</a></h3><p class=""area"">Rice County, Minnesota, US</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The county lists clothing and other soft goods for mending or alterations. Ask about the specific alteration you want.</p>
           <p class=""source""><a href=""https://www.ricecountymn.gov/807/Fix-It-Clinics"">Rice County clinic guide and dates</a></p>
         </li>
-        <li data-operator=""waverley"" data-fit=""excluded"">
-          <h3>Waverley Council Repair Café</h3><p class=""area"">Waverley, New South Wales, Australia</p>
+        <li data-operator=""waverley"" data-fit=""excluded"" id=""answer--clothes-alteration--waverley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--clothes-alteration--waverley"" aria-label=""Waverley Council Repair Café — Clothing alteration or hemming"">Waverley Council Repair Café</a></h3><p class=""area"">Waverley, New South Wales, Australia</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The council excludes clothing alterations and separately lists clean textiles and clothing for repairs.</p>
           <p class=""source""><a href=""https://www.waverley.nsw.gov.au/secondnature/get_involved/circular_economy_opportunities/repair_cafe"">Waverley Council repair café guide</a></p>
@@ -400,44 +400,44 @@
     <section id=""small-towels"" class=""comparison"" aria-labelledby=""small-towels-title"" tabindex=""-1"">
       <h2 id=""small-towels-title"">Hand towels or washcloths</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""wisconsin-humane"" data-fit=""ask"">
-          <h3>Wisconsin Humane Society</h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
+        <li data-operator=""wisconsin-humane"" data-fit=""ask"" id=""answer--small-towels--wisconsin-humane"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--small-towels--wisconsin-humane"" aria-label=""Wisconsin Humane Society — Hand towels or washcloths"">Wisconsin Humane Society</a></h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The wish list names new or gently used towels. It gives no size breakdown for hand towels or washcloths.</p>
           <p class=""source""><a href=""https://www.wihumane.org/ways-to-give/wish-list/"">Wisconsin Humane Society wish list</a></p>
         </li>
-        <li data-operator=""charlotte"" data-fit=""listed"">
-          <h3>Humane Society of Charlotte</h3><p class=""area"">Charlotte, North Carolina, US</p>
+        <li data-operator=""charlotte"" data-fit=""listed"" id=""answer--small-towels--charlotte"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--small-towels--charlotte"" aria-label=""Humane Society of Charlotte — Hand towels or washcloths"">Humane Society of Charlotte</a></h3><p class=""area"">Charlotte, North Carolina, US</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The published list includes hand towels and washcloths.</p>
           <p class=""source""><a href=""https://humanesocietyofcharlotte.org/give/wish-list/"">Humane Society of Charlotte donation guide</a></p>
         </li>
-        <li data-operator=""haywood-county"" data-fit=""listed"">
-          <h3>Haywood County Animal Shelter</h3><p class=""area"">Clyde, North Carolina, US</p>
+        <li data-operator=""haywood-county"" data-fit=""listed"" id=""answer--small-towels--haywood-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--small-towels--haywood-county"" aria-label=""Haywood County Animal Shelter — Hand towels or washcloths"">Haywood County Animal Shelter</a></h3><p class=""area"">Clyde, North Carolina, US</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The county lists towels and specifically names washcloths.</p>
           <p class=""source""><a href=""https://www.haywoodcountync.gov/869/Donate"">Haywood County shelter donation guide</a></p>
         </li>
-        <li data-operator=""voorhees"" data-fit=""ask"">
-          <h3>Animal Orphanage</h3><p class=""area"">Voorhees, New Jersey, US</p>
+        <li data-operator=""voorhees"" data-fit=""ask"" id=""answer--small-towels--voorhees"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--small-towels--voorhees"" aria-label=""Animal Orphanage — Hand towels or washcloths"">Animal Orphanage</a></h3><p class=""area"">Voorhees, New Jersey, US</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The shelter lists towels in general. Confirm hand-towel or washcloth size with the shelter.</p>
           <p class=""source""><a href=""https://www.aonj.org/support/wish-list/"">Animal Orphanage wish list</a></p>
         </li>
-        <li data-operator=""christchurch"" data-fit=""ask"">
-          <h3>SPCA Christchurch Centre</h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
+        <li data-operator=""christchurch"" data-fit=""ask"" id=""answer--small-towels--christchurch"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--small-towels--christchurch"" aria-label=""SPCA Christchurch Centre — Hand towels or washcloths"">SPCA Christchurch Centre</a></h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The linked national animal-centre list accepts towels generally. Confirm whether the centre can use hand towels or washcloths.</p>
           <p class=""source""><a href=""https://www.spca.nz/donate/donate-goods"">SPCA New Zealand animal-centre donation list</a></p>
         </li>
-        <li data-operator=""casa-grande"" data-fit=""listed"">
-          <h3>Casa Grande Animal Care and Adoption Center</h3><p class=""area"">Casa Grande, Arizona, US</p>
+        <li data-operator=""casa-grande"" data-fit=""listed"" id=""answer--small-towels--casa-grande"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--small-towels--casa-grande"" aria-label=""Casa Grande Animal Care and Adoption Center — Hand towels or washcloths"">Casa Grande Animal Care and Adoption Center</a></h3><p class=""area"">Casa Grande, Arizona, US</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The city expressly lists hand towels. Ask first if bringing washcloths alone.</p>
           <p class=""source""><a href=""https://www.casagrandeaz.gov/570/Donations"">Casa Grande Animal Care donation guide</a></p>
         </li>
-        <li data-operator=""silicon-valley"" data-fit=""ask"">
-          <h3>Humane Society Silicon Valley</h3><p class=""area"">Milpitas, California, US</p>
+        <li data-operator=""silicon-valley"" data-fit=""ask"" id=""answer--small-towels--silicon-valley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--small-towels--silicon-valley"" aria-label=""Humane Society Silicon Valley — Hand towels or washcloths"">Humane Society Silicon Valley</a></h3><p class=""area"">Milpitas, California, US</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The shelter lists towels without naming hand towels or washcloths separately.</p>
           <p class=""source""><a href=""https://www.hssv.org/give/give-items/"">Humane Society Silicon Valley donation guide</a></p>
@@ -448,44 +448,44 @@
     <section id=""bath-towels"" class=""comparison"" aria-labelledby=""bath-towels-title"" tabindex=""-1"">
       <h2 id=""bath-towels-title"">Large bath towels</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""wisconsin-humane"" data-fit=""ask"">
-          <h3>Wisconsin Humane Society</h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
+        <li data-operator=""wisconsin-humane"" data-fit=""ask"" id=""answer--bath-towels--wisconsin-humane"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--bath-towels--wisconsin-humane"" aria-label=""Wisconsin Humane Society — Large bath towels"">Wisconsin Humane Society</a></h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The wish list names new or gently used towels. Confirm your towel size with the campus.</p>
           <p class=""source""><a href=""https://www.wihumane.org/ways-to-give/wish-list/"">Wisconsin Humane Society wish list</a></p>
         </li>
-        <li data-operator=""charlotte"" data-fit=""paused"">
-          <h3>Humane Society of Charlotte</h3><p class=""area"">Charlotte, North Carolina, US</p>
+        <li data-operator=""charlotte"" data-fit=""paused"" id=""answer--bath-towels--charlotte"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--bath-towels--charlotte"" aria-label=""Humane Society of Charlotte — Large bath towels"">Humane Society of Charlotte</a></h3><p class=""area"">Charlotte, North Carolina, US</p>
           <p><span class=""fit paused"">No current need</span></p>
           <p>The organization’s current needs list says it does not need large towels. Recheck the list before a later trip.</p>
           <p class=""source""><a href=""https://humanesocietyofcharlotte.org/give/wish-list/"">Humane Society of Charlotte donation guide</a></p>
         </li>
-        <li data-operator=""haywood-county"" data-fit=""ask"">
-          <h3>Haywood County Animal Shelter</h3><p class=""area"">Clyde, North Carolina, US</p>
+        <li data-operator=""haywood-county"" data-fit=""ask"" id=""answer--bath-towels--haywood-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--bath-towels--haywood-county"" aria-label=""Haywood County Animal Shelter — Large bath towels"">Haywood County Animal Shelter</a></h3><p class=""area"">Clyde, North Carolina, US</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The county lists towels generally, without stating a large-towel rule.</p>
           <p class=""source""><a href=""https://www.haywoodcountync.gov/869/Donate"">Haywood County shelter donation guide</a></p>
         </li>
-        <li data-operator=""voorhees"" data-fit=""ask"">
-          <h3>Animal Orphanage</h3><p class=""area"">Voorhees, New Jersey, US</p>
+        <li data-operator=""voorhees"" data-fit=""ask"" id=""answer--bath-towels--voorhees"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--bath-towels--voorhees"" aria-label=""Animal Orphanage — Large bath towels"">Animal Orphanage</a></h3><p class=""area"">Voorhees, New Jersey, US</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The shelter lists towels in general. Confirm large bath towels before you go.</p>
           <p class=""source""><a href=""https://www.aonj.org/support/wish-list/"">Animal Orphanage wish list</a></p>
         </li>
-        <li data-operator=""christchurch"" data-fit=""ask"">
-          <h3>SPCA Christchurch Centre</h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
+        <li data-operator=""christchurch"" data-fit=""ask"" id=""answer--bath-towels--christchurch"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--bath-towels--christchurch"" aria-label=""SPCA Christchurch Centre — Large bath towels"">SPCA Christchurch Centre</a></h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The national list accepts towels generally, without a size breakdown.</p>
           <p class=""source""><a href=""https://www.spca.nz/donate/donate-goods"">SPCA New Zealand animal-centre donation list</a></p>
         </li>
-        <li data-operator=""casa-grande"" data-fit=""listed"">
-          <h3>Casa Grande Animal Care and Adoption Center</h3><p class=""area"">Casa Grande, Arizona, US</p>
+        <li data-operator=""casa-grande"" data-fit=""listed"" id=""answer--bath-towels--casa-grande"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--bath-towels--casa-grande"" aria-label=""Casa Grande Animal Care and Adoption Center — Large bath towels"">Casa Grande Animal Care and Adoption Center</a></h3><p class=""area"">Casa Grande, Arizona, US</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The city expressly includes large bath towels.</p>
           <p class=""source""><a href=""https://www.casagrandeaz.gov/570/Donations"">Casa Grande Animal Care donation guide</a></p>
         </li>
-        <li data-operator=""silicon-valley"" data-fit=""ask"">
-          <h3>Humane Society Silicon Valley</h3><p class=""area"">Milpitas, California, US</p>
+        <li data-operator=""silicon-valley"" data-fit=""ask"" id=""answer--bath-towels--silicon-valley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--bath-towels--silicon-valley"" aria-label=""Humane Society Silicon Valley — Large bath towels"">Humane Society Silicon Valley</a></h3><p class=""area"">Milpitas, California, US</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The shelter lists towels without giving a size boundary. Confirm large bath towels with staff.</p>
           <p class=""source""><a href=""https://www.hssv.org/give/give-items/"">Humane Society Silicon Valley donation guide</a></p>
@@ -496,44 +496,44 @@
     <section id=""flat-sheets"" class=""comparison"" aria-labelledby=""flat-sheets-title"" tabindex=""-1"">
       <h2 id=""flat-sheets-title"">Flat bed sheets</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""wisconsin-humane"" data-fit=""unknown"">
-          <h3>Wisconsin Humane Society</h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
+        <li data-operator=""wisconsin-humane"" data-fit=""unknown"" id=""answer--flat-sheets--wisconsin-humane"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--flat-sheets--wisconsin-humane"" aria-label=""Wisconsin Humane Society — Flat bed sheets"">Wisconsin Humane Society</a></h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.wihumane.org/ways-to-give/wish-list/"">Check with Wisconsin Humane Society</a></p>
         </li>
-        <li data-operator=""charlotte"" data-fit=""listed"">
-          <h3>Humane Society of Charlotte</h3><p class=""area"">Charlotte, North Carolina, US</p>
+        <li data-operator=""charlotte"" data-fit=""listed"" id=""answer--flat-sheets--charlotte"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--flat-sheets--charlotte"" aria-label=""Humane Society of Charlotte — Flat bed sheets"">Humane Society of Charlotte</a></h3><p class=""area"">Charlotte, North Carolina, US</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The organization lists flat bed sheets for bedding.</p>
           <p class=""source""><a href=""https://humanesocietyofcharlotte.org/give/wish-list/"">Humane Society of Charlotte donation guide</a></p>
         </li>
-        <li data-operator=""haywood-county"" data-fit=""listed"">
-          <h3>Haywood County Animal Shelter</h3><p class=""area"">Clyde, North Carolina, US</p>
+        <li data-operator=""haywood-county"" data-fit=""listed"" id=""answer--flat-sheets--haywood-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--flat-sheets--haywood-county"" aria-label=""Haywood County Animal Shelter — Flat bed sheets"">Haywood County Animal Shelter</a></h3><p class=""area"">Clyde, North Carolina, US</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The shelter lists sheets among items it can use and separately excludes fitted sheets.</p>
           <p class=""source""><a href=""https://www.haywoodcountync.gov/869/Donate"">Haywood County shelter donation guide</a></p>
         </li>
-        <li data-operator=""voorhees"" data-fit=""unknown"">
-          <h3>Animal Orphanage</h3><p class=""area"">Voorhees, New Jersey, US</p>
+        <li data-operator=""voorhees"" data-fit=""unknown"" id=""answer--flat-sheets--voorhees"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--flat-sheets--voorhees"" aria-label=""Animal Orphanage — Flat bed sheets"">Animal Orphanage</a></h3><p class=""area"">Voorhees, New Jersey, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.aonj.org/support/wish-list/"">Check with Animal Orphanage</a></p>
         </li>
-        <li data-operator=""christchurch"" data-fit=""ask"">
-          <h3>SPCA Christchurch Centre</h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
+        <li data-operator=""christchurch"" data-fit=""ask"" id=""answer--flat-sheets--christchurch"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--flat-sheets--christchurch"" aria-label=""SPCA Christchurch Centre — Flat bed sheets"">SPCA Christchurch Centre</a></h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The national list names sheets without distinguishing flat and fitted. Confirm your sheet type with the centre.</p>
           <p class=""source""><a href=""https://www.spca.nz/donate/donate-goods"">SPCA New Zealand animal-centre donation list</a></p>
         </li>
-        <li data-operator=""casa-grande"" data-fit=""unknown"">
-          <h3>Casa Grande Animal Care and Adoption Center</h3><p class=""area"">Casa Grande, Arizona, US</p>
+        <li data-operator=""casa-grande"" data-fit=""unknown"" id=""answer--flat-sheets--casa-grande"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--flat-sheets--casa-grande"" aria-label=""Casa Grande Animal Care and Adoption Center — Flat bed sheets"">Casa Grande Animal Care and Adoption Center</a></h3><p class=""area"">Casa Grande, Arizona, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.casagrandeaz.gov/570/Donations"">Check with Casa Grande Animal Care and Adoption Center</a></p>
         </li>
-        <li data-operator=""silicon-valley"" data-fit=""listed"">
-          <h3>Humane Society Silicon Valley</h3><p class=""area"">Milpitas, California, US</p>
+        <li data-operator=""silicon-valley"" data-fit=""listed"" id=""answer--flat-sheets--silicon-valley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--flat-sheets--silicon-valley"" aria-label=""Humane Society Silicon Valley — Flat bed sheets"">Humane Society Silicon Valley</a></h3><p class=""area"">Milpitas, California, US</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The shelter lists flat sheets among requested linen donations.</p>
           <p class=""source""><a href=""https://www.hssv.org/give/give-items/"">Humane Society Silicon Valley donation guide</a></p>
@@ -544,44 +544,44 @@
     <section id=""fitted-sheets"" class=""comparison"" aria-labelledby=""fitted-sheets-title"" tabindex=""-1"">
       <h2 id=""fitted-sheets-title"">Fitted sheets</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""wisconsin-humane"" data-fit=""excluded"">
-          <h3>Wisconsin Humane Society</h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
+        <li data-operator=""wisconsin-humane"" data-fit=""excluded"" id=""answer--fitted-sheets--wisconsin-humane"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--fitted-sheets--wisconsin-humane"" aria-label=""Wisconsin Humane Society — Fitted sheets"">Wisconsin Humane Society</a></h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The wish list excludes fitted sheets.</p>
           <p class=""source""><a href=""https://www.wihumane.org/ways-to-give/wish-list/"">Wisconsin Humane Society wish list</a></p>
         </li>
-        <li data-operator=""charlotte"" data-fit=""excluded"">
-          <h3>Humane Society of Charlotte</h3><p class=""area"">Charlotte, North Carolina, US</p>
+        <li data-operator=""charlotte"" data-fit=""excluded"" id=""answer--fitted-sheets--charlotte"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--fitted-sheets--charlotte"" aria-label=""Humane Society of Charlotte — Fitted sheets"">Humane Society of Charlotte</a></h3><p class=""area"">Charlotte, North Carolina, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The list explicitly excludes fitted sheets.</p>
           <p class=""source""><a href=""https://humanesocietyofcharlotte.org/give/wish-list/"">Humane Society of Charlotte donation guide</a></p>
         </li>
-        <li data-operator=""haywood-county"" data-fit=""excluded"">
-          <h3>Haywood County Animal Shelter</h3><p class=""area"">Clyde, North Carolina, US</p>
+        <li data-operator=""haywood-county"" data-fit=""excluded"" id=""answer--fitted-sheets--haywood-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--fitted-sheets--haywood-county"" aria-label=""Haywood County Animal Shelter — Fitted sheets"">Haywood County Animal Shelter</a></h3><p class=""area"">Clyde, North Carolina, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The county lists fitted sheets among items the shelter cannot use.</p>
           <p class=""source""><a href=""https://www.haywoodcountync.gov/869/Donate"">Haywood County shelter donation guide</a></p>
         </li>
-        <li data-operator=""voorhees"" data-fit=""unknown"">
-          <h3>Animal Orphanage</h3><p class=""area"">Voorhees, New Jersey, US</p>
+        <li data-operator=""voorhees"" data-fit=""unknown"" id=""answer--fitted-sheets--voorhees"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--fitted-sheets--voorhees"" aria-label=""Animal Orphanage — Fitted sheets"">Animal Orphanage</a></h3><p class=""area"">Voorhees, New Jersey, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.aonj.org/support/wish-list/"">Check with Animal Orphanage</a></p>
         </li>
-        <li data-operator=""christchurch"" data-fit=""ask"">
-          <h3>SPCA Christchurch Centre</h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
+        <li data-operator=""christchurch"" data-fit=""ask"" id=""answer--fitted-sheets--christchurch"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--fitted-sheets--christchurch"" aria-label=""SPCA Christchurch Centre — Fitted sheets"">SPCA Christchurch Centre</a></h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The national list names sheets generally. It does not specify fitted sheets, so confirm with the centre.</p>
           <p class=""source""><a href=""https://www.spca.nz/donate/donate-goods"">SPCA New Zealand animal-centre donation list</a></p>
         </li>
-        <li data-operator=""casa-grande"" data-fit=""excluded"">
-          <h3>Casa Grande Animal Care and Adoption Center</h3><p class=""area"">Casa Grande, Arizona, US</p>
+        <li data-operator=""casa-grande"" data-fit=""excluded"" id=""answer--fitted-sheets--casa-grande"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--fitted-sheets--casa-grande"" aria-label=""Casa Grande Animal Care and Adoption Center — Fitted sheets"">Casa Grande Animal Care and Adoption Center</a></h3><p class=""area"">Casa Grande, Arizona, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The city puts fitted sheets in its list of donations it declines.</p>
           <p class=""source""><a href=""https://www.casagrandeaz.gov/570/Donations"">Casa Grande Animal Care donation guide</a></p>
         </li>
-        <li data-operator=""silicon-valley"" data-fit=""excluded"">
-          <h3>Humane Society Silicon Valley</h3><p class=""area"">Milpitas, California, US</p>
+        <li data-operator=""silicon-valley"" data-fit=""excluded"" id=""answer--fitted-sheets--silicon-valley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--fitted-sheets--silicon-valley"" aria-label=""Humane Society Silicon Valley — Fitted sheets"">Humane Society Silicon Valley</a></h3><p class=""area"">Milpitas, California, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The shelter limits its stated sheet acceptance to non-fitted sheets.</p>
           <p class=""source""><a href=""https://www.hssv.org/give/give-items/"">Humane Society Silicon Valley donation guide</a></p>
@@ -592,44 +592,44 @@
     <section id=""comforters"" class=""comparison"" aria-labelledby=""comforters-title"" tabindex=""-1"">
       <h2 id=""comforters-title"">Filled comforters or duvet inserts</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""wisconsin-humane"" data-fit=""excluded"">
-          <h3>Wisconsin Humane Society</h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
+        <li data-operator=""wisconsin-humane"" data-fit=""excluded"" id=""answer--comforters--wisconsin-humane"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--comforters--wisconsin-humane"" aria-label=""Wisconsin Humane Society — Filled comforters or duvet inserts"">Wisconsin Humane Society</a></h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The wish list excludes comforters, quilts and oversized blankets.</p>
           <p class=""source""><a href=""https://www.wihumane.org/ways-to-give/wish-list/"">Wisconsin Humane Society wish list</a></p>
         </li>
-        <li data-operator=""charlotte"" data-fit=""excluded"">
-          <h3>Humane Society of Charlotte</h3><p class=""area"">Charlotte, North Carolina, US</p>
+        <li data-operator=""charlotte"" data-fit=""excluded"" id=""answer--comforters--charlotte"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--comforters--charlotte"" aria-label=""Humane Society of Charlotte — Filled comforters or duvet inserts"">Humane Society of Charlotte</a></h3><p class=""area"">Charlotte, North Carolina, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The organization lists comforters among items it cannot accept.</p>
           <p class=""source""><a href=""https://humanesocietyofcharlotte.org/give/wish-list/"">Humane Society of Charlotte donation guide</a></p>
         </li>
-        <li data-operator=""haywood-county"" data-fit=""unknown"">
-          <h3>Haywood County Animal Shelter</h3><p class=""area"">Clyde, North Carolina, US</p>
+        <li data-operator=""haywood-county"" data-fit=""unknown"" id=""answer--comforters--haywood-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--comforters--haywood-county"" aria-label=""Haywood County Animal Shelter — Filled comforters or duvet inserts"">Haywood County Animal Shelter</a></h3><p class=""area"">Clyde, North Carolina, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.haywoodcountync.gov/869/Donate"">Check with Haywood County Animal Shelter</a></p>
         </li>
-        <li data-operator=""voorhees"" data-fit=""listed"">
-          <h3>Animal Orphanage</h3><p class=""area"">Voorhees, New Jersey, US</p>
+        <li data-operator=""voorhees"" data-fit=""listed"" id=""answer--comforters--voorhees"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--comforters--voorhees"" aria-label=""Animal Orphanage — Filled comforters or duvet inserts"">Animal Orphanage</a></h3><p class=""area"">Voorhees, New Jersey, US</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The shelter expressly names comforters. Confirm unusually bulky items ahead of a trip.</p>
           <p class=""source""><a href=""https://www.aonj.org/support/wish-list/"">Animal Orphanage wish list</a></p>
         </li>
-        <li data-operator=""christchurch"" data-fit=""excluded"">
-          <h3>SPCA Christchurch Centre</h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
+        <li data-operator=""christchurch"" data-fit=""excluded"" id=""answer--comforters--christchurch"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--comforters--christchurch"" aria-label=""SPCA Christchurch Centre — Filled comforters or duvet inserts"">SPCA Christchurch Centre</a></h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The national animal-centre list excludes filled duvet inserts and separately accepts duvet covers.</p>
           <p class=""source""><a href=""https://www.spca.nz/donate/donate-goods"">SPCA New Zealand animal-centre donation list</a></p>
         </li>
-        <li data-operator=""casa-grande"" data-fit=""unknown"">
-          <h3>Casa Grande Animal Care and Adoption Center</h3><p class=""area"">Casa Grande, Arizona, US</p>
+        <li data-operator=""casa-grande"" data-fit=""unknown"" id=""answer--comforters--casa-grande"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--comforters--casa-grande"" aria-label=""Casa Grande Animal Care and Adoption Center — Filled comforters or duvet inserts"">Casa Grande Animal Care and Adoption Center</a></h3><p class=""area"">Casa Grande, Arizona, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.casagrandeaz.gov/570/Donations"">Check with Casa Grande Animal Care and Adoption Center</a></p>
         </li>
-        <li data-operator=""silicon-valley"" data-fit=""unknown"">
-          <h3>Humane Society Silicon Valley</h3><p class=""area"">Milpitas, California, US</p>
+        <li data-operator=""silicon-valley"" data-fit=""unknown"" id=""answer--comforters--silicon-valley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--comforters--silicon-valley"" aria-label=""Humane Society Silicon Valley — Filled comforters or duvet inserts"">Humane Society Silicon Valley</a></h3><p class=""area"">Milpitas, California, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.hssv.org/give/give-items/"">Check with Humane Society Silicon Valley</a></p>
@@ -640,44 +640,44 @@
     <section id=""pillows"" class=""comparison"" aria-labelledby=""pillows-title"" tabindex=""-1"">
       <h2 id=""pillows-title"">Bed pillows</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""wisconsin-humane"" data-fit=""excluded"">
-          <h3>Wisconsin Humane Society</h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
+        <li data-operator=""wisconsin-humane"" data-fit=""excluded"" id=""answer--pillows--wisconsin-humane"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--pillows--wisconsin-humane"" aria-label=""Wisconsin Humane Society — Bed pillows"">Wisconsin Humane Society</a></h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The wish list excludes pillows.</p>
           <p class=""source""><a href=""https://www.wihumane.org/ways-to-give/wish-list/"">Wisconsin Humane Society wish list</a></p>
         </li>
-        <li data-operator=""charlotte"" data-fit=""excluded"">
-          <h3>Humane Society of Charlotte</h3><p class=""area"">Charlotte, North Carolina, US</p>
+        <li data-operator=""charlotte"" data-fit=""excluded"" id=""answer--pillows--charlotte"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--pillows--charlotte"" aria-label=""Humane Society of Charlotte — Bed pillows"">Humane Society of Charlotte</a></h3><p class=""area"">Charlotte, North Carolina, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The list excludes pillows and cushions.</p>
           <p class=""source""><a href=""https://humanesocietyofcharlotte.org/give/wish-list/"">Humane Society of Charlotte donation guide</a></p>
         </li>
-        <li data-operator=""haywood-county"" data-fit=""excluded"">
-          <h3>Haywood County Animal Shelter</h3><p class=""area"">Clyde, North Carolina, US</p>
+        <li data-operator=""haywood-county"" data-fit=""excluded"" id=""answer--pillows--haywood-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--pillows--haywood-county"" aria-label=""Haywood County Animal Shelter — Bed pillows"">Haywood County Animal Shelter</a></h3><p class=""area"">Clyde, North Carolina, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The county excludes pillows.</p>
           <p class=""source""><a href=""https://www.haywoodcountync.gov/869/Donate"">Haywood County shelter donation guide</a></p>
         </li>
-        <li data-operator=""voorhees"" data-fit=""excluded"">
-          <h3>Animal Orphanage</h3><p class=""area"">Voorhees, New Jersey, US</p>
+        <li data-operator=""voorhees"" data-fit=""excluded"" id=""answer--pillows--voorhees"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--pillows--voorhees"" aria-label=""Animal Orphanage — Bed pillows"">Animal Orphanage</a></h3><p class=""area"">Voorhees, New Jersey, US</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The shelter expressly excludes pillows.</p>
           <p class=""source""><a href=""https://www.aonj.org/support/wish-list/"">Animal Orphanage wish list</a></p>
         </li>
-        <li data-operator=""christchurch"" data-fit=""excluded"">
-          <h3>SPCA Christchurch Centre</h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
+        <li data-operator=""christchurch"" data-fit=""excluded"" id=""answer--pillows--christchurch"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--pillows--christchurch"" aria-label=""SPCA Christchurch Centre — Bed pillows"">SPCA Christchurch Centre</a></h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The linked national list excludes pillows for animal-centre donations.</p>
           <p class=""source""><a href=""https://www.spca.nz/donate/donate-goods"">SPCA New Zealand animal-centre donation list</a></p>
         </li>
-        <li data-operator=""casa-grande"" data-fit=""unknown"">
-          <h3>Casa Grande Animal Care and Adoption Center</h3><p class=""area"">Casa Grande, Arizona, US</p>
+        <li data-operator=""casa-grande"" data-fit=""unknown"" id=""answer--pillows--casa-grande"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--pillows--casa-grande"" aria-label=""Casa Grande Animal Care and Adoption Center — Bed pillows"">Casa Grande Animal Care and Adoption Center</a></h3><p class=""area"">Casa Grande, Arizona, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.casagrandeaz.gov/570/Donations"">Check with Casa Grande Animal Care and Adoption Center</a></p>
         </li>
-        <li data-operator=""silicon-valley"" data-fit=""unknown"">
-          <h3>Humane Society Silicon Valley</h3><p class=""area"">Milpitas, California, US</p>
+        <li data-operator=""silicon-valley"" data-fit=""unknown"" id=""answer--pillows--silicon-valley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--pillows--silicon-valley"" aria-label=""Humane Society Silicon Valley — Bed pillows"">Humane Society Silicon Valley</a></h3><p class=""area"">Milpitas, California, US</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.hssv.org/give/give-items/"">Check with Humane Society Silicon Valley</a></p>
@@ -783,26 +783,26 @@
     <section id=""sofa-or-mattress"" class=""comparison"" aria-labelledby=""sofa-or-mattress-title"" tabindex=""-1"">
       <h2 id=""sofa-or-mattress-title"">Sofa or mattress</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""milwaukee-curb"" data-fit=""listed"">
-          <h3>Milwaukee curbside</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee-curb"" data-fit=""listed"" id=""answer--sofa-or-mattress--milwaukee-curb"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--sofa-or-mattress--milwaukee-curb"" aria-label=""Milwaukee curbside — Sofa or mattress"">Milwaukee curbside</a></h3><p class=""area"">City of Milwaukee, Wisconsin</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The city lists furniture and mattresses as bulky items. Check whether the combined pile fits the regular limit or needs a special pickup.</p>
           <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Bulky-Item-Pickup"">City of Milwaukee bulky item pickup</a></p>
         </li>
-        <li data-operator=""milwaukee-drop-off"" data-fit=""listed"">
-          <h3>Milwaukee Drop Off Centers</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee-drop-off"" data-fit=""listed"" id=""answer--sofa-or-mattress--milwaukee-drop-off"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--sofa-or-mattress--milwaukee-drop-off"" aria-label=""Milwaukee Drop Off Centers — Sofa or mattress"">Milwaukee Drop Off Centers</a></h3><p class=""area"">City of Milwaukee, Wisconsin</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The city lists old furniture and mattresses. Drop-off fees depend on the volume assessed by staff.</p>
           <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/DropOff"">City of Milwaukee Drop Off Centers</a></p>
         </li>
-        <li data-operator=""wauwatosa-curb"" data-fit=""listed"">
-          <h3>Wauwatosa special collection</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+        <li data-operator=""wauwatosa-curb"" data-fit=""listed"" id=""answer--sofa-or-mattress--wauwatosa-curb"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--sofa-or-mattress--wauwatosa-curb"" aria-label=""Wauwatosa special collection — Sofa or mattress"">Wauwatosa special collection</a></h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The city lists sofas and mattresses as examples for a paid curbside pickup. The bulky fee is based on item count.</p>
           <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/special-collection/"">Wauwatosa special collection</a></p>
         </li>
-        <li data-operator=""wauwatosa-drop-off"" data-fit=""listed"">
-          <h3>Wauwatosa Drop Off Center</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+        <li data-operator=""wauwatosa-drop-off"" data-fit=""listed"" id=""answer--sofa-or-mattress--wauwatosa-drop-off"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--sofa-or-mattress--wauwatosa-drop-off"" aria-label=""Wauwatosa Drop Off Center — Sofa or mattress"">Wauwatosa Drop Off Center</a></h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The city lists bulky household furniture and mattresses. The posted refuse fee depends on the amount brought in.</p>
           <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/drop-off-center/"">Wauwatosa Drop Off Center</a></p>
@@ -813,26 +813,26 @@
     <section id=""tv"" class=""comparison"" aria-labelledby=""tv-title"" tabindex=""-1"">
       <h2 id=""tv-title"">Television</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""milwaukee-curb"" data-fit=""excluded"">
-          <h3>Milwaukee curbside</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee-curb"" data-fit=""excluded"" id=""answer--tv--milwaukee-curb"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tv--milwaukee-curb"" aria-label=""Milwaukee curbside — Television"">Milwaukee curbside</a></h3><p class=""area"">City of Milwaukee, Wisconsin</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The city excludes TVs from bulky pickup and directs them to a Drop Off Center.</p>
           <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Bulky-Item-Pickup"">City of Milwaukee bulky item pickup</a></p>
         </li>
-        <li data-operator=""milwaukee-drop-off"" data-fit=""listed"">
-          <h3>Milwaukee Drop Off Centers</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee-drop-off"" data-fit=""listed"" id=""answer--tv--milwaukee-drop-off"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tv--milwaukee-drop-off"" aria-label=""Milwaukee Drop Off Centers — Television"">Milwaukee Drop Off Centers</a></h3><p class=""area"">City of Milwaukee, Wisconsin</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The drop-off page gives a per-TV fee and a limit of three. Confirm current charges and the eligible load with the city.</p>
           <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/DropOff"">City of Milwaukee Drop Off Centers</a></p>
         </li>
-        <li data-operator=""wauwatosa-curb"" data-fit=""listed"">
-          <h3>Wauwatosa special collection</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+        <li data-operator=""wauwatosa-curb"" data-fit=""listed"" id=""answer--tv--wauwatosa-curb"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tv--wauwatosa-curb"" aria-label=""Wauwatosa special collection — Television"">Wauwatosa special collection</a></h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The city lists paid curbside pickup for TVs. The quoted amount depends on the pickup’s other items.</p>
           <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/special-collection/"">Wauwatosa special collection</a></p>
         </li>
-        <li data-operator=""wauwatosa-drop-off"" data-fit=""listed"">
-          <h3>Wauwatosa Drop Off Center</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+        <li data-operator=""wauwatosa-drop-off"" data-fit=""listed"" id=""answer--tv--wauwatosa-drop-off"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tv--wauwatosa-drop-off"" aria-label=""Wauwatosa Drop Off Center — Television"">Wauwatosa Drop Off Center</a></h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The Drop Off Center page lists TVs at $30–$45 each. Special Collection describes a $30 drop-off charge in its appliances and TV section. Confirm your television’s charge directly.</p>
           <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/drop-off-center/"">Wauwatosa Drop Off Center</a></p>
@@ -843,26 +843,26 @@
     <section id=""large-appliance"" class=""comparison"" aria-labelledby=""large-appliance-title"" tabindex=""-1"">
       <h2 id=""large-appliance-title"">Refrigerator or large appliance</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""milwaukee-curb"" data-fit=""excluded"">
-          <h3>Milwaukee curbside</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee-curb"" data-fit=""excluded"" id=""answer--large-appliance--milwaukee-curb"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--large-appliance--milwaukee-curb"" aria-label=""Milwaukee curbside — Refrigerator or large appliance"">Milwaukee curbside</a></h3><p class=""area"">City of Milwaukee, Wisconsin</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The city excludes appliances from bulky pickup and directs them to a Drop Off Center.</p>
           <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Bulky-Item-Pickup"">City of Milwaukee bulky item pickup</a></p>
         </li>
-        <li data-operator=""milwaukee-drop-off"" data-fit=""listed"">
-          <h3>Milwaukee Drop Off Centers</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee-drop-off"" data-fit=""listed"" id=""answer--large-appliance--milwaukee-drop-off"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--large-appliance--milwaukee-drop-off"" aria-label=""Milwaukee Drop Off Centers — Refrigerator or large appliance"">Milwaukee Drop Off Centers</a></h3><p class=""area"">City of Milwaukee, Wisconsin</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>Appliances are on the city’s recycling list. Confirm your exact appliance and the receiving rules before loading.</p>
           <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/DropOff"">City of Milwaukee Drop Off Centers</a></p>
         </li>
-        <li data-operator=""wauwatosa-curb"" data-fit=""listed"">
-          <h3>Wauwatosa special collection</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+        <li data-operator=""wauwatosa-curb"" data-fit=""listed"" id=""answer--large-appliance--wauwatosa-curb"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--large-appliance--wauwatosa-curb"" aria-label=""Wauwatosa special collection — Refrigerator or large appliance"">Wauwatosa special collection</a></h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The city lists paid curbside pickup for refrigerators and other major household appliances, with a first-item and additional-item fee.</p>
           <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/special-collection/"">Wauwatosa special collection</a></p>
         </li>
-        <li data-operator=""wauwatosa-drop-off"" data-fit=""listed"">
-          <h3>Wauwatosa Drop Off Center</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+        <li data-operator=""wauwatosa-drop-off"" data-fit=""listed"" id=""answer--large-appliance--wauwatosa-drop-off"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--large-appliance--wauwatosa-drop-off"" aria-label=""Wauwatosa Drop Off Center — Refrigerator or large appliance"">Wauwatosa Drop Off Center</a></h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The city lists refrigerators and other major appliances. The Drop Off Center page gives a separate per-appliance fee.</p>
           <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/drop-off-center/"">Wauwatosa Drop Off Center</a></p>
@@ -873,26 +873,26 @@
     <section id=""mixed-cleanout"" class=""comparison"" aria-labelledby=""mixed-cleanout-title"" tabindex=""-1"">
       <h2 id=""mixed-cleanout-title"">Mixed cleanout pile</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""milwaukee-curb"" data-fit=""excluded"">
-          <h3>Milwaukee curbside</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee-curb"" data-fit=""excluded"" id=""answer--mixed-cleanout--milwaukee-curb"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--mixed-cleanout--milwaukee-curb"" aria-label=""Milwaukee curbside — Mixed cleanout pile"">Milwaukee curbside</a></h3><p class=""area"">City of Milwaukee, Wisconsin</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The special bulky service excludes loose material and mixed loads containing items such as construction waste, recyclables, tires, brush or yard waste.</p>
           <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Bulky-Item-Pickup"">City of Milwaukee bulky item pickup</a></p>
         </li>
-        <li data-operator=""milwaukee-drop-off"" data-fit=""ask"">
-          <h3>Milwaukee Drop Off Centers</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee-drop-off"" data-fit=""ask"" id=""answer--mixed-cleanout--milwaukee-drop-off"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--mixed-cleanout--milwaukee-drop-off"" aria-label=""Milwaukee Drop Off Centers — Mixed cleanout pile"">Milwaukee Drop Off Centers</a></h3><p class=""area"">City of Milwaukee, Wisconsin</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The centers separate material streams and inspect loads. Read the accepted-item list and verify every unusual material and the vehicle before departure.</p>
           <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/DropOff"">City of Milwaukee Drop Off Centers</a></p>
         </li>
-        <li data-operator=""wauwatosa-curb"" data-fit=""ask"">
-          <h3>Wauwatosa special collection</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+        <li data-operator=""wauwatosa-curb"" data-fit=""ask"" id=""answer--mixed-cleanout--wauwatosa-curb"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--mixed-cleanout--wauwatosa-curb"" aria-label=""Wauwatosa special collection — Mixed cleanout pile"">Wauwatosa special collection</a></h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The published page gives individual item categories and examples. Ask Public Works about the entire mixed load and any items that need a different route.</p>
           <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/special-collection/"">Wauwatosa special collection</a></p>
         </li>
-        <li data-operator=""wauwatosa-drop-off"" data-fit=""ask"">
-          <h3>Wauwatosa Drop Off Center</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+        <li data-operator=""wauwatosa-drop-off"" data-fit=""ask"" id=""answer--mixed-cleanout--wauwatosa-drop-off"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--mixed-cleanout--wauwatosa-drop-off"" aria-label=""Wauwatosa Drop Off Center — Mixed cleanout pile"">Wauwatosa Drop Off Center</a></h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The city describes separate receptacles and asks visitors to keep the material categories apart. Check each item and the household-use limits before loading.</p>
           <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/drop-off-center/"">Wauwatosa Drop Off Center</a></p>
@@ -903,26 +903,26 @@
     <section id=""commercial-hauler"" class=""comparison"" aria-labelledby=""commercial-hauler-title"" tabindex=""-1"">
       <h2 id=""commercial-hauler-title"">Load handled by a paid hauler</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""milwaukee-curb"" data-fit=""ask"">
-          <h3>Milwaukee curbside</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee-curb"" data-fit=""ask"" id=""answer--commercial-hauler--milwaukee-curb"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--commercial-hauler--milwaukee-curb"" aria-label=""Milwaukee curbside — Load handled by a paid hauler"">Milwaukee curbside</a></h3><p class=""area"">City of Milwaukee, Wisconsin</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The published service applies to properties that receive city sanitation collection. Ask the city about your property and have the hauler identify its receiving facility separately.</p>
           <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Bulky-Item-Pickup"">City of Milwaukee bulky item pickup</a></p>
         </li>
-        <li data-operator=""milwaukee-drop-off"" data-fit=""ask"">
-          <h3>Milwaukee Drop Off Centers</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee-drop-off"" data-fit=""ask"" id=""answer--commercial-hauler--milwaukee-drop-off"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--commercial-hauler--milwaukee-drop-off"" aria-label=""Milwaukee Drop Off Centers — Load handled by a paid hauler"">Milwaukee Drop Off Centers</a></h3><p class=""area"">City of Milwaukee, Wisconsin</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>This city page describes a residential and property-owner program. It leaves the hired hauler’s access unclear. Ask the hauler to identify the receiving facility and confirm the terms.</p>
           <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/DropOff"">City of Milwaukee Drop Off Centers</a></p>
         </li>
-        <li data-operator=""wauwatosa-curb"" data-fit=""ask"">
-          <h3>Wauwatosa special collection</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+        <li data-operator=""wauwatosa-curb"" data-fit=""ask"" id=""answer--commercial-hauler--wauwatosa-curb"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--commercial-hauler--wauwatosa-curb"" aria-label=""Wauwatosa special collection — Load handled by a paid hauler"">Wauwatosa special collection</a></h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>Confirm whether the city will serve the address and what needs a separate hauler. Obtain a written scope from any contractor you separately hire.</p>
           <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/special-collection/"">Wauwatosa special collection</a></p>
         </li>
-        <li data-operator=""wauwatosa-drop-off"" data-fit=""excluded"">
-          <h3>Wauwatosa Drop Off Center</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+        <li data-operator=""wauwatosa-drop-off"" data-fit=""excluded"" id=""answer--commercial-hauler--wauwatosa-drop-off"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--commercial-hauler--wauwatosa-drop-off"" aria-label=""Wauwatosa Drop Off Center — Load handled by a paid hauler"">Wauwatosa Drop Off Center</a></h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>Wauwatosa limits this center to household use and explicitly excludes commercial and contractor vehicles.</p>
           <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/drop-off-center/"">Wauwatosa Drop Off Center</a></p>
@@ -1009,38 +1009,38 @@
     <section id=""raw-meat"" class=""comparison"" aria-labelledby=""raw-meat-title"" tabindex=""-1"">
       <h2 id=""raw-meat-title"">Raw meat</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""milwaukee"" data-fit=""excluded"">
-          <h3>Milwaukee food scrap drop-off</h3><p class=""area"">Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee"" data-fit=""excluded"" id=""answer--raw-meat--milwaukee"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--raw-meat--milwaukee"" aria-label=""Milwaukee food scrap drop-off — Raw meat"">Milwaukee food scrap drop-off</a></h3><p class=""area"">Milwaukee, Wisconsin</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The city excludes raw meat.</p>
           <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Yard-Food-Waste/Home-Composting"">Milwaukee collection guide and sign-up</a></p>
         </li>
-        <li data-operator=""madison-streets"" data-fit=""excluded"">
-          <h3>Madison Streets Division sites</h3><p class=""area"">Madison, Wisconsin</p>
+        <li data-operator=""madison-streets"" data-fit=""excluded"" id=""answer--raw-meat--madison-streets"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--raw-meat--madison-streets"" aria-label=""Madison Streets Division sites — Raw meat"">Madison Streets Division sites</a></h3><p class=""area"">Madison, Wisconsin</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>All meat and bones are excluded.</p>
           <p class=""source""><a href=""https://www.cityofmadison.com/streets/food-scraps/compost-food-scraps"">Madison Streets Division food-scrap guide</a></p>
         </li>
-        <li data-operator=""ann-arbor"" data-fit=""ask"">
-          <h3>Ann Arbor community drop-off bins</h3><p class=""area"">Ann Arbor, Michigan</p>
+        <li data-operator=""ann-arbor"" data-fit=""ask"" id=""answer--raw-meat--ann-arbor"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--raw-meat--ann-arbor"" aria-label=""Ann Arbor community drop-off bins — Raw meat"">Ann Arbor community drop-off bins</a></h3><p class=""area"">Ann Arbor, Michigan</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The bin program says all food scraps and lists meat, bones and seafood. Its drop-off list gives no separate raw-meat instruction. Ask the city if you need to confirm this exact case.</p>
           <p class=""source""><a href=""https://www.a2gov.org/trash-recycle-and-compost/compost/food-scrap-drop-off-bins/"">Ann Arbor bin access and materials</a></p>
         </li>
-        <li data-operator=""minneapolis"" data-fit=""ask"">
-          <h3>Minneapolis organics drop-off</h3><p class=""area"">Minneapolis, Minnesota</p>
+        <li data-operator=""minneapolis"" data-fit=""ask"" id=""answer--raw-meat--minneapolis"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--raw-meat--minneapolis"" aria-label=""Minneapolis organics drop-off — Raw meat"">Minneapolis organics drop-off</a></h3><p class=""area"">Minneapolis, Minnesota</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The materials list includes meat, fish and bones generally. Confirm raw meat if you are unsure about a particular item.</p>
           <p class=""source""><a href=""https://www.minneapolismn.gov/resident-services/garbage-recycling-cleanup/organics-recycling/accepted-organics/"">Minneapolis accepted organics</a></p>
         </li>
-        <li data-operator=""durham"" data-fit=""ask"">
-          <h3>Durham city food-scrap containers</h3><p class=""area"">Durham, North Carolina</p>
+        <li data-operator=""durham"" data-fit=""ask"" id=""answer--raw-meat--durham"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--raw-meat--durham"" aria-label=""Durham city food-scrap containers — Raw meat"">Durham city food-scrap containers</a></h3><p class=""area"">Durham, North Carolina</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The drop-off list includes meat generally. The city gives different rules for home composting, so confirm this specific case with staff.</p>
           <p class=""source""><a href=""https://www.durhamnc.gov/935/Composting"">Durham city drop-off instructions</a></p>
         </li>
-        <li data-operator=""carrboro"" data-fit=""ask"">
-          <h3>Carrboro Town Hall drop-off</h3><p class=""area"">Carrboro, North Carolina</p>
+        <li data-operator=""carrboro"" data-fit=""ask"" id=""answer--raw-meat--carrboro"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--raw-meat--carrboro"" aria-label=""Carrboro Town Hall drop-off — Raw meat"">Carrboro Town Hall drop-off</a></h3><p class=""area"">Carrboro, North Carolina</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The county lists meat and fish products. Call the county for confirmation if you need a specific raw-meat rule.</p>
           <p class=""source""><a href=""https://www.orangecountync.gov/2693/Food-Waste-Drop-Off-Sites"">Orange County food-waste drop-off sites</a></p>
@@ -1051,38 +1051,38 @@
     <section id=""cooked-meat"" class=""comparison"" aria-labelledby=""cooked-meat-title"" tabindex=""-1"">
       <h2 id=""cooked-meat-title"">Cooked meat</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""milwaukee"" data-fit=""listed"">
-          <h3>Milwaukee food scrap drop-off</h3><p class=""area"">Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee"" data-fit=""listed"" id=""answer--cooked-meat--milwaukee"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--cooked-meat--milwaukee"" aria-label=""Milwaukee food scrap drop-off — Cooked meat"">Milwaukee food scrap drop-off</a></h3><p class=""area"">Milwaukee, Wisconsin</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>Cooked meat and animal or fish bones are on the city’s accepted list.</p>
           <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Yard-Food-Waste/Home-Composting"">Milwaukee collection guide and sign-up</a></p>
         </li>
-        <li data-operator=""madison-streets"" data-fit=""excluded"">
-          <h3>Madison Streets Division sites</h3><p class=""area"">Madison, Wisconsin</p>
+        <li data-operator=""madison-streets"" data-fit=""excluded"" id=""answer--cooked-meat--madison-streets"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--cooked-meat--madison-streets"" aria-label=""Madison Streets Division sites — Cooked meat"">Madison Streets Division sites</a></h3><p class=""area"">Madison, Wisconsin</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The food-scrap carts exclude cooked meat and bones.</p>
           <p class=""source""><a href=""https://www.cityofmadison.com/streets/food-scraps/compost-food-scraps"">Madison Streets Division food-scrap guide</a></p>
         </li>
-        <li data-operator=""ann-arbor"" data-fit=""listed"">
-          <h3>Ann Arbor community drop-off bins</h3><p class=""area"">Ann Arbor, Michigan</p>
+        <li data-operator=""ann-arbor"" data-fit=""listed"" id=""answer--cooked-meat--ann-arbor"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--cooked-meat--ann-arbor"" aria-label=""Ann Arbor community drop-off bins — Cooked meat"">Ann Arbor community drop-off bins</a></h3><p class=""area"">Ann Arbor, Michigan</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The city includes meat and bones in the bin program.</p>
           <p class=""source""><a href=""https://www.a2gov.org/trash-recycle-and-compost/compost/food-scrap-drop-off-bins/"">Ann Arbor bin access and materials</a></p>
         </li>
-        <li data-operator=""minneapolis"" data-fit=""listed"">
-          <h3>Minneapolis organics drop-off</h3><p class=""area"">Minneapolis, Minnesota</p>
+        <li data-operator=""minneapolis"" data-fit=""listed"" id=""answer--cooked-meat--minneapolis"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--cooked-meat--minneapolis"" aria-label=""Minneapolis organics drop-off — Cooked meat"">Minneapolis organics drop-off</a></h3><p class=""area"">Minneapolis, Minnesota</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The city lists meat, fish and bones among accepted organics.</p>
           <p class=""source""><a href=""https://www.minneapolismn.gov/resident-services/garbage-recycling-cleanup/organics-recycling/accepted-organics/"">Minneapolis accepted organics</a></p>
         </li>
-        <li data-operator=""durham"" data-fit=""listed"">
-          <h3>Durham city food-scrap containers</h3><p class=""area"">Durham, North Carolina</p>
+        <li data-operator=""durham"" data-fit=""listed"" id=""answer--cooked-meat--durham"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--cooked-meat--durham"" aria-label=""Durham city food-scrap containers — Cooked meat"">Durham city food-scrap containers</a></h3><p class=""area"">Durham, North Carolina</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The drop-off list includes residential meat scraps.</p>
           <p class=""source""><a href=""https://www.durhamnc.gov/935/Composting"">Durham city drop-off instructions</a></p>
         </li>
-        <li data-operator=""carrboro"" data-fit=""listed"">
-          <h3>Carrboro Town Hall drop-off</h3><p class=""area"">Carrboro, North Carolina</p>
+        <li data-operator=""carrboro"" data-fit=""listed"" id=""answer--cooked-meat--carrboro"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--cooked-meat--carrboro"" aria-label=""Carrboro Town Hall drop-off — Cooked meat"">Carrboro Town Hall drop-off</a></h3><p class=""area"">Carrboro, North Carolina</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The county includes meat and small chicken and fish bones in its accepted list.</p>
           <p class=""source""><a href=""https://www.orangecountync.gov/2693/Food-Waste-Drop-Off-Sites"">Orange County food-waste drop-off sites</a></p>
@@ -1093,38 +1093,38 @@
     <section id=""brown-paper-bag"" class=""comparison"" aria-labelledby=""brown-paper-bag-title"" tabindex=""-1"">
       <h2 id=""brown-paper-bag-title"">Brown paper bag left in the bin</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""milwaukee"" data-fit=""listed"">
-          <h3>Milwaukee food scrap drop-off</h3><p class=""area"">Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee"" data-fit=""listed"" id=""answer--brown-paper-bag--milwaukee"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--brown-paper-bag--milwaukee"" aria-label=""Milwaukee food scrap drop-off — Brown paper bag left in the bin"">Milwaukee food scrap drop-off</a></h3><p class=""area"">Milwaukee, Wisconsin</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The city lists brown paper bags among accepted items.</p>
           <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Yard-Food-Waste/Home-Composting"">Milwaukee collection guide and sign-up</a></p>
         </li>
-        <li data-operator=""madison-streets"" data-fit=""excluded"">
-          <h3>Madison Streets Division sites</h3><p class=""area"">Madison, Wisconsin</p>
+        <li data-operator=""madison-streets"" data-fit=""excluded"" id=""answer--brown-paper-bag--madison-streets"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--brown-paper-bag--madison-streets"" aria-label=""Madison Streets Division sites — Brown paper bag left in the bin"">Madison Streets Division sites</a></h3><p class=""area"">Madison, Wisconsin</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The city says to empty the contents into the cart and keep paper bags out.</p>
           <p class=""source""><a href=""https://www.cityofmadison.com/streets/food-scraps/compost-food-scraps"">Madison Streets Division food-scrap guide</a></p>
         </li>
-        <li data-operator=""ann-arbor"" data-fit=""listed"">
-          <h3>Ann Arbor community drop-off bins</h3><p class=""area"">Ann Arbor, Michigan</p>
+        <li data-operator=""ann-arbor"" data-fit=""listed"" id=""answer--brown-paper-bag--ann-arbor"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--brown-paper-bag--ann-arbor"" aria-label=""Ann Arbor community drop-off bins — Brown paper bag left in the bin"">Ann Arbor community drop-off bins</a></h3><p class=""area"">Ann Arbor, Michigan</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The drop-off announcement allows loose scraps or scraps in brown paper bags.</p>
           <p class=""source""><a href=""https://www.a2gov.org/news/posts/composting-access-expands-with-community-food-scrap-drop-off-bins/"">Ann Arbor program announcement and bag instructions</a></p>
         </li>
-        <li data-operator=""minneapolis"" data-fit=""listed"">
-          <h3>Minneapolis organics drop-off</h3><p class=""area"">Minneapolis, Minnesota</p>
+        <li data-operator=""minneapolis"" data-fit=""listed"" id=""answer--brown-paper-bag--minneapolis"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--brown-paper-bag--minneapolis"" aria-label=""Minneapolis organics drop-off — Brown paper bag left in the bin"">Minneapolis organics drop-off</a></h3><p class=""area"">Minneapolis, Minnesota</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The drop-off instructions allow compostable paper bags.</p>
           <p class=""source""><a href=""https://www.minneapolismn.gov/resident-services/garbage-recycling-cleanup/organics-recycling/organics-drop-off-sites/"">Minneapolis organics drop-off sites</a></p>
         </li>
-        <li data-operator=""durham"" data-fit=""unknown"">
-          <h3>Durham city food-scrap containers</h3><p class=""area"">Durham, North Carolina</p>
+        <li data-operator=""durham"" data-fit=""unknown"" id=""answer--brown-paper-bag--durham"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--brown-paper-bag--durham"" aria-label=""Durham city food-scrap containers — Brown paper bag left in the bin"">Durham city food-scrap containers</a></h3><p class=""area"">Durham, North Carolina</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.durhamnc.gov/935/Composting"">Check with Durham city food-scrap containers</a></p>
         </li>
-        <li data-operator=""carrboro"" data-fit=""ask"">
-          <h3>Carrboro Town Hall drop-off</h3><p class=""area"">Carrboro, North Carolina</p>
+        <li data-operator=""carrboro"" data-fit=""ask"" id=""answer--brown-paper-bag--carrboro"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--brown-paper-bag--carrboro"" aria-label=""Carrboro Town Hall drop-off — Brown paper bag left in the bin"">Carrboro Town Hall drop-off</a></h3><p class=""area"">Carrboro, North Carolina</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The county lists soiled paper food packaging that is entirely paper. Ask about the specific bag before dropping it off.</p>
           <p class=""source""><a href=""https://www.orangecountync.gov/2693/Food-Waste-Drop-Off-Sites"">Orange County food-waste drop-off sites</a></p>
@@ -1135,38 +1135,38 @@
     <section id=""compostable-plastic-bag"" class=""comparison"" aria-labelledby=""compostable-plastic-bag-title"" tabindex=""-1"">
       <h2 id=""compostable-plastic-bag-title"">Certified compostable plastic bag</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""milwaukee"" data-fit=""excluded"">
-          <h3>Milwaukee food scrap drop-off</h3><p class=""area"">Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee"" data-fit=""excluded"" id=""answer--compostable-plastic-bag--milwaukee"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--compostable-plastic-bag--milwaukee"" aria-label=""Milwaukee food scrap drop-off — Certified compostable plastic bag"">Milwaukee food scrap drop-off</a></h3><p class=""area"">Milwaukee, Wisconsin</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The city excludes plastic and biodegradable products. The accepted list identifies brown paper bags as its collection option.</p>
           <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Yard-Food-Waste/Home-Composting"">Milwaukee collection guide and sign-up</a></p>
         </li>
-        <li data-operator=""madison-streets"" data-fit=""excluded"">
-          <h3>Madison Streets Division sites</h3><p class=""area"">Madison, Wisconsin</p>
+        <li data-operator=""madison-streets"" data-fit=""excluded"" id=""answer--compostable-plastic-bag--madison-streets"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--compostable-plastic-bag--madison-streets"" aria-label=""Madison Streets Division sites — Certified compostable plastic bag"">Madison Streets Division sites</a></h3><p class=""area"">Madison, Wisconsin</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The city explicitly excludes compostable plastic bags.</p>
           <p class=""source""><a href=""https://www.cityofmadison.com/streets/food-scraps/compost-food-scraps"">Madison Streets Division food-scrap guide</a></p>
         </li>
-        <li data-operator=""ann-arbor"" data-fit=""ask"">
-          <h3>Ann Arbor community drop-off bins</h3><p class=""area"">Ann Arbor, Michigan</p>
+        <li data-operator=""ann-arbor"" data-fit=""ask"" id=""answer--compostable-plastic-bag--ann-arbor"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--compostable-plastic-bag--ann-arbor"" aria-label=""Ann Arbor community drop-off bins — Certified compostable plastic bag"">Ann Arbor community drop-off bins</a></h3><p class=""area"">Ann Arbor, Michigan</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The city’s drop-off announcement describes loose scraps and brown paper bags. Confirm any certified plastic liner for this route.</p>
           <p class=""source""><a href=""https://www.a2gov.org/news/posts/composting-access-expands-with-community-food-scrap-drop-off-bins/"">Ann Arbor program announcement and bag instructions</a></p>
         </li>
-        <li data-operator=""minneapolis"" data-fit=""listed"">
-          <h3>Minneapolis organics drop-off</h3><p class=""area"">Minneapolis, Minnesota</p>
+        <li data-operator=""minneapolis"" data-fit=""listed"" id=""answer--compostable-plastic-bag--minneapolis"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--compostable-plastic-bag--minneapolis"" aria-label=""Minneapolis organics drop-off — Certified compostable plastic bag"">Minneapolis organics drop-off</a></h3><p class=""area"">Minneapolis, Minnesota</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The city accepts compostable plastic bags with the BPI mark. Check the linked list for its marking requirements.</p>
           <p class=""source""><a href=""https://www.minneapolismn.gov/resident-services/garbage-recycling-cleanup/organics-recycling/accepted-organics/"">Minneapolis accepted organics</a></p>
         </li>
-        <li data-operator=""durham"" data-fit=""ask"">
-          <h3>Durham city food-scrap containers</h3><p class=""area"">Durham, North Carolina</p>
+        <li data-operator=""durham"" data-fit=""ask"" id=""answer--compostable-plastic-bag--durham"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--compostable-plastic-bag--durham"" aria-label=""Durham city food-scrap containers — Certified compostable plastic bag"">Durham city food-scrap containers</a></h3><p class=""area"">Durham, North Carolina</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The city excludes plastic generally. Its HTML list does not discuss this exact certification. Follow the specific bin directions before using a liner.</p>
           <p class=""source""><a href=""https://www.durhamnc.gov/935/Composting"">Durham city drop-off instructions</a></p>
         </li>
-        <li data-operator=""carrboro"" data-fit=""excluded"">
-          <h3>Carrboro Town Hall drop-off</h3><p class=""area"">Carrboro, North Carolina</p>
+        <li data-operator=""carrboro"" data-fit=""excluded"" id=""answer--compostable-plastic-bag--carrboro"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--compostable-plastic-bag--carrboro"" aria-label=""Carrboro Town Hall drop-off — Certified compostable plastic bag"">Carrboro Town Hall drop-off</a></h3><p class=""area"">Carrboro, North Carolina</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The county excludes compostable plastic bags even when BPI-certified.</p>
           <p class=""source""><a href=""https://www.orangecountync.gov/2693/Food-Waste-Drop-Off-Sites"">Orange County food-waste drop-off sites</a></p>
@@ -1177,38 +1177,38 @@
     <section id=""tea-bag"" class=""comparison"" aria-labelledby=""tea-bag-title"" tabindex=""-1"">
       <h2 id=""tea-bag-title"">Used tea bag</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""milwaukee"" data-fit=""excluded"">
-          <h3>Milwaukee food scrap drop-off</h3><p class=""area"">Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee"" data-fit=""excluded"" id=""answer--tea-bag--milwaukee"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tea-bag--milwaukee"" aria-label=""Milwaukee food scrap drop-off — Used tea bag"">Milwaukee food scrap drop-off</a></h3><p class=""area"">Milwaukee, Wisconsin</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The city excludes tea bags and accepts loose tea leaves.</p>
           <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Yard-Food-Waste/Home-Composting"">Milwaukee collection guide and sign-up</a></p>
         </li>
-        <li data-operator=""madison-streets"" data-fit=""excluded"">
-          <h3>Madison Streets Division sites</h3><p class=""area"">Madison, Wisconsin</p>
+        <li data-operator=""madison-streets"" data-fit=""excluded"" id=""answer--tea-bag--madison-streets"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tea-bag--madison-streets"" aria-label=""Madison Streets Division sites — Used tea bag"">Madison Streets Division sites</a></h3><p class=""area"">Madison, Wisconsin</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The site accepts loose tea and excludes tea bags.</p>
           <p class=""source""><a href=""https://www.cityofmadison.com/streets/food-scraps/compost-food-scraps"">Madison Streets Division food-scrap guide</a></p>
         </li>
-        <li data-operator=""ann-arbor"" data-fit=""excluded"">
-          <h3>Ann Arbor community drop-off bins</h3><p class=""area"">Ann Arbor, Michigan</p>
+        <li data-operator=""ann-arbor"" data-fit=""excluded"" id=""answer--tea-bag--ann-arbor"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tea-bag--ann-arbor"" aria-label=""Ann Arbor community drop-off bins — Used tea bag"">Ann Arbor community drop-off bins</a></h3><p class=""area"">Ann Arbor, Michigan</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The bin list identifies loose tea and excludes tea bags.</p>
           <p class=""source""><a href=""https://www.a2gov.org/trash-recycle-and-compost/compost/food-scrap-drop-off-bins/"">Ann Arbor bin access and materials</a></p>
         </li>
-        <li data-operator=""minneapolis"" data-fit=""ask"">
-          <h3>Minneapolis organics drop-off</h3><p class=""area"">Minneapolis, Minnesota</p>
+        <li data-operator=""minneapolis"" data-fit=""ask"" id=""answer--tea-bag--minneapolis"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tea-bag--minneapolis"" aria-label=""Minneapolis organics drop-off — Used tea bag"">Minneapolis organics drop-off</a></h3><p class=""area"">Minneapolis, Minnesota</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The accepted-organics illustration includes a tea bag. The text list gives no bag-material instructions. Ask about your type before dropping it off.</p>
           <p class=""source""><a href=""https://www.minneapolismn.gov/resident-services/garbage-recycling-cleanup/organics-recycling/accepted-organics/"">Minneapolis accepted organics</a></p>
         </li>
-        <li data-operator=""durham"" data-fit=""unknown"">
-          <h3>Durham city food-scrap containers</h3><p class=""area"">Durham, North Carolina</p>
+        <li data-operator=""durham"" data-fit=""unknown"" id=""answer--tea-bag--durham"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tea-bag--durham"" aria-label=""Durham city food-scrap containers — Used tea bag"">Durham city food-scrap containers</a></h3><p class=""area"">Durham, North Carolina</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.durhamnc.gov/935/Composting"">Check with Durham city food-scrap containers</a></p>
         </li>
-        <li data-operator=""carrboro"" data-fit=""listed"">
-          <h3>Carrboro Town Hall drop-off</h3><p class=""area"">Carrboro, North Carolina</p>
+        <li data-operator=""carrboro"" data-fit=""listed"" id=""answer--tea-bag--carrboro"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tea-bag--carrboro"" aria-label=""Carrboro Town Hall drop-off — Used tea bag"">Carrboro Town Hall drop-off</a></h3><p class=""area"">Carrboro, North Carolina</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The county includes tea bags and asks users to remove staples.</p>
           <p class=""source""><a href=""https://www.orangecountync.gov/2693/Food-Waste-Drop-Off-Sites"">Orange County food-waste drop-off sites</a></p>
@@ -1305,44 +1305,44 @@
     <section id=""usb"" class=""comparison"" aria-labelledby=""usb-title"" tabindex=""-1"">
       <h2 id=""usb-title"">Scan to a USB drive</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""milwaukee"" data-fit=""listed"">
-          <h3>Milwaukee Public Library</h3><p class=""area"">Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee"" data-fit=""listed"" id=""answer--usb--milwaukee"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--usb--milwaukee"" aria-label=""Milwaukee Public Library — Scan to a USB drive"">Milwaukee Public Library</a></h3><p class=""area"">Milwaukee, Wisconsin</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>Save scans to a flash drive at no charge.</p>
           <p class=""source""><a href=""https://mpl.org/library/print.php"">Milwaukee Public Library service guide</a></p>
         </li>
-        <li data-operator=""chapel-hill"" data-fit=""listed"">
-          <h3>Chapel Hill Public Library</h3><p class=""area"">Chapel Hill, North Carolina</p>
+        <li data-operator=""chapel-hill"" data-fit=""listed"" id=""answer--usb--chapel-hill"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--usb--chapel-hill"" aria-label=""Chapel Hill Public Library — Scan to a USB drive"">Chapel Hill Public Library</a></h3><p class=""area"">Chapel Hill, North Carolina</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>Use a memory stick at the printer/copier scanner. The library lists scanning as free.</p>
           <p class=""source""><a href=""https://www.chapelhillpubliclibrary.org/computers-printing"">Chapel Hill Public Library service guide</a></p>
         </li>
-        <li data-operator=""brunswick"" data-fit=""listed"">
-          <h3>Brunswick County Library</h3><p class=""area"">Brunswick County, North Carolina</p>
+        <li data-operator=""brunswick"" data-fit=""listed"" id=""answer--usb--brunswick"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--usb--brunswick"" aria-label=""Brunswick County Library — Scan to a USB drive"">Brunswick County Library</a></h3><p class=""area"">Brunswick County, North Carolina</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The library lists scan-to-USB at 10 cents per page.</p>
           <p class=""source""><a href=""https://brunswickcountync.gov/170/Library-Services"">Brunswick County Library service guide</a></p>
         </li>
-        <li data-operator=""addison"" data-fit=""listed"">
-          <h3>Addison Public Library</h3><p class=""area"">Addison, Illinois</p>
+        <li data-operator=""addison"" data-fit=""listed"" id=""answer--usb--addison"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--usb--addison"" aria-label=""Addison Public Library — Scan to a USB drive"">Addison Public Library</a></h3><p class=""area"">Addison, Illinois</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The library lists free scan-to-USB.</p>
           <p class=""source""><a href=""https://www.addisonlibrary.org/library-services/print-scan-fax"">Addison Public Library service guide</a></p>
         </li>
-        <li data-operator=""durham"" data-fit=""unknown"">
-          <h3>Durham County Library</h3><p class=""area"">Durham County, North Carolina</p>
+        <li data-operator=""durham"" data-fit=""unknown"" id=""answer--usb--durham"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--usb--durham"" aria-label=""Durham County Library — Scan to a USB drive"">Durham County Library</a></h3><p class=""area"">Durham County, North Carolina</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://durhamcountylibrary.org/technology/scanner/"">Check with Durham County Library</a></p>
         </li>
-        <li data-operator=""beaufort"" data-fit=""listed"">
-          <h3>Beaufort County Library</h3><p class=""area"">Beaufort County, South Carolina</p>
+        <li data-operator=""beaufort"" data-fit=""listed"" id=""answer--usb--beaufort"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--usb--beaufort"" aria-label=""Beaufort County Library — Scan to a USB drive"">Beaufort County Library</a></h3><p class=""area"">Beaufort County, South Carolina</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The self-service station can save scans to a USB drive.</p>
           <p class=""source""><a href=""https://www.beaufortcountylibrary.org/about/faqs"">Beaufort County Library service guide</a></p>
         </li>
-        <li data-operator=""southern-pines"" data-fit=""listed"">
-          <h3>Southern Pines Public Library</h3><p class=""area"">Southern Pines, North Carolina</p>
+        <li data-operator=""southern-pines"" data-fit=""listed"" id=""answer--usb--southern-pines"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--usb--southern-pines"" aria-label=""Southern Pines Public Library — Scan to a USB drive"">Southern Pines Public Library</a></h3><p class=""area"">Southern Pines, North Carolina</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The technology guide lists scanning to a thumb drive.</p>
           <p class=""source""><a href=""https://www.southernpines.net/601/Technology"">Southern Pines Public Library service guide</a></p>
@@ -1353,44 +1353,44 @@
     <section id=""email"" class=""comparison"" aria-labelledby=""email-title"" tabindex=""-1"">
       <h2 id=""email-title"">Scan directly to email</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""milwaukee"" data-fit=""listed"">
-          <h3>Milwaukee Public Library</h3><p class=""area"">Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee"" data-fit=""listed"" id=""answer--email--milwaukee"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--email--milwaukee"" aria-label=""Milwaukee Public Library — Scan directly to email"">Milwaukee Public Library</a></h3><p class=""area"">Milwaukee, Wisconsin</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The library lists free scan-to-email.</p>
           <p class=""source""><a href=""https://mpl.org/library/print.php"">Milwaukee Public Library service guide</a></p>
         </li>
-        <li data-operator=""chapel-hill"" data-fit=""listed"">
-          <h3>Chapel Hill Public Library</h3><p class=""area"">Chapel Hill, North Carolina</p>
+        <li data-operator=""chapel-hill"" data-fit=""listed"" id=""answer--email--chapel-hill"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--email--chapel-hill"" aria-label=""Chapel Hill Public Library — Scan directly to email"">Chapel Hill Public Library</a></h3><p class=""area"">Chapel Hill, North Carolina</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The printer/copier can send a scan to an email address at no charge.</p>
           <p class=""source""><a href=""https://www.chapelhillpubliclibrary.org/computers-printing"">Chapel Hill Public Library service guide</a></p>
         </li>
-        <li data-operator=""brunswick"" data-fit=""excluded"">
-          <h3>Brunswick County Library</h3><p class=""area"">Brunswick County, North Carolina</p>
+        <li data-operator=""brunswick"" data-fit=""excluded"" id=""answer--email--brunswick"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--email--brunswick"" aria-label=""Brunswick County Library — Scan directly to email"">Brunswick County Library</a></h3><p class=""area"">Brunswick County, North Carolina</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The library’s service page says it is currently unable to scan directly to email.</p>
           <p class=""source""><a href=""https://brunswickcountync.gov/170/Library-Services"">Brunswick County Library service guide</a></p>
         </li>
-        <li data-operator=""addison"" data-fit=""listed"">
-          <h3>Addison Public Library</h3><p class=""area"">Addison, Illinois</p>
+        <li data-operator=""addison"" data-fit=""listed"" id=""answer--email--addison"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--email--addison"" aria-label=""Addison Public Library — Scan directly to email"">Addison Public Library</a></h3><p class=""area"">Addison, Illinois</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>Scan-to-email is free.</p>
           <p class=""source""><a href=""https://www.addisonlibrary.org/library-services/print-scan-fax"">Addison Public Library service guide</a></p>
         </li>
-        <li data-operator=""durham"" data-fit=""unknown"">
-          <h3>Durham County Library</h3><p class=""area"">Durham County, North Carolina</p>
+        <li data-operator=""durham"" data-fit=""unknown"" id=""answer--email--durham"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--email--durham"" aria-label=""Durham County Library — Scan directly to email"">Durham County Library</a></h3><p class=""area"">Durham County, North Carolina</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://durhamcountylibrary.org/technology/scanner/"">Check with Durham County Library</a></p>
         </li>
-        <li data-operator=""beaufort"" data-fit=""listed"">
-          <h3>Beaufort County Library</h3><p class=""area"">Beaufort County, South Carolina</p>
+        <li data-operator=""beaufort"" data-fit=""listed"" id=""answer--email--beaufort"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--email--beaufort"" aria-label=""Beaufort County Library — Scan directly to email"">Beaufort County Library</a></h3><p class=""area"">Beaufort County, South Carolina</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The FAQ lists an email option at the self-service station.</p>
           <p class=""source""><a href=""https://www.beaufortcountylibrary.org/about/faqs"">Beaufort County Library service guide</a></p>
         </li>
-        <li data-operator=""southern-pines"" data-fit=""listed"">
-          <h3>Southern Pines Public Library</h3><p class=""area"">Southern Pines, North Carolina</p>
+        <li data-operator=""southern-pines"" data-fit=""listed"" id=""answer--email--southern-pines"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--email--southern-pines"" aria-label=""Southern Pines Public Library — Scan directly to email"">Southern Pines Public Library</a></h3><p class=""area"">Southern Pines, North Carolina</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The technology guide lists scanning directly to an email address.</p>
           <p class=""source""><a href=""https://www.southernpines.net/601/Technology"">Southern Pines Public Library service guide</a></p>
@@ -1401,44 +1401,44 @@
     <section id=""no-card"" class=""comparison"" aria-labelledby=""no-card-title"" tabindex=""-1"">
       <h2 id=""no-card-title"">Scan without a library card</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""milwaukee"" data-fit=""ask"">
-          <h3>Milwaukee Public Library</h3><p class=""area"">Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee"" data-fit=""ask"" id=""answer--no-card--milwaukee"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--no-card--milwaukee"" aria-label=""Milwaukee Public Library — Scan without a library card"">Milwaukee Public Library</a></h3><p class=""area"">Milwaukee, Wisconsin</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The guest option on the page is for printing. Confirm whether your branch’s scanning station requires a card.</p>
           <p class=""source""><a href=""https://mpl.org/library/print.php"">Milwaukee Public Library service guide</a></p>
         </li>
-        <li data-operator=""chapel-hill"" data-fit=""ask"">
-          <h3>Chapel Hill Public Library</h3><p class=""area"">Chapel Hill, North Carolina</p>
+        <li data-operator=""chapel-hill"" data-fit=""ask"" id=""answer--no-card--chapel-hill"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--no-card--chapel-hill"" aria-label=""Chapel Hill Public Library — Scan without a library card"">Chapel Hill Public Library</a></h3><p class=""area"">Chapel Hill, North Carolina</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The page explicitly waives a card for public computers and describes public scanning separately. Confirm the scanner’s access details.</p>
           <p class=""source""><a href=""https://www.chapelhillpubliclibrary.org/computers-printing"">Chapel Hill Public Library service guide</a></p>
         </li>
-        <li data-operator=""brunswick"" data-fit=""ask"">
-          <h3>Brunswick County Library</h3><p class=""area"">Brunswick County, North Carolina</p>
+        <li data-operator=""brunswick"" data-fit=""ask"" id=""answer--no-card--brunswick"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--no-card--brunswick"" aria-label=""Brunswick County Library — Scan without a library card"">Brunswick County Library</a></h3><p class=""area"">Brunswick County, North Carolina</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The county has guest computer access. Its separate USB scanning entry does not specify whether you need a card.</p>
           <p class=""source""><a href=""https://brunswickcountync.gov/170/Library-Services"">Brunswick County Library service guide</a></p>
         </li>
-        <li data-operator=""addison"" data-fit=""listed"">
-          <h3>Addison Public Library</h3><p class=""area"">Addison, Illinois</p>
+        <li data-operator=""addison"" data-fit=""listed"" id=""answer--no-card--addison"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--no-card--addison"" aria-label=""Addison Public Library — Scan without a library card"">Addison Public Library</a></h3><p class=""area"">Addison, Illinois</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The library says scanning is available without a library card.</p>
           <p class=""source""><a href=""https://www.addisonlibrary.org/library-services/print-scan-fax"">Addison Public Library service guide</a></p>
         </li>
-        <li data-operator=""durham"" data-fit=""unknown"">
-          <h3>Durham County Library</h3><p class=""area"">Durham County, North Carolina</p>
+        <li data-operator=""durham"" data-fit=""unknown"" id=""answer--no-card--durham"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--no-card--durham"" aria-label=""Durham County Library — Scan without a library card"">Durham County Library</a></h3><p class=""area"">Durham County, North Carolina</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://durhamcountylibrary.org/technology/scanner/"">Check with Durham County Library</a></p>
         </li>
-        <li data-operator=""beaufort"" data-fit=""unknown"">
-          <h3>Beaufort County Library</h3><p class=""area"">Beaufort County, South Carolina</p>
+        <li data-operator=""beaufort"" data-fit=""unknown"" id=""answer--no-card--beaufort"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--no-card--beaufort"" aria-label=""Beaufort County Library — Scan without a library card"">Beaufort County Library</a></h3><p class=""area"">Beaufort County, South Carolina</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.beaufortcountylibrary.org/about/faqs"">Check with Beaufort County Library</a></p>
         </li>
-        <li data-operator=""southern-pines"" data-fit=""listed"">
-          <h3>Southern Pines Public Library</h3><p class=""area"">Southern Pines, North Carolina</p>
+        <li data-operator=""southern-pines"" data-fit=""listed"" id=""answer--no-card--southern-pines"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--no-card--southern-pines"" aria-label=""Southern Pines Public Library — Scan without a library card"">Southern Pines Public Library</a></h3><p class=""area"">Southern Pines, North Carolina</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The library explicitly says scanning is available without a card.</p>
           <p class=""source""><a href=""https://www.southernpines.net/601/Technology"">Southern Pines Public Library service guide</a></p>
@@ -1449,44 +1449,44 @@
     <section id=""tabloid"" class=""comparison"" aria-labelledby=""tabloid-title"" tabindex=""-1"">
       <h2 id=""tabloid-title"">Scan an 11 × 17 inch page</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""milwaukee"" data-fit=""unknown"">
-          <h3>Milwaukee Public Library</h3><p class=""area"">Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee"" data-fit=""unknown"" id=""answer--tabloid--milwaukee"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tabloid--milwaukee"" aria-label=""Milwaukee Public Library — Scan an 11 × 17 inch page"">Milwaukee Public Library</a></h3><p class=""area"">Milwaukee, Wisconsin</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://mpl.org/library/print.php"">Check with Milwaukee Public Library</a></p>
         </li>
-        <li data-operator=""chapel-hill"" data-fit=""unknown"">
-          <h3>Chapel Hill Public Library</h3><p class=""area"">Chapel Hill, North Carolina</p>
+        <li data-operator=""chapel-hill"" data-fit=""unknown"" id=""answer--tabloid--chapel-hill"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tabloid--chapel-hill"" aria-label=""Chapel Hill Public Library — Scan an 11 × 17 inch page"">Chapel Hill Public Library</a></h3><p class=""area"">Chapel Hill, North Carolina</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.chapelhillpubliclibrary.org/computers-printing"">Check with Chapel Hill Public Library</a></p>
         </li>
-        <li data-operator=""brunswick"" data-fit=""unknown"">
-          <h3>Brunswick County Library</h3><p class=""area"">Brunswick County, North Carolina</p>
+        <li data-operator=""brunswick"" data-fit=""unknown"" id=""answer--tabloid--brunswick"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tabloid--brunswick"" aria-label=""Brunswick County Library — Scan an 11 × 17 inch page"">Brunswick County Library</a></h3><p class=""area"">Brunswick County, North Carolina</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://brunswickcountync.gov/170/Library-Services"">Check with Brunswick County Library</a></p>
         </li>
-        <li data-operator=""addison"" data-fit=""listed"">
-          <h3>Addison Public Library</h3><p class=""area"">Addison, Illinois</p>
+        <li data-operator=""addison"" data-fit=""listed"" id=""answer--tabloid--addison"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tabloid--addison"" aria-label=""Addison Public Library — Scan an 11 × 17 inch page"">Addison Public Library</a></h3><p class=""area"">Addison, Illinois</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The library lists a flatbed book scanner for items up to 11 × 17 inches.</p>
           <p class=""source""><a href=""https://www.addisonlibrary.org/library-services/print-scan-fax"">Addison Public Library service guide</a></p>
         </li>
-        <li data-operator=""durham"" data-fit=""excluded"">
-          <h3>Durham County Library</h3><p class=""area"">Durham County, North Carolina</p>
+        <li data-operator=""durham"" data-fit=""excluded"" id=""answer--tabloid--durham"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tabloid--durham"" aria-label=""Durham County Library — Scan an 11 × 17 inch page"">Durham County Library</a></h3><p class=""area"">Durham County, North Carolina</p>
           <p><span class=""fit excluded"">Excluded</span></p>
           <p>The published maximum is legal size (8.5 × 14 inches), smaller than 11 × 17.</p>
           <p class=""source""><a href=""https://durhamcountylibrary.org/technology/scanner/"">Durham County Library service guide</a></p>
         </li>
-        <li data-operator=""beaufort"" data-fit=""unknown"">
-          <h3>Beaufort County Library</h3><p class=""area"">Beaufort County, South Carolina</p>
+        <li data-operator=""beaufort"" data-fit=""unknown"" id=""answer--tabloid--beaufort"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tabloid--beaufort"" aria-label=""Beaufort County Library — Scan an 11 × 17 inch page"">Beaufort County Library</a></h3><p class=""area"">Beaufort County, South Carolina</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.beaufortcountylibrary.org/about/faqs"">Check with Beaufort County Library</a></p>
         </li>
-        <li data-operator=""southern-pines"" data-fit=""unknown"">
-          <h3>Southern Pines Public Library</h3><p class=""area"">Southern Pines, North Carolina</p>
+        <li data-operator=""southern-pines"" data-fit=""unknown"" id=""answer--tabloid--southern-pines"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--tabloid--southern-pines"" aria-label=""Southern Pines Public Library — Scan an 11 × 17 inch page"">Southern Pines Public Library</a></h3><p class=""area"">Southern Pines, North Carolina</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.southernpines.net/601/Technology"">Check with Southern Pines Public Library</a></p>
@@ -1497,44 +1497,44 @@
     <section id=""duplex"" class=""comparison"" aria-labelledby=""duplex-title"" tabindex=""-1"">
       <h2 id=""duplex-title"">Scan both sides through a feeder</h2>
       <ul class=""cards"" role=""list"">
-        <li data-operator=""milwaukee"" data-fit=""unknown"">
-          <h3>Milwaukee Public Library</h3><p class=""area"">Milwaukee, Wisconsin</p>
+        <li data-operator=""milwaukee"" data-fit=""unknown"" id=""answer--duplex--milwaukee"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--duplex--milwaukee"" aria-label=""Milwaukee Public Library — Scan both sides through a feeder"">Milwaukee Public Library</a></h3><p class=""area"">Milwaukee, Wisconsin</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://mpl.org/library/print.php"">Check with Milwaukee Public Library</a></p>
         </li>
-        <li data-operator=""chapel-hill"" data-fit=""unknown"">
-          <h3>Chapel Hill Public Library</h3><p class=""area"">Chapel Hill, North Carolina</p>
+        <li data-operator=""chapel-hill"" data-fit=""unknown"" id=""answer--duplex--chapel-hill"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--duplex--chapel-hill"" aria-label=""Chapel Hill Public Library — Scan both sides through a feeder"">Chapel Hill Public Library</a></h3><p class=""area"">Chapel Hill, North Carolina</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.chapelhillpubliclibrary.org/computers-printing"">Check with Chapel Hill Public Library</a></p>
         </li>
-        <li data-operator=""brunswick"" data-fit=""unknown"">
-          <h3>Brunswick County Library</h3><p class=""area"">Brunswick County, North Carolina</p>
+        <li data-operator=""brunswick"" data-fit=""unknown"" id=""answer--duplex--brunswick"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--duplex--brunswick"" aria-label=""Brunswick County Library — Scan both sides through a feeder"">Brunswick County Library</a></h3><p class=""area"">Brunswick County, North Carolina</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://brunswickcountync.gov/170/Library-Services"">Check with Brunswick County Library</a></p>
         </li>
-        <li data-operator=""addison"" data-fit=""listed"">
-          <h3>Addison Public Library</h3><p class=""area"">Addison, Illinois</p>
+        <li data-operator=""addison"" data-fit=""listed"" id=""answer--duplex--addison"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--duplex--addison"" aria-label=""Addison Public Library — Scan both sides through a feeder"">Addison Public Library</a></h3><p class=""area"">Addison, Illinois</p>
           <p><span class=""fit listed"">Listed by organizer</span></p>
           <p>The library lists a duplex document scanner with a feeder.</p>
           <p class=""source""><a href=""https://www.addisonlibrary.org/library-services/print-scan-fax"">Addison Public Library service guide</a></p>
         </li>
-        <li data-operator=""durham"" data-fit=""ask"">
-          <h3>Durham County Library</h3><p class=""area"">Durham County, North Carolina</p>
+        <li data-operator=""durham"" data-fit=""ask"" id=""answer--duplex--durham"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--duplex--durham"" aria-label=""Durham County Library — Scan both sides through a feeder"">Durham County Library</a></h3><p class=""area"">Durham County, North Carolina</p>
           <p><span class=""fit ask"">Ask first</span></p>
           <p>The library lists a document feeder. The page does not say whether it scans both sides in one pass.</p>
           <p class=""source""><a href=""https://durhamcountylibrary.org/technology/scanner/"">Durham County Library service guide</a></p>
         </li>
-        <li data-operator=""beaufort"" data-fit=""unknown"">
-          <h3>Beaufort County Library</h3><p class=""area"">Beaufort County, South Carolina</p>
+        <li data-operator=""beaufort"" data-fit=""unknown"" id=""answer--duplex--beaufort"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--duplex--beaufort"" aria-label=""Beaufort County Library — Scan both sides through a feeder"">Beaufort County Library</a></h3><p class=""area"">Beaufort County, South Carolina</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.beaufortcountylibrary.org/about/faqs"">Check with Beaufort County Library</a></p>
         </li>
-        <li data-operator=""southern-pines"" data-fit=""unknown"">
-          <h3>Southern Pines Public Library</h3><p class=""area"">Southern Pines, North Carolina</p>
+        <li data-operator=""southern-pines"" data-fit=""unknown"" id=""answer--duplex--southern-pines"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--duplex--southern-pines"" aria-label=""Southern Pines Public Library — Scan both sides through a feeder"">Southern Pines Public Library</a></h3><p class=""area"">Southern Pines, North Carolina</p>
           <p><span class=""fit unknown"">Unconfirmed</span></p>
           <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
           <p class=""source""><a href=""https://www.southernpines.net/601/Technology"">Check with Southern Pines Public Library</a></p>
