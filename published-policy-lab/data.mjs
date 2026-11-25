@@ -1,5 +1,5 @@
 export const catalog = {
-  "snapshotId": "published-policy-examples-20261125-v4",
+  "snapshotId": "published-policy-examples-20261125-v5",
   "checkedOn": "2026-11-25",
   "sources": [
     {
@@ -66,6 +66,18 @@ export const catalog = {
       "id": "durham-holidays",
       "label": "Durham County Library — dated closure and early-closing list",
       "url": "https://durhamcountylibrary.org/hours-and-locations/",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "id": "clemson-mulch",
+      "label": "City of Clemson — brush grinding and mulch rules",
+      "url": "https://www.clemsoncity.org/341/Street-Maintenance",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "id": "wakeforest-woodchips",
+      "label": "Town of Wake Forest — mulch and wood-chip program",
+      "url": "https://www.wakeforestnc.gov/public-works/solid-waste/yard-waste/mulch-compost",
       "checkedOn": "2026-11-25"
     }
   ],
@@ -600,6 +612,89 @@ export const catalog = {
           ]
         }
       }
+    },
+    {
+      "id": "clemson-mulch-program",
+      "recordKind": "program",
+      "name": "City of Clemson — mulch program",
+      "region": "SC",
+      "locality": "Clemson",
+      "jurisdictionId": "us-sc-clemson-city",
+      "address": null,
+      "policies": {
+        "mulch_pickup": {
+          "fit": "described",
+          "summary": "The city describes free mulch pickup for city residents, with self-loading and load limits.",
+          "sourceIds": [
+            "clemson-mulch"
+          ],
+          "conditions": [
+            "Bring identification showing City of Clemson residency. Load your own mulch and cover it with a tarp.",
+            "The stated maximum is one pickup-truck load at a time. Confirm current stock and the collection point with Public Works.",
+            "The page gives different closing times in its pickup and center-hours sections, including a lunch closure. Confirm the pickup hours; no visit window is modeled here."
+          ],
+          "fee": "The checked policy describes pickup mulch as free for city residents; delivery is a separate charged service."
+        },
+        "mulch_delivery": {
+          "fit": "described",
+          "summary": "The city describes a separate paid mulch-delivery option for residents.",
+          "sourceIds": [
+            "clemson-mulch"
+          ],
+          "conditions": [
+            "The published delivery minimum is five cubic yards.",
+            "Confirm resident eligibility, delivery arrangements and current material availability with Public Works. The lab does not quote a total or book delivery."
+          ],
+          "fee": "The posted delivery rate is $10 per cubic yard, with a five-cubic-yard minimum."
+        }
+      }
+    },
+    {
+      "id": "wakeforest-woodchips-program",
+      "recordKind": "program",
+      "name": "Town of Wake Forest — wood-chip program",
+      "region": "NC",
+      "locality": "Wake Forest area",
+      "jurisdictionId": "us-nc-wake-forest-town",
+      "address": null,
+      "policies": {
+        "mulch_pickup": {
+          "fit": "unstated",
+          "summary": "This source describes delivery but does not settle self-pickup arrangements.",
+          "sourceIds": [
+            "wakeforest-woodchips"
+          ]
+        },
+        "mulch_delivery": {
+          "fit": "described",
+          "summary": "The town describes free wood-chip delivery in approximately 20-cubic-yard dump-truck loads.",
+          "sourceIds": [
+            "wakeforest-woodchips"
+          ],
+          "conditions": [
+            "The source limits the program to local community members within 15 miles of town limits. Confirm the actual service boundary with the town; this lab does not calculate eligibility from a ZIP code.",
+            "No smaller quantity is delivered, and the town will not return to collect the delivered material.",
+            "There is a waiting list. Delivery is not offered on weekends or town holidays; no arrival date or holiday calendar is modeled here.",
+            "Confirm the material offered: the source lists leaf mulch separately from wood chips."
+          ],
+          "fee": "The checked policy describes this wood-chip delivery program as free."
+        }
+      },
+      "schedule": {
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "sourceId": "wakeforest-woodchips",
+        "label": "Published delivery constraint: no weekends or town holidays. The waiting list determines actual timing."
+      },
+      "scheduleAppliesTo": [
+        "mulch_delivery"
+      ],
+      "scheduleGroup": "wakeforest-woodchip-delivery"
     }
   ]
 };

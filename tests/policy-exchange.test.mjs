@@ -12,10 +12,10 @@ const rows=csv.trimEnd().split(/\r?\n/).map(line=>{
  return cells;
 });
 const headers=["record_id","place_name","state","locality","jurisdiction_id","task_id","task_label","policy_fit","policy_summary","conditions","fee_description","alternate_place_id","source_urls","checked_on","live_availability","publication_status","record_kind"];
-test("exchange fixture has exact columns and all 25 unique joined records",()=>{
- assert.deepEqual(rows[0],headers);assert.equal(rows.length,26);
+test("exchange fixture has exact columns and all 29 unique joined records",()=>{
+ assert.deepEqual(rows[0],headers);assert.equal(rows.length,30);
  for(const row of rows)assert.equal(row.length,17);
- assert.equal(new Set(rows.slice(1).map(row=>row[0])).size,25);
+ assert.equal(new Set(rows.slice(1).map(row=>row[0])).size,29);
 });
 test("every exchange value agrees with its joined source catalog record",()=>{
  const sources=new Map(catalog.sources.map(source=>[source.id,source.url]));

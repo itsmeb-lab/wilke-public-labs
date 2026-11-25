@@ -1,6 +1,6 @@
-import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v4";
-import { catalog } from "./data.mjs?v=20261125-v4";
-import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v4";
+import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v5";
+import { catalog } from "./data.mjs?v=20261125-v5";
+import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v5";
 
 const task = document.getElementById("task");
 const place = document.getElementById("place");
@@ -46,7 +46,7 @@ function render() {
    card.append(button);nodes.push(card);
   }
   const timing=el("section",null,"timing");
-  timing.append(el("h3","Visit-date check"),el("p",result.timing.label),el("p",result.timing.detail===result.timing.regularLabel?"Use the original source to confirm any exceptions.":result.timing.detail,"help"));
+  timing.append(el("h3","Date check"),el("p",result.timing.label),el("p",result.timing.detail===result.timing.regularLabel?"Use the original source to confirm any exceptions.":result.timing.detail,"help"));
   if(result.timing.regularLabel)timing.append(el("p",result.timing.regularLabel,"help"));
   timing.append(el("p","Live availability: unverified.","availability"));
   nodes.push(timing);
@@ -89,7 +89,9 @@ try{
   hotspot:["hotspot_borrowing","charlotte-hotspots-program",""],
   things:["things_borrowing","clayton-things-program",""],
   meeting:["commercial_meeting","durham-rooms-program",""],
-  early:["private_study","durham-rooms-program","2026-11-25"]
+  early:["private_study","durham-rooms-program","2026-11-25"],
+  mulch:["mulch_pickup","clemson-mulch-program",""],
+  chips:["mulch_delivery","wakeforest-woodchips-program",""]
  };
  for(const button of document.querySelectorAll("[data-example]"))button.addEventListener("click",()=>{
   const chosen=examples[button.dataset.example];
