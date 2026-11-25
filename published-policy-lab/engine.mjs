@@ -8,9 +8,11 @@ export const SERVICES = Object.freeze({
  basic_notary: "Basic notary service",
  printing: "Printing",
  hotspot_borrowing: "Hotspot borrowing",
- things_borrowing: "Library of Things borrowing"
+ things_borrowing: "Library of Things borrowing",
+ commercial_meeting: "Commercial or for-profit meeting",
+ private_study: "Individual or private study"
 });
-export const PROGRAM_SCOPE_NOTE = "Program-level rules. Confirm the pickup location and current item availability with the operator.";
+export const PROGRAM_SCOPE_NOTE = "Program-level rules. Confirm the specific location and current service arrangements with the operator.";
 const own = (o,k) => Object.prototype.hasOwnProperty.call(o,k);
 export function parseVisitDate(value) {
  if (value === "" || value == null) return null;
@@ -64,26 +66,35 @@ export function validateCatalog(catalog) {
   const calendarKey=JSON.stringify([c.jurisdictionId,c.group,c.year]);
   if(calendarKeys.has(calendarKey))throw new Error("Ambiguous closure calendars.");
   calendarKeys.add(calendarKey);
+  if(new Set(c.dates).size!==c.dates.length)throw new Error("Duplicate closure dates.");
   for(const day of c.dates)if(parseVisitDate(day)?.year!==c.year)throw new Error("Closure date outside declared year.");
+  if(c.closureLabel!=null && (typeof c.closureLabel!=="string" || !c.closureLabel.trim()))throw new Error("Invalid closure label.");
+  if(c.dateNotices!=null && !Array.isArray(c.dateNotices))throw new Error("Invalid date notices.");
+  const noticeDates=new Set();
+  for(const notice of c.dateNotices||[]){
+   if(!notice || notice.kind!=="early_closure" || parseVisitDate(notice.date)?.year!==c.year || typeof notice.label!=="string" || !notice.label.trim())throw new Error("Invalid scoped date notice.");
+   if(noticeDates.has(notice.date) || c.dates.includes(notice.date))throw new Error("Ambiguous closure and date notices.");
+   noticeDates.add(notice.date);
+  }
  }
  return true;
 }
 function timingFor(catalog, place, serviceId, visit, fit) {
  const base={availability:"UNVERIFIED",label:"Confirm current hours and staffing with the operator.",kind:"unconfirmed",sourceIds:[]};
  if(fit!=="described")return {...base,kind:fit==="excluded"?"task_excluded":"task_unconfirmed",label:fit==="excluded"?"This task is excluded by the published rule.":"Confirm this task before planning a visit.",detail:"General opening hours do not change a task restriction or resolve an unstated policy."};
- if (!place.schedule || !place.scheduleAppliesTo.includes(serviceId)) return {...base,detail:"No visit window is modeled for this example."};
- const regular=place.schedule;
- base.sourceIds=[regular.sourceId];
- base.regularLabel=regular.label;
- if(!visit) return {...base,detail:"Choose a visit date to compare it with the published weekday pattern."};
+ const regular=place.schedule && place.scheduleAppliesTo.includes(serviceId)?place.schedule:null;
+ if(regular){base.sourceIds=[regular.sourceId];base.regularLabel=regular.label;}
+ if(!visit)return {...base,detail:regular?"Choose a visit date to compare it with the published weekday pattern.":"No visit window is modeled for this example."};
  const calendar=(catalog.closureCalendars||[]).find(c=>c.jurisdictionId===place.jurisdictionId&&c.group===place.scheduleGroup&&c.year===visit.year);
- if(calendar) {
+ if(calendar){
   base.sourceIds.push(calendar.sourceId);
-  if(calendar.dates.includes(visit.iso))return {...base,kind:"listed_closure",label:"The county lists this date as a recycling-center closure.",detail:"The regular weekday pattern does not override a listed closure."};
-  if(!regular.days.includes(visit.weekday)) return {...base,kind:"regular_day_excluded",label:"The selected weekday is outside the published service pattern.",detail:regular.label};
-  return {...base,kind:"regular_pattern_only",label:"The weekday matches the published pattern; no closure is listed in the supplied calendar.",detail:"This is a policy snapshot, not confirmation that the site will be accessible."};
+  if(calendar.dates.includes(visit.iso))return {...base,kind:"listed_closure",label:calendar.closureLabel||"The county lists this date as a recycling-center closure.",detail:"A listed full-day closure applies even when no regular visit window is modeled. Confirm the specific service with the operator."};
+  const notice=calendar.dateNotices?.find(n=>n.date===visit.iso);
+  if(notice)return {...base,kind:"listed_early_closure",label:notice.label,detail:"This is a partial-day notice, not a full-day closure or confirmation of room availability. Confirm the specific branch and room cutoff with staff."};
  }
- if(!regular.days.includes(visit.weekday)) return {...base,kind:"regular_day_excluded",label:"The selected weekday is outside the published service pattern.",detail:regular.label};
+ if(!regular)return {...base,detail:"No visit window is modeled for this example. An unlisted date is not proof of access."};
+ if(!regular.days.includes(visit.weekday))return {...base,kind:"regular_day_excluded",label:"The selected weekday is outside the published service pattern.",detail:regular.label};
+ if(calendar)return {...base,kind:"regular_pattern_only",label:"The weekday matches the published pattern; no closure is listed in the supplied calendar.",detail:"This is a policy snapshot, not confirmation that the site will be accessible."};
  return {...base,kind:"exception_data_unknown",label:"The weekday matches the published pattern; date-specific exceptions are unverified.",detail:"No applicable closure calendar is included for this place and year."};
 }
 export function answerPolicy(catalog,query) {
@@ -104,7 +115,7 @@ export function answerPolicy(catalog,query) {
   scopeNote:place.recordKind==="program"?PROGRAM_SCOPE_NOTE:null,
   task:SERVICES[query.serviceId],serviceId:query.serviceId,visitDate:visit?.iso||null,
   fit:effective.fit,summary:effective.summary,conditions:effective.conditions||[],
-  fee:effective.fee||"Not stated in this checked policy.",timing,
+  fee:effective.fee||"Not stated in this checked policy.",feeRecorded:effective.fit==="described" && typeof effective.fee==="string",timing,
   redirectedPlace:redirect?{id:redirect.id,name:redirect.name,locality:redirect.locality,region:redirect.region}:null,
   sources:catalog.sources.filter(s=>sourceIds.includes(s.id)).map(s=>({id:s.id,label:s.label,url:s.url,checkedOn:s.checkedOn})),
   limits:["Published rules do not establish live availability or a booking.","The operator decides whether a particular request can be handled.","This sample covers selected tasks, places and programs; missing detail remains unknown."]

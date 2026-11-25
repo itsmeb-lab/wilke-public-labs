@@ -15,12 +15,12 @@ export function rendererChecks(assert,source,api,catalog) {
  }
  function fixture(data=catalog,extraExample,fragment="") {
   const elements=new Map([["task",new Element("select")],["place",new Element("select")],["visit-date",new Element("input")],["answer",new Element("div")]]);
-  const examples=["tv","title","printing","holiday","hotspot","things"].map(id=>{const e=new Element("button");e.dataset.example=id;return e;});
+  const examples=["tv","title","printing","holiday","hotspot","things","meeting","early"].map(id=>{const e=new Element("button");e.dataset.example=id;return e;});
   if(extraExample){const e=new Element("button");e.dataset.example=extraExample;examples.push(e);}
   const windowListeners={};
   const defaultView={location:{hash:fragment},addEventListener:(type,fn)=>{(windowListeners[type]||=[]).push(fn);}};
   const document={defaultView,getElementById:id=>elements.get(id),createElement:tag=>new Element(tag),querySelectorAll:selector=>selector==="[data-example]"?examples:[]};
-  const imports=['import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v3";','import { catalog } from "./data.mjs?v=20261125-v3";','import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v3";'];
+  const imports=['import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v4";','import { catalog } from "./data.mjs?v=20261125-v4";','import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v4";'];
   let body=source;
   for(const line of imports){assert.equal(body.split(line).length,2,"Expected one known import");body=body.replace(line,"");}
   const forbidden=()=>{throw new Error("Unexpected network or storage access");};
@@ -35,7 +35,7 @@ export function rendererChecks(assert,source,api,catalog) {
   };
  }
  return [
- ["browser module renders the initial Jonesville restriction without HTML sinks",()=>{const f=fixture();assert.match(f.output.textContent,/Published restriction/);assert.match(f.output.textContent,/Airport/);assert.equal(f.elements.get("task").children.length,8);assert.equal(f.elements.get("place").children.length,3);}],
+ ["browser module renders the initial Jonesville restriction without HTML sinks",()=>{const f=fixture();assert.match(f.output.textContent,/Published restriction/);assert.match(f.output.textContent,/Airport/);assert.equal(f.elements.get("task").children.length,10);assert.equal(f.elements.get("place").children.length,3);}],
  ["alternate-location control recomputes the selected policy",()=>{const f=fixture();f.find(f.output,n=>n.tagName==="button"&&n.textContent==="Check that location").fire("click");assert.equal(f.elements.get("place").value,"union-airport");assert.match(f.output.textContent,/Service described in the source/);}],
  ["task selection scopes candidates rather than guessing similar places",()=>{const f=fixture();f.selectTask("vehicle_title");assert.equal(f.elements.get("place").children.length,4);assert.ok(f.elements.get("place").children.some(x=>/Morehead, KY/.test(x.textContent)));assert.ok(!f.elements.get("place").children.some(x=>/Jonesville/.test(x.textContent)));}],
  ["Onslow example preserves the explicit title exclusion",()=>{const f=fixture();f.example("title");assert.equal(f.elements.get("place").value,"onslow-jacksonville");assert.match(f.output.textContent,/excludes DMV forms and vehicle titles/);}],
@@ -57,6 +57,9 @@ export function rendererChecks(assert,source,api,catalog) {
  ["a refused shared view can recover through the visible task controls",()=>{const f=fixture(catalog,null,"#task=unknown&place=unknown");f.selectTask("printing");assert.match(f.output.textContent,/Service described in the source/);}],
  ["each answer links its current selection on the fixed canonical host",()=>{const f=fixture();f.example("holiday");const a=f.find(f.output,n=>n.className==="share-view").children[0];assert.equal(a.href,"https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/#task=farmer_oil&place=union-cross-keys&date=2026-11-26");}],
  ["the skip-to-checker anchor does not replace the current result",()=>{const f=fixture();f.example("things");f.hash("#checker");assert.match(f.output.textContent,/two kit items plus one technology item/);}],
+
+ ["commercial meeting preset keeps charges separate from public attendance rules",()=>{const f=fixture();f.example("meeting");assert.match(f.output.textContent,/free and open to the public/);assert.match(f.output.textContent,/Fee:.*\$100/);assert.match(f.output.textContent,/at least nine people/);}],
+ ["early closing preset is partial-day and not a room booking promise",()=>{const f=fixture();f.example("early");assert.equal(f.elements.get("visit-date").value,"2026-11-25");assert.match(f.output.textContent,/6 p.m. local time/);assert.match(f.output.textContent,/partial-day notice/);assert.match(f.output.textContent,/Live availability: unverified/);assert.doesNotMatch(f.output.textContent,/full-day closure\./);}],
  ["a broken catalog shows the original-source fallback instead of a fabricated answer",()=>{const c=JSON.parse(JSON.stringify(catalog));c.sources[0].url="http://invalid.example/policy";const f=fixture(c);assert.match(f.output.textContent,/catalog could not be loaded/);assert.doesNotMatch(f.output.textContent,/Service described/);}]
  ];
 }

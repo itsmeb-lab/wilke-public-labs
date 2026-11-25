@@ -1,5 +1,5 @@
 export const catalog = {
-  "snapshotId": "published-policy-examples-20261125-v3",
+  "snapshotId": "published-policy-examples-20261125-v4",
   "checkedOn": "2026-11-25",
   "sources": [
     {
@@ -49,6 +49,24 @@ export const catalog = {
       "label": "Hocutt-Ellington Memorial Library — Library of Things",
       "url": "https://www.claytonlibrarync.org/895/Library-of-Things",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "id": "durham-rooms",
+      "label": "Durham County Library — meeting and study room policy",
+      "url": "https://durhamcountylibrary.org/policies/meeting-room-policy/",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "id": "davidson-rooms",
+      "label": "Davidson County Public Library — meeting-room policy",
+      "url": "https://www.co.davidson.nc.us/952/Meeting-Room-Policy",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "id": "durham-holidays",
+      "label": "Durham County Library — dated closure and early-closing list",
+      "url": "https://durhamcountylibrary.org/hours-and-locations/",
+      "checkedOn": "2026-11-25"
     }
   ],
   "closureCalendars": [
@@ -67,6 +85,57 @@ export const catalog = {
         "2026-11-26",
         "2026-12-24",
         "2026-12-25"
+      ]
+    },
+    {
+      "jurisdictionId": "us-nc-durham-county",
+      "group": "durham-library-services",
+      "year": 2026,
+      "sourceId": "durham-holidays",
+      "closureLabel": "The library lists this date as a full-day closure.",
+      "dates": [
+        "2026-01-01",
+        "2026-01-19",
+        "2026-04-03",
+        "2026-04-04",
+        "2026-04-05",
+        "2026-05-14",
+        "2026-05-25",
+        "2026-06-19",
+        "2026-07-03",
+        "2026-07-04",
+        "2026-09-07",
+        "2026-10-08",
+        "2026-11-11",
+        "2026-11-26",
+        "2026-11-27",
+        "2026-12-24",
+        "2026-12-25",
+        "2026-12-26",
+        "2026-12-27",
+        "2026-12-28"
+      ],
+      "dateNotices": [
+        {
+          "date": "2026-11-25",
+          "kind": "early_closure",
+          "label": "The library lists an early closing at 6 p.m. local time."
+        },
+        {
+          "date": "2026-12-23",
+          "kind": "early_closure",
+          "label": "The library lists an early closing at 6 p.m. local time."
+        }
+      ]
+    },
+    {
+      "jurisdictionId": "us-nc-durham-county",
+      "group": "durham-library-services",
+      "year": 2027,
+      "sourceId": "durham-holidays",
+      "closureLabel": "The library lists this date as a full-day closure.",
+      "dates": [
+        "2027-01-01"
       ]
     }
   ],
@@ -464,6 +533,70 @@ export const catalog = {
             "The published limit is two kit items plus one technology item at a time. Technology items have additional lending rules.",
             "The cardholder is responsible for missing or damaged items and related repair or replacement charges.",
             "Check the operator's catalog and item-specific rules for current availability and pickup arrangements."
+          ]
+        }
+      }
+    },
+    {
+      "id": "durham-rooms-program",
+      "recordKind": "program",
+      "name": "Durham County Library — meeting and study rooms",
+      "region": "NC",
+      "locality": "Durham County",
+      "jurisdictionId": "us-nc-durham-county",
+      "address": null,
+      "scheduleGroup": "durham-library-services",
+      "policies": {
+        "commercial_meeting": {
+          "fit": "described",
+          "summary": "The policy lists commercial meeting-room fees, with public-access and use restrictions.",
+          "sourceIds": [
+            "durham-rooms"
+          ],
+          "conditions": [
+            "Meetings must remain free and open to the public: no private meetings, attendee charges, donations or goods sales.",
+            "Meeting rooms require at least nine people, an eligible library card and staff approval. Account fees above $25 block booking.",
+            "The general lead time is 72 hours. Main Library has a manager-approved same-day exception; some Main spaces use a separate policy.",
+            "Rooms cannot serve as a business base. Check room capacity, operating hours and the 30-minute-before-closing room cutoff with staff."
+          ],
+          "fee": "Commercial meeting rooms: $100 for up to four hours, $200 for longer; refreshments add $25. Check the named room's applicable policy."
+        },
+        "private_study": {
+          "fit": "described",
+          "summary": "Study rooms allow individual or private use, subject to room capacity and card rules.",
+          "sourceIds": [
+            "durham-rooms"
+          ],
+          "conditions": [
+            "Study rooms accommodate up to eight; the actual room capacity may be lower.",
+            "Use requires an eligible card; account fees above $25 block booking. Juvenile-card access has room-specific limits at Main.",
+            "Each location allows up to two reserved hours daily. No food or use as a business base; confirm the room cutoff and current access."
+          ],
+          "fee": "Study-room use is free; users remain responsible for applicable cleaning or damage costs."
+        }
+      }
+    },
+    {
+      "id": "davidson-rooms-program",
+      "recordKind": "program",
+      "name": "Davidson County Public Library — meeting rooms",
+      "region": "NC",
+      "locality": "Davidson County",
+      "jurisdictionId": "us-nc-davidson-county",
+      "address": null,
+      "policies": {
+        "commercial_meeting": {
+          "fit": "excluded",
+          "summary": "The meeting-room policy excludes commercial, money-raising and social purposes.",
+          "sourceIds": [
+            "davidson-rooms"
+          ]
+        },
+        "private_study": {
+          "fit": "unstated",
+          "summary": "This meeting-room source does not settle individual or private study-room access.",
+          "sourceIds": [
+            "davidson-rooms"
           ]
         }
       }

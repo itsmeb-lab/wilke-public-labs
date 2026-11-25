@@ -1,6 +1,6 @@
-import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v3";
-import { catalog } from "./data.mjs?v=20261125-v3";
-import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v3";
+import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v4";
+import { catalog } from "./data.mjs?v=20261125-v4";
+import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v4";
 
 const task = document.getElementById("task");
 const place = document.getElementById("place");
@@ -36,7 +36,7 @@ function render() {
   if(result.conditions.length){
    const list=el("ul");for(const rule of result.conditions)list.append(el("li",rule));nodes.push(list);
   }
-  if(result.fit==="described"&&(result.serviceId==="printing"||result.serviceId==="basic_notary"||result.serviceId==="vehicle_title"))nodes.push(el("p","Fee: "+result.fee,"fee"));
+  if(result.fit==="described"&&(result.serviceId==="printing"||result.serviceId==="basic_notary"||result.serviceId==="vehicle_title"||result.feeRecorded))nodes.push(el("p","Fee: "+result.fee,"fee"));
   if(result.redirectedPlace) {
    const next=result.redirectedPlace;
    const card=el("div",null,"redirect");
@@ -87,7 +87,9 @@ try{
   printing:["printing","haywood-waynesville",""],
   holiday:["farmer_oil","union-cross-keys","2026-11-26"],
   hotspot:["hotspot_borrowing","charlotte-hotspots-program",""],
-  things:["things_borrowing","clayton-things-program",""]
+  things:["things_borrowing","clayton-things-program",""],
+  meeting:["commercial_meeting","durham-rooms-program",""],
+  early:["private_study","durham-rooms-program","2026-11-25"]
  };
  for(const button of document.querySelectorAll("[data-example]"))button.addEventListener("click",()=>{
   const chosen=examples[button.dataset.example];

@@ -8,8 +8,8 @@ function answer(placeId,serviceId,visitDate=""){
 }
 test("expanded snapshot identifies program records separately from seven physical places",()=>{
  assert.equal(validateCatalog(catalog),true);
- assert.equal(catalog.places.length,9);
- assert.equal(catalog.places.filter(p=>p.recordKind==="program").length,2);
+ assert.equal(catalog.places.length,11);
+ assert.equal(catalog.places.filter(p=>p.recordKind==="program").length,4);
 });
 test("hotspot answer retains the seven-day loan, queue and borrower restrictions",()=>{
  const r=answer("charlotte-hotspots-program","hotspot_borrowing");
