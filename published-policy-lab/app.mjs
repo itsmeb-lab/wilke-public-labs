@@ -1,5 +1,5 @@
-import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs";
-import { catalog } from "./data.mjs";
+import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v2";
+import { catalog } from "./data.mjs?v=20261125-v2";
 
 const task = document.getElementById("task");
 const place = document.getElementById("place");
@@ -76,6 +76,8 @@ try{
   things:["things_borrowing","clayton-things-program",""]
  };
  for(const button of document.querySelectorAll("[data-example]"))button.addEventListener("click",()=>{
-  const [service,id,day]=examples[button.dataset.example];task.value=service;choosePlaces(id);date.value=day;render();
+  const chosen=examples[button.dataset.example];
+  if(!chosen){output.replaceChildren(el("h2","This example is unavailable."),el("p","Choose a task above, or reload the page to see the latest examples."));return;}
+  const [service,id,day]=chosen;task.value=service;choosePlaces(id);date.value=day;render();
  });
 }catch(error){output.replaceChildren(el("h2","The example catalog could not be loaded."),el("p",error.message));}

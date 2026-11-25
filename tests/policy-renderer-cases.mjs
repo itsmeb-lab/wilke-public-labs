@@ -13,11 +13,12 @@ export function rendererChecks(assert,source,api,catalog) {
   addEventListener(type,fn){(this.listeners[type]||=[]).push(fn);}
   fire(type){for(const fn of this.listeners[type]||[])fn({target:this});}
  }
- function fixture(data=catalog) {
+ function fixture(data=catalog,extraExample) {
   const elements=new Map([["task",new Element("select")],["place",new Element("select")],["visit-date",new Element("input")],["answer",new Element("div")]]);
   const examples=["tv","title","printing","holiday","hotspot","things"].map(id=>{const e=new Element("button");e.dataset.example=id;return e;});
+  if(extraExample){const e=new Element("button");e.dataset.example=extraExample;examples.push(e);}
   const document={getElementById:id=>elements.get(id),createElement:tag=>new Element(tag),querySelectorAll:selector=>selector==="[data-example]"?examples:[]};
-  const imports=['import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs";','import { catalog } from "./data.mjs";'];
+  const imports=['import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v2";','import { catalog } from "./data.mjs?v=20261125-v2";'];
   let body=source;
   for(const line of imports){assert.equal(body.split(line).length,2,"Expected one known import");body=body.replace(line,"");}
   const forbidden=()=>{throw new Error("Unexpected network or storage access");};
@@ -45,6 +46,7 @@ export function rendererChecks(assert,source,api,catalog) {
  ["hotspot preset shows program scope without a fabricated pickup address",()=>{const f=fixture();f.example("hotspot");assert.equal(f.elements.get("place").value,"charlotte-hotspots-program");assert.match(f.output.textContent,/Program-level rules/);assert.match(f.output.textContent,/seven days without renewal/);assert.equal(f.find(f.output,n=>n.className==="address"),undefined);}],
  ["program selection keeps live stock and date-specific access unverified",()=>{const f=fixture();f.selectTask("hotspot_borrowing");assert.equal(f.elements.get("place").children.length,1);assert.match(f.output.textContent,/No visit window is modeled/);assert.match(f.output.textContent,/Live availability: unverified/);assert.doesNotMatch(f.output.textContent,/in stock|ready for pickup|Published regular pattern/);}],
  ["things preset retains card-specific and separate item-group limits",()=>{const f=fixture();f.example("things");assert.match(f.output.textContent,/Hocutt-Ellington/);assert.match(f.output.textContent,/two kit items plus one technology item/);assert.match(f.output.textContent,/additional lending rules/);}],
+ ["an unknown future example fails helpfully without an unhandled event error",()=>{const f=fixture(catalog,"future");f.example("future");assert.match(f.output.textContent,/This example is unavailable/);assert.match(f.output.textContent,/Choose a task above/);assert.doesNotMatch(f.output.textContent,/Service described/);}],
  ["a broken catalog shows the original-source fallback instead of a fabricated answer",()=>{const c=JSON.parse(JSON.stringify(catalog));c.sources[0].url="http://invalid.example/policy";const f=fixture(c);assert.match(f.output.textContent,/catalog could not be loaded/);assert.doesNotMatch(f.output.textContent,/Service described/);}]
  ];
 }
