@@ -1,0 +1,991 @@
+"slug","heading","description","canonical_reference","reviewed_on","publication_state","comparison_html"
+"repair-cafe-planner","What can I bring to a repair café?","Check whether selected repair cafés list bikes, toasters, microwaves and other items. Find the organizer’s check-in rules and current event listing before you go.","https://itsmeb-lab.github.io/wilke-public-labs/repair-cafe-planner/","2026-11-25","STAGING_DRAFT_ONLY","<div class=""intro"">
+      <p>Choose an item to compare the rules at selected repair cafés. Then check the organizer’s event listing for the date, volunteer specialties and how to sign up.</p>
+      <p class=""find""><a href=""https://www.repaircafe.org/en/visit/"">Find a café near you through Repair Café International</a></p>
+    </div>
+    <!-- REPAIR-CAFE:START -->
+    <nav id=""items"" class=""choices"" aria-label=""Choose an item"" tabindex=""-1"">
+      <p>Choose an item</p>
+      <ul role=""list"">
+        <li><a href=""#bicycle"">Ordinary bicycle</a></li>
+        <li><a href=""#microwave"">Microwave</a></li>
+        <li><a href=""#toaster"">Toaster</a></li>
+        <li><a href=""#phone"">Mobile phone</a></li>
+        <li><a href=""#ebike-electrical"">E-bike with an electrical issue</a></li>
+        <li><a href=""#clothes-alteration"">Clothing alteration or hemming</a></li>
+        <li><a href=""#check-in"">How to check in</a></li>
+      </ul>
+    </nav>
+    <p class=""reviewed"">Snapshot reviewed <time datetime=""2026-11-25"">November 25, 2026</time>.</p>
+    <section id=""bicycle"" class=""comparison"" aria-labelledby=""bicycle-title"" tabindex=""-1"">
+      <h2 id=""bicycle-title"">Ordinary bicycle</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""san-francisco"" data-fit=""excluded"">
+          <h3>Repair Café San Francisco</h3><p class=""area"">San Francisco, California, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The café excludes bicycle repairs and points to local bike shops and the public library’s rotating bicycle clinic.</p>
+          <p class=""source""><a href=""https://repaircafesf.org/faq"">San Francisco visitor FAQ</a></p>
+        </li>
+        <li data-operator=""peninsula"" data-fit=""listed"">
+          <h3>Repair Café of the Peninsula</h3><p class=""area"">San Mateo County, California, US</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The visitor FAQ lists bicycles. Check the event listing for its repair categories.</p>
+          <p class=""source""><a href=""https://repaircafepeninsula.org/faq/"">Peninsula visitor FAQ</a></p>
+        </li>
+        <li data-operator=""toronto"" data-fit=""listed"">
+          <h3>Repair Café Toronto</h3><p class=""area"">Toronto, Ontario, Canada</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The visitor guide lists bikes among volunteer skills. Check which fixers will be at your event.</p>
+          <p class=""source""><a href=""https://repaircafetoronto.ca/visit/"">Toronto visitor guide</a></p>
+        </li>
+        <li data-operator=""york-region"" data-fit=""listed"">
+          <h3>York Region Repair Cafés</h3><p class=""area"">York Region, Ontario, Canada</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The program lists bicycles, subject to volunteers at the specific event.</p>
+          <p class=""source""><a href=""https://www.york.ca/newsroom/campaigns-projects/repair-cafe"">York Region dates and program rules</a></p>
+        </li>
+        <li data-operator=""wales"" data-fit=""ask"">
+          <h3>Repair Café Wales</h3><p class=""area"">Wales, United Kingdom</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>Many local cafés decline adult bicycle repairs. Ask the local organizer what they can do.</p>
+          <p class=""source""><a href=""https://repaircafewales.org/house-rules/"">Wales house rules</a></p>
+        </li>
+        <li data-operator=""rice-county"" data-fit=""unknown"">
+          <h3>Rice County Fix-It Clinics</h3><p class=""area"">Rice County, Minnesota, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.ricecountymn.gov/807/Fix-It-Clinics"">Check with Rice County Fix-It Clinics</a></p>
+        </li>
+        <li data-operator=""waverley"" data-fit=""listed"">
+          <h3>Waverley Council Repair Café</h3><p class=""area"">Waverley, New South Wales, Australia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The council lists bicycle repair among its event categories.</p>
+          <p class=""source""><a href=""https://www.waverley.nsw.gov.au/secondnature/get_involved/circular_economy_opportunities/repair_cafe"">Waverley Council repair café guide</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""microwave"" class=""comparison"" aria-labelledby=""microwave-title"" tabindex=""-1"">
+      <h2 id=""microwave-title"">Microwave</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""san-francisco"" data-fit=""excluded"">
+          <h3>Repair Café San Francisco</h3><p class=""area"">San Francisco, California, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The café lists microwaves among its exclusions.</p>
+          <p class=""source""><a href=""https://repaircafesf.org/faq"">San Francisco visitor FAQ</a></p>
+        </li>
+        <li data-operator=""peninsula"" data-fit=""unknown"">
+          <h3>Repair Café of the Peninsula</h3><p class=""area"">San Mateo County, California, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://repaircafepeninsula.org/"">Check with Repair Café of the Peninsula</a></p>
+        </li>
+        <li data-operator=""toronto"" data-fit=""unknown"">
+          <h3>Repair Café Toronto</h3><p class=""area"">Toronto, Ontario, Canada</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://repaircafetoronto.ca/upcoming-events/"">Check with Repair Café Toronto</a></p>
+        </li>
+        <li data-operator=""york-region"" data-fit=""listed"">
+          <h3>York Region Repair Cafés</h3><p class=""area"">York Region, Ontario, Canada</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The program names microwaves among small appliances it can consider, depending on available fixers.</p>
+          <p class=""source""><a href=""https://www.york.ca/newsroom/campaigns-projects/repair-cafe"">York Region dates and program rules</a></p>
+        </li>
+        <li data-operator=""wales"" data-fit=""excluded"">
+          <h3>Repair Café Wales</h3><p class=""area"">Wales, United Kingdom</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The network’s house rules exclude microwave repairs.</p>
+          <p class=""source""><a href=""https://repaircafewales.org/house-rules/"">Wales house rules</a></p>
+        </li>
+        <li data-operator=""rice-county"" data-fit=""unknown"">
+          <h3>Rice County Fix-It Clinics</h3><p class=""area"">Rice County, Minnesota, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.ricecountymn.gov/807/Fix-It-Clinics"">Check with Rice County Fix-It Clinics</a></p>
+        </li>
+        <li data-operator=""waverley"" data-fit=""excluded"">
+          <h3>Waverley Council Repair Café</h3><p class=""area"">Waverley, New South Wales, Australia</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The council excludes microwaves from the electronics category.</p>
+          <p class=""source""><a href=""https://www.waverley.nsw.gov.au/secondnature/get_involved/circular_economy_opportunities/repair_cafe"">Waverley Council repair café guide</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""toaster"" class=""comparison"" aria-labelledby=""toaster-title"" tabindex=""-1"">
+      <h2 id=""toaster-title"">Toaster</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""san-francisco"" data-fit=""ask"">
+          <h3>Repair Café San Francisco</h3><p class=""area"">San Francisco, California, US</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The FAQ says many toasters are unsuitable for repair. Confirm your item first.</p>
+          <p class=""source""><a href=""https://repaircafesf.org/faq"">San Francisco visitor FAQ</a></p>
+        </li>
+        <li data-operator=""peninsula"" data-fit=""excluded"">
+          <h3>Repair Café of the Peninsula</h3><p class=""area"">San Mateo County, California, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The visitor FAQ asks people to leave toasters at home.</p>
+          <p class=""source""><a href=""https://repaircafepeninsula.org/faq/"">Peninsula visitor FAQ</a></p>
+        </li>
+        <li data-operator=""toronto"" data-fit=""unknown"">
+          <h3>Repair Café Toronto</h3><p class=""area"">Toronto, Ontario, Canada</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://repaircafetoronto.ca/upcoming-events/"">Check with Repair Café Toronto</a></p>
+        </li>
+        <li data-operator=""york-region"" data-fit=""unknown"">
+          <h3>York Region Repair Cafés</h3><p class=""area"">York Region, Ontario, Canada</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.york.ca/newsroom/campaigns-projects/repair-cafe"">Check with York Region Repair Cafés</a></p>
+        </li>
+        <li data-operator=""wales"" data-fit=""unknown"">
+          <h3>Repair Café Wales</h3><p class=""area"">Wales, United Kingdom</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://repaircafewales.org/events/"">Check with Repair Café Wales</a></p>
+        </li>
+        <li data-operator=""rice-county"" data-fit=""listed"">
+          <h3>Rice County Fix-It Clinics</h3><p class=""area"">Rice County, Minnesota, US</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The county names toasters as items its clinics may be able to repair.</p>
+          <p class=""source""><a href=""https://www.ricecountymn.gov/807/Fix-It-Clinics"">Rice County clinic guide and dates</a></p>
+        </li>
+        <li data-operator=""waverley"" data-fit=""excluded"">
+          <h3>Waverley Council Repair Café</h3><p class=""area"">Waverley, New South Wales, Australia</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The council lists toasters among items it will not assess.</p>
+          <p class=""source""><a href=""https://www.waverley.nsw.gov.au/secondnature/get_involved/circular_economy_opportunities/repair_cafe"">Waverley Council repair café guide</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""phone"" class=""comparison"" aria-labelledby=""phone-title"" tabindex=""-1"">
+      <h2 id=""phone-title"">Mobile phone</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""san-francisco"" data-fit=""excluded"">
+          <h3>Repair Café San Francisco</h3><p class=""area"">San Francisco, California, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The café excludes phone repairs. The FAQ mentions advice on use.</p>
+          <p class=""source""><a href=""https://repaircafesf.org/faq"">San Francisco visitor FAQ</a></p>
+        </li>
+        <li data-operator=""peninsula"" data-fit=""excluded"">
+          <h3>Repair Café of the Peninsula</h3><p class=""area"">San Mateo County, California, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The visitor FAQ asks people to leave phones at home.</p>
+          <p class=""source""><a href=""https://repaircafepeninsula.org/faq/"">Peninsula visitor FAQ</a></p>
+        </li>
+        <li data-operator=""toronto"" data-fit=""unknown"">
+          <h3>Repair Café Toronto</h3><p class=""area"">Toronto, Ontario, Canada</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://repaircafetoronto.ca/upcoming-events/"">Check with Repair Café Toronto</a></p>
+        </li>
+        <li data-operator=""york-region"" data-fit=""unknown"">
+          <h3>York Region Repair Cafés</h3><p class=""area"">York Region, Ontario, Canada</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.york.ca/newsroom/campaigns-projects/repair-cafe"">Check with York Region Repair Cafés</a></p>
+        </li>
+        <li data-operator=""wales"" data-fit=""unknown"">
+          <h3>Repair Café Wales</h3><p class=""area"">Wales, United Kingdom</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://repaircafewales.org/events/"">Check with Repair Café Wales</a></p>
+        </li>
+        <li data-operator=""rice-county"" data-fit=""unknown"">
+          <h3>Rice County Fix-It Clinics</h3><p class=""area"">Rice County, Minnesota, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.ricecountymn.gov/807/Fix-It-Clinics"">Check with Rice County Fix-It Clinics</a></p>
+        </li>
+        <li data-operator=""waverley"" data-fit=""listed"">
+          <h3>Waverley Council Repair Café</h3><p class=""area"">Waverley, New South Wales, Australia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The council lists phone diagnostics and help with setup, storage and updates. Ask about physical repairs before going.</p>
+          <p class=""source""><a href=""https://www.waverley.nsw.gov.au/secondnature/get_involved/circular_economy_opportunities/repair_cafe"">Waverley Council repair café guide</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""ebike-electrical"" class=""comparison"" aria-labelledby=""ebike-electrical-title"" tabindex=""-1"">
+      <h2 id=""ebike-electrical-title"">E-bike with an electrical issue</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""san-francisco"" data-fit=""unknown"">
+          <h3>Repair Café San Francisco</h3><p class=""area"">San Francisco, California, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://repaircafesf.org/faq"">Check with Repair Café San Francisco</a></p>
+        </li>
+        <li data-operator=""peninsula"" data-fit=""unknown"">
+          <h3>Repair Café of the Peninsula</h3><p class=""area"">San Mateo County, California, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://repaircafepeninsula.org/"">Check with Repair Café of the Peninsula</a></p>
+        </li>
+        <li data-operator=""toronto"" data-fit=""unknown"">
+          <h3>Repair Café Toronto</h3><p class=""area"">Toronto, Ontario, Canada</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://repaircafetoronto.ca/upcoming-events/"">Check with Repair Café Toronto</a></p>
+        </li>
+        <li data-operator=""york-region"" data-fit=""excluded"">
+          <h3>York Region Repair Cafés</h3><p class=""area"">York Region, Ontario, Canada</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The program rules exclude electrical e-bike issues. The program lists mechanical issues separately.</p>
+          <p class=""source""><a href=""https://www.york.ca/newsroom/campaigns-projects/repair-cafe"">York Region dates and program rules</a></p>
+        </li>
+        <li data-operator=""wales"" data-fit=""unknown"">
+          <h3>Repair Café Wales</h3><p class=""area"">Wales, United Kingdom</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://repaircafewales.org/events/"">Check with Repair Café Wales</a></p>
+        </li>
+        <li data-operator=""rice-county"" data-fit=""unknown"">
+          <h3>Rice County Fix-It Clinics</h3><p class=""area"">Rice County, Minnesota, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.ricecountymn.gov/807/Fix-It-Clinics"">Check with Rice County Fix-It Clinics</a></p>
+        </li>
+        <li data-operator=""waverley"" data-fit=""unknown"">
+          <h3>Waverley Council Repair Café</h3><p class=""area"">Waverley, New South Wales, Australia</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.waverley.nsw.gov.au/secondnature/get_involved/circular_economy_opportunities/repair_cafe"">Check with Waverley Council Repair Café</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""clothes-alteration"" class=""comparison"" aria-labelledby=""clothes-alteration-title"" tabindex=""-1"">
+      <h2 id=""clothes-alteration-title"">Clothing alteration or hemming</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""san-francisco"" data-fit=""excluded"">
+          <h3>Repair Café San Francisco</h3><p class=""area"">San Francisco, California, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The FAQ excludes clothing and curtain alterations.</p>
+          <p class=""source""><a href=""https://repaircafesf.org/faq"">San Francisco visitor FAQ</a></p>
+        </li>
+        <li data-operator=""peninsula"" data-fit=""unknown"">
+          <h3>Repair Café of the Peninsula</h3><p class=""area"">San Mateo County, California, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://repaircafepeninsula.org/"">Check with Repair Café of the Peninsula</a></p>
+        </li>
+        <li data-operator=""toronto"" data-fit=""ask"">
+          <h3>Repair Café Toronto</h3><p class=""area"">Toronto, Ontario, Canada</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The visitor guide says clothing volunteers focus on mending. Ask before bringing an alteration.</p>
+          <p class=""source""><a href=""https://repaircafetoronto.ca/visit/"">Toronto visitor guide</a></p>
+        </li>
+        <li data-operator=""york-region"" data-fit=""excluded"">
+          <h3>York Region Repair Cafés</h3><p class=""area"">York Region, Ontario, Canada</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The program excludes hems and alterations. It lists small tears and clothing repairs separately.</p>
+          <p class=""source""><a href=""https://www.york.ca/newsroom/campaigns-projects/repair-cafe"">York Region dates and program rules</a></p>
+        </li>
+        <li data-operator=""wales"" data-fit=""ask"">
+          <h3>Repair Café Wales</h3><p class=""area"">Wales, United Kingdom</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>Many local cafés decline clothing alterations. Ask the host for its policy.</p>
+          <p class=""source""><a href=""https://repaircafewales.org/house-rules/"">Wales house rules</a></p>
+        </li>
+        <li data-operator=""rice-county"" data-fit=""listed"">
+          <h3>Rice County Fix-It Clinics</h3><p class=""area"">Rice County, Minnesota, US</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The county lists clothing and other soft goods for mending or alterations. Ask about the specific alteration you want.</p>
+          <p class=""source""><a href=""https://www.ricecountymn.gov/807/Fix-It-Clinics"">Rice County clinic guide and dates</a></p>
+        </li>
+        <li data-operator=""waverley"" data-fit=""excluded"">
+          <h3>Waverley Council Repair Café</h3><p class=""area"">Waverley, New South Wales, Australia</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The council excludes clothing alterations and separately lists clean textiles and clothing for repairs.</p>
+          <p class=""source""><a href=""https://www.waverley.nsw.gov.au/secondnature/get_involved/circular_economy_opportunities/repair_cafe"">Waverley Council repair café guide</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""check-in"" class=""prep"" aria-labelledby=""check-in-title"" tabindex=""-1"">
+      <h2 id=""check-in-title"">How to check in</h2>
+      <p>Check the event listing before you leave. Confirm whether you need to sign up, when intake closes and which item categories volunteers will handle.</p>
+      <ul class=""cards"" role=""list"">
+        <li>
+          <h3>Repair Café San Francisco</h3><p class=""area"">San Francisco, California, US</p>
+          <dl>
+            <dt>Event</dt><dd>Use the organizer’s current listing. The venue can change. <span class=""source""><a href=""https://repaircafesf.org/faq"">San Francisco visitor FAQ</a></span></dd>
+            <dt>Parts</dt><dd>The organizer keeps a limited supply of spare parts. <span class=""source""><a href=""https://repaircafesf.org/faq"">San Francisco visitor FAQ</a></span></dd>
+          </dl>
+          <p><a href=""https://repaircafesf.org/faq"">San Francisco visitor FAQ</a></p>
+        </li>
+        <li>
+          <h3>Repair Café of the Peninsula</h3><p class=""area"">San Mateo County, California, US</p>
+          <dl>
+            <dt>Check-in</dt><dd>Regular events use drop-in check-in. Expect a waiver and an item intake form. <span class=""source""><a href=""https://repaircafepeninsula.org/faq/"">Peninsula visitor FAQ</a></span></dd>
+            <dt>Item count</dt><dd>The organizer asks visitors to bring no more than two items each. Check the specific event for its item categories. <span class=""source""><a href=""https://repaircafepeninsula.org/faq/"">Peninsula visitor FAQ</a></span></dd>
+          </dl>
+          <p><a href=""https://repaircafepeninsula.org/"">Peninsula upcoming events</a></p>
+        </li>
+        <li>
+          <h3>Repair Café Toronto</h3><p class=""area"">Toronto, Ontario, Canada</p>
+          <dl>
+            <dt>Check-in</dt><dd>Sign up on arrival. Intake closes one hour before the event ends. <span class=""source""><a href=""https://repaircafetoronto.ca/visit/"">Toronto visitor guide</a></span></dd>
+            <dt>Item count</dt><dd>During busy periods, volunteers examine one item per person. <span class=""source""><a href=""https://repaircafetoronto.ca/visit/"">Toronto visitor guide</a></span></dd>
+            <dt>Parts</dt><dd>The visitor guide says the café currently cannot supply replacement parts. <span class=""source""><a href=""https://repaircafetoronto.ca/visit/"">Toronto visitor guide</a></span></dd>
+          </dl>
+          <p><a href=""https://repaircafetoronto.ca/upcoming-events/"">Toronto upcoming events</a></p>
+        </li>
+        <li>
+          <h3>York Region Repair Cafés</h3><p class=""area"">York Region, Ontario, Canada</p>
+          <dl>
+            <dt>Check-in</dt><dd>York Region residents can register ahead for an appointment. The operator lists registration by event. <span class=""source""><a href=""https://www.york.ca/newsroom/campaigns-projects/repair-cafe"">York Region dates and program rules</a></span></dd>
+            <dt>Parts</dt><dd>Bring any replacement part you already know the item needs. <span class=""source""><a href=""https://www.york.ca/newsroom/campaigns-projects/repair-cafe"">York Region dates and program rules</a></span></dd>
+          </dl>
+          <p><a href=""https://www.york.ca/newsroom/campaigns-projects/repair-cafe"">York Region dates and program rules</a></p>
+        </li>
+        <li>
+          <h3>Repair Café Wales</h3><p class=""area"">Wales, United Kingdom</p>
+          <dl>
+            <dt>Check-in</dt><dd>Visitors are seen in arrival order. Sign the repair form and plan to stay with your item. <span class=""source""><a href=""https://repaircafewales.org/faqs/"">Wales visitor FAQ</a> · <a href=""https://repaircafewales.org/house-rules/"">Wales house rules</a></span></dd>
+            <dt>Item count</dt><dd>When the event is busy, one item per person is examined. Late arrivals may be turned away in the final hour. <span class=""source""><a href=""https://repaircafewales.org/house-rules/"">Wales house rules</a></span></dd>
+            <dt>Parts</dt><dd>Visitors pay separately for any new materials used. <span class=""source""><a href=""https://repaircafewales.org/house-rules/"">Wales house rules</a></span></dd>
+          </dl>
+          <p><a href=""https://repaircafewales.org/events/"">Wales events</a></p>
+        </li>
+        <li>
+          <h3>Rice County Fix-It Clinics</h3><p class=""area"">Rice County, Minnesota, US</p>
+          <dl>
+            <dt>Item count</dt><dd>Bring up to two items you can carry in. The county excludes oversized items. <span class=""source""><a href=""https://www.ricecountymn.gov/807/Fix-It-Clinics"">Rice County clinic guide and dates</a></span></dd>
+            <dt>Event</dt><dd>Use the current county listing for the clinic venue and date. <span class=""source""><a href=""https://www.ricecountymn.gov/807/Fix-It-Clinics"">Rice County clinic guide and dates</a></span></dd>
+          </dl>
+          <p><a href=""https://www.ricecountymn.gov/807/Fix-It-Clinics"">Rice County clinic guide and dates</a></p>
+        </li>
+        <li>
+          <h3>Waverley Council Repair Café</h3><p class=""area"">Waverley, New South Wales, Australia</p>
+          <dl>
+            <dt>Check-in</dt><dd>Check in on arrival. A volunteer gives you a time slot after intake, in arrival order. Advance booking is unavailable. <span class=""source""><a href=""https://www.waverley.nsw.gov.au/secondnature/get_involved/circular_economy_opportunities/repair_cafe"">Waverley Council repair café guide</a></span></dd>
+            <dt>Size</dt><dd>Bring an item one person can carry. The council describes a 30-minute repair slot. <span class=""source""><a href=""https://www.waverley.nsw.gov.au/secondnature/get_involved/circular_economy_opportunities/repair_cafe"">Waverley Council repair café guide</a></span></dd>
+          </dl>
+          <p><a href=""https://www.waverley.nsw.gov.au/secondnature/get_involved/circular_economy_opportunities/repair_cafe"">Waverley Council repair café guide</a></p>
+        </li>
+      </ul>
+    </section>
+    <!-- REPAIR-CAFE:END -->
+    <section class=""notes"" aria-labelledby=""notes-title"">
+      <h2 id=""notes-title"">Using these rules</h2>
+      <p>Event listings can limit what volunteers consider on the day. A listed item can still be declined. Each comparison links to the organizer’s published rules.</p>
+      <ul class=""utility-links"" role=""list"">
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/repair-cafe-planner/comparison.csv"" download>Download comparison data (CSV)</a></li>
+        <li><a href=""https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml"">Report a source correction</a> (public GitHub form)</li>
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/"">Check other local program rules</a></li>
+      </ul>
+    </section>"
+"shelter-linen-guide","Can I donate towels, sheets or blankets to an animal shelter?","Check published animal-shelter donation rules for towels, fitted sheets, comforters and pillows. Compare seven organizations and find their original drop-off instructions.","https://itsmeb-lab.github.io/wilke-public-labs/shelter-linen-guide/","2026-11-25","STAGING_DRAFT_ONLY","<div class=""intro"">
+      <p>Choose the linen you have. Compare what selected shelters list and check the drop-off instructions before loading the car.</p>
+      <p>Call a shelter if its wish list leaves your size, material or quantity unclear. Rules can change as a shelter fills up or runs low.</p>
+    </div>
+    <!-- SHELTER-LINENS:START -->
+    <nav id=""items"" class=""choices"" aria-label=""Choose an item"" tabindex=""-1"">
+      <p>Choose an item</p>
+      <ul role=""list"">
+        <li><a href=""#small-towels"">Hand towels or washcloths</a></li>
+        <li><a href=""#bath-towels"">Large bath towels</a></li>
+        <li><a href=""#flat-sheets"">Flat bed sheets</a></li>
+        <li><a href=""#fitted-sheets"">Fitted sheets</a></li>
+        <li><a href=""#comforters"">Filled comforters or duvet inserts</a></li>
+        <li><a href=""#pillows"">Bed pillows</a></li>
+        <li><a href=""#drop-off"">How to drop off a donation</a></li>
+      </ul>
+    </nav>
+    <p class=""reviewed"">Snapshot reviewed <time datetime=""2026-11-25"">November 25, 2026</time>.</p>
+    <section id=""small-towels"" class=""comparison"" aria-labelledby=""small-towels-title"" tabindex=""-1"">
+      <h2 id=""small-towels-title"">Hand towels or washcloths</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""wisconsin-humane"" data-fit=""ask"">
+          <h3>Wisconsin Humane Society</h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The wish list names new or gently used towels. It gives no size breakdown for hand towels or washcloths.</p>
+          <p class=""source""><a href=""https://www.wihumane.org/ways-to-give/wish-list/"">Wisconsin Humane Society wish list</a></p>
+        </li>
+        <li data-operator=""charlotte"" data-fit=""listed"">
+          <h3>Humane Society of Charlotte</h3><p class=""area"">Charlotte, North Carolina, US</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The published list includes hand towels and washcloths.</p>
+          <p class=""source""><a href=""https://humanesocietyofcharlotte.org/give/wish-list/"">Humane Society of Charlotte donation guide</a></p>
+        </li>
+        <li data-operator=""haywood-county"" data-fit=""listed"">
+          <h3>Haywood County Animal Shelter</h3><p class=""area"">Clyde, North Carolina, US</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The county lists towels and specifically names washcloths.</p>
+          <p class=""source""><a href=""https://www.haywoodcountync.gov/869/Donate"">Haywood County shelter donation guide</a></p>
+        </li>
+        <li data-operator=""voorhees"" data-fit=""ask"">
+          <h3>Animal Orphanage</h3><p class=""area"">Voorhees, New Jersey, US</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The shelter lists towels in general. Confirm hand-towel or washcloth size with the shelter.</p>
+          <p class=""source""><a href=""https://www.aonj.org/support/wish-list/"">Animal Orphanage wish list</a></p>
+        </li>
+        <li data-operator=""christchurch"" data-fit=""ask"">
+          <h3>SPCA Christchurch Centre</h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The linked national animal-centre list accepts towels generally. Confirm whether the centre can use hand towels or washcloths.</p>
+          <p class=""source""><a href=""https://www.spca.nz/donate/donate-goods"">SPCA New Zealand animal-centre donation list</a></p>
+        </li>
+        <li data-operator=""casa-grande"" data-fit=""listed"">
+          <h3>Casa Grande Animal Care and Adoption Center</h3><p class=""area"">Casa Grande, Arizona, US</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The city expressly lists hand towels. Ask first if bringing washcloths alone.</p>
+          <p class=""source""><a href=""https://www.casagrandeaz.gov/570/Donations"">Casa Grande Animal Care donation guide</a></p>
+        </li>
+        <li data-operator=""silicon-valley"" data-fit=""ask"">
+          <h3>Humane Society Silicon Valley</h3><p class=""area"">Milpitas, California, US</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The shelter lists towels without naming hand towels or washcloths separately.</p>
+          <p class=""source""><a href=""https://www.hssv.org/give/give-items/"">Humane Society Silicon Valley donation guide</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""bath-towels"" class=""comparison"" aria-labelledby=""bath-towels-title"" tabindex=""-1"">
+      <h2 id=""bath-towels-title"">Large bath towels</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""wisconsin-humane"" data-fit=""ask"">
+          <h3>Wisconsin Humane Society</h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The wish list names new or gently used towels. Confirm your towel size with the campus.</p>
+          <p class=""source""><a href=""https://www.wihumane.org/ways-to-give/wish-list/"">Wisconsin Humane Society wish list</a></p>
+        </li>
+        <li data-operator=""charlotte"" data-fit=""paused"">
+          <h3>Humane Society of Charlotte</h3><p class=""area"">Charlotte, North Carolina, US</p>
+          <p><span class=""fit paused"">No current need</span></p>
+          <p>The organization’s current needs list says it does not need large towels. Recheck the list before a later trip.</p>
+          <p class=""source""><a href=""https://humanesocietyofcharlotte.org/give/wish-list/"">Humane Society of Charlotte donation guide</a></p>
+        </li>
+        <li data-operator=""haywood-county"" data-fit=""ask"">
+          <h3>Haywood County Animal Shelter</h3><p class=""area"">Clyde, North Carolina, US</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The county lists towels generally, without stating a large-towel rule.</p>
+          <p class=""source""><a href=""https://www.haywoodcountync.gov/869/Donate"">Haywood County shelter donation guide</a></p>
+        </li>
+        <li data-operator=""voorhees"" data-fit=""ask"">
+          <h3>Animal Orphanage</h3><p class=""area"">Voorhees, New Jersey, US</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The shelter lists towels in general. Confirm large bath towels before you go.</p>
+          <p class=""source""><a href=""https://www.aonj.org/support/wish-list/"">Animal Orphanage wish list</a></p>
+        </li>
+        <li data-operator=""christchurch"" data-fit=""ask"">
+          <h3>SPCA Christchurch Centre</h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The national list accepts towels generally, without a size breakdown.</p>
+          <p class=""source""><a href=""https://www.spca.nz/donate/donate-goods"">SPCA New Zealand animal-centre donation list</a></p>
+        </li>
+        <li data-operator=""casa-grande"" data-fit=""listed"">
+          <h3>Casa Grande Animal Care and Adoption Center</h3><p class=""area"">Casa Grande, Arizona, US</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The city expressly includes large bath towels.</p>
+          <p class=""source""><a href=""https://www.casagrandeaz.gov/570/Donations"">Casa Grande Animal Care donation guide</a></p>
+        </li>
+        <li data-operator=""silicon-valley"" data-fit=""ask"">
+          <h3>Humane Society Silicon Valley</h3><p class=""area"">Milpitas, California, US</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The shelter lists towels without giving a size boundary. Confirm large bath towels with staff.</p>
+          <p class=""source""><a href=""https://www.hssv.org/give/give-items/"">Humane Society Silicon Valley donation guide</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""flat-sheets"" class=""comparison"" aria-labelledby=""flat-sheets-title"" tabindex=""-1"">
+      <h2 id=""flat-sheets-title"">Flat bed sheets</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""wisconsin-humane"" data-fit=""unknown"">
+          <h3>Wisconsin Humane Society</h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.wihumane.org/ways-to-give/wish-list/"">Check with Wisconsin Humane Society</a></p>
+        </li>
+        <li data-operator=""charlotte"" data-fit=""listed"">
+          <h3>Humane Society of Charlotte</h3><p class=""area"">Charlotte, North Carolina, US</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The organization lists flat bed sheets for bedding.</p>
+          <p class=""source""><a href=""https://humanesocietyofcharlotte.org/give/wish-list/"">Humane Society of Charlotte donation guide</a></p>
+        </li>
+        <li data-operator=""haywood-county"" data-fit=""listed"">
+          <h3>Haywood County Animal Shelter</h3><p class=""area"">Clyde, North Carolina, US</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The shelter lists sheets among items it can use and separately excludes fitted sheets.</p>
+          <p class=""source""><a href=""https://www.haywoodcountync.gov/869/Donate"">Haywood County shelter donation guide</a></p>
+        </li>
+        <li data-operator=""voorhees"" data-fit=""unknown"">
+          <h3>Animal Orphanage</h3><p class=""area"">Voorhees, New Jersey, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.aonj.org/support/wish-list/"">Check with Animal Orphanage</a></p>
+        </li>
+        <li data-operator=""christchurch"" data-fit=""ask"">
+          <h3>SPCA Christchurch Centre</h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The national list names sheets without distinguishing flat and fitted. Confirm your sheet type with the centre.</p>
+          <p class=""source""><a href=""https://www.spca.nz/donate/donate-goods"">SPCA New Zealand animal-centre donation list</a></p>
+        </li>
+        <li data-operator=""casa-grande"" data-fit=""unknown"">
+          <h3>Casa Grande Animal Care and Adoption Center</h3><p class=""area"">Casa Grande, Arizona, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.casagrandeaz.gov/570/Donations"">Check with Casa Grande Animal Care and Adoption Center</a></p>
+        </li>
+        <li data-operator=""silicon-valley"" data-fit=""listed"">
+          <h3>Humane Society Silicon Valley</h3><p class=""area"">Milpitas, California, US</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The shelter lists flat sheets among requested linen donations.</p>
+          <p class=""source""><a href=""https://www.hssv.org/give/give-items/"">Humane Society Silicon Valley donation guide</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""fitted-sheets"" class=""comparison"" aria-labelledby=""fitted-sheets-title"" tabindex=""-1"">
+      <h2 id=""fitted-sheets-title"">Fitted sheets</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""wisconsin-humane"" data-fit=""excluded"">
+          <h3>Wisconsin Humane Society</h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The wish list excludes fitted sheets.</p>
+          <p class=""source""><a href=""https://www.wihumane.org/ways-to-give/wish-list/"">Wisconsin Humane Society wish list</a></p>
+        </li>
+        <li data-operator=""charlotte"" data-fit=""excluded"">
+          <h3>Humane Society of Charlotte</h3><p class=""area"">Charlotte, North Carolina, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The list explicitly excludes fitted sheets.</p>
+          <p class=""source""><a href=""https://humanesocietyofcharlotte.org/give/wish-list/"">Humane Society of Charlotte donation guide</a></p>
+        </li>
+        <li data-operator=""haywood-county"" data-fit=""excluded"">
+          <h3>Haywood County Animal Shelter</h3><p class=""area"">Clyde, North Carolina, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The county lists fitted sheets among items the shelter cannot use.</p>
+          <p class=""source""><a href=""https://www.haywoodcountync.gov/869/Donate"">Haywood County shelter donation guide</a></p>
+        </li>
+        <li data-operator=""voorhees"" data-fit=""unknown"">
+          <h3>Animal Orphanage</h3><p class=""area"">Voorhees, New Jersey, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.aonj.org/support/wish-list/"">Check with Animal Orphanage</a></p>
+        </li>
+        <li data-operator=""christchurch"" data-fit=""ask"">
+          <h3>SPCA Christchurch Centre</h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The national list names sheets generally. It does not specify fitted sheets, so confirm with the centre.</p>
+          <p class=""source""><a href=""https://www.spca.nz/donate/donate-goods"">SPCA New Zealand animal-centre donation list</a></p>
+        </li>
+        <li data-operator=""casa-grande"" data-fit=""excluded"">
+          <h3>Casa Grande Animal Care and Adoption Center</h3><p class=""area"">Casa Grande, Arizona, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The city puts fitted sheets in its list of donations it declines.</p>
+          <p class=""source""><a href=""https://www.casagrandeaz.gov/570/Donations"">Casa Grande Animal Care donation guide</a></p>
+        </li>
+        <li data-operator=""silicon-valley"" data-fit=""excluded"">
+          <h3>Humane Society Silicon Valley</h3><p class=""area"">Milpitas, California, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The shelter limits its stated sheet acceptance to non-fitted sheets.</p>
+          <p class=""source""><a href=""https://www.hssv.org/give/give-items/"">Humane Society Silicon Valley donation guide</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""comforters"" class=""comparison"" aria-labelledby=""comforters-title"" tabindex=""-1"">
+      <h2 id=""comforters-title"">Filled comforters or duvet inserts</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""wisconsin-humane"" data-fit=""excluded"">
+          <h3>Wisconsin Humane Society</h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The wish list excludes comforters, quilts and oversized blankets.</p>
+          <p class=""source""><a href=""https://www.wihumane.org/ways-to-give/wish-list/"">Wisconsin Humane Society wish list</a></p>
+        </li>
+        <li data-operator=""charlotte"" data-fit=""excluded"">
+          <h3>Humane Society of Charlotte</h3><p class=""area"">Charlotte, North Carolina, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The organization lists comforters among items it cannot accept.</p>
+          <p class=""source""><a href=""https://humanesocietyofcharlotte.org/give/wish-list/"">Humane Society of Charlotte donation guide</a></p>
+        </li>
+        <li data-operator=""haywood-county"" data-fit=""unknown"">
+          <h3>Haywood County Animal Shelter</h3><p class=""area"">Clyde, North Carolina, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.haywoodcountync.gov/869/Donate"">Check with Haywood County Animal Shelter</a></p>
+        </li>
+        <li data-operator=""voorhees"" data-fit=""listed"">
+          <h3>Animal Orphanage</h3><p class=""area"">Voorhees, New Jersey, US</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The shelter expressly names comforters. Confirm unusually bulky items ahead of a trip.</p>
+          <p class=""source""><a href=""https://www.aonj.org/support/wish-list/"">Animal Orphanage wish list</a></p>
+        </li>
+        <li data-operator=""christchurch"" data-fit=""excluded"">
+          <h3>SPCA Christchurch Centre</h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The national animal-centre list excludes filled duvet inserts and separately accepts duvet covers.</p>
+          <p class=""source""><a href=""https://www.spca.nz/donate/donate-goods"">SPCA New Zealand animal-centre donation list</a></p>
+        </li>
+        <li data-operator=""casa-grande"" data-fit=""unknown"">
+          <h3>Casa Grande Animal Care and Adoption Center</h3><p class=""area"">Casa Grande, Arizona, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.casagrandeaz.gov/570/Donations"">Check with Casa Grande Animal Care and Adoption Center</a></p>
+        </li>
+        <li data-operator=""silicon-valley"" data-fit=""unknown"">
+          <h3>Humane Society Silicon Valley</h3><p class=""area"">Milpitas, California, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.hssv.org/give/give-items/"">Check with Humane Society Silicon Valley</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""pillows"" class=""comparison"" aria-labelledby=""pillows-title"" tabindex=""-1"">
+      <h2 id=""pillows-title"">Bed pillows</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""wisconsin-humane"" data-fit=""excluded"">
+          <h3>Wisconsin Humane Society</h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The wish list excludes pillows.</p>
+          <p class=""source""><a href=""https://www.wihumane.org/ways-to-give/wish-list/"">Wisconsin Humane Society wish list</a></p>
+        </li>
+        <li data-operator=""charlotte"" data-fit=""excluded"">
+          <h3>Humane Society of Charlotte</h3><p class=""area"">Charlotte, North Carolina, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The list excludes pillows and cushions.</p>
+          <p class=""source""><a href=""https://humanesocietyofcharlotte.org/give/wish-list/"">Humane Society of Charlotte donation guide</a></p>
+        </li>
+        <li data-operator=""haywood-county"" data-fit=""excluded"">
+          <h3>Haywood County Animal Shelter</h3><p class=""area"">Clyde, North Carolina, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The county excludes pillows.</p>
+          <p class=""source""><a href=""https://www.haywoodcountync.gov/869/Donate"">Haywood County shelter donation guide</a></p>
+        </li>
+        <li data-operator=""voorhees"" data-fit=""excluded"">
+          <h3>Animal Orphanage</h3><p class=""area"">Voorhees, New Jersey, US</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The shelter expressly excludes pillows.</p>
+          <p class=""source""><a href=""https://www.aonj.org/support/wish-list/"">Animal Orphanage wish list</a></p>
+        </li>
+        <li data-operator=""christchurch"" data-fit=""excluded"">
+          <h3>SPCA Christchurch Centre</h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The linked national list excludes pillows for animal-centre donations.</p>
+          <p class=""source""><a href=""https://www.spca.nz/donate/donate-goods"">SPCA New Zealand animal-centre donation list</a></p>
+        </li>
+        <li data-operator=""casa-grande"" data-fit=""unknown"">
+          <h3>Casa Grande Animal Care and Adoption Center</h3><p class=""area"">Casa Grande, Arizona, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.casagrandeaz.gov/570/Donations"">Check with Casa Grande Animal Care and Adoption Center</a></p>
+        </li>
+        <li data-operator=""silicon-valley"" data-fit=""unknown"">
+          <h3>Humane Society Silicon Valley</h3><p class=""area"">Milpitas, California, US</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.hssv.org/give/give-items/"">Check with Humane Society Silicon Valley</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""drop-off"" class=""prep"" aria-labelledby=""drop-off-title"" tabindex=""-1"">
+      <h2 id=""drop-off-title"">How to drop off a donation</h2>
+      <p>Check the current wish list, drop-off hours and any instructions for bags or bulk quantities. Confirm that your items are clean and in the condition the organization accepts.</p>
+      <ul class=""cards"" role=""list"">
+        <li>
+          <h3>Wisconsin Humane Society</h3><p class=""area"">Milwaukee and other Wisconsin campuses, US</p>
+          <dl>
+            <dt>Where to go</dt><dd>Use the wish list’s campus directory to confirm the appropriate drop-off location. <span class=""source""><a href=""https://www.wihumane.org/ways-to-give/wish-list/"">Wisconsin Humane Society wish list</a></span></dd>
+            <dt>Condition</dt><dd>The wish list asks for new or gently used towels. <span class=""source""><a href=""https://www.wihumane.org/ways-to-give/wish-list/"">Wisconsin Humane Society wish list</a></span></dd>
+          </dl>
+          <p><a href=""https://www.wihumane.org/ways-to-give/wish-list/"">Wisconsin Humane Society wish list</a></p>
+        </li>
+        <li>
+          <h3>Humane Society of Charlotte</h3><p class=""area"">Charlotte, North Carolina, US</p>
+          <dl>
+            <dt>Where to go</dt><dd>Bring in-person donations to the Pet Help Center and give them to staff. Keep items with you until the center can receive them. <span class=""source""><a href=""https://humanesocietyofcharlotte.org/give/wish-list/"">Humane Society of Charlotte donation guide</a></span></dd>
+            <dt>Large donations</dt><dd>Arrange an appointment with the organization before bringing a large quantity. <span class=""source""><a href=""https://humanesocietyofcharlotte.org/give/wish-list/"">Humane Society of Charlotte donation guide</a></span></dd>
+          </dl>
+          <p><a href=""https://humanesocietyofcharlotte.org/give/wish-list/"">Humane Society of Charlotte donation guide</a></p>
+        </li>
+        <li>
+          <h3>Haywood County Animal Shelter</h3><p class=""area"">Clyde, North Carolina, US</p>
+          <dl>
+            <dt>Where to go</dt><dd>The county directs donations to the bench outside its intake area. Follow the published drop-off directions. <span class=""source""><a href=""https://www.haywoodcountync.gov/869/Donate"">Haywood County shelter donation guide</a></span></dd>
+            <dt>Receipt</dt><dd>The county directs people who need a receipt to visit during regular business hours. <span class=""source""><a href=""https://www.haywoodcountync.gov/869/Donate"">Haywood County shelter donation guide</a></span></dd>
+          </dl>
+          <p><a href=""https://www.haywoodcountync.gov/869/Donate"">Haywood County shelter donation guide</a></p>
+        </li>
+        <li>
+          <h3>Animal Orphanage</h3><p class=""area"">Voorhees, New Jersey, US</p>
+          <dl>
+            <dt>Where to go</dt><dd>Check the wish list and current visitor information before bringing a donation. <span class=""source""><a href=""https://www.aonj.org/support/wish-list/"">Animal Orphanage wish list</a></span></dd>
+            <dt>Sheets and towels</dt><dd>The wish list groups several kinds of bedding together. Ask about shape, size or condition if your item is unclear. <span class=""source""><a href=""https://www.aonj.org/support/wish-list/"">Animal Orphanage wish list</a></span></dd>
+          </dl>
+          <p><a href=""https://www.aonj.org/support/wish-list/"">Animal Orphanage wish list</a></p>
+        </li>
+        <li>
+          <h3>SPCA Christchurch Centre</h3><p class=""area"">Christchurch, Canterbury, New Zealand</p>
+          <dl>
+            <dt>Where to go</dt><dd>The Christchurch page directs linen, towels and blankets for animal care to the centre during opening hours. <span class=""source""><a href=""https://www.spca.nz/centre/christchurch-centre/donations-fundraising"">SPCA Christchurch donation instructions</a></span></dd>
+            <dt>Channel</dt><dd>Use the centre’s donation route for pet bedding and its separate Op Shop instructions for goods intended for resale. <span class=""source""><a href=""https://www.spca.nz/centre/christchurch-centre/donations-fundraising"">SPCA Christchurch donation instructions</a></span></dd>
+          </dl>
+          <p><a href=""https://www.spca.nz/centre/christchurch-centre/donations-fundraising"">SPCA Christchurch donation instructions</a></p>
+        </li>
+        <li>
+          <h3>Casa Grande Animal Care and Adoption Center</h3><p class=""area"">Casa Grande, Arizona, US</p>
+          <dl>
+            <dt>Where to go</dt><dd>Use the address and contact information on the city’s current donation guide. <span class=""source""><a href=""https://www.casagrandeaz.gov/570/Donations"">Casa Grande Animal Care donation guide</a></span></dd>
+            <dt>Condition</dt><dd>The city excludes heavily used and unwashed donations. <span class=""source""><a href=""https://www.casagrandeaz.gov/570/Donations"">Casa Grande Animal Care donation guide</a></span></dd>
+          </dl>
+          <p><a href=""https://www.casagrandeaz.gov/570/Donations"">Casa Grande Animal Care donation guide</a></p>
+        </li>
+        <li>
+          <h3>Humane Society Silicon Valley</h3><p class=""area"">Milpitas, California, US</p>
+          <dl>
+            <dt>Where to go</dt><dd>Use the marked donation bins at the shelter during its published business hours. <span class=""source""><a href=""https://www.hssv.org/give/give-items/"">Humane Society Silicon Valley donation guide</a></span></dd>
+            <dt>Condition</dt><dd>The shelter asks for clean, gently used linens. <span class=""source""><a href=""https://www.hssv.org/give/give-items/"">Humane Society Silicon Valley donation guide</a></span></dd>
+          </dl>
+          <p><a href=""https://www.hssv.org/give/give-items/"">Humane Society Silicon Valley donation guide</a></p>
+        </li>
+      </ul>
+    </section>
+    <!-- SHELTER-LINENS:END -->
+    <section class=""notes"" aria-labelledby=""notes-title"">
+      <h2 id=""notes-title"">Other places to check</h2>
+      <p>In Greater Milwaukee, Goodwill lists linens, blankets and sheets as resale donations. Ask the receiving site about your exact items, especially fitted sheets and bulky bedding.</p>
+      <p class=""source""><a href=""https://www.goodwillgreatermc.org/donate/donate-items/donor-guidelines"">Goodwill Greater Milwaukee &amp; Chicago donation guidelines</a></p>
+      <p>In Aurora, Illinois, Hesed House lists new or used twin and twin XL fitted sheets. Check its current receiving instructions and quantities first.</p>
+      <p class=""source""><a href=""https://www.hesedhouse.org/goods/"">Hesed House goods donation list</a></p>
+    </section>
+    <section class=""notes"" aria-labelledby=""sources-and-data"">
+      <h2 id=""sources-and-data"">Sources and data</h2>
+      <ul class=""utility-links"" role=""list"">
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/shelter-linen-guide/comparison.csv"" download>Download comparison data (CSV)</a></li>
+        <li><a href=""https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml"">Report a source correction</a> (public GitHub form)</li>
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/"">Check other local program rules</a></li>
+      </ul>
+    </section>"
+"milwaukee-bulky-items","Bulky pickup or drop-off in Milwaukee and Wauwatosa?","Compare city curbside pickup and drop-off for a sofa, mattress, TV or refrigerator in Milwaukee and Wauwatosa. Check proof of access, mixed-load rules and contractor vehicle limits.","https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-bulky-items/","2026-11-25","STAGING_DRAFT_ONLY","<div class=""intro"">
+      <p>Pick an item to compare four municipal routes. The city providing your address’s waste service and whether you take the load yourself can change your options.</p>
+      <p>For a whole-house or rental cleanout, start with an item list and separate what stays, what may be donated and what needs a different receiving facility.</p>
+    </div>
+    <!-- MILWAUKEE-BULKY:START -->
+    <nav id=""items"" class=""choices"" aria-label=""Choose an item"" tabindex=""-1"">
+      <p>Choose an item</p>
+      <ul role=""list"">
+        <li><a href=""#sofa-or-mattress"">Sofa or mattress</a></li>
+        <li><a href=""#tv"">Television</a></li>
+        <li><a href=""#large-appliance"">Refrigerator or large appliance</a></li>
+        <li><a href=""#mixed-cleanout"">Mixed cleanout pile</a></li>
+        <li><a href=""#commercial-hauler"">Load handled by a paid hauler</a></li>
+        <li><a href=""#before-moving"">Before you move the load</a></li>
+      </ul>
+    </nav>
+    <p class=""reviewed"">Snapshot reviewed <time datetime=""2026-11-25"">November 25, 2026</time>.</p>
+    <section id=""sofa-or-mattress"" class=""comparison"" aria-labelledby=""sofa-or-mattress-title"" tabindex=""-1"">
+      <h2 id=""sofa-or-mattress-title"">Sofa or mattress</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""milwaukee-curb"" data-fit=""listed"">
+          <h3>Milwaukee curbside</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The city lists furniture and mattresses as bulky items. Check whether the combined pile fits the regular limit or needs a special pickup.</p>
+          <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Bulky-Item-Pickup"">City of Milwaukee bulky item pickup</a></p>
+        </li>
+        <li data-operator=""milwaukee-drop-off"" data-fit=""listed"">
+          <h3>Milwaukee Drop Off Centers</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The city lists old furniture and mattresses. Drop-off fees depend on the volume assessed by staff.</p>
+          <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/DropOff"">City of Milwaukee Drop Off Centers</a></p>
+        </li>
+        <li data-operator=""wauwatosa-curb"" data-fit=""listed"">
+          <h3>Wauwatosa special collection</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The city lists sofas and mattresses as examples for a paid curbside pickup. The bulky fee is based on item count.</p>
+          <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/special-collection/"">Wauwatosa special collection</a></p>
+        </li>
+        <li data-operator=""wauwatosa-drop-off"" data-fit=""listed"">
+          <h3>Wauwatosa Drop Off Center</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The city lists bulky household furniture and mattresses. The posted refuse fee depends on the amount brought in.</p>
+          <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/drop-off-center/"">Wauwatosa Drop Off Center</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""tv"" class=""comparison"" aria-labelledby=""tv-title"" tabindex=""-1"">
+      <h2 id=""tv-title"">Television</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""milwaukee-curb"" data-fit=""excluded"">
+          <h3>Milwaukee curbside</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The city excludes TVs from bulky pickup and directs them to a Drop Off Center.</p>
+          <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Bulky-Item-Pickup"">City of Milwaukee bulky item pickup</a></p>
+        </li>
+        <li data-operator=""milwaukee-drop-off"" data-fit=""listed"">
+          <h3>Milwaukee Drop Off Centers</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The drop-off page gives a per-TV fee and a limit of three. Confirm current charges and the eligible load with the city.</p>
+          <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/DropOff"">City of Milwaukee Drop Off Centers</a></p>
+        </li>
+        <li data-operator=""wauwatosa-curb"" data-fit=""listed"">
+          <h3>Wauwatosa special collection</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The city lists paid curbside pickup for TVs. The quoted amount depends on the pickup’s other items.</p>
+          <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/special-collection/"">Wauwatosa special collection</a></p>
+        </li>
+        <li data-operator=""wauwatosa-drop-off"" data-fit=""listed"">
+          <h3>Wauwatosa Drop Off Center</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The Drop Off Center page lists TVs at $30–$45 each. Special Collection describes a $30 drop-off charge in its appliances and TV section. Confirm your television’s charge directly.</p>
+          <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/drop-off-center/"">Wauwatosa Drop Off Center</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""large-appliance"" class=""comparison"" aria-labelledby=""large-appliance-title"" tabindex=""-1"">
+      <h2 id=""large-appliance-title"">Refrigerator or large appliance</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""milwaukee-curb"" data-fit=""excluded"">
+          <h3>Milwaukee curbside</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The city excludes appliances from bulky pickup and directs them to a Drop Off Center.</p>
+          <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Bulky-Item-Pickup"">City of Milwaukee bulky item pickup</a></p>
+        </li>
+        <li data-operator=""milwaukee-drop-off"" data-fit=""listed"">
+          <h3>Milwaukee Drop Off Centers</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Appliances are on the city’s recycling list. Confirm your exact appliance and the receiving rules before loading.</p>
+          <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/DropOff"">City of Milwaukee Drop Off Centers</a></p>
+        </li>
+        <li data-operator=""wauwatosa-curb"" data-fit=""listed"">
+          <h3>Wauwatosa special collection</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The city lists paid curbside pickup for refrigerators and other major household appliances, with a first-item and additional-item fee.</p>
+          <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/special-collection/"">Wauwatosa special collection</a></p>
+        </li>
+        <li data-operator=""wauwatosa-drop-off"" data-fit=""listed"">
+          <h3>Wauwatosa Drop Off Center</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The city lists refrigerators and other major appliances. The Drop Off Center page gives a separate per-appliance fee.</p>
+          <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/drop-off-center/"">Wauwatosa Drop Off Center</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""mixed-cleanout"" class=""comparison"" aria-labelledby=""mixed-cleanout-title"" tabindex=""-1"">
+      <h2 id=""mixed-cleanout-title"">Mixed cleanout pile</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""milwaukee-curb"" data-fit=""excluded"">
+          <h3>Milwaukee curbside</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The special bulky service excludes loose material and mixed loads containing items such as construction waste, recyclables, tires, brush or yard waste.</p>
+          <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Bulky-Item-Pickup"">City of Milwaukee bulky item pickup</a></p>
+        </li>
+        <li data-operator=""milwaukee-drop-off"" data-fit=""ask"">
+          <h3>Milwaukee Drop Off Centers</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The centers separate material streams and inspect loads. Read the accepted-item list and verify every unusual material and the vehicle before departure.</p>
+          <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/DropOff"">City of Milwaukee Drop Off Centers</a></p>
+        </li>
+        <li data-operator=""wauwatosa-curb"" data-fit=""ask"">
+          <h3>Wauwatosa special collection</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The published page gives individual item categories and examples. Ask Public Works about the entire mixed load and any items that need a different route.</p>
+          <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/special-collection/"">Wauwatosa special collection</a></p>
+        </li>
+        <li data-operator=""wauwatosa-drop-off"" data-fit=""ask"">
+          <h3>Wauwatosa Drop Off Center</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The city describes separate receptacles and asks visitors to keep the material categories apart. Check each item and the household-use limits before loading.</p>
+          <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/drop-off-center/"">Wauwatosa Drop Off Center</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""commercial-hauler"" class=""comparison"" aria-labelledby=""commercial-hauler-title"" tabindex=""-1"">
+      <h2 id=""commercial-hauler-title"">Load handled by a paid hauler</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""milwaukee-curb"" data-fit=""ask"">
+          <h3>Milwaukee curbside</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The published service applies to properties that receive city sanitation collection. Ask the city about your property and have the hauler identify its receiving facility separately.</p>
+          <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/Bulky-Item-Pickup"">City of Milwaukee bulky item pickup</a></p>
+        </li>
+        <li data-operator=""milwaukee-drop-off"" data-fit=""ask"">
+          <h3>Milwaukee Drop Off Centers</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>This city page describes a residential and property-owner program. It leaves the hired hauler’s access unclear. Ask the hauler to identify the receiving facility and confirm the terms.</p>
+          <p class=""source""><a href=""https://city.milwaukee.gov/sanitation/DropOff"">City of Milwaukee Drop Off Centers</a></p>
+        </li>
+        <li data-operator=""wauwatosa-curb"" data-fit=""ask"">
+          <h3>Wauwatosa special collection</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>Confirm whether the city will serve the address and what needs a separate hauler. Obtain a written scope from any contractor you separately hire.</p>
+          <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/special-collection/"">Wauwatosa special collection</a></p>
+        </li>
+        <li data-operator=""wauwatosa-drop-off"" data-fit=""excluded"">
+          <h3>Wauwatosa Drop Off Center</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>Wauwatosa limits this center to household use and explicitly excludes commercial and contractor vehicles.</p>
+          <p class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/drop-off-center/"">Wauwatosa Drop Off Center</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""before-moving"" class=""prep"" aria-labelledby=""before-moving-title"" tabindex=""-1"">
+      <h2 id=""before-moving-title"">Before you move the load</h2>
+      <p>Check the source for your service address, exact items and current fee. Confirm who will move the items and where they will go before agreeing to a cleanout.</p>
+      <ul class=""cards"" role=""list"">
+        <li>
+          <h3>Milwaukee curbside</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+          <dl>
+            <dt>Who the route is for</dt><dd>The property must receive solid-waste collection from City of Milwaukee Sanitation Services. A Milwaukee mailing address alone leaves collection service unclear. <span class=""source""><a href=""https://city.milwaukee.gov/sanitation/Bulky-Item-Pickup"">City of Milwaukee bulky item pickup</a></span></dd>
+            <dt>Amount and request</dt><dd>For eligible bulky items, the department describes up to 1 cubic yard at the regular collection point. Larger eligible loads need a special request and a fee. Check the current size and fee schedule before setting out a load. <span class=""source""><a href=""https://city.milwaukee.gov/sanitation/Bulky-Item-Pickup"">City of Milwaukee bulky item pickup</a></span></dd>
+          </dl>
+          <p><a href=""https://city.milwaukee.gov/sanitation/Bulky-Item-Pickup"">City of Milwaukee bulky item pickup</a></p>
+        </li>
+        <li>
+          <h3>Milwaukee Drop Off Centers</h3><p class=""area"">City of Milwaukee, Wisconsin</p>
+          <dl>
+            <dt>Proof of access</dt><dd>The city describes access for its residents and property owners. It asks for government-issued photo ID and lists separate paperwork for owners who live outside the city. <span class=""source""><a href=""https://city.milwaukee.gov/sanitation/DropOff"">City of Milwaukee Drop Off Centers</a></span></dd>
+            <dt>Load and vehicle</dt><dd>Center staff set the assessed volume and may decline restricted vehicles or loads. Staff do not unload. Check the current payment and vehicle rules before traveling. <span class=""source""><a href=""https://city.milwaukee.gov/sanitation/DropOff"">City of Milwaukee Drop Off Centers</a></span></dd>
+          </dl>
+          <p><a href=""https://city.milwaukee.gov/sanitation/DropOff"">City of Milwaukee Drop Off Centers</a></p>
+        </li>
+        <li>
+          <h3>Wauwatosa special collection</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+          <dl>
+            <dt>Scheduling</dt><dd>Contact Public Works for the fee and collection arrangement. Verify your service address under the city’s program before placing items at the curb. <span class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/special-collection/"">Wauwatosa special collection</a></span></dd>
+            <dt>Fee basis</dt><dd>The city distinguishes ordinary bulky items from appliances and TVs. Share the complete list when you ask for a quote, including any combination of those types. <span class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/special-collection/"">Wauwatosa special collection</a></span></dd>
+          </dl>
+          <p><a href=""https://wauwatosa.gov/departments/public-works/collection-services/special-collection/"">Wauwatosa special collection</a></p>
+        </li>
+        <li>
+          <h3>Wauwatosa Drop Off Center</h3><p class=""area"">City of Wauwatosa, Wisconsin</p>
+          <dl>
+            <dt>Proof of access</dt><dd>The center requires a current Wauwatosa address on a valid Wisconsin driver’s license. Commercial and contractor vehicles are excluded. <span class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/drop-off-center/"">Wauwatosa Drop Off Center</a></span></dd>
+            <dt>Load</dt><dd>Sort items for their separate receptacles and check current hours, fees and payment methods on the city’s own page. <span class=""source""><a href=""https://wauwatosa.gov/departments/public-works/collection-services/drop-off-center/"">Wauwatosa Drop Off Center</a></span></dd>
+          </dl>
+          <p><a href=""https://wauwatosa.gov/departments/public-works/collection-services/drop-off-center/"">Wauwatosa Drop Off Center</a></p>
+        </li>
+      </ul>
+    </section>
+    <!-- MILWAUKEE-BULKY:END -->
+    <section class=""notes"" aria-labelledby=""notes-title"">
+      <h2 id=""notes-title"">Ask before you load it</h2>
+      <p><strong>Wauwatosa TV fees.</strong> The city’s special collection and drop-off pages give different drop-off price descriptions. Contact Public Works with the TV type before relying on a number.</p>
+      <ul class=""utility-links"" role=""list"">
+        <li><a href=""https://wauwatosa.gov/departments/public-works/collection-services/special-collection/"">Special collection page</a></li>
+        <li><a href=""https://wauwatosa.gov/departments/public-works/collection-services/drop-off-center/"">Drop Off Center page</a></li>
+      </ul>
+      <p><strong>Hiring a crew.</strong> Ask for a written list of rooms and items, any extra-load charges and the receiving facility. Make sure the person arranging the work has confirmed which belongings may leave.</p>
+      <p><strong>Still usable?</strong> Separate items you may be able to donate. The city provides a starting list of organizations. Check each group’s current rules before moving the items.</p>
+      <p class=""source""><a href=""https://city.milwaukee.gov/recycle/Reduce-Reuse/Donating"">City of Milwaukee donation options</a></p>
+    </section>
+    <section class=""notes"" aria-labelledby=""sources-and-data"">
+      <h2 id=""sources-and-data"">Sources and data</h2>
+      <ul class=""utility-links"" role=""list"">
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-bulky-items/comparison.csv"" download>Download comparison data (CSV)</a></li>
+        <li><a href=""https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml"">Report a source correction</a> (public GitHub form)</li>
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/shelter-linen-guide/"">Check donation options for towels and bedding</a></li>
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/"">Check other local program rules</a></li>
+      </ul>
+    </section>"

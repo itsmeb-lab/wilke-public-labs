@@ -4,11 +4,11 @@ import { fileURLToPath } from 'node:url';
 
 const root = new URL('../', import.meta.url);
 const site = new URL('https://itsmeb-lab.github.io/wilke-public-labs/');
-const guides = [
+export const comparisonGuides = Object.freeze([
   { slug: 'repair-cafe-planner', marker: 'REPAIR-CAFE' },
   { slug: 'shelter-linen-guide', marker: 'SHELTER-LINENS' },
   { slug: 'milwaukee-bulky-items', marker: 'MILWAUKEE-BULKY' },
-];
+]);
 const read = (path) => readFileSync(new URL(path, root), 'utf8');
 
 function sourceKey(value) {
@@ -23,7 +23,7 @@ function sourceKey(value) {
 export function sourceImpact(input) {
   const key = sourceKey(input);
   const matches = [];
-  for (const { slug, marker } of guides) {
+  for (const { slug, marker } of comparisonGuides) {
     const { sources, operators, tasks, rules } = JSON.parse(read(slug + '/catalog.json'));
     const ids = new Set(Object.entries(sources).filter(([, source]) => sourceKey(source.url) === key).map(([id]) => id));
     const html = read(slug + '/index.html');
@@ -48,7 +48,7 @@ export function sourceImpact(input) {
 
 export async function checkServed(fetcher = fetch) {
   const expected = new Map([['sitemap.xml', 'sitemap.xml']]);
-  for (const { slug } of guides) {
+  for (const { slug } of comparisonGuides) {
     expected.set(slug + '/', slug + '/index.html');
     expected.set(slug + '/comparison.csv', slug + '/comparison.csv');
   }
