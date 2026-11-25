@@ -1,5 +1,6 @@
-import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v2";
-import { catalog } from "./data.mjs?v=20261125-v2";
+import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v3";
+import { catalog } from "./data.mjs?v=20261125-v3";
+import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v3";
 
 const task = document.getElementById("task");
 const place = document.getElementById("place");
@@ -56,6 +57,10 @@ function render() {
    row.append(link,el("span"," · checked "+source.checkedOn,"checked"));sources.append(row);
   }
   nodes.push(sources,el("p",result.limits.join(" "),"limits"));
+  const shared=el("p",null,"share-view");
+  const link=el("a","Link to this policy view");
+  link.href=buildPolicyViewLink(catalog,{serviceId:task.value,placeId:place.value,visitDate:date.value});
+  shared.append(link);nodes.push(shared);
   output.replaceChildren(...nodes);
  }catch(error){
   output.replaceChildren(el("h2","The policy check could not be completed."),el("p",error.message),el("p","Use the original sources below to confirm the details."));
@@ -64,7 +69,16 @@ function render() {
 try{
  validateCatalog(catalog);
  task.replaceChildren(...Object.entries(SERVICES).map(([id,label])=>{const option=el("option",label);option.value=id;return option;}));
- task.value="electronics";choosePlaces("union-jonesville");render();
+ task.value="electronics";choosePlaces("union-jonesville");
+ function loadSharedView(){
+  try{
+   const chosen=parsePolicyView(catalog,document.defaultView?.location.hash||"");
+   if(!chosen)return;
+   task.value=chosen.serviceId;choosePlaces(chosen.placeId);date.value=chosen.visitDate;render();
+  }catch(error){output.replaceChildren(el("h2","This shared view could not be opened."),el("p",error.message),el("p","Choose a task and place above to make a new policy check."));}
+ }
+ render();loadSharedView();
+ document.defaultView?.addEventListener("hashchange",loadSharedView);
  task.addEventListener("change",()=>{choosePlaces(place.value);render();});
  place.addEventListener("change",render);date.addEventListener("input",render);
  const examples={
