@@ -13,6 +13,8 @@
 <meta property="og:url" content="https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/">
 <link rel="stylesheet" href="./style.css?v=20261125-v7">
 <script type="module" src="./app.mjs?v=20261125-v7"></script>
+<link rel="stylesheet" href="./wood-chip-load.css?v=20261125-1">
+<script type="module" src="./wood-chip-load.mjs?v=20261125-1"></script>
 </head>
 <body>
 <a class="skip" href="#checker">Skip to checker</a>
@@ -56,6 +58,22 @@
 <article><p class="eyebrow">Notary · North Carolina</p><h3>The same service can have different limits.</h3><p>Perry Memorial describes a vehicle-title process. Onslow excludes vehicle titles. “Notary available” is not enough information to choose between them.</p><a href="https://www.perrylibrary.org/using-the-library/notary-services" rel="noopener noreferrer" target="_blank">Perry Memorial policy ↗</a> · <a href="https://www.onslowcountync.gov/1861/Request-Notary-Service" rel="noopener noreferrer" target="_blank">Onslow policy ↗</a></article>
 <article><p class="eyebrow">Geography · Morehead, KY</p><h3>A familiar county name needs a state.</h3><p>The Rowan library example is in Morehead, Kentucky. This checker keeps that identity separate from places with the same county name elsewhere.</p><a href="https://www.rowancountylibrary.org/clerical" rel="noopener noreferrer" target="_blank">Rowan County, Kentucky policy ↗</a></article>
 </div>
+</section>
+<section class="wood-chip-load" id="wood-chip-load" aria-labelledby="wood-chip-title">
+<h2 id="wood-chip-title">Could you use a full Wake Forest wood-chip load?</h2>
+<p>The town describes a delivery of roughly 20 cubic yards. It delivers full loads and will not pick up the excess. Compare the amount you plan to spread with the approximate load size.</p>
+<fieldset id="wood-chip-controls" hidden>
+<legend>Estimate how much you’ll use</legend>
+<div class="wood-chip-fields">
+<label for="wood-chip-area">Area to cover (square feet)<input id="wood-chip-area" type="number" inputmode="decimal" min="1" max="1000000" step="any" value="1000"></label>
+<label for="wood-chip-depth">Planned depth (inches)<input id="wood-chip-depth" type="number" inputmode="decimal" min="0.1" max="24" step="any" value="3"></label>
+</div>
+<button type="button" id="wood-chip-calc">Compare with a full load</button>
+<p id="wood-chip-result" role="status" aria-live="polite" aria-atomic="true"></p>
+</fieldset>
+<p>Multiply square feet by depth in inches, then divide by 324 for cubic yards. For example, 1,000 square feet at 3 inches uses about 9.26 cubic yards. A nominal 20-yard load could leave about 10.74 cubic yards unused.</p>
+<p>The town’s guide gives a rough estimate of 180 square feet per cubic yard at 2 inches. The unit conversion used here gives 162 square feet at exactly 2 inches. Actual load size, material and coverage vary.</p>
+<p class="help">For the delivery boundary, waitlist and current program rules, <a href="https://www.wakeforestnc.gov/public-works/solid-waste/yard-waste/mulch-compost">check Wake Forest’s program</a>. <a href="https://extension.colostate.edu/resource/mulches-for-home-gardens/">Colorado State University Extension’s coverage table</a> shows the unit conversion.</p>
 </section>
 <!-- POLICY-SNAPSHOT:START -->
 <section class="policy-browser" aria-labelledby="browse-title">
