@@ -9,7 +9,9 @@
     "york-guide": { "label": "York Region dates and program rules", "url": "https://www.york.ca/newsroom/campaigns-projects/repair-cafe", "checkedOn": "2026-11-25" },
     "wales-rules": { "label": "Wales house rules", "url": "https://repaircafewales.org/house-rules/", "checkedOn": "2026-11-25" },
     "wales-faq": { "label": "Wales visitor FAQ", "url": "https://repaircafewales.org/faqs/", "checkedOn": "2026-11-25" },
-    "wales-events": { "label": "Wales events", "url": "https://repaircafewales.org/events/", "checkedOn": "2026-11-25" }
+    "wales-events": { "label": "Wales events", "url": "https://repaircafewales.org/events/", "checkedOn": "2026-11-25" },
+    "rice-county-guide": { "label": "Rice County clinic guide and dates", "url": "https://www.ricecountymn.gov/807/Fix-It-Clinics", "checkedOn": "2026-11-25" },
+    "waverley-guide": { "label": "Waverley Council repair café guide", "url": "https://www.waverley.nsw.gov.au/secondnature/get_involved/circular_economy_opportunities/repair_cafe", "checkedOn": "2026-11-25" }
   },
   "operators": [
     {
@@ -53,6 +55,22 @@
         { "label": "Item count", "text": "When the event is busy, one item per person is examined. Late arrivals may be turned away in the final hour.", "source": "wales-rules" },
         { "label": "Parts", "text": "Visitors pay separately for any new materials used.", "source": "wales-rules" }
       ]
+    },
+    {
+      "id": "rice-county", "name": "Rice County Fix-It Clinics", "area": "Rice County, Minnesota, US", "country": "US", "jurisdiction": "us-mn-rice-county", "visitSource": "rice-county-guide",
+      "sourceIds": ["rice-county-guide"],
+      "prep": [
+        { "label": "Item count", "text": "Bring up to two items you can carry in. The county excludes oversized items.", "source": "rice-county-guide" },
+        { "label": "Event", "text": "Use the current county listing for the clinic venue and date.", "source": "rice-county-guide" }
+      ]
+    },
+    {
+      "id": "waverley", "name": "Waverley Council Repair Café", "area": "Waverley, New South Wales, Australia", "country": "AU", "jurisdiction": "au-nsw-waverley", "visitSource": "waverley-guide",
+      "sourceIds": ["waverley-guide"],
+      "prep": [
+        { "label": "Check-in", "text": "Check in on arrival. A volunteer gives you a time slot after intake, in arrival order. Advance booking is unavailable.", "source": "waverley-guide" },
+        { "label": "Size", "text": "Bring an item one person can carry. The council describes a 30-minute repair slot.", "source": "waverley-guide" }
+      ]
     }
   ],
   "tasks": [
@@ -69,22 +87,29 @@
     { "operator": "toronto", "task": "bicycle", "fit": "listed", "text": "The visitor guide lists bikes among volunteer skills. Check which fixers will be at your event.", "source": "toronto-visit" },
     { "operator": "york-region", "task": "bicycle", "fit": "listed", "text": "The program lists bicycles, subject to volunteers at the specific event.", "source": "york-guide" },
     { "operator": "wales", "task": "bicycle", "fit": "ask", "text": "Many local cafés decline adult bicycle repairs. Ask the local organizer what they can do.", "source": "wales-rules" },
+    { "operator": "waverley", "task": "bicycle", "fit": "listed", "text": "The council lists bicycle repair among its event categories.", "source": "waverley-guide" },
 
     { "operator": "san-francisco", "task": "microwave", "fit": "excluded", "text": "The café lists microwaves among its exclusions.", "source": "sf-faq" },
     { "operator": "york-region", "task": "microwave", "fit": "listed", "text": "The program names microwaves among small appliances it can consider, depending on available fixers.", "source": "york-guide" },
     { "operator": "wales", "task": "microwave", "fit": "excluded", "text": "The network’s house rules exclude microwave repairs.", "source": "wales-rules" },
+    { "operator": "waverley", "task": "microwave", "fit": "excluded", "text": "The council excludes microwaves from the electronics category.", "source": "waverley-guide" },
 
     { "operator": "san-francisco", "task": "toaster", "fit": "ask", "text": "The FAQ says many toasters are unsuitable for repair. Confirm your item first.", "source": "sf-faq" },
     { "operator": "peninsula", "task": "toaster", "fit": "excluded", "text": "The visitor FAQ asks people to leave toasters at home.", "source": "peninsula-faq" },
+    { "operator": "rice-county", "task": "toaster", "fit": "listed", "text": "The county names toasters as items its clinics may be able to repair.", "source": "rice-county-guide" },
+    { "operator": "waverley", "task": "toaster", "fit": "excluded", "text": "The council lists toasters among items it will not assess.", "source": "waverley-guide" },
 
     { "operator": "san-francisco", "task": "phone", "fit": "excluded", "text": "The café excludes phone repairs. The FAQ mentions advice on use.", "source": "sf-faq" },
     { "operator": "peninsula", "task": "phone", "fit": "excluded", "text": "The visitor FAQ asks people to leave phones at home.", "source": "peninsula-faq" },
+    { "operator": "waverley", "task": "phone", "fit": "listed", "text": "The council lists phone diagnostics and help with setup, storage and updates. Ask about physical repairs before going.", "source": "waverley-guide" },
 
     { "operator": "york-region", "task": "ebike-electrical", "fit": "excluded", "text": "The program rules exclude electrical e-bike issues. The program lists mechanical issues separately.", "source": "york-guide" },
 
     { "operator": "san-francisco", "task": "clothes-alteration", "fit": "excluded", "text": "The FAQ excludes clothing and curtain alterations.", "source": "sf-faq" },
     { "operator": "toronto", "task": "clothes-alteration", "fit": "ask", "text": "The visitor guide says clothing volunteers focus on mending. Ask before bringing an alteration.", "source": "toronto-visit" },
     { "operator": "york-region", "task": "clothes-alteration", "fit": "excluded", "text": "The program excludes hems and alterations. It lists small tears and clothing repairs separately.", "source": "york-guide" },
-    { "operator": "wales", "task": "clothes-alteration", "fit": "ask", "text": "Many local cafés decline clothing alterations. Ask the host for its policy.", "source": "wales-rules" }
+    { "operator": "wales", "task": "clothes-alteration", "fit": "ask", "text": "Many local cafés decline clothing alterations. Ask the host for its policy.", "source": "wales-rules" },
+    { "operator": "rice-county", "task": "clothes-alteration", "fit": "listed", "text": "The county lists clothing and other soft goods for mending or alterations. Ask about the specific alteration you want.", "source": "rice-county-guide" },
+    { "operator": "waverley", "task": "clothes-alteration", "fit": "excluded", "text": "The council excludes clothing alterations and separately lists clean textiles and clothing for repairs.", "source": "waverley-guide" }
   ]
 }

@@ -18,7 +18,7 @@ test('comparison keeps a named restriction separate from a listing and an unknow
   assert.match(microwave, /data-operator="toronto" data-fit="unknown"/);
   assert.match(microwave, /href="https:\/\/repaircafetoronto\.ca\/upcoming-events\/">Check with Repair Café Toronto/);
   const csvRows = csv.trimEnd().split('\r\n');
-  assert.equal(csvRows.length, 31);
+  assert.equal(csvRows.length, 43);
   assert.match(csvRows.find((row) => row.startsWith('"toronto:microwave"')),
     /"unknown","","","","https:\/\/repaircafetoronto\.ca\/upcoming-events\/","2026-11-25"/);
 });

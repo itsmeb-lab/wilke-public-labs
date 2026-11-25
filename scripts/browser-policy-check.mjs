@@ -49,7 +49,9 @@ driver.stdout.on("data",()=>{});
 const deadline=setTimeout(()=>{driver.kill();server.closeAllConnections();},120000);
 deadline.unref();
 async function rpc(method,path,body){
- const response=await fetch(endpoint+path,{method,headers:{"content-type":"application/json"},body:body===undefined?undefined:JSON.stringify(body),signal:AbortSignal.timeout(15000)});
+ let response;
+ try{response=await fetch(endpoint+path,{method,headers:{"content-type":"application/json"},body:body===undefined?undefined:JSON.stringify(body),signal:AbortSignal.timeout(15000)});}
+ catch(error){throw new Error("WebDriver "+method+" "+path.replace(/\/session\/[^/]+/,"/session/{id}")+": "+error.message,{cause:error});}
  const data=await response.json();
  if(!response.ok||data.value?.error)throw new Error("WebDriver "+path+": "+(data.value?.message||response.status));
  return data.value;
@@ -67,7 +69,7 @@ const sid=path=>"/session/"+sessionId+path;
 const execute=(script,args=[])=>rpc("POST",sid("/execute/sync"),{script,args});
 const find=async selector=>(await rpc("POST",sid("/element"),{using:"css selector",value:selector}))["element-6066-11e4-a52e-4f735466cecf"];
 const click=async selector=>rpc("POST",sid("/element/"+await find(selector)+"/click"),{});
-async function session(width,height,javascript=true){
+async function session(width,height,javascript=true,initialPage=page){
  const opts={
   args:["--headless=new","--disable-background-networking","--disable-component-update","--no-first-run","--disable-sync","--disable-default-apps"],
   mobileEmulation:{
@@ -76,11 +78,11 @@ async function session(width,height,javascript=true){
   }
  };
  if(!javascript)opts.prefs={"profile.managed_default_content_settings.javascript":2};
- const value=await rpc("POST","/session",{capabilities:{alwaysMatch:{browserName:"MicrosoftEdge","ms:edgeOptions":opts}}});
+ const value=await rpc("POST","/session",{capabilities:{alwaysMatch:{browserName:"MicrosoftEdge",pageLoadStrategy:initialPage===page?"normal":"none","ms:edgeOptions":opts}}});
  sessionId=value.sessionId;
  const capabilities=value.capabilities;
  await rpc("POST",sid("/timeouts"),{implicit:0,pageLoad:15000,script:10000});
- await rpc("POST",sid("/url"),{url:page});
+ await rpc("POST",sid("/url"),{url:initialPage});
  return {browser:capabilities.browserName,version:capabilities.browserVersion,platform:capabilities.platformName};
 }
 async function closeSession(){if(sessionId){const closing=sessionId;sessionId=null;await rpc("DELETE","/session/"+closing);}}
@@ -137,22 +139,29 @@ try{
  });
  await closeSession();
  for(const [width,height] of [[320,800],[1280,900]]){
-  await session(width,height,false);
+  const repair=origin+"/repair-cafe-planner/";
+  await session(width,height,false,repair);
   await check("repair café static navigation and layout at "+width+"px",async()=>{
-   const repair=origin+"/repair-cafe-planner/";
-   await rpc("POST",sid("/url"),{url:repair});
+   const until=Date.now()+9000;
+   let ready=false;
+   while(Date.now()<until){
+    ready=await execute("return document.readyState==='complete' && Boolean(document.querySelector('#microwave'));");
+    if(ready)break;
+    await delay(50);
+   }
+   assert.ok(ready,"The repair café static page did not load.");
    await click('nav a[href="#microwave"]');
    const heading=await execute(`
     const section=document.querySelector(":target");
     const rect=section.querySelector("h2").getBoundingClientRect();
     return {id:section.id, title:section.querySelector("h2").innerText, top:rect.top,
       mobileWidth:window.innerWidth, height:window.innerHeight, content:document.documentElement.clientWidth,
-      scroll:document.documentElement.scrollWidth, statuses:[...section.querySelectorAll("[data-fit]")].map(row=>row.dataset.fit),
+      scroll:document.documentElement.scrollWidth, statuses:Object.fromEntries([...section.querySelectorAll("[data-fit]")].map(row=>[row.dataset.operator,row.dataset.fit])),
       resources:performance.getEntriesByType("resource").map(entry=>new URL(entry.name).origin)};`);
    assert.equal(heading.id,"microwave");assert.equal(heading.title,"Microwave");
    assert.equal(heading.mobileWidth,width);assert.ok(heading.scroll<=heading.content+1);
    assert.ok(heading.top>=0&&heading.top<heading.height);
-   assert.deepEqual(heading.statuses,["excluded","unknown","unknown","listed","excluded"]);
+   assert.deepEqual(heading.statuses,{"san-francisco":"excluded",peninsula:"unknown",toronto:"unknown","york-region":"listed",wales:"excluded","rice-county":"unknown",waverley:"excluded"});
    assert.ok(heading.resources.length>0&&heading.resources.every(resource=>resource===origin));
    await click('#microwave a[href="#items"]');
    assert.equal(await execute("return document.querySelector(':target').id;"),"items");

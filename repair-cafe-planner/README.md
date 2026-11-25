@@ -1,6 +1,6 @@
 # Repair café visit planner
 
-The [visit planner](https://itsmeb-lab.github.io/wilke-public-labs/repair-cafe-planner/) compares six items against the published rules of five organizers in the United States, Canada and the United Kingdom. It links to the international finder for other places. An item label links directly to its comparison, and the full guide works without JavaScript.
+The [visit planner](https://itsmeb-lab.github.io/wilke-public-labs/repair-cafe-planner/) compares six items against the published rules of seven organizers in the United States, Canada, the United Kingdom and Australia. It links to the international finder for other places. An item label links directly to its comparison, and the full guide works without JavaScript.
 
 The catalog covers standing rules. A particular event may offer fewer categories and have different intake instructions. An organizer listed for an item has described it in its rules. Find the current event and ask about volunteer availability before making the trip.
 

@@ -51,7 +51,7 @@ See [scope, sources and update procedure](./published-policy-lab/README.md).
 
 ### 04 - Repair Café Visit Planner
 
-Compare item rules and check-in instructions at five repair café programs in the United States, Canada and the United Kingdom. The [visit planner](https://itsmeb-lab.github.io/wilke-public-labs/repair-cafe-planner/) works without JavaScript. See the [source catalog and update procedure](./repair-cafe-planner/README.md).
+Compare item rules and check-in instructions at seven repair café programs in the United States, Canada, the United Kingdom and Australia. The [visit planner](https://itsmeb-lab.github.io/wilke-public-labs/repair-cafe-planner/) works without JavaScript. See the [source catalog and update procedure](./repair-cafe-planner/README.md).
 
 ## Run locally
 
