@@ -69,6 +69,10 @@ Compare five materials across six named public drop-off programs, including raw 
 
 Compare scanning methods, library card requirements and scanner sizes at seven libraries. Open the [guide](https://itsmeb-lab.github.io/wilke-public-labs/library-scanning/) or its [source data](./library-scanning/README.md).
 
+### Library museum passes and timed tickets
+
+Check when the library pass and venue ticket are separate, where to redeem the pass and whether a physical pass needs to be returned. Open the [museum pass guide](https://itsmeb-lab.github.io/wilke-public-labs/library-museum-passes/) or its [source data](./library-museum-passes/README.md).
+
 ## Run locally
 
 ```bash
@@ -86,6 +90,7 @@ Then open a lab:
 - `http://localhost:8080/milwaukee-bulky-items/`
 - `http://localhost:8080/food-scrap-drop-off/`
 - `http://localhost:8080/library-scanning/`
+- `http://localhost:8080/library-museum-passes/`
 
 See [how to verify the public comparisons and trace a source change](./COMPARISON-MAINTENANCE.md).
 
@@ -118,7 +123,7 @@ Start with the [diagnostic scope and free handoff checklist](https://wilkeservic
 
 Found these labs through Upwork? Keep pre-contract discussion and payment in the existing Upwork conversation. Do not use the direct-site contact route to move a marketplace relationship off-platform.
 
-The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the nine published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
+The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the ten published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
 
 ## License
 
