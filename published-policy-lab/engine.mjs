@@ -10,7 +10,9 @@ export const SERVICES = Object.freeze({
  hotspot_borrowing: "Hotspot borrowing",
  things_borrowing: "Library of Things borrowing",
  commercial_meeting: "Commercial or for-profit meeting",
- private_study: "Individual or private study"
+ private_study: "Individual or private study",
+ mulch_pickup: "Residential mulch pickup",
+ mulch_delivery: "Residential mulch delivery"
 });
 export const PROGRAM_SCOPE_NOTE = "Program-level rules. Confirm the specific location and current service arrangements with the operator.";
 const own = (o,k) => Object.prototype.hasOwnProperty.call(o,k);

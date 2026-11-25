@@ -1,0 +1,17 @@
+export function mulchChecks(assert,api,catalog){
+ const answer=(id,serviceId,visitDate="")=>{const p=catalog.places.find(p=>p.id===id);return api.answerPolicy(catalog,{placeId:id,serviceId,visitDate,jurisdictionId:p.jurisdictionId});};
+ const c="clemson-mulch-program",w="wakeforest-woodchips-program";
+ return [
+ ["Clemson pickup preserves city-resident ID, self-loading and tarp conditions",()=>{const r=answer(c,"mulch_pickup");assert.equal(r.fit,"described");assert.match(r.conditions.join(" "),/identification.*City of Clemson residency/);assert.match(r.conditions.join(" "),/Load your own.*tarp/);assert.match(r.conditions.join(" "),/one pickup-truck load/);assert.match(r.fee,/free for city residents/);}],
+ ["free pickup cannot become free Clemson delivery",()=>{const r=answer(c,"mulch_delivery");assert.equal(r.fit,"described");assert.equal(r.feeRecorded,true);assert.match(r.fee,/\$10 per cubic yard.*five-cubic-yard minimum/);assert.doesNotMatch(r.fee,/free/);}],
+ ["conflicting source closing times do not create a confident pickup schedule",()=>{const r=answer(c,"mulch_pickup","2026-11-28");assert.match(r.conditions.join(" "),/different closing times.*lunch closure/);assert.equal(r.timing.kind,"unconfirmed");assert.equal(r.timing.regularLabel,undefined);}],
+ ["Wake Forest delivery retains approximate bulk quantity and no smaller delivery",()=>{const r=answer(w,"mulch_delivery");assert.match(r.summary,/approximately 20-cubic-yard/);assert.match(r.conditions.join(" "),/No smaller quantity/);assert.match(r.conditions.join(" "),/will not return to collect/);assert.match(r.fee,/free/);}],
+ ["Wake Forest eligibility uses town limits rather than a guessed ZIP radius",()=>{const r=answer(w,"mulch_delivery");assert.match(r.conditions.join(" "),/within 15 miles of town limits/);assert.match(r.conditions.join(" "),/does not calculate eligibility from a ZIP code/);assert.equal(r.place.jurisdictionId,"us-nc-wake-forest-town");}],
+ ["a source about delivery does not establish a pickup restriction or service",()=>{const r=answer(w,"mulch_pickup","2026-11-28");assert.equal(r.fit,"unstated");assert.equal(r.timing.kind,"task_unconfirmed");assert.equal(r.feeRecorded,false);}],
+ ["an explicit no-weekend delivery constraint is preserved",()=>{const r=answer(w,"mulch_delivery","2026-11-28");assert.equal(r.timing.kind,"regular_day_excluded");assert.equal(r.timing.availability,"UNVERIFIED");}],
+ ["a weekday match cannot establish a delivery date or resolve holidays",()=>{const r=answer(w,"mulch_delivery","2026-11-26");assert.equal(r.timing.kind,"exception_data_unknown");assert.match(r.timing.detail,/No applicable closure calendar/);assert.match(r.conditions.join(" "),/waiting list/);assert.equal(r.timing.availability,"UNVERIFIED");}],
+ ["municipal programs cannot inherit a library or recycling closure calendar",()=>{const r=answer(w,"mulch_delivery","2026-11-26");assert.deepEqual(r.sources.map(s=>s.id),["wakeforest-woodchips"]);assert.doesNotMatch(r.timing.label,/lists this date.*closure/);}],
+ ["mulch program records carry no fabricated pickup street or delivery slot",()=>{for(const id of [c,w]){const r=answer(id,"mulch_delivery");assert.equal(r.place.recordKind,"program");assert.equal(r.place.address,null);assert.match(r.scopeNote,/Confirm the specific location/);}}],
+ ["same task still requires the selected operator's exact jurisdiction",()=>{assert.throws(()=>api.answerPolicy(catalog,{placeId:c,serviceId:"mulch_pickup",jurisdictionId:"us-nc-wake-forest-town"}),/jurisdiction do not match/);}]
+ ];
+}

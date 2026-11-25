@@ -2,7 +2,7 @@
 
 This is a small data handoff for an existing WordPress installation. It does not install a plugin, connect an account, call an AI provider or publish pages.
 
-The sample [CSV](./examples/pgp-policy-source.csv) carries **25 joined policy rows** from the same eleven-entry snapshot used by this lab. They are data records, not 25 approved landing pages. The interactive page already answers these selected tasks in one place.
+The sample [CSV](./examples/pgp-policy-source.csv) carries **29 joined policy rows** from the same thirteen-entry snapshot used by this lab. They are data records, not 29 approved landing pages. The interactive page already answers these selected tasks in one place.
 
 ## Why one joined keyword matters
 

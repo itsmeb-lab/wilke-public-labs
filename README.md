@@ -43,7 +43,7 @@ Real PowerShell watchdog plus an interactive browser mirror demonstrating:
 
 ### 03 — Published Policy Lab
 
-A source-linked checker for selected recycling, notary, printing, borrowing and room-use tasks at eleven sample places and programs across three states. It preserves exclusions, unknown details and the difference between published schedules and live availability. No upload, account, payment or added analytics.
+A source-linked checker for selected recycling, notary, printing, borrowing, room-use and mulch tasks at selected sample places and programs across three states. It preserves exclusions, unknown details and the difference between published schedules and live availability. No upload, account, payment or added analytics.
 
 **Live page:** https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/
 

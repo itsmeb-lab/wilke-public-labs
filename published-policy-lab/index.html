@@ -4,24 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Published Policy Lab — Check a Task Before a Trip</title>
-<meta name="description" content="Compare source-backed recycling, library-service and borrowing rules at eleven sample places and library programs in South Carolina, North Carolina and Kentucky. Check restrictions, dates and what remains unknown.">
+<meta name="description" content="Compare source-backed recycling, library-service, borrowing and mulch rules at 13 sample places and public programs in South Carolina, North Carolina and Kentucky. Check restrictions, dates and what remains unknown.">
 <link rel="canonical" href="https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/">
 <link rel="sitemap" type="application/xml" href="../sitemap.xml">
 <meta property="og:title" content="Published Policy Lab — Check a Task Before a Trip">
 <meta property="og:description" content="A small, source-linked policy checker for recycling and library tasks. Published rules, explicit restrictions and honest unknowns.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/">
-<link rel="stylesheet" href="./style.css?v=20261125-v4">
-<script type="module" src="./app.mjs?v=20261125-v4"></script>
+<link rel="stylesheet" href="./style.css?v=20261125-v5">
+<script type="module" src="./app.mjs?v=20261125-v5"></script>
 </head>
 <body>
 <a class="skip" href="#checker">Skip to checker</a>
 <header class="site-header"><a href="../">Wilke Public Labs</a><span>Small tools. Inspectable rules.</span></header>
 <main>
 <section class="intro" aria-labelledby="page-title">
-<p class="eyebrow">Published Policy Lab · 11 sample places and programs · 3 states</p>
+<p class="eyebrow">Published Policy Lab · 13 sample places and programs · 3 states</p>
 <h1 id="page-title">Check the rule before you make the trip.</h1>
-<p class="lead">Can that station take your TV? Does that library notarize a vehicle title? What should you check before borrowing a hotspot, a kit or reserving a room? Pick a task and see the published rule, its source and the details still worth confirming.</p>
+<p class="lead">Can that station take your TV? Does that library notarize a vehicle title? What should you check before borrowing a hotspot, reserving a room or collecting mulch? Pick a task and see the published rule, its source and the details still worth confirming.</p>
 <p class="snapshot">Sources checked November 25, 2026. This is a limited example set, not a complete directory or a live booking service.</p>
 </section>
 <section class="checker" id="checker" aria-labelledby="checker-title">
@@ -29,9 +29,9 @@
 <h2 id="checker-title">What do you need to do?</h2>
 <label for="task">Task</label><select id="task"></select>
 <label for="place">Place or program and jurisdiction</label><select id="place"></select>
-<label for="visit-date">Visit date <span>(optional)</span></label>
+<label for="visit-date">Date to check <span>(optional)</span></label>
 <input id="visit-date" type="date" min="2000-01-01" max="2100-12-31" aria-describedby="date-help">
-<p class="help" id="date-help">A date checks the published weekday pattern and any supplied closure calendar. It cannot confirm today's staffing or access.</p>
+<p class="help" id="date-help">A date checks the published weekday pattern and any supplied closure calendar. It cannot confirm current staffing, access or a delivery arrival.</p>
 <div class="example-list" aria-label="Try an example">
 <p>Try an example</p>
 <button type="button" data-example="tv">TV at Jonesville</button>
@@ -42,6 +42,8 @@
 <button type="button" data-example="things">Borrowing things in Clayton</button>
 <button type="button" data-example="meeting">Commercial meeting in Durham</button>
 <button type="button" data-example="early">Durham early closing</button>
+<button type="button" data-example="mulch">Mulch pickup in Clemson</button>
+<button type="button" data-example="chips">Wood-chip delivery near Wake Forest</button>
 </div>
 </div>
 <div class="answer" id="answer" role="status" aria-live="polite" aria-atomic="true"><p>Loading the checked policy examples…</p></div>
@@ -83,7 +85,11 @@
 <article class="policy-card"><h3>Durham County Library — meeting and study rooms</h3><p class="checked">Program rules · Durham County, NC</p><p class="help">Program-level rules. Confirm the specific location and current service arrangements with the operator.</p><ul class="policy-list"><li data-policy="durham-rooms-program:commercial_meeting"><h4>Commercial or for-profit meeting</h4><p class="rule-status">Service described</p><p>The policy lists commercial meeting-room fees, with public-access and use restrictions.</p><p>Meetings must remain free and open to the public: no private meetings, attendee charges, donations or goods sales.</p><p>Meeting rooms require at least nine people, an eligible library card and staff approval. Account fees above $25 block booking.</p><p>The general lead time is 72 hours. Main Library has a manager-approved same-day exception; some Main spaces use a separate policy.</p><p>Rooms cannot serve as a business base. Check room capacity, operating hours and the 30-minute-before-closing room cutoff with staff.</p><p>Commercial meeting rooms: $100 for up to four hours, $200 for longer; refreshments add $25. Check the named room&#39;s applicable policy.</p><p class="rule-source"><a href="https://durhamcountylibrary.org/policies/meeting-room-policy/" rel="noopener noreferrer" target="_blank">Durham County Library — meeting and study room policy</a></p></li>
 <li data-policy="durham-rooms-program:private_study"><h4>Individual or private study</h4><p class="rule-status">Service described</p><p>Study rooms allow individual or private use, subject to room capacity and card rules.</p><p>Study rooms accommodate up to eight; the actual room capacity may be lower.</p><p>Use requires an eligible card; account fees above $25 block booking. Juvenile-card access has room-specific limits at Main.</p><p>Each location allows up to two reserved hours daily. No food or use as a business base; confirm the room cutoff and current access.</p><p>Study-room use is free; users remain responsible for applicable cleaning or damage costs.</p><p class="rule-source"><a href="https://durhamcountylibrary.org/policies/meeting-room-policy/" rel="noopener noreferrer" target="_blank">Durham County Library — meeting and study room policy</a></p></li></ul></article>
 <article class="policy-card"><h3>Davidson County Public Library — meeting rooms</h3><p class="checked">Program rules · Davidson County, NC</p><p class="help">Program-level rules. Confirm the specific location and current service arrangements with the operator.</p><ul class="policy-list"><li data-policy="davidson-rooms-program:commercial_meeting"><h4>Commercial or for-profit meeting</h4><p class="rule-status">Published restriction</p><p>The meeting-room policy excludes commercial, money-raising and social purposes.</p><p class="rule-source"><a href="https://www.co.davidson.nc.us/952/Meeting-Room-Policy" rel="noopener noreferrer" target="_blank">Davidson County Public Library — meeting-room policy</a></p></li>
-<li data-policy="davidson-rooms-program:private_study"><h4>Individual or private study</h4><p class="rule-status">Detail unknown</p><p>This meeting-room source does not settle individual or private study-room access.</p><p class="rule-source"><a href="https://www.co.davidson.nc.us/952/Meeting-Room-Policy" rel="noopener noreferrer" target="_blank">Davidson County Public Library — meeting-room policy</a></p></li></ul></article></div>
+<li data-policy="davidson-rooms-program:private_study"><h4>Individual or private study</h4><p class="rule-status">Detail unknown</p><p>This meeting-room source does not settle individual or private study-room access.</p><p class="rule-source"><a href="https://www.co.davidson.nc.us/952/Meeting-Room-Policy" rel="noopener noreferrer" target="_blank">Davidson County Public Library — meeting-room policy</a></p></li></ul></article>
+<article class="policy-card"><h3>City of Clemson — mulch program</h3><p class="checked">Program rules · Clemson, SC</p><p class="help">Program-level rules. Confirm the specific location and current service arrangements with the operator.</p><ul class="policy-list"><li data-policy="clemson-mulch-program:mulch_pickup"><h4>Residential mulch pickup</h4><p class="rule-status">Service described</p><p>The city describes free mulch pickup for city residents, with self-loading and load limits.</p><p>Bring identification showing City of Clemson residency. Load your own mulch and cover it with a tarp.</p><p>The stated maximum is one pickup-truck load at a time. Confirm current stock and the collection point with Public Works.</p><p>The page gives different closing times in its pickup and center-hours sections, including a lunch closure. Confirm the pickup hours; no visit window is modeled here.</p><p>The checked policy describes pickup mulch as free for city residents; delivery is a separate charged service.</p><p class="rule-source"><a href="https://www.clemsoncity.org/341/Street-Maintenance" rel="noopener noreferrer" target="_blank">City of Clemson — brush grinding and mulch rules</a></p></li>
+<li data-policy="clemson-mulch-program:mulch_delivery"><h4>Residential mulch delivery</h4><p class="rule-status">Service described</p><p>The city describes a separate paid mulch-delivery option for residents.</p><p>The published delivery minimum is five cubic yards.</p><p>Confirm resident eligibility, delivery arrangements and current material availability with Public Works. The lab does not quote a total or book delivery.</p><p>The posted delivery rate is $10 per cubic yard, with a five-cubic-yard minimum.</p><p class="rule-source"><a href="https://www.clemsoncity.org/341/Street-Maintenance" rel="noopener noreferrer" target="_blank">City of Clemson — brush grinding and mulch rules</a></p></li></ul></article>
+<article class="policy-card"><h3>Town of Wake Forest — wood-chip program</h3><p class="checked">Program rules · Wake Forest area, NC</p><p class="help">Program-level rules. Confirm the specific location and current service arrangements with the operator.</p><ul class="policy-list"><li data-policy="wakeforest-woodchips-program:mulch_pickup"><h4>Residential mulch pickup</h4><p class="rule-status">Detail unknown</p><p>This source describes delivery but does not settle self-pickup arrangements.</p><p class="rule-source"><a href="https://www.wakeforestnc.gov/public-works/solid-waste/yard-waste/mulch-compost" rel="noopener noreferrer" target="_blank">Town of Wake Forest — mulch and wood-chip program</a></p></li>
+<li data-policy="wakeforest-woodchips-program:mulch_delivery"><h4>Residential mulch delivery</h4><p class="rule-status">Service described</p><p>The town describes free wood-chip delivery in approximately 20-cubic-yard dump-truck loads.</p><p>The source limits the program to local community members within 15 miles of town limits. Confirm the actual service boundary with the town; this lab does not calculate eligibility from a ZIP code.</p><p>No smaller quantity is delivered, and the town will not return to collect the delivered material.</p><p>There is a waiting list. Delivery is not offered on weekends or town holidays; no arrival date or holiday calendar is modeled here.</p><p>Confirm the material offered: the source lists leaf mulch separately from wood chips.</p><p>The checked policy describes this wood-chip delivery program as free.</p><p class="rule-source"><a href="https://www.wakeforestnc.gov/public-works/solid-waste/yard-waste/mulch-compost" rel="noopener noreferrer" target="_blank">Town of Wake Forest — mulch and wood-chip program</a></p></li></ul></article></div>
 </section>
 <!-- POLICY-SNAPSHOT:END -->
 <section class="how" aria-labelledby="limits-title">
