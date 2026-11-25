@@ -31,6 +31,12 @@ class Element {
   focus() {}
 }
 
+// Text-safety and ordering checks do not depend on the host's locale.
+// Keep native locale initialization outside the VM's one-second execution budget.
+class FixtureDate extends Date {
+  toLocaleTimeString() { return this.toISOString().slice(11, 19); }
+}
+
 function fixture() {
   const elements = new Map();
   const document = {
@@ -43,7 +49,7 @@ function fixture() {
   const source = readFileSync(new URL('../automation-reliability-lab/app.js', import.meta.url), 'utf8');
   const importLine = 'import { ReliabilityEngine } from "./core.mjs";';
   assert.equal(source.split(importLine).length, 2, 'Exactly one expected module import');
-  const context = vm.createContext({ document, ReliabilityEngine, Date, setTimeout, clearTimeout });
+  const context = vm.createContext({ document, ReliabilityEngine, Date: FixtureDate, setTimeout, clearTimeout });
   vm.runInContext(source.replace(importLine, ''), context, { timeout: 1000 });
   return { elements, context, evaluate: (code) => vm.runInContext(code, context, { timeout: 1000 }) };
 }
