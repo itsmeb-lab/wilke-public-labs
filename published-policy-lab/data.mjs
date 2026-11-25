@@ -1,5 +1,5 @@
 export const catalog = {
-  "snapshotId": "published-policy-examples-20261125-v1",
+  "snapshotId": "published-policy-examples-20261125-v2",
   "checkedOn": "2026-11-25",
   "sources": [
     {
@@ -36,6 +36,18 @@ export const catalog = {
       "id": "rowan-ky-services",
       "label": "Rowan County Public Library, Kentucky — clerical services",
       "url": "https://www.rowancountylibrary.org/clerical",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "id": "charlotte-hotspots",
+      "label": "Charlotte Mecklenburg Library — hotspot borrowing rules",
+      "url": "https://www.cmlibrary.org/services/computer-internet",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "id": "clayton-things",
+      "label": "Hocutt-Ellington Memorial Library — Library of Things",
+      "url": "https://www.claytonlibrarync.org/895/Library-of-Things",
       "checkedOn": "2026-11-25"
     }
   ],
@@ -407,6 +419,54 @@ export const catalog = {
         "vehicle_title",
         "basic_notary"
       ]
+    },
+    {
+      "id": "charlotte-hotspots-program",
+      "recordKind": "program",
+      "name": "Charlotte Mecklenburg Library — hotspot program",
+      "region": "NC",
+      "locality": "Mecklenburg County",
+      "jurisdictionId": "us-nc-mecklenburg-county",
+      "address": null,
+      "policies": {
+        "hotspot_borrowing": {
+          "fit": "described",
+          "summary": "The library describes a seven-day hotspot loan, subject to borrower requirements and the reservation queue.",
+          "sourceIds": [
+            "charlotte-hotspots"
+          ],
+          "conditions": [
+            "Borrowers must be 18+ with a valid Charlotte Mecklenburg Library card, current government photo ID and a library-account balance below $10.",
+            "The limit is one hotspot per borrower; the published loan is seven days without renewal.",
+            "Return the equipment to staff at a library location, rather than a book drop. Use is restricted to the continental United States.",
+            "Check the source for overdue service cutoff and replacement charges. The lab does not calculate fees or predict stock and wait time."
+          ]
+        }
+      }
+    },
+    {
+      "id": "clayton-things-program",
+      "recordKind": "program",
+      "name": "Hocutt-Ellington Memorial Library — Library of Things",
+      "region": "NC",
+      "locality": "Clayton",
+      "jurisdictionId": "us-nc-clayton-27520",
+      "address": null,
+      "policies": {
+        "things_borrowing": {
+          "fit": "described",
+          "summary": "The library describes borrowing non-book items, with separate kit and technology limits.",
+          "sourceIds": [
+            "clayton-things"
+          ],
+          "conditions": [
+            "Age 18+ and a valid Hocutt-Ellington Memorial Library card are required.",
+            "The published limit is two kit items plus one technology item at a time. Technology items have additional lending rules.",
+            "The cardholder is responsible for missing or damaged items and related repair or replacement charges.",
+            "Check the operator's catalog and item-specific rules for current availability and pickup arrangements."
+          ]
+        }
+      }
     }
   ]
 };

@@ -11,11 +11,11 @@ const rows=csv.trimEnd().split(/\r?\n/).map(line=>{
  assert.equal(cells.map(value=>'"'+value.replace(/"/g,'""')+'"').join(","),line);
  return cells;
 });
-const headers=["record_id","place_name","state","locality","jurisdiction_id","task_id","task_label","policy_fit","policy_summary","conditions","fee_description","alternate_place_id","source_urls","checked_on","live_availability","publication_status"];
-test("exchange fixture has exact columns and all 19 unique joined records",()=>{
- assert.deepEqual(rows[0],headers);assert.equal(rows.length,20);
- for(const row of rows)assert.equal(row.length,16);
- assert.equal(new Set(rows.slice(1).map(row=>row[0])).size,19);
+const headers=["record_id","place_name","state","locality","jurisdiction_id","task_id","task_label","policy_fit","policy_summary","conditions","fee_description","alternate_place_id","source_urls","checked_on","live_availability","publication_status","record_kind"];
+test("exchange fixture has exact columns and all 21 unique joined records",()=>{
+ assert.deepEqual(rows[0],headers);assert.equal(rows.length,22);
+ for(const row of rows)assert.equal(row.length,17);
+ assert.equal(new Set(rows.slice(1).map(row=>row[0])).size,21);
 });
 test("every exchange value agrees with its joined source catalog record",()=>{
  const sources=new Map(catalog.sources.map(source=>[source.id,source.url]));
@@ -25,7 +25,7 @@ test("every exchange value agrees with its joined source catalog record",()=>{
   (policy.conditions||[]).join(" / ")||"No additional condition modeled; check the source.",
   policy.fee||"Not stated in this snapshot.",policy.redirectPlaceId||"Not applicable",
   policy.sourceIds.map(id=>sources.get(id)).join(" / "),catalog.checkedOn,
-  "UNVERIFIED","EXCHANGE_ONLY_NOT_A_PAGE_APPROVAL"
+  "UNVERIFIED","EXCHANGE_ONLY_NOT_A_PAGE_APPROVAL",place.recordKind||"place"
  ]));
  assert.deepEqual(rows.slice(1),expected);
 });

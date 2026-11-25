@@ -6,8 +6,11 @@ export const SERVICES = Object.freeze({
  paint: "Paint preparation",
  vehicle_title: "Vehicle-title notarization",
  basic_notary: "Basic notary service",
- printing: "Printing"
+ printing: "Printing",
+ hotspot_borrowing: "Hotspot borrowing",
+ things_borrowing: "Library of Things borrowing"
 });
+export const PROGRAM_SCOPE_NOTE = "Program-level rules. Confirm the pickup location and current item availability with the operator.";
 const own = (o,k) => Object.prototype.hasOwnProperty.call(o,k);
 export function parseVisitDate(value) {
  if (value === "" || value == null) return null;
@@ -32,6 +35,8 @@ export function validateCatalog(catalog) {
  for (const p of catalog.places) {
   if (!p || typeof p.id!=="string" || !p.id || ids.has(p.id) || typeof p.jurisdictionId!=="string" || !p.jurisdictionId || typeof p.region!=="string" || !/^[A-Z]{2}$/.test(p.region) || typeof p.locality!=="string" || !p.locality || typeof p.name!=="string" || !p.name || !p.jurisdictionId.startsWith("us-"+p.region.toLowerCase()+"-")) throw new Error("Invalid place identity.");
   ids.add(p.id);
+  if(p.recordKind!=null && !["place","program"].includes(p.recordKind))throw new Error("Invalid record kind.");
+  if(p.recordKind==="program" && p.address!=null)throw new Error("Program rules must not imply a specific pickup address.");
   if (!p.policies || typeof p.policies!=="object" || Array.isArray(p.policies)) throw new Error("Missing policies.");
   for (const key of Object.keys(p.policies)) {
    const v=p.policies[key];
@@ -95,12 +100,13 @@ export function answerPolicy(catalog,query) {
  const redirect=effective.redirectPlaceId?catalog.places.find(p=>p.id===effective.redirectPlaceId):null;
  return {
   kind:"published_policy_projection",snapshotId:catalog.snapshotId,snapshotCheckedOn:catalog.checkedOn,
-  place:{id:place.id,name:place.name,region:place.region,locality:place.locality,jurisdictionId:place.jurisdictionId,address:place.address||null},
+  place:{id:place.id,name:place.name,region:place.region,locality:place.locality,jurisdictionId:place.jurisdictionId,address:place.address||null,recordKind:place.recordKind||"place"},
+  scopeNote:place.recordKind==="program"?PROGRAM_SCOPE_NOTE:null,
   task:SERVICES[query.serviceId],serviceId:query.serviceId,visitDate:visit?.iso||null,
   fit:effective.fit,summary:effective.summary,conditions:effective.conditions||[],
   fee:effective.fee||"Not stated in this checked policy.",timing,
   redirectedPlace:redirect?{id:redirect.id,name:redirect.name,locality:redirect.locality,region:redirect.region}:null,
   sources:catalog.sources.filter(s=>sourceIds.includes(s.id)).map(s=>({id:s.id,label:s.label,url:s.url,checkedOn:s.checkedOn})),
-  limits:["Published rules do not establish live availability or a booking.","The operator decides whether a particular request can be handled.","This sample covers selected tasks and places; missing detail remains unknown."]
+  limits:["Published rules do not establish live availability or a booking.","The operator decides whether a particular request can be handled.","This sample covers selected tasks, places and programs; missing detail remains unknown."]
  };
 }

@@ -39,9 +39,9 @@ test("policy controls have unique identifiers, labels and a live result region",
  assert.match(html,/class="skip" href="#checker"/);
 });
 test("published example counts match the checked snapshot",()=>{
- assert.equal(catalog.places.length,7);
+ assert.equal(catalog.places.length,9);
  assert.equal(new Set(catalog.places.map(p=>p.region)).size,3);
- assert.equal(catalog.sources.length,6);
+ assert.equal(catalog.sources.length,8);
 });
 test("policy utility has no compulsory sales, account or payment route",()=>{
  assert.doesNotMatch(html,/data-diagnostic-link|checkout|square\.link|type="password"|mailto:/i);

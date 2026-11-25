@@ -30,6 +30,7 @@ function render() {
    el("h2",result.summary),
    el("p",result.place.name+" · "+result.place.locality+", "+result.place.region,"place-label")
   ];
+  if(result.scopeNote)nodes.push(el("p",result.scopeNote,"help"));
   if(result.place.address)nodes.push(el("p",result.place.address,"address"));
   if(result.conditions.length){
    const list=el("ul");for(const rule of result.conditions)list.append(el("li",rule));nodes.push(list);
@@ -70,7 +71,9 @@ try{
   tv:["electronics","union-jonesville",""],
   title:["vehicle_title","onslow-jacksonville",""],
   printing:["printing","haywood-waynesville",""],
-  holiday:["farmer_oil","union-cross-keys","2026-11-26"]
+  holiday:["farmer_oil","union-cross-keys","2026-11-26"],
+  hotspot:["hotspot_borrowing","charlotte-hotspots-program",""],
+  things:["things_borrowing","clayton-things-program",""]
  };
  for(const button of document.querySelectorAll("[data-example]"))button.addEventListener("click",()=>{
   const [service,id,day]=examples[button.dataset.example];task.value=service;choosePlaces(id);date.value=day;render();
