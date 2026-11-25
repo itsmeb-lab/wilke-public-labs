@@ -13,6 +13,7 @@ import { SERVICES } from "../published-policy-lab/engine.mjs";
 
 const root=fileURLToPath(new URL("../",import.meta.url));
 const allowed=new Set(["index.html","style.css","app.mjs","data.mjs","engine.mjs","view-link.mjs"]);
+const served=new Map([["published-policy-lab",allowed],["repair-cafe-planner",new Set(["index.html","style.css"])]]);
 const mime={html:"text/html; charset=utf-8",css:"text/css; charset=utf-8",mjs:"text/javascript; charset=utf-8"};
 const driverFolder=process.env.EDGEWEBDRIVER;
 if(!driverFolder)throw new Error("EDGEWEBDRIVER is required; no browser or driver will be downloaded.");
@@ -23,11 +24,11 @@ const server=createServer(async(req,res)=>{
  try{
   const u=new URL(req.url,"http://127.0.0.1");
   if(u.pathname==="/favicon.ico"){res.writeHead(204);res.end();return;}
-  const prefix="/published-policy-lab/";
-  const leaf=u.pathname.startsWith(prefix)?u.pathname.slice(prefix.length)||"index.html":"";
-  if(!allowed.has(leaf)){res.writeHead(404);res.end("Fixture path not served.");return;}
+  const [,folder,leafName,...more]=u.pathname.split("/");
+  const leaf=leafName||"index.html";
+  if(leafName===undefined||more.length||!served.get(folder)?.has(leaf)){res.writeHead(404);res.end("Fixture path not served.");return;}
   received.push(leaf);
-  const bytes=await readFile(join(root,"published-policy-lab",leaf));
+  const bytes=await readFile(join(root,folder,leaf));
   res.writeHead(200,{"content-type":mime[leaf.split(".").at(-1)]||"text/plain","cache-control":"no-store"});
   res.end(bytes);
  }catch{res.writeHead(500);res.end("Fixture read failed.");}
@@ -135,6 +136,30 @@ try{
   assert.ok(s.scrollWidth<=391);return {width:s.width,cards:s.cards,rows:s.rows,appTasks:s.tasks,runtime};
  });
  await closeSession();
+ for(const [width,height] of [[320,800],[1280,900]]){
+  await session(width,height,false);
+  await check("repair café static navigation and layout at "+width+"px",async()=>{
+   const repair=origin+"/repair-cafe-planner/";
+   await rpc("POST",sid("/url"),{url:repair});
+   await click('nav a[href="#microwave"]');
+   const heading=await execute(`
+    const section=document.querySelector(":target");
+    const rect=section.querySelector("h2").getBoundingClientRect();
+    return {id:section.id, title:section.querySelector("h2").innerText, top:rect.top,
+      mobileWidth:window.innerWidth, height:window.innerHeight, content:document.documentElement.clientWidth,
+      scroll:document.documentElement.scrollWidth, statuses:[...section.querySelectorAll("[data-fit]")].map(row=>row.dataset.fit),
+      resources:performance.getEntriesByType("resource").map(entry=>new URL(entry.name).origin)};`);
+   assert.equal(heading.id,"microwave");assert.equal(heading.title,"Microwave");
+   assert.equal(heading.mobileWidth,width);assert.ok(heading.scroll<=heading.content+1);
+   assert.ok(heading.top>=0&&heading.top<heading.height);
+   assert.deepEqual(heading.statuses,["excluded","unknown","unknown","listed","excluded"]);
+   assert.ok(heading.resources.length>0&&heading.resources.every(resource=>resource===origin));
+   await click('#microwave a[href="#items"]');
+   assert.equal(await execute("return document.querySelector(':target').id;"),"items");
+   return {width,content:heading.content,comparison:heading.title,statuses:heading.statuses};
+  });
+  await closeSession();
+ }
  assert.ok(received.includes("app.mjs")&&received.includes("engine.mjs")&&received.includes("data.mjs"));
  console.log(JSON.stringify({schema:1,kind:"isolated_real_browser_fixture",passed:true,checks:results.length,results,limits:["Hosted Windows Edge with explicit emulation, not a physical phone or EliteBook Win10 run.","No agency, identity, booking, analytics or provider request is part of the fixture.","Layout/control assertions are not WCAG conformance or a visual pixel audit."]},null,2));
 }catch(error){
