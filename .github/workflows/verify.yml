@@ -31,6 +31,3 @@ jobs:
       - name: Run Windows watchdog fixture
         shell: pwsh
         run: .\windows-process-recovery-watchdog\powershell\Test-ProcessWatchdog.ps1
-      - name: Read the Page Generator Pro staging CSV with PHP
-        if: github.event_name == 'pull_request' && github.head_ref == 'atlas/page-generator-pro-draft-exchange'
-        run: php tests/verify-wordpress-csv.php
