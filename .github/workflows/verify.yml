@@ -31,6 +31,3 @@ jobs:
       - name: Run Windows watchdog fixture
         shell: pwsh
         run: .\windows-process-recovery-watchdog\powershell\Test-ProcessWatchdog.ps1
-      - name: Verify the three currently published comparisons
-        if: github.event_name == 'pull_request' && github.head_ref == 'atlas/comparison-release-and-source-review'
-        run: node scripts/review-comparisons.mjs --served
