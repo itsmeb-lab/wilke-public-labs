@@ -77,6 +77,8 @@ Then open a lab:
 - `http://localhost:8080/shelter-linen-guide/`
 - `http://localhost:8080/milwaukee-bulky-items/`
 
+See [how to verify the public comparisons and trace a source change](./COMPARISON-MAINTENANCE.md).
+
 ## Windows watchdog fixture
 
 On Windows PowerShell:
