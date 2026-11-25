@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Published Policy Lab — Check a Task Before a Trip</title>
-<meta name="description" content="Compare source-backed recycling and library rules at seven sample places in South Carolina, North Carolina and Kentucky. Check restrictions, dates and what remains unknown.">
+<meta name="description" content="Compare source-backed recycling, library-service and borrowing rules at nine sample places and library programs in South Carolina, North Carolina and Kentucky. Check restrictions, dates and what remains unknown.">
 <link rel="canonical" href="https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/">
 <link rel="sitemap" type="application/xml" href="../sitemap.xml">
 <meta property="og:title" content="Published Policy Lab — Check a Task Before a Trip">
@@ -19,16 +19,16 @@
 <header class="site-header"><a href="../">Wilke Public Labs</a><span>Small tools. Inspectable rules.</span></header>
 <main>
 <section class="intro" aria-labelledby="page-title">
-<p class="eyebrow">Published Policy Lab · 7 sample places · 3 states</p>
+<p class="eyebrow">Published Policy Lab · 9 sample places and programs · 3 states</p>
 <h1 id="page-title">Check the rule before you make the trip.</h1>
-<p class="lead">Can that station take your TV? Does that library notarize a vehicle title? Pick a task and see the published rule, its source and the details still worth confirming.</p>
+<p class="lead">Can that station take your TV? Does that library notarize a vehicle title? What should you check before borrowing a hotspot or a kit? Pick a task and see the published rule, its source and the details still worth confirming.</p>
 <p class="snapshot">Sources checked November 25, 2026. This is a limited example set, not a complete directory or a live booking service.</p>
 </section>
 <section class="checker" id="checker" aria-labelledby="checker-title">
 <div class="controls">
 <h2 id="checker-title">What do you need to do?</h2>
 <label for="task">Task</label><select id="task"></select>
-<label for="place">Place and jurisdiction</label><select id="place"></select>
+<label for="place">Place or program and jurisdiction</label><select id="place"></select>
 <label for="visit-date">Visit date <span>(optional)</span></label>
 <input id="visit-date" type="date" min="2000-01-01" max="2100-12-31" aria-describedby="date-help">
 <p class="help" id="date-help">A date checks the published weekday pattern and any supplied closure calendar. It cannot confirm today's staffing or access.</p>
@@ -38,6 +38,8 @@
 <button type="button" data-example="title">Vehicle title in Jacksonville</button>
 <button type="button" data-example="printing">Printing in Waynesville</button>
 <button type="button" data-example="holiday">Thanksgiving at Cross Keys</button>
+<button type="button" data-example="hotspot">Hotspot borrowing in Mecklenburg</button>
+<button type="button" data-example="things">Borrowing things in Clayton</button>
 </div>
 </div>
 <div class="answer" id="answer" role="status" aria-live="polite" aria-atomic="true"><p>Loading the checked policy examples…</p></div>
@@ -73,7 +75,9 @@
 <li data-policy="haywood-waynesville:printing"><h4>Printing</h4><p class="rule-status">Service described</p><p>The page describes mobile printing, with a daily limit.</p><p>The stated maximum is 50 prints per day.</p><p>The posted printing rate is $0.20 per page.</p><p class="rule-source"><a href="https://hhsa.haywoodcountync.gov/648/Mobile-Printing-Faxing-Notary-Services" rel="noopener noreferrer" target="_blank">Haywood County Library — printing and notary</a></p></li></ul></article>
 <article class="policy-card"><h3>Rowan County Public Library</h3><p class="checked">Morehead, KY</p><ul class="policy-list"><li data-policy="rowan-morehead-ky:vehicle_title"><h4>Vehicle-title notarization</h4><p class="rule-status">Published restriction</p><p>This Kentucky library excludes notarization relating to motorized vehicles.</p><p class="rule-source"><a href="https://www.rowancountylibrary.org/clerical" rel="noopener noreferrer" target="_blank">Rowan County Public Library, Kentucky — clerical services</a></p></li>
 <li data-policy="rowan-morehead-ky:basic_notary"><h4>Basic notary service</h4><p class="rule-status">Service described</p><p>The page describes basic notary service during normal library hours, subject to staff availability.</p><p>Use the library&#39;s current identification and residence instructions.</p><p>The checked page describes notary service as free.</p><p class="rule-source"><a href="https://www.rowancountylibrary.org/clerical" rel="noopener noreferrer" target="_blank">Rowan County Public Library, Kentucky — clerical services</a></p></li>
-<li data-policy="rowan-morehead-ky:printing"><h4>Printing</h4><p class="rule-status">Service described</p><p>The page describes library printing and copying.</p><p>Confirm the applicable print settings and current service arrangements.</p><p>The first 10 pages are described as free, with additional pages at $0.10 each.</p><p class="rule-source"><a href="https://www.rowancountylibrary.org/clerical" rel="noopener noreferrer" target="_blank">Rowan County Public Library, Kentucky — clerical services</a></p></li></ul></article></div>
+<li data-policy="rowan-morehead-ky:printing"><h4>Printing</h4><p class="rule-status">Service described</p><p>The page describes library printing and copying.</p><p>Confirm the applicable print settings and current service arrangements.</p><p>The first 10 pages are described as free, with additional pages at $0.10 each.</p><p class="rule-source"><a href="https://www.rowancountylibrary.org/clerical" rel="noopener noreferrer" target="_blank">Rowan County Public Library, Kentucky — clerical services</a></p></li></ul></article>
+<article class="policy-card"><h3>Charlotte Mecklenburg Library — hotspot program</h3><p class="checked">Program rules · Mecklenburg County, NC</p><p class="help">Program-level rules. Confirm the pickup location and current item availability with the operator.</p><ul class="policy-list"><li data-policy="charlotte-hotspots-program:hotspot_borrowing"><h4>Hotspot borrowing</h4><p class="rule-status">Service described</p><p>The library describes a seven-day hotspot loan, subject to borrower requirements and the reservation queue.</p><p>Borrowers must be 18+ with a valid Charlotte Mecklenburg Library card, current government photo ID and a library-account balance below $10.</p><p>The limit is one hotspot per borrower; the published loan is seven days without renewal.</p><p>Return the equipment to staff at a library location, rather than a book drop. Use is restricted to the continental United States.</p><p>Check the source for overdue service cutoff and replacement charges. The lab does not calculate fees or predict stock and wait time.</p><p class="rule-source"><a href="https://www.cmlibrary.org/services/computer-internet" rel="noopener noreferrer" target="_blank">Charlotte Mecklenburg Library — hotspot borrowing rules</a></p></li></ul></article>
+<article class="policy-card"><h3>Hocutt-Ellington Memorial Library — Library of Things</h3><p class="checked">Program rules · Clayton, NC</p><p class="help">Program-level rules. Confirm the pickup location and current item availability with the operator.</p><ul class="policy-list"><li data-policy="clayton-things-program:things_borrowing"><h4>Library of Things borrowing</h4><p class="rule-status">Service described</p><p>The library describes borrowing non-book items, with separate kit and technology limits.</p><p>Age 18+ and a valid Hocutt-Ellington Memorial Library card are required.</p><p>The published limit is two kit items plus one technology item at a time. Technology items have additional lending rules.</p><p>The cardholder is responsible for missing or damaged items and related repair or replacement charges.</p><p>Check the operator&#39;s catalog and item-specific rules for current availability and pickup arrangements.</p><p class="rule-source"><a href="https://www.claytonlibrarync.org/895/Library-of-Things" rel="noopener noreferrer" target="_blank">Hocutt-Ellington Memorial Library — Library of Things</a></p></li></ul></article></div>
 </section>
 <!-- POLICY-SNAPSHOT:END -->
 <section class="how" aria-labelledby="limits-title">

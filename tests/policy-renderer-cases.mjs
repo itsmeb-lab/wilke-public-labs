@@ -15,7 +15,7 @@ export function rendererChecks(assert,source,api,catalog) {
  }
  function fixture(data=catalog) {
   const elements=new Map([["task",new Element("select")],["place",new Element("select")],["visit-date",new Element("input")],["answer",new Element("div")]]);
-  const examples=["tv","title","printing","holiday"].map(id=>{const e=new Element("button");e.dataset.example=id;return e;});
+  const examples=["tv","title","printing","holiday","hotspot","things"].map(id=>{const e=new Element("button");e.dataset.example=id;return e;});
   const document={getElementById:id=>elements.get(id),createElement:tag=>new Element(tag),querySelectorAll:selector=>selector==="[data-example]"?examples:[]};
   const imports=['import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs";','import { catalog } from "./data.mjs";'];
   let body=source;
@@ -31,7 +31,7 @@ export function rendererChecks(assert,source,api,catalog) {
   };
  }
  return [
- ["browser module renders the initial Jonesville restriction without HTML sinks",()=>{const f=fixture();assert.match(f.output.textContent,/Published restriction/);assert.match(f.output.textContent,/Airport/);assert.equal(f.elements.get("task").children.length,6);assert.equal(f.elements.get("place").children.length,3);}],
+ ["browser module renders the initial Jonesville restriction without HTML sinks",()=>{const f=fixture();assert.match(f.output.textContent,/Published restriction/);assert.match(f.output.textContent,/Airport/);assert.equal(f.elements.get("task").children.length,8);assert.equal(f.elements.get("place").children.length,3);}],
  ["alternate-location control recomputes the selected policy",()=>{const f=fixture();f.find(f.output,n=>n.tagName==="button"&&n.textContent==="Check that location").fire("click");assert.equal(f.elements.get("place").value,"union-airport");assert.match(f.output.textContent,/Service described in the source/);}],
  ["task selection scopes candidates rather than guessing similar places",()=>{const f=fixture();f.selectTask("vehicle_title");assert.equal(f.elements.get("place").children.length,4);assert.ok(f.elements.get("place").children.some(x=>/Morehead, KY/.test(x.textContent)));assert.ok(!f.elements.get("place").children.some(x=>/Jonesville/.test(x.textContent)));}],
  ["Onslow example preserves the explicit title exclusion",()=>{const f=fixture();f.example("title");assert.equal(f.elements.get("place").value,"onslow-jacksonville");assert.match(f.output.textContent,/excludes DMV forms and vehicle titles/);}],
@@ -42,6 +42,9 @@ export function rendererChecks(assert,source,api,catalog) {
  ["source anchors use checked primary URLs and safe new-tab attributes",()=>{const f=fixture();const a=f.find(f.output,n=>n.tagName==="a");assert.ok(catalog.sources.some(s=>s.url===a.href));assert.equal(a.target,"_blank");assert.equal(a.rel,"noopener noreferrer");}],
  ["an invalid date surfaces a helpful refusal",()=>{const f=fixture();const d=f.elements.get("visit-date");d.validity.valid=false;d.fire("input");assert.match(f.output.textContent,/between 2000 and 2100/);assert.doesNotMatch(f.output.textContent,/Service described/);}],
  ["markup-like source content stays literal text",()=>{const c=JSON.parse(JSON.stringify(catalog));const marker='<img src=x onerror="synthetic">';c.places.find(p=>p.id==="union-jonesville").policies.electronics.summary=marker;const f=fixture(c);const h=f.find(f.output,n=>n.tagName==="h2");assert.equal(h.textContent,marker);assert.equal(h.children.length,0);}],
+ ["hotspot preset shows program scope without a fabricated pickup address",()=>{const f=fixture();f.example("hotspot");assert.equal(f.elements.get("place").value,"charlotte-hotspots-program");assert.match(f.output.textContent,/Program-level rules/);assert.match(f.output.textContent,/seven days without renewal/);assert.equal(f.find(f.output,n=>n.className==="address"),undefined);}],
+ ["program selection keeps live stock and date-specific access unverified",()=>{const f=fixture();f.selectTask("hotspot_borrowing");assert.equal(f.elements.get("place").children.length,1);assert.match(f.output.textContent,/No visit window is modeled/);assert.match(f.output.textContent,/Live availability: unverified/);assert.doesNotMatch(f.output.textContent,/in stock|ready for pickup|Published regular pattern/);}],
+ ["things preset retains card-specific and separate item-group limits",()=>{const f=fixture();f.example("things");assert.match(f.output.textContent,/Hocutt-Ellington/);assert.match(f.output.textContent,/two kit items plus one technology item/);assert.match(f.output.textContent,/additional lending rules/);}],
  ["a broken catalog shows the original-source fallback instead of a fabricated answer",()=>{const c=JSON.parse(JSON.stringify(catalog));c.sources[0].url="http://invalid.example/policy";const f=fixture(c);assert.match(f.output.textContent,/catalog could not be loaded/);assert.doesNotMatch(f.output.textContent,/Service described/);}]
  ];
 }

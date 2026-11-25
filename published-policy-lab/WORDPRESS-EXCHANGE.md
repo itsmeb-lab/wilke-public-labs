@@ -2,7 +2,7 @@
 
 This is a small data handoff for an existing WordPress installation. It does not install a plugin, connect an account, call an AI provider or publish pages.
 
-The sample [CSV](./examples/pgp-policy-source.csv) carries **19 joined policy rows** from the same seven-place snapshot used by this lab. They are data records, not 19 approved landing pages. The interactive page already answers these selected tasks in one place.
+The sample [CSV](./examples/pgp-policy-source.csv) carries **21 joined policy rows** from the same nine-entry snapshot used by this lab. They are data records, not 21 approved landing pages. The interactive page already answers these selected tasks in one place.
 
 ## Why one joined keyword matters
 
@@ -18,7 +18,7 @@ For a bounded, manually reviewed test on a suitable existing site:
 
 1. Confirm the installed plugin version and the site's existing permissions and backup.
 2. Use a new isolated Content Group and a **single relational keyword** for this example table.
-3. Keep the supplied header names and comma delimiter. Confirm every column lands on its intended row.
+3. Keep the supplied 17 header names and comma delimiter. Confirm every column lands on its intended row.
 4. Review one generated **draft** only. Do not create a scheduled or published batch.
 5. Check the exclusion, unknown fee, jurisdiction, source URL and check date in the actual rendered draft.
 6. Remove the test if the result does not preserve those facts.
@@ -31,6 +31,7 @@ The example is not an import acceptance test. No WordPress import, shortcode esc
 
 | Field | Meaning |
 | --- | --- |
+| record_kind | Place or program; a program record is not a branch address or stock report. |
 | record_id | Stable joined place/task identifier, not a search keyword. |
 | state / locality / jurisdiction_id | Explicit geography; a postal label alone is not eligibility. |
 | policy_fit | Described, excluded or unstated in the checked source. |
