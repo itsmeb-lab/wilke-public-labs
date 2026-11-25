@@ -1,0 +1,34 @@
+name: "Policy source correction"
+description: "Report a published rule that differs from its public primary source."
+body:
+  - type: markdown
+    attributes:
+      value: "This creates a public GitHub issue. Include public policy facts only, never identity documents, private addresses, document numbers or account details. For today's availability or a particular request, contact the operator. A report is reviewed before data changes."
+  - type: input
+    id: "affected-task"
+    attributes:
+      label: "Task and named place or program"
+      description: "Name the task and operator shown in the checker."
+    validations:
+      required: true
+  - type: input
+    id: "primary-source"
+    attributes:
+      label: "Public primary source URL"
+      description: "Link to the operator's published policy or dated notice."
+    validations:
+      required: true
+  - type: textarea
+    id: "difference"
+    attributes:
+      label: "What differs?"
+      description: "Describe the rule in the tool and the relevant difference in the source. Avoid personal case details."
+    validations:
+      required: true
+  - type: input
+    id: "source-checked"
+    attributes:
+      label: "When did you check the source?"
+      description: "Optional date; distinguish the policy's effective date from the day you read it."
+    validations:
+      required: false
