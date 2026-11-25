@@ -6,12 +6,18 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+
 jobs:
   verify:
     runs-on: windows-latest
+    timeout-minutes: 5
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -19,6 +25,9 @@ jobs:
       - name: Run browser-model tests
         shell: pwsh
         run: npm test
+      - name: Check actual browser layouts and no-script content
+        shell: pwsh
+        run: node scripts/browser-policy-check.mjs
       - name: Run Windows watchdog fixture
         shell: pwsh
         run: .\windows-process-recovery-watchdog\powershell\Test-ProcessWatchdog.ps1
