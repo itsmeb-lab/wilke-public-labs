@@ -1,6 +1,6 @@
-import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v5";
-import { catalog } from "./data.mjs?v=20261125-v5";
-import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v5";
+import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v6";
+import { catalog } from "./data.mjs?v=20261125-v6";
+import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v6";
 
 const task = document.getElementById("task");
 const place = document.getElementById("place");

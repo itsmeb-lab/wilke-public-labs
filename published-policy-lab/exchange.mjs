@@ -12,7 +12,7 @@ export function renderPolicyCSV(catalog){
  const rows=catalog.places.flatMap(place=>Object.entries(place.policies).map(([task,policy])=>[
   place.id+"--"+task,place.name,place.region,place.locality,place.jurisdictionId,
   task,SERVICES[task],policy.fit,policy.summary,
-  (policy.conditions||[]).join(" / ")||"No additional condition modeled; check the source.",
+  (policy.conditions||[]).join(" / ")||"No additional condition recorded; check the source.",
   policy.fee||"Not stated in this snapshot.",policy.redirectPlaceId||"Not applicable",
   policy.sourceIds.map(id=>sources.get(id)).join(" / "),catalog.checkedOn,
   "UNVERIFIED","EXCHANGE_ONLY_NOT_A_PAGE_APPROVAL",place.recordKind||"place"

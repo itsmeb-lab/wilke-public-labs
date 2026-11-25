@@ -18,3 +18,9 @@ Only standard public-repository hosted compute is used. Receipts stay in job log
 No submission has occurred just because these files exist. Consult the actual workflow receipt.
 
 Official references: https://www.indexnow.org/documentation · https://www.indexnow.org/faq · https://docs.github.com/en/billing/concepts/product-billing/github-actions
+
+## Observed execution — November 25, 2026
+
+The one-time manifest was introduced in commit `91bd6e784563e09be874e9f2b096c215471969cb`. [Run 45629457542](https://github.com/itsmeb-lab/wilke-public-labs/actions/runs/45629457542), job 139258410514, verified the public ownership file and made one POST for the two allowed URLs. It returned **HTTP 202** at 14:01:01.012 UTC: received, with key validation pending. Indexing and traffic remain unverified; zero automatic retries occurred. The job used six seconds of hosted wall time.
+
+The fixed manifest now exists. Do not modify, replace or recreate it to send another request. Later content changes did not trigger the notification workflow. The worker's absolute authorization expiry remains unchanged; there is no recurring timer.

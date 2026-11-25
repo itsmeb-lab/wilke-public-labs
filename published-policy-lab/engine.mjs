@@ -82,19 +82,19 @@ export function validateCatalog(catalog) {
  return true;
 }
 function timingFor(catalog, place, serviceId, visit, fit) {
- const base={availability:"UNVERIFIED",label:"Confirm current hours and staffing with the operator.",kind:"unconfirmed",sourceIds:[]};
- if(fit!=="described")return {...base,kind:fit==="excluded"?"task_excluded":"task_unconfirmed",label:fit==="excluded"?"This task is excluded by the published rule.":"Confirm this task before planning a visit.",detail:"General opening hours do not change a task restriction or resolve an unstated policy."};
+ const base={availability:"UNVERIFIED",label:"Confirm current service arrangements with the operator.",kind:"unconfirmed",sourceIds:[]};
+ if(fit!=="described")return {...base,kind:fit==="excluded"?"task_excluded":"task_unconfirmed",label:fit==="excluded"?"This task is excluded by the published rule.":"Confirm the requested service with the operator.",detail:"General opening hours do not change a task restriction or resolve an unstated policy."};
  const regular=place.schedule && place.scheduleAppliesTo.includes(serviceId)?place.schedule:null;
  if(regular){base.sourceIds=[regular.sourceId];base.regularLabel=regular.label;}
- if(!visit)return {...base,detail:regular?"Choose a visit date to compare it with the published weekday pattern.":"No visit window is modeled for this example."};
+ if(!visit)return {...base,detail:regular?"Choose a date to compare it with the published weekday pattern.":"This sample does not establish a service window."};
  const calendar=(catalog.closureCalendars||[]).find(c=>c.jurisdictionId===place.jurisdictionId&&c.group===place.scheduleGroup&&c.year===visit.year);
  if(calendar){
   base.sourceIds.push(calendar.sourceId);
-  if(calendar.dates.includes(visit.iso))return {...base,kind:"listed_closure",label:calendar.closureLabel||"The county lists this date as a recycling-center closure.",detail:"A listed full-day closure applies even when no regular visit window is modeled. Confirm the specific service with the operator."};
+  if(calendar.dates.includes(visit.iso))return {...base,kind:"listed_closure",label:calendar.closureLabel||"The county lists this date as a recycling-center closure.",detail:"A listed full-day closure takes priority over usual service hours. Confirm current arrangements with the operator."};
   const notice=calendar.dateNotices?.find(n=>n.date===visit.iso);
   if(notice)return {...base,kind:"listed_early_closure",label:notice.label,detail:"This is a partial-day notice, not a full-day closure or confirmation of room availability. Confirm the specific branch and room cutoff with staff."};
  }
- if(!regular)return {...base,detail:"No visit window is modeled for this example. An unlisted date is not proof of access."};
+ if(!regular)return {...base,detail:"This sample does not establish a service window. An unlisted date is not proof of access."};
  if(!regular.days.includes(visit.weekday))return {...base,kind:"regular_day_excluded",label:"The selected weekday is outside the published service pattern.",detail:regular.label};
  if(calendar)return {...base,kind:"regular_pattern_only",label:"The weekday matches the published pattern; no closure is listed in the supplied calendar.",detail:"This is a policy snapshot, not confirmation that the site will be accessible."};
  return {...base,kind:"exception_data_unknown",label:"The weekday matches the published pattern; date-specific exceptions are unverified.",detail:"No applicable closure calendar is included for this place and year."};

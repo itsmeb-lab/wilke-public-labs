@@ -36,7 +36,7 @@ test("program rules do not become a physical pickup or future-day availability c
  assert.equal(r.place.recordKind,"program");assert.equal(r.place.address,null);
  assert.equal(r.scopeNote,PROGRAM_SCOPE_NOTE);
  assert.equal(r.timing.availability,"UNVERIFIED");assert.equal(r.timing.kind,"unconfirmed");
- assert.match(r.timing.detail,/No visit window/);
+ assert.match(r.timing.detail,/does not establish a service window/);
 });
 test("program and jurisdiction must still bind exactly",()=>{
  assert.throws(()=>answerPolicy(catalog,{placeId:"charlotte-hotspots-program",serviceId:"hotspot_borrowing",jurisdictionId:"us-sc-union-county"}),/jurisdiction do not match/);
