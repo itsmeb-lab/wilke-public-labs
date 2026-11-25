@@ -12,7 +12,8 @@ export const SERVICES = Object.freeze({
  commercial_meeting: "Commercial or for-profit meeting",
  private_study: "Individual or private study",
  mulch_pickup: "Residential mulch pickup",
- mulch_delivery: "Residential mulch delivery"
+ mulch_delivery: "Residential mulch delivery",
+ cabinet_removal: "Remove kitchen cabinets for donation"
 });
 export const PROGRAM_SCOPE_NOTE = "Program-level rules. Confirm the specific location and current service arrangements with the operator.";
 const own = (o,k) => Object.prototype.hasOwnProperty.call(o,k);

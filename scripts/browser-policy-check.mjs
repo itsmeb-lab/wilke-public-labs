@@ -134,6 +134,12 @@ try{
    await clear("#plan-area");await click("#load-plan button");s=await state();
    assert.ok(s.plannerText.includes("Enter an area"));assert.ok(!s.plannerText.includes("18.15 cubic yards would remain"));
   });
+  await check("renovation removal keeps approval and collection channels separate at "+width+"px",async()=>{
+   await click('[data-example="cabinets"]');const s=await state();assert.equal(s.task,"cabinet_removal");assert.equal(s.place,"charlotte-restore-deconstruction-program");
+   assert.ok(s.answer.includes("Priority Pick-Up page excludes cabinets"));assert.ok(s.answer.includes("Staff check reusable condition and approve"));
+   assert.ok(s.answer.includes("no-charge removal of approved"));assert.ok(s.answer.includes("does not determine tax value"));
+   assert.ok(s.answer.includes("does not establish a service window"));assert.equal(s.sources.length,2);assert.equal(s.plannerVisible,false);
+  });
   await check("unsupported shared view refuses then recovers at "+width+"px",async()=>{
    await rpc("POST",sid("/url"),{url:page+"#task=electronics&place=perry-memorial"});
    let s=await state();assert.ok(s.answer.includes("shared view could not be opened"));assert.equal(s.plannerVisible,false);

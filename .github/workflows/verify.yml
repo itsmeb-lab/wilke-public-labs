@@ -2,7 +2,7 @@ name: Public Labs Verification
 
 on:
   push:
-    branches: [main, 'atlas/policy-print-handoff-20261125']
+    branches: [main, 'atlas/renovation-reuse-policy-20261125']
   pull_request:
     branches: [main]
 

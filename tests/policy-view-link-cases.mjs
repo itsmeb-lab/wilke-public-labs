@@ -2,7 +2,7 @@ export function viewLinkChecks(assert,api,catalog){
  const parse=fragment=>api.parsePolicyView(catalog,fragment);
  const view={serviceId:"farmer_oil",placeId:"union-cross-keys",visitDate:"2026-11-26"};
  return [
- ["all checked task/place rows round-trip through one canonical URL",()=>{let count=0;for(const place of catalog.places)for(const task of Object.keys(place.policies)){const input={serviceId:task,placeId:place.id,visitDate:""};const link=api.buildPolicyViewLink(catalog,input);assert.ok(link.startsWith(api.POLICY_PAGE_URL+"#task="));assert.deepEqual(parse(link.slice(link.indexOf("#"))),input);count++;}assert.equal(count,29);}],
+ ["all checked task/place rows round-trip through one canonical URL",()=>{let count=0;for(const place of catalog.places)for(const task of Object.keys(place.policies)){const input={serviceId:task,placeId:place.id,visitDate:""};const link=api.buildPolicyViewLink(catalog,input);assert.ok(link.startsWith(api.POLICY_PAGE_URL+"#task="));assert.deepEqual(parse(link.slice(link.indexOf("#"))),input);count++;}assert.equal(count,30);}],
  ["valid dates round-trip without timezone conversion",()=>{const link=api.buildPolicyViewLink(catalog,view);assert.deepEqual(parse(link.slice(link.indexOf("#"))),view);}],
  ["empty and checker anchor fragments carry no saved selection",()=>{for(const hash of ["","#","#checker"])assert.equal(parse(hash),null);}],
  ["unknown tasks and places cannot substitute another record",()=>{for(const hash of ["#task=other&place=union-airport","#task=electronics&place=other"])assert.throws(()=>parse(hash));}],

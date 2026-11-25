@@ -2,7 +2,7 @@
 
 This is a small data handoff for an existing WordPress installation. It does not install a plugin, connect an account, call an AI provider or publish pages.
 
-The sample [CSV](./examples/pgp-policy-source.csv) carries **29 joined policy rows** from the same thirteen-entry snapshot used by this lab. They are data records, not 29 approved landing pages. The interactive page already answers these selected tasks in one place.
+The sample [CSV](./examples/pgp-policy-source.csv) carries **30 joined policy rows** from the same fourteen-entry snapshot used by this lab. They are data records, not 30 approved landing pages. The interactive page already answers these selected tasks in one place.
 
 ## Why one joined keyword matters
 
@@ -62,3 +62,9 @@ The original plugin offers mature WordPress generation features. This repository
 - [Generation methods](https://www.wpzinc.com/documentation/page-generator-pro/generate-methods/)
 - [Legacy import notice](https://www.wpzinc.com/documentation/page-generator-pro/keywords-import-csv/)
 - [Content Groups and generation controls](https://www.wpzinc.com/documentation/page-generator-pro/generate-content/)
+
+## A concrete staging check
+
+For a keyword named `policy`, the documented column form is `{policy(task_label)}`, `{policy(place_name)}` and `{policy(policy_fit)}`. Keep one CSV row together; do not create separate independent lists from these columns. Start with a draft/test, not an All-method public batch.
+
+Check these joined record IDs against the CSV and the rendered draft: `onslow-jacksonville--vehicle_title` must keep its exclusion, `union-airport--paint` must keep its unstated preparation details, and `charlotte-restore-deconstruction-program--cabinet_removal` must keep staff approval and the separate pickup-channel limit. A successful substitution alone does not test escaping, import fidelity or permission to publish.

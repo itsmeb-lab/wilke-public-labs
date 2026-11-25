@@ -1,6 +1,6 @@
 // Reviewed public-policy examples. Check dates describe this lab's review, not live service availability.
 export const catalog = {
-  "snapshotId": "published-policy-examples-20261125-v9",
+  "snapshotId": "published-policy-examples-20261125-v10",
   "checkedOn": "2026-11-25",
   "sources": [
     {
@@ -85,6 +85,18 @@ export const catalog = {
       "id": "wakeforest-thanksgiving-2026",
       "label": "Town of Wake Forest — dated 2026 Thanksgiving operations notice",
       "url": "https://www.wakeforestnc.gov/news/town-offices-closed-november-26-27-thanksgiving-trash-recycling-collection-affected",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "id": "charlotte-restore-deconstruction",
+      "label": "Habitat Charlotte Region ReStores — Deconstruction",
+      "url": "https://www.cltregionrestore.org/donate/deconstruction",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "id": "charlotte-restore-pickup",
+      "label": "Habitat Charlotte Region ReStores — donation pickup options",
+      "url": "https://www.cltregionrestore.org/donate/donation-pick-up",
       "checkedOn": "2026-11-25"
     }
   ],
@@ -722,6 +734,31 @@ export const catalog = {
         "mulch_delivery"
       ],
       "scheduleGroup": "wakeforest-woodchip-delivery"
+    },
+    {
+      "id": "charlotte-restore-deconstruction-program",
+      "name": "Charlotte Region ReStores — Deconstruction",
+      "region": "NC",
+      "locality": "Charlotte region",
+      "jurisdictionId": "us-nc-charlotte-region-restore",
+      "recordKind": "program",
+      "policies": {
+        "cabinet_removal": {
+          "fit": "described",
+          "summary": "A separate Deconstruction team reviews reusable kitchen cabinets and other approved items for removal and donation.",
+          "conditions": [
+            "This is a Deconstruction consultation, not an ordinary or Priority Pick-Up booking. The Priority Pick-Up page excludes cabinets from its disassembly service.",
+            "Give the operator item details, photos and a preferred timeframe for a no-cost in-home consultation. Staff check reusable condition and approve the removal.",
+            "The source encourages an additional monetary donation. This snapshot does not determine tax value, deductions or eligibility.",
+            "Confirm the service area, approved scope, current capacity and removal date with the Deconstruction team before changing your renovation schedule."
+          ],
+          "fee": "The source describes no-charge removal of approved reusable items donated to Charlotte Region ReStores.",
+          "sourceIds": [
+            "charlotte-restore-deconstruction",
+            "charlotte-restore-pickup"
+          ]
+        }
+      }
     }
   ]
 };

@@ -1,7 +1,7 @@
-import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v9";
-import { catalog } from "./data.mjs?v=20261125-v9";
-import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v9";
-import { estimateWholeLoadUse } from "./load-plan.mjs?v=20261125-v9";
+import { SERVICES, answerPolicy, validateCatalog } from "./engine.mjs?v=20261125-v10";
+import { catalog } from "./data.mjs?v=20261125-v10";
+import { parsePolicyView, buildPolicyViewLink } from "./view-link.mjs?v=20261125-v10";
+import { estimateWholeLoadUse } from "./load-plan.mjs?v=20261125-v10";
 
 const task = document.getElementById("task");
 const place = document.getElementById("place");
@@ -142,7 +142,8 @@ try{
   meeting:["commercial_meeting","durham-rooms-program",""],
   early:["private_study","durham-rooms-program","2026-11-25"],
   mulch:["mulch_pickup","clemson-mulch-program",""],
-  chips:["mulch_delivery","wakeforest-woodchips-program","2026-11-26"]
+  chips:["mulch_delivery","wakeforest-woodchips-program","2026-11-26"],
+  cabinets:["cabinet_removal","charlotte-restore-deconstruction-program",""]
  };
  for(const button of document.querySelectorAll("[data-example]"))button.addEventListener("click",()=>{
   const chosen=examples[button.dataset.example];

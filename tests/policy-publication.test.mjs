@@ -39,9 +39,9 @@ test("policy controls have unique identifiers, labels and a live result region",
  assert.match(html,/class="skip" href="#checker"/);
 });
 test("published example counts match the checked snapshot",()=>{
- assert.equal(catalog.places.length,13);
+ assert.equal(catalog.places.length,14);
  assert.equal(new Set(catalog.places.map(p=>p.region)).size,3);
- assert.equal(catalog.sources.length,14);
+ assert.equal(catalog.sources.length,16);
  const index=readFileSync(new URL("../index.html",import.meta.url),"utf8");
  assert.ok(index.includes(catalog.places.length+" SAMPLE PLACES / PROGRAMS"));
  assert.ok(html.includes(catalog.places.length+" sample places and programs"));
