@@ -1,5 +1,5 @@
 export const catalog = {
-  "snapshotId": "published-policy-examples-20261125-v5",
+  "snapshotId": "published-policy-examples-20261125-v6",
   "checkedOn": "2026-11-25",
   "sources": [
     {
@@ -631,7 +631,7 @@ export const catalog = {
           "conditions": [
             "Bring identification showing City of Clemson residency. Load your own mulch and cover it with a tarp.",
             "The stated maximum is one pickup-truck load at a time. Confirm current stock and the collection point with Public Works.",
-            "The page gives different closing times in its pickup and center-hours sections, including a lunch closure. Confirm the pickup hours; no visit window is modeled here."
+            "The page gives different closing times in its pickup and center-hours sections, including a lunch closure. Confirm pickup hours with Public Works before traveling."
           ],
           "fee": "The checked policy describes pickup mulch as free for city residents; delivery is a separate charged service."
         },
@@ -674,7 +674,7 @@ export const catalog = {
           "conditions": [
             "The source limits the program to local community members within 15 miles of town limits. Confirm the actual service boundary with the town; this lab does not calculate eligibility from a ZIP code.",
             "No smaller quantity is delivered, and the town will not return to collect the delivered material.",
-            "There is a waiting list. Delivery is not offered on weekends or town holidays; no arrival date or holiday calendar is modeled here.",
+            "There is a waiting list. Delivery is not offered on weekends or town holidays. This source snapshot does not establish an arrival date or a complete holiday calendar.",
             "Confirm the material offered: the source lists leaf mulch separately from wood chips."
           ],
           "fee": "The checked policy describes this wood-chip delivery program as free."
