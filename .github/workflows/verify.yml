@@ -2,7 +2,7 @@ name: Public Labs Verification
 
 on:
   push:
-    branches: [main]
+    branches: [main, 'atlas/verify-whole-load-20261125']
   pull_request:
     branches: [main]
 
