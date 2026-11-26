@@ -17,6 +17,9 @@ export const comparisonGuides = Object.freeze([
   { slug: 'library-sensory-spaces', marker: 'LIBRARY-SENSORY-SPACES' },
   { slug: 'eyeglass-donation-rules', marker: 'EYEGLASS-DONATION-RULES' },
 ]);
+const localizedGuides = Object.freeze([
+  { slug: 'milwaukee-articulos-voluminosos', marker: 'MILWAUKEE-BULKY-ES', catalogSlug: 'milwaukee-bulky-items' },
+]);
 const read = (path) => readFileSync(new URL(path, root), 'utf8');
 
 function sourceKey(value) {
@@ -31,8 +34,8 @@ function sourceKey(value) {
 export function sourceImpact(input) {
   const key = sourceKey(input);
   const matches = [];
-  for (const { slug, marker } of comparisonGuides) {
-    const { sources, operators, tasks, rules } = JSON.parse(read(slug + '/catalog.json'));
+  for (const { slug, marker, catalogSlug = slug } of [...comparisonGuides, ...localizedGuides]) {
+    const { sources, operators, tasks, rules } = JSON.parse(read(catalogSlug + '/catalog.json'));
     const ids = new Set(Object.entries(sources).filter(([, source]) => sourceKey(source.url) === key).map(([id]) => id));
     const html = read(slug + '/index.html');
     const start = html.indexOf('<!-- ' + marker + ':START -->');
@@ -94,7 +97,7 @@ export async function checkServed(fetcher = fetch) {
     ['guide-finder/search.mjs', 'guide-finder/search.mjs'],
     ['guide-finder/index-data.mjs', 'guide-finder/index-data.mjs'],
   ]);
-  for (const { slug } of comparisonGuides) {
+  for (const { slug } of [...comparisonGuides, ...localizedGuides]) {
     expected.set(slug + '/', slug + '/index.html');
     expected.set(slug + '/comparison.csv', slug + '/comparison.csv');
   }
