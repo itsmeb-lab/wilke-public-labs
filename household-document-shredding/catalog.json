@@ -1,0 +1,367 @@
+{
+  "checkedOn": "2026-11-26",
+  "sources": {
+    "orange-county-nc-guide": {
+      "label": "Orange County Shred Center rules and FAQs",
+      "url": "https://www.orangecountync.gov/2210/Shred-Center",
+      "checkedOn": "2026-11-26"
+    },
+    "lorain-county-guide": {
+      "label": "Lorain County personal and business shredding rules",
+      "url": "https://loraincountyohio.gov/519/Paper-Shredding",
+      "checkedOn": "2026-11-26"
+    },
+    "collier-daily-guide": {
+      "label": "Collier County daily and monthly shredding options",
+      "url": "https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities",
+      "checkedOn": "2026-11-26"
+    },
+    "collier-monthly-guide": {
+      "label": "Collier County monthly shredding truck route",
+      "url": "https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities",
+      "checkedOn": "2026-11-26"
+    },
+    "somerset-county-guide": {
+      "label": "Somerset County event rules on North Plainfield’s municipal site",
+      "url": "https://northplainfieldnj.gov/resident/calendar/county-shredding",
+      "checkedOn": "2026-11-26"
+    },
+    "uwcu-member-events-guide": {
+      "label": "UW Credit Union event dates and member rules",
+      "url": "https://www.uwcu.org/news/members/free-shred-it-event/",
+      "checkedOn": "2026-11-26"
+    }
+  },
+  "operators": [
+    {
+      "id": "orange-county-nc",
+      "name": "Orange County Shred Center",
+      "area": "Chapel Hill, North Carolina",
+      "country": "US",
+      "jurisdiction": "us-nc",
+      "visitSource": "orange-county-nc-guide",
+      "sourceIds": [
+        "orange-county-nc-guide"
+      ],
+      "prep": [
+        {
+          "label": "Personal documents",
+          "text": "Book the resident route through Solid Waste. The center offers weekday slots by customer group and says bookings often fill two to four weeks ahead.",
+          "source": "orange-county-nc-guide"
+        },
+        {
+          "label": "Container and contents",
+          "text": "Use no more than two boxes at 15 by 12 by 10 inches or smaller. Bring confidential, unshredded paper. Remove staples and clips and leave folders, cards and general mail out.",
+          "source": "orange-county-nc-guide"
+        }
+      ]
+    },
+    {
+      "id": "lorain-county",
+      "name": "Lorain County Collection Center",
+      "area": "Elyria, Ohio",
+      "country": "US",
+      "jurisdiction": "us-oh",
+      "visitSource": "lorain-county-guide",
+      "sourceIds": [
+        "lorain-county-guide"
+      ],
+      "prep": [
+        {
+          "label": "When to go",
+          "text": "The resident collection-center service runs during regular center hours. The county posts separate schedules for community events.",
+          "source": "lorain-county-guide"
+        },
+        {
+          "label": "How to prepare the paper",
+          "text": "Staff check for staples, clips, rubber bands and plastic bindings before placing the paper in a locked container.",
+          "source": "lorain-county-guide"
+        }
+      ]
+    },
+    {
+      "id": "collier-daily",
+      "name": "Collier County daily collection bins",
+      "area": "Collier County, Florida",
+      "country": "US",
+      "jurisdiction": "us-fl",
+      "visitSource": "collier-daily-guide",
+      "sourceIds": [
+        "collier-daily-guide"
+      ],
+      "prep": [
+        {
+          "label": "Named centers",
+          "text": "The county lists the Naples, Marco Island, North Collier and Northeast centers for the daily route.",
+          "source": "collier-daily-guide"
+        },
+        {
+          "label": "Volume and charge",
+          "text": "The first 20 pounds per vehicle are free. The county lists $1 per additional pound.",
+          "source": "collier-daily-guide"
+        }
+      ]
+    },
+    {
+      "id": "collier-monthly",
+      "name": "Collier County monthly shredding truck",
+      "area": "Collier County, Florida",
+      "country": "US",
+      "jurisdiction": "us-fl",
+      "visitSource": "collier-monthly-guide",
+      "sourceIds": [
+        "collier-monthly-guide"
+      ],
+      "prep": [
+        {
+          "label": "Check your center and date",
+          "text": "The county lists this truck on the third Saturday of the month at Naples and North Collier. Check the center page for current hours.",
+          "source": "collier-monthly-guide"
+        },
+        {
+          "label": "Volume and charge",
+          "text": "The first 20 pounds per vehicle are free. The fee is $1 per additional pound under the posted schedule.",
+          "source": "collier-monthly-guide"
+        }
+      ]
+    },
+    {
+      "id": "somerset-county",
+      "name": "Somerset County Operation Secure Shred",
+      "area": "Somerset County, New Jersey",
+      "country": "US",
+      "jurisdiction": "us-nj",
+      "visitSource": "somerset-county-guide",
+      "sourceIds": [
+        "somerset-county-guide"
+      ],
+      "prep": [
+        {
+          "label": "Before you go",
+          "text": "Check a current county event date and bring proof of a Somerset County address.",
+          "source": "somerset-county-guide"
+        },
+        {
+          "label": "Container and capacity",
+          "text": "The program lists up to six boxes, bags or containers per trip. Collection can end early if the trucks fill.",
+          "source": "somerset-county-guide"
+        }
+      ]
+    },
+    {
+      "id": "uwcu-member-events",
+      "name": "UW Credit Union annual member shredding events",
+      "area": "Milwaukee and Madison, Wisconsin",
+      "country": "US",
+      "jurisdiction": "us-wi",
+      "visitSource": "uwcu-member-events-guide",
+      "sourceIds": [
+        "uwcu-member-events-guide"
+      ],
+      "prep": [
+        {
+          "label": "Who can use it",
+          "text": "These annual events are for UW Credit Union members. Use the organizer’s scheduled date and exact event address.",
+          "source": "uwcu-member-events-guide"
+        },
+        {
+          "label": "What to bring",
+          "text": "The organizer lists up to five boxes or bags of qualifying paper. Keep plastic binders, batteries and electronics separate.",
+          "source": "uwcu-member-events-guide"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "without-appointment",
+      "label": "Bring household documents without an appointment"
+    },
+    {
+      "id": "keep-staples",
+      "label": "Leave staples and paper clips attached"
+    },
+    {
+      "id": "watch-shredding",
+      "label": "Watch household papers being shredded"
+    },
+    {
+      "id": "business-paper",
+      "label": "Bring documents from a small business"
+    },
+    {
+      "id": "more-than-two-boxes",
+      "label": "Bring more than two banker boxes on one trip"
+    }
+  ],
+  "rules": [
+    {
+      "operator": "orange-county-nc",
+      "task": "without-appointment",
+      "fit": "excluded",
+      "text": "Orange County requires an appointment for this center. The county lists separate shred-a-thons.",
+      "source": "orange-county-nc-guide"
+    },
+    {
+      "operator": "orange-county-nc",
+      "task": "keep-staples",
+      "fit": "excluded",
+      "text": "Remove both staples and clips before bringing your boxes.",
+      "source": "orange-county-nc-guide"
+    },
+    {
+      "operator": "orange-county-nc",
+      "task": "watch-shredding",
+      "fit": "excluded",
+      "text": "Staff keep the documents in a secure area and shred them after the day’s collection. Visitors cannot watch.",
+      "source": "orange-county-nc-guide"
+    },
+    {
+      "operator": "orange-county-nc",
+      "task": "business-paper",
+      "fit": "listed",
+      "text": "Orange County small businesses and eligible nonprofit organizations can book the separate Thursday route.",
+      "source": "orange-county-nc-guide"
+    },
+    {
+      "operator": "orange-county-nc",
+      "task": "more-than-two-boxes",
+      "fit": "excluded",
+      "text": "The center limits each person or business to two eligible boxes per day. You can reserve appointments for additional weeks.",
+      "source": "orange-county-nc-guide"
+    },
+    {
+      "operator": "lorain-county",
+      "task": "without-appointment",
+      "fit": "listed",
+      "text": "Lorain County residents can bring qualifying papers to the Collection Center during regular opening hours.",
+      "source": "lorain-county-guide"
+    },
+    {
+      "operator": "lorain-county",
+      "task": "keep-staples",
+      "fit": "excluded",
+      "text": "Staff list both staples and paper clips as unwanted items and check the paper at drop-off.",
+      "source": "lorain-county-guide"
+    },
+    {
+      "operator": "lorain-county",
+      "task": "business-paper",
+      "fit": "listed",
+      "text": "Businesses should make a separate appointment through the Collection Center coordinator.",
+      "source": "lorain-county-guide"
+    },
+    {
+      "operator": "lorain-county",
+      "task": "more-than-two-boxes",
+      "fit": "listed",
+      "text": "The county states no volume limit for resident drop-off at this Collection Center.",
+      "source": "lorain-county-guide"
+    },
+    {
+      "operator": "collier-daily",
+      "task": "without-appointment",
+      "fit": "listed",
+      "text": "Use the county’s regular daily drop-off hours at a listed center.",
+      "source": "collier-daily-guide"
+    },
+    {
+      "operator": "collier-daily",
+      "task": "watch-shredding",
+      "fit": "excluded",
+      "text": "The daily route uses locked bins to hold paper until shredding takes place.",
+      "source": "collier-daily-guide"
+    },
+    {
+      "operator": "collier-daily",
+      "task": "business-paper",
+      "fit": "excluded",
+      "text": "Collier lists the shredding fee schedule for residential use and marks it unavailable to commercial customers.",
+      "source": "collier-daily-guide"
+    },
+    {
+      "operator": "collier-monthly",
+      "task": "without-appointment",
+      "fit": "listed",
+      "text": "Use the posted monthly collection hours at a listed center.",
+      "source": "collier-monthly-guide"
+    },
+    {
+      "operator": "collier-monthly",
+      "task": "watch-shredding",
+      "fit": "ask",
+      "text": "A truck shreds on site once its collection tote fills. Ask whether you can stay to watch your batch.",
+      "source": "collier-monthly-guide"
+    },
+    {
+      "operator": "collier-monthly",
+      "task": "business-paper",
+      "fit": "excluded",
+      "text": "The county facility schedule marks paper shredding unavailable to commercial customers.",
+      "source": "collier-monthly-guide"
+    },
+    {
+      "operator": "somerset-county",
+      "task": "without-appointment",
+      "fit": "listed",
+      "text": "Eligible residents can use a scheduled event without registering in advance.",
+      "source": "somerset-county-guide"
+    },
+    {
+      "operator": "somerset-county",
+      "task": "keep-staples",
+      "fit": "listed",
+      "text": "The event rules allow staples and paper clips to stay attached.",
+      "source": "somerset-county-guide"
+    },
+    {
+      "operator": "somerset-county",
+      "task": "watch-shredding",
+      "fit": "listed",
+      "text": "Residents can stay and watch the on-site shredding.",
+      "source": "somerset-county-guide"
+    },
+    {
+      "operator": "somerset-county",
+      "task": "business-paper",
+      "fit": "excluded",
+      "text": "The event is for household documents and excludes businesses and commercial vehicles.",
+      "source": "somerset-county-guide"
+    },
+    {
+      "operator": "somerset-county",
+      "task": "more-than-two-boxes",
+      "fit": "listed",
+      "text": "The event limit is six boxes, containers or bags in any combination per trip.",
+      "source": "somerset-county-guide"
+    },
+    {
+      "operator": "uwcu-member-events",
+      "task": "without-appointment",
+      "fit": "listed",
+      "text": "Eligible members can attend a published event without an appointment.",
+      "source": "uwcu-member-events-guide"
+    },
+    {
+      "operator": "uwcu-member-events",
+      "task": "keep-staples",
+      "fit": "listed",
+      "text": "UW Credit Union allows staples and paper clips in paper documents.",
+      "source": "uwcu-member-events-guide"
+    },
+    {
+      "operator": "uwcu-member-events",
+      "task": "watch-shredding",
+      "fit": "listed",
+      "text": "The organizer allows people to watch the mobile shredder process their documents.",
+      "source": "uwcu-member-events-guide"
+    },
+    {
+      "operator": "uwcu-member-events",
+      "task": "more-than-two-boxes",
+      "fit": "listed",
+      "text": "The published event limit is five boxes or bags per attendee.",
+      "source": "uwcu-member-events-guide"
+    }
+  ]
+}

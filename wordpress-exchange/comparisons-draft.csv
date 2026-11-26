@@ -1639,6 +1639,7 @@
         <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/library-scanning/comparison.csv"" download>Download comparison data (CSV)</a></li>
         <li><a href=""https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml"">Report a source correction</a> (public GitHub form)</li>
         <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/"">Check other library and local program rules</a></li>
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/library-memory-labs/"">Find a library memory lab for VHS and camcorder tapes</a></li>
       </ul>
     </section>"
 "library-museum-passes","Do I need a separate ticket with a library museum pass?","Compare library pickup, separate timed admission, group limits and return rules for selected museums and attractions in the United States and Canada.","https://itsmeb-lab.github.io/wilke-public-labs/library-museum-passes/","2026-11-25","STAGING_DRAFT_ONLY","<div class=""intro"">
@@ -3682,5 +3683,638 @@
         <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/used-bicycle-donations/comparison.csv"" download>Download comparison data (CSV)</a></li>
         <li><a href=""https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml"">Report a source correction</a> (public GitHub form)</li>
         <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/repair-cafe-planner/"">Find out whether a Repair Café lists bicycle repairs</a></li>
+      </ul>
+    </section>"
+"library-memory-labs","Digitize VHS and Camcorder Tapes at a Library Memory Lab","Find named library memory labs with VHS, MiniDV or Hi8 equipment. Compare walk-ins, first-visit requirements and ways to save files.","https://itsmeb-lab.github.io/wilke-public-labs/library-memory-labs/","2026-11-26","STAGING_DRAFT_ONLY","<div class=""intro"">
+      <p>Match the exact format printed on your tape before choosing a station. VHS, MiniDV and Hi8 use different equipment. Some labs list the maximum recording length or which tape standard the deck can read.</p>
+      <p>Greater Victoria accepts MiniDV and Hi8 but requires advance booking. DC lists MiniDV while its Video8, Hi8 and Digital8 equipment is temporarily unavailable. Burnaby welcomes walk-ins when equipment is available.</p>
+    </div>
+    <!-- LIBRARY-MEMORY-LABS:START -->
+    <nav id=""items"" class=""choices"" aria-label=""Choose an item"" tabindex=""-1"">
+      <p>Choose an item</p>
+      <ul role=""list"">
+        <li><a href=""#vhs"">Digitize a standard VHS home video</a></li>
+        <li><a href=""#minidv"">Digitize a MiniDV tape</a></li>
+        <li><a href=""#hi8"">Digitize a Hi8 tape</a></li>
+        <li><a href=""#walk-in"">Use the lab without a booking</a></li>
+        <li><a href=""#first-visit-orientation"">First visit without completing an orientation in advance</a></li>
+        <li><a href=""#save-usb"">Save files to your own USB drive</a></li>
+        <li><a href=""#before-digitizing"">Before digitizing</a></li>
+      </ul>
+    </nav>
+    <p class=""reviewed"">Snapshot reviewed <time datetime=""2026-11-26"">November 26, 2026</time>.</p>
+    <section id=""vhs"" class=""comparison"" aria-labelledby=""vhs-title"" tabindex=""-1"">
+      <h2 id=""vhs-title"">Digitize a standard VHS home video</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""dc-memory-lab"" data-fit=""listed"" id=""answer--vhs--dc-memory-lab"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--vhs--dc-memory-lab"" aria-label=""DC Public Library Memory Lab — Digitize a standard VHS home video"">DC Public Library Memory Lab</a></h3><p class=""area"">Washington, District of Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>VHS and VHS-C are on DC’s current equipment list.</p>
+          <p class=""source""><a href=""https://www.dclibrary.org/using-the-library/digital-preservation-memory-lab"">DC Public Library equipment and participant rules</a></p>
+        </li>
+        <li data-operator=""boston-central"" data-fit=""listed"" id=""answer--vhs--boston-central"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--vhs--boston-central"" aria-label=""Boston Public Library Central Memory Lab — Digitize a standard VHS home video"">Boston Public Library Central Memory Lab</a></h3><p class=""area"">Boston, Massachusetts</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Boston lists VHS transfer equipment in its Central Library Memory Lab.</p>
+          <p class=""source""><a href=""https://guides.bpl.org/memorylab"">Boston Central Memory Lab bookings and eligibility</a></p>
+        </li>
+        <li data-operator=""los-angeles-central"" data-fit=""listed"" id=""answer--vhs--los-angeles-central"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--vhs--los-angeles-central"" aria-label=""Los Angeles Public Library DIY Memory Lab — Digitize a standard VHS home video"">Los Angeles Public Library DIY Memory Lab</a></h3><p class=""area"">Los Angeles, California</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Los Angeles lists NTSC VHS in Standard Play or Extended Play.</p>
+          <p class=""source""><a href=""https://www.lapl.org/memory-lab/diy-memory-lab-central-library"">Octavia Lab media specs and reservation rules</a></p>
+        </li>
+        <li data-operator=""greater-victoria-esquimalt"" data-fit=""listed"" id=""answer--vhs--greater-victoria-esquimalt"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--vhs--greater-victoria-esquimalt"" aria-label=""Greater Victoria Public Library at Esquimalt — Digitize a standard VHS home video"">Greater Victoria Public Library at Esquimalt</a></h3><p class=""area"">Esquimalt, British Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Reserve an audio-video station for VHS and VHS-C home movies.</p>
+          <p class=""source""><a href=""https://gvpl.ca/we-recommend/explore/media-lab"">Greater Victoria media lab sessions and equipment</a></p>
+        </li>
+        <li data-operator=""coquitlam-poirier"" data-fit=""listed"" id=""answer--vhs--coquitlam-poirier"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--vhs--coquitlam-poirier"" aria-label=""Coquitlam Public Library Poirier Digitization Station — Digitize a standard VHS home video"">Coquitlam Public Library Poirier Digitization Station</a></h3><p class=""area"">Coquitlam, British Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The station lists VHS and VHS-C, with output to DVD or USB.</p>
+          <p class=""source""><a href=""https://coqlibrary.ca/digitization-station/"">Coquitlam Poirier supported formats and station guides</a></p>
+        </li>
+        <li data-operator=""burnaby-digital-studio"" data-fit=""listed"" id=""answer--vhs--burnaby-digital-studio"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--vhs--burnaby-digital-studio"" aria-label=""Burnaby Public Library Digital Studio — Digitize a standard VHS home video"">Burnaby Public Library Digital Studio</a></h3><p class=""area"">Burnaby, British Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Burnaby lists VHS hardware at Studio Station 1 and a separate all-in-one digitizer.</p>
+          <p class=""source""><a href=""https://bpl.bc.ca/things-to-use/digital-studio/digitization"">Burnaby Digital Studio equipment and availability</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""minidv"" class=""comparison"" aria-labelledby=""minidv-title"" tabindex=""-1"">
+      <h2 id=""minidv-title"">Digitize a MiniDV tape</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""dc-memory-lab"" data-fit=""listed"" id=""answer--minidv--dc-memory-lab"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--minidv--dc-memory-lab"" aria-label=""DC Public Library Memory Lab — Digitize a MiniDV tape"">DC Public Library Memory Lab</a></h3><p class=""area"">Washington, District of Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The library lists MiniDV among the formats its lab supports.</p>
+          <p class=""source""><a href=""https://www.dclibrary.org/using-the-library/digital-preservation-memory-lab"">DC Public Library equipment and participant rules</a></p>
+        </li>
+        <li data-operator=""boston-central"" data-fit=""unknown"" id=""answer--minidv--boston-central"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--minidv--boston-central"" aria-label=""Boston Public Library Central Memory Lab — Digitize a MiniDV tape"">Boston Public Library Central Memory Lab</a></h3><p class=""area"">Boston, Massachusetts</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://guides.bpl.org/memorylab"">Check with Boston Public Library Central Memory Lab</a></p>
+        </li>
+        <li data-operator=""los-angeles-central"" data-fit=""listed"" id=""answer--minidv--los-angeles-central"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--minidv--los-angeles-central"" aria-label=""Los Angeles Public Library DIY Memory Lab — Digitize a MiniDV tape"">Los Angeles Public Library DIY Memory Lab</a></h3><p class=""area"">Los Angeles, California</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The library specifies DV or MiniDV recorded in Standard Play.</p>
+          <p class=""source""><a href=""https://www.lapl.org/memory-lab/diy-memory-lab-central-library"">Octavia Lab media specs and reservation rules</a></p>
+        </li>
+        <li data-operator=""greater-victoria-esquimalt"" data-fit=""listed"" id=""answer--minidv--greater-victoria-esquimalt"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--minidv--greater-victoria-esquimalt"" aria-label=""Greater Victoria Public Library at Esquimalt — Digitize a MiniDV tape"">Greater Victoria Public Library at Esquimalt</a></h3><p class=""area"">Esquimalt, British Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The Esquimalt AV station lists MiniDV.</p>
+          <p class=""source""><a href=""https://gvpl.ca/we-recommend/explore/media-lab"">Greater Victoria media lab sessions and equipment</a></p>
+        </li>
+        <li data-operator=""coquitlam-poirier"" data-fit=""listed"" id=""answer--minidv--coquitlam-poirier"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--minidv--coquitlam-poirier"" aria-label=""Coquitlam Public Library Poirier Digitization Station — Digitize a MiniDV tape"">Coquitlam Public Library Poirier Digitization Station</a></h3><p class=""area"">Coquitlam, British Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The station lists MiniDV and offers separate DVD and computer transfer guides.</p>
+          <p class=""source""><a href=""https://coqlibrary.ca/digitization-station/"">Coquitlam Poirier supported formats and station guides</a></p>
+        </li>
+        <li data-operator=""burnaby-digital-studio"" data-fit=""unknown"" id=""answer--minidv--burnaby-digital-studio"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--minidv--burnaby-digital-studio"" aria-label=""Burnaby Public Library Digital Studio — Digitize a MiniDV tape"">Burnaby Public Library Digital Studio</a></h3><p class=""area"">Burnaby, British Columbia</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://bpl.bc.ca/things-to-use/digital-studio/digitization"">Check with Burnaby Public Library Digital Studio</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""hi8"" class=""comparison"" aria-labelledby=""hi8-title"" tabindex=""-1"">
+      <h2 id=""hi8-title"">Digitize a Hi8 tape</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""dc-memory-lab"" data-fit=""excluded"" id=""answer--hi8--dc-memory-lab"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--hi8--dc-memory-lab"" aria-label=""DC Public Library Memory Lab — Digitize a Hi8 tape"">DC Public Library Memory Lab</a></h3><p class=""area"">Washington, District of Columbia</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>DC marks Video8, Hi8 and Digital8 as currently unavailable.</p>
+          <p class=""source""><a href=""https://www.dclibrary.org/using-the-library/digital-preservation-memory-lab"">DC Public Library equipment and participant rules</a></p>
+        </li>
+        <li data-operator=""boston-central"" data-fit=""unknown"" id=""answer--hi8--boston-central"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--hi8--boston-central"" aria-label=""Boston Public Library Central Memory Lab — Digitize a Hi8 tape"">Boston Public Library Central Memory Lab</a></h3><p class=""area"">Boston, Massachusetts</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://guides.bpl.org/memorylab"">Check with Boston Public Library Central Memory Lab</a></p>
+        </li>
+        <li data-operator=""los-angeles-central"" data-fit=""unknown"" id=""answer--hi8--los-angeles-central"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--hi8--los-angeles-central"" aria-label=""Los Angeles Public Library DIY Memory Lab — Digitize a Hi8 tape"">Los Angeles Public Library DIY Memory Lab</a></h3><p class=""area"">Los Angeles, California</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.lapl.org/memory-lab/diy-memory-lab-central-library"">Check with Los Angeles Public Library DIY Memory Lab</a></p>
+        </li>
+        <li data-operator=""greater-victoria-esquimalt"" data-fit=""listed"" id=""answer--hi8--greater-victoria-esquimalt"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--hi8--greater-victoria-esquimalt"" aria-label=""Greater Victoria Public Library at Esquimalt — Digitize a Hi8 tape"">Greater Victoria Public Library at Esquimalt</a></h3><p class=""area"">Esquimalt, British Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Greater Victoria lists both Hi8 and Digital8 at the AV station.</p>
+          <p class=""source""><a href=""https://gvpl.ca/we-recommend/explore/media-lab"">Greater Victoria media lab sessions and equipment</a></p>
+        </li>
+        <li data-operator=""coquitlam-poirier"" data-fit=""listed"" id=""answer--hi8--coquitlam-poirier"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--hi8--coquitlam-poirier"" aria-label=""Coquitlam Public Library Poirier Digitization Station — Digitize a Hi8 tape"">Coquitlam Public Library Poirier Digitization Station</a></h3><p class=""area"">Coquitlam, British Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The station lists Video8, Hi8 and Digital8.</p>
+          <p class=""source""><a href=""https://coqlibrary.ca/digitization-station/"">Coquitlam Poirier supported formats and station guides</a></p>
+        </li>
+        <li data-operator=""burnaby-digital-studio"" data-fit=""ask"" id=""answer--hi8--burnaby-digital-studio"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--hi8--burnaby-digital-studio"" aria-label=""Burnaby Public Library Digital Studio — Digitize a Hi8 tape"">Burnaby Public Library Digital Studio</a></h3><p class=""area"">Burnaby, British Columbia</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The library lists a capture route for Video8 or Hi8 using your own camcorder. Check the device and connector requirements.</p>
+          <p class=""source""><a href=""https://bpl.bc.ca/things-to-use/digital-studio/digitization"">Burnaby Digital Studio equipment and availability</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""walk-in"" class=""comparison"" aria-labelledby=""walk-in-title"" tabindex=""-1"">
+      <h2 id=""walk-in-title"">Use the lab without a booking</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""dc-memory-lab"" data-fit=""unknown"" id=""answer--walk-in--dc-memory-lab"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--walk-in--dc-memory-lab"" aria-label=""DC Public Library Memory Lab — Use the lab without a booking"">DC Public Library Memory Lab</a></h3><p class=""area"">Washington, District of Columbia</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.dclibrary.org/using-the-library/digital-preservation-memory-lab"">Check with DC Public Library Memory Lab</a></p>
+        </li>
+        <li data-operator=""boston-central"" data-fit=""excluded"" id=""answer--walk-in--boston-central"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--walk-in--boston-central"" aria-label=""Boston Public Library Central Memory Lab — Use the lab without a booking"">Boston Public Library Central Memory Lab</a></h3><p class=""area"">Boston, Massachusetts</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>Boston runs the Memory Lab by appointment only.</p>
+          <p class=""source""><a href=""https://guides.bpl.org/memorylab"">Boston Central Memory Lab bookings and eligibility</a></p>
+        </li>
+        <li data-operator=""los-angeles-central"" data-fit=""excluded"" id=""answer--walk-in--los-angeles-central"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--walk-in--los-angeles-central"" aria-label=""Los Angeles Public Library DIY Memory Lab — Use the lab without a booking"">Los Angeles Public Library DIY Memory Lab</a></h3><p class=""area"">Los Angeles, California</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>A reservation is required to use this lab.</p>
+          <p class=""source""><a href=""https://www.lapl.org/memory-lab/diy-memory-lab-central-library"">Octavia Lab media specs and reservation rules</a></p>
+        </li>
+        <li data-operator=""greater-victoria-esquimalt"" data-fit=""excluded"" id=""answer--walk-in--greater-victoria-esquimalt"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--walk-in--greater-victoria-esquimalt"" aria-label=""Greater Victoria Public Library at Esquimalt — Use the lab without a booking"">Greater Victoria Public Library at Esquimalt</a></h3><p class=""area"">Esquimalt, British Columbia</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The library requires an advance reservation and explicitly excludes walk-ins and same-day booking.</p>
+          <p class=""source""><a href=""https://gvpl.ca/we-recommend/explore/media-lab"">Greater Victoria media lab sessions and equipment</a></p>
+        </li>
+        <li data-operator=""coquitlam-poirier"" data-fit=""unknown"" id=""answer--walk-in--coquitlam-poirier"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--walk-in--coquitlam-poirier"" aria-label=""Coquitlam Public Library Poirier Digitization Station — Use the lab without a booking"">Coquitlam Public Library Poirier Digitization Station</a></h3><p class=""area"">Coquitlam, British Columbia</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://coqlibrary.ca/digitization-station/"">Check with Coquitlam Public Library Poirier Digitization Station</a></p>
+        </li>
+        <li data-operator=""burnaby-digital-studio"" data-fit=""listed"" id=""answer--walk-in--burnaby-digital-studio"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--walk-in--burnaby-digital-studio"" aria-label=""Burnaby Public Library Digital Studio — Use the lab without a booking"">Burnaby Public Library Digital Studio</a></h3><p class=""area"">Burnaby, British Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Burnaby welcomes walk-ins. It strongly recommends reserving a studio station when you need equipment attached to it.</p>
+          <p class=""source""><a href=""https://bpl.bc.ca/things-to-use/digital-studio/digitization"">Burnaby Digital Studio equipment and availability</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""first-visit-orientation"" class=""comparison"" aria-labelledby=""first-visit-orientation-title"" tabindex=""-1"">
+      <h2 id=""first-visit-orientation-title"">First visit without completing an orientation in advance</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""dc-memory-lab"" data-fit=""listed"" id=""answer--first-visit-orientation--dc-memory-lab"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--first-visit-orientation--dc-memory-lab"" aria-label=""DC Public Library Memory Lab — First visit without completing an orientation in advance"">DC Public Library Memory Lab</a></h3><p class=""area"">Washington, District of Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>A short orientation takes place at the first visit. Complete the release and review the guidelines beforehand.</p>
+          <p class=""source""><a href=""https://www.dclibrary.org/using-the-library/digital-preservation-memory-lab"">DC Public Library equipment and participant rules</a></p>
+        </li>
+        <li data-operator=""boston-central"" data-fit=""excluded"" id=""answer--first-visit-orientation--boston-central"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--first-visit-orientation--boston-central"" aria-label=""Boston Public Library Central Memory Lab — First visit without completing an orientation in advance"">Boston Public Library Central Memory Lab</a></h3><p class=""area"">Boston, Massachusetts</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>Complete the orientation before requesting an appointment.</p>
+          <p class=""source""><a href=""https://guides.bpl.org/memorylab"">Boston Central Memory Lab bookings and eligibility</a></p>
+        </li>
+        <li data-operator=""los-angeles-central"" data-fit=""excluded"" id=""answer--first-visit-orientation--los-angeles-central"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--first-visit-orientation--los-angeles-central"" aria-label=""Los Angeles Public Library DIY Memory Lab — First visit without completing an orientation in advance"">Los Angeles Public Library DIY Memory Lab</a></h3><p class=""area"">Los Angeles, California</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The library requires online orientation before use.</p>
+          <p class=""source""><a href=""https://www.lapl.org/memory-lab/diy-memory-lab-central-library"">Octavia Lab media specs and reservation rules</a></p>
+        </li>
+        <li data-operator=""greater-victoria-esquimalt"" data-fit=""listed"" id=""answer--first-visit-orientation--greater-victoria-esquimalt"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--first-visit-orientation--greater-victoria-esquimalt"" aria-label=""Greater Victoria Public Library at Esquimalt — First visit without completing an orientation in advance"">Greater Victoria Public Library at Esquimalt</a></h3><p class=""area"">Esquimalt, British Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>A separate orientation is optional.</p>
+          <p class=""source""><a href=""https://gvpl.ca/we-recommend/explore/media-lab"">Greater Victoria media lab sessions and equipment</a></p>
+        </li>
+        <li data-operator=""coquitlam-poirier"" data-fit=""unknown"" id=""answer--first-visit-orientation--coquitlam-poirier"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--first-visit-orientation--coquitlam-poirier"" aria-label=""Coquitlam Public Library Poirier Digitization Station — First visit without completing an orientation in advance"">Coquitlam Public Library Poirier Digitization Station</a></h3><p class=""area"">Coquitlam, British Columbia</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://coqlibrary.ca/digitization-station/"">Check with Coquitlam Public Library Poirier Digitization Station</a></p>
+        </li>
+        <li data-operator=""burnaby-digital-studio"" data-fit=""unknown"" id=""answer--first-visit-orientation--burnaby-digital-studio"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--first-visit-orientation--burnaby-digital-studio"" aria-label=""Burnaby Public Library Digital Studio — First visit without completing an orientation in advance"">Burnaby Public Library Digital Studio</a></h3><p class=""area"">Burnaby, British Columbia</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://bpl.bc.ca/things-to-use/digital-studio/digitization"">Check with Burnaby Public Library Digital Studio</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""save-usb"" class=""comparison"" aria-labelledby=""save-usb-title"" tabindex=""-1"">
+      <h2 id=""save-usb-title"">Save files to your own USB drive</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""dc-memory-lab"" data-fit=""listed"" id=""answer--save-usb--dc-memory-lab"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--save-usb--dc-memory-lab"" aria-label=""DC Public Library Memory Lab — Save files to your own USB drive"">DC Public Library Memory Lab</a></h3><p class=""area"">Washington, District of Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The library lists USB, an external hard drive and personal cloud storage as storage options, subject to the format instructions.</p>
+          <p class=""source""><a href=""https://www.dclibrary.org/using-the-library/digital-preservation-memory-lab"">DC Public Library equipment and participant rules</a></p>
+        </li>
+        <li data-operator=""boston-central"" data-fit=""unknown"" id=""answer--save-usb--boston-central"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--save-usb--boston-central"" aria-label=""Boston Public Library Central Memory Lab — Save files to your own USB drive"">Boston Public Library Central Memory Lab</a></h3><p class=""area"">Boston, Massachusetts</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://guides.bpl.org/memorylab"">Check with Boston Public Library Central Memory Lab</a></p>
+        </li>
+        <li data-operator=""los-angeles-central"" data-fit=""unknown"" id=""answer--save-usb--los-angeles-central"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--save-usb--los-angeles-central"" aria-label=""Los Angeles Public Library DIY Memory Lab — Save files to your own USB drive"">Los Angeles Public Library DIY Memory Lab</a></h3><p class=""area"">Los Angeles, California</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.lapl.org/memory-lab/diy-memory-lab-central-library"">Check with Los Angeles Public Library DIY Memory Lab</a></p>
+        </li>
+        <li data-operator=""greater-victoria-esquimalt"" data-fit=""listed"" id=""answer--save-usb--greater-victoria-esquimalt"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--save-usb--greater-victoria-esquimalt"" aria-label=""Greater Victoria Public Library at Esquimalt — Save files to your own USB drive"">Greater Victoria Public Library at Esquimalt</a></h3><p class=""area"">Esquimalt, British Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The lab allows your USB or external drive. Its instructions specify at least 32 GB.</p>
+          <p class=""source""><a href=""https://gvpl.ca/we-recommend/explore/media-lab"">Greater Victoria media lab sessions and equipment</a></p>
+        </li>
+        <li data-operator=""coquitlam-poirier"" data-fit=""listed"" id=""answer--save-usb--coquitlam-poirier"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--save-usb--coquitlam-poirier"" aria-label=""Coquitlam Public Library Poirier Digitization Station — Save files to your own USB drive"">Coquitlam Public Library Poirier Digitization Station</a></h3><p class=""area"">Coquitlam, British Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>USB is listed for supported home video conversions. Use the format’s own instructions.</p>
+          <p class=""source""><a href=""https://coqlibrary.ca/digitization-station/"">Coquitlam Poirier supported formats and station guides</a></p>
+        </li>
+        <li data-operator=""burnaby-digital-studio"" data-fit=""listed"" id=""answer--save-usb--burnaby-digital-studio"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--save-usb--burnaby-digital-studio"" aria-label=""Burnaby Public Library Digital Studio — Save files to your own USB drive"">Burnaby Public Library Digital Studio</a></h3><p class=""area"">Burnaby, British Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The table lists USB flash storage for VHS at Studio Station 1. Storage choices depend on the format.</p>
+          <p class=""source""><a href=""https://bpl.bc.ca/things-to-use/digital-studio/digitization"">Burnaby Digital Studio equipment and availability</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""before-digitizing"" class=""prep"" aria-labelledby=""before-digitizing-title"" tabindex=""-1"">
+      <h2 id=""before-digitizing-title"">Before digitizing</h2>
+      <p>Check the media format, first-visit requirements and your storage device for the chosen station.</p>
+      <ul class=""cards"" role=""list"">
+        <li>
+          <h3>DC Public Library Memory Lab</h3><p class=""area"">Washington, District of Columbia</p>
+          <dl>
+            <dt>Before your first visit</dt><dd>Complete the participant release and review the library’s guidelines. Bring an active library card and government photo ID. <span class=""source""><a href=""https://www.dclibrary.org/using-the-library/digital-preservation-memory-lab"">DC Public Library equipment and participant rules</a></span></dd>
+            <dt>Book your station</dt><dd>Use the library’s three-hour booking route. Ask how to save files for your exact format. The 8mm reel equipment uses an SD card with a size limit. <span class=""source""><a href=""https://www.dclibrary.org/using-the-library/digital-preservation-memory-lab"">DC Public Library equipment and participant rules</a></span></dd>
+          </dl>
+          <p><a href=""https://www.dclibrary.org/using-the-library/digital-preservation-memory-lab"">DC Public Library equipment and participant rules</a></p>
+        </li>
+        <li>
+          <h3>Boston Public Library Central Memory Lab</h3><p class=""area"">Boston, Massachusetts</p>
+          <dl>
+            <dt>Before you request a reservation</dt><dd>Complete the online orientation and use agreement. Boston requires a physical BPL or accepted MBLN card and excludes Minuteman cards and eCards. <span class=""source""><a href=""https://guides.bpl.org/memorylab"">Boston Central Memory Lab bookings and eligibility</a></span></dd>
+            <dt>Choose a station</dt><dd>VHS uses the audio-video station. Book one station in a three-hour session and wait for a confirmation email. <span class=""source""><a href=""https://guides.bpl.org/memorylab"">Boston Central Memory Lab bookings and eligibility</a></span></dd>
+          </dl>
+          <p><a href=""https://guides.bpl.org/memorylab"">Boston Central Memory Lab bookings and eligibility</a></p>
+        </li>
+        <li>
+          <h3>Los Angeles Public Library DIY Memory Lab</h3><p class=""area"">Los Angeles, California</p>
+          <dl>
+            <dt>Before calling for a reservation</dt><dd>Have a Los Angeles Public Library card in good standing, complete the online orientation and sign the required agreement. <span class=""source""><a href=""https://www.lapl.org/memory-lab/diy-memory-lab-central-library"">Octavia Lab media specs and reservation rules</a></span></dd>
+            <dt>Choose one station</dt><dd>The lab limits each appointment to one piece of equipment. Ask which storage device to bring for that particular station. <span class=""source""><a href=""https://www.lapl.org/memory-lab/diy-memory-lab-central-library"">Octavia Lab media specs and reservation rules</a></span></dd>
+          </dl>
+          <p><a href=""https://www.lapl.org/memory-lab/diy-memory-lab-central-library"">Octavia Lab media specs and reservation rules</a></p>
+        </li>
+        <li>
+          <h3>Greater Victoria Public Library at Esquimalt</h3><p class=""area"">Esquimalt, British Columbia</p>
+          <dl>
+            <dt>What to bring</dt><dd>Bring your library card and a USB or external drive with at least 32 GB of space. Audio users should bring wired headphones. <span class=""source""><a href=""https://gvpl.ca/we-recommend/explore/media-lab"">Greater Victoria media lab sessions and equipment</a></span></dd>
+            <dt>Where and when</dt><dd>Use the Esquimalt Branch reservation page. Sessions can be booked for one to three hours in one-hour increments. <span class=""source""><a href=""https://gvpl.ca/we-recommend/explore/media-lab"">Greater Victoria media lab sessions and equipment</a></span></dd>
+          </dl>
+          <p><a href=""https://gvpl.ca/we-recommend/explore/media-lab"">Greater Victoria media lab sessions and equipment</a></p>
+        </li>
+        <li>
+          <h3>Coquitlam Public Library Poirier Digitization Station</h3><p class=""area"">Coquitlam, British Columbia</p>
+          <dl>
+            <dt>Before you reserve</dt><dd>Use your library card to book the Poirier station. The published conversion options do not include PAL-to-NTSC conversion. <span class=""source""><a href=""https://coqlibrary.ca/digitization-station/"">Coquitlam Poirier supported formats and station guides</a></span></dd>
+            <dt>If you want help</dt><dd>The library provides self-serve instructions. It offers a separate help session for one-on-one orientation. <span class=""source""><a href=""https://coqlibrary.ca/digitization-station/"">Coquitlam Poirier supported formats and station guides</a></span></dd>
+          </dl>
+          <p><a href=""https://coqlibrary.ca/digitization-station/"">Coquitlam Poirier supported formats and station guides</a></p>
+        </li>
+        <li>
+          <h3>Burnaby Public Library Digital Studio</h3><p class=""area"">Burnaby, British Columbia</p>
+          <dl>
+            <dt>Before you travel</dt><dd>Call to check walk-in equipment availability. Reserve a Studio Station with your library card number and PIN. <span class=""source""><a href=""https://bpl.bc.ca/things-to-use/digital-studio/digitization"">Burnaby Digital Studio equipment and availability</a></span></dd>
+            <dt>What the station supplies</dt><dd>The hands-on lab may require your own camcorder and compatible cables for some formats. Check the equipment table for your media. <span class=""source""><a href=""https://bpl.bc.ca/things-to-use/digital-studio/digitization"">Burnaby Digital Studio equipment and availability</a></span></dd>
+          </dl>
+          <p><a href=""https://bpl.bc.ca/things-to-use/digital-studio/digitization"">Burnaby Digital Studio equipment and availability</a></p>
+        </li>
+      </ul>
+    </section>
+    <!-- LIBRARY-MEMORY-LABS:END -->
+    <section class=""notes"" aria-labelledby=""notes-title"">
+      <h2 id=""notes-title"">Plan your first session</h2>
+      <p>Choose one test recording before bringing a box of tapes. Ask whether transfer takes as long as the recording and which station handles the format printed on your tape.</p>
+      <p>Check the library’s file storage rules and leave time to copy and play back the result. Keep the original until you have checked the digital file.</p>
+    </section>
+    <section class=""notes"" aria-labelledby=""sources-and-data"">
+      <h2 id=""sources-and-data"">Sources and data</h2>
+      <ul class=""utility-links"" role=""list"">
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/library-memory-labs/comparison.csv"" download>Download comparison data (CSV)</a></li>
+        <li><a href=""https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml"">Report a source correction</a> (public GitHub form)</li>
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/library-scanning/"">Compare library scanners for paper documents</a></li>
+      </ul>
+    </section>"
+"household-document-shredding","Where to Shred Household Documents","Compare document shredding drop-offs and events by appointment, staples, box limits, business eligibility and whether you can watch.","https://itsmeb-lab.github.io/wilke-public-labs/household-document-shredding/","2026-11-26","STAGING_DRAFT_ONLY","<div class=""intro"">
+      <p>Some programs shred documents at an event. Others collect paper in locked bins and shred it later. Check the named route before bringing more than a bag or box.</p>
+      <p>Orange County, North Carolina takes appointments for a two-box limit and asks you to remove staples and clips. Somerset County events allow staples and clips and let eligible residents watch.</p>
+    </div>
+    <!-- HOUSEHOLD-DOCUMENT-SHREDDING:START -->
+    <nav id=""items"" class=""choices"" aria-label=""Choose an item"" tabindex=""-1"">
+      <p>Choose an item</p>
+      <ul role=""list"">
+        <li><a href=""#without-appointment"">Bring household documents without an appointment</a></li>
+        <li><a href=""#keep-staples"">Leave staples and paper clips attached</a></li>
+        <li><a href=""#watch-shredding"">Watch household papers being shredded</a></li>
+        <li><a href=""#business-paper"">Bring documents from a small business</a></li>
+        <li><a href=""#more-than-two-boxes"">Bring more than two banker boxes on one trip</a></li>
+        <li><a href=""#before-shredding"">Before you bring documents</a></li>
+      </ul>
+    </nav>
+    <p class=""reviewed"">Snapshot reviewed <time datetime=""2026-11-26"">November 26, 2026</time>.</p>
+    <section id=""without-appointment"" class=""comparison"" aria-labelledby=""without-appointment-title"" tabindex=""-1"">
+      <h2 id=""without-appointment-title"">Bring household documents without an appointment</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""orange-county-nc"" data-fit=""excluded"" id=""answer--without-appointment--orange-county-nc"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--without-appointment--orange-county-nc"" aria-label=""Orange County Shred Center — Bring household documents without an appointment"">Orange County Shred Center</a></h3><p class=""area"">Chapel Hill, North Carolina</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>Orange County requires an appointment for this center. The county lists separate shred-a-thons.</p>
+          <p class=""source""><a href=""https://www.orangecountync.gov/2210/Shred-Center"">Orange County Shred Center rules and FAQs</a></p>
+        </li>
+        <li data-operator=""lorain-county"" data-fit=""listed"" id=""answer--without-appointment--lorain-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--without-appointment--lorain-county"" aria-label=""Lorain County Collection Center — Bring household documents without an appointment"">Lorain County Collection Center</a></h3><p class=""area"">Elyria, Ohio</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Lorain County residents can bring qualifying papers to the Collection Center during regular opening hours.</p>
+          <p class=""source""><a href=""https://loraincountyohio.gov/519/Paper-Shredding"">Lorain County personal and business shredding rules</a></p>
+        </li>
+        <li data-operator=""collier-daily"" data-fit=""listed"" id=""answer--without-appointment--collier-daily"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--without-appointment--collier-daily"" aria-label=""Collier County daily collection bins — Bring household documents without an appointment"">Collier County daily collection bins</a></h3><p class=""area"">Collier County, Florida</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Use the county’s regular daily drop-off hours at a listed center.</p>
+          <p class=""source""><a href=""https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities"">Collier County daily and monthly shredding options</a></p>
+        </li>
+        <li data-operator=""collier-monthly"" data-fit=""listed"" id=""answer--without-appointment--collier-monthly"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--without-appointment--collier-monthly"" aria-label=""Collier County monthly shredding truck — Bring household documents without an appointment"">Collier County monthly shredding truck</a></h3><p class=""area"">Collier County, Florida</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Use the posted monthly collection hours at a listed center.</p>
+          <p class=""source""><a href=""https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities"">Collier County monthly shredding truck route</a></p>
+        </li>
+        <li data-operator=""somerset-county"" data-fit=""listed"" id=""answer--without-appointment--somerset-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--without-appointment--somerset-county"" aria-label=""Somerset County Operation Secure Shred — Bring household documents without an appointment"">Somerset County Operation Secure Shred</a></h3><p class=""area"">Somerset County, New Jersey</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Eligible residents can use a scheduled event without registering in advance.</p>
+          <p class=""source""><a href=""https://northplainfieldnj.gov/resident/calendar/county-shredding"">Somerset County event rules on North Plainfield’s municipal site</a></p>
+        </li>
+        <li data-operator=""uwcu-member-events"" data-fit=""listed"" id=""answer--without-appointment--uwcu-member-events"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--without-appointment--uwcu-member-events"" aria-label=""UW Credit Union annual member shredding events — Bring household documents without an appointment"">UW Credit Union annual member shredding events</a></h3><p class=""area"">Milwaukee and Madison, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Eligible members can attend a published event without an appointment.</p>
+          <p class=""source""><a href=""https://www.uwcu.org/news/members/free-shred-it-event/"">UW Credit Union event dates and member rules</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""keep-staples"" class=""comparison"" aria-labelledby=""keep-staples-title"" tabindex=""-1"">
+      <h2 id=""keep-staples-title"">Leave staples and paper clips attached</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""orange-county-nc"" data-fit=""excluded"" id=""answer--keep-staples--orange-county-nc"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--keep-staples--orange-county-nc"" aria-label=""Orange County Shred Center — Leave staples and paper clips attached"">Orange County Shred Center</a></h3><p class=""area"">Chapel Hill, North Carolina</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>Remove both staples and clips before bringing your boxes.</p>
+          <p class=""source""><a href=""https://www.orangecountync.gov/2210/Shred-Center"">Orange County Shred Center rules and FAQs</a></p>
+        </li>
+        <li data-operator=""lorain-county"" data-fit=""excluded"" id=""answer--keep-staples--lorain-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--keep-staples--lorain-county"" aria-label=""Lorain County Collection Center — Leave staples and paper clips attached"">Lorain County Collection Center</a></h3><p class=""area"">Elyria, Ohio</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>Staff list both staples and paper clips as unwanted items and check the paper at drop-off.</p>
+          <p class=""source""><a href=""https://loraincountyohio.gov/519/Paper-Shredding"">Lorain County personal and business shredding rules</a></p>
+        </li>
+        <li data-operator=""collier-daily"" data-fit=""unknown"" id=""answer--keep-staples--collier-daily"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--keep-staples--collier-daily"" aria-label=""Collier County daily collection bins — Leave staples and paper clips attached"">Collier County daily collection bins</a></h3><p class=""area"">Collier County, Florida</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities"">Check with Collier County daily collection bins</a></p>
+        </li>
+        <li data-operator=""collier-monthly"" data-fit=""unknown"" id=""answer--keep-staples--collier-monthly"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--keep-staples--collier-monthly"" aria-label=""Collier County monthly shredding truck — Leave staples and paper clips attached"">Collier County monthly shredding truck</a></h3><p class=""area"">Collier County, Florida</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities"">Check with Collier County monthly shredding truck</a></p>
+        </li>
+        <li data-operator=""somerset-county"" data-fit=""listed"" id=""answer--keep-staples--somerset-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--keep-staples--somerset-county"" aria-label=""Somerset County Operation Secure Shred — Leave staples and paper clips attached"">Somerset County Operation Secure Shred</a></h3><p class=""area"">Somerset County, New Jersey</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The event rules allow staples and paper clips to stay attached.</p>
+          <p class=""source""><a href=""https://northplainfieldnj.gov/resident/calendar/county-shredding"">Somerset County event rules on North Plainfield’s municipal site</a></p>
+        </li>
+        <li data-operator=""uwcu-member-events"" data-fit=""listed"" id=""answer--keep-staples--uwcu-member-events"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--keep-staples--uwcu-member-events"" aria-label=""UW Credit Union annual member shredding events — Leave staples and paper clips attached"">UW Credit Union annual member shredding events</a></h3><p class=""area"">Milwaukee and Madison, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>UW Credit Union allows staples and paper clips in paper documents.</p>
+          <p class=""source""><a href=""https://www.uwcu.org/news/members/free-shred-it-event/"">UW Credit Union event dates and member rules</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""watch-shredding"" class=""comparison"" aria-labelledby=""watch-shredding-title"" tabindex=""-1"">
+      <h2 id=""watch-shredding-title"">Watch household papers being shredded</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""orange-county-nc"" data-fit=""excluded"" id=""answer--watch-shredding--orange-county-nc"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--watch-shredding--orange-county-nc"" aria-label=""Orange County Shred Center — Watch household papers being shredded"">Orange County Shred Center</a></h3><p class=""area"">Chapel Hill, North Carolina</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>Staff keep the documents in a secure area and shred them after the day’s collection. Visitors cannot watch.</p>
+          <p class=""source""><a href=""https://www.orangecountync.gov/2210/Shred-Center"">Orange County Shred Center rules and FAQs</a></p>
+        </li>
+        <li data-operator=""lorain-county"" data-fit=""unknown"" id=""answer--watch-shredding--lorain-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--watch-shredding--lorain-county"" aria-label=""Lorain County Collection Center — Watch household papers being shredded"">Lorain County Collection Center</a></h3><p class=""area"">Elyria, Ohio</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://loraincountyohio.gov/519/Paper-Shredding"">Check with Lorain County Collection Center</a></p>
+        </li>
+        <li data-operator=""collier-daily"" data-fit=""excluded"" id=""answer--watch-shredding--collier-daily"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--watch-shredding--collier-daily"" aria-label=""Collier County daily collection bins — Watch household papers being shredded"">Collier County daily collection bins</a></h3><p class=""area"">Collier County, Florida</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The daily route uses locked bins to hold paper until shredding takes place.</p>
+          <p class=""source""><a href=""https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities"">Collier County daily and monthly shredding options</a></p>
+        </li>
+        <li data-operator=""collier-monthly"" data-fit=""ask"" id=""answer--watch-shredding--collier-monthly"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--watch-shredding--collier-monthly"" aria-label=""Collier County monthly shredding truck — Watch household papers being shredded"">Collier County monthly shredding truck</a></h3><p class=""area"">Collier County, Florida</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>A truck shreds on site once its collection tote fills. Ask whether you can stay to watch your batch.</p>
+          <p class=""source""><a href=""https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities"">Collier County monthly shredding truck route</a></p>
+        </li>
+        <li data-operator=""somerset-county"" data-fit=""listed"" id=""answer--watch-shredding--somerset-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--watch-shredding--somerset-county"" aria-label=""Somerset County Operation Secure Shred — Watch household papers being shredded"">Somerset County Operation Secure Shred</a></h3><p class=""area"">Somerset County, New Jersey</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Residents can stay and watch the on-site shredding.</p>
+          <p class=""source""><a href=""https://northplainfieldnj.gov/resident/calendar/county-shredding"">Somerset County event rules on North Plainfield’s municipal site</a></p>
+        </li>
+        <li data-operator=""uwcu-member-events"" data-fit=""listed"" id=""answer--watch-shredding--uwcu-member-events"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--watch-shredding--uwcu-member-events"" aria-label=""UW Credit Union annual member shredding events — Watch household papers being shredded"">UW Credit Union annual member shredding events</a></h3><p class=""area"">Milwaukee and Madison, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The organizer allows people to watch the mobile shredder process their documents.</p>
+          <p class=""source""><a href=""https://www.uwcu.org/news/members/free-shred-it-event/"">UW Credit Union event dates and member rules</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""business-paper"" class=""comparison"" aria-labelledby=""business-paper-title"" tabindex=""-1"">
+      <h2 id=""business-paper-title"">Bring documents from a small business</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""orange-county-nc"" data-fit=""listed"" id=""answer--business-paper--orange-county-nc"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--business-paper--orange-county-nc"" aria-label=""Orange County Shred Center — Bring documents from a small business"">Orange County Shred Center</a></h3><p class=""area"">Chapel Hill, North Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Orange County small businesses and eligible nonprofit organizations can book the separate Thursday route.</p>
+          <p class=""source""><a href=""https://www.orangecountync.gov/2210/Shred-Center"">Orange County Shred Center rules and FAQs</a></p>
+        </li>
+        <li data-operator=""lorain-county"" data-fit=""listed"" id=""answer--business-paper--lorain-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--business-paper--lorain-county"" aria-label=""Lorain County Collection Center — Bring documents from a small business"">Lorain County Collection Center</a></h3><p class=""area"">Elyria, Ohio</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Businesses should make a separate appointment through the Collection Center coordinator.</p>
+          <p class=""source""><a href=""https://loraincountyohio.gov/519/Paper-Shredding"">Lorain County personal and business shredding rules</a></p>
+        </li>
+        <li data-operator=""collier-daily"" data-fit=""excluded"" id=""answer--business-paper--collier-daily"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--business-paper--collier-daily"" aria-label=""Collier County daily collection bins — Bring documents from a small business"">Collier County daily collection bins</a></h3><p class=""area"">Collier County, Florida</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>Collier lists the shredding fee schedule for residential use and marks it unavailable to commercial customers.</p>
+          <p class=""source""><a href=""https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities"">Collier County daily and monthly shredding options</a></p>
+        </li>
+        <li data-operator=""collier-monthly"" data-fit=""excluded"" id=""answer--business-paper--collier-monthly"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--business-paper--collier-monthly"" aria-label=""Collier County monthly shredding truck — Bring documents from a small business"">Collier County monthly shredding truck</a></h3><p class=""area"">Collier County, Florida</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The county facility schedule marks paper shredding unavailable to commercial customers.</p>
+          <p class=""source""><a href=""https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities"">Collier County monthly shredding truck route</a></p>
+        </li>
+        <li data-operator=""somerset-county"" data-fit=""excluded"" id=""answer--business-paper--somerset-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--business-paper--somerset-county"" aria-label=""Somerset County Operation Secure Shred — Bring documents from a small business"">Somerset County Operation Secure Shred</a></h3><p class=""area"">Somerset County, New Jersey</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The event is for household documents and excludes businesses and commercial vehicles.</p>
+          <p class=""source""><a href=""https://northplainfieldnj.gov/resident/calendar/county-shredding"">Somerset County event rules on North Plainfield’s municipal site</a></p>
+        </li>
+        <li data-operator=""uwcu-member-events"" data-fit=""unknown"" id=""answer--business-paper--uwcu-member-events"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--business-paper--uwcu-member-events"" aria-label=""UW Credit Union annual member shredding events — Bring documents from a small business"">UW Credit Union annual member shredding events</a></h3><p class=""area"">Milwaukee and Madison, Wisconsin</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.uwcu.org/news/members/free-shred-it-event/"">Check with UW Credit Union annual member shredding events</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""more-than-two-boxes"" class=""comparison"" aria-labelledby=""more-than-two-boxes-title"" tabindex=""-1"">
+      <h2 id=""more-than-two-boxes-title"">Bring more than two banker boxes on one trip</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""orange-county-nc"" data-fit=""excluded"" id=""answer--more-than-two-boxes--orange-county-nc"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--more-than-two-boxes--orange-county-nc"" aria-label=""Orange County Shred Center — Bring more than two banker boxes on one trip"">Orange County Shred Center</a></h3><p class=""area"">Chapel Hill, North Carolina</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The center limits each person or business to two eligible boxes per day. You can reserve appointments for additional weeks.</p>
+          <p class=""source""><a href=""https://www.orangecountync.gov/2210/Shred-Center"">Orange County Shred Center rules and FAQs</a></p>
+        </li>
+        <li data-operator=""lorain-county"" data-fit=""listed"" id=""answer--more-than-two-boxes--lorain-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--more-than-two-boxes--lorain-county"" aria-label=""Lorain County Collection Center — Bring more than two banker boxes on one trip"">Lorain County Collection Center</a></h3><p class=""area"">Elyria, Ohio</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The county states no volume limit for resident drop-off at this Collection Center.</p>
+          <p class=""source""><a href=""https://loraincountyohio.gov/519/Paper-Shredding"">Lorain County personal and business shredding rules</a></p>
+        </li>
+        <li data-operator=""collier-daily"" data-fit=""unknown"" id=""answer--more-than-two-boxes--collier-daily"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--more-than-two-boxes--collier-daily"" aria-label=""Collier County daily collection bins — Bring more than two banker boxes on one trip"">Collier County daily collection bins</a></h3><p class=""area"">Collier County, Florida</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities"">Check with Collier County daily collection bins</a></p>
+        </li>
+        <li data-operator=""collier-monthly"" data-fit=""unknown"" id=""answer--more-than-two-boxes--collier-monthly"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--more-than-two-boxes--collier-monthly"" aria-label=""Collier County monthly shredding truck — Bring more than two banker boxes on one trip"">Collier County monthly shredding truck</a></h3><p class=""area"">Collier County, Florida</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities"">Check with Collier County monthly shredding truck</a></p>
+        </li>
+        <li data-operator=""somerset-county"" data-fit=""listed"" id=""answer--more-than-two-boxes--somerset-county"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--more-than-two-boxes--somerset-county"" aria-label=""Somerset County Operation Secure Shred — Bring more than two banker boxes on one trip"">Somerset County Operation Secure Shred</a></h3><p class=""area"">Somerset County, New Jersey</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The event limit is six boxes, containers or bags in any combination per trip.</p>
+          <p class=""source""><a href=""https://northplainfieldnj.gov/resident/calendar/county-shredding"">Somerset County event rules on North Plainfield’s municipal site</a></p>
+        </li>
+        <li data-operator=""uwcu-member-events"" data-fit=""listed"" id=""answer--more-than-two-boxes--uwcu-member-events"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--more-than-two-boxes--uwcu-member-events"" aria-label=""UW Credit Union annual member shredding events — Bring more than two banker boxes on one trip"">UW Credit Union annual member shredding events</a></h3><p class=""area"">Milwaukee and Madison, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The published event limit is five boxes or bags per attendee.</p>
+          <p class=""source""><a href=""https://www.uwcu.org/news/members/free-shred-it-event/"">UW Credit Union event dates and member rules</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""before-shredding"" class=""prep"" aria-labelledby=""before-shredding-title"" tabindex=""-1"">
+      <h2 id=""before-shredding-title"">Before you bring documents</h2>
+      <p>Check the appointment or event date, allowed volume, permitted fasteners and residency or membership rule.</p>
+      <ul class=""cards"" role=""list"">
+        <li>
+          <h3>Orange County Shred Center</h3><p class=""area"">Chapel Hill, North Carolina</p>
+          <dl>
+            <dt>Personal documents</dt><dd>Book the resident route through Solid Waste. The center offers weekday slots by customer group and says bookings often fill two to four weeks ahead. <span class=""source""><a href=""https://www.orangecountync.gov/2210/Shred-Center"">Orange County Shred Center rules and FAQs</a></span></dd>
+            <dt>Container and contents</dt><dd>Use no more than two boxes at 15 by 12 by 10 inches or smaller. Bring confidential, unshredded paper. Remove staples and clips and leave folders, cards and general mail out. <span class=""source""><a href=""https://www.orangecountync.gov/2210/Shred-Center"">Orange County Shred Center rules and FAQs</a></span></dd>
+          </dl>
+          <p><a href=""https://www.orangecountync.gov/2210/Shred-Center"">Orange County Shred Center rules and FAQs</a></p>
+        </li>
+        <li>
+          <h3>Lorain County Collection Center</h3><p class=""area"">Elyria, Ohio</p>
+          <dl>
+            <dt>When to go</dt><dd>The resident collection-center service runs during regular center hours. The county posts separate schedules for community events. <span class=""source""><a href=""https://loraincountyohio.gov/519/Paper-Shredding"">Lorain County personal and business shredding rules</a></span></dd>
+            <dt>How to prepare the paper</dt><dd>Staff check for staples, clips, rubber bands and plastic bindings before placing the paper in a locked container. <span class=""source""><a href=""https://loraincountyohio.gov/519/Paper-Shredding"">Lorain County personal and business shredding rules</a></span></dd>
+          </dl>
+          <p><a href=""https://loraincountyohio.gov/519/Paper-Shredding"">Lorain County personal and business shredding rules</a></p>
+        </li>
+        <li>
+          <h3>Collier County daily collection bins</h3><p class=""area"">Collier County, Florida</p>
+          <dl>
+            <dt>Named centers</dt><dd>The county lists the Naples, Marco Island, North Collier and Northeast centers for the daily route. <span class=""source""><a href=""https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities"">Collier County daily and monthly shredding options</a></span></dd>
+            <dt>Volume and charge</dt><dd>The first 20 pounds per vehicle are free. The county lists $1 per additional pound. <span class=""source""><a href=""https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities"">Collier County daily and monthly shredding options</a></span></dd>
+          </dl>
+          <p><a href=""https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities"">Collier County daily and monthly shredding options</a></p>
+        </li>
+        <li>
+          <h3>Collier County monthly shredding truck</h3><p class=""area"">Collier County, Florida</p>
+          <dl>
+            <dt>Check your center and date</dt><dd>The county lists this truck on the third Saturday of the month at Naples and North Collier. Check the center page for current hours. <span class=""source""><a href=""https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities"">Collier County monthly shredding truck route</a></span></dd>
+            <dt>Volume and charge</dt><dd>The first 20 pounds per vehicle are free. The fee is $1 per additional pound under the posted schedule. <span class=""source""><a href=""https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities"">Collier County monthly shredding truck route</a></span></dd>
+          </dl>
+          <p><a href=""https://www.collier.gov/Resident-Resources/Solid-Waste/Drop-Off-Center-Facilities"">Collier County monthly shredding truck route</a></p>
+        </li>
+        <li>
+          <h3>Somerset County Operation Secure Shred</h3><p class=""area"">Somerset County, New Jersey</p>
+          <dl>
+            <dt>Before you go</dt><dd>Check a current county event date and bring proof of a Somerset County address. <span class=""source""><a href=""https://northplainfieldnj.gov/resident/calendar/county-shredding"">Somerset County event rules on North Plainfield’s municipal site</a></span></dd>
+            <dt>Container and capacity</dt><dd>The program lists up to six boxes, bags or containers per trip. Collection can end early if the trucks fill. <span class=""source""><a href=""https://northplainfieldnj.gov/resident/calendar/county-shredding"">Somerset County event rules on North Plainfield’s municipal site</a></span></dd>
+          </dl>
+          <p><a href=""https://northplainfieldnj.gov/resident/calendar/county-shredding"">Somerset County event rules on North Plainfield’s municipal site</a></p>
+        </li>
+        <li>
+          <h3>UW Credit Union annual member shredding events</h3><p class=""area"">Milwaukee and Madison, Wisconsin</p>
+          <dl>
+            <dt>Who can use it</dt><dd>These annual events are for UW Credit Union members. Use the organizer’s scheduled date and exact event address. <span class=""source""><a href=""https://www.uwcu.org/news/members/free-shred-it-event/"">UW Credit Union event dates and member rules</a></span></dd>
+            <dt>What to bring</dt><dd>The organizer lists up to five boxes or bags of qualifying paper. Keep plastic binders, batteries and electronics separate. <span class=""source""><a href=""https://www.uwcu.org/news/members/free-shred-it-event/"">UW Credit Union event dates and member rules</a></span></dd>
+          </dl>
+          <p><a href=""https://www.uwcu.org/news/members/free-shred-it-event/"">UW Credit Union event dates and member rules</a></p>
+        </li>
+      </ul>
+    </section>
+    <!-- HOUSEHOLD-DOCUMENT-SHREDDING:END -->
+    <section class=""notes"" aria-labelledby=""notes-title"">
+      <h2 id=""notes-title"">Before you load a box</h2>
+      <p>Separate the documents you have decided to shred from papers that still need review. Use the receiving program’s container, fastener and proof-of-eligibility rules.</p>
+      <p>If you need the papers shredded while you are there, confirm the event’s date and remaining capacity. A locked-bin drop-off can handle paper after your visit.</p>
+    </section>
+    <section class=""notes"" aria-labelledby=""sources-and-data"">
+      <h2 id=""sources-and-data"">Sources and data</h2>
+      <ul class=""utility-links"" role=""list"">
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/household-document-shredding/comparison.csv"" download>Download comparison data (CSV)</a></li>
+        <li><a href=""https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml"">Report a source correction</a> (public GitHub form)</li>
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-cleanout-floor-handoff/"">Plan which documents and other belongings stay during a Milwaukee cleanout</a></li>
       </ul>
     </section>"

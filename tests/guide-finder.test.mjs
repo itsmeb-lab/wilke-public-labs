@@ -11,8 +11,8 @@ const read = (file) => readFileSync(new URL('../' + file, import.meta.url), 'utf
 
 test('finder projections stay in sync with the public guide catalogs', () => {
   update('--check');
-  assert.equal(guides.length, 12);
-  assert.equal(regions.length, 24);
+  assert.equal(guides.length, 14);
+  assert.equal(regions.length, 27);
   const html = read('guide-finder/index.html');
   for (const { slug, tasks } of guides) {
     assert.ok(html.includes('href="../' + slug + '/"'), slug);
@@ -47,6 +47,15 @@ test('specific search avoids joining repairing with donating or hiring with borr
   assert.equal(search('can my child borrow a ukulele', 'au-nsw')[0].id, 'under-thirteen');
   assert.equal(search('how long can I borrow a ukulele', 'au-nsw')[0].id, 'three-week-loan');
   assert.deepEqual(sound.routes.map(({ id, fit }) => [id, fit]), [['sydney-take-home', 'listed'], ['sydney-room', 'excluded']]);
+});
+
+test('the finder distinguishes exact tape formats and source-bound shredding rules', () => {
+  const [memory] = search('digitize Hi8', 'us-dc');
+  assert.equal(memory.id, 'hi8');
+  assert.deepEqual(memory.routes.map(({ id, fit }) => [id, fit]), [['dc-memory-lab', 'excluded']]);
+  const [records] = search('watch documents shredded', 'us-nc');
+  assert.equal(records.id, 'watch-shredding');
+  assert.deepEqual(records.routes.map(({ id, fit }) => [id, fit]), [['orange-county-nc', 'excluded']]);
 });
 
 test('search fields stay in the page, with an ordinary link list as the fallback', () => {

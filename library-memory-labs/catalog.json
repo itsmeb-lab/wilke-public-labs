@@ -1,0 +1,385 @@
+{
+  "checkedOn": "2026-11-26",
+  "sources": {
+    "dc-memory-lab-guide": {
+      "label": "DC Public Library equipment and participant rules",
+      "url": "https://www.dclibrary.org/using-the-library/digital-preservation-memory-lab",
+      "checkedOn": "2026-11-26"
+    },
+    "boston-central-guide": {
+      "label": "Boston Central Memory Lab bookings and eligibility",
+      "url": "https://guides.bpl.org/memorylab",
+      "checkedOn": "2026-11-26"
+    },
+    "los-angeles-central-guide": {
+      "label": "Octavia Lab media specs and reservation rules",
+      "url": "https://www.lapl.org/memory-lab/diy-memory-lab-central-library",
+      "checkedOn": "2026-11-26"
+    },
+    "greater-victoria-esquimalt-guide": {
+      "label": "Greater Victoria media lab sessions and equipment",
+      "url": "https://gvpl.ca/we-recommend/explore/media-lab",
+      "checkedOn": "2026-11-26"
+    },
+    "coquitlam-poirier-guide": {
+      "label": "Coquitlam Poirier supported formats and station guides",
+      "url": "https://coqlibrary.ca/digitization-station/",
+      "checkedOn": "2026-11-26"
+    },
+    "burnaby-digital-studio-guide": {
+      "label": "Burnaby Digital Studio equipment and availability",
+      "url": "https://bpl.bc.ca/things-to-use/digital-studio/digitization",
+      "checkedOn": "2026-11-26"
+    }
+  },
+  "operators": [
+    {
+      "id": "dc-memory-lab",
+      "name": "DC Public Library Memory Lab",
+      "area": "Washington, District of Columbia",
+      "country": "US",
+      "jurisdiction": "us-dc",
+      "visitSource": "dc-memory-lab-guide",
+      "sourceIds": [
+        "dc-memory-lab-guide"
+      ],
+      "prep": [
+        {
+          "label": "Before your first visit",
+          "text": "Complete the participant release and review the library’s guidelines. Bring an active library card and government photo ID.",
+          "source": "dc-memory-lab-guide"
+        },
+        {
+          "label": "Book your station",
+          "text": "Use the library’s three-hour booking route. Ask how to save files for your exact format. The 8mm reel equipment uses an SD card with a size limit.",
+          "source": "dc-memory-lab-guide"
+        }
+      ]
+    },
+    {
+      "id": "boston-central",
+      "name": "Boston Public Library Central Memory Lab",
+      "area": "Boston, Massachusetts",
+      "country": "US",
+      "jurisdiction": "us-ma",
+      "visitSource": "boston-central-guide",
+      "sourceIds": [
+        "boston-central-guide"
+      ],
+      "prep": [
+        {
+          "label": "Before you request a reservation",
+          "text": "Complete the online orientation and use agreement. Boston requires a physical BPL or accepted MBLN card and excludes Minuteman cards and eCards.",
+          "source": "boston-central-guide"
+        },
+        {
+          "label": "Choose a station",
+          "text": "VHS uses the audio-video station. Book one station in a three-hour session and wait for a confirmation email.",
+          "source": "boston-central-guide"
+        }
+      ]
+    },
+    {
+      "id": "los-angeles-central",
+      "name": "Los Angeles Public Library DIY Memory Lab",
+      "area": "Los Angeles, California",
+      "country": "US",
+      "jurisdiction": "us-ca",
+      "visitSource": "los-angeles-central-guide",
+      "sourceIds": [
+        "los-angeles-central-guide"
+      ],
+      "prep": [
+        {
+          "label": "Before calling for a reservation",
+          "text": "Have a Los Angeles Public Library card in good standing, complete the online orientation and sign the required agreement.",
+          "source": "los-angeles-central-guide"
+        },
+        {
+          "label": "Choose one station",
+          "text": "The lab limits each appointment to one piece of equipment. Ask which storage device to bring for that particular station.",
+          "source": "los-angeles-central-guide"
+        }
+      ]
+    },
+    {
+      "id": "greater-victoria-esquimalt",
+      "name": "Greater Victoria Public Library at Esquimalt",
+      "area": "Esquimalt, British Columbia",
+      "country": "CA",
+      "jurisdiction": "ca-bc",
+      "visitSource": "greater-victoria-esquimalt-guide",
+      "sourceIds": [
+        "greater-victoria-esquimalt-guide"
+      ],
+      "prep": [
+        {
+          "label": "What to bring",
+          "text": "Bring your library card and a USB or external drive with at least 32 GB of space. Audio users should bring wired headphones.",
+          "source": "greater-victoria-esquimalt-guide"
+        },
+        {
+          "label": "Where and when",
+          "text": "Use the Esquimalt Branch reservation page. Sessions can be booked for one to three hours in one-hour increments.",
+          "source": "greater-victoria-esquimalt-guide"
+        }
+      ]
+    },
+    {
+      "id": "coquitlam-poirier",
+      "name": "Coquitlam Public Library Poirier Digitization Station",
+      "area": "Coquitlam, British Columbia",
+      "country": "CA",
+      "jurisdiction": "ca-bc",
+      "visitSource": "coquitlam-poirier-guide",
+      "sourceIds": [
+        "coquitlam-poirier-guide"
+      ],
+      "prep": [
+        {
+          "label": "Before you reserve",
+          "text": "Use your library card to book the Poirier station. The published conversion options do not include PAL-to-NTSC conversion.",
+          "source": "coquitlam-poirier-guide"
+        },
+        {
+          "label": "If you want help",
+          "text": "The library provides self-serve instructions. It offers a separate help session for one-on-one orientation.",
+          "source": "coquitlam-poirier-guide"
+        }
+      ]
+    },
+    {
+      "id": "burnaby-digital-studio",
+      "name": "Burnaby Public Library Digital Studio",
+      "area": "Burnaby, British Columbia",
+      "country": "CA",
+      "jurisdiction": "ca-bc",
+      "visitSource": "burnaby-digital-studio-guide",
+      "sourceIds": [
+        "burnaby-digital-studio-guide"
+      ],
+      "prep": [
+        {
+          "label": "Before you travel",
+          "text": "Call to check walk-in equipment availability. Reserve a Studio Station with your library card number and PIN.",
+          "source": "burnaby-digital-studio-guide"
+        },
+        {
+          "label": "What the station supplies",
+          "text": "The hands-on lab may require your own camcorder and compatible cables for some formats. Check the equipment table for your media.",
+          "source": "burnaby-digital-studio-guide"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "vhs",
+      "label": "Digitize a standard VHS home video"
+    },
+    {
+      "id": "minidv",
+      "label": "Digitize a MiniDV tape"
+    },
+    {
+      "id": "hi8",
+      "label": "Digitize a Hi8 tape"
+    },
+    {
+      "id": "walk-in",
+      "label": "Use the lab without a booking"
+    },
+    {
+      "id": "first-visit-orientation",
+      "label": "First visit without completing an orientation in advance"
+    },
+    {
+      "id": "save-usb",
+      "label": "Save files to your own USB drive"
+    }
+  ],
+  "rules": [
+    {
+      "operator": "dc-memory-lab",
+      "task": "vhs",
+      "fit": "listed",
+      "text": "VHS and VHS-C are on DC’s current equipment list.",
+      "source": "dc-memory-lab-guide"
+    },
+    {
+      "operator": "dc-memory-lab",
+      "task": "minidv",
+      "fit": "listed",
+      "text": "The library lists MiniDV among the formats its lab supports.",
+      "source": "dc-memory-lab-guide"
+    },
+    {
+      "operator": "dc-memory-lab",
+      "task": "hi8",
+      "fit": "excluded",
+      "text": "DC marks Video8, Hi8 and Digital8 as currently unavailable.",
+      "source": "dc-memory-lab-guide"
+    },
+    {
+      "operator": "dc-memory-lab",
+      "task": "first-visit-orientation",
+      "fit": "listed",
+      "text": "A short orientation takes place at the first visit. Complete the release and review the guidelines beforehand.",
+      "source": "dc-memory-lab-guide"
+    },
+    {
+      "operator": "dc-memory-lab",
+      "task": "save-usb",
+      "fit": "listed",
+      "text": "The library lists USB, an external hard drive and personal cloud storage as storage options, subject to the format instructions.",
+      "source": "dc-memory-lab-guide"
+    },
+    {
+      "operator": "boston-central",
+      "task": "vhs",
+      "fit": "listed",
+      "text": "Boston lists VHS transfer equipment in its Central Library Memory Lab.",
+      "source": "boston-central-guide"
+    },
+    {
+      "operator": "boston-central",
+      "task": "walk-in",
+      "fit": "excluded",
+      "text": "Boston runs the Memory Lab by appointment only.",
+      "source": "boston-central-guide"
+    },
+    {
+      "operator": "boston-central",
+      "task": "first-visit-orientation",
+      "fit": "excluded",
+      "text": "Complete the orientation before requesting an appointment.",
+      "source": "boston-central-guide"
+    },
+    {
+      "operator": "los-angeles-central",
+      "task": "vhs",
+      "fit": "listed",
+      "text": "Los Angeles lists NTSC VHS in Standard Play or Extended Play.",
+      "source": "los-angeles-central-guide"
+    },
+    {
+      "operator": "los-angeles-central",
+      "task": "minidv",
+      "fit": "listed",
+      "text": "The library specifies DV or MiniDV recorded in Standard Play.",
+      "source": "los-angeles-central-guide"
+    },
+    {
+      "operator": "los-angeles-central",
+      "task": "walk-in",
+      "fit": "excluded",
+      "text": "A reservation is required to use this lab.",
+      "source": "los-angeles-central-guide"
+    },
+    {
+      "operator": "los-angeles-central",
+      "task": "first-visit-orientation",
+      "fit": "excluded",
+      "text": "The library requires online orientation before use.",
+      "source": "los-angeles-central-guide"
+    },
+    {
+      "operator": "greater-victoria-esquimalt",
+      "task": "vhs",
+      "fit": "listed",
+      "text": "Reserve an audio-video station for VHS and VHS-C home movies.",
+      "source": "greater-victoria-esquimalt-guide"
+    },
+    {
+      "operator": "greater-victoria-esquimalt",
+      "task": "minidv",
+      "fit": "listed",
+      "text": "The Esquimalt AV station lists MiniDV.",
+      "source": "greater-victoria-esquimalt-guide"
+    },
+    {
+      "operator": "greater-victoria-esquimalt",
+      "task": "hi8",
+      "fit": "listed",
+      "text": "Greater Victoria lists both Hi8 and Digital8 at the AV station.",
+      "source": "greater-victoria-esquimalt-guide"
+    },
+    {
+      "operator": "greater-victoria-esquimalt",
+      "task": "walk-in",
+      "fit": "excluded",
+      "text": "The library requires an advance reservation and explicitly excludes walk-ins and same-day booking.",
+      "source": "greater-victoria-esquimalt-guide"
+    },
+    {
+      "operator": "greater-victoria-esquimalt",
+      "task": "first-visit-orientation",
+      "fit": "listed",
+      "text": "A separate orientation is optional.",
+      "source": "greater-victoria-esquimalt-guide"
+    },
+    {
+      "operator": "greater-victoria-esquimalt",
+      "task": "save-usb",
+      "fit": "listed",
+      "text": "The lab allows your USB or external drive. Its instructions specify at least 32 GB.",
+      "source": "greater-victoria-esquimalt-guide"
+    },
+    {
+      "operator": "coquitlam-poirier",
+      "task": "vhs",
+      "fit": "listed",
+      "text": "The station lists VHS and VHS-C, with output to DVD or USB.",
+      "source": "coquitlam-poirier-guide"
+    },
+    {
+      "operator": "coquitlam-poirier",
+      "task": "minidv",
+      "fit": "listed",
+      "text": "The station lists MiniDV and offers separate DVD and computer transfer guides.",
+      "source": "coquitlam-poirier-guide"
+    },
+    {
+      "operator": "coquitlam-poirier",
+      "task": "hi8",
+      "fit": "listed",
+      "text": "The station lists Video8, Hi8 and Digital8.",
+      "source": "coquitlam-poirier-guide"
+    },
+    {
+      "operator": "coquitlam-poirier",
+      "task": "save-usb",
+      "fit": "listed",
+      "text": "USB is listed for supported home video conversions. Use the format’s own instructions.",
+      "source": "coquitlam-poirier-guide"
+    },
+    {
+      "operator": "burnaby-digital-studio",
+      "task": "vhs",
+      "fit": "listed",
+      "text": "Burnaby lists VHS hardware at Studio Station 1 and a separate all-in-one digitizer.",
+      "source": "burnaby-digital-studio-guide"
+    },
+    {
+      "operator": "burnaby-digital-studio",
+      "task": "hi8",
+      "fit": "ask",
+      "text": "The library lists a capture route for Video8 or Hi8 using your own camcorder. Check the device and connector requirements.",
+      "source": "burnaby-digital-studio-guide"
+    },
+    {
+      "operator": "burnaby-digital-studio",
+      "task": "walk-in",
+      "fit": "listed",
+      "text": "Burnaby welcomes walk-ins. It strongly recommends reserving a studio station when you need equipment attached to it.",
+      "source": "burnaby-digital-studio-guide"
+    },
+    {
+      "operator": "burnaby-digital-studio",
+      "task": "save-usb",
+      "fit": "listed",
+      "text": "The table lists USB flash storage for VHS at Studio Station 1. Storage choices depend on the format.",
+      "source": "burnaby-digital-studio-guide"
+    }
+  ]
+}
