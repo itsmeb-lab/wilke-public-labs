@@ -58,7 +58,7 @@ jobs:
           wp_site plugin get wordpress-importer --field=version
           wp_site theme list --status=active --fields=name,version
           php --version | head -1
-      - name: Prove the draft import can be retried without publishing or duplicating
+      - name: Verify import and replay retain one nonpublic draft page
         run: |
           set -euo pipefail
           wp_root="$RUNNER_TEMP/wp-test"

@@ -21,10 +21,18 @@ $expectedMeta = [
     '_atlas_source_review' => '2026-11-26',
     '_atlas_import_state' => 'STAGING_DRAFT_ONLY',
 ];
+$metadataCounts = [];
 foreach ($expectedMeta as $key => $value) {
-    if (get_post_meta((int) $row->ID, $key, true) !== $value) {
-        throw new RuntimeException('Expected the original metadata on the draft: ' . $key);
+    $storedValues = get_post_meta((int) $row->ID, $key, false);
+    if (!$storedValues) {
+        throw new RuntimeException('Expected metadata on the draft: ' . $key);
     }
+    foreach ($storedValues as $storedValue) {
+        if ($storedValue !== $value) {
+            throw new RuntimeException('Draft metadata differs from the source: ' . $key);
+        }
+    }
+    $metadataCounts[$key] = count($storedValues);
 }
 foreach ([
     'id="answer--power-meter--ballarat"',
@@ -41,3 +49,4 @@ if (!str_contains($row->post_excerpt, 'thermal cameras')) {
     throw new RuntimeException('The guide description did not survive as the excerpt.');
 }
 echo 'One nonpublic draft page. Source, review date, status, local anchors, and excerpt survived replay.' . PHP_EOL;
+echo 'Recorded draft metadata rows: ' . json_encode($metadataCounts, JSON_THROW_ON_ERROR) . PHP_EOL;
