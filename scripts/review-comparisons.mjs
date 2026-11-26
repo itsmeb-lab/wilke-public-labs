@@ -90,6 +90,7 @@ export async function checkServed(fetcher = fetch) {
     ['lab-site.css?v=20261125-2', 'lab-site.css'],
     ['repair-cafe-planner/style.css?v=20261125-2', 'repair-cafe-planner/style.css'],
     ['sitemap.xml', 'sitemap.xml'],
+    ['guide-updates.xml', 'guide-updates.xml'],
     ['published-policy-lab/', 'published-policy-lab/index.html'],
     ['published-policy-lab/wood-chip-load.mjs?v=20261125-1', 'published-policy-lab/wood-chip-load.mjs'],
     ['published-policy-lab/wood-chip-load.css?v=20261125-1', 'published-policy-lab/wood-chip-load.css'],
