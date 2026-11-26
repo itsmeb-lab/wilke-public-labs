@@ -21,7 +21,7 @@ const copyByLocale = Object.freeze({
     contact: 'Consulte con',
   },
 });
-const escapeHtml = (value) => value.replace(/[&<>"']/g, (ch) => ({
+export const escapeHtml = (value) => value.replace(/[&<>"']/g, (ch) => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
 })[ch]);
 const validSlug = (value) => typeof value === 'string' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value);

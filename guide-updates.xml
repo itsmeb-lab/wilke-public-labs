@@ -5,8 +5,15 @@
   <link>https://itsmeb-lab.github.io/wilke-public-labs/#community-guides</link>
   <description>New public comparisons, planning worksheets and source-linked community guides.</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 26 Nov 2026 14:48:28 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 26 Nov 2026 15:03:57 GMT</lastBuildDate>
   <atom:link href="https://itsmeb-lab.github.io/wilke-public-labs/guide-updates.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Hardwood Finish Return Times</title>
+    <link>https://itsmeb-lab.github.io/wilke-public-labs/hardwood-finish-return/</link>
+    <guid isPermaLink="true">https://itsmeb-lab.github.io/wilke-public-labs/hardwood-finish-return/</guid>
+    <description>Check the maker’s guidance for walking, furniture, rugs and cleaning and print the confirmed room schedule.</description>
+    <pubDate>Thu, 26 Nov 2026 15:03:57 GMT</pubDate>
+  </item>
   <item>
     <title>Contractor Estimate Change Calculator</title>
     <link>https://itsmeb-lab.github.io/wilke-public-labs/estimate-change-calculator/</link>

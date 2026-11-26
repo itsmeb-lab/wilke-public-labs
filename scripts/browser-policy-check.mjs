@@ -26,6 +26,7 @@ const served=new Map([
  ["milwaukee-cleanout-floor-handoff",new Set(["index.html","worksheet.css","quote-compare.mjs","quote-math.mjs"])],
  ["milwaukee-junk-removal",new Set(["index.html","planner.css","planner.mjs","routes.mjs"])],
  ["estimate-change-calculator",new Set(["index.html","change.css","change-calculator.mjs","change-math.mjs"])],
+ ["hardwood-finish-return",new Set(["index.html","finish.css","catalog.json","finish-guidance.csv"])],
  ["library-sensory-spaces",new Set(["index.html"])],
  ["eyeglass-donation-rules",new Set(["index.html"])],
  ["library-instrument-borrowing",new Set(["index.html"])],
@@ -386,6 +387,28 @@ try{
     return {...layout,printPages:Number(pages)};
    }
    return layout;
+  });
+  await rpc("POST",sid("/url"),{url:origin+"/hardwood-finish-return/"});
+  await check("hardwood finish source and printable dates at "+width+"px",async()=>{
+   await click('a[href="#pallmann-pall-x-gold"]');
+   const record=await execute(`
+    const cell=document.getElementById('pallmann-pall-x-gold-walking');
+    return {width:innerWidth,scroll:document.documentElement.scrollWidth,target:document.querySelector(':target')?.id,
+      products:document.querySelectorAll('.finish-product').length,activities:document.querySelectorAll('.finish-activities dt').length,
+      prompts:document.querySelectorAll('.care-record dt').length,guidance:cell.innerText,status:cell.dataset.status,
+      printedCss:[...document.styleSheets].some(sheet=>sheet.href?.endsWith('/finish.css'))};
+   `);
+   assert.equal(record.width,width);assert.ok(record.scroll<=width+1);assert.equal(record.target,"pallmann-pall-x-gold");
+   assert.equal(record.products,6);assert.equal(record.activities,30);assert.equal(record.prompts,8);
+   assert.equal(record.status,"conflict");assert.match(record.guidance,/3–4 hours.*24 hours/);assert.ok(record.printedCss);
+   if(width===1280){
+    const encoded=await rpc("POST",sid("/print"),{orientation:"portrait",page:{width:21.59,height:27.94}});
+    const pdf=Buffer.from(encoded,"base64").toString("latin1");
+    const pages=pdf.match(/\/Type\s*\/Pages\b[\s\S]*?\/Count\s+(\d+)/)?.[1];
+    assert.ok(pdf.startsWith("%PDF-"));assert.equal(Number(pages),1);
+    return {...record,printPages:Number(pages)};
+   }
+   return record;
   });
 
   await closeSession();
