@@ -17,3 +17,18 @@ For secondary review, inspect `No current need` in the shelter guide and both ci
 
 Use [the vendor's CSV tutorial](https://www.wpzinc.com/documentation/page-generator-pro/tutorial-using-a-csv-file/) to confirm column settings for your installed version. Build the checked exchange with `node scripts/export-wordpress-comparison.mjs --write` and verify it with `--check`. Run `php tests/verify-wordpress-csv.php` to check the export with PHP's native CSV parser. The [disposable WordPress roundtrip](https://github.com/itsmeb-lab/wilke-public-labs/actions/runs/45763029870) created and restored 15 drafts with exact HTML, source canonicals and review dates. It used WordPress 7.1.5 and WordPress Importer 0.9.7. Use the one-draft check above to verify the installed Page Generator Pro version, editor and content-group settings.
 
+## Replay an Atlas WXR draft with WP-CLI
+
+For an exact WXR replay on private staging, load the optional companion for the import command.
+
+```bash
+wp --path=/path/to/staging \
+  --require=/path/to/wilke-public-labs/scripts/wp-cli-atlas-draft-metadata.php \
+  import /path/to/draft.xml --authors=skip --skip=attachment
+```
+
+The companion skips exact repeats of Atlas source URL, review date and import-state metadata on a draft page. Review changed exports before importing them. WordPress Importer handles post matching and distinct metadata values.
+
+Build the Spanish Milwaukee WXR draft with `node scripts/export-wordpress-draft.mjs --slug milwaukee-articulos-voluminosos --output milwaukee-es-draft.xml`. The WXR feed and imported guide body carry the source language.
+
+

@@ -1,7 +1,7 @@
 import { writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { guideRow } from './export-wordpress-comparison.mjs';
+import { guideDraftData } from './export-wordpress-comparison.mjs';
 
 const base = 'https://itsmeb-lab.github.io/wilke-public-labs/';
 const xml = (value) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;')
@@ -9,7 +9,8 @@ const xml = (value) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;')
 const cdata = (value) => '<![CDATA[' + value.replaceAll(']]>', ']]]]><![CDATA[>') + ']]>';
 
 export function buildWordPressDraft(slug) {
-  const [name, title, excerpt, source, checkedOn, state, content] = guideRow(slug);
+  const { language, row: [name, title, excerpt, source, checkedOn, state, content] } = guideDraftData(slug);
+  const draftContent = /^en(?:-|$)/i.test(language) ? content : '<div lang="' + xml(language) + '">' + content + '</div>';
   const date = checkedOn + ' 12:00:00';
   const meta = {
     _atlas_source_url: source,
@@ -31,7 +32,7 @@ export function buildWordPressDraft(slug) {
     '    <title>Wilke Public Labs</title>',
     '    <link>' + xml(base) + '</link>',
     '    <description>Draft exchange for one source-linked guide</description>',
-    '    <language>en-US</language>',
+    '    <language>' + xml(language) + '</language>',
     '    <wp:wxr_version>1.2</wp:wxr_version>',
     '    <wp:base_site_url>' + xml(base) + '</wp:base_site_url>',
     '    <wp:base_blog_url>' + xml(base) + '</wp:base_blog_url>',
@@ -41,7 +42,7 @@ export function buildWordPressDraft(slug) {
     '      <dc:creator>' + cdata('atlas-import') + '</dc:creator>',
     '      <guid isPermaLink="false">' + xml(source) + '</guid>',
     '      <description></description>',
-    '      <content:encoded>' + cdata(content) + '</content:encoded>',
+    '      <content:encoded>' + cdata(draftContent) + '</content:encoded>',
     '      <excerpt:encoded>' + cdata(excerpt) + '</excerpt:encoded>',
     '      <wp:post_id>1</wp:post_id>',
     '      <wp:post_date>' + cdata(date) + '</wp:post_date>',
