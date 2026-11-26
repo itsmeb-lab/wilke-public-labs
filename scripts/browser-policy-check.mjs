@@ -24,6 +24,7 @@ const served=new Map([
  ["library-seed-borrowing",new Set(["index.html"])],
  ["tool-library-borrowing",new Set(["index.html"])],
  ["milwaukee-cleanout-floor-handoff",new Set(["index.html","worksheet.css","quote-compare.mjs","quote-math.mjs"])],
+ ["milwaukee-junk-removal",new Set(["index.html","planner.css","planner.mjs","routes.mjs"])],
  ["library-sensory-spaces",new Set(["index.html"])],
  ["eyeglass-donation-rules",new Set(["index.html"])],
  ["library-instrument-borrowing",new Set(["index.html"])],
@@ -204,6 +205,27 @@ try{
    assert.ok(!unconfirmed.includes("lower at this load count"));
    return {width,privateCalculation:true,scopeComparison:true};
   });
+  await rpc("POST",sid("/url"),{url:origin+"/milwaukee-junk-removal/"});
+  await check("Milwaukee cleanout routing at "+width+"px",async()=>{
+   const end=Date.now()+5000;
+   while(await execute("return document.getElementById('route-planner').hidden;")){
+    if(Date.now()>=end)throw new Error("Cleanout route selector did not load.");
+    await delay(50);
+   }
+   const fill=(values)=>execute("for (const [id,value] of Object.entries(arguments[0])) {const field=document.getElementById(id);field.value=value;field.dispatchEvent(new Event('change'));} return document.getElementById('route-result').hidden;",[values]);
+   const result=()=>execute("return {heading:document.getElementById('result-title').textContent,link:document.getElementById('result-link').getAttribute('href'),focused:document.activeElement.id,scroll:document.documentElement.scrollWidth,resources:performance.getEntriesByType('resource').map(entry=>new URL(entry.name).origin)};");
+   assert.equal(await fill({authority:"unresolved",handling:"crew",items:"mixed"}),true);
+   await click("#choose");
+   const held=await result();assert.match(held.link,/datcp\.wi\.gov/);assert.match(held.heading,/Confirm/);
+   assert.equal(await fill({authority:"cleared"}),true);
+   await click("#choose");
+   const scope=await result();assert.equal(scope.link,"#quote-scope");assert.equal(scope.focused,"route-result");
+   assert.ok(scope.scroll<=width+1);assert.ok(scope.resources.length>0&&scope.resources.every(value=>value===origin));
+   assert.equal(await fill({handling:"self",items:"bulky"}),true);
+   await click("#choose");
+   assert.equal((await result()).link,"#municipalities");
+   return {width,unapprovedItemsHeld:true,localChoices:true};
+  });
   await closeSession();
  }
  const runtime=await session(390,844,false);
@@ -212,6 +234,13 @@ try{
   assert.equal(s.tasks,0,"Browser app ran despite the disabled-JavaScript fixture.");assert.ok(s.noScriptNotice,"No-script notice is not displayed.");
   assert.ok(await execute("return document.getElementById('wood-chip-controls').hidden && document.getElementById('wood-chip-load').innerText.includes('divide by 324');"));
   assert.ok(s.scrollWidth<=391);return {width:s.width,cards:s.cards,rows:s.rows,appTasks:s.tasks,runtime};
+ });
+ await rpc("POST",sid("/url"),{url:origin+"/milwaukee-junk-removal/"});
+ await check("Milwaukee cleanout guide works without JavaScript",async()=>{
+  const page=await execute("return {hidden:document.getElementById('route-planner').hidden,cities:document.querySelectorAll('.municipality-cards > li').length,details:document.querySelectorAll('.scope-list dt').length,service:document.querySelector('[data-cleanout-service]').origin,scroll:document.documentElement.scrollWidth};");
+  assert.equal(page.hidden,true);assert.equal(page.cities,6);assert.equal(page.details,4);
+  assert.equal(page.service,"https://wilkeservices.com");assert.ok(page.scroll<=391);
+  return {cities:page.cities,scopePrompts:page.details};
  });
  await rpc("POST",sid("/url"),{url:origin+"/guide-finder/"});
  await check("guide finder static list with JavaScript disabled",async()=>{
