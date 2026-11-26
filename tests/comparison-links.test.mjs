@@ -27,7 +27,7 @@ test('home task shortcuts resolve to public content without a search script', ()
   const home = read('index.html');
   const nav = home.split('aria-label="Jump to an answer"')[1].split('</nav>')[0];
   const links = [...nav.matchAll(/href="\.\/([a-z-]+)\/#([a-z-]+)"/g)];
-  assert.equal(links.length, 20);
+  assert.equal(links.length, 21);
   for (const [, folder, anchor] of links) {
     assert.ok(read(folder + '/index.html').includes('id="' + anchor + '"'), folder + '#' + anchor);
   }

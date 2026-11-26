@@ -5,8 +5,15 @@
   <link>https://itsmeb-lab.github.io/wilke-public-labs/#community-guides</link>
   <description>New public comparisons, planning worksheets and source-linked community guides.</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 26 Nov 2026 15:03:57 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 26 Nov 2026 15:17:30 GMT</lastBuildDate>
   <atom:link href="https://itsmeb-lab.github.io/wilke-public-labs/guide-updates.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Borrow a Home Energy Meter or Thermal Camera</title>
+    <link>https://itsmeb-lab.github.io/wilke-public-labs/home-energy-tool-lending/</link>
+    <guid isPermaLink="true">https://itsmeb-lab.github.io/wilke-public-labs/home-energy-tool-lending/</guid>
+    <description>Check the exact device, card requirements, hold and pickup at eight named library programs in five countries.</description>
+    <pubDate>Thu, 26 Nov 2026 15:17:30 GMT</pubDate>
+  </item>
   <item>
     <title>Hardwood Finish Return Times</title>
     <link>https://itsmeb-lab.github.io/wilke-public-labs/hardwood-finish-return/</link>

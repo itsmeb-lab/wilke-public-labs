@@ -21,6 +21,7 @@ export const comparisonGuides = Object.freeze([
   { slug: 'library-memory-labs', marker: 'LIBRARY-MEMORY-LABS' },
   { slug: 'household-document-shredding', marker: 'HOUSEHOLD-DOCUMENT-SHREDDING' },
   { slug: 'library-state-park-passes', marker: 'LIBRARY-STATE-PARK-PASSES' },
+  { slug: 'home-energy-tool-lending', marker: 'HOME-ENERGY-TOOL-LENDING' },
 ]);
 const localizedGuides = Object.freeze([
   { slug: 'milwaukee-articulos-voluminosos', marker: 'MILWAUKEE-BULKY-ES', catalogSlug: 'milwaukee-bulky-items' },

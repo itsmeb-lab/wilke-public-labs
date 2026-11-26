@@ -11,8 +11,8 @@ const read = (file) => readFileSync(new URL('../' + file, import.meta.url), 'utf
 
 test('finder projections stay in sync with the public guide catalogs', () => {
   update('--check');
-  assert.equal(guides.length, 15);
-  assert.equal(regions.length, 28);
+  assert.equal(guides.length, 16);
+  assert.equal(regions.length, 33);
   const html = read('guide-finder/index.html');
   for (const { slug, tasks } of guides) {
     assert.ok(html.includes('href="../' + slug + '/"'), slug);
