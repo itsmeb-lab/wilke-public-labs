@@ -65,9 +65,9 @@ jobs:
           wp_cli="$RUNNER_TEMP/wp-cli.phar"
           wp_site() { php "$wp_cli" --path="$wp_root" --user=atlas_test "$@"; }
           wp_site import "$RUNNER_TEMP/energy-draft.xml" --authors=skip --skip=attachment
-          wp_site eval-file tests/verify-wordpress-import.php
+          wp_site eval 'require getenv("GITHUB_WORKSPACE") . "/tests/verify-wordpress-import.php";'
           wp_site import "$RUNNER_TEMP/energy-draft.xml" --authors=skip --skip=attachment
-          wp_site eval-file tests/verify-wordpress-import.php
+          wp_site eval 'require getenv("GITHUB_WORKSPACE") . "/tests/verify-wordpress-import.php";'
   public-exports:
     runs-on: ubuntu-24.04
     timeout-minutes: 4
