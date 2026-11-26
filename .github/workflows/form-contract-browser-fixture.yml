@@ -1,0 +1,22 @@
+name: Synthetic Browser Form Contract
+
+on:
+  push:
+    branches: [atlas/form-contract-browser-20261126]
+
+permissions:
+  contents: read
+
+jobs:
+  form-contract:
+    runs-on: windows-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check native disabled controls and local post-hydration submit
+        run: node scripts/form-contract-browser-fixture.mjs
