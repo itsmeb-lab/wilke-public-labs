@@ -23,7 +23,9 @@ const served=new Map([
  ["library-museum-passes",new Set(["index.html"])],
  ["library-seed-borrowing",new Set(["index.html"])],
  ["tool-library-borrowing",new Set(["index.html"])],
- ["milwaukee-cleanout-floor-handoff",new Set(["index.html","worksheet.css"])]
+ ["milwaukee-cleanout-floor-handoff",new Set(["index.html","worksheet.css"])],
+ ["library-sensory-spaces",new Set(["index.html"])],
+ ["eyeglass-donation-rules",new Set(["index.html"])]
 ]);
 const mime={html:"text/html; charset=utf-8",css:"text/css; charset=utf-8",mjs:"text/javascript; charset=utf-8"};
 const driverFolder=process.env.EDGEWEBDRIVER;
@@ -176,7 +178,9 @@ try{
    {folder:"library-scanning",name:"library scanning",anchor:"email",title:"Scan directly to email",statuses:{milwaukee:"listed","chapel-hill":"listed",brunswick:"excluded",addison:"listed",durham:"unknown",beaufort:"listed","southern-pines":"listed"}},
    {folder:"library-museum-passes",name:"library museum pass",anchor:"book-venue",title:"Use the pass to book a venue time",statuses:{"boston-aquarium":"listed","shorewood-betty-brinn":"excluded","berkshire-mass-moca":"unknown","burlington-partners":"ask","toronto-aga-khan":"unknown"}},
    {folder:"library-seed-borrowing",name:"seed library",anchor:"without-card",title:"Take seeds without a library card",statuses:{transylvania:"ask",canton:"excluded",cleveland:"ask","raleigh-state":"ask",longwood:"listed",waterloo:"listed",mcgill:"ask",waikato:"unknown"}},
-   {folder:"tool-library-borrowing",name:"tool library",anchor:"household-borrower",title:"Borrow as a household or individual",statuses:{"milwaukee-hri":"ask","rock-hill":"listed","duluth-one-roof":"listed","charlotte-toolbank":"excluded",berkeley:"listed","london-things":"listed"}}
+   {folder:"tool-library-borrowing",name:"tool library",anchor:"household-borrower",title:"Borrow as a household or individual",statuses:{"milwaukee-hri":"ask","rock-hill":"listed","duluth-one-roof":"listed","charlotte-toolbank":"excluded",berkeley:"listed","london-things":"listed"}},
+   {folder:"library-sensory-spaces",name:"library sensory room",anchor:"walk-in",title:"Visit without a reservation",statuses:{"durham-calming":"listed","durham-mse":"excluded","north-manchester":"listed","toronto-stewart":"excluded","moreton-bay":"listed","queensland-corner":"excluded"}},
+   {folder:"eyeglass-donation-rules",name:"eyeglass donor",anchor:"loose-lenses",title:"Donate loose lenses",statuses:{"georgia-lions":"ask","minnesota-lions":"excluded","lions-in-sight":"ask","thiensville-mequon":"unknown","canadian-lions":"unknown","lions-uk":"excluded"}}
   ];
   await session(width,height,false,origin+"/"+cases[0].folder+"/");
   for(const [index,testCase] of cases.entries()){

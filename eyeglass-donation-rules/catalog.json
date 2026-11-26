@@ -1,0 +1,355 @@
+{
+  "checkedOn": "2026-11-25",
+  "sources": {
+    "georgia-lions-guide": {
+      "label": "Georgia Lions Lighthouse recycling page",
+      "url": "https://lionslighthouse.org/recycling/",
+      "checkedOn": "2026-11-25"
+    },
+    "georgia-lions-terms-1": {
+      "label": "Georgia recycling center collection policy",
+      "url": "https://lionslighthouse.org/wp-content/uploads/2025/Recycling_Center_Collection_Policies_202508.pdf",
+      "checkedOn": "2026-11-25"
+    },
+    "minnesota-lions-guide": {
+      "label": "Minnesota Lions center donation list",
+      "url": "https://mnlerc.org/",
+      "checkedOn": "2026-11-25"
+    },
+    "lions-in-sight-guide": {
+      "label": "Lions In Sight donation instructions",
+      "url": "https://www.lionsinsight.net/how-to-donate-eyeglasses",
+      "checkedOn": "2026-11-25"
+    },
+    "thiensville-mequon-guide": {
+      "label": "Thiensville-Mequon collection instructions",
+      "url": "https://tmlions.org/eyeglass-collection",
+      "checkedOn": "2026-11-25"
+    },
+    "thiensville-mequon-terms-1": {
+      "label": "Wisconsin Lions Foundation hearing donation locator",
+      "url": "https://wisconsinlionsfoundation.org/our-work/hearing/",
+      "checkedOn": "2026-11-25"
+    },
+    "canadian-lions-guide": {
+      "label": "Canadian Lions collection information",
+      "url": "https://clerc.ca/",
+      "checkedOn": "2026-11-25"
+    },
+    "canadian-lions-terms-1": {
+      "label": "Canadian Lions shipping instructions",
+      "url": "https://clerc.ca/eyeglasses/shipping-supplies/",
+      "checkedOn": "2026-11-25"
+    },
+    "lions-uk-guide": {
+      "label": "UK Lions Recycling donor FAQ",
+      "url": "https://lionsrecycling.co.uk/faqs/",
+      "checkedOn": "2026-11-25"
+    }
+  },
+  "operators": [
+    {
+      "id": "georgia-lions",
+      "name": "Georgia Lions Lighthouse Foundation",
+      "area": "Georgia, United States",
+      "country": "US",
+      "jurisdiction": "us-ga",
+      "visitSource": "georgia-lions-guide",
+      "sourceIds": [
+        "georgia-lions-guide",
+        "georgia-lions-terms-1"
+      ],
+      "prep": [
+        {
+          "label": "Use the collection policy",
+          "text": "The operator links a sorting sheet for glasses and hearing aids. Check first about loose lenses because the site’s two instructions conflict.",
+          "source": "georgia-lions-terms-1"
+        }
+      ]
+    },
+    {
+      "id": "minnesota-lions",
+      "name": "Minnesota Lions Eyeglass Recycling Center",
+      "area": "Pine City and collection sites, Minnesota",
+      "country": "US",
+      "jurisdiction": "us-mn",
+      "visitSource": "minnesota-lions-guide",
+      "sourceIds": [
+        "minnesota-lions-guide"
+      ],
+      "prep": [
+        {
+          "label": "Choose drop-off or mailing",
+          "text": "Use the list of collection locations or the center’s published mailing information.",
+          "source": "minnesota-lions-guide"
+        }
+      ]
+    },
+    {
+      "id": "lions-in-sight",
+      "name": "Lions In Sight",
+      "area": "California and participating clubs",
+      "country": "US",
+      "jurisdiction": "us-ca",
+      "visitSource": "lions-in-sight-guide",
+      "sourceIds": [
+        "lions-in-sight-guide"
+      ],
+      "prep": [
+        {
+          "label": "Find a participating route",
+          "text": "Use the operator’s list of drop-offs or its collection and mailing instructions.",
+          "source": "lions-in-sight-guide"
+        }
+      ]
+    },
+    {
+      "id": "thiensville-mequon",
+      "name": "Thiensville-Mequon Lions Club",
+      "area": "Thiensville and Mequon, Wisconsin",
+      "country": "US",
+      "jurisdiction": "us-wi",
+      "visitSource": "thiensville-mequon-guide",
+      "sourceIds": [
+        "thiensville-mequon-guide",
+        "thiensville-mequon-terms-1"
+      ],
+      "prep": [
+        {
+          "label": "Check the local box",
+          "text": "The club identifies local drop-off locations. The state foundation also provides a separate hearing aid donation locator.",
+          "source": "thiensville-mequon-terms-1"
+        }
+      ]
+    },
+    {
+      "id": "canadian-lions",
+      "name": "Canadian Lions Eyeglass Recycling Centre",
+      "area": "Calgary, Alberta",
+      "country": "CA",
+      "jurisdiction": "ca-ab",
+      "visitSource": "canadian-lions-guide",
+      "sourceIds": [
+        "canadian-lions-guide",
+        "canadian-lions-terms-1"
+      ],
+      "prep": [
+        {
+          "label": "Match your collection route",
+          "text": "Use the centre’s list of local collection points or its separate shipping instructions.",
+          "source": "canadian-lions-guide"
+        }
+      ]
+    },
+    {
+      "id": "lions-uk",
+      "name": "Lions Recycling",
+      "area": "Birmingham and participating UK clubs",
+      "country": "GB",
+      "jurisdiction": "gb-eng",
+      "visitSource": "lions-uk-guide",
+      "sourceIds": [
+        "lions-uk-guide"
+      ],
+      "prep": [
+        {
+          "label": "Choose the exact route",
+          "text": "The UK program’s FAQ points to local clubs for glasses and gives separate instructions for hearing equipment.",
+          "source": "lions-uk-guide"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "broken-frames",
+      "label": "Donate broken glasses or frame parts"
+    },
+    {
+      "id": "loose-lenses",
+      "label": "Donate loose lenses"
+    },
+    {
+      "id": "glasses-cases",
+      "label": "Include eyeglass cases"
+    },
+    {
+      "id": "sunglasses",
+      "label": "Donate sunglasses"
+    },
+    {
+      "id": "hearing-aids",
+      "label": "Donate used hearing aids"
+    }
+  ],
+  "rules": [
+    {
+      "operator": "georgia-lions",
+      "task": "broken-frames",
+      "fit": "listed",
+      "text": "The collection sheet asks donors to sort damaged frames with the broken-glasses group.",
+      "source": "georgia-lions-terms-1"
+    },
+    {
+      "operator": "georgia-lions",
+      "task": "loose-lenses",
+      "fit": "ask",
+      "text": "One section of the foundation website lists loose lenses. Its linked collection policy excludes them. Ask the recycling center before including them.",
+      "source": "georgia-lions-guide"
+    },
+    {
+      "operator": "georgia-lions",
+      "task": "glasses-cases",
+      "fit": "excluded",
+      "text": "The collection policy tells donors to take glasses out of their cases.",
+      "source": "georgia-lions-terms-1"
+    },
+    {
+      "operator": "georgia-lions",
+      "task": "sunglasses",
+      "fit": "listed",
+      "text": "The collection sheet includes sunglasses and sorts prescription pairs separately.",
+      "source": "georgia-lions-terms-1"
+    },
+    {
+      "operator": "georgia-lions",
+      "task": "hearing-aids",
+      "fit": "listed",
+      "text": "The collection sheet asks donors to separate hearing aids from cases and glasses.",
+      "source": "georgia-lions-terms-1"
+    },
+    {
+      "operator": "minnesota-lions",
+      "task": "broken-frames",
+      "fit": "ask",
+      "text": "The center lists broken metal frames as recyclable and excludes broken plastic frames.",
+      "source": "minnesota-lions-guide"
+    },
+    {
+      "operator": "minnesota-lions",
+      "task": "loose-lenses",
+      "fit": "excluded",
+      "text": "The center excludes lenses that are out of their frames.",
+      "source": "minnesota-lions-guide"
+    },
+    {
+      "operator": "minnesota-lions",
+      "task": "glasses-cases",
+      "fit": "excluded",
+      "text": "Eyeglass cases appear on the center’s do-not-send list.",
+      "source": "minnesota-lions-guide"
+    },
+    {
+      "operator": "minnesota-lions",
+      "task": "sunglasses",
+      "fit": "listed",
+      "text": "The center accepts non-prescription sunglasses, including clip-ons.",
+      "source": "minnesota-lions-guide"
+    },
+    {
+      "operator": "lions-in-sight",
+      "task": "broken-frames",
+      "fit": "listed",
+      "text": "The organization accepts broken eyeglass parts for scrap recycling.",
+      "source": "lions-in-sight-guide"
+    },
+    {
+      "operator": "lions-in-sight",
+      "task": "loose-lenses",
+      "fit": "ask",
+      "text": "The donation page lists broken parts but leaves loose lenses unspecified. Confirm before sending lenses alone.",
+      "source": "lions-in-sight-guide"
+    },
+    {
+      "operator": "lions-in-sight",
+      "task": "glasses-cases",
+      "fit": "excluded",
+      "text": "Remove cases before handing over or sending glasses.",
+      "source": "lions-in-sight-guide"
+    },
+    {
+      "operator": "lions-in-sight",
+      "task": "sunglasses",
+      "fit": "listed",
+      "text": "The operator lists both prescription and non-prescription sunglasses.",
+      "source": "lions-in-sight-guide"
+    },
+    {
+      "operator": "lions-in-sight",
+      "task": "hearing-aids",
+      "fit": "listed",
+      "text": "Used hearing aids appear on the organization’s donation list.",
+      "source": "lions-in-sight-guide"
+    },
+    {
+      "operator": "thiensville-mequon",
+      "task": "hearing-aids",
+      "fit": "listed",
+      "text": "The club welcomes hearing aids as well as eyeglasses. Check the box or locator before visiting.",
+      "source": "thiensville-mequon-guide"
+    },
+    {
+      "operator": "canadian-lions",
+      "task": "broken-frames",
+      "fit": "listed",
+      "text": "The centre’s shipping instructions include broken glasses and both metal and plastic frames.",
+      "source": "canadian-lions-terms-1"
+    },
+    {
+      "operator": "canadian-lions",
+      "task": "glasses-cases",
+      "fit": "excluded",
+      "text": "The centre asks donors to leave cases out of mailed shipments.",
+      "source": "canadian-lions-terms-1"
+    },
+    {
+      "operator": "canadian-lions",
+      "task": "sunglasses",
+      "fit": "listed",
+      "text": "The centre lists non-prescription sunglasses among donated eyewear it normally saves.",
+      "source": "canadian-lions-guide"
+    },
+    {
+      "operator": "canadian-lions",
+      "task": "hearing-aids",
+      "fit": "listed",
+      "text": "The centre accepts used hearing aids and asks that they be packed separately when mailed.",
+      "source": "canadian-lions-terms-1"
+    },
+    {
+      "operator": "lions-uk",
+      "task": "broken-frames",
+      "fit": "excluded",
+      "text": "The donation FAQ asks for complete pairs of glasses.",
+      "source": "lions-uk-guide"
+    },
+    {
+      "operator": "lions-uk",
+      "task": "loose-lenses",
+      "fit": "excluded",
+      "text": "The UK instructions specifically exclude loose lenses.",
+      "source": "lions-uk-guide"
+    },
+    {
+      "operator": "lions-uk",
+      "task": "glasses-cases",
+      "fit": "excluded",
+      "text": "The FAQ asks donors to leave eyeglass cases and cloths out.",
+      "source": "lions-uk-guide"
+    },
+    {
+      "operator": "lions-uk",
+      "task": "sunglasses",
+      "fit": "listed",
+      "text": "The program lists sunglasses as accepted.",
+      "source": "lions-uk-guide"
+    },
+    {
+      "operator": "lions-uk",
+      "task": "hearing-aids",
+      "fit": "listed",
+      "text": "Use the FAQ’s hearing equipment instructions for the Birmingham centre.",
+      "source": "lions-uk-guide"
+    }
+  ]
+}

@@ -49,7 +49,7 @@ test('source review finds an alternate mentioned only in the page notes', () => 
 
 test('release verification reads only the exact canonical pages, downloads and sitemap', async () => {
   const reads = await checkServed(fakeResponse);
-  assert.equal(reads.length, 26);
+  assert.equal(reads.length, 30);
   assert.ok(reads.some((entry) => entry.url === base));
   assert.ok(reads.some((entry) => entry.url === base + 'published-policy-lab/wood-chip-load.mjs?v=20261125-1'));
   assert.ok(reads.some((entry) => entry.url === base + 'milwaukee-bulky-items/comparison.csv'));
@@ -65,7 +65,7 @@ test('an unrelated destination, missing output, or different content fails deplo
 test('source review date cutoff is exclusive and uses each source’s review date', () => {
   assert.deepEqual(sourcesReviewedBefore('2026-11-25'), []);
   const items = sourcesReviewedBefore('2026-11-26');
-  assert.equal(items.length, 67);
+  assert.equal(items.length, 82);
   assert.ok(items.every((item) => item.checkedOn === '2026-11-25' && item.page.startsWith(base)));
   assert.throws(() => sourcesReviewedBefore('2026-02-30'), /real calendar date/);
 });
