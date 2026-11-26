@@ -1,0 +1,23 @@
+name: One-time complete live release verification
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/verify-live-expansion-once.yml'
+      - 'scripts/verify-live-expansion-once.mjs'
+permissions:
+  contents: read
+jobs:
+  live:
+    if: github.repository == 'itsmeb-lab/wilke-public-labs' && github.head_ref == 'atlas/verify-organic-session-close'
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check live bytes, sitemap, anchor destinations and robots
+        run: node scripts/verify-live-expansion-once.mjs
