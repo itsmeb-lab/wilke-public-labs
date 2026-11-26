@@ -10,7 +10,7 @@ const cdata = (value) => '<![CDATA[' + value.replaceAll(']]>', ']]]]><![CDATA[>'
 
 export function buildWordPressDraft(slug) {
   const { language, row: [name, title, excerpt, source, checkedOn, state, content] } = guideDraftData(slug);
-  const draftContent = language === 'en-US' ? content : '<div lang="' + xml(language) + '">' + content + '</div>';
+  const draftContent = /^en(?:-|$)/i.test(language) ? content : '<div lang="' + xml(language) + '">' + content + '</div>';
   const date = checkedOn + ' 12:00:00';
   const meta = {
     _atlas_source_url: source,

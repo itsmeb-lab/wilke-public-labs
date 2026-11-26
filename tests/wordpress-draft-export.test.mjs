@@ -6,7 +6,8 @@ test('WXR stages exactly one reviewed guide as a draft WordPress page', () => {
   const wxr = buildWordPressDraft('home-energy-tool-lending');
   assert.equal((wxr.match(/<item>/g) ?? []).length, 1);
   assert.match(wxr, /<wp:wxr_version>1\.2<\/wp:wxr_version>/);
-  assert.match(wxr, /<language>en-US<\/language>/);
+  assert.match(wxr, /<language>en<\/language>/);
+  assert.doesNotMatch(wxr, /<content:encoded><!\[CDATA\[<div lang=/);
   assert.match(wxr, /<wp:post_type><!\[CDATA\[page\]\]>/);
   assert.match(wxr, /<wp:status><!\[CDATA\[draft\]\]>/);
   assert.match(wxr, /<wp:post_name><!\[CDATA\[home-energy-tool-lending\]\]>/);
