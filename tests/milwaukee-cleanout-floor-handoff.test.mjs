@@ -11,7 +11,7 @@ test('the Milwaukee worksheet gives each step its own written scope and stays lo
   assert.match(handoff, /<h2 id="floor-estimate">Before approving the flooring estimate<\/h2>/);
   assert.match(handoff, /Pause on disputed, occupied or unapproved areas/);
   assert.match(handoff, /keep access codes out/i);
-  assert.doesNotMatch(handoff, /<form\b|<script\b|<input\b|<textarea\b|mailto:|tel:/i);
+  assert.doesNotMatch(handoff, /<form\b|<script[^>]*https:|<textarea\b|mailto:|tel:/i);
   assert.match(read('milwaukee-cleanout-floor-handoff/worksheet.css'), /@media print/);
 });
 

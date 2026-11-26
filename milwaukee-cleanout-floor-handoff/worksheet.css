@@ -33,7 +33,7 @@
   :root { font-size: 10pt; }
   body { color: black; background: white; }
   .wrap { width: auto; }
-  header, footer, .skip, .more-guides, .worksheet-tip { display: none; }
+  header, footer, .skip, .more-guides, .worksheet-tip, .quote-tool, .quote-jump { display: none; }
   .intro, .notes { padding-block: .45rem; }
   .intro > p { color: black; font-size: 1rem; }
   h1 { font-size: 2rem; margin-block-end: .5rem; }
@@ -50,3 +50,37 @@
   .worksheet dd { min-height: 1.3rem; border-color: #666; }
   a { color: inherit; }
 }
+
+.quote-tool { scroll-margin-block-start: 1rem; }
+.quote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: .75rem;
+  margin-block: .75rem;
+}
+.quote-grid fieldset {
+  min-width: 0;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: .4rem;
+  padding: .75rem;
+}
+.quote-grid legend, .quote-grid label, .quote-load > label { font-weight: 700; }
+.quote-grid label, .quote-load > label { display: block; margin-block: .3rem; }
+.quote-grid input, .quote-load input, .quote-actions button {
+  min-height: 44px;
+  color: var(--ink);
+  font: inherit;
+  border: 1px solid var(--muted);
+  border-radius: .3rem;
+  padding: .38rem .55rem;
+}
+.quote-grid input { width: 100%; }
+.quote-load input { width: 8rem; max-width: 100%; }
+.scope-match, .quote-actions { display: flex; gap: .5rem; }
+.scope-match { align-items: baseline; }
+.scope-match input { margin: 0; }
+.quote-actions { flex-wrap: wrap; margin-block: .6rem; }
+.quote-actions button { background: var(--surface); font-weight: 700; cursor: pointer; }
+.quote-actions button:first-child { background: var(--accent); color: white; }
+.quote-tool :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
