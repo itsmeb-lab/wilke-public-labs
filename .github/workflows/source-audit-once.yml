@@ -1,0 +1,21 @@
+name: Public Guide Source Audit
+
+on:
+  push:
+    branches: [atlas/guide-source-audit-nov26]
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/audit-public-guide-sources.mjs
