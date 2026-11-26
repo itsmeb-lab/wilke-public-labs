@@ -21,4 +21,4 @@ jobs:
       - name: Verify native form navigation in an isolated Edge fixture
         run: node scripts/browser-policy-form-fixture.mjs
       - name: Read public response status and header markers
-        run: node scripts/public-route-header-check.mjs baseline
+        run: node scripts/public-route-header-check.mjs guarded
