@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contractor Estimate Change Calculator | Wilke Public Labs</title>
+  <meta name="description" content="See how an approved charge, credit, or replacement line changes a contractor estimate. Check the replacement credit before totaling the price.">
+  <link rel="canonical" href="https://itsmeb-lab.github.io/wilke-public-labs/estimate-change-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contractor Estimate Change Calculator">
+  <meta property="og:description" content="Keep earlier approvals separate and check a new charge or credit against the original estimate.">
+  <meta property="og:url" content="https://itsmeb-lab.github.io/wilke-public-labs/estimate-change-calculator/">
+  <link rel="sitemap" type="application/xml" href="../sitemap.xml">
+  <link rel="stylesheet" href="../repair-cafe-planner/style.css?v=20261125-2">
+  <link rel="stylesheet" href="./change.css">
+  <script type="module" src="./change-calculator.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the calculator</a>
+  <header><div class="wrap site-header"><a href="../">Wilke Public Labs</a></div></header>
+  <main class="wrap" id="main" tabindex="-1">
+    <div class="intro">
+      <h1>Contractor estimate change calculator</h1>
+      <p>See what one proposed addition, credit or replacement would do to the total. Use the amounts on your written estimate and change request. Your entries stay on this page.</p>
+    </div>
+    <section class="notes" aria-labelledby="calculate">
+      <h2 id="calculate">Check the proposed total</h2>
+      <p>Use US dollar amounts. Enter an earlier charge or credit only if it was approved and the original amount excludes it. Enter zero when there were no earlier charges or credits.</p>
+      <div id="change-tool" class="change-tool" hidden>
+        <div class="change-grid">
+          <fieldset>
+            <legend>Original estimate and approvals</legend>
+            <label for="original">Original estimate before changes</label>
+            <input id="original" inputmode="decimal" autocomplete="off" maxlength="14">
+            <label for="approvedCharges">Earlier approved charges</label>
+            <input id="approvedCharges" inputmode="decimal" autocomplete="off" maxlength="14">
+            <label for="approvedCredits">Earlier approved credits</label>
+            <input id="approvedCredits" inputmode="decimal" autocomplete="off" maxlength="14">
+          </fieldset>
+          <fieldset>
+            <legend>This proposed change</legend>
+            <label for="kind">How is the change written?</label>
+            <select id="kind" aria-describedby="kind-help">
+              <option value="">Choose one</option>
+              <option value="charge">Additional charge or confirmed net charge</option>
+              <option value="credit">Credit or confirmed net credit</option>
+              <option value="replacement">Replacement with separate charge and credit</option>
+            </select>
+            <p id="kind-help" class="amount-help">Enter a confirmed net amount once. A net amount already accounts for the original line credit.</p>
+            <label for="amount" id="amount-label">Proposed amount</label>
+            <input id="amount" inputmode="decimal" autocomplete="off" maxlength="14">
+            <div id="replacement-fields" hidden>
+              <label for="credit">Written credit for the original line</label>
+              <input id="credit" inputmode="decimal" autocomplete="off" maxlength="14">
+              <label for="originalLine">Original line amount, if known</label>
+              <input id="originalLine" inputmode="decimal" autocomplete="off" maxlength="14">
+            </div>
+          </fieldset>
+        </div>
+        <label class="basis-label" for="basis">Which tax and fee basis applies to all entered amounts?</label>
+        <select id="basis">
+          <option value="">Choose one</option>
+          <option value="inclusive">All include applicable taxes and fees</option>
+          <option value="before">All are before taxes and fees</option>
+          <option value="unknown">Unknown or different between documents</option>
+        </select>
+        <div class="change-actions">
+          <button id="calculate-change" type="button">Calculate</button>
+          <button id="example-change" type="button">Try a replacement example</button>
+          <button id="clear-change" type="button">Clear amounts</button>
+        </div>
+        <div id="change-result" class="change-result" role="status" tabindex="-1" hidden>
+          <p id="change-message"></p>
+          <dl id="change-breakdown" hidden>
+            <div><dt>Original estimate</dt><dd id="old-total"></dd></div>
+            <div><dt>Net earlier approvals</dt><dd id="earlier-total"></dd></div>
+            <div><dt>Current estimate</dt><dd id="current-total"></dd></div>
+            <div><dt>Pending change</dt><dd id="pending-total"></dd></div>
+            <div class="revised-total"><dt>Estimate if approved</dt><dd id="new-total"></dd></div>
+          </dl>
+          <p id="credit-note" hidden></p>
+        </div>
+      </div>
+      <div class="written-example">
+        <h3>Example with an added charge</h3>
+        <p>An original estimate of $1,800 plus $75 in earlier approvals is $1,875. A proposed $160 board repair would bring it to <strong>$2,035 if approved</strong> when all amounts include the same taxes and fees.</p>
+      </div>
+    </section>
+    <section class="notes" aria-labelledby="ask-for">
+      <h2 id="ask-for">What to ask for in writing</h2>
+      <ul class="change-columns">
+        <li><strong>Scope.</strong> Which room, item or quantity changed? Which line on the original estimate does it affect?</li>
+        <li><strong>Price.</strong> What is the new charge and what credit applies to the old line? Which amounts include tax and fees?</li>
+        <li><strong>Timing.</strong> Which work or finish dates change? What needs approval before the crew proceeds?</li>
+      </ul>
+      <p>If a replacement has one net amount, ask which old line was credited and whether the price already includes that credit. Keep the reply with the existing estimate and any approved changes.</p>
+      <p class="source"><a href="https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam">FTC home improvement guidance</a> · <a href="https://datcp.wi.gov/Pages/Publications/HI-ConsumerTips136.aspx">Wisconsin home improvement guidance</a></p>
+    </section>
+    <section class="notes" aria-labelledby="record-change">
+      <h2 id="record-change">Record one proposed change</h2>
+      <p>Print this section or copy the prompts beside your written estimate.</p>
+      <dl class="change-record">
+        <div><dt>Original estimate line and date</dt><dd aria-hidden="true"></dd></div>
+        <div><dt>Room, item and change in scope</dt><dd aria-hidden="true"></dd></div>
+        <div><dt>New charge, credit and tax basis</dt><dd aria-hidden="true"></dd></div>
+        <div><dt>Prior approvals outside original total</dt><dd aria-hidden="true"></dd></div>
+        <div><dt>Revised amount if accepted</dt><dd aria-hidden="true"></dd></div>
+        <div><dt>Schedule impact and decision status</dt><dd aria-hidden="true"></dd></div>
+      </dl>
+    </section>
+    <section class="notes related-estimates" aria-labelledby="related-estimates">
+      <h2 id="related-estimates">Compare the original estimates</h2>
+      <p>For cleanouts, use the same room scope, access and volume before comparing prices.</p>
+      <a href="../milwaukee-cleanout-floor-handoff/#quote-scope">Compare two written cleanout estimates</a>
+    </section>
+  </main>
+  <footer class="wrap"><p>Prepared by <a href="../">Wilke Public Labs</a>. Sources reviewed <time datetime="2026-11-26">November 26, 2026</time>.</p></footer>
+</body>
+</html>

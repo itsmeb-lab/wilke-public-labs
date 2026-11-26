@@ -1,0 +1,54 @@
+.change-tool, .written-example, .change-record > div {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: .6rem;
+  padding: clamp(.75rem, 2.4vw, 1.25rem);
+}
+.change-tool, .written-example { margin-block: 1rem; }
+.change-grid, .change-record {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: .75rem;
+}
+.change-grid fieldset { border: 1px solid var(--line); border-radius: .35rem; margin: 0; padding: .7rem; min-width: 0; }
+.change-grid label, .basis-label { display: block; margin: .6rem 0 .3rem; }
+.change-grid legend, .change-grid label, .basis-label, .change-record dt { font-weight: 700; }
+.change-tool input, .change-tool select, .change-actions button {
+  min-height: 2.75rem;
+  font: inherit;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid #68796b;
+  border-radius: .35rem;
+  padding: .4rem .6rem;
+}
+.change-tool input, .change-tool select { width: 100%; }
+.change-tool > select { max-width: 31rem; }
+.amount-help { color: var(--muted); font-size: .9rem; margin-top: .4rem; }
+.change-actions { display: flex; flex-wrap: wrap; gap: .55rem; margin-block: 1rem; }
+.change-actions button { cursor: pointer; font-weight: 700; }
+.change-actions button:first-child { background: var(--accent); color: #fff; border-color: var(--accent); }
+.change-tool :focus-visible, .change-result:focus { outline: 3px solid var(--accent); outline-offset: 3px; }
+.change-result { margin: .75rem 0 0; background: #e7eee7; border-radius: .4rem; padding: .85rem; }
+.change-result dl { margin: .5rem 0; max-width: 34rem; }
+.change-result dl > div { display: flex; justify-content: space-between; gap: .65rem; padding: .35rem 0; }
+.change-result dd { margin: 0; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.revised-total { border-top: 1px solid #829383; font-weight: 760; }
+.change-result p:last-child, .written-example p:last-child { margin-bottom: 0; }
+.change-columns { max-width: 70ch; padding-inline-start: 1.2rem; }
+.change-columns li + li { margin-block-start: .4rem; }
+.change-record { margin: 0; }
+.change-record dd { margin: 0; min-height: 1.6rem; border-bottom: 1px solid var(--line); }
+@media print {
+  @page { margin: 13mm; }
+  :root { font-size: 10pt; }
+  body { color: #000; background: #fff; }
+  .wrap { width: 100%; }
+  header, footer, .skip, .change-tool, .related-estimates { display: none; }
+  .intro, .notes { padding-block: .55rem; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.25rem; }
+  .written-example { margin-block: .35rem; }
+  .change-record { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .change-record > div { break-inside: avoid; }
+}

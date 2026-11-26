@@ -25,6 +25,7 @@ const served=new Map([
  ["tool-library-borrowing",new Set(["index.html"])],
  ["milwaukee-cleanout-floor-handoff",new Set(["index.html","worksheet.css","quote-compare.mjs","quote-math.mjs"])],
  ["milwaukee-junk-removal",new Set(["index.html","planner.css","planner.mjs","routes.mjs"])],
+ ["estimate-change-calculator",new Set(["index.html","change.css","change-calculator.mjs","change-math.mjs"])],
  ["library-sensory-spaces",new Set(["index.html"])],
  ["eyeglass-donation-rules",new Set(["index.html"])],
  ["library-instrument-borrowing",new Set(["index.html"])],
@@ -226,6 +227,26 @@ try{
    assert.equal((await result()).link,"#municipalities");
    return {width,unapprovedItemsHeld:true,localChoices:true};
   });
+  await rpc("POST",sid("/url"),{url:origin+"/estimate-change-calculator/"});
+  await check("estimate change calculation and credit checks at "+width+"px",async()=>{
+   const end=Date.now()+5000;
+   while(await execute("return document.getElementById('change-tool').hidden;")){
+    if(Date.now()>=end)throw new Error("Estimate change calculator did not load.");
+    await delay(50);
+   }
+   await click("#example-change");
+   const read=()=>execute("return {total:document.getElementById('new-total').textContent,credit:document.getElementById('credit-note').textContent,breakdownHidden:document.getElementById('change-breakdown').hidden,hidden:document.getElementById('change-result').hidden,focus:document.activeElement.id,notice:document.getElementById('change-message').textContent,scroll:document.documentElement.scrollWidth,resources:performance.getEntriesByType('resource').map(entry=>new URL(entry.name).origin)};");
+   const example=await read();
+   assert.equal(example.total,"$2,175.00");assert.match(example.credit,/\$100\.00 below/);assert.equal(example.focus,"change-result");
+   assert.ok(example.scroll<=width+1);assert.ok(example.resources.length>0&&example.resources.every(value=>value===origin));
+   await execute("const field=document.getElementById('credit');field.value='';field.dispatchEvent(new Event('input'));");
+   assert.equal((await read()).hidden,true);
+   await click("#calculate-change");
+   const withheld=await read();assert.equal(withheld.breakdownHidden,true);assert.match(withheld.notice,/how much credit/);
+   await click("#clear-change");
+   assert.equal((await read()).focus,"original");assert.equal((await read()).hidden,true);
+   return {width,explicitCreditRequired:true,localCalculation:true};
+  });
   await closeSession();
  }
  const runtime=await session(390,844,false);
@@ -241,6 +262,12 @@ try{
   assert.equal(page.hidden,true);assert.equal(page.cities,6);assert.equal(page.details,4);
   assert.equal(page.service,"https://wilkeservices.com");assert.ok(page.scroll<=391);
   return {cities:page.cities,scopePrompts:page.details};
+ });
+ await rpc("POST",sid("/url"),{url:origin+"/estimate-change-calculator/"});
+ await check("estimate change example and record without JavaScript",async()=>{
+  const page=await execute("return {hidden:document.getElementById('change-tool').hidden,prompts:document.querySelectorAll('.change-record dt').length,example:document.querySelector('.written-example').innerText,scroll:document.documentElement.scrollWidth};");
+  assert.ok(page.hidden);assert.equal(page.prompts,6);assert.match(page.example,/\$2,035/);assert.ok(page.scroll<=391);
+  return {prompts:page.prompts};
  });
  await rpc("POST",sid("/url"),{url:origin+"/guide-finder/"});
  await check("guide finder static list with JavaScript disabled",async()=>{
