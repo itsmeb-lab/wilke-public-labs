@@ -2,7 +2,7 @@ import { setTimeout as delay } from 'node:timers/promises';
 import { sourcesReviewedBefore } from './review-comparisons.mjs';
 
 const startedAt = new Date().toISOString();
-const sources = sourcesReviewedBefore('9999-12-31');
+const sources = sourcesReviewedBefore('2100-12-31');
 const entries = new Map();
 for (const source of sources) {
   const url = new URL(source.url);
@@ -16,7 +16,7 @@ if (entries.size < 10 || entries.size > 120) throw new Error('The reviewed sourc
 const pauseUntil = new Map();
 const rows = [];
 for (const [index, entry] of [...entries.values()].entries()) {
-  if (Date.now() >= Date.parse('2026-11-26T05:40:00Z')) throw new Error('This one-time review window ended.');
+  if (Date.now() >= Date.parse('2026-11-26T05:45:00Z')) throw new Error('This one-time review window ended.');
   if (index) await delay(12000);
   if (pauseUntil.has(entry.host)) {
     rows.push({ ...entry, outcome: 'skipped_host_rate_limit', status: null });
