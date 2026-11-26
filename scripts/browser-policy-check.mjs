@@ -190,8 +190,13 @@ try{
    for(const phrase of ["$650.00","$790.00","$850.00","Estimate B is $60.00 lower"])assert.ok(data.result.includes(phrase));
    assert.equal(data.width,width);assert.ok(data.scroll<=width+1);
    assert.ok(data.resources.length>0&&data.resources.every(value=>value===origin));
-   const cleared=await execute("const field=document.getElementById('quote-loads');field.value='3';field.dispatchEvent(new Event('input'));return document.getElementById('quote-result').textContent;");
+   const cleared=await execute("const field=document.getElementById('quote-loads');field.value='3';field.dispatchEvent(new Event('input',{bubbles:true}));return document.getElementById('quote-result').textContent;");
    assert.equal(cleared,"");
+   await click("#quote-match");
+   await click("#quote-run");
+   const unconfirmed=await execute("return document.getElementById('quote-result').innerText;");
+   assert.ok(unconfirmed.includes("Confirm the included work"));
+   assert.ok(!unconfirmed.includes("lower at this load count"));
    return {width,privateCalculation:true,scopeComparison:true};
   });
   await closeSession();
