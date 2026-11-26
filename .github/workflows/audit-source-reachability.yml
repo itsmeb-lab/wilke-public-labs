@@ -1,0 +1,21 @@
+name: One-time guide source reachability
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  source-audit:
+    if: github.repository == 'itsmeb-lab/wilke-public-labs' && github.head_ref == 'atlas/reachability-audit-nov26' && github.event.pull_request.head.repo.full_name == github.repository && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Read headers for the pinned operator sources
+        run: node scripts/audit-source-reachability.mjs
