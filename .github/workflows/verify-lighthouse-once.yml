@@ -1,0 +1,35 @@
+name: One-time mobile issue details
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/verify-lighthouse-once.yml'
+      - 'scripts/verify-lighthouse-once.mjs'
+permissions:
+  contents: read
+jobs:
+  mobile:
+    if: github.repository == 'itsmeb-lab/wilke-public-labs' && github.head_ref == 'atlas/mobile-audit-details' && github.run_attempt == 1
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Run Chrome Lighthouse against representative public pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          output="$(mktemp -d "$RUNNER_TEMP/atlas-lighthouse.XXXXXXXX")"
+          origin='https://itsmeb-lab.github.io/wilke-public-labs/'
+          export CHROME_PATH="$(command -v google-chrome)"
+          "$CHROME_PATH" --version
+          for slug in index guide-finder; do
+            route="$slug/"
+            if [[ "$slug" == index ]]; then route=""; fi
+            npx --yes lighthouse@13.6.0 "${origin}${route}" --only-categories=performance,accessibility,seo --form-factor=mobile --chrome-flags='--headless --no-sandbox' --output=json --output-path="$output/$slug.json" --quiet
+          done
+          node scripts/verify-lighthouse-once.mjs "$output"
