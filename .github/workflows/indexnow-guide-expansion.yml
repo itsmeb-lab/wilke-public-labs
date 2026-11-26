@@ -1,0 +1,26 @@
+name: One-time guide expansion notification
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'ops-indexnow/guide-expansion-20261126.json'
+permissions:
+  contents: read
+concurrency:
+  group: indexnow-guide-expansion-20261126
+  cancel-in-progress: false
+jobs:
+  notify:
+    if: github.repository == 'itsmeb-lab/wilke-public-labs' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify live guides and send one scoped batch
+        run: node ops-indexnow/guide-expansion-cli.mjs
