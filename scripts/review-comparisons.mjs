@@ -96,6 +96,9 @@ export async function checkServed(fetcher = fetch) {
     ['guide-finder/app.mjs', 'guide-finder/app.mjs'],
     ['guide-finder/search.mjs', 'guide-finder/search.mjs'],
     ['guide-finder/index-data.mjs', 'guide-finder/index-data.mjs'],
+    ['comparison-data/', 'comparison-data/index.html'],
+    ['comparison-data/community-comparisons.csv', 'comparison-data/community-comparisons.csv'],
+    ['comparison-data/community-comparisons.json', 'comparison-data/community-comparisons.json'],
   ]);
   for (const { slug } of [...comparisonGuides, ...localizedGuides]) {
     expected.set(slug + '/', slug + '/index.html');
