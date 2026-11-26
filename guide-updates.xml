@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Wilke Public Labs Community Guide Updates</title>
+  <link>https://itsmeb-lab.github.io/wilke-public-labs/#community-guides</link>
+  <description>New public comparisons, planning worksheets and source-linked community guides.</description>
+  <language>en-us</language>
+  <lastBuildDate>Thu, 26 Nov 2026 05:34:45 GMT</lastBuildDate>
+  <atom:link href="https://itsmeb-lab.github.io/wilke-public-labs/guide-updates.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Library State and Provincial Park Passes</title>
+    <link>https://itsmeb-lab.github.io/wilke-public-labs/library-state-park-passes/</link>
+    <guid isPermaLink="true">https://itsmeb-lab.github.io/wilke-public-labs/library-state-park-passes/</guid>
+    <description>Compare holds, loan length, day-use entry and park capacity across seven library pass routes.</description>
+    <pubDate>Thu, 26 Nov 2026 05:34:45 GMT</pubDate>
+  </item>
+  <item>
+    <title>Where to Shred Household Documents</title>
+    <link>https://itsmeb-lab.github.io/wilke-public-labs/household-document-shredding/</link>
+    <guid isPermaLink="true">https://itsmeb-lab.github.io/wilke-public-labs/household-document-shredding/</guid>
+    <description>Check appointments, container limits, staples and whether you can watch at six named shredding routes.</description>
+    <pubDate>Thu, 26 Nov 2026 05:28:39 GMT</pubDate>
+  </item>
+  <item>
+    <title>Digitize VHS and Camcorder Tapes at a Library Memory Lab</title>
+    <link>https://itsmeb-lab.github.io/wilke-public-labs/library-memory-labs/</link>
+    <guid isPermaLink="true">https://itsmeb-lab.github.io/wilke-public-labs/library-memory-labs/</guid>
+    <description>Match VHS, MiniDV and Hi8 tapes to library equipment, advance orientation and booking rules.</description>
+    <pubDate>Thu, 26 Nov 2026 05:28:39 GMT</pubDate>
+  </item>
+  <item>
+    <title>Where to Donate a Used or Broken Bicycle</title>
+    <link>https://itsmeb-lab.github.io/wilke-public-labs/used-bicycle-donations/</link>
+    <guid isPermaLink="true">https://itsmeb-lab.github.io/wilke-public-labs/used-bicycle-donations/</guid>
+    <description>Compare rusty bikes, usable parts, helmets and pickup across named community bike shops.</description>
+    <pubDate>Thu, 26 Nov 2026 05:17:39 GMT</pubDate>
+  </item>
+  <item>
+    <title>Borrow a Musical Instrument from a Public Library</title>
+    <link>https://itsmeb-lab.github.io/wilke-public-labs/library-instrument-borrowing/</link>
+    <guid isPermaLink="true">https://itsmeb-lab.github.io/wilke-public-labs/library-instrument-borrowing/</guid>
+    <description>Check take-home loans, reservations, age requirements and return desks.</description>
+    <pubDate>Thu, 26 Nov 2026 05:17:39 GMT</pubDate>
+  </item>
+  <item>
+    <title>Community Comparison Data</title>
+    <link>https://itsmeb-lab.github.io/wilke-public-labs/comparison-data/</link>
+    <guid isPermaLink="true">https://itsmeb-lab.github.io/wilke-public-labs/comparison-data/</guid>
+    <description>Download the source-linked public comparison records in CSV or JSON.</description>
+    <pubDate>Thu, 26 Nov 2026 04:56:59 GMT</pubDate>
+  </item>
+  <item>
+    <title>Artículos voluminosos en Milwaukee y Wauwatosa</title>
+    <link>https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-articulos-voluminosos/</link>
+    <guid isPermaLink="true">https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-articulos-voluminosos/</guid>
+    <description>Compara recogida, centros de entrega y opciones de donación.</description>
+    <pubDate>Thu, 26 Nov 2026 04:47:01 GMT</pubDate>
+  </item>
+  <item>
+    <title>Find a Community Guide</title>
+    <link>https://itsmeb-lab.github.io/wilke-public-labs/guide-finder/</link>
+    <guid isPermaLink="true">https://itsmeb-lab.github.io/wilke-public-labs/guide-finder/</guid>
+    <description>Find a public comparison by task and region, with direct links to named answers.</description>
+    <pubDate>Thu, 26 Nov 2026 04:40:23 GMT</pubDate>
+  </item>
+  <item>
+    <title>Eyeglass and Hearing Aid Donation Rules</title>
+    <link>https://itsmeb-lab.github.io/wilke-public-labs/eyeglass-donation-rules/</link>
+    <guid isPermaLink="true">https://itsmeb-lab.github.io/wilke-public-labs/eyeglass-donation-rules/</guid>
+    <description>Check the rules for broken frames, loose lenses, cases and more.</description>
+    <pubDate>Thu, 26 Nov 2026 04:37:21 GMT</pubDate>
+  </item>
+  <item>
+    <title>Library Sensory Rooms and Quiet Hours</title>
+    <link>https://itsmeb-lab.github.io/wilke-public-labs/library-sensory-spaces/</link>
+    <guid isPermaLink="true">https://itsmeb-lab.github.io/wilke-public-labs/library-sensory-spaces/</guid>
+    <description>Compare walk-ins, reservations and supervision at named library spaces.</description>
+    <pubDate>Thu, 26 Nov 2026 04:37:21 GMT</pubDate>
+  </item>
+  <item>
+    <title>Milwaukee Cleanout and Hardwood Estimate Worksheet</title>
+    <link>https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-cleanout-floor-handoff/</link>
+    <guid isPermaLink="true">https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-cleanout-floor-handoff/</guid>
+    <description>Plan a cleanout in order, then compare hardwood estimates after the floor is ready to inspect.</description>
+    <pubDate>Thu, 26 Nov 2026 04:30:52 GMT</pubDate>
+  </item>
+  <item>
+    <title>Borrow from a Tool Library</title>
+    <link>https://itsmeb-lab.github.io/wilke-public-labs/tool-library-borrowing/</link>
+    <guid isPermaLink="true">https://itsmeb-lab.github.io/wilke-public-labs/tool-library-borrowing/</guid>
+    <description>Compare household and organization eligibility, fees, reservations and returns.</description>
+    <pubDate>Thu, 26 Nov 2026 04:27:15 GMT</pubDate>
+  </item>
+  <item>
+    <title>How to Use a Seed Library</title>
+    <link>https://itsmeb-lab.github.io/wilke-public-labs/library-seed-borrowing/</link>
+    <guid isPermaLink="true">https://itsmeb-lab.github.io/wilke-public-labs/library-seed-borrowing/</guid>
+    <description>Check library cards, packet limits and how named programs handle leftover and saved seeds.</description>
+    <pubDate>Thu, 26 Nov 2026 04:27:15 GMT</pubDate>
+  </item>
+</channel>
+</rss>

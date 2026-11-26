@@ -1,6 +1,10 @@
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
-import { MANIFEST, notifyGuideRelease } from './guide-expansion.mjs';
+const [, , preset = 'expansion'] = process.argv;
+if (!['expansion', 'followup'].includes(preset) || process.argv.length > 3) throw new Error('Expected one reviewed guide notice preset.');
+const { MANIFEST, notifyGuideRelease } = preset === 'followup'
+  ? await import('./guide-followup.mjs')
+  : await import('./guide-expansion.mjs');
 
 const event = JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'));
 const before = event.before;

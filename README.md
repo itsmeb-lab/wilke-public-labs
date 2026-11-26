@@ -138,6 +138,8 @@ Found these labs through Upwork? Keep pre-contract discussion and payment in the
 
 The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the twenty-three published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
 
+Subscribe to the [community guide updates feed](https://itsmeb-lab.github.io/wilke-public-labs/guide-updates.xml) in an RSS reader. Each item uses the original canonical guide URL and its observed deployment time.
+
 ## License
 
 MIT. See [LICENSE](./LICENSE).
