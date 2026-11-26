@@ -67,7 +67,13 @@ test('a York County park pass hold resolves to the South Carolina rule', () => {
 test('search fields stay in the page, with an ordinary link list as the fallback', () => {
   const html = read('guide-finder/index.html');
   const app = read('guide-finder/app.mjs');
-  assert.match(html, /id="finder"[^>]*hidden/);
+  assert.match(html, /<noscript><style>#finder\s*\{\s*display:\s*none/);
+  assert.match(html, /id="lookup"[^>]* disabled/);
+  assert.match(html, /id="region"[^>]* disabled/);
+  assert.match(html, /role="status">Start with a task or choose a region\.<\/p>/);
+  assert.match(app, /query\.disabled = false/);
+  assert.match(app, /region\.disabled = false/);
+  assert.doesNotMatch(app, /\.hidden\s*=/);
   assert.doesNotMatch(html, /<form\b|<script[^>]*https:/);
   assert.doesNotMatch(app, /\bfetch\(|\bnavigator\.sendBeacon|localStorage|sessionStorage|innerHTML/);
   assert.match(app, /child\.textContent = value/);
