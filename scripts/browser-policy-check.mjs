@@ -22,7 +22,8 @@ const served=new Map([
  ["library-scanning",new Set(["index.html"])],
  ["library-museum-passes",new Set(["index.html"])],
  ["library-seed-borrowing",new Set(["index.html"])],
- ["tool-library-borrowing",new Set(["index.html"])]
+ ["tool-library-borrowing",new Set(["index.html"])],
+ ["milwaukee-cleanout-floor-handoff",new Set(["index.html","worksheet.css"])]
 ]);
 const mime={html:"text/html; charset=utf-8",css:"text/css; charset=utf-8",mjs:"text/javascript; charset=utf-8"};
 const driverFolder=process.env.EDGEWEBDRIVER;
@@ -218,6 +219,40 @@ try{
     return {width,content:heading.content,comparison:heading.title,statuses:heading.statuses};
    });
   }
+
+  await rpc("POST",sid("/url"),{url:origin+"/milwaukee-cleanout-floor-handoff/"});
+  await check("Milwaukee handoff worksheet at "+width+"px",async()=>{
+   const until=Date.now()+9000;
+   let ready=false;
+   while(Date.now()<until){
+    ready=await execute("return document.readyState==='complete' && Boolean(document.querySelector('.worksheet'));");
+    if(ready)break;
+    await delay(50);
+   }
+   assert.ok(ready);
+   const layout=await execute(`
+     const page=document.documentElement;
+     return {width:innerWidth,client:page.clientWidth,scroll:page.scrollWidth,
+       prompts:document.querySelectorAll('.worksheet dt').length,
+       css:[...document.styleSheets].some(sheet=>sheet.href?.endsWith('/worksheet.css')),
+       fields:document.querySelectorAll('form,input,textarea').length};
+   `);
+   assert.equal(layout.width,width);
+   assert.ok(layout.scroll<=layout.client+1);
+   assert.equal(layout.prompts,5);
+   assert.equal(layout.fields,0);
+   assert.ok(layout.css);
+   if(width===1280){
+    const encoded=await rpc("POST",sid("/print"),{orientation:"portrait",page:{width:21.59,height:27.94}});
+    const pdf=Buffer.from(encoded,"base64").toString("latin1");
+    assert.ok(pdf.startsWith("%PDF-"));
+    const pages=pdf.match(/\/Type\s*\/Pages\b[\s\S]*?\/Count\s+(\d+)/)?.[1];
+    assert.equal(Number(pages),1,"Expected the worksheet to fit on one US Letter page.");
+    return {...layout,printPages:Number(pages)};
+   }
+   return layout;
+  });
+
   await closeSession();
  }
  assert.ok(received.includes("app.mjs")&&received.includes("engine.mjs")&&received.includes("data.mjs"));
