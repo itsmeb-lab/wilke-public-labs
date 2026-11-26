@@ -1,0 +1,23 @@
+name: One-time follow-up organizer source reachability
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/verify-final-source-reachability.yml'
+      - 'scripts/audit-final-source-reachability.mjs'
+permissions:
+  contents: read
+jobs:
+  source_review:
+    if: github.repository == 'itsmeb-lab/wilke-public-labs' && github.head_ref == 'atlas/verify-final-organic-release'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Read public headers for the newly added organizer source URLs
+        run: node scripts/audit-final-source-reachability.mjs

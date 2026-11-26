@@ -1,0 +1,56 @@
+name: One-time WordPress draft roundtrip
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/verify-wordpress-roundtrip-once.yml'
+      - 'tests/probe-wordpress-drafts.php'
+permissions:
+  contents: read
+jobs:
+  drafts:
+    if: github.repository == 'itsmeb-lab/wilke-public-labs' && github.head_ref == 'atlas/verify-final-organic-release' && github.run_attempt == 1
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify exact WordPress draft content across a local WXR roundtrip
+        env:
+          WP_CLI_DISABLE_AUTO_CHECK_UPDATE: '1'
+          WP_CORE: '7.1.5'
+          WP_IMPORTER: '0.9.7'
+          MYSQL_PWD: root
+        shell: bash
+        run: |
+          set -euo pipefail
+          php tests/verify-wordpress-csv.php
+          work="$(mktemp -d "$RUNNER_TEMP/wp-roundtrip.XXXXXXXX")"
+          wp_cli="$work/wp-cli.phar"
+          curl -fLsS --connect-timeout 15 --max-time 60 'https://github.com/wp-cli/wp-cli/releases/download/v2.12.0/wp-cli-2.12.0.phar' -o "$wp_cli"
+          echo 'ce34ddd838f7351d6759068d09793f26755463b4a4610a5a5c0a97b68220d85c  '"$wp_cli" | sha256sum --check --status
+          sudo systemctl start mysql.service
+          mysql --host=127.0.0.1 --user=root -e 'CREATE DATABASE atlas_draft_original CHARACTER SET utf8mb4; CREATE DATABASE atlas_draft_restored CHARACTER SET utf8mb4;'
+          mkdir "$work/original" "$work/restored"
+          php "$wp_cli" --path="$work/original" core download --version="$WP_CORE"
+          cp -a "$work/original/." "$work/restored/"
+          for name in original restored; do
+            php "$wp_cli" --path="$work/$name" config create --dbname="atlas_draft_$name" --dbuser=root --dbpass=root --dbhost=127.0.0.1
+            php "$wp_cli" --path="$work/$name" core install --url="http://127.0.0.1/$name" --title="Atlas disposable draft fixture" --admin_user=fixture-admin --admin_password="fixture-only-$GITHUB_RUN_ID" --admin_email=fixture@example.invalid --skip-email
+          done
+          old() { php "$wp_cli" --path="$work/original" --user=fixture-admin "$@"; }
+          new() { php "$wp_cli" --path="$work/restored" --user=fixture-admin "$@"; }
+          old core version
+          old cli version
+          old eval-file "$GITHUB_WORKSPACE/tests/probe-wordpress-drafts.php" --use-include create
+          old eval-file "$GITHUB_WORKSPACE/tests/probe-wordpress-drafts.php" --use-include repeat
+          ids="$(old post list --post_type=page --post_status=draft --meta_key=_atlas_canonical_reference --format=ids | tr ' ' ',')"
+          [[ "$ids" =~ ^[0-9]+(,[0-9]+)*$ ]]
+          old export --post_type=page --post_status=draft --post__in="$ids" --stdout > "$work/drafts.xml"
+          test -s "$work/drafts.xml"
+          new plugin install wordpress-importer --version="$WP_IMPORTER" --activate
+          new plugin get wordpress-importer --field=version
+          new import "$work/drafts.xml" --authors=skip --skip=attachment
+          new eval-file "$GITHUB_WORKSPACE/tests/probe-wordpress-drafts.php" --use-include verify
+          echo "WXR_DRAFT_ROUNDTRIP_OK"
