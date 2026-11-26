@@ -22,6 +22,7 @@ $expectedMeta = [
     '_atlas_import_state' => 'STAGING_DRAFT_ONLY',
 ];
 $metadataCounts = [];
+$expectedCount = getenv('ATLAS_EXPECTED_META_ROWS');
 foreach ($expectedMeta as $key => $value) {
     $storedValues = get_post_meta((int) $row->ID, $key, false);
     if (!$storedValues) {
@@ -33,6 +34,9 @@ foreach ($expectedMeta as $key => $value) {
         }
     }
     $metadataCounts[$key] = count($storedValues);
+    if ($expectedCount !== false && $metadataCounts[$key] !== (int) $expectedCount) {
+        throw new RuntimeException('Unexpected metadata row count for ' . $key);
+    }
 }
 foreach ([
     'id="answer--power-meter--ballarat"',

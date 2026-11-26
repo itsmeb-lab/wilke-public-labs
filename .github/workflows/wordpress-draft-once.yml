@@ -64,10 +64,16 @@ jobs:
           wp_root="$RUNNER_TEMP/wp-test"
           wp_cli="$RUNNER_TEMP/wp-cli.phar"
           wp_site() { php "$wp_cli" --path="$wp_root" --user=atlas_test "$@"; }
+          verify_draft() {
+            ATLAS_EXPECTED_META_ROWS="$1" wp_site eval 'require getenv("GITHUB_WORKSPACE") . "/tests/verify-wordpress-import.php";'
+          }
           wp_site import "$RUNNER_TEMP/energy-draft.xml" --authors=skip --skip=attachment
-          wp_site eval 'require getenv("GITHUB_WORKSPACE") . "/tests/verify-wordpress-import.php";'
+          verify_draft 1
+          wp_site --require="$GITHUB_WORKSPACE/scripts/wp-cli-atlas-draft-metadata.php" \
+            import "$RUNNER_TEMP/energy-draft.xml" --authors=skip --skip=attachment
+          verify_draft 1
           wp_site import "$RUNNER_TEMP/energy-draft.xml" --authors=skip --skip=attachment
-          wp_site eval 'require getenv("GITHUB_WORKSPACE") . "/tests/verify-wordpress-import.php";'
+          verify_draft 2
   public-exports:
     runs-on: ubuntu-24.04
     timeout-minutes: 4
