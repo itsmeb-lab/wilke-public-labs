@@ -1,0 +1,417 @@
+{
+  "checkedOn": "2026-11-25",
+  "sources": {
+    "transylvania-guide": {
+      "label": "Transylvania County Seed Library",
+      "url": "https://library.transylvaniacounty.org/seeds/",
+      "checkedOn": "2026-11-25"
+    },
+    "canton-guide": {
+      "label": "Haywood County seed library instructions",
+      "url": "https://www.haywoodcountync.gov/670/Canton-Seed-Library-Giving-Garden",
+      "checkedOn": "2026-11-25"
+    },
+    "cleveland-guide": {
+      "label": "Cleveland County Seed Library",
+      "url": "https://www.clevelandcounty.com/main/departments/library/seed_library.php",
+      "checkedOn": "2026-11-25"
+    },
+    "raleigh-state-guide": {
+      "label": "State Library native seed program",
+      "url": "https://library.nc.gov/seed-library",
+      "checkedOn": "2026-11-25"
+    },
+    "longwood-guide": {
+      "label": "Longwood Grows policy",
+      "url": "https://www.longwoodlibrary.org/seedlibrary",
+      "checkedOn": "2026-11-25"
+    },
+    "waterloo-guide": {
+      "label": "Region of Waterloo Seed Library",
+      "url": "https://www.rwlibrary.ca/browse-borrow/seed-library/",
+      "checkedOn": "2026-11-25"
+    },
+    "mcgill-guide": {
+      "label": "McGill seed borrowing and limits",
+      "url": "https://www.mcgill.ca/libraries/locations/macdonald/seed-library/request",
+      "checkedOn": "2026-11-25"
+    },
+    "mcgill-terms-1": {
+      "label": "McGill seed returns",
+      "url": "https://www.mcgill.ca/libraries/locations/macdonald/seed-library/return",
+      "checkedOn": "2026-11-25"
+    },
+    "waikato-guide": {
+      "label": "Waikato District Seed Library",
+      "url": "https://www.waikatodistrict.govt.nz/services-facilities/libraries/collections/seed-library",
+      "checkedOn": "2026-11-25"
+    }
+  },
+  "operators": [
+    {
+      "id": "transylvania",
+      "name": "Transylvania County Library",
+      "area": "Brevard, North Carolina",
+      "country": "US",
+      "jurisdiction": "us-nc",
+      "visitSource": "transylvania-guide",
+      "sourceIds": [
+        "transylvania-guide"
+      ],
+      "prep": [
+        {
+          "label": "Visit",
+          "text": "Find the seed collection on the first floor. Take what you plan to grow.",
+          "source": "transylvania-guide"
+        }
+      ]
+    },
+    {
+      "id": "canton",
+      "name": "Canton Seed Library",
+      "area": "Canton, North Carolina",
+      "country": "US",
+      "jurisdiction": "us-nc",
+      "visitSource": "canton-guide",
+      "sourceIds": [
+        "canton-guide"
+      ],
+      "prep": [
+        {
+          "label": "Bring your card",
+          "text": "Bring a Cardinal library card in good standing. The seed library follows the branch’s open hours.",
+          "source": "canton-guide"
+        }
+      ]
+    },
+    {
+      "id": "cleveland",
+      "name": "Cleveland County Library System",
+      "area": "Shelby and Lawndale, North Carolina",
+      "country": "US",
+      "jurisdiction": "us-nc",
+      "visitSource": "cleveland-guide",
+      "sourceIds": [
+        "cleveland-guide"
+      ],
+      "prep": [
+        {
+          "label": "Check out",
+          "text": "Complete the seed checkout slip and put it in the card box. The page lists the Eugenia H. Young Memorial and Spangler libraries.",
+          "source": "cleveland-guide"
+        }
+      ]
+    },
+    {
+      "id": "raleigh-state",
+      "name": "State Library of North Carolina",
+      "area": "Raleigh, North Carolina",
+      "country": "US",
+      "jurisdiction": "us-nc",
+      "visitSource": "raleigh-state-guide",
+      "sourceIds": [
+        "raleigh-state-guide"
+      ],
+      "prep": [
+        {
+          "label": "Sign out",
+          "text": "Pick up seeds in person during onsite hours. Sign out your selections for the library’s inventory.",
+          "source": "raleigh-state-guide"
+        }
+      ]
+    },
+    {
+      "id": "longwood",
+      "name": "Longwood Public Library",
+      "area": "Middle Island, New York",
+      "country": "US",
+      "jurisdiction": "us-ny",
+      "visitSource": "longwood-guide",
+      "sourceIds": [
+        "longwood-guide"
+      ],
+      "prep": [
+        {
+          "label": "Pick up",
+          "text": "Help yourself to the packets. Take what you can use this season.",
+          "source": "longwood-guide"
+        }
+      ]
+    },
+    {
+      "id": "waterloo",
+      "name": "Region of Waterloo Library",
+      "area": "Waterloo Region, Ontario",
+      "country": "CA",
+      "jurisdiction": "ca-on",
+      "visitSource": "waterloo-guide",
+      "sourceIds": [
+        "waterloo-guide"
+      ],
+      "prep": [
+        {
+          "label": "Choose a branch",
+          "text": "Ask a participating branch what is on hand. The guide lists heirloom vegetables, herbs and flowers.",
+          "source": "waterloo-guide"
+        }
+      ]
+    },
+    {
+      "id": "mcgill",
+      "name": "McGill Macdonald Campus Seed Library",
+      "area": "Sainte-Anne-de-Bellevue, Québec",
+      "country": "CA",
+      "jurisdiction": "ca-qc",
+      "visitSource": "mcgill-guide",
+      "sourceIds": [
+        "mcgill-guide",
+        "mcgill-terms-1"
+      ],
+      "prep": [
+        {
+          "label": "Register",
+          "text": "First-time borrowers register. Eligible members may browse in person or use the order form.",
+          "source": "mcgill-guide"
+        }
+      ]
+    },
+    {
+      "id": "waikato",
+      "name": "Waikato District Libraries",
+      "area": "Waikato District, New Zealand",
+      "country": "NZ",
+      "jurisdiction": "nz-wko",
+      "visitSource": "waikato-guide",
+      "sourceIds": [
+        "waikato-guide"
+      ],
+      "prep": [
+        {
+          "label": "Visit a district branch",
+          "text": "The district lists seeds at its libraries. Check the location before visiting.",
+          "source": "waikato-guide"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "without-card",
+      "label": "Take seeds without a library card"
+    },
+    {
+      "id": "packet-limit",
+      "label": "Check the packet limit"
+    },
+    {
+      "id": "unused-seeds",
+      "label": "Return unused seeds"
+    },
+    {
+      "id": "saved-seeds",
+      "label": "Share seeds from your harvest"
+    },
+    {
+      "id": "donate-seeds",
+      "label": "Donate seeds to the library"
+    }
+  ],
+  "rules": [
+    {
+      "operator": "transylvania",
+      "task": "without-card",
+      "fit": "ask",
+      "text": "The library describes self-service selection with no formal checkout. Its seed page leaves a library-card requirement unspecified.",
+      "source": "transylvania-guide"
+    },
+    {
+      "operator": "transylvania",
+      "task": "unused-seeds",
+      "fit": "ask",
+      "text": "The page makes seed returns optional. Check the donation process before bringing unused seed.",
+      "source": "transylvania-guide"
+    },
+    {
+      "operator": "transylvania",
+      "task": "saved-seeds",
+      "fit": "listed",
+      "text": "Returns are optional. You can share seeds through the donation process.",
+      "source": "transylvania-guide"
+    },
+    {
+      "operator": "transylvania",
+      "task": "donate-seeds",
+      "fit": "listed",
+      "text": "Fill out a donation form and attach it to the seed packet before using the donation bin.",
+      "source": "transylvania-guide"
+    },
+    {
+      "operator": "canton",
+      "task": "without-card",
+      "fit": "excluded",
+      "text": "Canton requires a Cardinal library card in good standing to check out seeds.",
+      "source": "canton-guide"
+    },
+    {
+      "operator": "canton",
+      "task": "saved-seeds",
+      "fit": "listed",
+      "text": "Canton asks borrowers to return seeds from the plants they grow. Fill out the membership form when returning seeds.",
+      "source": "canton-guide"
+    },
+    {
+      "operator": "canton",
+      "task": "donate-seeds",
+      "fit": "listed",
+      "text": "The county welcomes seed donations and asks returners to complete the seed library membership form.",
+      "source": "canton-guide"
+    },
+    {
+      "operator": "cleveland",
+      "task": "without-card",
+      "fit": "ask",
+      "text": "The library asks for a seed checkout slip. Its page leaves regular library-card requirements unspecified.",
+      "source": "cleveland-guide"
+    },
+    {
+      "operator": "cleveland",
+      "task": "unused-seeds",
+      "fit": "listed",
+      "text": "Cleveland County asks borrowers to return seeds they do not sow.",
+      "source": "cleveland-guide"
+    },
+    {
+      "operator": "cleveland",
+      "task": "donate-seeds",
+      "fit": "ask",
+      "text": "Fill out the donation form at Access Services. The library decides which donations to make available.",
+      "source": "cleveland-guide"
+    },
+    {
+      "operator": "raleigh-state",
+      "task": "without-card",
+      "fit": "ask",
+      "text": "The public instructions ask visitors to sign out their selections. They leave a library-card requirement unspecified.",
+      "source": "raleigh-state-guide"
+    },
+    {
+      "operator": "raleigh-state",
+      "task": "packet-limit",
+      "fit": "listed",
+      "text": "The limit is two packets per visitor.",
+      "source": "raleigh-state-guide"
+    },
+    {
+      "operator": "raleigh-state",
+      "task": "saved-seeds",
+      "fit": "listed",
+      "text": "The program encourages people to save and share seed from native plants.",
+      "source": "raleigh-state-guide"
+    },
+    {
+      "operator": "raleigh-state",
+      "task": "donate-seeds",
+      "fit": "listed",
+      "text": "The program accepts plant seeds native to North Carolina. The source lists separate instructions for collected and packaged seeds.",
+      "source": "raleigh-state-guide"
+    },
+    {
+      "operator": "longwood",
+      "task": "without-card",
+      "fit": "listed",
+      "text": "Longwood says a library card is optional.",
+      "source": "longwood-guide"
+    },
+    {
+      "operator": "longwood",
+      "task": "packet-limit",
+      "fit": "listed",
+      "text": "The current policy gives no fixed packet limit. Take only what you will use that season.",
+      "source": "longwood-guide"
+    },
+    {
+      "operator": "longwood",
+      "task": "saved-seeds",
+      "fit": "listed",
+      "text": "Seed returns are optional. Label any saved seeds you choose to donate.",
+      "source": "longwood-guide"
+    },
+    {
+      "operator": "longwood",
+      "task": "donate-seeds",
+      "fit": "listed",
+      "text": "The library also accepts leftover commercially purchased seeds.",
+      "source": "longwood-guide"
+    },
+    {
+      "operator": "waterloo",
+      "task": "without-card",
+      "fit": "listed",
+      "text": "The library explicitly waives the library-card requirement for seeds.",
+      "source": "waterloo-guide"
+    },
+    {
+      "operator": "waterloo",
+      "task": "saved-seeds",
+      "fit": "listed",
+      "text": "The library asks patrons to collect and bring back seeds from a few plants at the end of the season.",
+      "source": "waterloo-guide"
+    },
+    {
+      "operator": "waterloo",
+      "task": "donate-seeds",
+      "fit": "listed",
+      "text": "The regional library invites seed donations. Check its linked materials for the branch process.",
+      "source": "waterloo-guide"
+    },
+    {
+      "operator": "mcgill",
+      "task": "without-card",
+      "fit": "ask",
+      "text": "McGill ties access to eligibility and seed library registration. Check the named campus program before ordering.",
+      "source": "mcgill-guide"
+    },
+    {
+      "operator": "mcgill",
+      "task": "packet-limit",
+      "fit": "listed",
+      "text": "The program lists 25 packets per person per season, with one packet per variety.",
+      "source": "mcgill-guide"
+    },
+    {
+      "operator": "mcgill",
+      "task": "saved-seeds",
+      "fit": "listed",
+      "text": "McGill encourages returns and explicitly makes them optional.",
+      "source": "mcgill-terms-1"
+    },
+    {
+      "operator": "mcgill",
+      "task": "donate-seeds",
+      "fit": "listed",
+      "text": "For saved seeds you bring back, use the return form and label and package each contribution.",
+      "source": "mcgill-terms-1"
+    },
+    {
+      "operator": "waikato",
+      "task": "packet-limit",
+      "fit": "listed",
+      "text": "The district invites people to pick up one or two packets. It does not describe this as a formal checkout limit.",
+      "source": "waikato-guide"
+    },
+    {
+      "operator": "waikato",
+      "task": "saved-seeds",
+      "fit": "listed",
+      "text": "The district invites borrowers to save some seeds from their plants and donate them back.",
+      "source": "waikato-guide"
+    },
+    {
+      "operator": "waikato",
+      "task": "donate-seeds",
+      "fit": "listed",
+      "text": "The district accepts spare seeds subject to its restrictions on illegal, noxious or invasive plants.",
+      "source": "waikato-guide"
+    }
+  ]
+}
