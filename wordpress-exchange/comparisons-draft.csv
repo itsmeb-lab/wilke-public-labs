@@ -766,6 +766,7 @@
 "milwaukee-bulky-items","Bulky pickup or drop-off in Milwaukee and Wauwatosa?","Compare city curbside pickup and drop-off for a sofa, mattress, TV or refrigerator in Milwaukee and Wauwatosa. Check proof of access, mixed-load rules and contractor vehicle limits.","https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-bulky-items/","2026-11-25","STAGING_DRAFT_ONLY","<div class=""intro"">
       <p>Pick an item to compare four municipal routes. The city providing your address’s waste service and whether you take the load yourself can change your options.</p>
       <p>For a whole-house or rental cleanout, start with an item list and separate what stays, what may be donated and what needs a different receiving facility.</p>
+      <p><a href=""https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-articulos-voluminosos/"" lang=""es-US"" hreflang=""es-US"">Leer esta guía en español</a></p>
     </div>
     <!-- MILWAUKEE-BULKY:START -->
     <nav id=""items"" class=""choices"" aria-label=""Choose an item"" tabindex=""-1"">

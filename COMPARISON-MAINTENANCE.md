@@ -35,3 +35,5 @@ The [Page Generator Pro exchange](./wordpress-exchange/README.md) preserves one 
 Answer-card fragments use the stable task and operator IDs. Use the section URL to compare several providers, or the linked provider heading to share a specific card. Keep existing IDs when updating wording or evidence.
 
 Refresh the public finder when a guide, task or named route changes. Update the synonyms and region labels in `scripts/update-guide-finder.mjs` as needed, then run it with `--write`. The command refreshes both the static browse links and the local search data. Run `--check` before release.
+
+The Spanish Milwaukee guide uses the same route, task, source and status records as the English guide. When the English catalog changes, review every affected Spanish entry, replace the catalog hash in the translation file with that reviewed snapshot’s hash, and run `node scripts/update-milwaukee-bulky-es.mjs --write`. The reciprocal language links are checked separately from the canonical links.

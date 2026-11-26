@@ -26,7 +26,8 @@ const served=new Map([
  ["milwaukee-cleanout-floor-handoff",new Set(["index.html","worksheet.css"])],
  ["library-sensory-spaces",new Set(["index.html"])],
  ["eyeglass-donation-rules",new Set(["index.html"])],
- ["guide-finder",new Set(["index.html","finder.css","index-data.mjs","search.mjs","app.mjs"])]
+ ["guide-finder",new Set(["index.html","finder.css","index-data.mjs","search.mjs","app.mjs"])],
+ ["milwaukee-articulos-voluminosos",new Set(["index.html"])]
 ]);
 const mime={html:"text/html; charset=utf-8",css:"text/css; charset=utf-8",mjs:"text/javascript; charset=utf-8"};
 const driverFolder=process.env.EDGEWEBDRIVER;
@@ -205,7 +206,8 @@ try{
    {folder:"library-seed-borrowing",name:"seed library",anchor:"without-card",title:"Take seeds without a library card",statuses:{transylvania:"ask",canton:"excluded",cleveland:"ask","raleigh-state":"ask",longwood:"listed",waterloo:"listed",mcgill:"ask",waikato:"unknown"}},
    {folder:"tool-library-borrowing",name:"tool library",anchor:"household-borrower",title:"Borrow as a household or individual",statuses:{"milwaukee-hri":"ask","rock-hill":"listed","duluth-one-roof":"listed","charlotte-toolbank":"excluded",berkeley:"listed","london-things":"listed"}},
    {folder:"library-sensory-spaces",name:"library sensory room",anchor:"walk-in",title:"Visit without a reservation",statuses:{"durham-calming":"listed","durham-mse":"excluded","north-manchester":"listed","toronto-stewart":"excluded","moreton-bay":"listed","queensland-corner":"excluded"}},
-   {folder:"eyeglass-donation-rules",name:"eyeglass donor",anchor:"loose-lenses",title:"Donate loose lenses",statuses:{"georgia-lions":"ask","minnesota-lions":"excluded","lions-in-sight":"ask","thiensville-mequon":"unknown","canadian-lions":"unknown","lions-uk":"excluded"}}
+   {folder:"eyeglass-donation-rules",name:"eyeglass donor",anchor:"loose-lenses",title:"Donate loose lenses",statuses:{"georgia-lions":"ask","minnesota-lions":"excluded","lions-in-sight":"ask","thiensville-mequon":"unknown","canadian-lions":"unknown","lions-uk":"excluded"}},
+   {folder:"milwaukee-articulos-voluminosos",name:"Milwaukee articles in Spanish",anchor:"tv",title:"Televisor",statuses:{"milwaukee-curb":"excluded","milwaukee-drop-off":"listed","wauwatosa-curb":"listed","wauwatosa-drop-off":"listed"}}
   ];
   await session(width,height,false,origin+"/"+cases[0].folder+"/");
   for(const [index,testCase] of cases.entries()){

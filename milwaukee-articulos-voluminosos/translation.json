@@ -1,0 +1,96 @@
+{
+  "sourceHash": "59cb01a5fb0bc3273c60c9a5cffc3188c4609dedfb6e8766ce8e021946177a56",
+  "sources": {
+    "mil-bulk": "Ciudad de Milwaukee · recolección de artículos voluminosos (en inglés)",
+    "mil-drop": "Ciudad de Milwaukee · centros de entrega (en inglés)",
+    "tosa-bulk": "Ciudad de Wauwatosa · recolección especial (en inglés)",
+    "tosa-drop": "Ciudad de Wauwatosa · centro de entrega (en inglés)"
+  },
+  "tasks": {
+    "sofa-or-mattress": "Sofá o colchón",
+    "tv": "Televisor",
+    "large-appliance": "Refrigerador o electrodoméstico grande",
+    "mixed-cleanout": "Carga mixta al vaciar una vivienda",
+    "commercial-hauler": "Carga de una empresa de retiro de residuos"
+  },
+  "operators": {
+    "milwaukee-curb": {
+      "name": "Milwaukee · recolección en la acera",
+      "area": "Ciudad de Milwaukee, Wisconsin",
+      "prep": [
+        [
+          "Quién puede usar el servicio",
+          "La propiedad debe recibir el servicio de recolección de residuos de la Ciudad de Milwaukee. Tener una dirección postal de Milwaukee no confirma que la ciudad recoja la basura de esa propiedad."
+        ],
+        [
+          "Cantidad y solicitud",
+          "El departamento indica que se puede dejar hasta 1 yarda cúbica de artículos aceptados en el punto habitual de recolección. Las cargas mayores que cumplen las reglas requieren una solicitud especial y un pago. Consulte el límite y la tarifa antes de sacar la carga."
+        ]
+      ]
+    },
+    "milwaukee-drop-off": {
+      "name": "Milwaukee · centros de entrega",
+      "area": "Ciudad de Milwaukee, Wisconsin",
+      "prep": [
+        [
+          "Documentos para ingresar",
+          "La ciudad indica que los centros sirven a residentes y propietarios de inmuebles de Milwaukee. Pide identificación oficial con foto. Consulte los documentos adicionales si es propietario y vive fuera de la ciudad."
+        ],
+        [
+          "Carga y vehículo",
+          "El personal determina el volumen y puede rechazar vehículos o cargas restringidos. Usted debe descargar sus artículos. Consulte cómo pagar y qué vehículos se aceptan antes de ir."
+        ]
+      ]
+    },
+    "wauwatosa-curb": {
+      "name": "Wauwatosa · recolección especial",
+      "area": "Ciudad de Wauwatosa, Wisconsin",
+      "prep": [
+        [
+          "Solicite la recolección",
+          "Consulte el precio y coordine la recolección con Obras Públicas. Confirme que la ciudad presta el servicio en su dirección antes de dejar artículos en la acera."
+        ],
+        [
+          "Cómo se calcula la tarifa",
+          "La ciudad aplica tarifas distintas a los artículos voluminosos comunes, electrodomésticos y televisores. Pida un presupuesto con la lista completa, incluso si combina categorías."
+        ]
+      ]
+    },
+    "wauwatosa-drop-off": {
+      "name": "Wauwatosa · centro de entrega",
+      "area": "Ciudad de Wauwatosa, Wisconsin",
+      "prep": [
+        [
+          "Documentos para ingresar",
+          "El centro exige una licencia de conducir vigente de Wisconsin con una dirección actual en Wauwatosa. No admite vehículos comerciales ni de contratistas."
+        ],
+        [
+          "Separe los materiales",
+          "Separe los artículos para cada contenedor. Consulte el horario, las tarifas y las formas de pago en la página oficial."
+        ]
+      ]
+    }
+  },
+  "rules": {
+    "milwaukee-curb:sofa-or-mattress": "La ciudad incluye los muebles y los colchones. Consulte si el volumen total cabe en el límite habitual o si debe pedir una recolección especial.",
+    "milwaukee-curb:tv": "La ciudad excluye los televisores de la recolección de artículos voluminosos. Llévelos a un centro municipal de entrega si cumple sus requisitos.",
+    "milwaukee-curb:large-appliance": "La ciudad excluye los electrodomésticos de la recolección de artículos voluminosos y remite a los centros de entrega.",
+    "milwaukee-curb:mixed-cleanout": "La recolección especial excluye residuos sueltos y cargas mixtas con materiales como escombros, reciclables, llantas, ramas o desechos de jardín.",
+    "milwaukee-curb:commercial-hauler": "La recolección publicada se aplica a propiedades que reciben el servicio municipal. Pregunte a la ciudad por su dirección y pida a la empresa que identifique dónde llevará la carga.",
+    "milwaukee-drop-off:sofa-or-mattress": "La ciudad acepta muebles viejos y colchones. La tarifa depende del volumen que determine el personal.",
+    "milwaukee-drop-off:tv": "La página detalla una tarifa por televisor y un máximo de tres. Confirme la tarifa y los requisitos de entrega con la ciudad.",
+    "milwaukee-drop-off:large-appliance": "Los electrodomésticos figuran en la lista municipal de reciclaje. Confirme que el centro acepta su modelo y consulte las reglas antes de cargarlo.",
+    "milwaukee-drop-off:mixed-cleanout": "Los centros inspeccionan las cargas y separan los materiales. Lea la lista de artículos aceptados y confirme cada material inusual y el vehículo antes de salir.",
+    "milwaukee-drop-off:commercial-hauler": "La página describe un programa para residentes y propietarios. No aclara el acceso de empresas contratadas. Pida al transportista que identifique dónde recibirá la carga y confirme las condiciones.",
+    "wauwatosa-curb:sofa-or-mattress": "La ciudad incluye sofás y colchones en la recolección de pago en la acera. La tarifa depende del número de artículos.",
+    "wauwatosa-curb:tv": "La ciudad ofrece recolección de pago para televisores. El presupuesto depende de los demás artículos de la misma visita.",
+    "wauwatosa-curb:large-appliance": "La ciudad ofrece recolección de pago para refrigeradores y otros electrodomésticos grandes. Hay una tarifa para el primero y otra para los adicionales.",
+    "wauwatosa-curb:mixed-cleanout": "La página distingue varios tipos de artículos. Pregunte a Obras Públicas por la carga completa y por cualquier artículo que requiera otra opción.",
+    "wauwatosa-curb:commercial-hauler": "Confirme qué puede recoger la ciudad en esa dirección. Si contrata a una empresa por separado, pida que detalle por escrito qué retirará.",
+    "wauwatosa-drop-off:sofa-or-mattress": "La ciudad incluye muebles voluminosos y colchones. La tarifa publicada depende de la cantidad que lleve.",
+    "wauwatosa-drop-off:tv": "El centro publica una tarifa de $30 a $45 por televisor. La página de recolección especial indica $30 por entrega en la sección de electrodomésticos y televisores. Confirme el precio para su televisor.",
+    "wauwatosa-drop-off:large-appliance": "La ciudad acepta refrigeradores y otros electrodomésticos grandes. La página del centro publica una tarifa separada por aparato.",
+    "wauwatosa-drop-off:mixed-cleanout": "La ciudad pide separar las categorías de materiales en sus respectivos contenedores. Compruebe los límites de uso doméstico y los requisitos de cada artículo antes de cargar.",
+    "wauwatosa-drop-off:commercial-hauler": "El centro se limita al uso doméstico. La ciudad excluye expresamente los vehículos comerciales y de contratistas."
+  }
+}
