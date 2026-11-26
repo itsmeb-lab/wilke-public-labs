@@ -2554,6 +2554,7 @@
         <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/tool-library-borrowing/comparison.csv"" download>Download comparison data (CSV)</a></li>
         <li><a href=""https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml"">Report a source correction</a> (public GitHub form)</li>
         <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/repair-cafe-planner/"">Compare when a repair café can help</a></li>
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/home-energy-tool-lending/"">See which libraries lend home energy meters and thermal cameras</a></li>
       </ul>
     </section>"
 "library-sensory-spaces","Do library sensory rooms and quiet hours need a booking?","Compare walk-in access, reservations, library card rules, supervision and visit time at six named library sensory spaces and quiet hours.","https://itsmeb-lab.github.io/wilke-public-labs/library-sensory-spaces/","2026-11-25","STAGING_DRAFT_ONLY","<div class=""intro"">
@@ -4651,4 +4652,313 @@
         <li><a href=""https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml"">Report a source correction</a> (public GitHub form)</li>
         <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/library-museum-passes/"">Compare library passes for museums and other attractions</a></li>
       </ul>
+    </section>"
+"home-energy-tool-lending","Where can I borrow a home energy meter or thermal camera?","Compare plug-in electricity meters, thermal cameras and spot thermometers at selected libraries in five countries. Check which kit to reserve and what to bring.","https://itsmeb-lab.github.io/wilke-public-labs/home-energy-tool-lending/","2026-11-26","STAGING_DRAFT_ONLY","<div class=""intro"">
+      <p>Start with what you want to measure. A plug-in meter measures a compatible appliance's electricity use. A thermal camera produces a heat image. A spot infrared thermometer gives a temperature reading for one area at a time.</p>
+      <p>These eight programs publish lending information. Check the exact item and pickup location with the library. The policy below describes the named loan and its published rules. Catalog stock can change at any time.</p>
+    </div>
+    <!-- HOME-ENERGY-TOOL-LENDING:START -->
+    <nav id=""items"" class=""choices"" aria-label=""Choose an item"" tabindex=""-1"">
+      <p>Choose an item</p>
+      <ul role=""list"">
+        <li><a href=""#power-meter"">Borrow a plug-in electricity meter</a></li>
+        <li><a href=""#thermal-camera"">Borrow a thermal imaging camera</a></li>
+        <li><a href=""#infrared-thermometer"">Borrow a spot infrared thermometer</a></li>
+        <li><a href=""#place-hold"">Reserve the tool or kit before pickup</a></li>
+        <li><a href=""#plan-pickup"">Plan pickup and return</a></li>
+      </ul>
+    </nav>
+    <p class=""reviewed"">Snapshot reviewed <time datetime=""2026-11-26"">November 26, 2026</time>.</p>
+    <section id=""power-meter"" class=""comparison"" aria-labelledby=""power-meter-title"" tabindex=""-1"">
+      <h2 id=""power-meter-title"">Borrow a plug-in electricity meter</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""fargo"" data-fit=""listed"" id=""answer--power-meter--fargo"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--power-meter--fargo"" aria-label=""Fargo Public Library — Borrow a plug-in electricity meter"">Fargo Public Library</a></h3><p class=""area"">Fargo, North Dakota</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The library lists Kill A Watt electricity monitors at all three branches. The loan is up to three weeks for a library account in good standing.</p>
+          <p class=""source""><a href=""https://fargond.gov/city-government/departments/library/collections/library-of-things/kill-a-watt-electricity-usage-monitors"">Fargo Kill A Watt loan terms</a></p>
+        </li>
+        <li data-operator=""norfolk"" data-fit=""ask"" id=""answer--power-meter--norfolk"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--power-meter--norfolk"" aria-label=""Norfolk Public Library Energy Detective Kit — Borrow a plug-in electricity meter"">Norfolk Public Library Energy Detective Kit</a></h3><p class=""area"">Norfolk, Virginia</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The city describes tools for checking appliance energy use. Ask the branch to confirm the plug-in meter and its instructions.</p>
+          <p class=""source""><a href=""https://www.norfolk.gov/6192/Equipment-Library"">Norfolk Equipment Library and Energy Detective Kit</a></p>
+        </li>
+        <li data-operator=""fairfax"" data-fit=""listed"" id=""answer--power-meter--fairfax"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--power-meter--fairfax"" aria-label=""Fairfax County Public Library Conserve Kit — Borrow a plug-in electricity meter"">Fairfax County Public Library Conserve Kit</a></h3><p class=""area"">Fairfax County, Virginia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The Conserve Kit lists a kilowatt usage meter for individual plug-in devices.</p>
+          <p class=""source""><a href=""https://research.fairfaxcounty.gov/lot/conserve"">Fairfax Conserve Kit inventory and loan directions</a></p>
+        </li>
+        <li data-operator=""vancouver"" data-fit=""listed"" id=""answer--power-meter--vancouver"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--power-meter--vancouver"" aria-label=""Vancouver Public Library Kill A Watt EZ — Borrow a plug-in electricity meter"">Vancouver Public Library Kill A Watt EZ</a></h3><p class=""area"">Vancouver, British Columbia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The cataloged loan device is the P4460 Kill A Watt EZ. Check your card type and account status before borrowing.</p>
+          <p class=""source""><a href=""https://www.vpl.ca/borrowing/devices"">Vancouver Public Library device borrowing requirements</a></p>
+        </li>
+        <li data-operator=""kent"" data-fit=""unknown"" id=""answer--power-meter--kent"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--power-meter--kent"" aria-label=""Kent Libraries FLIR ONE Edge — Borrow a plug-in electricity meter"">Kent Libraries FLIR ONE Edge</a></h3><p class=""area"">Kent, England</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.kent.gov.uk/leisure-and-community/libraries/join-and-borrow-library-items/borrow-a-thermal-imaging-camera"">Check with Kent Libraries FLIR ONE Edge</a></p>
+        </li>
+        <li data-operator=""joondalup"" data-fit=""listed"" id=""answer--power-meter--joondalup"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--power-meter--joondalup"" aria-label=""Joondalup Libraries Energy Audit Kit — Borrow a plug-in electricity meter"">Joondalup Libraries Energy Audit Kit</a></h3><p class=""area"">Joondalup, Western Australia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The kit inventory includes a power monitor.</p>
+          <p class=""source""><a href=""https://www.joondalup.wa.gov.au/city-and-council/latest-news-updates/energy-audit-kits-now-available-at-joondalup-libraries"">Joondalup kit inventory, photo ID and reservation</a></p>
+        </li>
+        <li data-operator=""ballarat"" data-fit=""ask"" id=""answer--power-meter--ballarat"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--power-meter--ballarat"" aria-label=""Ballarat Libraries Energy Saver Kit — Borrow a plug-in electricity meter"">Ballarat Libraries Energy Saver Kit</a></h3><p class=""area"">Ballarat, Victoria</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>Only some kits have the Power Mate Lite. Ask the pickup branch to check your exact kit before you go.</p>
+          <p class=""source""><a href=""https://libraries.ballarat.vic.gov.au/borrow/energy-saver-kits"">Ballarat Energy Saver Kit contents and returns</a></p>
+        </li>
+        <li data-operator=""dunedin"" data-fit=""listed"" id=""answer--power-meter--dunedin"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--power-meter--dunedin"" aria-label=""Dunedin Public Libraries HEAT Kit — Borrow a plug-in electricity meter"">Dunedin Public Libraries HEAT Kit</a></h3><p class=""area"">Dunedin, Otago</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The two-week HEAT Kit includes a meter for plug-in appliances.</p>
+          <p class=""source""><a href=""https://dunedinlibraries.govt.nz/collections/home-energy-audit-toolkit-heat-kit"">Dunedin HEAT Kit contents, loan and holds</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""thermal-camera"" class=""comparison"" aria-labelledby=""thermal-camera-title"" tabindex=""-1"">
+      <h2 id=""thermal-camera-title"">Borrow a thermal imaging camera</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""fargo"" data-fit=""unknown"" id=""answer--thermal-camera--fargo"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--thermal-camera--fargo"" aria-label=""Fargo Public Library — Borrow a thermal imaging camera"">Fargo Public Library</a></h3><p class=""area"">Fargo, North Dakota</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://fargond.gov/city-government/departments/library/collections/library-of-things/kill-a-watt-electricity-usage-monitors"">Check with Fargo Public Library</a></p>
+        </li>
+        <li data-operator=""norfolk"" data-fit=""ask"" id=""answer--thermal-camera--norfolk"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--thermal-camera--norfolk"" aria-label=""Norfolk Public Library Energy Detective Kit — Borrow a thermal imaging camera"">Norfolk Public Library Energy Detective Kit</a></h3><p class=""area"">Norfolk, Virginia</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The city describes instruments for finding drafts and heat loss. Ask whether the current kit includes a camera that produces a heat image.</p>
+          <p class=""source""><a href=""https://www.norfolk.gov/6192/Equipment-Library"">Norfolk Equipment Library and Energy Detective Kit</a></p>
+        </li>
+        <li data-operator=""fairfax"" data-fit=""excluded"" id=""answer--thermal-camera--fairfax"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--thermal-camera--fairfax"" aria-label=""Fairfax County Public Library Conserve Kit — Borrow a thermal imaging camera"">Fairfax County Public Library Conserve Kit</a></h3><p class=""area"">Fairfax County, Virginia</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The Conserve Kit inventory lists a spot thermometer. Check Fairfax&#39;s separate Thermal Cameras collection for a heat image.</p>
+          <p class=""source""><a href=""https://research.fairfaxcounty.gov/lot/conserve"">Fairfax Conserve Kit inventory and loan directions</a></p>
+        </li>
+        <li data-operator=""vancouver"" data-fit=""unknown"" id=""answer--thermal-camera--vancouver"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--thermal-camera--vancouver"" aria-label=""Vancouver Public Library Kill A Watt EZ — Borrow a thermal imaging camera"">Vancouver Public Library Kill A Watt EZ</a></h3><p class=""area"">Vancouver, British Columbia</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.vpl.ca/borrowing/devices"">Check with Vancouver Public Library Kill A Watt EZ</a></p>
+        </li>
+        <li data-operator=""kent"" data-fit=""listed"" id=""answer--thermal-camera--kent"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--thermal-camera--kent"" aria-label=""Kent Libraries FLIR ONE Edge — Borrow a thermal imaging camera"">Kent Libraries FLIR ONE Edge</a></h3><p class=""area"">Kent, England</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Participating libraries lend a FLIR ONE Edge for up to seven days. Members must be aged 16 or over and use a compatible phone or tablet.</p>
+          <p class=""source""><a href=""https://www.kent.gov.uk/leisure-and-community/libraries/join-and-borrow-library-items/borrow-a-thermal-imaging-camera"">Kent thermal imaging camera eligibility and reservation</a></p>
+        </li>
+        <li data-operator=""joondalup"" data-fit=""listed"" id=""answer--thermal-camera--joondalup"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--thermal-camera--joondalup"" aria-label=""Joondalup Libraries Energy Audit Kit — Borrow a thermal imaging camera"">Joondalup Libraries Energy Audit Kit</a></h3><p class=""area"">Joondalup, Western Australia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The kit inventory includes a thermal camera. Check the kit documentation for the current equipment and setup.</p>
+          <p class=""source""><a href=""https://www.joondalup.wa.gov.au/city-and-council/latest-news-updates/energy-audit-kits-now-available-at-joondalup-libraries"">Joondalup kit inventory, photo ID and reservation</a></p>
+        </li>
+        <li data-operator=""ballarat"" data-fit=""listed"" id=""answer--thermal-camera--ballarat"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--thermal-camera--ballarat"" aria-label=""Ballarat Libraries Energy Saver Kit — Borrow a thermal imaging camera"">Ballarat Libraries Energy Saver Kit</a></h3><p class=""area"">Ballarat, Victoria</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The library lists a FLIR TG165-X thermal camera in each Energy Saver Kit.</p>
+          <p class=""source""><a href=""https://libraries.ballarat.vic.gov.au/borrow/energy-saver-kits"">Ballarat Energy Saver Kit contents and returns</a></p>
+        </li>
+        <li data-operator=""dunedin"" data-fit=""excluded"" id=""answer--thermal-camera--dunedin"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--thermal-camera--dunedin"" aria-label=""Dunedin Public Libraries HEAT Kit — Borrow a thermal imaging camera"">Dunedin Public Libraries HEAT Kit</a></h3><p class=""area"">Dunedin, Otago</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The listed HEAT Kit inventory includes an infrared thermometer for surface readings. Ask the library about a separate camera loan if you need a heat image.</p>
+          <p class=""source""><a href=""https://dunedinlibraries.govt.nz/collections/home-energy-audit-toolkit-heat-kit"">Dunedin HEAT Kit contents, loan and holds</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""infrared-thermometer"" class=""comparison"" aria-labelledby=""infrared-thermometer-title"" tabindex=""-1"">
+      <h2 id=""infrared-thermometer-title"">Borrow a spot infrared thermometer</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""fargo"" data-fit=""unknown"" id=""answer--infrared-thermometer--fargo"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--infrared-thermometer--fargo"" aria-label=""Fargo Public Library — Borrow a spot infrared thermometer"">Fargo Public Library</a></h3><p class=""area"">Fargo, North Dakota</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://fargond.gov/city-government/departments/library/collections/library-of-things/kill-a-watt-electricity-usage-monitors"">Check with Fargo Public Library</a></p>
+        </li>
+        <li data-operator=""norfolk"" data-fit=""ask"" id=""answer--infrared-thermometer--norfolk"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--infrared-thermometer--norfolk"" aria-label=""Norfolk Public Library Energy Detective Kit — Borrow a spot infrared thermometer"">Norfolk Public Library Energy Detective Kit</a></h3><p class=""area"">Norfolk, Virginia</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>Confirm the model of the heat-loss instrument with the branch if you need a single-point infrared reading.</p>
+          <p class=""source""><a href=""https://www.norfolk.gov/6192/Equipment-Library"">Norfolk Equipment Library and Energy Detective Kit</a></p>
+        </li>
+        <li data-operator=""fairfax"" data-fit=""listed"" id=""answer--infrared-thermometer--fairfax"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--infrared-thermometer--fairfax"" aria-label=""Fairfax County Public Library Conserve Kit — Borrow a spot infrared thermometer"">Fairfax County Public Library Conserve Kit</a></h3><p class=""area"">Fairfax County, Virginia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Fairfax identifies the IRT206 in the kit as a simple spot thermometer.</p>
+          <p class=""source""><a href=""https://research.fairfaxcounty.gov/lot/conserve"">Fairfax Conserve Kit inventory and loan directions</a></p>
+        </li>
+        <li data-operator=""vancouver"" data-fit=""unknown"" id=""answer--infrared-thermometer--vancouver"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--infrared-thermometer--vancouver"" aria-label=""Vancouver Public Library Kill A Watt EZ — Borrow a spot infrared thermometer"">Vancouver Public Library Kill A Watt EZ</a></h3><p class=""area"">Vancouver, British Columbia</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.vpl.ca/borrowing/devices"">Check with Vancouver Public Library Kill A Watt EZ</a></p>
+        </li>
+        <li data-operator=""kent"" data-fit=""unknown"" id=""answer--infrared-thermometer--kent"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--infrared-thermometer--kent"" aria-label=""Kent Libraries FLIR ONE Edge — Borrow a spot infrared thermometer"">Kent Libraries FLIR ONE Edge</a></h3><p class=""area"">Kent, England</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.kent.gov.uk/leisure-and-community/libraries/join-and-borrow-library-items/borrow-a-thermal-imaging-camera"">Check with Kent Libraries FLIR ONE Edge</a></p>
+        </li>
+        <li data-operator=""joondalup"" data-fit=""unknown"" id=""answer--infrared-thermometer--joondalup"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--infrared-thermometer--joondalup"" aria-label=""Joondalup Libraries Energy Audit Kit — Borrow a spot infrared thermometer"">Joondalup Libraries Energy Audit Kit</a></h3><p class=""area"">Joondalup, Western Australia</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.joondalup.wa.gov.au/city-and-council/latest-news-updates/energy-audit-kits-now-available-at-joondalup-libraries"">Check with Joondalup Libraries Energy Audit Kit</a></p>
+        </li>
+        <li data-operator=""ballarat"" data-fit=""ask"" id=""answer--infrared-thermometer--ballarat"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--infrared-thermometer--ballarat"" aria-label=""Ballarat Libraries Energy Saver Kit — Borrow a spot infrared thermometer"">Ballarat Libraries Energy Saver Kit</a></h3><p class=""area"">Ballarat, Victoria</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>A separate thermometer is listed without a model. Confirm whether it is the type you need.</p>
+          <p class=""source""><a href=""https://libraries.ballarat.vic.gov.au/borrow/energy-saver-kits"">Ballarat Energy Saver Kit contents and returns</a></p>
+        </li>
+        <li data-operator=""dunedin"" data-fit=""listed"" id=""answer--infrared-thermometer--dunedin"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--infrared-thermometer--dunedin"" aria-label=""Dunedin Public Libraries HEAT Kit — Borrow a spot infrared thermometer"">Dunedin Public Libraries HEAT Kit</a></h3><p class=""area"">Dunedin, Otago</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The HEAT Kit includes an infrared thermometer for checking surface temperature.</p>
+          <p class=""source""><a href=""https://dunedinlibraries.govt.nz/collections/home-energy-audit-toolkit-heat-kit"">Dunedin HEAT Kit contents, loan and holds</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""place-hold"" class=""comparison"" aria-labelledby=""place-hold-title"" tabindex=""-1"">
+      <h2 id=""place-hold-title"">Reserve the tool or kit before pickup</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""fargo"" data-fit=""ask"" id=""answer--place-hold--fargo"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--place-hold--fargo"" aria-label=""Fargo Public Library — Reserve the tool or kit before pickup"">Fargo Public Library</a></h3><p class=""area"">Fargo, North Dakota</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The city mentions holds and requests in its renewal rule. Ask the branch how to request this item and where you can collect it.</p>
+          <p class=""source""><a href=""https://fargond.gov/city-government/departments/library/collections/library-of-things/kill-a-watt-electricity-usage-monitors"">Fargo Kill A Watt loan terms</a></p>
+        </li>
+        <li data-operator=""norfolk"" data-fit=""ask"" id=""answer--place-hold--norfolk"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--place-hold--norfolk"" aria-label=""Norfolk Public Library Energy Detective Kit — Reserve the tool or kit before pickup"">Norfolk Public Library Energy Detective Kit</a></h3><p class=""area"">Norfolk, Virginia</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The city links the catalog item. Ask whether you can place a hold and confirm the pickup branch before going.</p>
+          <p class=""source""><a href=""https://www.norfolk.gov/6192/Equipment-Library"">Norfolk Equipment Library and Energy Detective Kit</a></p>
+        </li>
+        <li data-operator=""fairfax"" data-fit=""listed"" id=""answer--place-hold--fairfax"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--place-hold--fairfax"" aria-label=""Fairfax County Public Library Conserve Kit — Reserve the tool or kit before pickup"">Fairfax County Public Library Conserve Kit</a></h3><p class=""area"">Fairfax County, Virginia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Place a Conserve Kit hold from the library&#39;s page. The kit loan is two weeks.</p>
+          <p class=""source""><a href=""https://research.fairfaxcounty.gov/lot/conserve"">Fairfax Conserve Kit inventory and loan directions</a></p>
+        </li>
+        <li data-operator=""vancouver"" data-fit=""ask"" id=""answer--place-hold--vancouver"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--place-hold--vancouver"" aria-label=""Vancouver Public Library Kill A Watt EZ — Reserve the tool or kit before pickup"">Vancouver Public Library Kill A Watt EZ</a></h3><p class=""area"">Vancouver, British Columbia</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>Open the item&#39;s catalog record from the device page. Ask the library about holds, eligible pickup and the current loan period.</p>
+          <p class=""source""><a href=""https://www.vpl.ca/borrowing/devices"">Vancouver Public Library device borrowing requirements</a></p>
+        </li>
+        <li data-operator=""kent"" data-fit=""listed"" id=""answer--place-hold--kent"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--place-hold--kent"" aria-label=""Kent Libraries FLIR ONE Edge — Reserve the tool or kit before pickup"">Kent Libraries FLIR ONE Edge</a></h3><p class=""area"">Kent, England</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Choose a participating branch and join its waiting list with your library card number, either in person or through the council&#39;s listed contact routes.</p>
+          <p class=""source""><a href=""https://www.kent.gov.uk/leisure-and-community/libraries/join-and-borrow-library-items/borrow-a-thermal-imaging-camera"">Kent thermal imaging camera eligibility and reservation</a></p>
+        </li>
+        <li data-operator=""joondalup"" data-fit=""listed"" id=""answer--place-hold--joondalup"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--place-hold--joondalup"" aria-label=""Joondalup Libraries Energy Audit Kit — Reserve the tool or kit before pickup"">Joondalup Libraries Energy Audit Kit</a></h3><p class=""area"">Joondalup, Western Australia</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Use the library catalog to reserve a seven-day loan. Bring photo ID and your library card to borrow.</p>
+          <p class=""source""><a href=""https://www.joondalup.wa.gov.au/city-and-council/latest-news-updates/energy-audit-kits-now-available-at-joondalup-libraries"">Joondalup kit inventory, photo ID and reservation</a></p>
+        </li>
+        <li data-operator=""ballarat"" data-fit=""listed"" id=""answer--place-hold--ballarat"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--place-hold--ballarat"" aria-label=""Ballarat Libraries Energy Saver Kit — Reserve the tool or kit before pickup"">Ballarat Libraries Energy Saver Kit</a></h3><p class=""area"">Ballarat, Victoria</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Members can use the reserve link for Ballarat, Sebastopol or Wendouree. Check that the exact kit contains the tools you need.</p>
+          <p class=""source""><a href=""https://libraries.ballarat.vic.gov.au/borrow/energy-saver-kits"">Ballarat Energy Saver Kit contents and returns</a></p>
+        </li>
+        <li data-operator=""dunedin"" data-fit=""listed"" id=""answer--place-hold--dunedin"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--place-hold--dunedin"" aria-label=""Dunedin Public Libraries HEAT Kit — Reserve the tool or kit before pickup"">Dunedin Public Libraries HEAT Kit</a></h3><p class=""area"">Dunedin, Otago</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Check the catalog. Dunedin lists no charge to place a hold and a two-week loan for library members.</p>
+          <p class=""source""><a href=""https://dunedinlibraries.govt.nz/collections/home-energy-audit-toolkit-heat-kit"">Dunedin HEAT Kit contents, loan and holds</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""plan-pickup"" class=""prep"" aria-labelledby=""plan-pickup-title"" tabindex=""-1"">
+      <h2 id=""plan-pickup-title"">Plan pickup and return</h2>
+      <p>Confirm your specific kit and pickup location before traveling.</p>
+      <ul class=""cards"" role=""list"">
+        <li>
+          <h3>Fargo Public Library</h3><p class=""area"">Fargo, North Dakota</p>
+          <dl>
+            <dt>Check your card</dt><dd>Use a Fargo Public Library account in good standing. <span class=""source""><a href=""https://fargond.gov/city-government/departments/library/collections/library-of-things/kill-a-watt-electricity-usage-monitors"">Fargo Kill A Watt loan terms</a></span></dd>
+            <dt>Confirm pickup and due date</dt><dd>The meter can be borrowed from all three library locations for up to three weeks. Check timing with the branch. <span class=""source""><a href=""https://fargond.gov/city-government/departments/library/collections/library-of-things/kill-a-watt-electricity-usage-monitors"">Fargo Kill A Watt loan terms</a></span></dd>
+          </dl>
+          <p><a href=""https://fargond.gov/city-government/departments/library/collections/library-of-things/kill-a-watt-electricity-usage-monitors"">Fargo Kill A Watt loan terms</a></p>
+        </li>
+        <li>
+          <h3>Norfolk Public Library Energy Detective Kit</h3><p class=""area"">Norfolk, Virginia</p>
+          <dl>
+            <dt>Choose a listed branch</dt><dd>The city lists Jordan-Newby, Mary D. Pretlow, Slover and Richard A. Tucker for this kit. <span class=""source""><a href=""https://www.norfolk.gov/6192/Equipment-Library"">Norfolk Equipment Library and Energy Detective Kit</a></span></dd>
+            <dt>Check your card and return location</dt><dd>The equipment page calls for an adult Norfolk card and an in-person return at the checkout branch. Ask the branch for the current loan period. <span class=""source""><a href=""https://www.norfolk.gov/6192/Equipment-Library"">Norfolk Equipment Library and Energy Detective Kit</a></span></dd>
+          </dl>
+          <p><a href=""https://www.norfolk.gov/6192/Equipment-Library"">Norfolk Equipment Library and Energy Detective Kit</a></p>
+        </li>
+        <li>
+          <h3>Fairfax County Public Library Conserve Kit</h3><p class=""area"">Fairfax County, Virginia</p>
+          <dl>
+            <dt>Hold the Conserve Kit</dt><dd>Check the official catalog for pickup before you travel. <span class=""source""><a href=""https://research.fairfaxcounty.gov/lot/conserve"">Fairfax Conserve Kit inventory and loan directions</a></span></dd>
+            <dt>Return the reusable tools inside</dt><dd>The library accepts the kit inside any branch. Pack the reusable parts and leftover consumable supplies according to the kit instructions. <span class=""source""><a href=""https://research.fairfaxcounty.gov/lot/conserve"">Fairfax Conserve Kit inventory and loan directions</a></span></dd>
+          </dl>
+          <p><a href=""https://research.fairfaxcounty.gov/lot/conserve"">Fairfax Conserve Kit inventory and loan directions</a></p>
+        </li>
+        <li>
+          <h3>Vancouver Public Library Kill A Watt EZ</h3><p class=""area"">Vancouver, British Columbia</p>
+          <dl>
+            <dt>Check the card type</dt><dd>The device page requires a Vancouver Public Library card with less than $10 in outstanding charges. It also lists excluded card types, including Juvenile and BC OneCard. <span class=""source""><a href=""https://www.vpl.ca/borrowing/devices"">Vancouver Public Library device borrowing requirements</a></span></dd>
+            <dt>Open the catalog entry</dt><dd>Follow the Kill A Watt EZ catalog link for the item&#39;s branch availability. <span class=""source""><a href=""https://www.vpl.ca/borrowing/devices"">Vancouver Public Library device borrowing requirements</a></span></dd>
+          </dl>
+          <p><a href=""https://www.vpl.ca/borrowing/devices"">Vancouver Public Library device borrowing requirements</a></p>
+        </li>
+        <li>
+          <h3>Kent Libraries FLIR ONE Edge</h3><p class=""area"">Kent, England</p>
+          <dl>
+            <dt>Check your device</dt><dd>Kent lists iOS 18 or Android 14 or later, Bluetooth and the FLIR ONE app. Check the current requirements before pickup. <span class=""source""><a href=""https://www.kent.gov.uk/leisure-and-community/libraries/join-and-borrow-library-items/borrow-a-thermal-imaging-camera"">Kent thermal imaging camera eligibility and reservation</a></span></dd>
+            <dt>Sign and return in the same place</dt><dd>Sign the lending agreement at collection and return to the branch that issued the camera. <span class=""source""><a href=""https://www.kent.gov.uk/leisure-and-community/libraries/join-and-borrow-library-items/borrow-a-thermal-imaging-camera"">Kent thermal imaging camera eligibility and reservation</a></span></dd>
+          </dl>
+          <p><a href=""https://www.kent.gov.uk/leisure-and-community/libraries/join-and-borrow-library-items/borrow-a-thermal-imaging-camera"">Kent thermal imaging camera eligibility and reservation</a></p>
+        </li>
+        <li>
+          <h3>Joondalup Libraries Energy Audit Kit</h3><p class=""area"">Joondalup, Western Australia</p>
+          <dl>
+            <dt>Reserve through the catalog</dt><dd>Joondalup lists the kits at all city libraries. Check the selected pickup&#39;s availability. <span class=""source""><a href=""https://www.joondalup.wa.gov.au/city-and-council/latest-news-updates/energy-audit-kits-now-available-at-joondalup-libraries"">Joondalup kit inventory, photo ID and reservation</a></span></dd>
+            <dt>Bring both forms of identification</dt><dd>Bring photo ID and your library card. The city&#39;s instructions describe how to join if you need a library membership. <span class=""source""><a href=""https://www.joondalup.wa.gov.au/city-and-council/latest-news-updates/energy-audit-kits-now-available-at-joondalup-libraries"">Joondalup kit inventory, photo ID and reservation</a></span></dd>
+          </dl>
+          <p><a href=""https://www.joondalup.wa.gov.au/city-and-council/latest-news-updates/energy-audit-kits-now-available-at-joondalup-libraries"">Joondalup kit inventory, photo ID and reservation</a></p>
+        </li>
+        <li>
+          <h3>Ballarat Libraries Energy Saver Kit</h3><p class=""area"">Ballarat, Victoria</p>
+          <dl>
+            <dt>Tell staff which device matters</dt><dd>Ask about the optional Power Mate Lite when reserving your kit. <span class=""source""><a href=""https://libraries.ballarat.vic.gov.au/borrow/energy-saver-kits"">Ballarat Energy Saver Kit contents and returns</a></span></dd>
+            <dt>Return to the pickup branch</dt><dd>Hand the kit to staff during opening hours. The library excludes the returns chute. <span class=""source""><a href=""https://libraries.ballarat.vic.gov.au/borrow/energy-saver-kits"">Ballarat Energy Saver Kit contents and returns</a></span></dd>
+          </dl>
+          <p><a href=""https://libraries.ballarat.vic.gov.au/borrow/energy-saver-kits"">Ballarat Energy Saver Kit contents and returns</a></p>
+        </li>
+        <li>
+          <h3>Dunedin Public Libraries HEAT Kit</h3><p class=""area"">Dunedin, Otago</p>
+          <dl>
+            <dt>Choose a participating library</dt><dd>Check the catalog for City, Mosgiel, Port Chalmers, Blueskin Bay or Waikouaiti. <span class=""source""><a href=""https://dunedinlibraries.govt.nz/collections/home-energy-audit-toolkit-heat-kit"">Dunedin HEAT Kit contents, loan and holds</a></span></dd>
+            <dt>Use the supplied record booklet</dt><dd>The kit includes operating instructions and a booklet to record observations. Standard library charges can apply to missing or lost kits. <span class=""source""><a href=""https://dunedinlibraries.govt.nz/collections/home-energy-audit-toolkit-heat-kit"">Dunedin HEAT Kit contents, loan and holds</a></span></dd>
+          </dl>
+          <p><a href=""https://dunedinlibraries.govt.nz/collections/home-energy-audit-toolkit-heat-kit"">Dunedin HEAT Kit contents, loan and holds</a></p>
+        </li>
+      </ul>
+    </section>
+    <!-- HOME-ENERGY-TOOL-LENDING:END -->
+    <section class=""comparison"" aria-labelledby=""before-you-go-title"">
+      <h2 id=""before-you-go-title"">What to put in a hold request</h2>
+      <p>Include the tool or kit name, a preferred pickup branch and when you can collect it. Ask staff to confirm the exact device, card or ID requirements, the due date and how to return the equipment. For a camera, check whether you also need a phone, an app or a charging cable.</p>
+      <p><a href=""https://itsmeb-lab.github.io/wilke-public-labs/home-energy-tool-lending/comparison.csv"" download>Download the 32 tool and program rows (CSV)</a>.</p>
+      <p>Planning a small repair as well? <a href=""https://itsmeb-lab.github.io/wilke-public-labs/tool-library-borrowing/"">Check tool-library card, fee and return policies</a>.</p>
     </section>"

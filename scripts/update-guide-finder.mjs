@@ -12,6 +12,11 @@ const escape = (text) => text.replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '
 const read = (path) => readFileSync(new URL(path, site), 'utf8');
 
 const regionNames = Object.freeze({
+  'au-vic': 'Australia – Victoria',
+  'au-wa': 'Australia – Western Australia',
+  'nz-ota': 'New Zealand – Otago',
+  'us-nd': 'United States – North Dakota',
+  'us-va': 'United States – Virginia',
   'au-nsw': 'Australia · New South Wales',
   'au-qld': 'Australia · Queensland',
   'ca-ab': 'Canada · Alberta',
@@ -43,6 +48,12 @@ const regionNames = Object.freeze({
 });
 
 const taskAliases = {
+  'home-energy-tool-lending': {
+    'power-meter': ['borrow check out plug-in electricity meter kill a watt energy monitor appliance watts library'],
+    'thermal-camera': ['borrow check out thermal imaging camera infrared heat picture flir home energy library'],
+    'infrared-thermometer': ['borrow spot laser infrared thermometer surface temperature home energy library'],
+    'place-hold': ['reserve home energy audit kit hold electricity meter thermal camera ahead of time library pickup'],
+  },
   'repair-cafe-planner': {
     bicycle: ['bring bike repair flat tire'],
     microwave: ['bring broken microwave oven appliance repair'],
