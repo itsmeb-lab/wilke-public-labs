@@ -27,11 +27,13 @@ const regionNames = Object.freeze({
   'us-il': 'United States · Illinois',
   'us-in': 'United States · Indiana',
   'us-ma': 'United States · Massachusetts',
+  'us-md': 'United States · Maryland',
   'us-mi': 'United States · Michigan',
   'us-mn': 'United States · Minnesota',
   'us-nc': 'United States · North Carolina',
   'us-nj': 'United States · New Jersey',
   'us-ny': 'United States · New York',
+  'us-oh': 'United States · Ohio',
   'us-sc': 'United States · South Carolina',
   'us-wi': 'United States · Wisconsin',
 });
@@ -108,6 +110,20 @@ const taskAliases = {
     'glasses-cases': ['donate glasses case cloth'],
     sunglasses: ['donate sun glasses sunglasses prescription tint clip-on'],
     'hearing-aids': ['donate hearing aid device used hearing equipment'],
+  },
+  'library-instrument-borrowing': {
+    'take-home': ['borrow guitar keyboard ukulele musical instrument home library'],
+    'reserve-instrument': ['hold reserve book musical instrument guitar ukulele before going'],
+    'under-thirteen': ['child children kid kids youth under 13 music instrument guitar ukulele adult permission parent'],
+    'three-week-loan': ['keep long musical instrument ukulele guitar loan duration days three weeks'],
+    'different-return-branch': ['return borrowed guitar ukulele keyboard library different branch same location'],
+  },
+  'used-bicycle-donations': {
+    'working-bike': ['donate used rideable bicycle bike clear out cleanout'],
+    'heavy-rust': ['donate rusty broken bike bicycle heavy rust damaged cleanup junk'],
+    'spare-parts': ['donate spare parts usable wheel bicycle bike component'],
+    'used-helmet': ['donate used bicycle cycling bike helmet'],
+    collection: ['donate bike bicycle pickup pick up collection shop'],
   },
 };
 
