@@ -23,7 +23,7 @@ const served=new Map([
  ["library-museum-passes",new Set(["index.html"])],
  ["library-seed-borrowing",new Set(["index.html"])],
  ["tool-library-borrowing",new Set(["index.html"])],
- ["milwaukee-cleanout-floor-handoff",new Set(["index.html","worksheet.css"])],
+ ["milwaukee-cleanout-floor-handoff",new Set(["index.html","worksheet.css","quote-compare.mjs","quote-math.mjs"])],
  ["library-sensory-spaces",new Set(["index.html"])],
  ["eyeglass-donation-rules",new Set(["index.html"])],
  ["guide-finder",new Set(["index.html","finder.css","index-data.mjs","search.mjs","app.mjs"])],
@@ -178,6 +178,22 @@ try{
    assert.ok(noMatch.sources.length>0&&noMatch.sources.every(value=>value===origin));
    return {width,link:initial.link,privateLookup:true};
   });
+  await rpc("POST",sid("/url"),{url:origin+"/milwaukee-cleanout-floor-handoff/"});
+  await check("Milwaukee quote comparisons at "+width+"px",async()=>{
+   const end=Date.now()+5000;
+   while(await execute("return document.getElementById('quote-controls').hidden;")){
+    if(Date.now()>=end)throw new Error("Quote calculator did not load.");
+    await delay(50);
+   }
+   await click("#quote-sample");
+   const data=await execute("return {result:document.getElementById('quote-result').innerText,width:innerWidth,scroll:document.documentElement.scrollWidth,resources:performance.getEntriesByType('resource').map(entry=>new URL(entry.name).origin)};");
+   for(const phrase of ["$650.00","$790.00","$850.00","Estimate B is $60.00 lower"])assert.ok(data.result.includes(phrase));
+   assert.equal(data.width,width);assert.ok(data.scroll<=width+1);
+   assert.ok(data.resources.length>0&&data.resources.every(value=>value===origin));
+   const cleared=await execute("const field=document.getElementById('quote-loads');field.value='3';field.dispatchEvent(new Event('input'));return document.getElementById('quote-result').textContent;");
+   assert.equal(cleared,"");
+   return {width,privateCalculation:true,scopeComparison:true};
+  });
   await closeSession();
  }
  const runtime=await session(390,844,false);
@@ -282,13 +298,13 @@ try{
      const page=document.documentElement;
      return {width:innerWidth,client:page.clientWidth,scroll:page.scrollWidth,
        prompts:document.querySelectorAll('.worksheet dt').length,
-       css:[...document.styleSheets].some(sheet=>sheet.href?.endsWith('/worksheet.css')),
-       fields:document.querySelectorAll('form,input,textarea').length};
+       css:[...document.styleSheets].some(sheet=>sheet.href?.includes('/worksheet.css?v=20261125-2')),
+       forms:document.querySelectorAll('form,textarea').length, calculatorHidden:document.getElementById('quote-controls').hidden};
    `);
    assert.equal(layout.width,width);
    assert.ok(layout.scroll<=layout.client+1);
    assert.equal(layout.prompts,5);
-   assert.equal(layout.fields,0);
+   assert.equal(layout.forms,0);assert.equal(layout.calculatorHidden,true);
    assert.ok(layout.css);
    if(width===1280){
     const encoded=await rpc("POST",sid("/print"),{orientation:"portrait",page:{width:21.59,height:27.94}});

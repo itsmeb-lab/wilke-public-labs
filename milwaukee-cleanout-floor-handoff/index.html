@@ -12,7 +12,8 @@
   <meta property="og:url" content="https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-cleanout-floor-handoff/">
   <link rel="sitemap" type="application/xml" href="../sitemap.xml">
   <link rel="stylesheet" href="../repair-cafe-planner/style.css?v=20261125-2">
-  <link rel="stylesheet" href="./worksheet.css">
+  <link rel="stylesheet" href="./worksheet.css?v=20261125-2">
+  <script type="module" src="./quote-compare.mjs"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to the checklist</a>
@@ -22,6 +23,7 @@
       <h1>Milwaukee cleanout to hardwood estimate checklist</h1>
       <p>Use this when one crew is clearing a room and a flooring contractor needs to see what is underneath. Decide what stays first, then get a written estimate for each job.</p>
       <p class="worksheet-tip">Use your browser’s print menu for a blank worksheet. Fill it in offline and keep access codes out of the copy you share.</p>
+      <p class="quote-jump"><a href="#quote-scope">Compare two cleanout estimates using the same load count</a>.</p>
     </div>
     <section class="notes" aria-labelledby="before-clear">
       <h2 id="before-clear">Before the cleanout</h2>
@@ -48,6 +50,47 @@
         <li><strong>Compare the same treatment.</strong> Ask whether the estimate covers a maintenance coat, sanding and refinishing, or repair before finishing. Compare the same rooms, repairs, finish and exclusions. <a href="https://woodfloors.org/refinishing-your-floors/">NWFA refinishing overview</a></li>
         <li><strong>Leave time for the finish.</strong> Ask the contractor to put inspection, start, completion, and return-to-use dates in writing. Get separate instructions for foot traffic and moving furniture or rugs back in. <a href="https://datcp.wi.gov/Pages/Publications/HI-ConsumerTips136.aspx">Wisconsin home improvement guidance</a></li>
       </ul>
+    </section>
+    <section class="notes quote-tool" id="quote-scope" aria-labelledby="quote-heading">
+      <h2 id="quote-heading">Compare two written cleanout estimates</h2>
+      <p>Use the same load size and the same rooms. Enter other charges such as stairs or disposal if they are outside the base price. Leave an unknown amount blank. Enter zero only when the estimate confirms there is no separate charge.</p>
+      <p>Example. One eligible load at $650 is lower than $790 for the same work. If a second load costs $200 extra on the first estimate and is included in the second, the totals are $850 and $790.</p>
+      <section id="quote-controls" aria-label="Estimate amounts and load counts" hidden>
+        <div class="quote-load">
+          <label for="quote-loads">Expected loads</label>
+          <input id="quote-loads" inputmode="numeric" maxlength="2" autocomplete="off">
+        </div>
+        <div class="quote-grid">
+        <fieldset>
+          <legend>Estimate A</legend>
+          <label for="quote-a-base">Base price in USD</label>
+          <input id="quote-a-base" inputmode="decimal" maxlength="14" autocomplete="off">
+          <label for="quote-a-included">Loads included</label>
+          <input id="quote-a-included" inputmode="numeric" maxlength="2" autocomplete="off">
+          <label for="quote-a-overage">Price for each extra load in USD</label>
+          <input id="quote-a-overage" inputmode="decimal" maxlength="14" autocomplete="off">
+          <label for="quote-a-fees">Other charges in USD</label>
+          <input id="quote-a-fees" inputmode="decimal" maxlength="14" autocomplete="off">
+        </fieldset>
+        <fieldset>
+          <legend>Estimate B</legend>
+          <label for="quote-b-base">Base price in USD</label>
+          <input id="quote-b-base" inputmode="decimal" maxlength="14" autocomplete="off">
+          <label for="quote-b-included">Loads included</label>
+          <input id="quote-b-included" inputmode="numeric" maxlength="2" autocomplete="off">
+          <label for="quote-b-overage">Price for each extra load in USD</label>
+          <input id="quote-b-overage" inputmode="decimal" maxlength="14" autocomplete="off">
+          <label for="quote-b-fees">Other charges in USD</label>
+          <input id="quote-b-fees" inputmode="decimal" maxlength="14" autocomplete="off">
+        </fieldset>
+        </div>
+        <label class="scope-match"><input id="quote-match" type="checkbox"> Both estimates cover the same rooms, load sizes, access and disposal.</label>
+        <div class="quote-actions">
+          <button id="quote-run" type="button">Compare estimates</button>
+          <button id="quote-sample" type="button">Load the example</button>
+        </div>
+        <div id="quote-result" aria-live="polite"></div>
+      </section>
     </section>
     <section class="notes more-guides" aria-labelledby="related-guides">
       <h2 id="related-guides">Related guides</h2>
