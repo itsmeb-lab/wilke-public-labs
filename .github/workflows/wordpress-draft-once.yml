@@ -1,0 +1,72 @@
+name: Isolated WordPress Draft Verification
+
+on:
+  push:
+    branches: [atlas/wordpress-draft-verify-nov26]
+
+permissions:
+  contents: read
+
+jobs:
+  import-draft:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify the PHP CSV reader and WordPress file
+        run: |
+          set -euo pipefail
+          php tests/verify-wordpress-csv.php
+          node --test tests/wordpress-draft-export.test.mjs
+          node scripts/export-wordpress-draft.mjs --slug home-energy-tool-lending --output "$RUNNER_TEMP/energy-draft.xml"
+      - name: Install WordPress into a disposable local database
+        run: |
+          set -euo pipefail
+          wp_root="$RUNNER_TEMP/wp-test"
+          wp_cli="$RUNNER_TEMP/wp-cli.phar"
+          mkdir -p "$wp_root"
+          curl --proto '=https' --fail --silent --show-error --max-time 40 \
+            'https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar' -o "$wp_cli"
+          php "$wp_cli" --version
+          sudo systemctl start mysql.service
+          MYSQL_PWD=root mysql -uroot -e 'CREATE DATABASE atlas_verify'
+          wp_site() { php "$wp_cli" --path="$wp_root" "$@"; }
+          wp_site core download
+          wp_site core verify-checksums
+          wp_site config create --dbname=atlas_verify --dbuser=root --dbpass=root --dbhost=localhost
+          wp_site core install --url='http://atlas-wp-test.invalid' --title='Atlas Draft Test' \
+            --admin_user=atlas_test --admin_password='Disposable-Fixture-Only-541!' \
+            --admin_email=atlas-test@example.invalid --skip-email
+          wp_site plugin install wordpress-importer --version=0.9.7 --activate
+          wp_site plugin verify-checksums wordpress-importer
+          wp_site core version
+          wp_site plugin get wordpress-importer --field=version
+          wp_site theme list --status=active --fields=name,version
+          php --version | head -1
+      - name: Prove the draft import can be retried without publishing or duplicating
+        run: |
+          set -euo pipefail
+          wp_root="$RUNNER_TEMP/wp-test"
+          wp_cli="$RUNNER_TEMP/wp-cli.phar"
+          wp_site() { php "$wp_cli" --path="$wp_root" --user=atlas_test "$@"; }
+          wp_site import "$RUNNER_TEMP/energy-draft.xml" --authors=skip --skip=attachment
+          wp_site eval-file tests/verify-wordpress-import.php
+          wp_site import "$RUNNER_TEMP/energy-draft.xml" --authors=skip --skip=attachment
+          wp_site eval-file tests/verify-wordpress-import.php
+  public-exports:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Fetch live guide, data, and navigation
+        run: node scripts/check-energy-release-once.mjs
