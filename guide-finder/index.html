@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Find a Community Guide by Task or Region | Wilke Public Labs</title>
+  <meta name="description" content="Find a public guide by task or region, from tool and seed libraries to repairs, donations and local drop-off rules.">
+  <link rel="canonical" href="https://itsmeb-lab.github.io/wilke-public-labs/guide-finder/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Find a Community Guide by Task or Region">
+  <meta property="og:url" content="https://itsmeb-lab.github.io/wilke-public-labs/guide-finder/">
+  <link rel="sitemap" type="application/xml" href="../sitemap.xml">
+  <link rel="stylesheet" href="../repair-cafe-planner/style.css?v=20261125-2">
+  <link rel="stylesheet" href="./finder.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the guide finder</a>
+  <header><div class="wrap site-header"><a href="../">Wilke Public Labs</a></div></header>
+  <main id="main" class="wrap" tabindex="-1">
+    <div class="intro">
+      <h1>Find a community guide</h1>
+      <p>Find a task, then check the rules for the exact service you plan to use.</p>
+    </div>
+    <section id="finder" class="finder" aria-labelledby="finder-label" hidden>
+      <h2 id="finder-label">Search by task or region</h2>
+      <div class="finder-fields">
+        <div>
+          <label for="lookup">What are you trying to do?</label>
+          <input id="lookup" type="search" maxlength="120" autocomplete="off" placeholder="Try donate broken glasses">
+        </div>
+        <div>
+          <label for="region">Region</label>
+          <select id="region">
+            <option value="">All covered regions</option>
+          </select>
+        </div>
+      </div>
+      <p class="finder-help">Results cover named programs in the guides. Check the provider’s source for dates, availability and eligibility.</p>
+      <p id="result-status" role="status"></p>
+      <ul id="matches" class="finder-results" role="list" aria-label="Matching guide questions"></ul>
+    </section>
+    <section class="notes" aria-labelledby="guide-list-title">
+      <h2 id="guide-list-title">Browse all guides</h2>
+    <!-- FINDER-GUIDES:START -->
+      <details class="browse-guide">
+        <summary>What Can I Bring to a Repair Café?</summary>
+        <p><a href="../repair-cafe-planner/">Open the guide</a></p>
+        <ul>
+          <li><a href="../repair-cafe-planner/#bicycle">Ordinary bicycle</a></li>
+          <li><a href="../repair-cafe-planner/#microwave">Microwave</a></li>
+          <li><a href="../repair-cafe-planner/#toaster">Toaster</a></li>
+          <li><a href="../repair-cafe-planner/#phone">Mobile phone</a></li>
+          <li><a href="../repair-cafe-planner/#ebike-electrical">E-bike with an electrical issue</a></li>
+          <li><a href="../repair-cafe-planner/#clothes-alteration">Clothing alteration or hemming</a></li>
+        </ul>
+      </details>
+      <details class="browse-guide">
+        <summary>Can I Donate Linens to an Animal Shelter?</summary>
+        <p><a href="../shelter-linen-guide/">Open the guide</a></p>
+        <ul>
+          <li><a href="../shelter-linen-guide/#small-towels">Hand towels or washcloths</a></li>
+          <li><a href="../shelter-linen-guide/#bath-towels">Large bath towels</a></li>
+          <li><a href="../shelter-linen-guide/#flat-sheets">Flat bed sheets</a></li>
+          <li><a href="../shelter-linen-guide/#fitted-sheets">Fitted sheets</a></li>
+          <li><a href="../shelter-linen-guide/#comforters">Filled comforters or duvet inserts</a></li>
+          <li><a href="../shelter-linen-guide/#pillows">Bed pillows</a></li>
+        </ul>
+      </details>
+      <details class="browse-guide">
+        <summary>Bulky Pickup or Drop-Off? Milwaukee and Wauwatosa</summary>
+        <p><a href="../milwaukee-bulky-items/">Open the guide</a></p>
+        <ul>
+          <li><a href="../milwaukee-bulky-items/#sofa-or-mattress">Sofa or mattress</a></li>
+          <li><a href="../milwaukee-bulky-items/#tv">Television</a></li>
+          <li><a href="../milwaukee-bulky-items/#large-appliance">Refrigerator or large appliance</a></li>
+          <li><a href="../milwaukee-bulky-items/#mixed-cleanout">Mixed cleanout pile</a></li>
+          <li><a href="../milwaukee-bulky-items/#commercial-hauler">Load handled by a paid hauler</a></li>
+        </ul>
+      </details>
+      <details class="browse-guide">
+        <summary>What Can Go in a Food-Scrap Drop-Off Bin?</summary>
+        <p><a href="../food-scrap-drop-off/">Open the guide</a></p>
+        <ul>
+          <li><a href="../food-scrap-drop-off/#raw-meat">Raw meat</a></li>
+          <li><a href="../food-scrap-drop-off/#cooked-meat">Cooked meat</a></li>
+          <li><a href="../food-scrap-drop-off/#brown-paper-bag">Brown paper bag left in the bin</a></li>
+          <li><a href="../food-scrap-drop-off/#compostable-plastic-bag">Certified compostable plastic bag</a></li>
+          <li><a href="../food-scrap-drop-off/#tea-bag">Used tea bag</a></li>
+        </ul>
+      </details>
+      <details class="browse-guide">
+        <summary>Can I Scan Documents at the Library?</summary>
+        <p><a href="../library-scanning/">Open the guide</a></p>
+        <ul>
+          <li><a href="../library-scanning/#usb">Scan to a USB drive</a></li>
+          <li><a href="../library-scanning/#email">Scan directly to email</a></li>
+          <li><a href="../library-scanning/#no-card">Scan without a library card</a></li>
+          <li><a href="../library-scanning/#tabloid">Scan an 11 × 17 inch page</a></li>
+          <li><a href="../library-scanning/#duplex">Scan both sides through a feeder</a></li>
+        </ul>
+      </details>
+      <details class="browse-guide">
+        <summary>Library Museum Passes and Timed Tickets</summary>
+        <p><a href="../library-museum-passes/">Open the guide</a></p>
+        <ul>
+          <li><a href="../library-museum-passes/#reserve-pass">Reserve the library pass ahead</a></li>
+          <li><a href="../library-museum-passes/#book-venue">Use the pass to book a venue time</a></li>
+          <li><a href="../library-museum-passes/#at-the-door">Redeem the pass at the venue</a></li>
+          <li><a href="../library-museum-passes/#group-entry">Check how many people it covers</a></li>
+          <li><a href="../library-museum-passes/#return-pass">Return a physical pass</a></li>
+        </ul>
+      </details>
+      <details class="browse-guide">
+        <summary>Seed Library Rules for Borrowing and Returning</summary>
+        <p><a href="../library-seed-borrowing/">Open the guide</a></p>
+        <ul>
+          <li><a href="../library-seed-borrowing/#without-card">Take seeds without a library card</a></li>
+          <li><a href="../library-seed-borrowing/#packet-limit">Check the packet limit</a></li>
+          <li><a href="../library-seed-borrowing/#unused-seeds">Return unused seeds</a></li>
+          <li><a href="../library-seed-borrowing/#saved-seeds">Share seeds from your harvest</a></li>
+          <li><a href="../library-seed-borrowing/#donate-seeds">Donate seeds to the library</a></li>
+        </ul>
+      </details>
+      <details class="browse-guide">
+        <summary>Tool Library Rules for Borrowing and Paying</summary>
+        <p><a href="../tool-library-borrowing/">Open the guide</a></p>
+        <ul>
+          <li><a href="../tool-library-borrowing/#household-borrower">Borrow as a household or individual</a></li>
+          <li><a href="../tool-library-borrowing/#free-loan">Borrow without a membership or loan fee</a></li>
+          <li><a href="../tool-library-borrowing/#extra-fees">Check membership, deposits and item fees</a></li>
+          <li><a href="../tool-library-borrowing/#reserve">Reserve a tool before visiting</a></li>
+          <li><a href="../tool-library-borrowing/#return-tool">Check where and when to bring it back</a></li>
+        </ul>
+      </details>
+      <details class="browse-guide">
+        <summary>Library Sensory Rooms and Quiet Hours</summary>
+        <p><a href="../library-sensory-spaces/">Open the guide</a></p>
+        <ul>
+          <li><a href="../library-sensory-spaces/#walk-in">Visit without a reservation</a></li>
+          <li><a href="../library-sensory-spaces/#no-library-card">Use the service without a library card</a></li>
+          <li><a href="../library-sensory-spaces/#dedicated-room">Use a dedicated room</a></li>
+          <li><a href="../library-sensory-spaces/#child-supervision">Check supervision and age rules</a></li>
+          <li><a href="../library-sensory-spaces/#time-limit">Check session length or time limits</a></li>
+        </ul>
+      </details>
+      <details class="browse-guide">
+        <summary>Eyeglass and Hearing Aid Donation Rules</summary>
+        <p><a href="../eyeglass-donation-rules/">Open the guide</a></p>
+        <ul>
+          <li><a href="../eyeglass-donation-rules/#broken-frames">Donate broken glasses or frame parts</a></li>
+          <li><a href="../eyeglass-donation-rules/#loose-lenses">Donate loose lenses</a></li>
+          <li><a href="../eyeglass-donation-rules/#glasses-cases">Include eyeglass cases</a></li>
+          <li><a href="../eyeglass-donation-rules/#sunglasses">Donate sunglasses</a></li>
+          <li><a href="../eyeglass-donation-rules/#hearing-aids">Donate used hearing aids</a></li>
+        </ul>
+      </details>
+    <!-- FINDER-GUIDES:END -->
+    </section>
+    <section class="notes" aria-labelledby="other-tools-title">
+      <h2 id="other-tools-title">Other planning tools</h2>
+      <ul class="utility-links" role="list">
+        <li><a href="../published-policy-lab/">Published Policy Lab</a></li>
+        <li><a href="../published-policy-lab/#wood-chip-load">Wake Forest wood-chip load estimator</a></li>
+        <li><a href="../milwaukee-cleanout-floor-handoff/">Milwaukee cleanout to hardwood worksheet</a></li>
+      </ul>
+    </section>
+  </main>
+  <footer class="wrap"><p>Prepared by <a href="../">Wilke Public Labs</a>.</p></footer>
+</body>
+</html>

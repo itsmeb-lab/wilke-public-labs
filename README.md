@@ -96,6 +96,7 @@ Then open a lab:
 - `http://localhost:8080/tool-library-borrowing/`
 - `http://localhost:8080/library-sensory-spaces/`
 - `http://localhost:8080/eyeglass-donation-rules/`
+- `http://localhost:8080/guide-finder/`
 
 See [how to verify the public comparisons and trace a source change](./COMPARISON-MAINTENANCE.md).
 
@@ -128,7 +129,7 @@ Start with the [diagnostic scope and free handoff checklist](https://wilkeservic
 
 Found these labs through Upwork? Keep pre-contract discussion and payment in the existing Upwork conversation. Do not use the direct-site contact route to move a marketplace relationship off-platform.
 
-The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the fifteen published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
+The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the sixteen published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
 
 ## License
 

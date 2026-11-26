@@ -26,10 +26,12 @@ Use the result to prioritize rereads. A listed source has an older review date. 
 node scripts/review-comparisons.mjs --served
 ```
 
-Run this from the exact deployed revision. It checks the canonical public comparison pages, their CSV downloads, the landing pages, the Milwaukee handoff and its print stylesheet, wood-chip assets and the sitemap against the checked-out files. It uses ordinary read-only HTTP requests and returns an error for redirects, unavailable URLs, stale responses, or mismatched content. It also checks canonical HTML and flags page-level indexing exclusions. Run `--robots` for the hosting origin’s robots.txt response. These checks cannot report indexing, sessions or referrals.
+Run this from the exact deployed revision. It checks the canonical public comparison pages, their CSV downloads, the landing pages, the Milwaukee handoff and its print stylesheet, wood-chip assets, the community guide finder and its assets, and the sitemap against the checked-out files. It uses ordinary read-only HTTP requests and returns an error for redirects, unavailable URLs, stale responses, or mismatched content. It also checks canonical HTML and flags page-level indexing exclusions. Run `--robots` for the hosting origin’s robots.txt response. These checks cannot report indexing, sessions or referrals.
 
 ## WordPress staging
 
 The [Page Generator Pro exchange](./wordpress-exchange/README.md) preserves one draft row per guide. Regenerate and check its CSV when changing the published HTML. The original site remains the canonical reference.
 
 Answer-card fragments use the stable task and operator IDs. Use the section URL to compare several providers, or the linked provider heading to share a specific card. Keep existing IDs when updating wording or evidence.
+
+Refresh the public finder when a guide, task or named route changes. Update the synonyms and region labels in `scripts/update-guide-finder.mjs` as needed, then run it with `--write`. The command refreshes both the static browse links and the local search data. Run `--check` before release.

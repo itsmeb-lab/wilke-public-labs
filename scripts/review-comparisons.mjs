@@ -88,6 +88,11 @@ export async function checkServed(fetcher = fetch) {
     ['wordpress-exchange/comparisons-draft.csv', 'wordpress-exchange/comparisons-draft.csv'],
     ['milwaukee-cleanout-floor-handoff/', 'milwaukee-cleanout-floor-handoff/index.html'],
     ['milwaukee-cleanout-floor-handoff/worksheet.css', 'milwaukee-cleanout-floor-handoff/worksheet.css'],
+    ['guide-finder/', 'guide-finder/index.html'],
+    ['guide-finder/finder.css', 'guide-finder/finder.css'],
+    ['guide-finder/app.mjs', 'guide-finder/app.mjs'],
+    ['guide-finder/search.mjs', 'guide-finder/search.mjs'],
+    ['guide-finder/index-data.mjs', 'guide-finder/index-data.mjs'],
   ]);
   for (const { slug } of comparisonGuides) {
     expected.set(slug + '/', slug + '/index.html');

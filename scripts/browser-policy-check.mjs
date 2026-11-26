@@ -25,7 +25,8 @@ const served=new Map([
  ["tool-library-borrowing",new Set(["index.html"])],
  ["milwaukee-cleanout-floor-handoff",new Set(["index.html","worksheet.css"])],
  ["library-sensory-spaces",new Set(["index.html"])],
- ["eyeglass-donation-rules",new Set(["index.html"])]
+ ["eyeglass-donation-rules",new Set(["index.html"])],
+ ["guide-finder",new Set(["index.html","finder.css","index-data.mjs","search.mjs","app.mjs"])]
 ]);
 const mime={html:"text/html; charset=utf-8",css:"text/css; charset=utf-8",mjs:"text/javascript; charset=utf-8"};
 const driverFolder=process.env.EDGEWEBDRIVER;
@@ -159,6 +160,22 @@ try{
    await click("#wood-chip-calc");
    assert.ok((await result()).includes("20 cubic yards of your planned volume would still be needed"));
   });
+  await rpc("POST",sid("/url"),{url:origin+"/guide-finder/"});
+  await check("guide finder search, region and layout at "+width+"px",async()=>{
+   const readyBy=Date.now()+6000;
+   while(await execute("return document.getElementById('finder').hidden;")){
+    if(Date.now()>=readyBy)throw new Error("Guide finder did not load.");
+    await delay(50);
+   }
+   const initial=await execute("const q=document.getElementById('lookup'),s=document.getElementById('region');q.value='donate broken glasses';s.value='us-ga';q.dispatchEvent(new Event('input'));return {link:document.querySelector('#matches li li a')?.hash, text:document.getElementById('matches').innerText, width:innerWidth, scroll:document.documentElement.scrollWidth};");
+   assert.equal(initial.link,"#answer--broken-frames--georgia-lions");
+   assert.ok(initial.text.includes("Georgia Lions Lighthouse")&&!initial.text.includes("Minnesota"));
+   assert.equal(initial.width,width);assert.ok(initial.scroll<=width+1);
+   const noMatch=await execute("const q=document.getElementById('lookup');q.value='unlisted service';q.dispatchEvent(new Event('input'));return {status:document.getElementById('result-status').innerText, found:document.getElementById('matches').children.length, sources:performance.getEntriesByType('resource').map(entry=>new URL(entry.name).origin)};");
+   assert.ok(noMatch.status.includes("No matching"));assert.equal(noMatch.found,0);
+   assert.ok(noMatch.sources.length>0&&noMatch.sources.every(value=>value===origin));
+   return {width,link:initial.link,privateLookup:true};
+  });
   await closeSession();
  }
  const runtime=await session(390,844,false);
@@ -167,6 +184,14 @@ try{
   assert.equal(s.tasks,0,"Browser app ran despite the disabled-JavaScript fixture.");assert.ok(s.noScriptNotice,"No-script notice is not displayed.");
   assert.ok(await execute("return document.getElementById('wood-chip-controls').hidden && document.getElementById('wood-chip-load').innerText.includes('divide by 324');"));
   assert.ok(s.scrollWidth<=391);return {width:s.width,cards:s.cards,rows:s.rows,appTasks:s.tasks,runtime};
+ });
+ await rpc("POST",sid("/url"),{url:origin+"/guide-finder/"});
+ await check("guide finder static list with JavaScript disabled",async()=>{
+  const state=await execute("return {hidden:document.getElementById('finder').hidden, guides:document.querySelectorAll('.browse-guide').length, link:document.querySelector('.browse-guide a[href=\"../repair-cafe-planner/#microwave\"]')?.hash};");
+  assert.equal(state.hidden,true);
+  assert.equal(state.guides,10);
+  assert.equal(state.link,"#microwave");
+  return state;
  });
  await closeSession();
  for(const [width,height] of [[320,800],[1280,900]]){
