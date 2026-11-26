@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Milwaukee Junk Removal &amp; House Cleanout Planner | Wilke Public Labs</title>
+  <meta name="description" content="Decide between city bulky pickup, donation, drop-off and a paid cleanout in the Milwaukee area. Build a room-by-room scope before you compare quotes.">
+  <link rel="canonical" href="https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-junk-removal/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Milwaukee Junk Removal &amp; House Cleanout Planner">
+  <meta property="og:description" content="Find the right removal route, then write down what a cleanout crew needs to quote.">
+  <meta property="og:url" content="https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-junk-removal/">
+  <link rel="sitemap" type="application/xml" href="../sitemap.xml">
+  <link rel="stylesheet" href="../repair-cafe-planner/style.css?v=20261125-2">
+  <link rel="stylesheet" href="./planner.css">
+  <script type="module" src="./planner.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the planner</a>
+  <header><div class="wrap site-header"><a href="../">Wilke Public Labs</a></div></header>
+  <main id="main" class="wrap" tabindex="-1">
+    <div class="intro">
+      <h1>Milwaukee junk removal and house cleanouts</h1>
+      <p>Find out when local pickup, donation or drop-off can handle the job. For rooms that need to be emptied, put the same scope in front of each hauler before comparing prices.</p>
+    </div>
+    <nav class="choices" aria-label="Cleanout planner sections">
+      <ul role="list">
+        <li><a href="#choose-route">Choose a route</a></li>
+        <li><a href="#municipalities">Check city rules</a></li>
+        <li><a href="#quote-scope">Prepare a quote scope</a></li>
+      </ul>
+    </nav>
+    <section class="notes" aria-labelledby="choose-route">
+      <h2 id="choose-route">Choose a removal route</h2>
+      <p>Check who collects trash at the property. A Milwaukee mailing address can have a different municipal collector. Your choices stay on this page.</p>
+      <div class="route-planner" id="route-planner" hidden>
+        <div class="planner-fields">
+          <label for="authority">Who can approve removal?
+            <select id="authority">
+              <option value="">Choose one</option>
+              <option value="cleared">Owner or authorized representative has cleared the listed items</option>
+              <option value="unresolved">Someone still needs to approve it or the items are disputed</option>
+            </select>
+          </label>
+          <label for="handling">What work is needed?
+            <select id="handling">
+              <option value="">Choose one</option>
+              <option value="self">I can get one or a few items to the curb or a drop-off site</option>
+              <option value="crew">A crew needs to carry items out or clear rooms</option>
+            </select>
+          </label>
+          <label for="items">What is going out?
+            <select id="items">
+              <option value="">Choose one</option>
+              <option value="bulky">Ordinary bulky items such as worn furniture</option>
+              <option value="reusable">Furniture that could be reused</option>
+              <option value="separate">TVs, appliances, tires or renovation debris</option>
+              <option value="mixed">Several types of household contents</option>
+              <option value="hazards">Chemicals or material that may need a specialist</option>
+            </select>
+          </label>
+        </div>
+        <div class="planner-actions"><button type="button" id="choose">Show my next step</button></div>
+        <div class="planner-result" id="route-result" tabindex="-1" hidden>
+          <h3 id="result-title"></h3>
+          <p id="result-detail"></p>
+          <a id="result-link" hidden></a>
+        </div>
+      </div>
+      <ul class="route-list">
+        <li><strong>Small load you can move.</strong> Check your collector's setout, size and appointment rules. Check facility eligibility before driving a load to a site.</li>
+        <li><strong>Usable items.</strong> Ask the donation organization which items and pickup locations it accepts. Milwaukee Habitat ReStore's standard pickup covers eligible items. Its <a href="https://milwaukeerestore.org/donate/schedule-a-pickup/">pickup page</a> lists access requirements and a separate paid option.</li>
+        <li><strong>Rooms to empty or a fixed deadline.</strong> Get a written cleanout scope and confirm stairs, truck access, disposal, sweep-up and the handoff time.</li>
+        <li><strong>Permission or materials are unclear.</strong> Pause those items. Wisconsin DATCP has a <a href="https://datcp.wi.gov/Pages/Publications/LandlordTenantGuide.aspx">landlord and tenant guide</a> for questions about a rental. Check <a href="https://www.mmsd.com/what-you-can-do/home-haz-mat-collection">MMSD household hazardous waste</a> eligibility and accepted items before moving chemicals.</li>
+      </ul>
+    </section>
+    <section class="notes" aria-labelledby="municipalities">
+      <h2 id="municipalities">Bulky pickup in six Milwaukee-area cities</h2>
+      <p>Start with the city that serves the property. These rules describe municipal routes. A paid hauler should identify where it will take the load and include any charges in its quote.</p>
+      <ul class="cards municipality-cards" role="list">
+        <li id="city-milwaukee"><h3>Milwaukee</h3><p>City Sanitation serves eligible addresses. Ordinary bulky items up to one cubic yard can go at the regular collection point. Larger eligible loads require a special pickup with a fee. Mixed piles and loads exceeding six cubic yards are excluded from special pickup.</p><p class="source"><a href="https://city.milwaukee.gov/sanitation/Bulky-Item-Pickup">City bulky rules</a> · <a href="https://city.milwaukee.gov/sanitation/DropOff">City Drop Off Centers</a></p></li>
+        <li id="city-west-allis"><h3>West Allis</h3><p>The city lists one cubic yard for eligible setout items and extra fees for items over 50 pounds. Queen-size and larger mattresses have a fee. Garbage bags go in the cart.</p><p class="source"><a href="https://www.westalliswi.gov/article/2734296">West Allis's updated garbage rules</a></p></li>
+        <li id="city-wauwatosa"><h3>Wauwatosa</h3><p>Ask Public Works about special collection for furniture or a large cleanout. Items such as TVs and appliances can affect the charge. Confirm what the drop-off center will take before you load.</p><p class="source"><a href="https://wauwatosa.gov/departments/public-works/collection-services/special-collection/">Wauwatosa special collection rules</a></p></li>
+        <li id="city-glendale"><h3>Glendale</h3><p>Schedule eligible furniture and other bulk items with the city's collector. The city directs residents to set items out the night before the scheduled pickup.</p><p class="source"><a href="https://www.glendalewi.gov/355/Disposal-of-Large-Bulky-or-Non-Household">Glendale bulky item instructions</a></p></li>
+        <li id="city-south-milwaukee"><h3>South Milwaukee</h3><p>The city lists one no-charge scheduled bulk collection per month for residents. Book in advance and check the current instructions for appliances, carpet and larger pieces.</p><p class="source"><a href="https://southmilwaukee.gov/582/Bulk-Item-Pickup">South Milwaukee bulk pickup rules</a></p></li>
+        <li id="city-brookfield"><h3>City of Brookfield</h3><p>Check the city's current paid collection instructions before putting furniture out. The city recycling center takes appliances under its rules. It excludes other bulky items.</p><p class="source"><a href="https://www.ci.brookfield.wi.us/320/Bulky-Items">City of Brookfield bulky rules</a></p></li>
+      </ul>
+      <p class="city-help">For a TV, appliance, mattress or mixed load, see the <a href="../milwaukee-bulky-items/">Milwaukee and Wauwatosa item-by-item guide</a>.</p>
+    </section>
+    <section class="notes" aria-labelledby="quote-scope">
+      <h2 id="quote-scope">Write the scope before asking for a price</h2>
+      <p>Copy this list or print it for the walk-through. Use the same room list, load sizes and access details for every estimate.</p>
+      <dl class="scope-list">
+        <div><dt>Rooms and contents</dt><dd>List the rooms to empty, large items and anything clearly marked to stay. For an estate or rental, confirm who will approve any disputed items before removal.</dd></div>
+        <div><dt>Access</dt><dd>Count the flights of stairs and note tight turns and the distance to the loading spot. Confirm who will let the crew in.</dd></div>
+        <div><dt>Charges</dt><dd>Ask how much volume the price includes, what an extra load costs, and which disposal, lifting or sweep-up charges are separate.</dd></div>
+        <div><dt>Handoff</dt><dd>Put the completion deadline and expected room condition in writing. Decide who will confirm the job is done and whether photos are needed.</dd></div>
+      </dl>
+      <div class="scope-links">
+        <a href="../milwaukee-cleanout-floor-handoff/#quote-scope">Compare two written estimates</a>
+        <a href="../milwaukee-cleanout-floor-handoff/#room-notes">Plan a cleanout before a flooring inspection</a>
+        <a data-cleanout-service href="https://wilkeservices.com/property/estate-rental-cleanouts?utm_source=wilke_public_labs&amp;utm_medium=referral&amp;utm_campaign=milwaukee_cleanouts&amp;utm_content=planner_scope">See Wilke's estate and rental cleanout scope</a>
+      </div>
+      <p class="service-note">Ask Wilke to confirm availability for the property before scheduling.</p>
+    </section>
+  </main>
+  <footer class="wrap"><p>Prepared by <a href="../">Wilke Public Labs</a>. City sources reviewed <time datetime="2026-11-26">November 26, 2026</time>.</p></footer>
+</body>
+</html>

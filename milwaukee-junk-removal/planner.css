@@ -1,0 +1,45 @@
+.route-planner, .scope-list > div {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: .65rem;
+}
+.route-planner { padding: clamp(.85rem, 2.5vw, 1.4rem); margin-block: 1.1rem; }
+.planner-fields, .scope-list { display: grid; gap: .8rem; }
+.planner-fields { grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
+.planner-fields label { display: grid; align-content: start; gap: .35rem; font-weight: 700; min-width: 0; }
+.planner-fields select {
+  width: 100%; min-width: 0; min-height: 2.75rem;
+  padding: .35rem; border: 1px solid #7a877c; border-radius: .3rem;
+  font: inherit; font-weight: 450; background: var(--surface); color: var(--ink);
+}
+.planner-actions { margin-block: .9rem 0; }
+.planner-actions button {
+  min-height: 2.75rem; padding: .4rem .85rem; border: 1px solid var(--accent);
+  border-radius: .3rem; background: var(--accent); color: #fff; font: inherit; font-weight: 700; cursor: pointer;
+}
+.planner-fields select:focus-visible, .planner-actions button:focus-visible, .planner-result:focus {
+  outline: 3px solid var(--accent); outline-offset: 3px;
+}
+.planner-result { margin-block-start: 1rem; background: #e5eee6; padding: .85rem; border-radius: .4rem; }
+.planner-result h3 { margin-block-end: .35rem; }
+.planner-result p { margin-block-end: .35rem; }
+.route-list { padding-inline-start: 1.25rem; margin-block-end: 0; max-width: 72ch; }
+.route-list li + li { margin-block-start: .45rem; }
+.municipality-cards { margin-block: 1rem; }
+.municipality-cards h3 { margin-block-end: .45rem; }
+.municipality-cards li { scroll-margin-top: 1rem; }
+.scope-list { grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
+.scope-list > div { padding: .75rem; }
+.scope-list dt { font-weight: 720; }
+.scope-list dd { margin: .2rem 0 0; }
+.scope-links { display: flex; flex-wrap: wrap; gap: .1rem 1.25rem; }
+.scope-links a { display: flex; align-items: center; min-height: 2.75rem; font-weight: 650; }
+.service-note { color: var(--muted); font-size: .94rem; }
+@media print {
+  header, .choices, .route-planner, .skip, .scope-links { display: none; }
+  .wrap { width: 100%; }
+  body, .scope-list > div, .municipality-cards > li { background: #fff; color: #000; }
+  .scope-list > div, .municipality-cards > li { break-inside: avoid; }
+  .intro, .notes { padding-block: .6rem; }
+  h1 { font-size: 2rem; }
+}
