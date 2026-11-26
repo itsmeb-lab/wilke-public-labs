@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Community Guide Comparison Data | Wilke Public Labs</title>
+  <meta name="description" content="Download source-linked comparisons of community programs in CSV or JSON. Filter by guide, task, place, published policy and review date.">
+  <link rel="canonical" href="https://itsmeb-lab.github.io/wilke-public-labs/comparison-data/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Community Guide Comparison Data">
+  <meta property="og:url" content="https://itsmeb-lab.github.io/wilke-public-labs/comparison-data/">
+  <link rel="sitemap" type="application/xml" href="../sitemap.xml">
+  <link rel="stylesheet" href="../repair-cafe-planner/style.css?v=20261125-2">
+    <!-- DATA-METADATA:START -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Wilke Public Labs Community Guide Comparison Data","description":"A source-linked dataset of program rules by task, operator, jurisdiction and review date. Includes explicit restrictions and unresolved answers.","url":"https://itsmeb-lab.github.io/wilke-public-labs/comparison-data/","creator":{"@type":"Organization","name":"Wilke Public Labs","url":"https://itsmeb-lab.github.io/wilke-public-labs/"},"dateModified":"2026-11-25","variableMeasured":["Named program","Task","Policy status","Policy source","Source review date"],"distribution":[{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://itsmeb-lab.github.io/wilke-public-labs/comparison-data/community-comparisons.csv"},{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://itsmeb-lab.github.io/wilke-public-labs/comparison-data/community-comparisons.json"}]}</script>
+    <!-- DATA-METADATA:END -->
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the dataset</a>
+  <header><div class="wrap site-header"><a href="../">Wilke Public Labs</a></div></header>
+  <main id="main" class="wrap" tabindex="-1">
+    <div class="intro">
+      <h1>Community guide comparison data</h1>
+      <p>Download the public guide records with the named operator, task, source link and evidence date in each row.</p>
+      <ul class="utility-links" role="list">
+        <li><a href="./community-comparisons.csv" download>Download CSV</a></li>
+        <li><a href="./community-comparisons.json" download>Download JSON</a></li>
+        <li><a href="../guide-finder/">Find a guide by task or region</a></li>
+      </ul>
+    </div>
+    <section class="notes" aria-labelledby="coverage">
+      <h2 id="coverage">Snapshot coverage</h2>
+    <!-- DATA-COVERAGE:START -->
+      <p>324 task and program records across 62 program routes, 10 guides and 5 countries. 248 records have a source-linked rule and 76 are unconfirmed.</p>
+      <p>Most recent snapshot review <time datetime="2026-11-25">2026-11-25</time>.</p>
+    <!-- DATA-COVERAGE:END -->
+    </section>
+    <section class="notes" aria-labelledby="data-fields">
+      <h2 id="data-fields">How to read a record</h2>
+      <dl>
+        <dt><strong>record_id and answer_url</strong></dt><dd>Use the stable ID for joins and the link to open the exact task and operator.</dd>
+        <dt><strong>guide, operator_id, item_id and jurisdiction</strong></dt><dd>Apply each rule only to the named guide, program, task and place. Match on these IDs before comparing findings.</dd>
+        <dt><strong>fit and rule</strong></dt><dd>Listed means there is a published statement for the task. Excluded means the operator expressly restricts it. Ask means confirm first. Paused indicates the operator is not currently asking for an item. Unknown means the reviewed material did not settle the task.</dd>
+        <dt><strong>policy_source, source_checked_on, and organizer_route</strong></dt><dd>The policy source and review date belong to the stated rule. For unknown records, those fields are blank and the organizer route gives a place to check.</dd>
+        <dt><strong>snapshot_reviewed_on</strong></dt><dd>The guide’s snapshot date. Use the linked operator for current eligibility, hours and availability.</dd>
+      </dl>
+    </section>
+  </main>
+  <footer class="wrap"><p>Compiled by <a href="../">Wilke Public Labs</a> from the linked program publications.</p></footer>
+</body>
+</html>

@@ -37,3 +37,5 @@ Answer-card fragments use the stable task and operator IDs. Use the section URL 
 Refresh the public finder when a guide, task or named route changes. Update the synonyms and region labels in `scripts/update-guide-finder.mjs` as needed, then run it with `--write`. The command refreshes both the static browse links and the local search data. Run `--check` before release.
 
 The Spanish Milwaukee guide uses the same route, task, source and status records as the English guide. When the English catalog changes, review every affected Spanish entry, replace the catalog hash in the translation file with that reviewed snapshot’s hash, and run `node scripts/update-milwaukee-bulky-es.mjs --write`. The reciprocal language links are checked separately from the canonical links.
+
+Refresh the combined data with `node scripts/update-comparison-data.mjs --write` after any catalog change. The CSV, JSON and published summary derive from the same records as the individual comparisons. The Spanish edition uses the English comparison source records and does not multiply those records.

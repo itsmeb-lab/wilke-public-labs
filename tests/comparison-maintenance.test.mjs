@@ -49,7 +49,7 @@ test('source review finds an alternate mentioned only in the page notes', () => 
 
 test('release verification reads only the exact canonical pages, downloads and sitemap', async () => {
   const reads = await checkServed(fakeResponse);
-  assert.equal(reads.length, 37);
+  assert.equal(reads.length, 40);
   assert.ok(reads.some((entry) => entry.url === base));
   assert.ok(reads.some((entry) => entry.url === base + 'published-policy-lab/wood-chip-load.mjs?v=20261125-1'));
   assert.ok(reads.some((entry) => entry.url === base + 'milwaukee-bulky-items/comparison.csv'));

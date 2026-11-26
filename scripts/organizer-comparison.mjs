@@ -93,6 +93,31 @@ function validate(data, prepAnchor) {
   return { operators, tasks, sources, rules };
 }
 
+
+const comparisonColumns = ['record_id', 'operator_id', 'operator_name', 'area', 'country', 'jurisdiction', 'item_id', 'item', 'fit', 'rule', 'policy_source', 'source_checked_on', 'organizer_route', 'snapshot_reviewed_on'];
+
+function joinedRows({ operators, tasks, sources, rules }, reviewedOn) {
+  const rows = [];
+  for (const task of tasks.values()) {
+    for (const operator of operators.values()) {
+      const rule = rules.get(operator.id + ':' + task.id);
+      const source = rule && sources.get(rule.source);
+      rows.push({
+        record_id: operator.id + ':' + task.id, operator_id: operator.id, operator_name: operator.name,
+        area: operator.area, country: operator.country, jurisdiction: operator.jurisdiction,
+        item_id: task.id, item: task.label, fit: rule?.fit ?? 'unknown', rule: rule?.text ?? '',
+        policy_source: source?.url ?? '', source_checked_on: source?.checkedOn ?? '',
+        organizer_route: sources.get(operator.visitSource).url, snapshot_reviewed_on: reviewedOn,
+      });
+    }
+  }
+  return rows;
+}
+
+export function comparisonRecords(data) {
+  return joinedRows(validate(data), data.checkedOn);
+}
+
 export function serializeCsv(rows) {
   return rows.map((row) => row.map((value) => {
     if (/^[\s\uFEFF]*[=+@-]|^[\t\r\n]/u.test(value)) throw new Error('Unsafe spreadsheet cell.');
@@ -162,16 +187,8 @@ ${visits}
       </ul>
     </section>\n`;
 
-  const csvRows = [['record_id', 'operator_id', 'operator_name', 'area', 'country', 'jurisdiction', 'item_id', 'item', 'fit', 'rule', 'policy_source', 'source_checked_on', 'organizer_route', 'snapshot_reviewed_on']];
-  for (const task of tasks.values()) {
-    for (const operator of operators.values()) {
-      const rule = rules.get(`${operator.id}:${task.id}`);
-      const source = rule && sources.get(rule.source);
-      csvRows.push([`${operator.id}:${task.id}`, operator.id, operator.name, operator.area, operator.country, operator.jurisdiction,
-        task.id, task.label, rule?.fit ?? 'unknown', rule?.text ?? '', source?.url ?? '', source?.checkedOn ?? '',
-        sources.get(operator.visitSource).url, data.checkedOn]);
-    }
-  }
+  const csvRows = [comparisonColumns, ...joinedRows({ operators, tasks, sources, rules }, data.checkedOn)
+    .map((row) => comparisonColumns.map((field) => row[field]))];
   const csv = serializeCsv(csvRows);
   return { block, csv };
 }

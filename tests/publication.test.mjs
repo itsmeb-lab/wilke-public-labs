@@ -68,7 +68,7 @@ describe('lab index audience navigation', () => {
     const html = readFileSync(path.join(root, 'index.html'), 'utf8');
     const guides = html.split('<section class="labs" id="community-guides"')[1].split('</section>')[0];
     const demos = html.split('<section class="labs" id="software-demos"')[1];
-    for (const slug of ['published-policy-lab', 'repair-cafe-planner', 'shelter-linen-guide', 'milwaukee-bulky-items', 'food-scrap-drop-off', 'library-scanning', 'library-museum-passes', 'library-seed-borrowing', 'tool-library-borrowing', 'milwaukee-cleanout-floor-handoff', 'library-sensory-spaces', 'eyeglass-donation-rules', 'guide-finder', 'milwaukee-articulos-voluminosos']) {
+    for (const slug of ['published-policy-lab', 'repair-cafe-planner', 'shelter-linen-guide', 'milwaukee-bulky-items', 'food-scrap-drop-off', 'library-scanning', 'library-museum-passes', 'library-seed-borrowing', 'tool-library-borrowing', 'milwaukee-cleanout-floor-handoff', 'library-sensory-spaces', 'eyeglass-donation-rules', 'guide-finder', 'milwaukee-articulos-voluminosos', 'comparison-data']) {
       assert.ok(guides.includes('href="./' + slug + '/"'));
     }
     assert.ok(guides.includes('href="./published-policy-lab/#wood-chip-load"'));
@@ -80,11 +80,11 @@ describe('lab index audience navigation', () => {
 });
 
 describe('publication inventory', () => {
-  it('lists precisely the seventeen published canonical URLs, without tracking parameters', () => {
+  it('lists precisely the eighteen published canonical URLs, without tracking parameters', () => {
     const xml = readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-    assert.deepEqual(urls.sort(), [...pages.map(([, slug]) => origin + slug), origin + 'published-policy-lab/', origin + 'repair-cafe-planner/', origin + 'shelter-linen-guide/', origin + 'milwaukee-bulky-items/', origin + 'food-scrap-drop-off/', origin + 'library-scanning/', origin + 'library-museum-passes/', origin + 'library-seed-borrowing/', origin + 'tool-library-borrowing/', origin + 'milwaukee-cleanout-floor-handoff/', origin + 'library-sensory-spaces/', origin + 'eyeglass-donation-rules/', origin + 'guide-finder/', origin + 'milwaukee-articulos-voluminosos/'].sort());
+    assert.deepEqual(urls.sort(), [...pages.map(([, slug]) => origin + slug), origin + 'published-policy-lab/', origin + 'repair-cafe-planner/', origin + 'shelter-linen-guide/', origin + 'milwaukee-bulky-items/', origin + 'food-scrap-drop-off/', origin + 'library-scanning/', origin + 'library-museum-passes/', origin + 'library-seed-borrowing/', origin + 'tool-library-borrowing/', origin + 'milwaukee-cleanout-floor-handoff/', origin + 'library-sensory-spaces/', origin + 'eyeglass-donation-rules/', origin + 'guide-finder/', origin + 'milwaukee-articulos-voluminosos/', origin + 'comparison-data/'].sort());
     assert.doesNotMatch(xml, /utm_|localhost|\/admin|\/login/);
   });
   it('does not broaden the offer into Windows administration', () => {

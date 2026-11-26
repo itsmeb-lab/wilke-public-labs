@@ -27,7 +27,8 @@ const served=new Map([
  ["library-sensory-spaces",new Set(["index.html"])],
  ["eyeglass-donation-rules",new Set(["index.html"])],
  ["guide-finder",new Set(["index.html","finder.css","index-data.mjs","search.mjs","app.mjs"])],
- ["milwaukee-articulos-voluminosos",new Set(["index.html"])]
+ ["milwaukee-articulos-voluminosos",new Set(["index.html"])],
+ ["comparison-data",new Set(["index.html","community-comparisons.csv","community-comparisons.json"])]
 ]);
 const mime={html:"text/html; charset=utf-8",css:"text/css; charset=utf-8",mjs:"text/javascript; charset=utf-8"};
 const driverFolder=process.env.EDGEWEBDRIVER;
@@ -251,6 +252,22 @@ try{
    });
   }
 
+  await rpc("POST",sid("/url"),{url:origin+"/comparison-data/"});
+  await check("combined comparison dataset without JavaScript at "+width+"px",async()=>{
+   const end=Date.now()+5000;
+   let ready=false;
+   while(Date.now()<end){
+    ready=await execute("return document.readyState==='complete' && Boolean(document.getElementById('data-fields'));");
+    if(ready)break;
+    await delay(50);
+   }
+   assert.ok(ready);
+   const state=await execute("return {width:innerWidth,scroll:document.documentElement.scrollWidth,downloads:[...document.querySelectorAll('a[download]')].map(a=>a.getAttribute('href')),summary:document.querySelector('[aria-labelledby=coverage]').innerText};");
+   assert.equal(state.width,width);assert.ok(state.scroll<=width+1);
+   assert.deepEqual(state.downloads,["./community-comparisons.csv","./community-comparisons.json"]);
+   assert.ok(state.summary.includes("324 task and program records"));
+   return state;
+  });
   await rpc("POST",sid("/url"),{url:origin+"/milwaukee-cleanout-floor-handoff/"});
   await check("Milwaukee handoff worksheet at "+width+"px",async()=>{
    const until=Date.now()+9000;
