@@ -1,0 +1,254 @@
+{
+  "checkedOn": "2026-11-26",
+  "sources": {
+    "milwaukee-bicycle-collective-guide": {
+      "label": "Current shop, open hours and donation details",
+      "url": "https://www.bikecollective.org/",
+      "checkedOn": "2026-11-26"
+    },
+    "milwaukee-bicycle-collective-terms-1": {
+      "label": "Bicycle donation program",
+      "url": "https://www.bikecollective.org/donate/",
+      "checkedOn": "2026-11-26"
+    },
+    "bike-new-york-guide": {
+      "label": "Recycle-A-Bicycle donation policy and Bike Lab drop-off",
+      "url": "https://www.bike.nyc/recycleabicycle/recycle-a-bicycle-donations/",
+      "checkedOn": "2026-11-26"
+    },
+    "full-cycle-guide": {
+      "label": "Full Cycle bicycle donation guidelines",
+      "url": "https://fullcyclebikeshop.org/donate/donate-a-bike",
+      "checkedOn": "2026-11-26"
+    },
+    "scarborough-cycles-guide": {
+      "label": "Bike Hub donation details",
+      "url": "https://www.scarboroughcycles.ca/donate/",
+      "checkedOn": "2026-11-26"
+    }
+  },
+  "operators": [
+    {
+      "id": "milwaukee-bicycle-collective",
+      "name": "Milwaukee Bicycle Collective",
+      "area": "Milwaukee, Wisconsin",
+      "country": "US",
+      "jurisdiction": "us-wi",
+      "visitSource": "milwaukee-bicycle-collective-guide",
+      "sourceIds": [
+        "milwaukee-bicycle-collective-guide",
+        "milwaukee-bicycle-collective-terms-1"
+      ],
+      "prep": [
+        {
+          "label": "Where to go",
+          "text": "Bring the donation during open shop hours. Check the home page for the current shop information.",
+          "source": "milwaukee-bicycle-collective-guide"
+        },
+        {
+          "label": "What may happen to the bike",
+          "text": "The collective describes repairing bikes, using them for parts or recycling when needed.",
+          "source": "milwaukee-bicycle-collective-terms-1"
+        }
+      ]
+    },
+    {
+      "id": "bike-new-york",
+      "name": "Bike New York Recycle-A-Bicycle",
+      "area": "Brooklyn, New York",
+      "country": "US",
+      "jurisdiction": "us-ny",
+      "visitSource": "bike-new-york-guide",
+      "sourceIds": [
+        "bike-new-york-guide"
+      ],
+      "prep": [
+        {
+          "label": "Where to go",
+          "text": "Use the Bike Lab drop-off instructions and confirm current hours before arriving.",
+          "source": "bike-new-york-guide"
+        },
+        {
+          "label": "Bikes needing repair",
+          "text": "The organizer may take damaged bikes or bikes missing parts. Disclose the condition before heading there.",
+          "source": "bike-new-york-guide"
+        }
+      ]
+    },
+    {
+      "id": "full-cycle",
+      "name": "Full Cycle Bike Shop",
+      "area": "Minneapolis, Minnesota",
+      "country": "US",
+      "jurisdiction": "us-mn",
+      "visitSource": "full-cycle-guide",
+      "sourceIds": [
+        "full-cycle-guide"
+      ],
+      "prep": [
+        {
+          "label": "What to bring",
+          "text": "The shop lists adult and children's bikes in good to fair condition.",
+          "source": "full-cycle-guide"
+        },
+        {
+          "label": "When to arrive",
+          "text": "Use the shop's published hours and tell staff about major damage, rust or a bike missing most working parts.",
+          "source": "full-cycle-guide"
+        }
+      ]
+    },
+    {
+      "id": "scarborough-cycles",
+      "name": "Scarborough Cycles",
+      "area": "Toronto, Ontario",
+      "country": "CA",
+      "jurisdiction": "ca-on",
+      "visitSource": "scarborough-cycles-guide",
+      "sourceIds": [
+        "scarborough-cycles-guide"
+      ],
+      "prep": [
+        {
+          "label": "Where to go",
+          "text": "The donation page says its Bike Hubs can accept bikes, parts and tools. Confirm your chosen hub's current details before travel.",
+          "source": "scarborough-cycles-guide"
+        },
+        {
+          "label": "How to leave the donation",
+          "text": "Hand it to the hub during open hours. The organizer asks people to avoid leaving donations outside.",
+          "source": "scarborough-cycles-guide"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "working-bike",
+      "label": "Donate a rideable bicycle"
+    },
+    {
+      "id": "heavy-rust",
+      "label": "Donate a bicycle with heavy rust"
+    },
+    {
+      "id": "spare-parts",
+      "label": "Donate usable loose bike parts"
+    },
+    {
+      "id": "used-helmet",
+      "label": "Donate a used bicycle helmet"
+    },
+    {
+      "id": "collection",
+      "label": "Have the shop pick up a bicycle"
+    }
+  ],
+  "rules": [
+    {
+      "operator": "milwaukee-bicycle-collective",
+      "task": "working-bike",
+      "fit": "listed",
+      "text": "The collective accepts bicycle donations during open shop hours.",
+      "source": "milwaukee-bicycle-collective-guide"
+    },
+    {
+      "operator": "milwaukee-bicycle-collective",
+      "task": "heavy-rust",
+      "fit": "listed",
+      "text": "The collective says it takes bicycles in any condition and explicitly discusses old rusty bikes.",
+      "source": "milwaukee-bicycle-collective-terms-1"
+    },
+    {
+      "operator": "milwaukee-bicycle-collective",
+      "task": "spare-parts",
+      "fit": "listed",
+      "text": "The current shop page lists bicycle parts among the items it accepts.",
+      "source": "milwaukee-bicycle-collective-guide"
+    },
+    {
+      "operator": "milwaukee-bicycle-collective",
+      "task": "collection",
+      "fit": "ask",
+      "text": "The collective does not normally pick up bicycles. It may consider special arrangements case by case.",
+      "source": "milwaukee-bicycle-collective-guide"
+    },
+    {
+      "operator": "bike-new-york",
+      "task": "working-bike",
+      "fit": "listed",
+      "text": "Bike New York welcomes bikes that work.",
+      "source": "bike-new-york-guide"
+    },
+    {
+      "operator": "bike-new-york",
+      "task": "heavy-rust",
+      "fit": "excluded",
+      "text": "The donation policy excludes bicycles with excessive rust.",
+      "source": "bike-new-york-guide"
+    },
+    {
+      "operator": "bike-new-york",
+      "task": "spare-parts",
+      "fit": "listed",
+      "text": "Bring usable parts. The shop excludes components that are beyond repair or excessively worn or rusty.",
+      "source": "bike-new-york-guide"
+    },
+    {
+      "operator": "bike-new-york",
+      "task": "used-helmet",
+      "fit": "excluded",
+      "text": "Bike New York lists new helmets only.",
+      "source": "bike-new-york-guide"
+    },
+    {
+      "operator": "bike-new-york",
+      "task": "collection",
+      "fit": "ask",
+      "text": "The Bike Lab occasionally offers local pickup for qualifying donations. Ask staff to confirm.",
+      "source": "bike-new-york-guide"
+    },
+    {
+      "operator": "full-cycle",
+      "task": "working-bike",
+      "fit": "listed",
+      "text": "The shop accepts adult and children’s bikes in good to fair condition.",
+      "source": "full-cycle-guide"
+    },
+    {
+      "operator": "full-cycle",
+      "task": "heavy-rust",
+      "fit": "ask",
+      "text": "The shop says it can process severely rusty, damaged or mostly nonworking bikes with a suggested $10 donation per bike. Confirm the arrangement first.",
+      "source": "full-cycle-guide"
+    },
+    {
+      "operator": "full-cycle",
+      "task": "spare-parts",
+      "fit": "listed",
+      "text": "The shop accepts new and used parts and tools in good condition.",
+      "source": "full-cycle-guide"
+    },
+    {
+      "operator": "full-cycle",
+      "task": "collection",
+      "fit": "ask",
+      "text": "The shop generally cannot pick up bikes. Ask if staff can consider a large group of bicycles.",
+      "source": "full-cycle-guide"
+    },
+    {
+      "operator": "scarborough-cycles",
+      "task": "working-bike",
+      "fit": "listed",
+      "text": "The operator lists bicycle donations at its Bike Hubs.",
+      "source": "scarborough-cycles-guide"
+    },
+    {
+      "operator": "scarborough-cycles",
+      "task": "spare-parts",
+      "fit": "listed",
+      "text": "The operator lists bike parts, accessories and tools for donation.",
+      "source": "scarborough-cycles-guide"
+    }
+  ]
+}

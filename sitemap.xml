@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/automation-reliability-lab/</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/windows-process-recovery-watchdog/</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/</loc><lastmod>2026-11-25</lastmod></url>
@@ -12,10 +12,12 @@
   <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/library-museum-passes/</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/library-seed-borrowing/</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/tool-library-borrowing/</loc><lastmod>2026-11-25</lastmod></url>
-  <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-cleanout-floor-handoff/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-cleanout-floor-handoff/</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/library-sensory-spaces/</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/eyeglass-donation-rules/</loc><lastmod>2026-11-25</lastmod></url>
-  <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/guide-finder/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/guide-finder/</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-articulos-voluminosos/</loc><lastmod>2026-11-25</lastmod></url>
-  <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/comparison-data/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/comparison-data/</loc><lastmod>2026-11-26</lastmod></url>
+  <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/library-instrument-borrowing/</loc><lastmod>2026-11-26</lastmod></url>
+  <url><loc>https://itsmeb-lab.github.io/wilke-public-labs/used-bicycle-donations/</loc><lastmod>2026-11-26</lastmod></url>
 </urlset>

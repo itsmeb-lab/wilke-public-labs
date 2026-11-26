@@ -26,6 +26,8 @@ const served=new Map([
  ["milwaukee-cleanout-floor-handoff",new Set(["index.html","worksheet.css","quote-compare.mjs","quote-math.mjs"])],
  ["library-sensory-spaces",new Set(["index.html"])],
  ["eyeglass-donation-rules",new Set(["index.html"])],
+ ["library-instrument-borrowing",new Set(["index.html"])],
+ ["used-bicycle-donations",new Set(["index.html"])],
  ["guide-finder",new Set(["index.html","finder.css","index-data.mjs","search.mjs","app.mjs"])],
  ["milwaukee-articulos-voluminosos",new Set(["index.html"])],
  ["comparison-data",new Set(["index.html","community-comparisons.csv","community-comparisons.json"])]
@@ -212,7 +214,7 @@ try{
  await check("guide finder static list with JavaScript disabled",async()=>{
   const state=await execute("return {hidden:document.getElementById('finder').hidden, guides:document.querySelectorAll('.browse-guide').length, link:document.querySelector('.browse-guide a[href=\"../repair-cafe-planner/#microwave\"]')?.hash};");
   assert.equal(state.hidden,true);
-  assert.equal(state.guides,10);
+  assert.equal(state.guides,12);
   assert.equal(state.link,"#microwave");
   return state;
  });
@@ -229,6 +231,8 @@ try{
    {folder:"tool-library-borrowing",name:"tool library",anchor:"household-borrower",title:"Borrow as a household or individual",statuses:{"milwaukee-hri":"ask","rock-hill":"listed","duluth-one-roof":"listed","charlotte-toolbank":"excluded",berkeley:"listed","london-things":"listed"}},
    {folder:"library-sensory-spaces",name:"library sensory room",anchor:"walk-in",title:"Visit without a reservation",statuses:{"durham-calming":"listed","durham-mse":"excluded","north-manchester":"listed","toronto-stewart":"excluded","moreton-bay":"listed","queensland-corner":"excluded"}},
    {folder:"eyeglass-donation-rules",name:"eyeglass donor",anchor:"loose-lenses",title:"Donate loose lenses",statuses:{"georgia-lions":"ask","minnesota-lions":"excluded","lions-in-sight":"ask","thiensville-mequon":"unknown","canadian-lions":"unknown","lions-uk":"excluded"}},
+   {folder:"library-instrument-borrowing",name:"instrument reservation",anchor:"reserve-instrument",title:"Reserve an instrument before visiting",statuses:{mcfarland:"excluded","howard-county":"listed","athens-arts-west":"unknown",toronto:"ask",calgary:"listed","sydney-take-home":"listed","sydney-room":"excluded"}},
+   {folder:"used-bicycle-donations",name:"rusty bicycle donor",anchor:"heavy-rust",title:"Donate a bicycle with heavy rust",statuses:{"milwaukee-bicycle-collective":"listed","bike-new-york":"excluded","full-cycle":"ask","scarborough-cycles":"unknown"}},
    {folder:"milwaukee-articulos-voluminosos",name:"Milwaukee articles in Spanish",anchor:"tv",title:"Televisor",statuses:{"milwaukee-curb":"excluded","milwaukee-drop-off":"listed","wauwatosa-curb":"listed","wauwatosa-drop-off":"listed"}}
   ];
   await session(width,height,false,origin+"/"+cases[0].folder+"/");
@@ -286,7 +290,7 @@ try{
    const state=await execute("return {width:innerWidth,scroll:document.documentElement.scrollWidth,downloads:[...document.querySelectorAll('a[download]')].map(a=>a.getAttribute('href')),summary:document.querySelector('[aria-labelledby=coverage]').innerText};");
    assert.equal(state.width,width);assert.ok(state.scroll<=width+1);
    assert.deepEqual(state.downloads,["./community-comparisons.csv","./community-comparisons.json"]);
-   assert.ok(state.summary.includes("324 task and program records"));
+   assert.ok(state.summary.includes("379 task and program records"));
    return state;
   });
   await rpc("POST",sid("/url"),{url:origin+"/milwaukee-cleanout-floor-handoff/"});

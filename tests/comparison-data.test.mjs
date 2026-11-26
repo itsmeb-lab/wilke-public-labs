@@ -10,12 +10,12 @@ const { records } = snapshot;
 
 test('combined downloads match the reviewed article catalogs', () => {
   update('--check');
-  assert.equal(snapshot.snapshot.guide_count, 10);
-  assert.equal(snapshot.snapshot.program_route_count, 62);
+  assert.equal(snapshot.snapshot.guide_count, 12);
+  assert.equal(snapshot.snapshot.program_route_count, 73);
   assert.equal(snapshot.snapshot.country_count, 5);
-  assert.equal(snapshot.snapshot.record_count, 324);
-  assert.equal(snapshot.snapshot.reviewed_rule_count, 248);
-  assert.equal(snapshot.snapshot.unconfirmed_count, 76);
+  assert.equal(snapshot.snapshot.record_count, 379);
+  assert.equal(snapshot.snapshot.reviewed_rule_count, 289);
+  assert.equal(snapshot.snapshot.unconfirmed_count, 90);
   assert.equal(new Set(records.map(({ record_id }) => record_id)).size, records.length);
   assert.deepEqual(JSON.parse(read('comparison-data/community-comparisons.json')), snapshot);
 });

@@ -13,8 +13,10 @@ if ($csv === false) {
 }
 $columns = ['slug', 'heading', 'description', 'canonical_reference', 'reviewed_on', 'publication_state', 'comparison_html'];
 requireCondition(fgetcsv($csv, null, ',', '"', '') === $columns, 'Header columns do not match.');
-$slugs = ['repair-cafe-planner', 'shelter-linen-guide', 'milwaukee-bulky-items', 'food-scrap-drop-off', 'library-scanning', 'library-museum-passes', 'library-seed-borrowing', 'tool-library-borrowing', 'library-sensory-spaces', 'eyeglass-donation-rules'];
+$slugs = ['repair-cafe-planner', 'shelter-linen-guide', 'milwaukee-bulky-items', 'food-scrap-drop-off', 'library-scanning', 'library-museum-passes', 'library-seed-borrowing', 'tool-library-borrowing', 'library-sensory-spaces', 'eyeglass-donation-rules', 'library-instrument-borrowing', 'used-bicycle-donations'];
 $expected = [
+    'library-instrument-borrowing' => ['City of Sydney instrument collection', 'href="#answer--take-home--sydney-room"', 'Staff can hold'],
+    'used-bicycle-donations' => ['Milwaukee Bicycle Collective', 'href="#answer--heavy-rust--bike-new-york"', 'suggested $10 donation'],
     'repair-cafe-planner' => ['Repair Café Wales', 'data-operator="toronto" data-fit="unknown"', 'href="#microwave"'],
     'shelter-linen-guide' => ['No current need', 'SPCA Christchurch Centre', 'href="#bath-towels"'],
     'milwaukee-bulky-items' => ['Commercial and contractor vehicles are excluded', '$30–$45 each', 'href="#commercial-hauler"'],
@@ -32,7 +34,8 @@ foreach ($slugs as $slug) {
     $row = array_combine($columns, $cells);
     requireCondition($row['slug'] === $slug && $row['publication_state'] === 'STAGING_DRAFT_ONLY', 'Scope moved for ' . $slug);
     requireCondition($row['canonical_reference'] === 'https://itsmeb-lab.github.io/wilke-public-labs/' . $slug . '/', 'Canonical moved for ' . $slug);
-    requireCondition($row['reviewed_on'] === '2026-11-25' && $row['heading'] !== '' && $row['description'] !== '', 'Missing reviewed metadata.');
+    $reviewDate = in_array($slug, ['library-instrument-borrowing', 'used-bicycle-donations'], true) ? '2026-11-26' : '2026-11-25';
+    requireCondition($row['reviewed_on'] === $reviewDate && $row['heading'] !== '' && $row['description'] !== '', 'Missing reviewed metadata.');
     requireCondition(str_contains($row['comparison_html'], "\n"), 'Expected a multiline HTML cell.');
     foreach ($expected[$slug] as $phrase) {
         requireCondition(str_contains($row['comparison_html'], $phrase), 'Expected source-bound content in ' . $slug);
@@ -41,4 +44,4 @@ foreach ($slugs as $slug) {
 }
 requireCondition(fgetcsv($csv, null, ',', '"', '') === false, 'More than one row per canonical guide.');
 fclose($csv);
-echo 'PHP ' . PHP_VERSION . " read ten intact seven-column comparison drafts.\n";
+echo 'PHP ' . PHP_VERSION . " read " . count($slugs) . " intact seven-column comparison drafts.\n";

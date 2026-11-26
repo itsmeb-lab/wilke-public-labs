@@ -1,0 +1,415 @@
+{
+  "checkedOn": "2026-11-26",
+  "sources": {
+    "mcfarland-guide": {
+      "label": "Library of Things and ukulele kit details",
+      "url": "https://www.mcfarlandlibrary.org/library-things",
+      "checkedOn": "2026-11-26"
+    },
+    "howard-county-guide": {
+      "label": "Ukulele Kit borrowing policy",
+      "url": "https://www.hclibrary.org/things/ukuleles/",
+      "checkedOn": "2026-11-26"
+    },
+    "athens-arts-west-guide": {
+      "label": "City of Athens Musical Lending Library",
+      "url": "https://www.ci.athens.oh.us/540/SEO-Musical-Lending-Library",
+      "checkedOn": "2026-11-26"
+    },
+    "toronto-guide": {
+      "label": "Musical instrument agreement, locations and loan rules",
+      "url": "https://tpl.ca/using-the-library/services/borrow-a-musical-instrument/",
+      "checkedOn": "2026-11-26"
+    },
+    "calgary-guide": {
+      "label": "Musical Instrument Lending Library and procedures",
+      "url": "https://www.calgarylibrary.ca/events-and-programs/arts-and-culture/borrow-a-musical-instrument",
+      "checkedOn": "2026-11-26"
+    },
+    "sydney-take-home-guide": {
+      "label": "City of Sydney instrument collection and loan rules",
+      "url": "https://www.cityofsydney.nsw.gov.au/library-collections/musical-instruments-collection",
+      "checkedOn": "2026-11-26"
+    },
+    "sydney-room-guide": {
+      "label": "In-room instrument collection and take-home exceptions",
+      "url": "https://www.cityofsydney.nsw.gov.au/library-collections/musical-instruments-collection",
+      "checkedOn": "2026-11-26"
+    },
+    "sydney-room-terms-1": {
+      "label": "Green Square music room hire",
+      "url": "https://www.cityofsydney.nsw.gov.au/hireable-indoor-spaces/music-room-green-square-library",
+      "checkedOn": "2026-11-26"
+    }
+  },
+  "operators": [
+    {
+      "id": "mcfarland",
+      "name": "E. D. Locke Public Library",
+      "area": "McFarland, Wisconsin",
+      "country": "US",
+      "jurisdiction": "us-wi",
+      "visitSource": "mcfarland-guide",
+      "sourceIds": [
+        "mcfarland-guide"
+      ],
+      "prep": [
+        {
+          "label": "What is in the kit",
+          "text": "The listing includes a ukulele, tuner, songbook and chord chart. Request the kit at the main desk.",
+          "source": "mcfarland-guide"
+        },
+        {
+          "label": "Before you go",
+          "text": "Checkout is free. Ask at the desk or call to check if a kit is currently available.",
+          "source": "mcfarland-guide"
+        }
+      ]
+    },
+    {
+      "id": "howard-county",
+      "name": "Howard County Library System",
+      "area": "Howard County, Maryland",
+      "country": "US",
+      "jurisdiction": "us-md",
+      "visitSource": "howard-county-guide",
+      "sourceIds": [
+        "howard-county-guide"
+      ],
+      "prep": [
+        {
+          "label": "What to bring",
+          "text": "Bring an eligible card. The policy excludes DIY cards. Each kit includes an instrument, tuner and case.",
+          "source": "howard-county-guide"
+        },
+        {
+          "label": "Renewal and missing items",
+          "text": "Two automatic renewals are possible if nobody requests the kit. Lost or stolen kits incur the replacement cost plus $4.",
+          "source": "howard-county-guide"
+        }
+      ]
+    },
+    {
+      "id": "athens-arts-west",
+      "name": "Arts West Musical Lending Library",
+      "area": "Athens, Ohio",
+      "country": "US",
+      "jurisdiction": "us-oh",
+      "visitSource": "athens-arts-west-guide",
+      "sourceIds": [
+        "athens-arts-west-guide"
+      ],
+      "prep": [
+        {
+          "label": "What to do",
+          "text": "Go to Arts West during open hours. The city's program lists strings, keyboards and drums among its instruments.",
+          "source": "athens-arts-west-guide"
+        },
+        {
+          "label": "Confirm before traveling",
+          "text": "The city provides a program phone and email for availability, eligibility and collection questions.",
+          "source": "athens-arts-west-guide"
+        }
+      ]
+    },
+    {
+      "id": "toronto",
+      "name": "Toronto Public Library Musical Instrument Lending Library",
+      "area": "Toronto, Ontario",
+      "country": "CA",
+      "jurisdiction": "ca-on",
+      "visitSource": "toronto-guide",
+      "sourceIds": [
+        "toronto-guide"
+      ],
+      "prep": [
+        {
+          "label": "What to bring",
+          "text": "Bring a valid Toronto Public Library card and required ID if the card needs opening or renewal. Borrow one instrument at a time.",
+          "source": "toronto-guide"
+        },
+        {
+          "label": "Where to check availability",
+          "text": "Call Parkdale, Downsview or York Woods directly. Loss or damage can incur a replacement charge.",
+          "source": "toronto-guide"
+        }
+      ]
+    },
+    {
+      "id": "calgary",
+      "name": "Calgary Public Library at Memorial Park",
+      "area": "Calgary, Alberta",
+      "country": "CA",
+      "jurisdiction": "ca-ab",
+      "visitSource": "calgary-guide",
+      "sourceIds": [
+        "calgary-guide"
+      ],
+      "prep": [
+        {
+          "label": "What to bring",
+          "text": "Your library card needs photo-ID verification. Check out one instrument at a time.",
+          "source": "calgary-guide"
+        },
+        {
+          "label": "Collection deadline",
+          "text": "After staff notify you that an instrument is ready, you have seven days to collect it at Memorial Park.",
+          "source": "calgary-guide"
+        }
+      ]
+    },
+    {
+      "id": "sydney-take-home",
+      "name": "City of Sydney take-home instruments",
+      "area": "Sydney, New South Wales",
+      "country": "AU",
+      "jurisdiction": "au-nsw",
+      "visitSource": "sydney-take-home-guide",
+      "sourceIds": [
+        "sydney-take-home-guide"
+      ],
+      "prep": [
+        {
+          "label": "What to choose",
+          "text": "Kings Cross and Green Square lend ukuleles. Green Square also lists compact keyboards and MIDI controllers.",
+          "source": "sydney-take-home-guide"
+        },
+        {
+          "label": "What to check",
+          "text": "Library members may borrow one musical item. Loss or damage can incur fees.",
+          "source": "sydney-take-home-guide"
+        }
+      ]
+    },
+    {
+      "id": "sydney-room",
+      "name": "Green Square Library music room",
+      "area": "Sydney, New South Wales",
+      "country": "AU",
+      "jurisdiction": "au-nsw",
+      "visitSource": "sydney-room-guide",
+      "sourceIds": [
+        "sydney-room-guide",
+        "sydney-room-terms-1"
+      ],
+      "prep": [
+        {
+          "label": "What the room includes",
+          "text": "Hiring the room gives access to the baby grand piano, guitars, keyboards and other equipment listed by the city.",
+          "source": "sydney-room-terms-1"
+        },
+        {
+          "label": "Before reserving",
+          "text": "Check current hire fees and available sessions on the room's operator page.",
+          "source": "sydney-room-terms-1"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "take-home",
+      "label": "Take an instrument home"
+    },
+    {
+      "id": "reserve-instrument",
+      "label": "Reserve an instrument before visiting"
+    },
+    {
+      "id": "under-thirteen",
+      "label": "Child under 13 borrows without adult approval"
+    },
+    {
+      "id": "three-week-loan",
+      "label": "Keep the instrument for three weeks on the first loan"
+    },
+    {
+      "id": "different-return-branch",
+      "label": "Return the instrument to a different branch"
+    }
+  ],
+  "rules": [
+    {
+      "operator": "mcfarland",
+      "task": "take-home",
+      "fit": "listed",
+      "text": "McFarland lists ukulele kits for take-home checkout at the main desk.",
+      "source": "mcfarland-guide"
+    },
+    {
+      "operator": "mcfarland",
+      "task": "reserve-instrument",
+      "fit": "excluded",
+      "text": "Ukulele kits are first come, first served. The library does not place them on hold.",
+      "source": "mcfarland-guide"
+    },
+    {
+      "operator": "mcfarland",
+      "task": "three-week-loan",
+      "fit": "excluded",
+      "text": "The published ukulele kit loan is 14 days.",
+      "source": "mcfarland-guide"
+    },
+    {
+      "operator": "howard-county",
+      "task": "take-home",
+      "fit": "listed",
+      "text": "Borrow one ukulele kit for take-home use.",
+      "source": "howard-county-guide"
+    },
+    {
+      "operator": "howard-county",
+      "task": "reserve-instrument",
+      "fit": "listed",
+      "text": "The library accepts an online request for one kit per customer.",
+      "source": "howard-county-guide"
+    },
+    {
+      "operator": "howard-county",
+      "task": "under-thirteen",
+      "fit": "excluded",
+      "text": "The borrower must be 13 or older. An eligible adult can ask the library about borrowing on their own card.",
+      "source": "howard-county-guide"
+    },
+    {
+      "operator": "howard-county",
+      "task": "three-week-loan",
+      "fit": "listed",
+      "text": "The initial loan is three weeks.",
+      "source": "howard-county-guide"
+    },
+    {
+      "operator": "howard-county",
+      "task": "different-return-branch",
+      "fit": "listed",
+      "text": "Return it at a staffed desk at any Howard County branch. The library excludes book drops and other library systems.",
+      "source": "howard-county-guide"
+    },
+    {
+      "operator": "athens-arts-west",
+      "task": "take-home",
+      "fit": "listed",
+      "text": "The city offers free instrument checkout at Arts West.",
+      "source": "athens-arts-west-guide"
+    },
+    {
+      "operator": "athens-arts-west",
+      "task": "three-week-loan",
+      "fit": "excluded",
+      "text": "The city describes loans of two weeks at a time.",
+      "source": "athens-arts-west-guide"
+    },
+    {
+      "operator": "toronto",
+      "task": "take-home",
+      "fit": "listed",
+      "text": "Guitars, ukuleles, violins and other instruments are available for free with a valid library card.",
+      "source": "toronto-guide"
+    },
+    {
+      "operator": "toronto",
+      "task": "reserve-instrument",
+      "fit": "ask",
+      "text": "Call a participating branch. Staff can hold an available item for 48 hours.",
+      "source": "toronto-guide"
+    },
+    {
+      "operator": "toronto",
+      "task": "under-thirteen",
+      "fit": "excluded",
+      "text": "A parent or guardian must sign the agreement for every borrower under 18.",
+      "source": "toronto-guide"
+    },
+    {
+      "operator": "toronto",
+      "task": "three-week-loan",
+      "fit": "listed",
+      "text": "The initial loan is three weeks. Two renewals can extend it to nine weeks total.",
+      "source": "toronto-guide"
+    },
+    {
+      "operator": "toronto",
+      "task": "different-return-branch",
+      "fit": "excluded",
+      "text": "Return the instrument to the same participating branch that lent it.",
+      "source": "toronto-guide"
+    },
+    {
+      "operator": "calgary",
+      "task": "take-home",
+      "fit": "listed",
+      "text": "Eligible cardholders can borrow an instrument from Memorial Park Library.",
+      "source": "calgary-guide"
+    },
+    {
+      "operator": "calgary",
+      "task": "reserve-instrument",
+      "fit": "listed",
+      "text": "Place one instrument hold per card and select Memorial Park Library for collection.",
+      "source": "calgary-guide"
+    },
+    {
+      "operator": "calgary",
+      "task": "three-week-loan",
+      "fit": "listed",
+      "text": "The first loan is three weeks. Calgary allows one renewal when no one else has a hold.",
+      "source": "calgary-guide"
+    },
+    {
+      "operator": "calgary",
+      "task": "different-return-branch",
+      "fit": "excluded",
+      "text": "Return the instrument to Memorial Park Library.",
+      "source": "calgary-guide"
+    },
+    {
+      "operator": "sydney-take-home",
+      "task": "take-home",
+      "fit": "listed",
+      "text": "The City explicitly lists ukuleles and selected small keyboards or controllers for take-home borrowing.",
+      "source": "sydney-take-home-guide"
+    },
+    {
+      "operator": "sydney-take-home",
+      "task": "reserve-instrument",
+      "fit": "listed",
+      "text": "Reserve ukuleles in the online catalogue. Confirm the pickup options for other equipment.",
+      "source": "sydney-take-home-guide"
+    },
+    {
+      "operator": "sydney-take-home",
+      "task": "three-week-loan",
+      "fit": "listed",
+      "text": "The member take-home loan runs for up to three weeks.",
+      "source": "sydney-take-home-guide"
+    },
+    {
+      "operator": "sydney-take-home",
+      "task": "different-return-branch",
+      "fit": "excluded",
+      "text": "Hand the instrument to a team member at the branch where you borrowed it.",
+      "source": "sydney-take-home-guide"
+    },
+    {
+      "operator": "sydney-room",
+      "task": "take-home",
+      "fit": "excluded",
+      "text": "This collection is for use when hiring the Green Square music room. The city lists separate take-home items.",
+      "source": "sydney-room-guide"
+    },
+    {
+      "operator": "sydney-room",
+      "task": "reserve-instrument",
+      "fit": "excluded",
+      "text": "The city directs people to hire the room to access this equipment. It does not offer a separate reservation for an individual room instrument.",
+      "source": "sydney-room-terms-1"
+    },
+    {
+      "operator": "sydney-room",
+      "task": "three-week-loan",
+      "fit": "excluded",
+      "text": "This is a room hire session. The room instruments are described for use on site.",
+      "source": "sydney-room-guide"
+    }
+  ]
+}

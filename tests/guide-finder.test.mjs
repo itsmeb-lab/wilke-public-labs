@@ -11,8 +11,8 @@ const read = (file) => readFileSync(new URL('../' + file, import.meta.url), 'utf
 
 test('finder projections stay in sync with the public guide catalogs', () => {
   update('--check');
-  assert.equal(guides.length, 10);
-  assert.equal(regions.length, 22);
+  assert.equal(guides.length, 12);
+  assert.equal(regions.length, 24);
   const html = read('guide-finder/index.html');
   for (const { slug, tasks } of guides) {
     assert.ok(html.includes('href="../' + slug + '/"'), slug);
@@ -36,6 +36,17 @@ test('location filtering and status operate on one named route without joining p
   assert.deepEqual(search('Toronto Durham quiet room'), []);
   assert.deepEqual(search('quiet room', 'ca-ns'), []);
   assert.ok(search('', 'us-wi').every(({ routes }) => routes.every((r) => r.region === 'us-wi')));
+});
+
+test('specific search avoids joining repairing with donating or hiring with borrowing', () => {
+  const [bike] = search('donate rusty bike Milwaukee', 'us-wi');
+  assert.equal(bike.id, 'heavy-rust');
+  assert.deepEqual(bike.routes.map(({ id, fit }) => [id, fit]), [['milwaukee-bicycle-collective', 'listed']]);
+  const [sound] = search('borrow ukulele Sydney', 'au-nsw');
+  assert.equal(sound.id, 'take-home');
+  assert.equal(search('can my child borrow a ukulele', 'au-nsw')[0].id, 'under-thirteen');
+  assert.equal(search('how long can I borrow a ukulele', 'au-nsw')[0].id, 'three-week-loan');
+  assert.deepEqual(sound.routes.map(({ id, fit }) => [id, fit]), [['sydney-take-home', 'listed'], ['sydney-room', 'excluded']]);
 });
 
 test('search fields stay in the page, with an ordinary link list as the fallback', () => {
