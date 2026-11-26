@@ -1,4 +1,4 @@
-const filler = new Set(['a', 'an', 'and', 'are', 'at', 'can', 'do', 'for', 'from', 'how', 'i', 'is', 'me', 'my', 'need', 'of', 'old', 'the', 'to', 'want', 'where', 'with', 'you']);
+const filler = new Set(['a', 'about', 'an', 'and', 'are', 'at', 'being', 'can', 'do', 'for', 'from', 'get', 'how', 'i', 'in', 'into', 'is', 'it', 'me', 'my', 'near', 'nearby', 'need', 'of', 'old', 'rules', 'the', 'there', 'this', 'to', 'use', 'want', 'what', 'where', 'who', 'with', 'you']);
 const aliases = new Map(Object.entries({
   eyeglasses: 'glasses',
   eyeglass: 'glasses',
@@ -25,12 +25,23 @@ const aliases = new Map(Object.entries({
   scanners: 'scan',
   scanning: 'scan',
   dropoff: 'drop',
+  bulk: 'bulky',
+  donations: 'donate',
+  donation: 'donate',
+  papers: 'document',
+  paper: 'document',
+  paperwork: 'document',
+  shredded: 'shred',
+  shredding: 'shred',
+  takes: 'take',
+  tapes: 'tape',
 }));
 
 function words(text) {
   return text.normalize('NFKD').replace(/\p{M}/gu, '').toLowerCase()
-    .replace(/\b(\d+)\s*[×x]\s*(\d+)\b/g, '$1x$2')
-    .replace(/’s\b|'s\b/g, '')
+    .replace(/\b(\d+)\s*[xx]\s*(\d+)\b/g, '$1x$2')
+    .replace(/\bget\s+into\b/g, 'enter')
+    .replace(/'s\b|'s\b/g, '')
     .split(/[^\p{L}\p{N}]+/u)
     .filter((word) => word && !filler.has(word))
     .map((word) => aliases.get(word) ?? word);
@@ -72,3 +83,4 @@ export function searchGuides(index, { query = '', region = '', limit = 8 } = {})
   }
   return results.sort((a, b) => b.score - a.score || a.title.localeCompare(b.title) || a.label.localeCompare(b.label)).slice(0, limit);
 }
+

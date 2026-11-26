@@ -64,6 +64,32 @@ test('a York County park pass hold resolves to the South Carolina rule', () => {
   assert.deepEqual(park.routes.map(({ id, fit }) => [id, fit]), [['york-county-sc', 'excluded']]);
 });
 
+test('ordinary wording opens the named local guide without inferring a location', () => {
+  const cases = [
+    ["free document shredding near me","us-wi","household-document-shredding#without-appointment"],
+    ["borrow a library tool near me","us-sc","tool-library-borrowing#household-borrower"],
+    ["do I need a library card to get seeds","ca-on","library-seed-borrowing#without-card"],
+    ["community bike donations near me","us-wi","used-bicycle-donations#working-bike"],
+    ["where can I donate this rusty bike Milwaukee","us-wi","used-bicycle-donations#heavy-rust"],
+    ["can I use this library park pass for camping","us-ca","library-state-park-passes#overnight-camping"],
+    ["get into park with library pass","ca-on","library-state-park-passes#day-vehicle-entry"],
+    ["digitize vhs at library near me","us-ca","library-memory-labs#vhs"],
+    ["convert hi8 tapes to usb","ca-bc","library-memory-labs#hi8"],
+    ["is there a quiet room at the library","us-nc","library-sensory-spaces#dedicated-room"],
+    ["scan paper to usb at a library","us-wi","library-scanning#usb"],
+    ["donate broken glasses near me","us-wi","eyeglass-donation-rules#broken-frames"],
+    ["what are the bulk pickup rules for a couch","us-wi","milwaukee-bulky-items#sofa-or-mattress"],
+    ["who takes spare bicycle parts","us-mn","used-bicycle-donations#spare-parts"],
+  ];
+  for (const [question, region, expected] of cases) {
+    const [result] = search(question, region);
+    assert.equal(result?.slug + '#' + result?.id, expected, question);
+    assert.ok(result.routes.every(({ region: routeRegion }) => routeRegion === region), question);
+  }
+  assert.deepEqual(search('near me'), []);
+  assert.deepEqual(search('Toronto Durham quiet room'), []);
+});
+
 test('search fields stay in the page, with an ordinary link list as the fallback', () => {
   const html = read('guide-finder/index.html');
   const app = read('guide-finder/app.mjs');
