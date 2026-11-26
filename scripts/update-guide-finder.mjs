@@ -15,6 +15,7 @@ const regionNames = Object.freeze({
   'au-nsw': 'Australia · New South Wales',
   'au-qld': 'Australia · Queensland',
   'ca-ab': 'Canada · Alberta',
+  'ca-bc': 'Canada · British Columbia',
   'ca-on': 'Canada · Ontario',
   'ca-qc': 'Canada · Québec',
   'gb-eng': 'United Kingdom · England',
@@ -23,6 +24,8 @@ const regionNames = Object.freeze({
   'nz-wko': 'New Zealand · Waikato',
   'us-az': 'United States · Arizona',
   'us-ca': 'United States · California',
+  'us-dc': 'United States · District of Columbia',
+  'us-fl': 'United States · Florida',
   'us-ga': 'United States · Georgia',
   'us-il': 'United States · Illinois',
   'us-in': 'United States · Indiana',
@@ -124,6 +127,21 @@ const taskAliases = {
     'spare-parts': ['donate spare parts usable wheel bicycle bike component'],
     'used-helmet': ['donate used bicycle cycling bike helmet'],
     collection: ['donate bike bicycle pickup pick up collection shop'],
+  },
+  'library-memory-labs': {
+    vhs: ['convert digitize digitise VHS tape home movies digital memory lab'],
+    minidv: ['mini dv minidv camcorder tape convert digital memory lab'],
+    hi8: ['convert digitize digitise hi8 video8 digital8 camcorder tape'],
+    'walk-in': ['memory lab walk in no appointment tape digitization appointment booking'],
+    'first-visit-orientation': ['memory lab no orientation training before first appointment tape digitizing'],
+    'save-usb': ['memory lab copy video digitized home movie usb thumb flash external drive storage'],
+  },
+  'household-document-shredding': {
+    'without-appointment': ['shred shredding documents paper free no booking appointment walk in drop off'],
+    'keep-staples': ['shred shredding documents paper staples paperclips clips attached remove'],
+    'watch-shredding': ['watch documents papers shredded shred shredding onsite in front witness'],
+    'business-paper': ['shred shredding documents papers small business commercial records'],
+    'more-than-two-boxes': ['shred shredding documents paper several boxes limit banker boxes bags pounds'],
   },
 };
 

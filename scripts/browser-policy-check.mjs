@@ -28,6 +28,8 @@ const served=new Map([
  ["eyeglass-donation-rules",new Set(["index.html"])],
  ["library-instrument-borrowing",new Set(["index.html"])],
  ["used-bicycle-donations",new Set(["index.html"])],
+ ["library-memory-labs",new Set(["index.html"])],
+ ["household-document-shredding",new Set(["index.html"])],
  ["guide-finder",new Set(["index.html","finder.css","index-data.mjs","search.mjs","app.mjs"])],
  ["milwaukee-articulos-voluminosos",new Set(["index.html"])],
  ["comparison-data",new Set(["index.html","community-comparisons.csv","community-comparisons.json"])]
@@ -214,7 +216,7 @@ try{
  await check("guide finder static list with JavaScript disabled",async()=>{
   const state=await execute("return {hidden:document.getElementById('finder').hidden, guides:document.querySelectorAll('.browse-guide').length, link:document.querySelector('.browse-guide a[href=\"../repair-cafe-planner/#microwave\"]')?.hash};");
   assert.equal(state.hidden,true);
-  assert.equal(state.guides,12);
+  assert.equal(state.guides,14);
   assert.equal(state.link,"#microwave");
   return state;
  });
@@ -233,6 +235,8 @@ try{
    {folder:"eyeglass-donation-rules",name:"eyeglass donor",anchor:"loose-lenses",title:"Donate loose lenses",statuses:{"georgia-lions":"ask","minnesota-lions":"excluded","lions-in-sight":"ask","thiensville-mequon":"unknown","canadian-lions":"unknown","lions-uk":"excluded"}},
    {folder:"library-instrument-borrowing",name:"instrument reservation",anchor:"reserve-instrument",title:"Reserve an instrument before visiting",statuses:{mcfarland:"excluded","howard-county":"listed","athens-arts-west":"unknown",toronto:"ask",calgary:"listed","sydney-take-home":"listed","sydney-room":"excluded"}},
    {folder:"used-bicycle-donations",name:"rusty bicycle donor",anchor:"heavy-rust",title:"Donate a bicycle with heavy rust",statuses:{"milwaukee-bicycle-collective":"listed","bike-new-york":"excluded","full-cycle":"ask","scarborough-cycles":"unknown"}},
+   {folder:"library-memory-labs",name:"Hi8 tape eligibility",anchor:"hi8",title:"Digitize a Hi8 tape",statuses:{"dc-memory-lab":"excluded","boston-central":"unknown","los-angeles-central":"unknown","greater-victoria-esquimalt":"listed","coquitlam-poirier":"listed","burnaby-digital-studio":"ask"}},
+   {folder:"household-document-shredding",name:"watch document shredding",anchor:"watch-shredding",title:"Watch household papers being shredded",statuses:{"orange-county-nc":"excluded","lorain-county":"unknown","collier-daily":"excluded","collier-monthly":"ask","somerset-county":"listed","uwcu-member-events":"listed"}},
    {folder:"milwaukee-articulos-voluminosos",name:"Milwaukee articles in Spanish",anchor:"tv",title:"Televisor",statuses:{"milwaukee-curb":"excluded","milwaukee-drop-off":"listed","wauwatosa-curb":"listed","wauwatosa-drop-off":"listed"}}
   ];
   await session(width,height,false,origin+"/"+cases[0].folder+"/");
@@ -290,7 +294,7 @@ try{
    const state=await execute("return {width:innerWidth,scroll:document.documentElement.scrollWidth,downloads:[...document.querySelectorAll('a[download]')].map(a=>a.getAttribute('href')),summary:document.querySelector('[aria-labelledby=coverage]').innerText};");
    assert.equal(state.width,width);assert.ok(state.scroll<=width+1);
    assert.deepEqual(state.downloads,["./community-comparisons.csv","./community-comparisons.json"]);
-   assert.ok(state.summary.includes("379 task and program records"));
+   assert.ok(state.summary.includes("445 task and program records"));
    return state;
   });
   await rpc("POST",sid("/url"),{url:origin+"/milwaukee-cleanout-floor-handoff/"});
