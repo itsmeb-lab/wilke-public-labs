@@ -84,6 +84,8 @@ export async function checkServed(fetcher = fetch) {
     ['published-policy-lab/wood-chip-load.mjs?v=20261125-1', 'published-policy-lab/wood-chip-load.mjs'],
     ['published-policy-lab/wood-chip-load.css?v=20261125-1', 'published-policy-lab/wood-chip-load.css'],
     ['wordpress-exchange/comparisons-draft.csv', 'wordpress-exchange/comparisons-draft.csv'],
+    ['milwaukee-cleanout-floor-handoff/', 'milwaukee-cleanout-floor-handoff/index.html'],
+    ['milwaukee-cleanout-floor-handoff/worksheet.css', 'milwaukee-cleanout-floor-handoff/worksheet.css'],
   ]);
   for (const { slug } of comparisonGuides) {
     expected.set(slug + '/', slug + '/index.html');

@@ -26,7 +26,7 @@ Use the result to prioritize rereads. A listed source has an older review date. 
 node scripts/review-comparisons.mjs --served
 ```
 
-Run this from the exact deployed revision. It checks the canonical public comparison pages, their CSV downloads, the landing pages, wood-chip assets and the sitemap against the checked-out files. It uses ordinary read-only HTTP requests and returns an error for redirects, unavailable URLs, stale responses, or mismatched content. It also checks canonical HTML and flags page-level indexing exclusions. Run `--robots` for the hosting origin’s robots.txt response. These checks cannot report indexing, sessions or referrals.
+Run this from the exact deployed revision. It checks the canonical public comparison pages, their CSV downloads, the landing pages, the Milwaukee handoff and its print stylesheet, wood-chip assets and the sitemap against the checked-out files. It uses ordinary read-only HTTP requests and returns an error for redirects, unavailable URLs, stale responses, or mismatched content. It also checks canonical HTML and flags page-level indexing exclusions. Run `--robots` for the hosting origin’s robots.txt response. These checks cannot report indexing, sessions or referrals.
 
 ## WordPress staging
 

@@ -88,6 +88,7 @@ Then open a lab:
 - `http://localhost:8080/repair-cafe-planner/`
 - `http://localhost:8080/shelter-linen-guide/`
 - `http://localhost:8080/milwaukee-bulky-items/`
+- `http://localhost:8080/milwaukee-cleanout-floor-handoff/`
 - `http://localhost:8080/food-scrap-drop-off/`
 - `http://localhost:8080/library-scanning/`
 - `http://localhost:8080/library-museum-passes/`
@@ -125,7 +126,7 @@ Start with the [diagnostic scope and free handoff checklist](https://wilkeservic
 
 Found these labs through Upwork? Keep pre-contract discussion and payment in the existing Upwork conversation. Do not use the direct-site contact route to move a marketplace relationship off-platform.
 
-The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the twelve published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
+The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the thirteen published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
 
 ## License
 
