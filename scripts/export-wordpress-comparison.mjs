@@ -2,7 +2,8 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { serializeCsv } from './organizer-comparison.mjs';
-import { comparisonGuides } from './review-comparisons.mjs';
+import { comparisonGuides, localizedGuides } from './review-comparisons.mjs';
+import { localize } from './update-milwaukee-bulky-es.mjs';
 
 const site = 'https://itsmeb-lab.github.io/wilke-public-labs/';
 const root = new URL('../', import.meta.url);
@@ -15,9 +16,11 @@ function field(html, pattern, label) {
   return all[0][1];
 }
 
-export function guideRow(slug) {
-  if (!comparisonGuides.some((guide) => guide.slug === slug)) throw new Error('Unknown comparison guide.');
+export function guideDraftData(slug) {
+  const guide = [...comparisonGuides, ...localizedGuides].find((entry) => entry.slug === slug);
+  if (!guide) throw new Error('Unknown comparison guide.');
   const html = read(slug + '/index.html');
+  const language = field(html, /<html\b[^>]*\blang="([A-Za-z]{2,8}(?:-[A-Za-z0-9]{2,8})*)"/g, 'guide language');
   const published = new URL(slug + '/', site);
   const canonical = field(html, /<link rel="canonical" href="([^"]+)">/g, 'canonical URL');
   if (canonical !== published.href) throw new Error('Unexpected canonical: ' + canonical);
@@ -33,8 +36,13 @@ export function guideRow(slug) {
     const safe = link.href.replaceAll('&', '&amp;').replaceAll('"', '&quot;');
     return 'href="' + safe + '"';
   });
-  const { checkedOn } = JSON.parse(read(slug + '/catalog.json'));
-  return [slug, heading, description, canonical, checkedOn, 'STAGING_DRAFT_ONLY', body];
+  const catalog = JSON.parse(read((guide.catalogSlug ?? slug) + '/catalog.json'));
+  if (guide.catalogSlug) localize(catalog, JSON.parse(read(slug + '/translation.json')));
+  return { language, row: [slug, heading, description, canonical, catalog.checkedOn, 'STAGING_DRAFT_ONLY', body] };
+}
+
+export function guideRow(slug) {
+  return guideDraftData(slug).row;
 }
 
 export function buildExchange() {

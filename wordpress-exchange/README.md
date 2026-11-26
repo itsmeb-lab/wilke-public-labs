@@ -29,4 +29,6 @@ wp --path=/path/to/staging \
 
 The companion skips exact repeats of Atlas source URL, review date and import-state metadata on a draft page. Review changed exports before importing them. WordPress Importer handles post matching and distinct metadata values.
 
+Build the Spanish Milwaukee WXR draft with `node scripts/export-wordpress-draft.mjs --slug milwaukee-articulos-voluminosos --output milwaukee-es-draft.xml`. The WXR feed and imported guide body carry the source language.
+
 
