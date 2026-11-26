@@ -1,7 +1,7 @@
 const targets = [
-  ['hardwood alias', 'https://milwaukee-hardwood.vercel.app/'],
-  ['hardwood project domain', 'https://milwaukee-hardwood-public.vercel.app/'],
-  ['Milwaukee custom domain', 'https://milwaukee.wilkeservices.com/'],
+  ['hardwood alias', 'https://milwaukee-hardwood.vercel.app/milwaukee/hardwood-flooring'],
+  ['hardwood project domain', 'https://milwaukee-hardwood-public.vercel.app/milwaukee/hardwood-flooring'],
+  ['Milwaukee custom domain', 'https://milwaukee.wilkeservices.com/milwaukee/hardwood-flooring'],
   ['main site cleanout guide', 'https://wilkeservices.com/property/estate-rental-cleanouts'],
   ['main site hardwood path', 'https://wilkeservices.com/milwaukee/hardwood-flooring'],
 ];
