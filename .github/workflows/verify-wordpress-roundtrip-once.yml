@@ -43,12 +43,12 @@ jobs:
           new() { php "$wp_cli" --path="$work/restored" --user=fixture-admin "$@"; }
           old core version
           old cli version
-          old eval-file "$GITHUB_WORKSPACE/tests/probe-wordpress-drafts.php" create
-          old eval-file "$GITHUB_WORKSPACE/tests/probe-wordpress-drafts.php" repeat
+          old eval-file "$GITHUB_WORKSPACE/tests/probe-wordpress-drafts.php" --use-include create
+          old eval-file "$GITHUB_WORKSPACE/tests/probe-wordpress-drafts.php" --use-include repeat
           old export --post_type=page --post_status=draft --stdout > "$work/drafts.xml"
           test -s "$work/drafts.xml"
           new plugin install wordpress-importer --version="$WP_IMPORTER" --activate
           new plugin get wordpress-importer --field=version
           new import "$work/drafts.xml" --authors=skip --skip=attachment
-          new eval-file "$GITHUB_WORKSPACE/tests/probe-wordpress-drafts.php" verify
+          new eval-file "$GITHUB_WORKSPACE/tests/probe-wordpress-drafts.php" --use-include verify
           echo "WXR_DRAFT_ROUNDTRIP_OK"
