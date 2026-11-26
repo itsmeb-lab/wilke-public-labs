@@ -1,0 +1,353 @@
+{
+  "checkedOn": "2026-11-25",
+  "sources": {
+    "milwaukee-hri-guide": {
+      "label": "Housing Resources tool loan program",
+      "url": "https://www.hri-wi.org/homeowners/tool-loan-program/",
+      "checkedOn": "2026-11-25"
+    },
+    "rock-hill-guide": {
+      "label": "Rock Hill Community Toolshed",
+      "url": "https://www.cityofrockhill.com/departments/neighborhood-services/community-programs/community-toolshed",
+      "checkedOn": "2026-11-25"
+    },
+    "duluth-one-roof-guide": {
+      "label": "One Roof tool lending instructions",
+      "url": "https://1roofhousing.org/homeowners/tool-lending-library/",
+      "checkedOn": "2026-11-25"
+    },
+    "charlotte-toolbank-guide": {
+      "label": "Charlotte ToolBank lending program",
+      "url": "https://charlotte.toolbank.org/tool-lending-program/",
+      "checkedOn": "2026-11-25"
+    },
+    "charlotte-toolbank-terms-1": {
+      "label": "Charlotte ToolBank current borrowing fees",
+      "url": "https://charlotte.toolbank.org/tool-lending-program/tools-fees/",
+      "checkedOn": "2026-11-25"
+    },
+    "berkeley-guide": {
+      "label": "Berkeley tool lending location and eligibility",
+      "url": "https://www.berkeleypubliclibrary.org/locations/tool-lending-library",
+      "checkedOn": "2026-11-25"
+    },
+    "berkeley-terms-1": {
+      "label": "Berkeley tool lending questions",
+      "url": "https://www.berkeleypubliclibrary.org/locations/tool-lending-library/tools-faq",
+      "checkedOn": "2026-11-25"
+    },
+    "london-things-guide": {
+      "label": "Library of Things borrowing instructions",
+      "url": "https://www.libraryofthings.co.uk/how-borrowing-works",
+      "checkedOn": "2026-11-25"
+    },
+    "london-things-terms-1": {
+      "label": "Library of Things membership and loan terms",
+      "url": "https://libraryofthings.co.uk/terms-of-borrowing",
+      "checkedOn": "2026-11-25"
+    }
+  },
+  "operators": [
+    {
+      "id": "milwaukee-hri",
+      "name": "Housing Resources Tool Loan Center",
+      "area": "Milwaukee, Wisconsin",
+      "country": "US",
+      "jurisdiction": "us-wi",
+      "visitSource": "milwaukee-hri-guide",
+      "sourceIds": [
+        "milwaukee-hri-guide"
+      ],
+      "prep": [
+        {
+          "label": "Confirm your membership route",
+          "text": "The operator lists regular, senior, and nonprofit memberships. Check your eligibility, item and collection date with the center.",
+          "source": "milwaukee-hri-guide"
+        }
+      ]
+    },
+    {
+      "id": "rock-hill",
+      "name": "City of Rock Hill Community Toolshed",
+      "area": "Rock Hill, South Carolina",
+      "country": "US",
+      "jurisdiction": "us-sc",
+      "visitSource": "rock-hill-guide",
+      "sourceIds": [
+        "rock-hill-guide"
+      ],
+      "prep": [
+        {
+          "label": "Use the city request route",
+          "text": "The city lists proof of residency and a tool request form. Check who qualifies and which request to use.",
+          "source": "rock-hill-guide"
+        }
+      ]
+    },
+    {
+      "id": "duluth-one-roof",
+      "name": "One Roof Tool Lending Library",
+      "area": "Duluth, Minnesota",
+      "country": "US",
+      "jurisdiction": "us-mn",
+      "visitSource": "duluth-one-roof-guide",
+      "sourceIds": [
+        "duluth-one-roof-guide"
+      ],
+      "prep": [
+        {
+          "label": "Complete the borrower agreement",
+          "text": "Review the agreement and make a reservation to schedule tool pickup and drop-off.",
+          "source": "duluth-one-roof-guide"
+        }
+      ]
+    },
+    {
+      "id": "charlotte-toolbank",
+      "name": "Charlotte ToolBank",
+      "area": "Charlotte, North Carolina",
+      "country": "US",
+      "jurisdiction": "us-nc",
+      "visitSource": "charlotte-toolbank-guide",
+      "sourceIds": [
+        "charlotte-toolbank-guide",
+        "charlotte-toolbank-terms-1"
+      ],
+      "prep": [
+        {
+          "label": "Confirm the organization’s membership",
+          "text": "First-time borrowers apply as a member agency before ordering. The membership application documents eligibility.",
+          "source": "charlotte-toolbank-guide"
+        },
+        {
+          "label": "Budget for the loan",
+          "text": "Check the current fee page for handling fees and the due date.",
+          "source": "charlotte-toolbank-terms-1"
+        }
+      ]
+    },
+    {
+      "id": "berkeley",
+      "name": "Berkeley Public Library Tool Lending Library",
+      "area": "Berkeley, California",
+      "country": "US",
+      "jurisdiction": "us-ca",
+      "visitSource": "berkeley-guide",
+      "sourceIds": [
+        "berkeley-guide",
+        "berkeley-terms-1"
+      ],
+      "prep": [
+        {
+          "label": "Register in person",
+          "text": "Check the library’s proof-of-eligibility instructions. Register in person before placing online holds.",
+          "source": "berkeley-terms-1"
+        }
+      ]
+    },
+    {
+      "id": "london-things",
+      "name": "Library of Things",
+      "area": "London and participating locations, England",
+      "country": "GB",
+      "jurisdiction": "gb-eng",
+      "visitSource": "london-things-guide",
+      "sourceIds": [
+        "london-things-guide",
+        "london-things-terms-1"
+      ],
+      "prep": [
+        {
+          "label": "Choose a kiosk",
+          "text": "Reserve an available item online, complete any required identification step and collect it from the assigned kiosk.",
+          "source": "london-things-terms-1"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "household-borrower",
+      "label": "Borrow as a household or individual"
+    },
+    {
+      "id": "free-loan",
+      "label": "Borrow without a membership or loan fee"
+    },
+    {
+      "id": "extra-fees",
+      "label": "Check membership, deposits and item fees"
+    },
+    {
+      "id": "reserve",
+      "label": "Reserve a tool before visiting"
+    },
+    {
+      "id": "return-tool",
+      "label": "Check where and when to bring it back"
+    }
+  ],
+  "rules": [
+    {
+      "operator": "milwaukee-hri",
+      "task": "household-borrower",
+      "fit": "ask",
+      "text": "The operator offers regular individual membership. Confirm any residency or homeowner conditions before relying on household access.",
+      "source": "milwaukee-hri-guide"
+    },
+    {
+      "operator": "milwaukee-hri",
+      "task": "free-loan",
+      "fit": "excluded",
+      "text": "Most tools have no separate loan charge for current members. The center charges an annual membership fee.",
+      "source": "milwaukee-hri-guide"
+    },
+    {
+      "operator": "milwaukee-hri",
+      "task": "extra-fees",
+      "fit": "listed",
+      "text": "Regular membership is listed at $25 per year. The program lists a separate $50 deposit for high-end tools, with a $20 rental fee deducted.",
+      "source": "milwaukee-hri-guide"
+    },
+    {
+      "operator": "rock-hill",
+      "task": "household-borrower",
+      "fit": "listed",
+      "text": "Rock Hill lists residents alongside neighborhood associations and community organizations. The program is for community maintenance and improvement.",
+      "source": "rock-hill-guide"
+    },
+    {
+      "operator": "rock-hill",
+      "task": "free-loan",
+      "fit": "listed",
+      "text": "The city lists no charge for eligible borrowers who meet the proof-of-residency requirement.",
+      "source": "rock-hill-guide"
+    },
+    {
+      "operator": "rock-hill",
+      "task": "reserve",
+      "fit": "listed",
+      "text": "Request tools using the form on the city’s program page. A request still needs confirmation.",
+      "source": "rock-hill-guide"
+    },
+    {
+      "operator": "duluth-one-roof",
+      "task": "household-borrower",
+      "fit": "listed",
+      "text": "The operator says its tool library is open to local residents.",
+      "source": "duluth-one-roof-guide"
+    },
+    {
+      "operator": "duluth-one-roof",
+      "task": "free-loan",
+      "fit": "listed",
+      "text": "The program offers free tool checkout to area residents.",
+      "source": "duluth-one-roof-guide"
+    },
+    {
+      "operator": "duluth-one-roof",
+      "task": "reserve",
+      "fit": "listed",
+      "text": "One Roof provides a reservation form for pickup and return appointments.",
+      "source": "duluth-one-roof-guide"
+    },
+    {
+      "operator": "duluth-one-roof",
+      "task": "return-tool",
+      "fit": "listed",
+      "text": "The operator lists a loan of up to one week and schedules drop-off through its reservation process.",
+      "source": "duluth-one-roof-guide"
+    },
+    {
+      "operator": "charlotte-toolbank",
+      "task": "household-borrower",
+      "fit": "excluded",
+      "text": "The ToolBank lends to eligible organizations. A household acting as an individual does not qualify under this route.",
+      "source": "charlotte-toolbank-guide"
+    },
+    {
+      "operator": "charlotte-toolbank",
+      "task": "free-loan",
+      "fit": "excluded",
+      "text": "The application has no membership fee. Member agencies pay a tool handling charge for each loan.",
+      "source": "charlotte-toolbank-terms-1"
+    },
+    {
+      "operator": "charlotte-toolbank",
+      "task": "extra-fees",
+      "fit": "listed",
+      "text": "The operator’s current fee page lists 5% of each borrowed tool’s retail value per week.",
+      "source": "charlotte-toolbank-terms-1"
+    },
+    {
+      "operator": "charlotte-toolbank",
+      "task": "reserve",
+      "fit": "listed",
+      "text": "Member agencies order tools online and schedule pickup.",
+      "source": "charlotte-toolbank-guide"
+    },
+    {
+      "operator": "charlotte-toolbank",
+      "task": "return-tool",
+      "fit": "listed",
+      "text": "Return the tools clean and dry at the scheduled time. The operator publishes terms of one to eight weeks.",
+      "source": "charlotte-toolbank-terms-1"
+    },
+    {
+      "operator": "berkeley",
+      "task": "household-borrower",
+      "fit": "listed",
+      "text": "The library lists age and local residency or property-ownership requirements for individual borrowers.",
+      "source": "berkeley-guide"
+    },
+    {
+      "operator": "berkeley",
+      "task": "reserve",
+      "fit": "listed",
+      "text": "After registering in person, use your library card to place an online hold on an eligible item.",
+      "source": "berkeley-terms-1"
+    },
+    {
+      "operator": "berkeley",
+      "task": "return-tool",
+      "fit": "listed",
+      "text": "Return the tool by its due date to the Tool Lending Library during open hours.",
+      "source": "berkeley-terms-1"
+    },
+    {
+      "operator": "london-things",
+      "task": "household-borrower",
+      "fit": "listed",
+      "text": "Individuals can join and reserve items through a membership, subject to the program’s terms.",
+      "source": "london-things-terms-1"
+    },
+    {
+      "operator": "london-things",
+      "task": "free-loan",
+      "fit": "excluded",
+      "text": "The program requires a membership and charges published borrowing rates.",
+      "source": "london-things-terms-1"
+    },
+    {
+      "operator": "london-things",
+      "task": "extra-fees",
+      "fit": "listed",
+      "text": "Compare the membership options and the charge listed for the item before checkout.",
+      "source": "london-things-terms-1"
+    },
+    {
+      "operator": "london-things",
+      "task": "reserve",
+      "fit": "listed",
+      "text": "Use the website to find a kiosk and reserve the item.",
+      "source": "london-things-guide"
+    },
+    {
+      "operator": "london-things",
+      "task": "return-tool",
+      "fit": "listed",
+      "text": "Return the item to the kiosk where you picked it up by closing time on the stated return date.",
+      "source": "london-things-terms-1"
+    }
+  ]
+}

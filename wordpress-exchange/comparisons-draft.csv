@@ -1900,3 +1900,655 @@
         <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/library-scanning/"">Check library document scanning options</a></li>
       </ul>
     </section>"
+"library-seed-borrowing","Do you have to return seeds to a seed library?","Compare library cards, packet limits, unused seed returns, saved seed donations and pickup instructions at eight seed libraries.","https://itsmeb-lab.github.io/wilke-public-labs/library-seed-borrowing/","2026-11-25","STAGING_DRAFT_ONLY","<div class=""intro"">
+      <p>Some seed libraries let you take seeds without a library card. Others require a card or registration. A library can ask you to bring back unused seeds, invite you to share seeds from your harvest, or make returns optional.</p>
+      <p>Choose a question and check the named library. The comparison covers published rules and pickup steps. Check stock with the library before making a trip.</p>
+    </div>
+    <!-- LIBRARY-SEED-BORROWING:START -->
+    <nav id=""items"" class=""choices"" aria-label=""Choose an item"" tabindex=""-1"">
+      <p>Choose an item</p>
+      <ul role=""list"">
+        <li><a href=""#without-card"">Take seeds without a library card</a></li>
+        <li><a href=""#packet-limit"">Check the packet limit</a></li>
+        <li><a href=""#unused-seeds"">Return unused seeds</a></li>
+        <li><a href=""#saved-seeds"">Share seeds from your harvest</a></li>
+        <li><a href=""#donate-seeds"">Donate seeds to the library</a></li>
+        <li><a href=""#before-pickup"">Before you pick up seeds</a></li>
+      </ul>
+    </nav>
+    <p class=""reviewed"">Snapshot reviewed <time datetime=""2026-11-25"">November 25, 2026</time>.</p>
+    <section id=""without-card"" class=""comparison"" aria-labelledby=""without-card-title"" tabindex=""-1"">
+      <h2 id=""without-card-title"">Take seeds without a library card</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""transylvania"" data-fit=""ask"" id=""answer--without-card--transylvania"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--without-card--transylvania"" aria-label=""Transylvania County Library — Take seeds without a library card"">Transylvania County Library</a></h3><p class=""area"">Brevard, North Carolina</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The library describes self-service selection with no formal checkout. Its seed page leaves a library-card requirement unspecified.</p>
+          <p class=""source""><a href=""https://library.transylvaniacounty.org/seeds/"">Transylvania County Seed Library</a></p>
+        </li>
+        <li data-operator=""canton"" data-fit=""excluded"" id=""answer--without-card--canton"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--without-card--canton"" aria-label=""Canton Seed Library — Take seeds without a library card"">Canton Seed Library</a></h3><p class=""area"">Canton, North Carolina</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>Canton requires a Cardinal library card in good standing to check out seeds.</p>
+          <p class=""source""><a href=""https://www.haywoodcountync.gov/670/Canton-Seed-Library-Giving-Garden"">Haywood County seed library instructions</a></p>
+        </li>
+        <li data-operator=""cleveland"" data-fit=""ask"" id=""answer--without-card--cleveland"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--without-card--cleveland"" aria-label=""Cleveland County Library System — Take seeds without a library card"">Cleveland County Library System</a></h3><p class=""area"">Shelby and Lawndale, North Carolina</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The library asks for a seed checkout slip. Its page leaves regular library-card requirements unspecified.</p>
+          <p class=""source""><a href=""https://www.clevelandcounty.com/main/departments/library/seed_library.php"">Cleveland County Seed Library</a></p>
+        </li>
+        <li data-operator=""raleigh-state"" data-fit=""ask"" id=""answer--without-card--raleigh-state"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--without-card--raleigh-state"" aria-label=""State Library of North Carolina — Take seeds without a library card"">State Library of North Carolina</a></h3><p class=""area"">Raleigh, North Carolina</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The public instructions ask visitors to sign out their selections. They leave a library-card requirement unspecified.</p>
+          <p class=""source""><a href=""https://library.nc.gov/seed-library"">State Library native seed program</a></p>
+        </li>
+        <li data-operator=""longwood"" data-fit=""listed"" id=""answer--without-card--longwood"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--without-card--longwood"" aria-label=""Longwood Public Library — Take seeds without a library card"">Longwood Public Library</a></h3><p class=""area"">Middle Island, New York</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Longwood says a library card is optional.</p>
+          <p class=""source""><a href=""https://www.longwoodlibrary.org/seedlibrary"">Longwood Grows policy</a></p>
+        </li>
+        <li data-operator=""waterloo"" data-fit=""listed"" id=""answer--without-card--waterloo"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--without-card--waterloo"" aria-label=""Region of Waterloo Library — Take seeds without a library card"">Region of Waterloo Library</a></h3><p class=""area"">Waterloo Region, Ontario</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The library explicitly waives the library-card requirement for seeds.</p>
+          <p class=""source""><a href=""https://www.rwlibrary.ca/browse-borrow/seed-library/"">Region of Waterloo Seed Library</a></p>
+        </li>
+        <li data-operator=""mcgill"" data-fit=""ask"" id=""answer--without-card--mcgill"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--without-card--mcgill"" aria-label=""McGill Macdonald Campus Seed Library — Take seeds without a library card"">McGill Macdonald Campus Seed Library</a></h3><p class=""area"">Sainte-Anne-de-Bellevue, Québec</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>McGill ties access to eligibility and seed library registration. Check the named campus program before ordering.</p>
+          <p class=""source""><a href=""https://www.mcgill.ca/libraries/locations/macdonald/seed-library/request"">McGill seed borrowing and limits</a></p>
+        </li>
+        <li data-operator=""waikato"" data-fit=""unknown"" id=""answer--without-card--waikato"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--without-card--waikato"" aria-label=""Waikato District Libraries — Take seeds without a library card"">Waikato District Libraries</a></h3><p class=""area"">Waikato District, New Zealand</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.waikatodistrict.govt.nz/services-facilities/libraries/collections/seed-library"">Check with Waikato District Libraries</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""packet-limit"" class=""comparison"" aria-labelledby=""packet-limit-title"" tabindex=""-1"">
+      <h2 id=""packet-limit-title"">Check the packet limit</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""transylvania"" data-fit=""unknown"" id=""answer--packet-limit--transylvania"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--packet-limit--transylvania"" aria-label=""Transylvania County Library — Check the packet limit"">Transylvania County Library</a></h3><p class=""area"">Brevard, North Carolina</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://library.transylvaniacounty.org/seeds/"">Check with Transylvania County Library</a></p>
+        </li>
+        <li data-operator=""canton"" data-fit=""unknown"" id=""answer--packet-limit--canton"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--packet-limit--canton"" aria-label=""Canton Seed Library — Check the packet limit"">Canton Seed Library</a></h3><p class=""area"">Canton, North Carolina</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.haywoodcountync.gov/670/Canton-Seed-Library-Giving-Garden"">Check with Canton Seed Library</a></p>
+        </li>
+        <li data-operator=""cleveland"" data-fit=""unknown"" id=""answer--packet-limit--cleveland"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--packet-limit--cleveland"" aria-label=""Cleveland County Library System — Check the packet limit"">Cleveland County Library System</a></h3><p class=""area"">Shelby and Lawndale, North Carolina</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.clevelandcounty.com/main/departments/library/seed_library.php"">Check with Cleveland County Library System</a></p>
+        </li>
+        <li data-operator=""raleigh-state"" data-fit=""listed"" id=""answer--packet-limit--raleigh-state"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--packet-limit--raleigh-state"" aria-label=""State Library of North Carolina — Check the packet limit"">State Library of North Carolina</a></h3><p class=""area"">Raleigh, North Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The limit is two packets per visitor.</p>
+          <p class=""source""><a href=""https://library.nc.gov/seed-library"">State Library native seed program</a></p>
+        </li>
+        <li data-operator=""longwood"" data-fit=""listed"" id=""answer--packet-limit--longwood"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--packet-limit--longwood"" aria-label=""Longwood Public Library — Check the packet limit"">Longwood Public Library</a></h3><p class=""area"">Middle Island, New York</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The current policy gives no fixed packet limit. Take only what you will use that season.</p>
+          <p class=""source""><a href=""https://www.longwoodlibrary.org/seedlibrary"">Longwood Grows policy</a></p>
+        </li>
+        <li data-operator=""waterloo"" data-fit=""unknown"" id=""answer--packet-limit--waterloo"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--packet-limit--waterloo"" aria-label=""Region of Waterloo Library — Check the packet limit"">Region of Waterloo Library</a></h3><p class=""area"">Waterloo Region, Ontario</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.rwlibrary.ca/browse-borrow/seed-library/"">Check with Region of Waterloo Library</a></p>
+        </li>
+        <li data-operator=""mcgill"" data-fit=""listed"" id=""answer--packet-limit--mcgill"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--packet-limit--mcgill"" aria-label=""McGill Macdonald Campus Seed Library — Check the packet limit"">McGill Macdonald Campus Seed Library</a></h3><p class=""area"">Sainte-Anne-de-Bellevue, Québec</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The program lists 25 packets per person per season, with one packet per variety.</p>
+          <p class=""source""><a href=""https://www.mcgill.ca/libraries/locations/macdonald/seed-library/request"">McGill seed borrowing and limits</a></p>
+        </li>
+        <li data-operator=""waikato"" data-fit=""listed"" id=""answer--packet-limit--waikato"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--packet-limit--waikato"" aria-label=""Waikato District Libraries — Check the packet limit"">Waikato District Libraries</a></h3><p class=""area"">Waikato District, New Zealand</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The district invites people to pick up one or two packets. It does not describe this as a formal checkout limit.</p>
+          <p class=""source""><a href=""https://www.waikatodistrict.govt.nz/services-facilities/libraries/collections/seed-library"">Waikato District Seed Library</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""unused-seeds"" class=""comparison"" aria-labelledby=""unused-seeds-title"" tabindex=""-1"">
+      <h2 id=""unused-seeds-title"">Return unused seeds</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""transylvania"" data-fit=""ask"" id=""answer--unused-seeds--transylvania"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--unused-seeds--transylvania"" aria-label=""Transylvania County Library — Return unused seeds"">Transylvania County Library</a></h3><p class=""area"">Brevard, North Carolina</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The page makes seed returns optional. Check the donation process before bringing unused seed.</p>
+          <p class=""source""><a href=""https://library.transylvaniacounty.org/seeds/"">Transylvania County Seed Library</a></p>
+        </li>
+        <li data-operator=""canton"" data-fit=""unknown"" id=""answer--unused-seeds--canton"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--unused-seeds--canton"" aria-label=""Canton Seed Library — Return unused seeds"">Canton Seed Library</a></h3><p class=""area"">Canton, North Carolina</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.haywoodcountync.gov/670/Canton-Seed-Library-Giving-Garden"">Check with Canton Seed Library</a></p>
+        </li>
+        <li data-operator=""cleveland"" data-fit=""listed"" id=""answer--unused-seeds--cleveland"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--unused-seeds--cleveland"" aria-label=""Cleveland County Library System — Return unused seeds"">Cleveland County Library System</a></h3><p class=""area"">Shelby and Lawndale, North Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Cleveland County asks borrowers to return seeds they do not sow.</p>
+          <p class=""source""><a href=""https://www.clevelandcounty.com/main/departments/library/seed_library.php"">Cleveland County Seed Library</a></p>
+        </li>
+        <li data-operator=""raleigh-state"" data-fit=""unknown"" id=""answer--unused-seeds--raleigh-state"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--unused-seeds--raleigh-state"" aria-label=""State Library of North Carolina — Return unused seeds"">State Library of North Carolina</a></h3><p class=""area"">Raleigh, North Carolina</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://library.nc.gov/seed-library"">Check with State Library of North Carolina</a></p>
+        </li>
+        <li data-operator=""longwood"" data-fit=""unknown"" id=""answer--unused-seeds--longwood"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--unused-seeds--longwood"" aria-label=""Longwood Public Library — Return unused seeds"">Longwood Public Library</a></h3><p class=""area"">Middle Island, New York</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.longwoodlibrary.org/seedlibrary"">Check with Longwood Public Library</a></p>
+        </li>
+        <li data-operator=""waterloo"" data-fit=""unknown"" id=""answer--unused-seeds--waterloo"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--unused-seeds--waterloo"" aria-label=""Region of Waterloo Library — Return unused seeds"">Region of Waterloo Library</a></h3><p class=""area"">Waterloo Region, Ontario</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.rwlibrary.ca/browse-borrow/seed-library/"">Check with Region of Waterloo Library</a></p>
+        </li>
+        <li data-operator=""mcgill"" data-fit=""unknown"" id=""answer--unused-seeds--mcgill"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--unused-seeds--mcgill"" aria-label=""McGill Macdonald Campus Seed Library — Return unused seeds"">McGill Macdonald Campus Seed Library</a></h3><p class=""area"">Sainte-Anne-de-Bellevue, Québec</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.mcgill.ca/libraries/locations/macdonald/seed-library/request"">Check with McGill Macdonald Campus Seed Library</a></p>
+        </li>
+        <li data-operator=""waikato"" data-fit=""unknown"" id=""answer--unused-seeds--waikato"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--unused-seeds--waikato"" aria-label=""Waikato District Libraries — Return unused seeds"">Waikato District Libraries</a></h3><p class=""area"">Waikato District, New Zealand</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.waikatodistrict.govt.nz/services-facilities/libraries/collections/seed-library"">Check with Waikato District Libraries</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""saved-seeds"" class=""comparison"" aria-labelledby=""saved-seeds-title"" tabindex=""-1"">
+      <h2 id=""saved-seeds-title"">Share seeds from your harvest</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""transylvania"" data-fit=""listed"" id=""answer--saved-seeds--transylvania"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--saved-seeds--transylvania"" aria-label=""Transylvania County Library — Share seeds from your harvest"">Transylvania County Library</a></h3><p class=""area"">Brevard, North Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Returns are optional. You can share seeds through the donation process.</p>
+          <p class=""source""><a href=""https://library.transylvaniacounty.org/seeds/"">Transylvania County Seed Library</a></p>
+        </li>
+        <li data-operator=""canton"" data-fit=""listed"" id=""answer--saved-seeds--canton"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--saved-seeds--canton"" aria-label=""Canton Seed Library — Share seeds from your harvest"">Canton Seed Library</a></h3><p class=""area"">Canton, North Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Canton asks borrowers to return seeds from the plants they grow. Fill out the membership form when returning seeds.</p>
+          <p class=""source""><a href=""https://www.haywoodcountync.gov/670/Canton-Seed-Library-Giving-Garden"">Haywood County seed library instructions</a></p>
+        </li>
+        <li data-operator=""cleveland"" data-fit=""unknown"" id=""answer--saved-seeds--cleveland"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--saved-seeds--cleveland"" aria-label=""Cleveland County Library System — Share seeds from your harvest"">Cleveland County Library System</a></h3><p class=""area"">Shelby and Lawndale, North Carolina</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.clevelandcounty.com/main/departments/library/seed_library.php"">Check with Cleveland County Library System</a></p>
+        </li>
+        <li data-operator=""raleigh-state"" data-fit=""listed"" id=""answer--saved-seeds--raleigh-state"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--saved-seeds--raleigh-state"" aria-label=""State Library of North Carolina — Share seeds from your harvest"">State Library of North Carolina</a></h3><p class=""area"">Raleigh, North Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The program encourages people to save and share seed from native plants.</p>
+          <p class=""source""><a href=""https://library.nc.gov/seed-library"">State Library native seed program</a></p>
+        </li>
+        <li data-operator=""longwood"" data-fit=""listed"" id=""answer--saved-seeds--longwood"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--saved-seeds--longwood"" aria-label=""Longwood Public Library — Share seeds from your harvest"">Longwood Public Library</a></h3><p class=""area"">Middle Island, New York</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Seed returns are optional. Label any saved seeds you choose to donate.</p>
+          <p class=""source""><a href=""https://www.longwoodlibrary.org/seedlibrary"">Longwood Grows policy</a></p>
+        </li>
+        <li data-operator=""waterloo"" data-fit=""listed"" id=""answer--saved-seeds--waterloo"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--saved-seeds--waterloo"" aria-label=""Region of Waterloo Library — Share seeds from your harvest"">Region of Waterloo Library</a></h3><p class=""area"">Waterloo Region, Ontario</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The library asks patrons to collect and bring back seeds from a few plants at the end of the season.</p>
+          <p class=""source""><a href=""https://www.rwlibrary.ca/browse-borrow/seed-library/"">Region of Waterloo Seed Library</a></p>
+        </li>
+        <li data-operator=""mcgill"" data-fit=""listed"" id=""answer--saved-seeds--mcgill"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--saved-seeds--mcgill"" aria-label=""McGill Macdonald Campus Seed Library — Share seeds from your harvest"">McGill Macdonald Campus Seed Library</a></h3><p class=""area"">Sainte-Anne-de-Bellevue, Québec</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>McGill encourages returns and explicitly makes them optional.</p>
+          <p class=""source""><a href=""https://www.mcgill.ca/libraries/locations/macdonald/seed-library/return"">McGill seed returns</a></p>
+        </li>
+        <li data-operator=""waikato"" data-fit=""listed"" id=""answer--saved-seeds--waikato"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--saved-seeds--waikato"" aria-label=""Waikato District Libraries — Share seeds from your harvest"">Waikato District Libraries</a></h3><p class=""area"">Waikato District, New Zealand</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The district invites borrowers to save some seeds from their plants and donate them back.</p>
+          <p class=""source""><a href=""https://www.waikatodistrict.govt.nz/services-facilities/libraries/collections/seed-library"">Waikato District Seed Library</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""donate-seeds"" class=""comparison"" aria-labelledby=""donate-seeds-title"" tabindex=""-1"">
+      <h2 id=""donate-seeds-title"">Donate seeds to the library</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""transylvania"" data-fit=""listed"" id=""answer--donate-seeds--transylvania"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--donate-seeds--transylvania"" aria-label=""Transylvania County Library — Donate seeds to the library"">Transylvania County Library</a></h3><p class=""area"">Brevard, North Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Fill out a donation form and attach it to the seed packet before using the donation bin.</p>
+          <p class=""source""><a href=""https://library.transylvaniacounty.org/seeds/"">Transylvania County Seed Library</a></p>
+        </li>
+        <li data-operator=""canton"" data-fit=""listed"" id=""answer--donate-seeds--canton"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--donate-seeds--canton"" aria-label=""Canton Seed Library — Donate seeds to the library"">Canton Seed Library</a></h3><p class=""area"">Canton, North Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The county welcomes seed donations and asks returners to complete the seed library membership form.</p>
+          <p class=""source""><a href=""https://www.haywoodcountync.gov/670/Canton-Seed-Library-Giving-Garden"">Haywood County seed library instructions</a></p>
+        </li>
+        <li data-operator=""cleveland"" data-fit=""ask"" id=""answer--donate-seeds--cleveland"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--donate-seeds--cleveland"" aria-label=""Cleveland County Library System — Donate seeds to the library"">Cleveland County Library System</a></h3><p class=""area"">Shelby and Lawndale, North Carolina</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>Fill out the donation form at Access Services. The library decides which donations to make available.</p>
+          <p class=""source""><a href=""https://www.clevelandcounty.com/main/departments/library/seed_library.php"">Cleveland County Seed Library</a></p>
+        </li>
+        <li data-operator=""raleigh-state"" data-fit=""listed"" id=""answer--donate-seeds--raleigh-state"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--donate-seeds--raleigh-state"" aria-label=""State Library of North Carolina — Donate seeds to the library"">State Library of North Carolina</a></h3><p class=""area"">Raleigh, North Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The program accepts plant seeds native to North Carolina. The source lists separate instructions for collected and packaged seeds.</p>
+          <p class=""source""><a href=""https://library.nc.gov/seed-library"">State Library native seed program</a></p>
+        </li>
+        <li data-operator=""longwood"" data-fit=""listed"" id=""answer--donate-seeds--longwood"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--donate-seeds--longwood"" aria-label=""Longwood Public Library — Donate seeds to the library"">Longwood Public Library</a></h3><p class=""area"">Middle Island, New York</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The library also accepts leftover commercially purchased seeds.</p>
+          <p class=""source""><a href=""https://www.longwoodlibrary.org/seedlibrary"">Longwood Grows policy</a></p>
+        </li>
+        <li data-operator=""waterloo"" data-fit=""listed"" id=""answer--donate-seeds--waterloo"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--donate-seeds--waterloo"" aria-label=""Region of Waterloo Library — Donate seeds to the library"">Region of Waterloo Library</a></h3><p class=""area"">Waterloo Region, Ontario</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The regional library invites seed donations. Check its linked materials for the branch process.</p>
+          <p class=""source""><a href=""https://www.rwlibrary.ca/browse-borrow/seed-library/"">Region of Waterloo Seed Library</a></p>
+        </li>
+        <li data-operator=""mcgill"" data-fit=""listed"" id=""answer--donate-seeds--mcgill"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--donate-seeds--mcgill"" aria-label=""McGill Macdonald Campus Seed Library — Donate seeds to the library"">McGill Macdonald Campus Seed Library</a></h3><p class=""area"">Sainte-Anne-de-Bellevue, Québec</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>For saved seeds you bring back, use the return form and label and package each contribution.</p>
+          <p class=""source""><a href=""https://www.mcgill.ca/libraries/locations/macdonald/seed-library/return"">McGill seed returns</a></p>
+        </li>
+        <li data-operator=""waikato"" data-fit=""listed"" id=""answer--donate-seeds--waikato"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--donate-seeds--waikato"" aria-label=""Waikato District Libraries — Donate seeds to the library"">Waikato District Libraries</a></h3><p class=""area"">Waikato District, New Zealand</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The district accepts spare seeds subject to its restrictions on illegal, noxious or invasive plants.</p>
+          <p class=""source""><a href=""https://www.waikatodistrict.govt.nz/services-facilities/libraries/collections/seed-library"">Waikato District Seed Library</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""before-pickup"" class=""prep"" aria-labelledby=""before-pickup-title"" tabindex=""-1"">
+      <h2 id=""before-pickup-title"">Before you pick up seeds</h2>
+      <p>Find the program’s pickup location, then look for its sign-out, registration or donation steps.</p>
+      <ul class=""cards"" role=""list"">
+        <li>
+          <h3>Transylvania County Library</h3><p class=""area"">Brevard, North Carolina</p>
+          <dl>
+            <dt>Visit</dt><dd>Find the seed collection on the first floor. Take what you plan to grow. <span class=""source""><a href=""https://library.transylvaniacounty.org/seeds/"">Transylvania County Seed Library</a></span></dd>
+          </dl>
+          <p><a href=""https://library.transylvaniacounty.org/seeds/"">Transylvania County Seed Library</a></p>
+        </li>
+        <li>
+          <h3>Canton Seed Library</h3><p class=""area"">Canton, North Carolina</p>
+          <dl>
+            <dt>Bring your card</dt><dd>Bring a Cardinal library card in good standing. The seed library follows the branch’s open hours. <span class=""source""><a href=""https://www.haywoodcountync.gov/670/Canton-Seed-Library-Giving-Garden"">Haywood County seed library instructions</a></span></dd>
+          </dl>
+          <p><a href=""https://www.haywoodcountync.gov/670/Canton-Seed-Library-Giving-Garden"">Haywood County seed library instructions</a></p>
+        </li>
+        <li>
+          <h3>Cleveland County Library System</h3><p class=""area"">Shelby and Lawndale, North Carolina</p>
+          <dl>
+            <dt>Check out</dt><dd>Complete the seed checkout slip and put it in the card box. The page lists the Eugenia H. Young Memorial and Spangler libraries. <span class=""source""><a href=""https://www.clevelandcounty.com/main/departments/library/seed_library.php"">Cleveland County Seed Library</a></span></dd>
+          </dl>
+          <p><a href=""https://www.clevelandcounty.com/main/departments/library/seed_library.php"">Cleveland County Seed Library</a></p>
+        </li>
+        <li>
+          <h3>State Library of North Carolina</h3><p class=""area"">Raleigh, North Carolina</p>
+          <dl>
+            <dt>Sign out</dt><dd>Pick up seeds in person during onsite hours. Sign out your selections for the library’s inventory. <span class=""source""><a href=""https://library.nc.gov/seed-library"">State Library native seed program</a></span></dd>
+          </dl>
+          <p><a href=""https://library.nc.gov/seed-library"">State Library native seed program</a></p>
+        </li>
+        <li>
+          <h3>Longwood Public Library</h3><p class=""area"">Middle Island, New York</p>
+          <dl>
+            <dt>Pick up</dt><dd>Help yourself to the packets. Take what you can use this season. <span class=""source""><a href=""https://www.longwoodlibrary.org/seedlibrary"">Longwood Grows policy</a></span></dd>
+          </dl>
+          <p><a href=""https://www.longwoodlibrary.org/seedlibrary"">Longwood Grows policy</a></p>
+        </li>
+        <li>
+          <h3>Region of Waterloo Library</h3><p class=""area"">Waterloo Region, Ontario</p>
+          <dl>
+            <dt>Choose a branch</dt><dd>Ask a participating branch what is on hand. The guide lists heirloom vegetables, herbs and flowers. <span class=""source""><a href=""https://www.rwlibrary.ca/browse-borrow/seed-library/"">Region of Waterloo Seed Library</a></span></dd>
+          </dl>
+          <p><a href=""https://www.rwlibrary.ca/browse-borrow/seed-library/"">Region of Waterloo Seed Library</a></p>
+        </li>
+        <li>
+          <h3>McGill Macdonald Campus Seed Library</h3><p class=""area"">Sainte-Anne-de-Bellevue, Québec</p>
+          <dl>
+            <dt>Register</dt><dd>First-time borrowers register. Eligible members may browse in person or use the order form. <span class=""source""><a href=""https://www.mcgill.ca/libraries/locations/macdonald/seed-library/request"">McGill seed borrowing and limits</a></span></dd>
+          </dl>
+          <p><a href=""https://www.mcgill.ca/libraries/locations/macdonald/seed-library/request"">McGill seed borrowing and limits</a></p>
+        </li>
+        <li>
+          <h3>Waikato District Libraries</h3><p class=""area"">Waikato District, New Zealand</p>
+          <dl>
+            <dt>Visit a district branch</dt><dd>The district lists seeds at its libraries. Check the location before visiting. <span class=""source""><a href=""https://www.waikatodistrict.govt.nz/services-facilities/libraries/collections/seed-library"">Waikato District Seed Library</a></span></dd>
+          </dl>
+          <p><a href=""https://www.waikatodistrict.govt.nz/services-facilities/libraries/collections/seed-library"">Waikato District Seed Library</a></p>
+        </li>
+      </ul>
+    </section>
+    <!-- LIBRARY-SEED-BORROWING:END -->
+    <section class=""notes"" aria-labelledby=""notes-title"">
+      <h2 id=""notes-title"">Check the actual branch and season</h2>
+      <p>The <a href=""https://library.nc.gov/seed-library"">State Library of North Carolina seed library</a> links to other programs. Ask the location you plan to visit about stock and the rules for donating. The published number is a limit or request where the program says so.</p>
+    </section>
+    <section class=""notes"" aria-labelledby=""sources-and-data"">
+      <h2 id=""sources-and-data"">Sources and data</h2>
+      <ul class=""utility-links"" role=""list"">
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/library-seed-borrowing/comparison.csv"" download>Download comparison data (CSV)</a></li>
+        <li><a href=""https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml"">Report a source correction</a> (public GitHub form)</li>
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/published-policy-lab/"">Check other community rules</a></li>
+      </ul>
+    </section>"
+"tool-library-borrowing","Can I borrow tools from a tool library?","Compare household eligibility, free checkout, membership, fees, reservations and returns at six tool lending programs.","https://itsmeb-lab.github.io/wilke-public-labs/tool-library-borrowing/","2026-11-25","STAGING_DRAFT_ONLY","<div class=""intro"">
+      <p>A tool library may lend to individual residents, require a paid membership, or serve registered community organizations. Check who can borrow and how fees work for the specific route.</p>
+      <p>A program can be free to join and still charge for a loan. A paid program can also include most loans in its membership. Confirm availability and the policy for your exact item.</p>
+    </div>
+    <!-- TOOL-LIBRARY-BORROWING:START -->
+    <nav id=""items"" class=""choices"" aria-label=""Choose an item"" tabindex=""-1"">
+      <p>Choose an item</p>
+      <ul role=""list"">
+        <li><a href=""#household-borrower"">Borrow as a household or individual</a></li>
+        <li><a href=""#free-loan"">Borrow without a membership or loan fee</a></li>
+        <li><a href=""#extra-fees"">Check membership, deposits and item fees</a></li>
+        <li><a href=""#reserve"">Reserve a tool before visiting</a></li>
+        <li><a href=""#return-tool"">Check where and when to bring it back</a></li>
+        <li><a href=""#before-checkout"">Before you borrow</a></li>
+      </ul>
+    </nav>
+    <p class=""reviewed"">Snapshot reviewed <time datetime=""2026-11-25"">November 25, 2026</time>.</p>
+    <section id=""household-borrower"" class=""comparison"" aria-labelledby=""household-borrower-title"" tabindex=""-1"">
+      <h2 id=""household-borrower-title"">Borrow as a household or individual</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""milwaukee-hri"" data-fit=""ask"" id=""answer--household-borrower--milwaukee-hri"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--household-borrower--milwaukee-hri"" aria-label=""Housing Resources Tool Loan Center — Borrow as a household or individual"">Housing Resources Tool Loan Center</a></h3><p class=""area"">Milwaukee, Wisconsin</p>
+          <p><span class=""fit ask"">Ask first</span></p>
+          <p>The operator offers regular individual membership. Confirm any residency or homeowner conditions before relying on household access.</p>
+          <p class=""source""><a href=""https://www.hri-wi.org/homeowners/tool-loan-program/"">Housing Resources tool loan program</a></p>
+        </li>
+        <li data-operator=""rock-hill"" data-fit=""listed"" id=""answer--household-borrower--rock-hill"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--household-borrower--rock-hill"" aria-label=""City of Rock Hill Community Toolshed — Borrow as a household or individual"">City of Rock Hill Community Toolshed</a></h3><p class=""area"">Rock Hill, South Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Rock Hill lists residents alongside neighborhood associations and community organizations. The program is for community maintenance and improvement.</p>
+          <p class=""source""><a href=""https://www.cityofrockhill.com/departments/neighborhood-services/community-programs/community-toolshed"">Rock Hill Community Toolshed</a></p>
+        </li>
+        <li data-operator=""duluth-one-roof"" data-fit=""listed"" id=""answer--household-borrower--duluth-one-roof"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--household-borrower--duluth-one-roof"" aria-label=""One Roof Tool Lending Library — Borrow as a household or individual"">One Roof Tool Lending Library</a></h3><p class=""area"">Duluth, Minnesota</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The operator says its tool library is open to local residents.</p>
+          <p class=""source""><a href=""https://1roofhousing.org/homeowners/tool-lending-library/"">One Roof tool lending instructions</a></p>
+        </li>
+        <li data-operator=""charlotte-toolbank"" data-fit=""excluded"" id=""answer--household-borrower--charlotte-toolbank"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--household-borrower--charlotte-toolbank"" aria-label=""Charlotte ToolBank — Borrow as a household or individual"">Charlotte ToolBank</a></h3><p class=""area"">Charlotte, North Carolina</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The ToolBank lends to eligible organizations. A household acting as an individual does not qualify under this route.</p>
+          <p class=""source""><a href=""https://charlotte.toolbank.org/tool-lending-program/"">Charlotte ToolBank lending program</a></p>
+        </li>
+        <li data-operator=""berkeley"" data-fit=""listed"" id=""answer--household-borrower--berkeley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--household-borrower--berkeley"" aria-label=""Berkeley Public Library Tool Lending Library — Borrow as a household or individual"">Berkeley Public Library Tool Lending Library</a></h3><p class=""area"">Berkeley, California</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The library lists age and local residency or property-ownership requirements for individual borrowers.</p>
+          <p class=""source""><a href=""https://www.berkeleypubliclibrary.org/locations/tool-lending-library"">Berkeley tool lending location and eligibility</a></p>
+        </li>
+        <li data-operator=""london-things"" data-fit=""listed"" id=""answer--household-borrower--london-things"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--household-borrower--london-things"" aria-label=""Library of Things — Borrow as a household or individual"">Library of Things</a></h3><p class=""area"">London and participating locations, England</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Individuals can join and reserve items through a membership, subject to the program’s terms.</p>
+          <p class=""source""><a href=""https://libraryofthings.co.uk/terms-of-borrowing"">Library of Things membership and loan terms</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""free-loan"" class=""comparison"" aria-labelledby=""free-loan-title"" tabindex=""-1"">
+      <h2 id=""free-loan-title"">Borrow without a membership or loan fee</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""milwaukee-hri"" data-fit=""excluded"" id=""answer--free-loan--milwaukee-hri"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--free-loan--milwaukee-hri"" aria-label=""Housing Resources Tool Loan Center — Borrow without a membership or loan fee"">Housing Resources Tool Loan Center</a></h3><p class=""area"">Milwaukee, Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>Most tools have no separate loan charge for current members. The center charges an annual membership fee.</p>
+          <p class=""source""><a href=""https://www.hri-wi.org/homeowners/tool-loan-program/"">Housing Resources tool loan program</a></p>
+        </li>
+        <li data-operator=""rock-hill"" data-fit=""listed"" id=""answer--free-loan--rock-hill"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--free-loan--rock-hill"" aria-label=""City of Rock Hill Community Toolshed — Borrow without a membership or loan fee"">City of Rock Hill Community Toolshed</a></h3><p class=""area"">Rock Hill, South Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The city lists no charge for eligible borrowers who meet the proof-of-residency requirement.</p>
+          <p class=""source""><a href=""https://www.cityofrockhill.com/departments/neighborhood-services/community-programs/community-toolshed"">Rock Hill Community Toolshed</a></p>
+        </li>
+        <li data-operator=""duluth-one-roof"" data-fit=""listed"" id=""answer--free-loan--duluth-one-roof"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--free-loan--duluth-one-roof"" aria-label=""One Roof Tool Lending Library — Borrow without a membership or loan fee"">One Roof Tool Lending Library</a></h3><p class=""area"">Duluth, Minnesota</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The program offers free tool checkout to area residents.</p>
+          <p class=""source""><a href=""https://1roofhousing.org/homeowners/tool-lending-library/"">One Roof tool lending instructions</a></p>
+        </li>
+        <li data-operator=""charlotte-toolbank"" data-fit=""excluded"" id=""answer--free-loan--charlotte-toolbank"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--free-loan--charlotte-toolbank"" aria-label=""Charlotte ToolBank — Borrow without a membership or loan fee"">Charlotte ToolBank</a></h3><p class=""area"">Charlotte, North Carolina</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The application has no membership fee. Member agencies pay a tool handling charge for each loan.</p>
+          <p class=""source""><a href=""https://charlotte.toolbank.org/tool-lending-program/tools-fees/"">Charlotte ToolBank current borrowing fees</a></p>
+        </li>
+        <li data-operator=""berkeley"" data-fit=""unknown"" id=""answer--free-loan--berkeley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--free-loan--berkeley"" aria-label=""Berkeley Public Library Tool Lending Library — Borrow without a membership or loan fee"">Berkeley Public Library Tool Lending Library</a></h3><p class=""area"">Berkeley, California</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.berkeleypubliclibrary.org/locations/tool-lending-library"">Check with Berkeley Public Library Tool Lending Library</a></p>
+        </li>
+        <li data-operator=""london-things"" data-fit=""excluded"" id=""answer--free-loan--london-things"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--free-loan--london-things"" aria-label=""Library of Things — Borrow without a membership or loan fee"">Library of Things</a></h3><p class=""area"">London and participating locations, England</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The program requires a membership and charges published borrowing rates.</p>
+          <p class=""source""><a href=""https://libraryofthings.co.uk/terms-of-borrowing"">Library of Things membership and loan terms</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""extra-fees"" class=""comparison"" aria-labelledby=""extra-fees-title"" tabindex=""-1"">
+      <h2 id=""extra-fees-title"">Check membership, deposits and item fees</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""milwaukee-hri"" data-fit=""listed"" id=""answer--extra-fees--milwaukee-hri"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--extra-fees--milwaukee-hri"" aria-label=""Housing Resources Tool Loan Center — Check membership, deposits and item fees"">Housing Resources Tool Loan Center</a></h3><p class=""area"">Milwaukee, Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Regular membership is listed at $25 per year. The program lists a separate $50 deposit for high-end tools, with a $20 rental fee deducted.</p>
+          <p class=""source""><a href=""https://www.hri-wi.org/homeowners/tool-loan-program/"">Housing Resources tool loan program</a></p>
+        </li>
+        <li data-operator=""rock-hill"" data-fit=""unknown"" id=""answer--extra-fees--rock-hill"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--extra-fees--rock-hill"" aria-label=""City of Rock Hill Community Toolshed — Check membership, deposits and item fees"">City of Rock Hill Community Toolshed</a></h3><p class=""area"">Rock Hill, South Carolina</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.cityofrockhill.com/departments/neighborhood-services/community-programs/community-toolshed"">Check with City of Rock Hill Community Toolshed</a></p>
+        </li>
+        <li data-operator=""duluth-one-roof"" data-fit=""unknown"" id=""answer--extra-fees--duluth-one-roof"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--extra-fees--duluth-one-roof"" aria-label=""One Roof Tool Lending Library — Check membership, deposits and item fees"">One Roof Tool Lending Library</a></h3><p class=""area"">Duluth, Minnesota</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://1roofhousing.org/homeowners/tool-lending-library/"">Check with One Roof Tool Lending Library</a></p>
+        </li>
+        <li data-operator=""charlotte-toolbank"" data-fit=""listed"" id=""answer--extra-fees--charlotte-toolbank"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--extra-fees--charlotte-toolbank"" aria-label=""Charlotte ToolBank — Check membership, deposits and item fees"">Charlotte ToolBank</a></h3><p class=""area"">Charlotte, North Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The operator’s current fee page lists 5% of each borrowed tool’s retail value per week.</p>
+          <p class=""source""><a href=""https://charlotte.toolbank.org/tool-lending-program/tools-fees/"">Charlotte ToolBank current borrowing fees</a></p>
+        </li>
+        <li data-operator=""berkeley"" data-fit=""unknown"" id=""answer--extra-fees--berkeley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--extra-fees--berkeley"" aria-label=""Berkeley Public Library Tool Lending Library — Check membership, deposits and item fees"">Berkeley Public Library Tool Lending Library</a></h3><p class=""area"">Berkeley, California</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.berkeleypubliclibrary.org/locations/tool-lending-library"">Check with Berkeley Public Library Tool Lending Library</a></p>
+        </li>
+        <li data-operator=""london-things"" data-fit=""listed"" id=""answer--extra-fees--london-things"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--extra-fees--london-things"" aria-label=""Library of Things — Check membership, deposits and item fees"">Library of Things</a></h3><p class=""area"">London and participating locations, England</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Compare the membership options and the charge listed for the item before checkout.</p>
+          <p class=""source""><a href=""https://libraryofthings.co.uk/terms-of-borrowing"">Library of Things membership and loan terms</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""reserve"" class=""comparison"" aria-labelledby=""reserve-title"" tabindex=""-1"">
+      <h2 id=""reserve-title"">Reserve a tool before visiting</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""milwaukee-hri"" data-fit=""unknown"" id=""answer--reserve--milwaukee-hri"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--reserve--milwaukee-hri"" aria-label=""Housing Resources Tool Loan Center — Reserve a tool before visiting"">Housing Resources Tool Loan Center</a></h3><p class=""area"">Milwaukee, Wisconsin</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.hri-wi.org/homeowners/tool-loan-program/"">Check with Housing Resources Tool Loan Center</a></p>
+        </li>
+        <li data-operator=""rock-hill"" data-fit=""listed"" id=""answer--reserve--rock-hill"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--reserve--rock-hill"" aria-label=""City of Rock Hill Community Toolshed — Reserve a tool before visiting"">City of Rock Hill Community Toolshed</a></h3><p class=""area"">Rock Hill, South Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Request tools using the form on the city’s program page. A request still needs confirmation.</p>
+          <p class=""source""><a href=""https://www.cityofrockhill.com/departments/neighborhood-services/community-programs/community-toolshed"">Rock Hill Community Toolshed</a></p>
+        </li>
+        <li data-operator=""duluth-one-roof"" data-fit=""listed"" id=""answer--reserve--duluth-one-roof"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--reserve--duluth-one-roof"" aria-label=""One Roof Tool Lending Library — Reserve a tool before visiting"">One Roof Tool Lending Library</a></h3><p class=""area"">Duluth, Minnesota</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>One Roof provides a reservation form for pickup and return appointments.</p>
+          <p class=""source""><a href=""https://1roofhousing.org/homeowners/tool-lending-library/"">One Roof tool lending instructions</a></p>
+        </li>
+        <li data-operator=""charlotte-toolbank"" data-fit=""listed"" id=""answer--reserve--charlotte-toolbank"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--reserve--charlotte-toolbank"" aria-label=""Charlotte ToolBank — Reserve a tool before visiting"">Charlotte ToolBank</a></h3><p class=""area"">Charlotte, North Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Member agencies order tools online and schedule pickup.</p>
+          <p class=""source""><a href=""https://charlotte.toolbank.org/tool-lending-program/"">Charlotte ToolBank lending program</a></p>
+        </li>
+        <li data-operator=""berkeley"" data-fit=""listed"" id=""answer--reserve--berkeley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--reserve--berkeley"" aria-label=""Berkeley Public Library Tool Lending Library — Reserve a tool before visiting"">Berkeley Public Library Tool Lending Library</a></h3><p class=""area"">Berkeley, California</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>After registering in person, use your library card to place an online hold on an eligible item.</p>
+          <p class=""source""><a href=""https://www.berkeleypubliclibrary.org/locations/tool-lending-library/tools-faq"">Berkeley tool lending questions</a></p>
+        </li>
+        <li data-operator=""london-things"" data-fit=""listed"" id=""answer--reserve--london-things"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--reserve--london-things"" aria-label=""Library of Things — Reserve a tool before visiting"">Library of Things</a></h3><p class=""area"">London and participating locations, England</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Use the website to find a kiosk and reserve the item.</p>
+          <p class=""source""><a href=""https://www.libraryofthings.co.uk/how-borrowing-works"">Library of Things borrowing instructions</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""return-tool"" class=""comparison"" aria-labelledby=""return-tool-title"" tabindex=""-1"">
+      <h2 id=""return-tool-title"">Check where and when to bring it back</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""milwaukee-hri"" data-fit=""unknown"" id=""answer--return-tool--milwaukee-hri"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--return-tool--milwaukee-hri"" aria-label=""Housing Resources Tool Loan Center — Check where and when to bring it back"">Housing Resources Tool Loan Center</a></h3><p class=""area"">Milwaukee, Wisconsin</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.hri-wi.org/homeowners/tool-loan-program/"">Check with Housing Resources Tool Loan Center</a></p>
+        </li>
+        <li data-operator=""rock-hill"" data-fit=""unknown"" id=""answer--return-tool--rock-hill"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--return-tool--rock-hill"" aria-label=""City of Rock Hill Community Toolshed — Check where and when to bring it back"">City of Rock Hill Community Toolshed</a></h3><p class=""area"">Rock Hill, South Carolina</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.cityofrockhill.com/departments/neighborhood-services/community-programs/community-toolshed"">Check with City of Rock Hill Community Toolshed</a></p>
+        </li>
+        <li data-operator=""duluth-one-roof"" data-fit=""listed"" id=""answer--return-tool--duluth-one-roof"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--return-tool--duluth-one-roof"" aria-label=""One Roof Tool Lending Library — Check where and when to bring it back"">One Roof Tool Lending Library</a></h3><p class=""area"">Duluth, Minnesota</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The operator lists a loan of up to one week and schedules drop-off through its reservation process.</p>
+          <p class=""source""><a href=""https://1roofhousing.org/homeowners/tool-lending-library/"">One Roof tool lending instructions</a></p>
+        </li>
+        <li data-operator=""charlotte-toolbank"" data-fit=""listed"" id=""answer--return-tool--charlotte-toolbank"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--return-tool--charlotte-toolbank"" aria-label=""Charlotte ToolBank — Check where and when to bring it back"">Charlotte ToolBank</a></h3><p class=""area"">Charlotte, North Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Return the tools clean and dry at the scheduled time. The operator publishes terms of one to eight weeks.</p>
+          <p class=""source""><a href=""https://charlotte.toolbank.org/tool-lending-program/tools-fees/"">Charlotte ToolBank current borrowing fees</a></p>
+        </li>
+        <li data-operator=""berkeley"" data-fit=""listed"" id=""answer--return-tool--berkeley"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--return-tool--berkeley"" aria-label=""Berkeley Public Library Tool Lending Library — Check where and when to bring it back"">Berkeley Public Library Tool Lending Library</a></h3><p class=""area"">Berkeley, California</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Return the tool by its due date to the Tool Lending Library during open hours.</p>
+          <p class=""source""><a href=""https://www.berkeleypubliclibrary.org/locations/tool-lending-library/tools-faq"">Berkeley tool lending questions</a></p>
+        </li>
+        <li data-operator=""london-things"" data-fit=""listed"" id=""answer--return-tool--london-things"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--return-tool--london-things"" aria-label=""Library of Things — Check where and when to bring it back"">Library of Things</a></h3><p class=""area"">London and participating locations, England</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Return the item to the kiosk where you picked it up by closing time on the stated return date.</p>
+          <p class=""source""><a href=""https://libraryofthings.co.uk/terms-of-borrowing"">Library of Things membership and loan terms</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""before-checkout"" class=""prep"" aria-labelledby=""before-checkout-title"" tabindex=""-1"">
+      <h2 id=""before-checkout-title"">Before you borrow</h2>
+      <p>Find the item, confirm your eligibility and compare the full checkout and return terms.</p>
+      <ul class=""cards"" role=""list"">
+        <li>
+          <h3>Housing Resources Tool Loan Center</h3><p class=""area"">Milwaukee, Wisconsin</p>
+          <dl>
+            <dt>Confirm your membership route</dt><dd>The operator lists regular, senior, and nonprofit memberships. Check your eligibility, item and collection date with the center. <span class=""source""><a href=""https://www.hri-wi.org/homeowners/tool-loan-program/"">Housing Resources tool loan program</a></span></dd>
+          </dl>
+          <p><a href=""https://www.hri-wi.org/homeowners/tool-loan-program/"">Housing Resources tool loan program</a></p>
+        </li>
+        <li>
+          <h3>City of Rock Hill Community Toolshed</h3><p class=""area"">Rock Hill, South Carolina</p>
+          <dl>
+            <dt>Use the city request route</dt><dd>The city lists proof of residency and a tool request form. Check who qualifies and which request to use. <span class=""source""><a href=""https://www.cityofrockhill.com/departments/neighborhood-services/community-programs/community-toolshed"">Rock Hill Community Toolshed</a></span></dd>
+          </dl>
+          <p><a href=""https://www.cityofrockhill.com/departments/neighborhood-services/community-programs/community-toolshed"">Rock Hill Community Toolshed</a></p>
+        </li>
+        <li>
+          <h3>One Roof Tool Lending Library</h3><p class=""area"">Duluth, Minnesota</p>
+          <dl>
+            <dt>Complete the borrower agreement</dt><dd>Review the agreement and make a reservation to schedule tool pickup and drop-off. <span class=""source""><a href=""https://1roofhousing.org/homeowners/tool-lending-library/"">One Roof tool lending instructions</a></span></dd>
+          </dl>
+          <p><a href=""https://1roofhousing.org/homeowners/tool-lending-library/"">One Roof tool lending instructions</a></p>
+        </li>
+        <li>
+          <h3>Charlotte ToolBank</h3><p class=""area"">Charlotte, North Carolina</p>
+          <dl>
+            <dt>Confirm the organization’s membership</dt><dd>First-time borrowers apply as a member agency before ordering. The membership application documents eligibility. <span class=""source""><a href=""https://charlotte.toolbank.org/tool-lending-program/"">Charlotte ToolBank lending program</a></span></dd>
+            <dt>Budget for the loan</dt><dd>Check the current fee page for handling fees and the due date. <span class=""source""><a href=""https://charlotte.toolbank.org/tool-lending-program/tools-fees/"">Charlotte ToolBank current borrowing fees</a></span></dd>
+          </dl>
+          <p><a href=""https://charlotte.toolbank.org/tool-lending-program/"">Charlotte ToolBank lending program</a></p>
+        </li>
+        <li>
+          <h3>Berkeley Public Library Tool Lending Library</h3><p class=""area"">Berkeley, California</p>
+          <dl>
+            <dt>Register in person</dt><dd>Check the library’s proof-of-eligibility instructions. Register in person before placing online holds. <span class=""source""><a href=""https://www.berkeleypubliclibrary.org/locations/tool-lending-library/tools-faq"">Berkeley tool lending questions</a></span></dd>
+          </dl>
+          <p><a href=""https://www.berkeleypubliclibrary.org/locations/tool-lending-library"">Berkeley tool lending location and eligibility</a></p>
+        </li>
+        <li>
+          <h3>Library of Things</h3><p class=""area"">London and participating locations, England</p>
+          <dl>
+            <dt>Choose a kiosk</dt><dd>Reserve an available item online, complete any required identification step and collect it from the assigned kiosk. <span class=""source""><a href=""https://libraryofthings.co.uk/terms-of-borrowing"">Library of Things membership and loan terms</a></span></dd>
+          </dl>
+          <p><a href=""https://www.libraryofthings.co.uk/how-borrowing-works"">Library of Things borrowing instructions</a></p>
+        </li>
+      </ul>
+    </section>
+    <!-- TOOL-LIBRARY-BORROWING:END -->
+    <section class=""notes"" aria-labelledby=""notes-title"">
+      <h2 id=""notes-title"">Check your particular tool and job</h2>
+      <p>Use the program’s own <a href=""https://www.berkeleypubliclibrary.org/locations/tool-lending-library/tools-faq"">checkout and return instructions</a>. Keep any tool-specific loan period or condition with the quote or reservation. Hardware, batteries and consumables can be handled separately.</p>
+      <p>For a community group, use the organizer route. The <a href=""https://charlotte.toolbank.org/tool-lending-program/"">Charlotte ToolBank instructions</a> describe how member agencies order, pick up and return tools.</p>
+    </section>
+    <section class=""notes"" aria-labelledby=""sources-and-data"">
+      <h2 id=""sources-and-data"">Sources and data</h2>
+      <ul class=""utility-links"" role=""list"">
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/tool-library-borrowing/comparison.csv"" download>Download comparison data (CSV)</a></li>
+        <li><a href=""https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml"">Report a source correction</a> (public GitHub form)</li>
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/repair-cafe-planner/"">Compare when a repair café can help</a></li>
+      </ul>
+    </section>"
