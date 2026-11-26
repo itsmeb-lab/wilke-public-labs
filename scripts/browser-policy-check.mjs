@@ -170,7 +170,7 @@ try{
   await rpc("POST",sid("/url"),{url:origin+"/guide-finder/"});
   await check("guide finder search, region and layout at "+width+"px",async()=>{
    const readyBy=Date.now()+6000;
-   while(await execute("return document.getElementById('finder').hidden;")){
+   while(await execute("return document.getElementById('lookup').disabled || document.getElementById('region').disabled;")){
     if(Date.now()>=readyBy)throw new Error("Guide finder did not load.");
     await delay(50);
    }
@@ -215,7 +215,7 @@ try{
  });
  await rpc("POST",sid("/url"),{url:origin+"/guide-finder/"});
  await check("guide finder static list with JavaScript disabled",async()=>{
-  const state=await execute("return {hidden:document.getElementById('finder').hidden, guides:document.querySelectorAll('.browse-guide').length, link:document.querySelector('.browse-guide a[href=\"../repair-cafe-planner/#microwave\"]')?.hash};");
+  const state=await execute("return {hidden:getComputedStyle(document.getElementById('finder')).display==='none', guides:document.querySelectorAll('.browse-guide').length, link:document.querySelector('.browse-guide a[href=\"../repair-cafe-planner/#microwave\"]')?.hash};");
   assert.equal(state.hidden,true);
   assert.equal(state.guides,15);
   assert.equal(state.link,"#microwave");

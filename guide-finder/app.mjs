@@ -2,7 +2,6 @@ import { guides, regions } from './index-data.mjs';
 import { buildSearchIndex, searchGuides } from './search.mjs';
 
 const index = buildSearchIndex(guides);
-const finder = document.getElementById('finder');
 const query = document.getElementById('lookup');
 const region = document.getElementById('region');
 const status = document.getElementById('result-status');
@@ -57,4 +56,5 @@ function render() {
 query.addEventListener('input', render);
 region.addEventListener('change', render);
 render();
-finder.hidden = false;
+query.disabled = false;
+region.disabled = false;

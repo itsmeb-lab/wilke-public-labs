@@ -12,6 +12,7 @@
   <link rel="sitemap" type="application/xml" href="../sitemap.xml">
   <link rel="stylesheet" href="../repair-cafe-planner/style.css?v=20261125-2">
   <link rel="stylesheet" href="./finder.css">
+  <noscript><style>#finder { display: none }</style></noscript>
   <script type="module" src="./app.mjs"></script>
 </head>
 <body>
@@ -22,22 +23,22 @@
       <h1>Find a community guide</h1>
       <p>Find a task, then check the rules for the exact service you plan to use.</p>
     </div>
-    <section id="finder" class="finder" aria-labelledby="finder-label" hidden>
+    <section id="finder" class="finder" aria-labelledby="finder-label">
       <h2 id="finder-label">Search by task or region</h2>
       <div class="finder-fields">
         <div>
           <label for="lookup">What are you trying to do?</label>
-          <input id="lookup" type="search" maxlength="120" autocomplete="off" placeholder="Try donate broken glasses">
+          <input id="lookup" type="search" maxlength="120" autocomplete="off" placeholder="Try donate broken glasses" disabled>
         </div>
         <div>
           <label for="region">Region</label>
-          <select id="region">
+          <select id="region" disabled>
             <option value="">All covered regions</option>
           </select>
         </div>
       </div>
       <p class="finder-help">Results cover named programs in the guides. Check the provider’s source for dates, availability and eligibility.</p>
-      <p id="result-status" role="status"></p>
+      <p id="result-status" role="status">Start with a task or choose a region.</p>
       <ul id="matches" class="finder-results" role="list" aria-label="Matching guide questions"></ul>
     </section>
     <section class="notes" aria-labelledby="guide-list-title">
