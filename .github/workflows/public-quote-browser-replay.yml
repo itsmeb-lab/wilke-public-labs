@@ -1,0 +1,26 @@
+name: Public Quote Browser Replay
+
+on:
+  push:
+    branches: [atlas/quote-browser-replay-20261126]
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: windows-latest
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [main, milwaukee]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Replay public form against the loopback-only receiver
+        run: node scripts/quote-browser-replay.mjs ${{ matrix.target }}
