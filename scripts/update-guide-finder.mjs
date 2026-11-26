@@ -24,6 +24,7 @@ const regionNames = Object.freeze({
   'nz-wko': 'New Zealand · Waikato',
   'us-az': 'United States · Arizona',
   'us-ca': 'United States · California',
+  'us-co': 'United States · Colorado',
   'us-dc': 'United States · District of Columbia',
   'us-fl': 'United States · Florida',
   'us-ga': 'United States · Georgia',
@@ -142,6 +143,13 @@ const taskAliases = {
     'watch-shredding': ['watch documents papers shredded shred shredding onsite in front witness'],
     'business-paper': ['shred shredding documents papers small business commercial records'],
     'more-than-two-boxes': ['shred shredding documents paper several boxes limit banker boxes bags pounds'],
+  },
+  'library-state-park-passes': {
+    'day-vehicle-entry': ['borrow library state park pass provincial parks passport free car vehicle entry day use'],
+    'library-hold': ['library state park pass passport reserve hold pickup before visiting'],
+    'week-loan': ['keep state park pass week seven days loan length'],
+    'overnight-camping': ['state park pass campsite campground camping overnight fee'],
+    'capacity-or-reservation': ['state park pass park full capacity separate parking day use reservation entry permit'],
   },
 };
 

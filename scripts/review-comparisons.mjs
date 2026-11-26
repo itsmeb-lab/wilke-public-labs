@@ -20,6 +20,7 @@ export const comparisonGuides = Object.freeze([
   { slug: 'used-bicycle-donations', marker: 'USED-BICYCLE-DONATIONS' },
   { slug: 'library-memory-labs', marker: 'LIBRARY-MEMORY-LABS' },
   { slug: 'household-document-shredding', marker: 'HOUSEHOLD-DOCUMENT-SHREDDING' },
+  { slug: 'library-state-park-passes', marker: 'LIBRARY-STATE-PARK-PASSES' },
 ]);
 const localizedGuides = Object.freeze([
   { slug: 'milwaukee-articulos-voluminosos', marker: 'MILWAUKEE-BULKY-ES', catalogSlug: 'milwaukee-bulky-items' },

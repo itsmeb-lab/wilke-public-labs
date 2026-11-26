@@ -103,6 +103,7 @@ Then open a lab:
 - `http://localhost:8080/used-bicycle-donations/`
 - `http://localhost:8080/library-memory-labs/`
 - `http://localhost:8080/household-document-shredding/`
+- `http://localhost:8080/library-state-park-passes/`
 
 See [how to verify the public comparisons and trace a source change](./COMPARISON-MAINTENANCE.md).
 
@@ -135,7 +136,7 @@ Start with the [diagnostic scope and free handoff checklist](https://wilkeservic
 
 Found these labs through Upwork? Keep pre-contract discussion and payment in the existing Upwork conversation. Do not use the direct-site contact route to move a marketplace relationship off-platform.
 
-The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the twenty-two published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
+The [public sitemap](https://itsmeb-lab.github.io/wilke-public-labs/sitemap.xml) lists the twenty-three published pages. Its presence and the pages' metadata do not prove search indexing, visitors or conversions.
 
 ## License
 
