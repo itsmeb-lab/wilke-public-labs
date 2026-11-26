@@ -96,7 +96,7 @@ export async function checkServed(fetcher = fetch) {
     ['published-policy-lab/wood-chip-load.css?v=20261125-1', 'published-policy-lab/wood-chip-load.css'],
     ['wordpress-exchange/comparisons-draft.csv', 'wordpress-exchange/comparisons-draft.csv'],
     ['milwaukee-cleanout-floor-handoff/', 'milwaukee-cleanout-floor-handoff/index.html'],
-    ['milwaukee-cleanout-floor-handoff/worksheet.css?v=20261125-2', 'milwaukee-cleanout-floor-handoff/worksheet.css'],
+    ['milwaukee-cleanout-floor-handoff/worksheet.css?v=20261126-1', 'milwaukee-cleanout-floor-handoff/worksheet.css'],
     ['milwaukee-cleanout-floor-handoff/quote-compare.mjs', 'milwaukee-cleanout-floor-handoff/quote-compare.mjs'],
     ['milwaukee-cleanout-floor-handoff/quote-math.mjs', 'milwaukee-cleanout-floor-handoff/quote-math.mjs'],
     ['milwaukee-junk-removal/', 'milwaukee-junk-removal/index.html'],

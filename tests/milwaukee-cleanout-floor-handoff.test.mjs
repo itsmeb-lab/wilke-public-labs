@@ -21,3 +21,17 @@ test('Milwaukee household disposal and flooring sources appear as distinct route
   assert.match(handoff, /datcp\.wi\.gov\/Pages\/Publications\/LandlordTenantGuide\.aspx/);
   assert.match(read('milwaukee-bulky-items/index.html'), /href="\.\.\/milwaukee-cleanout-floor-handoff\/"/);
 });
+
+test('the printable room scope distinguishes removal permission and flooring observations', () => {
+  for (const prompt of [
+    'Items on hold and who can clear them',
+    'Carry-out route and loading access',
+    'Observation date and floor areas still covered',
+    'Visible floor condition and moisture concerns',
+    'Flooring estimate stairs, steps and landings',
+  ]) {
+    assert.ok(handoff.includes('<dt>' + prompt + '</dt>'), prompt);
+  }
+  assert.match(handoff, /woodfloors\.org\/problem-prevention\//);
+  assert.match(handoff, /Mark covered areas as unobserved/);
+});
