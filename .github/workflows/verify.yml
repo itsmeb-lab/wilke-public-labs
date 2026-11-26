@@ -31,3 +31,14 @@ jobs:
       - name: Run Windows watchdog fixture
         shell: pwsh
         run: .\windows-process-recovery-watchdog\powershell\Test-ProcessWatchdog.ps1
+      - name: Read the exact live guide release and WordPress draft export
+        if: github.event_name == 'pull_request' && github.head_ref == 'atlas/verify-second-community-release'
+        shell: pwsh
+        run: |
+          node scripts/review-comparisons.mjs --served
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node scripts/review-comparisons.mjs --robots
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          php tests/verify-wordpress-csv.php
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node scripts/check-existing-milwaukee-pages.mjs
