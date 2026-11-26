@@ -73,6 +73,7 @@ describe('lab index audience navigation', () => {
     }
     assert.ok(guides.includes('href="./published-policy-lab/#wood-chip-load"'));
     assert.ok(guides.includes('href="./milwaukee-junk-removal/"'));
+    assert.ok(guides.includes('href="./estimate-change-calculator/"'));
     assert.doesNotMatch(guides, /data-diagnostic-link/);
     assert.ok(demos.includes('href="./automation-reliability-lab/"'));
     assert.ok(demos.includes('href="./windows-process-recovery-watchdog/"'));
@@ -85,7 +86,7 @@ describe('publication inventory', () => {
     const xml = readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-    assert.deepEqual(urls.sort(), [...pages.map(([, slug]) => origin + slug), origin + 'published-policy-lab/', origin + 'repair-cafe-planner/', origin + 'shelter-linen-guide/', origin + 'milwaukee-bulky-items/', origin + 'food-scrap-drop-off/', origin + 'library-scanning/', origin + 'library-museum-passes/', origin + 'library-seed-borrowing/', origin + 'tool-library-borrowing/', origin + 'milwaukee-cleanout-floor-handoff/', origin + 'milwaukee-junk-removal/', origin + 'library-sensory-spaces/', origin + 'eyeglass-donation-rules/', origin + 'guide-finder/', origin + 'milwaukee-articulos-voluminosos/', origin + 'comparison-data/', origin + 'library-instrument-borrowing/', origin + 'used-bicycle-donations/', origin + 'library-memory-labs/', origin + 'household-document-shredding/', origin + 'library-state-park-passes/'].sort());
+    assert.deepEqual(urls.sort(), [...pages.map(([, slug]) => origin + slug), origin + 'published-policy-lab/', origin + 'repair-cafe-planner/', origin + 'shelter-linen-guide/', origin + 'milwaukee-bulky-items/', origin + 'food-scrap-drop-off/', origin + 'library-scanning/', origin + 'library-museum-passes/', origin + 'library-seed-borrowing/', origin + 'tool-library-borrowing/', origin + 'milwaukee-cleanout-floor-handoff/', origin + 'milwaukee-junk-removal/', origin + 'estimate-change-calculator/', origin + 'library-sensory-spaces/', origin + 'eyeglass-donation-rules/', origin + 'guide-finder/', origin + 'milwaukee-articulos-voluminosos/', origin + 'comparison-data/', origin + 'library-instrument-borrowing/', origin + 'used-bicycle-donations/', origin + 'library-memory-labs/', origin + 'household-document-shredding/', origin + 'library-state-park-passes/'].sort());
     assert.doesNotMatch(xml, /utm_|localhost|\/admin|\/login/);
   });
   it('does not broaden the offer into Windows administration', () => {

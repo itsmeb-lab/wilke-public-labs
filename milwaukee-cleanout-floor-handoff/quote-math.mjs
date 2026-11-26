@@ -1,7 +1,7 @@
 const maxCents = 100000000;
 const maxLoads = 30;
 
-function readMoney(value, label) {
+export function readMoney(value, label) {
   const text = value.trim();
   if (!text) return null;
   if (!/^\$?(?:[0-9]+|[0-9]{1,3}(?:,[0-9]{3})+)(?:\.[0-9]{1,2})?$/.test(text)) {
