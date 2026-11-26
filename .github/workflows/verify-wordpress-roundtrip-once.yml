@@ -45,7 +45,9 @@ jobs:
           old cli version
           old eval-file "$GITHUB_WORKSPACE/tests/probe-wordpress-drafts.php" --use-include create
           old eval-file "$GITHUB_WORKSPACE/tests/probe-wordpress-drafts.php" --use-include repeat
-          old export --post_type=page --post_status=draft --stdout > "$work/drafts.xml"
+          ids="$(old post list --post_type=page --post_status=draft --meta_key=_atlas_canonical_reference --format=ids | tr ' ' ',')"
+          [[ "$ids" =~ ^[0-9]+(,[0-9]+)*$ ]]
+          old export --post_type=page --post_status=draft --post__in="$ids" --stdout > "$work/drafts.xml"
           test -s "$work/drafts.xml"
           new plugin install wordpress-importer --version="$WP_IMPORTER" --activate
           new plugin get wordpress-importer --field=version

@@ -60,6 +60,12 @@ while (($fields = fgetcsv($csv, null, ',', '"', '')) !== false) {
     $expected++;
 }
 fclose($csv);
-$drafts = wp_count_posts('page')->draft;
+$drafts = count(get_posts([
+    'post_type' => 'page',
+    'post_status' => 'draft',
+    'meta_key' => '_atlas_canonical_reference',
+    'fields' => 'ids',
+    'posts_per_page' => -1,
+]));
 atlasRequire($expected >= 10 && $drafts === $expected, 'Expected exactly one draft for each exchange row.');
 echo json_encode(['mode' => $mode, 'created' => $created, 'drafts' => $drafts, 'canonical_metadata' => $expected, 'html_exact' => $expected], JSON_THROW_ON_ERROR) . PHP_EOL;
