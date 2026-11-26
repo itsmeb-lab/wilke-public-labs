@@ -1,0 +1,344 @@
+{
+  "checkedOn": "2026-11-25",
+  "sources": {
+    "durham-calming-guide": {
+      "label": "Durham sensory room policy",
+      "url": "https://durhamcountylibrary.org/policies/sensory-room-policy/",
+      "checkedOn": "2026-11-25"
+    },
+    "durham-mse-guide": {
+      "label": "Durham sensory room policy",
+      "url": "https://durhamcountylibrary.org/policies/sensory-room-policy/",
+      "checkedOn": "2026-11-25"
+    },
+    "north-manchester-guide": {
+      "label": "North Manchester Quiet Room instructions",
+      "url": "https://www.in.gov/northmanchesterlibrary/services-and-resources/meeting-rooms/quiet-room/",
+      "checkedOn": "2026-11-25"
+    },
+    "toronto-stewart-guide": {
+      "label": "Toronto Public Library Sensory Room",
+      "url": "https://tpl.ca/using-the-library/services/sensory-room/",
+      "checkedOn": "2026-11-25"
+    },
+    "moreton-bay-guide": {
+      "label": "City of Moreton Bay library Quiet Hour",
+      "url": "https://www.moretonbay.qld.gov.au/libraries/Events/Library-Quiet-Hour",
+      "checkedOn": "2026-11-25"
+    },
+    "queensland-corner-guide": {
+      "label": "Queensland sensory-friendly sessions",
+      "url": "https://www.slq.qld.gov.au/whats-on/sensory-friendly-sessions",
+      "checkedOn": "2026-11-25"
+    }
+  },
+  "operators": [
+    {
+      "id": "durham-calming",
+      "name": "Durham Main Library Sensory Calming Room",
+      "area": "Durham, North Carolina",
+      "country": "US",
+      "jurisdiction": "us-nc",
+      "visitSource": "durham-calming-guide",
+      "sourceIds": [
+        "durham-calming-guide"
+      ],
+      "prep": [
+        {
+          "label": "Find the right room",
+          "text": "Ask for the Sensory Calming Room at the Main Library. It uses separate rules from the Multi Sensory Environment.",
+          "source": "durham-calming-guide"
+        }
+      ]
+    },
+    {
+      "id": "durham-mse",
+      "name": "Durham Main Library Multi Sensory Environment",
+      "area": "Durham, North Carolina",
+      "country": "US",
+      "jurisdiction": "us-nc",
+      "visitSource": "durham-mse-guide",
+      "sourceIds": [
+        "durham-mse-guide"
+      ],
+      "prep": [
+        {
+          "label": "Request the room",
+          "text": "Use a full-privileges Durham County Library card and the request options in the policy. Library staff approve reservations.",
+          "source": "durham-mse-guide"
+        }
+      ]
+    },
+    {
+      "id": "north-manchester",
+      "name": "North Manchester Public Library Quiet Room",
+      "area": "North Manchester, Indiana",
+      "country": "US",
+      "jurisdiction": "us-in",
+      "visitSource": "north-manchester-guide",
+      "sourceIds": [
+        "north-manchester-guide"
+      ],
+      "prep": [
+        {
+          "label": "Find the quiet room",
+          "text": "Use the published opening hours. The room is a silent space and contains some of the library’s local research materials.",
+          "source": "north-manchester-guide"
+        }
+      ]
+    },
+    {
+      "id": "toronto-stewart",
+      "name": "S. Walter Stewart Branch Sensory Room",
+      "area": "Toronto, Ontario",
+      "country": "CA",
+      "jurisdiction": "ca-on",
+      "visitSource": "toronto-stewart-guide",
+      "sourceIds": [
+        "toronto-stewart-guide"
+      ],
+      "prep": [
+        {
+          "label": "Contact the Children’s Desk",
+          "text": "Book by phone or at the branch. The library accepts same-day requests when space is available.",
+          "source": "toronto-stewart-guide"
+        }
+      ]
+    },
+    {
+      "id": "moreton-bay",
+      "name": "Moreton Bay Libraries Quiet Hour",
+      "area": "Moreton Bay, Queensland",
+      "country": "AU",
+      "jurisdiction": "au-qld",
+      "visitSource": "moreton-bay-guide",
+      "sourceIds": [
+        "moreton-bay-guide"
+      ],
+      "prep": [
+        {
+          "label": "Check a listed session",
+          "text": "Use the city’s session listing for the participating library, day and time.",
+          "source": "moreton-bay-guide"
+        }
+      ]
+    },
+    {
+      "id": "queensland-corner",
+      "name": "State Library of Queensland The Corner sessions",
+      "area": "South Brisbane, Queensland",
+      "country": "AU",
+      "jurisdiction": "au-qld",
+      "visitSource": "queensland-corner-guide",
+      "sourceIds": [
+        "queensland-corner-guide"
+      ],
+      "prep": [
+        {
+          "label": "Check upcoming sessions",
+          "text": "The library lists dates and reservation availability in the event listing.",
+          "source": "queensland-corner-guide"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "walk-in",
+      "label": "Visit without a reservation"
+    },
+    {
+      "id": "no-library-card",
+      "label": "Use the service without a library card"
+    },
+    {
+      "id": "dedicated-room",
+      "label": "Use a dedicated room"
+    },
+    {
+      "id": "child-supervision",
+      "label": "Check supervision and age rules"
+    },
+    {
+      "id": "time-limit",
+      "label": "Check session length or time limits"
+    }
+  ],
+  "rules": [
+    {
+      "operator": "durham-calming",
+      "task": "walk-in",
+      "fit": "listed",
+      "text": "The policy allows use as needed without a reservation.",
+      "source": "durham-calming-guide"
+    },
+    {
+      "operator": "durham-calming",
+      "task": "no-library-card",
+      "fit": "listed",
+      "text": "A library card is not required for this room.",
+      "source": "durham-calming-guide"
+    },
+    {
+      "operator": "durham-calming",
+      "task": "dedicated-room",
+      "fit": "listed",
+      "text": "The Main Library lists a dedicated room for sensory calming.",
+      "source": "durham-calming-guide"
+    },
+    {
+      "operator": "durham-calming",
+      "task": "child-supervision",
+      "fit": "listed",
+      "text": "An adult must supervise anyone under 15.",
+      "source": "durham-calming-guide"
+    },
+    {
+      "operator": "durham-calming",
+      "task": "time-limit",
+      "fit": "listed",
+      "text": "The calming room can be used for up to 30 minutes in a day.",
+      "source": "durham-calming-guide"
+    },
+    {
+      "operator": "durham-mse",
+      "task": "walk-in",
+      "fit": "excluded",
+      "text": "Use is limited to the hours of an approved reservation.",
+      "source": "durham-mse-guide"
+    },
+    {
+      "operator": "durham-mse",
+      "task": "no-library-card",
+      "fit": "excluded",
+      "text": "A full-privileges Durham County Library card is required to reserve. Temporary and computer-use cards are ineligible.",
+      "source": "durham-mse-guide"
+    },
+    {
+      "operator": "durham-mse",
+      "task": "dedicated-room",
+      "fit": "listed",
+      "text": "The library lists a separate room under the name Multi Sensory Environment.",
+      "source": "durham-mse-guide"
+    },
+    {
+      "operator": "durham-mse",
+      "task": "child-supervision",
+      "fit": "listed",
+      "text": "An adult facilitator is required for a visit.",
+      "source": "durham-mse-guide"
+    },
+    {
+      "operator": "durham-mse",
+      "task": "time-limit",
+      "fit": "listed",
+      "text": "The library schedules reservations in 30-minute increments and adds cleaning time. Check the requested slot with staff.",
+      "source": "durham-mse-guide"
+    },
+    {
+      "operator": "north-manchester",
+      "task": "walk-in",
+      "fit": "listed",
+      "text": "No reservation is required.",
+      "source": "north-manchester-guide"
+    },
+    {
+      "operator": "north-manchester",
+      "task": "dedicated-room",
+      "fit": "listed",
+      "text": "The library lists a designated quiet room with subdued lighting and equipment such as headphones.",
+      "source": "north-manchester-guide"
+    },
+    {
+      "operator": "north-manchester",
+      "task": "child-supervision",
+      "fit": "ask",
+      "text": "The Quiet Room welcomes all ages. Check the library’s general supervision rules for a child’s visit.",
+      "source": "north-manchester-guide"
+    },
+    {
+      "operator": "toronto-stewart",
+      "task": "walk-in",
+      "fit": "excluded",
+      "text": "The room is available by booking only. Same-day bookings can be requested.",
+      "source": "toronto-stewart-guide"
+    },
+    {
+      "operator": "toronto-stewart",
+      "task": "dedicated-room",
+      "fit": "listed",
+      "text": "The Sensory Room is at the S. Walter Stewart branch.",
+      "source": "toronto-stewart-guide"
+    },
+    {
+      "operator": "toronto-stewart",
+      "task": "child-supervision",
+      "fit": "listed",
+      "text": "The room is for children through age 12 with a parent or caregiver. Adult supervision is required.",
+      "source": "toronto-stewart-guide"
+    },
+    {
+      "operator": "toronto-stewart",
+      "task": "time-limit",
+      "fit": "listed",
+      "text": "The branch offers sessions of 15 to 60 minutes during its regular hours.",
+      "source": "toronto-stewart-guide"
+    },
+    {
+      "operator": "moreton-bay",
+      "task": "walk-in",
+      "fit": "listed",
+      "text": "The city explicitly waives bookings for the listed quiet hours.",
+      "source": "moreton-bay-guide"
+    },
+    {
+      "operator": "moreton-bay",
+      "task": "dedicated-room",
+      "fit": "excluded",
+      "text": "Quiet Hour adjusts the library’s shared environment during the listed session.",
+      "source": "moreton-bay-guide"
+    },
+    {
+      "operator": "moreton-bay",
+      "task": "child-supervision",
+      "fit": "ask",
+      "text": "The program lists all ages and describes itself as family friendly. Confirm the branch’s usual child supervision policy.",
+      "source": "moreton-bay-guide"
+    },
+    {
+      "operator": "moreton-bay",
+      "task": "time-limit",
+      "fit": "listed",
+      "text": "Use the posted start and end times for the library you choose.",
+      "source": "moreton-bay-guide"
+    },
+    {
+      "operator": "queensland-corner",
+      "task": "walk-in",
+      "fit": "excluded",
+      "text": "The library requires reservations for the free sensory-friendly sessions.",
+      "source": "queensland-corner-guide"
+    },
+    {
+      "operator": "queensland-corner",
+      "task": "dedicated-room",
+      "fit": "excluded",
+      "text": "This route is a quieter scheduled session in The Corner. Check the session listing when you need that setting.",
+      "source": "queensland-corner-guide"
+    },
+    {
+      "operator": "queensland-corner",
+      "task": "child-supervision",
+      "fit": "ask",
+      "text": "The operator describes these sessions as being for families. Confirm the details for the upcoming session you choose.",
+      "source": "queensland-corner-guide"
+    },
+    {
+      "operator": "queensland-corner",
+      "task": "time-limit",
+      "fit": "listed",
+      "text": "Use the listed session time. The library says bookings close a week before the session.",
+      "source": "queensland-corner-guide"
+    }
+  ]
+}
