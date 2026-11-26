@@ -1,0 +1,427 @@
+{
+  "checkedOn": "2026-11-26",
+  "sources": {
+    "wisconsin-dnr-guide": {
+      "label": "Wisconsin DNR program and participating libraries",
+      "url": "https://dnr.wisconsin.gov/topic/parks/library",
+      "checkedOn": "2026-11-26"
+    },
+    "wisconsin-dnr-terms-1": {
+      "label": "Wisconsin vehicle and trail pass information",
+      "url": "https://dnr.wisconsin.gov/topic/parks/admission/receipt",
+      "checkedOn": "2026-11-26"
+    },
+    "york-county-sc-guide": {
+      "label": "York County Library park pass checkout and use",
+      "url": "https://www.yclibrary.org/park-passes",
+      "checkedOn": "2026-11-26"
+    },
+    "mesa-county-co-guide": {
+      "label": "Mesa County pass checkout rules and backpack details",
+      "url": "https://mesacountylibraries.org/booksandmedia/passes/",
+      "checkedOn": "2026-11-26"
+    },
+    "mesa-county-co-terms-1": {
+      "label": "Colorado Parks and Wildlife library backpack program",
+      "url": "https://cpw.state.co.us/activities/outdoor-explorer-backpack",
+      "checkedOn": "2026-11-26"
+    },
+    "california-library-guide": {
+      "label": "California State Parks official parks pass FAQ",
+      "url": "https://www.parks.ca.gov/?page_id=30812",
+      "checkedOn": "2026-11-26"
+    },
+    "anne-arundel-md-guide": {
+      "label": "Anne Arundel County Library state park pass checkout",
+      "url": "https://www.aacpl.net/library-of-things/maryland-state-park-pass",
+      "checkedOn": "2026-11-26"
+    },
+    "northern-onondaga-ny-guide": {
+      "label": "Northern Onondaga Public Library Empire Parks Pass rules",
+      "url": "https://www.nopl.org/check-out-an-empire-parks-pass/",
+      "checkedOn": "2026-11-26"
+    },
+    "toronto-on-guide": {
+      "label": "Toronto Public Library Ontario Parks Pass checkout",
+      "url": "https://tpl.ca/using-the-library/services/ontario-parks-pass-program/",
+      "checkedOn": "2026-11-26"
+    },
+    "toronto-on-terms-1": {
+      "label": "Ontario Parks day-use planning and permits",
+      "url": "https://www.ontarioparks.ca/dayuse",
+      "checkedOn": "2026-11-26"
+    }
+  },
+  "operators": [
+    {
+      "id": "wisconsin-dnr",
+      "name": "Check Out Wisconsin State Parks At Your Library",
+      "area": "Wisconsin",
+      "country": "US",
+      "jurisdiction": "us-wi",
+      "visitSource": "wisconsin-dnr-guide",
+      "sourceIds": [
+        "wisconsin-dnr-guide",
+        "wisconsin-dnr-terms-1"
+      ],
+      "prep": [
+        {
+          "label": "Where to start",
+          "text": "Use the DNR’s county-by-county list to find a participating library. Ask your branch about eligibility and the day you can collect a pass.",
+          "source": "wisconsin-dnr-guide"
+        },
+        {
+          "label": "Where it applies",
+          "text": "The state lists a daily vehicle pass for eligible state parks, forests and recreation areas. Check separate trail-pass requirements for your activity.",
+          "source": "wisconsin-dnr-terms-1"
+        }
+      ]
+    },
+    {
+      "id": "york-county-sc",
+      "name": "York County Library South Carolina State Park Passport",
+      "area": "York County, South Carolina",
+      "country": "US",
+      "jurisdiction": "us-sc",
+      "visitSource": "york-county-sc-guide",
+      "sourceIds": [
+        "york-county-sc-guide"
+      ],
+      "prep": [
+        {
+          "label": "Check the catalogue",
+          "text": "Find State Park Passports in the online catalogue. Passes are first come, first served at the branches.",
+          "source": "york-county-sc-guide"
+        },
+        {
+          "label": "How to return it",
+          "text": "Return both pass pieces to the branch that lent them. County-operated parks have a separate entry system.",
+          "source": "york-county-sc-guide"
+        }
+      ]
+    },
+    {
+      "id": "mesa-county-co",
+      "name": "Mesa County Libraries Colorado State Parks Pass",
+      "area": "Mesa County, Colorado",
+      "country": "US",
+      "jurisdiction": "us-co",
+      "visitSource": "mesa-county-co-guide",
+      "sourceIds": [
+        "mesa-county-co-guide",
+        "mesa-county-co-terms-1"
+      ],
+      "prep": [
+        {
+          "label": "Choose your library",
+          "text": "Most Mesa County branches carry the state park pass, with Gateway and De Beque excluded. Check the current catalogue.",
+          "source": "mesa-county-co-guide"
+        },
+        {
+          "label": "Check the destination",
+          "text": "Mesa County lists a separate pass for Colorado National Monument. Use the state park pass for the applicable Colorado State Parks route.",
+          "source": "mesa-county-co-guide"
+        }
+      ]
+    },
+    {
+      "id": "california-library",
+      "name": "California State Library Parks Pass",
+      "area": "California",
+      "country": "US",
+      "jurisdiction": "us-ca",
+      "visitSource": "california-library-guide",
+      "sourceIds": [
+        "california-library-guide"
+      ],
+      "prep": [
+        {
+          "label": "Where to get it",
+          "text": "Ask a local California public library about checkout and availability. The state parks FAQ links to excluded sites.",
+          "source": "california-library-guide"
+        },
+        {
+          "label": "Vehicle limit",
+          "text": "Use one passenger vehicle with a seating capacity of nine or fewer, or one highway-licensed motorcycle.",
+          "source": "california-library-guide"
+        }
+      ]
+    },
+    {
+      "id": "anne-arundel-md",
+      "name": "Anne Arundel County Public Library Maryland State Park Pass",
+      "area": "Anne Arundel County, Maryland",
+      "country": "US",
+      "jurisdiction": "us-md",
+      "visitSource": "anne-arundel-md-guide",
+      "sourceIds": [
+        "anne-arundel-md-guide"
+      ],
+      "prep": [
+        {
+          "label": "Who can ride",
+          "text": "The library lists one vehicle with up to ten people.",
+          "source": "anne-arundel-md-guide"
+        },
+        {
+          "label": "Check park dates",
+          "text": "The library identifies parks with day-use reservations on applicable weekends and holidays from Memorial Day weekend through Labor Day. Verify the current park rules.",
+          "source": "anne-arundel-md-guide"
+        }
+      ]
+    },
+    {
+      "id": "northern-onondaga-ny",
+      "name": "Northern Onondaga Public Library Empire Parks Pass",
+      "area": "Onondaga County, New York",
+      "country": "US",
+      "jurisdiction": "us-ny",
+      "visitSource": "northern-onondaga-ny-guide",
+      "sourceIds": [
+        "northern-onondaga-ny-guide"
+      ],
+      "prep": [
+        {
+          "label": "Before you go",
+          "text": "Check the catalogue for a pass. The library provides one pass per location and one per borrowing card.",
+          "source": "northern-onondaga-ny-guide"
+        },
+        {
+          "label": "Bring the pass",
+          "text": "Show the pass at the entrance. Return it in person at the library.",
+          "source": "northern-onondaga-ny-guide"
+        }
+      ]
+    },
+    {
+      "id": "toronto-on",
+      "name": "Toronto Public Library Ontario Parks Pass",
+      "area": "Toronto, Ontario",
+      "country": "CA",
+      "jurisdiction": "ca-on",
+      "visitSource": "toronto-on-guide",
+      "sourceIds": [
+        "toronto-on-guide",
+        "toronto-on-terms-1"
+      ],
+      "prep": [
+        {
+          "label": "How to borrow",
+          "text": "Use your Toronto Public Library card to place a hold. Return the pass by the due date to avoid a replacement fee.",
+          "source": "toronto-on-guide"
+        },
+        {
+          "label": "How to plan your visit",
+          "text": "Check the Ontario Parks day-use page for dates, participating parks and the separate advance permit route.",
+          "source": "toronto-on-terms-1"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "day-vehicle-entry",
+      "label": "Use the pass for a vehicle’s day entry"
+    },
+    {
+      "id": "library-hold",
+      "label": "Place a library hold before pickup"
+    },
+    {
+      "id": "week-loan",
+      "label": "Keep the pass for a full week"
+    },
+    {
+      "id": "overnight-camping",
+      "label": "Use the pass for overnight camping"
+    },
+    {
+      "id": "capacity-or-reservation",
+      "label": "Use the pass when a park fills or requires a reservation"
+    }
+  ],
+  "rules": [
+    {
+      "operator": "wisconsin-dnr",
+      "task": "day-vehicle-entry",
+      "fit": "listed",
+      "text": "Participating libraries provide a daily vehicle admission pass for the Wisconsin State Park System sites that charge for vehicle entry.",
+      "source": "wisconsin-dnr-guide"
+    },
+    {
+      "operator": "wisconsin-dnr",
+      "task": "week-loan",
+      "fit": "excluded",
+      "text": "The published offer is a one-day vehicle pass. Ask your branch when to collect it for your planned visit.",
+      "source": "wisconsin-dnr-guide"
+    },
+    {
+      "operator": "wisconsin-dnr",
+      "task": "overnight-camping",
+      "fit": "excluded",
+      "text": "This library program offers daily vehicle admission. Wisconsin handles camping reservations separately.",
+      "source": "wisconsin-dnr-terms-1"
+    },
+    {
+      "operator": "york-county-sc",
+      "task": "day-vehicle-entry",
+      "fit": "listed",
+      "text": "The State Park Passport covers state park entry for occupants of the vehicle.",
+      "source": "york-county-sc-guide"
+    },
+    {
+      "operator": "york-county-sc",
+      "task": "library-hold",
+      "fit": "excluded",
+      "text": "York County Library explicitly excludes holds. Check the catalogue for available passes.",
+      "source": "york-county-sc-guide"
+    },
+    {
+      "operator": "york-county-sc",
+      "task": "week-loan",
+      "fit": "listed",
+      "text": "The loan is one week. The library allows one renewal.",
+      "source": "york-county-sc-guide"
+    },
+    {
+      "operator": "mesa-county-co",
+      "task": "day-vehicle-entry",
+      "fit": "listed",
+      "text": "The state parks pass covers one vehicle. Display the pass from the backpack or pouch as directed.",
+      "source": "mesa-county-co-guide"
+    },
+    {
+      "operator": "mesa-county-co",
+      "task": "library-hold",
+      "fit": "listed",
+      "text": "Mesa County takes holds on passes and holds a ready item for two business days.",
+      "source": "mesa-county-co-guide"
+    },
+    {
+      "operator": "mesa-county-co",
+      "task": "week-loan",
+      "fit": "listed",
+      "text": "The library’s standard pass checkout is seven days. Verify the due date at pickup.",
+      "source": "mesa-county-co-guide"
+    },
+    {
+      "operator": "california-library",
+      "task": "day-vehicle-entry",
+      "fit": "listed",
+      "text": "The pass covers vehicle day use at participating California state park units. It excludes separate per-person or tour charges.",
+      "source": "california-library-guide"
+    },
+    {
+      "operator": "california-library",
+      "task": "overnight-camping",
+      "fit": "excluded",
+      "text": "The official FAQ excludes camping charges.",
+      "source": "california-library-guide"
+    },
+    {
+      "operator": "california-library",
+      "task": "capacity-or-reservation",
+      "fit": "excluded",
+      "text": "The pass is usable when space is available. It does not reserve a parking space or override capacity.",
+      "source": "california-library-guide"
+    },
+    {
+      "operator": "anne-arundel-md",
+      "task": "day-vehicle-entry",
+      "fit": "listed",
+      "text": "The library lists free day-use entry to Maryland State Parks for one vehicle with up to ten people.",
+      "source": "anne-arundel-md-guide"
+    },
+    {
+      "operator": "anne-arundel-md",
+      "task": "week-loan",
+      "fit": "listed",
+      "text": "Checkout is seven days. The library does not allow renewals on this pass.",
+      "source": "anne-arundel-md-guide"
+    },
+    {
+      "operator": "anne-arundel-md",
+      "task": "overnight-camping",
+      "fit": "excluded",
+      "text": "The published benefit is day-use access.",
+      "source": "anne-arundel-md-guide"
+    },
+    {
+      "operator": "anne-arundel-md",
+      "task": "capacity-or-reservation",
+      "fit": "excluded",
+      "text": "A borrowed pass does not remove the separate day-use reservation requirement at the named parks on applicable dates.",
+      "source": "anne-arundel-md-guide"
+    },
+    {
+      "operator": "northern-onondaga-ny",
+      "task": "day-vehicle-entry",
+      "fit": "listed",
+      "text": "The Empire Pass covers the personal vehicle fee at most qualifying New York state-operated park and day-use sites.",
+      "source": "northern-onondaga-ny-guide"
+    },
+    {
+      "operator": "northern-onondaga-ny",
+      "task": "library-hold",
+      "fit": "excluded",
+      "text": "The library lends available passes in arrival order and does not allow holds.",
+      "source": "northern-onondaga-ny-guide"
+    },
+    {
+      "operator": "northern-onondaga-ny",
+      "task": "week-loan",
+      "fit": "excluded",
+      "text": "The loan is three days and cannot be renewed.",
+      "source": "northern-onondaga-ny-guide"
+    },
+    {
+      "operator": "northern-onondaga-ny",
+      "task": "overnight-camping",
+      "fit": "excluded",
+      "text": "Camping fees and other separately charged activities are outside this pass’s listed coverage.",
+      "source": "northern-onondaga-ny-guide"
+    },
+    {
+      "operator": "northern-onondaga-ny",
+      "task": "capacity-or-reservation",
+      "fit": "excluded",
+      "text": "The library says entry is subject to special event rules and park capacity.",
+      "source": "northern-onondaga-ny-guide"
+    },
+    {
+      "operator": "toronto-on",
+      "task": "day-vehicle-entry",
+      "fit": "listed",
+      "text": "The pass provides day-use access to qualifying provincial parks for the occupants of one vehicle.",
+      "source": "toronto-on-guide"
+    },
+    {
+      "operator": "toronto-on",
+      "task": "library-hold",
+      "fit": "listed",
+      "text": "Eligible Toronto cardholders can place a hold in the library catalogue.",
+      "source": "toronto-on-guide"
+    },
+    {
+      "operator": "toronto-on",
+      "task": "week-loan",
+      "fit": "listed",
+      "text": "The checkout period is up to one week.",
+      "source": "toronto-on-guide"
+    },
+    {
+      "operator": "toronto-on",
+      "task": "overnight-camping",
+      "fit": "excluded",
+      "text": "This day-use pass excludes overnight stays and equipment rental.",
+      "source": "toronto-on-guide"
+    },
+    {
+      "operator": "toronto-on",
+      "task": "capacity-or-reservation",
+      "fit": "excluded",
+      "text": "Capacity still applies. Use Ontario Parks’ separate advance daily vehicle permit process wherever it applies.",
+      "source": "toronto-on-terms-1"
+    }
+  ]
+}

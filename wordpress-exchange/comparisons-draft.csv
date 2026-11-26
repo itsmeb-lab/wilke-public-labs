@@ -1900,6 +1900,7 @@
       <ul class=""utility-links"" role=""list"">
         <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/library-museum-passes/comparison.csv"" download>Download comparison data (CSV)</a></li>
         <li><a href=""https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml"">Report a source correction</a> (public GitHub form)</li>
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/library-state-park-passes/"">Compare library passes for state and provincial parks</a></li>
         <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/library-scanning/"">Check library document scanning options</a></li>
       </ul>
     </section>"
@@ -4316,5 +4317,338 @@
         <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/household-document-shredding/comparison.csv"" download>Download comparison data (CSV)</a></li>
         <li><a href=""https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml"">Report a source correction</a> (public GitHub form)</li>
         <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/milwaukee-cleanout-floor-handoff/"">Plan which documents and other belongings stay during a Milwaukee cleanout</a></li>
+      </ul>
+    </section>"
+"library-state-park-passes","Borrow a State or Provincial Park Pass from a Public Library","Compare library park passes in Wisconsin, South Carolina, California, Colorado, Maryland, New York and Ontario by vehicle, holds, loan length and park access.","https://itsmeb-lab.github.io/wilke-public-labs/library-state-park-passes/","2026-11-26","STAGING_DRAFT_ONLY","<div class=""intro"">
+      <p>A library pass can cover the vehicle day-use fee. Start by checking which library lends it, which parks accept it and what the park needs from you when you arrive.</p>
+      <p>York County Library in South Carolina lends its passport for a week but takes no holds. Toronto also lends its Ontario pass for a week and lets you place a hold. Parks can still reach capacity before you arrive.</p>
+    </div>
+    <!-- LIBRARY-STATE-PARK-PASSES:START -->
+    <nav id=""items"" class=""choices"" aria-label=""Choose an item"" tabindex=""-1"">
+      <p>Choose an item</p>
+      <ul role=""list"">
+        <li><a href=""#day-vehicle-entry"">Use the pass for a vehicle’s day entry</a></li>
+        <li><a href=""#library-hold"">Place a library hold before pickup</a></li>
+        <li><a href=""#week-loan"">Keep the pass for a full week</a></li>
+        <li><a href=""#overnight-camping"">Use the pass for overnight camping</a></li>
+        <li><a href=""#capacity-or-reservation"">Use the pass when a park fills or requires a reservation</a></li>
+        <li><a href=""#before-the-park"">Before you go to the park</a></li>
+      </ul>
+    </nav>
+    <p class=""reviewed"">Snapshot reviewed <time datetime=""2026-11-26"">November 26, 2026</time>.</p>
+    <section id=""day-vehicle-entry"" class=""comparison"" aria-labelledby=""day-vehicle-entry-title"" tabindex=""-1"">
+      <h2 id=""day-vehicle-entry-title"">Use the pass for a vehicle’s day entry</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""wisconsin-dnr"" data-fit=""listed"" id=""answer--day-vehicle-entry--wisconsin-dnr"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--day-vehicle-entry--wisconsin-dnr"" aria-label=""Check Out Wisconsin State Parks At Your Library — Use the pass for a vehicle’s day entry"">Check Out Wisconsin State Parks At Your Library</a></h3><p class=""area"">Wisconsin</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Participating libraries provide a daily vehicle admission pass for the Wisconsin State Park System sites that charge for vehicle entry.</p>
+          <p class=""source""><a href=""https://dnr.wisconsin.gov/topic/parks/library"">Wisconsin DNR program and participating libraries</a></p>
+        </li>
+        <li data-operator=""york-county-sc"" data-fit=""listed"" id=""answer--day-vehicle-entry--york-county-sc"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--day-vehicle-entry--york-county-sc"" aria-label=""York County Library South Carolina State Park Passport — Use the pass for a vehicle’s day entry"">York County Library South Carolina State Park Passport</a></h3><p class=""area"">York County, South Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The State Park Passport covers state park entry for occupants of the vehicle.</p>
+          <p class=""source""><a href=""https://www.yclibrary.org/park-passes"">York County Library park pass checkout and use</a></p>
+        </li>
+        <li data-operator=""mesa-county-co"" data-fit=""listed"" id=""answer--day-vehicle-entry--mesa-county-co"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--day-vehicle-entry--mesa-county-co"" aria-label=""Mesa County Libraries Colorado State Parks Pass — Use the pass for a vehicle’s day entry"">Mesa County Libraries Colorado State Parks Pass</a></h3><p class=""area"">Mesa County, Colorado</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The state parks pass covers one vehicle. Display the pass from the backpack or pouch as directed.</p>
+          <p class=""source""><a href=""https://mesacountylibraries.org/booksandmedia/passes/"">Mesa County pass checkout rules and backpack details</a></p>
+        </li>
+        <li data-operator=""california-library"" data-fit=""listed"" id=""answer--day-vehicle-entry--california-library"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--day-vehicle-entry--california-library"" aria-label=""California State Library Parks Pass — Use the pass for a vehicle’s day entry"">California State Library Parks Pass</a></h3><p class=""area"">California</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The pass covers vehicle day use at participating California state park units. It excludes separate per-person or tour charges.</p>
+          <p class=""source""><a href=""https://www.parks.ca.gov/?page_id=30812"">California State Parks official parks pass FAQ</a></p>
+        </li>
+        <li data-operator=""anne-arundel-md"" data-fit=""listed"" id=""answer--day-vehicle-entry--anne-arundel-md"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--day-vehicle-entry--anne-arundel-md"" aria-label=""Anne Arundel County Public Library Maryland State Park Pass — Use the pass for a vehicle’s day entry"">Anne Arundel County Public Library Maryland State Park Pass</a></h3><p class=""area"">Anne Arundel County, Maryland</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The library lists free day-use entry to Maryland State Parks for one vehicle with up to ten people.</p>
+          <p class=""source""><a href=""https://www.aacpl.net/library-of-things/maryland-state-park-pass"">Anne Arundel County Library state park pass checkout</a></p>
+        </li>
+        <li data-operator=""northern-onondaga-ny"" data-fit=""listed"" id=""answer--day-vehicle-entry--northern-onondaga-ny"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--day-vehicle-entry--northern-onondaga-ny"" aria-label=""Northern Onondaga Public Library Empire Parks Pass — Use the pass for a vehicle’s day entry"">Northern Onondaga Public Library Empire Parks Pass</a></h3><p class=""area"">Onondaga County, New York</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The Empire Pass covers the personal vehicle fee at most qualifying New York state-operated park and day-use sites.</p>
+          <p class=""source""><a href=""https://www.nopl.org/check-out-an-empire-parks-pass/"">Northern Onondaga Public Library Empire Parks Pass rules</a></p>
+        </li>
+        <li data-operator=""toronto-on"" data-fit=""listed"" id=""answer--day-vehicle-entry--toronto-on"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--day-vehicle-entry--toronto-on"" aria-label=""Toronto Public Library Ontario Parks Pass — Use the pass for a vehicle’s day entry"">Toronto Public Library Ontario Parks Pass</a></h3><p class=""area"">Toronto, Ontario</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The pass provides day-use access to qualifying provincial parks for the occupants of one vehicle.</p>
+          <p class=""source""><a href=""https://tpl.ca/using-the-library/services/ontario-parks-pass-program/"">Toronto Public Library Ontario Parks Pass checkout</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""library-hold"" class=""comparison"" aria-labelledby=""library-hold-title"" tabindex=""-1"">
+      <h2 id=""library-hold-title"">Place a library hold before pickup</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""wisconsin-dnr"" data-fit=""unknown"" id=""answer--library-hold--wisconsin-dnr"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--library-hold--wisconsin-dnr"" aria-label=""Check Out Wisconsin State Parks At Your Library — Place a library hold before pickup"">Check Out Wisconsin State Parks At Your Library</a></h3><p class=""area"">Wisconsin</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://dnr.wisconsin.gov/topic/parks/library"">Check with Check Out Wisconsin State Parks At Your Library</a></p>
+        </li>
+        <li data-operator=""york-county-sc"" data-fit=""excluded"" id=""answer--library-hold--york-county-sc"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--library-hold--york-county-sc"" aria-label=""York County Library South Carolina State Park Passport — Place a library hold before pickup"">York County Library South Carolina State Park Passport</a></h3><p class=""area"">York County, South Carolina</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>York County Library explicitly excludes holds. Check the catalogue for available passes.</p>
+          <p class=""source""><a href=""https://www.yclibrary.org/park-passes"">York County Library park pass checkout and use</a></p>
+        </li>
+        <li data-operator=""mesa-county-co"" data-fit=""listed"" id=""answer--library-hold--mesa-county-co"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--library-hold--mesa-county-co"" aria-label=""Mesa County Libraries Colorado State Parks Pass — Place a library hold before pickup"">Mesa County Libraries Colorado State Parks Pass</a></h3><p class=""area"">Mesa County, Colorado</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Mesa County takes holds on passes and holds a ready item for two business days.</p>
+          <p class=""source""><a href=""https://mesacountylibraries.org/booksandmedia/passes/"">Mesa County pass checkout rules and backpack details</a></p>
+        </li>
+        <li data-operator=""california-library"" data-fit=""unknown"" id=""answer--library-hold--california-library"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--library-hold--california-library"" aria-label=""California State Library Parks Pass — Place a library hold before pickup"">California State Library Parks Pass</a></h3><p class=""area"">California</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.parks.ca.gov/?page_id=30812"">Check with California State Library Parks Pass</a></p>
+        </li>
+        <li data-operator=""anne-arundel-md"" data-fit=""unknown"" id=""answer--library-hold--anne-arundel-md"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--library-hold--anne-arundel-md"" aria-label=""Anne Arundel County Public Library Maryland State Park Pass — Place a library hold before pickup"">Anne Arundel County Public Library Maryland State Park Pass</a></h3><p class=""area"">Anne Arundel County, Maryland</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.aacpl.net/library-of-things/maryland-state-park-pass"">Check with Anne Arundel County Public Library Maryland State Park Pass</a></p>
+        </li>
+        <li data-operator=""northern-onondaga-ny"" data-fit=""excluded"" id=""answer--library-hold--northern-onondaga-ny"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--library-hold--northern-onondaga-ny"" aria-label=""Northern Onondaga Public Library Empire Parks Pass — Place a library hold before pickup"">Northern Onondaga Public Library Empire Parks Pass</a></h3><p class=""area"">Onondaga County, New York</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The library lends available passes in arrival order and does not allow holds.</p>
+          <p class=""source""><a href=""https://www.nopl.org/check-out-an-empire-parks-pass/"">Northern Onondaga Public Library Empire Parks Pass rules</a></p>
+        </li>
+        <li data-operator=""toronto-on"" data-fit=""listed"" id=""answer--library-hold--toronto-on"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--library-hold--toronto-on"" aria-label=""Toronto Public Library Ontario Parks Pass — Place a library hold before pickup"">Toronto Public Library Ontario Parks Pass</a></h3><p class=""area"">Toronto, Ontario</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Eligible Toronto cardholders can place a hold in the library catalogue.</p>
+          <p class=""source""><a href=""https://tpl.ca/using-the-library/services/ontario-parks-pass-program/"">Toronto Public Library Ontario Parks Pass checkout</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""week-loan"" class=""comparison"" aria-labelledby=""week-loan-title"" tabindex=""-1"">
+      <h2 id=""week-loan-title"">Keep the pass for a full week</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""wisconsin-dnr"" data-fit=""excluded"" id=""answer--week-loan--wisconsin-dnr"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--week-loan--wisconsin-dnr"" aria-label=""Check Out Wisconsin State Parks At Your Library — Keep the pass for a full week"">Check Out Wisconsin State Parks At Your Library</a></h3><p class=""area"">Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The published offer is a one-day vehicle pass. Ask your branch when to collect it for your planned visit.</p>
+          <p class=""source""><a href=""https://dnr.wisconsin.gov/topic/parks/library"">Wisconsin DNR program and participating libraries</a></p>
+        </li>
+        <li data-operator=""york-county-sc"" data-fit=""listed"" id=""answer--week-loan--york-county-sc"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--week-loan--york-county-sc"" aria-label=""York County Library South Carolina State Park Passport — Keep the pass for a full week"">York County Library South Carolina State Park Passport</a></h3><p class=""area"">York County, South Carolina</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The loan is one week. The library allows one renewal.</p>
+          <p class=""source""><a href=""https://www.yclibrary.org/park-passes"">York County Library park pass checkout and use</a></p>
+        </li>
+        <li data-operator=""mesa-county-co"" data-fit=""listed"" id=""answer--week-loan--mesa-county-co"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--week-loan--mesa-county-co"" aria-label=""Mesa County Libraries Colorado State Parks Pass — Keep the pass for a full week"">Mesa County Libraries Colorado State Parks Pass</a></h3><p class=""area"">Mesa County, Colorado</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The library’s standard pass checkout is seven days. Verify the due date at pickup.</p>
+          <p class=""source""><a href=""https://mesacountylibraries.org/booksandmedia/passes/"">Mesa County pass checkout rules and backpack details</a></p>
+        </li>
+        <li data-operator=""california-library"" data-fit=""unknown"" id=""answer--week-loan--california-library"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--week-loan--california-library"" aria-label=""California State Library Parks Pass — Keep the pass for a full week"">California State Library Parks Pass</a></h3><p class=""area"">California</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.parks.ca.gov/?page_id=30812"">Check with California State Library Parks Pass</a></p>
+        </li>
+        <li data-operator=""anne-arundel-md"" data-fit=""listed"" id=""answer--week-loan--anne-arundel-md"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--week-loan--anne-arundel-md"" aria-label=""Anne Arundel County Public Library Maryland State Park Pass — Keep the pass for a full week"">Anne Arundel County Public Library Maryland State Park Pass</a></h3><p class=""area"">Anne Arundel County, Maryland</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>Checkout is seven days. The library does not allow renewals on this pass.</p>
+          <p class=""source""><a href=""https://www.aacpl.net/library-of-things/maryland-state-park-pass"">Anne Arundel County Library state park pass checkout</a></p>
+        </li>
+        <li data-operator=""northern-onondaga-ny"" data-fit=""excluded"" id=""answer--week-loan--northern-onondaga-ny"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--week-loan--northern-onondaga-ny"" aria-label=""Northern Onondaga Public Library Empire Parks Pass — Keep the pass for a full week"">Northern Onondaga Public Library Empire Parks Pass</a></h3><p class=""area"">Onondaga County, New York</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The loan is three days and cannot be renewed.</p>
+          <p class=""source""><a href=""https://www.nopl.org/check-out-an-empire-parks-pass/"">Northern Onondaga Public Library Empire Parks Pass rules</a></p>
+        </li>
+        <li data-operator=""toronto-on"" data-fit=""listed"" id=""answer--week-loan--toronto-on"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--week-loan--toronto-on"" aria-label=""Toronto Public Library Ontario Parks Pass — Keep the pass for a full week"">Toronto Public Library Ontario Parks Pass</a></h3><p class=""area"">Toronto, Ontario</p>
+          <p><span class=""fit listed"">Listed by organizer</span></p>
+          <p>The checkout period is up to one week.</p>
+          <p class=""source""><a href=""https://tpl.ca/using-the-library/services/ontario-parks-pass-program/"">Toronto Public Library Ontario Parks Pass checkout</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""overnight-camping"" class=""comparison"" aria-labelledby=""overnight-camping-title"" tabindex=""-1"">
+      <h2 id=""overnight-camping-title"">Use the pass for overnight camping</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""wisconsin-dnr"" data-fit=""excluded"" id=""answer--overnight-camping--wisconsin-dnr"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--overnight-camping--wisconsin-dnr"" aria-label=""Check Out Wisconsin State Parks At Your Library — Use the pass for overnight camping"">Check Out Wisconsin State Parks At Your Library</a></h3><p class=""area"">Wisconsin</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>This library program offers daily vehicle admission. Wisconsin handles camping reservations separately.</p>
+          <p class=""source""><a href=""https://dnr.wisconsin.gov/topic/parks/admission/receipt"">Wisconsin vehicle and trail pass information</a></p>
+        </li>
+        <li data-operator=""york-county-sc"" data-fit=""unknown"" id=""answer--overnight-camping--york-county-sc"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--overnight-camping--york-county-sc"" aria-label=""York County Library South Carolina State Park Passport — Use the pass for overnight camping"">York County Library South Carolina State Park Passport</a></h3><p class=""area"">York County, South Carolina</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.yclibrary.org/park-passes"">Check with York County Library South Carolina State Park Passport</a></p>
+        </li>
+        <li data-operator=""mesa-county-co"" data-fit=""unknown"" id=""answer--overnight-camping--mesa-county-co"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--overnight-camping--mesa-county-co"" aria-label=""Mesa County Libraries Colorado State Parks Pass — Use the pass for overnight camping"">Mesa County Libraries Colorado State Parks Pass</a></h3><p class=""area"">Mesa County, Colorado</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://mesacountylibraries.org/booksandmedia/passes/"">Check with Mesa County Libraries Colorado State Parks Pass</a></p>
+        </li>
+        <li data-operator=""california-library"" data-fit=""excluded"" id=""answer--overnight-camping--california-library"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--overnight-camping--california-library"" aria-label=""California State Library Parks Pass — Use the pass for overnight camping"">California State Library Parks Pass</a></h3><p class=""area"">California</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The official FAQ excludes camping charges.</p>
+          <p class=""source""><a href=""https://www.parks.ca.gov/?page_id=30812"">California State Parks official parks pass FAQ</a></p>
+        </li>
+        <li data-operator=""anne-arundel-md"" data-fit=""excluded"" id=""answer--overnight-camping--anne-arundel-md"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--overnight-camping--anne-arundel-md"" aria-label=""Anne Arundel County Public Library Maryland State Park Pass — Use the pass for overnight camping"">Anne Arundel County Public Library Maryland State Park Pass</a></h3><p class=""area"">Anne Arundel County, Maryland</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The published benefit is day-use access.</p>
+          <p class=""source""><a href=""https://www.aacpl.net/library-of-things/maryland-state-park-pass"">Anne Arundel County Library state park pass checkout</a></p>
+        </li>
+        <li data-operator=""northern-onondaga-ny"" data-fit=""excluded"" id=""answer--overnight-camping--northern-onondaga-ny"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--overnight-camping--northern-onondaga-ny"" aria-label=""Northern Onondaga Public Library Empire Parks Pass — Use the pass for overnight camping"">Northern Onondaga Public Library Empire Parks Pass</a></h3><p class=""area"">Onondaga County, New York</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>Camping fees and other separately charged activities are outside this pass’s listed coverage.</p>
+          <p class=""source""><a href=""https://www.nopl.org/check-out-an-empire-parks-pass/"">Northern Onondaga Public Library Empire Parks Pass rules</a></p>
+        </li>
+        <li data-operator=""toronto-on"" data-fit=""excluded"" id=""answer--overnight-camping--toronto-on"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--overnight-camping--toronto-on"" aria-label=""Toronto Public Library Ontario Parks Pass — Use the pass for overnight camping"">Toronto Public Library Ontario Parks Pass</a></h3><p class=""area"">Toronto, Ontario</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>This day-use pass excludes overnight stays and equipment rental.</p>
+          <p class=""source""><a href=""https://tpl.ca/using-the-library/services/ontario-parks-pass-program/"">Toronto Public Library Ontario Parks Pass checkout</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""capacity-or-reservation"" class=""comparison"" aria-labelledby=""capacity-or-reservation-title"" tabindex=""-1"">
+      <h2 id=""capacity-or-reservation-title"">Use the pass when a park fills or requires a reservation</h2>
+      <ul class=""cards"" role=""list"">
+        <li data-operator=""wisconsin-dnr"" data-fit=""unknown"" id=""answer--capacity-or-reservation--wisconsin-dnr"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--capacity-or-reservation--wisconsin-dnr"" aria-label=""Check Out Wisconsin State Parks At Your Library — Use the pass when a park fills or requires a reservation"">Check Out Wisconsin State Parks At Your Library</a></h3><p class=""area"">Wisconsin</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://dnr.wisconsin.gov/topic/parks/library"">Check with Check Out Wisconsin State Parks At Your Library</a></p>
+        </li>
+        <li data-operator=""york-county-sc"" data-fit=""unknown"" id=""answer--capacity-or-reservation--york-county-sc"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--capacity-or-reservation--york-county-sc"" aria-label=""York County Library South Carolina State Park Passport — Use the pass when a park fills or requires a reservation"">York County Library South Carolina State Park Passport</a></h3><p class=""area"">York County, South Carolina</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://www.yclibrary.org/park-passes"">Check with York County Library South Carolina State Park Passport</a></p>
+        </li>
+        <li data-operator=""mesa-county-co"" data-fit=""unknown"" id=""answer--capacity-or-reservation--mesa-county-co"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--capacity-or-reservation--mesa-county-co"" aria-label=""Mesa County Libraries Colorado State Parks Pass — Use the pass when a park fills or requires a reservation"">Mesa County Libraries Colorado State Parks Pass</a></h3><p class=""area"">Mesa County, Colorado</p>
+          <p><span class=""fit unknown"">Unconfirmed</span></p>
+          <p>The checked rules leave this item unclear. Confirm with the organizer.</p>
+          <p class=""source""><a href=""https://mesacountylibraries.org/booksandmedia/passes/"">Check with Mesa County Libraries Colorado State Parks Pass</a></p>
+        </li>
+        <li data-operator=""california-library"" data-fit=""excluded"" id=""answer--capacity-or-reservation--california-library"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--capacity-or-reservation--california-library"" aria-label=""California State Library Parks Pass — Use the pass when a park fills or requires a reservation"">California State Library Parks Pass</a></h3><p class=""area"">California</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The pass is usable when space is available. It does not reserve a parking space or override capacity.</p>
+          <p class=""source""><a href=""https://www.parks.ca.gov/?page_id=30812"">California State Parks official parks pass FAQ</a></p>
+        </li>
+        <li data-operator=""anne-arundel-md"" data-fit=""excluded"" id=""answer--capacity-or-reservation--anne-arundel-md"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--capacity-or-reservation--anne-arundel-md"" aria-label=""Anne Arundel County Public Library Maryland State Park Pass — Use the pass when a park fills or requires a reservation"">Anne Arundel County Public Library Maryland State Park Pass</a></h3><p class=""area"">Anne Arundel County, Maryland</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>A borrowed pass does not remove the separate day-use reservation requirement at the named parks on applicable dates.</p>
+          <p class=""source""><a href=""https://www.aacpl.net/library-of-things/maryland-state-park-pass"">Anne Arundel County Library state park pass checkout</a></p>
+        </li>
+        <li data-operator=""northern-onondaga-ny"" data-fit=""excluded"" id=""answer--capacity-or-reservation--northern-onondaga-ny"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--capacity-or-reservation--northern-onondaga-ny"" aria-label=""Northern Onondaga Public Library Empire Parks Pass — Use the pass when a park fills or requires a reservation"">Northern Onondaga Public Library Empire Parks Pass</a></h3><p class=""area"">Onondaga County, New York</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>The library says entry is subject to special event rules and park capacity.</p>
+          <p class=""source""><a href=""https://www.nopl.org/check-out-an-empire-parks-pass/"">Northern Onondaga Public Library Empire Parks Pass rules</a></p>
+        </li>
+        <li data-operator=""toronto-on"" data-fit=""excluded"" id=""answer--capacity-or-reservation--toronto-on"" tabindex=""-1"">
+          <h3><a class=""answer-link"" href=""#answer--capacity-or-reservation--toronto-on"" aria-label=""Toronto Public Library Ontario Parks Pass — Use the pass when a park fills or requires a reservation"">Toronto Public Library Ontario Parks Pass</a></h3><p class=""area"">Toronto, Ontario</p>
+          <p><span class=""fit excluded"">Excluded</span></p>
+          <p>Capacity still applies. Use Ontario Parks’ separate advance daily vehicle permit process wherever it applies.</p>
+          <p class=""source""><a href=""https://www.ontarioparks.ca/dayuse"">Ontario Parks day-use planning and permits</a></p>
+        </li>
+      </ul>
+      <p class=""return""><a href=""#items"">Choose another item</a></p>
+    </section>
+    <section id=""before-the-park"" class=""prep"" aria-labelledby=""before-the-park-title"" tabindex=""-1"">
+      <h2 id=""before-the-park-title"">Before you go to the park</h2>
+      <p>Match a library pickup, eligible vehicle and exact park to the pass you want to use.</p>
+      <ul class=""cards"" role=""list"">
+        <li>
+          <h3>Check Out Wisconsin State Parks At Your Library</h3><p class=""area"">Wisconsin</p>
+          <dl>
+            <dt>Where to start</dt><dd>Use the DNR’s county-by-county list to find a participating library. Ask your branch about eligibility and the day you can collect a pass. <span class=""source""><a href=""https://dnr.wisconsin.gov/topic/parks/library"">Wisconsin DNR program and participating libraries</a></span></dd>
+            <dt>Where it applies</dt><dd>The state lists a daily vehicle pass for eligible state parks, forests and recreation areas. Check separate trail-pass requirements for your activity. <span class=""source""><a href=""https://dnr.wisconsin.gov/topic/parks/admission/receipt"">Wisconsin vehicle and trail pass information</a></span></dd>
+          </dl>
+          <p><a href=""https://dnr.wisconsin.gov/topic/parks/library"">Wisconsin DNR program and participating libraries</a></p>
+        </li>
+        <li>
+          <h3>York County Library South Carolina State Park Passport</h3><p class=""area"">York County, South Carolina</p>
+          <dl>
+            <dt>Check the catalogue</dt><dd>Find State Park Passports in the online catalogue. Passes are first come, first served at the branches. <span class=""source""><a href=""https://www.yclibrary.org/park-passes"">York County Library park pass checkout and use</a></span></dd>
+            <dt>How to return it</dt><dd>Return both pass pieces to the branch that lent them. County-operated parks have a separate entry system. <span class=""source""><a href=""https://www.yclibrary.org/park-passes"">York County Library park pass checkout and use</a></span></dd>
+          </dl>
+          <p><a href=""https://www.yclibrary.org/park-passes"">York County Library park pass checkout and use</a></p>
+        </li>
+        <li>
+          <h3>Mesa County Libraries Colorado State Parks Pass</h3><p class=""area"">Mesa County, Colorado</p>
+          <dl>
+            <dt>Choose your library</dt><dd>Most Mesa County branches carry the state park pass, with Gateway and De Beque excluded. Check the current catalogue. <span class=""source""><a href=""https://mesacountylibraries.org/booksandmedia/passes/"">Mesa County pass checkout rules and backpack details</a></span></dd>
+            <dt>Check the destination</dt><dd>Mesa County lists a separate pass for Colorado National Monument. Use the state park pass for the applicable Colorado State Parks route. <span class=""source""><a href=""https://mesacountylibraries.org/booksandmedia/passes/"">Mesa County pass checkout rules and backpack details</a></span></dd>
+          </dl>
+          <p><a href=""https://mesacountylibraries.org/booksandmedia/passes/"">Mesa County pass checkout rules and backpack details</a></p>
+        </li>
+        <li>
+          <h3>California State Library Parks Pass</h3><p class=""area"">California</p>
+          <dl>
+            <dt>Where to get it</dt><dd>Ask a local California public library about checkout and availability. The state parks FAQ links to excluded sites. <span class=""source""><a href=""https://www.parks.ca.gov/?page_id=30812"">California State Parks official parks pass FAQ</a></span></dd>
+            <dt>Vehicle limit</dt><dd>Use one passenger vehicle with a seating capacity of nine or fewer, or one highway-licensed motorcycle. <span class=""source""><a href=""https://www.parks.ca.gov/?page_id=30812"">California State Parks official parks pass FAQ</a></span></dd>
+          </dl>
+          <p><a href=""https://www.parks.ca.gov/?page_id=30812"">California State Parks official parks pass FAQ</a></p>
+        </li>
+        <li>
+          <h3>Anne Arundel County Public Library Maryland State Park Pass</h3><p class=""area"">Anne Arundel County, Maryland</p>
+          <dl>
+            <dt>Who can ride</dt><dd>The library lists one vehicle with up to ten people. <span class=""source""><a href=""https://www.aacpl.net/library-of-things/maryland-state-park-pass"">Anne Arundel County Library state park pass checkout</a></span></dd>
+            <dt>Check park dates</dt><dd>The library identifies parks with day-use reservations on applicable weekends and holidays from Memorial Day weekend through Labor Day. Verify the current park rules. <span class=""source""><a href=""https://www.aacpl.net/library-of-things/maryland-state-park-pass"">Anne Arundel County Library state park pass checkout</a></span></dd>
+          </dl>
+          <p><a href=""https://www.aacpl.net/library-of-things/maryland-state-park-pass"">Anne Arundel County Library state park pass checkout</a></p>
+        </li>
+        <li>
+          <h3>Northern Onondaga Public Library Empire Parks Pass</h3><p class=""area"">Onondaga County, New York</p>
+          <dl>
+            <dt>Before you go</dt><dd>Check the catalogue for a pass. The library provides one pass per location and one per borrowing card. <span class=""source""><a href=""https://www.nopl.org/check-out-an-empire-parks-pass/"">Northern Onondaga Public Library Empire Parks Pass rules</a></span></dd>
+            <dt>Bring the pass</dt><dd>Show the pass at the entrance. Return it in person at the library. <span class=""source""><a href=""https://www.nopl.org/check-out-an-empire-parks-pass/"">Northern Onondaga Public Library Empire Parks Pass rules</a></span></dd>
+          </dl>
+          <p><a href=""https://www.nopl.org/check-out-an-empire-parks-pass/"">Northern Onondaga Public Library Empire Parks Pass rules</a></p>
+        </li>
+        <li>
+          <h3>Toronto Public Library Ontario Parks Pass</h3><p class=""area"">Toronto, Ontario</p>
+          <dl>
+            <dt>How to borrow</dt><dd>Use your Toronto Public Library card to place a hold. Return the pass by the due date to avoid a replacement fee. <span class=""source""><a href=""https://tpl.ca/using-the-library/services/ontario-parks-pass-program/"">Toronto Public Library Ontario Parks Pass checkout</a></span></dd>
+            <dt>How to plan your visit</dt><dd>Check the Ontario Parks day-use page for dates, participating parks and the separate advance permit route. <span class=""source""><a href=""https://www.ontarioparks.ca/dayuse"">Ontario Parks day-use planning and permits</a></span></dd>
+          </dl>
+          <p><a href=""https://tpl.ca/using-the-library/services/ontario-parks-pass-program/"">Toronto Public Library Ontario Parks Pass checkout</a></p>
+        </li>
+      </ul>
+    </section>
+    <!-- LIBRARY-STATE-PARK-PASSES:END -->
+    <section class=""notes"" aria-labelledby=""notes-title"">
+      <h2 id=""notes-title"">Plan the two parts of your visit</h2>
+      <p>Confirm the library’s pickup and return terms. A statewide page may describe park access without telling you whether your branch takes holds or has a pass available.</p>
+      <p>Check the park itself before traveling. Some parking lots fill and some parks require their own day-use permit. A day-use pass typically covers a different fee from a campsite, tour or equipment rental.</p>
+    </section>
+    <section class=""notes"" aria-labelledby=""sources-and-data"">
+      <h2 id=""sources-and-data"">Sources and data</h2>
+      <ul class=""utility-links"" role=""list"">
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/library-state-park-passes/comparison.csv"" download>Download comparison data (CSV)</a></li>
+        <li><a href=""https://github.com/itsmeb-lab/wilke-public-labs/issues/new?template=policy-correction.yml"">Report a source correction</a> (public GitHub form)</li>
+        <li><a href=""https://itsmeb-lab.github.io/wilke-public-labs/library-museum-passes/"">Compare library passes for museums and other attractions</a></li>
       </ul>
     </section>"

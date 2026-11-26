@@ -11,8 +11,8 @@ const read = (file) => readFileSync(new URL('../' + file, import.meta.url), 'utf
 
 test('finder projections stay in sync with the public guide catalogs', () => {
   update('--check');
-  assert.equal(guides.length, 14);
-  assert.equal(regions.length, 27);
+  assert.equal(guides.length, 15);
+  assert.equal(regions.length, 28);
   const html = read('guide-finder/index.html');
   for (const { slug, tasks } of guides) {
     assert.ok(html.includes('href="../' + slug + '/"'), slug);
@@ -56,6 +56,12 @@ test('the finder distinguishes exact tape formats and source-bound shredding rul
   const [records] = search('watch documents shredded', 'us-nc');
   assert.equal(records.id, 'watch-shredding');
   assert.deepEqual(records.routes.map(({ id, fit }) => [id, fit]), [['orange-county-nc', 'excluded']]);
+});
+
+test('a York County park pass hold resolves to the South Carolina rule', () => {
+  const [park] = search('hold state park pass York County', 'us-sc');
+  assert.equal(park.id, 'library-hold');
+  assert.deepEqual(park.routes.map(({ id, fit }) => [id, fit]), [['york-county-sc', 'excluded']]);
 });
 
 test('search fields stay in the page, with an ordinary link list as the fallback', () => {

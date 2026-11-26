@@ -13,8 +13,9 @@ if ($csv === false) {
 }
 $columns = ['slug', 'heading', 'description', 'canonical_reference', 'reviewed_on', 'publication_state', 'comparison_html'];
 requireCondition(fgetcsv($csv, null, ',', '"', '') === $columns, 'Header columns do not match.');
-$slugs = ['repair-cafe-planner', 'shelter-linen-guide', 'milwaukee-bulky-items', 'food-scrap-drop-off', 'library-scanning', 'library-museum-passes', 'library-seed-borrowing', 'tool-library-borrowing', 'library-sensory-spaces', 'eyeglass-donation-rules', 'library-instrument-borrowing', 'used-bicycle-donations', 'library-memory-labs', 'household-document-shredding'];
+$slugs = ['repair-cafe-planner', 'shelter-linen-guide', 'milwaukee-bulky-items', 'food-scrap-drop-off', 'library-scanning', 'library-museum-passes', 'library-seed-borrowing', 'tool-library-borrowing', 'library-sensory-spaces', 'eyeglass-donation-rules', 'library-instrument-borrowing', 'used-bicycle-donations', 'library-memory-labs', 'household-document-shredding', 'library-state-park-passes'];
 $expected = [
+    'library-state-park-passes' => ['Wisconsin DNR program', 'href="#answer--library-hold--york-county-sc"', 'week'],
     'library-memory-labs' => ['DC Public Library equipment', 'href="#answer--hi8--dc-memory-lab"', 'currently unavailable'],
     'household-document-shredding' => ['Orange County Shred Center', 'href="#answer--watch-shredding--somerset-county"', 'two eligible boxes'],
     'library-instrument-borrowing' => ['City of Sydney instrument collection', 'href="#answer--take-home--sydney-room"', 'Staff can hold'],
@@ -36,7 +37,7 @@ foreach ($slugs as $slug) {
     $row = array_combine($columns, $cells);
     requireCondition($row['slug'] === $slug && $row['publication_state'] === 'STAGING_DRAFT_ONLY', 'Scope moved for ' . $slug);
     requireCondition($row['canonical_reference'] === 'https://itsmeb-lab.github.io/wilke-public-labs/' . $slug . '/', 'Canonical moved for ' . $slug);
-    $reviewDate = in_array($slug, ['library-instrument-borrowing', 'used-bicycle-donations', 'library-memory-labs', 'household-document-shredding'], true) ? '2026-11-26' : '2026-11-25';
+    $reviewDate = in_array($slug, ['library-instrument-borrowing', 'used-bicycle-donations', 'library-memory-labs', 'household-document-shredding', 'library-state-park-passes'], true) ? '2026-11-26' : '2026-11-25';
     requireCondition($row['reviewed_on'] === $reviewDate && $row['heading'] !== '' && $row['description'] !== '', 'Missing reviewed metadata.');
     requireCondition(str_contains($row['comparison_html'], "\n"), 'Expected a multiline HTML cell.');
     foreach ($expected[$slug] as $phrase) {
