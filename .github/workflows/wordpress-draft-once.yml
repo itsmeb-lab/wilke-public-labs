@@ -2,7 +2,7 @@ name: Isolated WordPress Draft Verification
 
 on:
   push:
-    branches: [atlas/wordpress-draft-verify-nov26]
+    branches: [atlas/wordpress-draft-zip-verification-20261126]
 
 permissions:
   contents: read
@@ -25,19 +25,29 @@ jobs:
           node --test tests/wordpress-draft-export.test.mjs
           node scripts/export-wordpress-draft.mjs --slug home-energy-tool-lending --output "$RUNNER_TEMP/energy-draft.xml"
       - name: Install WordPress into a disposable local database
+        env:
+          WP_CORE_VERSION: '7.1.5'
+          WP_CORE_SHA1: 'd7d004a092a4e8f2b28dc8f4089a11fea9a38807'
         run: |
           set -euo pipefail
           wp_root="$RUNNER_TEMP/wp-test"
           wp_cli="$RUNNER_TEMP/wp-cli.phar"
-          mkdir -p "$wp_root"
           curl --proto '=https' --fail --silent --show-error --max-time 40 \
             'https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar' -o "$wp_cli"
           php "$wp_cli" --version
           sudo systemctl start mysql.service
           MYSQL_PWD=root mysql -uroot -e 'CREATE DATABASE atlas_verify'
           wp_site() { php "$wp_cli" --path="$wp_root" "$@"; }
-          wp_site core download
-          wp_site core verify-checksums
+          # WP-CLI's tar extractor truncates some long WordPress core filenames.
+          wp_zip="$RUNNER_TEMP/wordpress-$WP_CORE_VERSION.zip"
+          curl --proto '=https' --proto-redir '=https' --location --fail --silent --show-error --max-time 60 \
+            "https://wordpress.org/wordpress-$WP_CORE_VERSION.zip" -o "$wp_zip"
+          printf '%s  %s\n' "$WP_CORE_SHA1" "$wp_zip" | sha1sum --check --status
+          extract_root="$(mktemp -d "$RUNNER_TEMP/wp-extract.XXXXXXXX")"
+          unzip -q "$wp_zip" -d "$extract_root"
+          test -f "$extract_root/wordpress/wp-load.php"
+          mv -T "$extract_root/wordpress" "$wp_root"
+          wp_site core verify-checksums --version="$WP_CORE_VERSION" --locale=en_US
           wp_site config create --dbname=atlas_verify --dbuser=root --dbpass=root --dbhost=localhost
           wp_site core install --url='http://atlas-wp-test.invalid' --title='Atlas Draft Test' \
             --admin_user=atlas_test --admin_password='Disposable-Fixture-Only-541!' \
@@ -70,3 +80,4 @@ jobs:
           node-version: '22'
       - name: Fetch live guide, data, and navigation
         run: node scripts/check-energy-release-once.mjs
+
