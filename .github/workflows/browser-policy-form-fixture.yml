@@ -1,0 +1,24 @@
+name: Browser Policy and Public Route Baseline
+
+on:
+  push:
+    branches: [atlas/browser-policy-check-20261126]
+
+permissions:
+  contents: read
+
+jobs:
+  browser-policy:
+    runs-on: windows-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify native form navigation in an isolated Edge fixture
+        run: node scripts/browser-policy-form-fixture.mjs
+      - name: Read public response status and header markers
+        run: node scripts/public-route-header-check.mjs baseline
