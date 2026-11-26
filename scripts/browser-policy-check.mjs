@@ -388,17 +388,18 @@ try{
    }
    return layout;
   });
-  await rpc("POST",sid("/url"),{url:origin+"/hardwood-finish-return/"});
+  await rpc("POST",sid("/url"),{url:origin+"/hardwood-finish-return/#pallmann-pall-x-gold"});
   await check("hardwood finish source and printable dates at "+width+"px",async()=>{
-   await click('a[href="#pallmann-pall-x-gold"]');
    const record=await execute(`
     const cell=document.getElementById('pallmann-pall-x-gold-walking');
     return {width:innerWidth,scroll:document.documentElement.scrollWidth,target:document.querySelector(':target')?.id,
       products:document.querySelectorAll('.finish-product').length,activities:document.querySelectorAll('.finish-activities dt').length,
       prompts:document.querySelectorAll('.care-record dt').length,guidance:cell.innerText,status:cell.dataset.status,
-      printedCss:[...document.styleSheets].some(sheet=>sheet.href?.endsWith('/finish.css'))};
+      printedCss:[...document.styleSheets].some(sheet=>sheet.href?.endsWith('/finish.css')),
+      chooser:document.querySelector('.choices a[href="#pallmann-pall-x-gold"]')?.getAttribute('href')};
    `);
    assert.equal(record.width,width);assert.ok(record.scroll<=width+1);assert.equal(record.target,"pallmann-pall-x-gold");
+   assert.equal(record.chooser,"#pallmann-pall-x-gold");
    assert.equal(record.products,6);assert.equal(record.activities,30);assert.equal(record.prompts,8);
    assert.equal(record.status,"conflict");assert.match(record.guidance,/3–4 hours.*24 hours/);assert.ok(record.printedCss);
    if(width===1280){
