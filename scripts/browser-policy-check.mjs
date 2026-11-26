@@ -342,12 +342,12 @@ try{
      const page=document.documentElement;
      return {width:innerWidth,client:page.clientWidth,scroll:page.scrollWidth,
        prompts:document.querySelectorAll('.worksheet dt').length,
-       css:[...document.styleSheets].some(sheet=>sheet.href?.includes('/worksheet.css?v=20261125-2')),
+        css:[...document.styleSheets].some(sheet=>sheet.href?.includes('/worksheet.css?v=20261126-1')),
        forms:document.querySelectorAll('form,textarea').length, calculatorHidden:document.getElementById('quote-controls').hidden};
    `);
    assert.equal(layout.width,width);
    assert.ok(layout.scroll<=layout.client+1);
-   assert.equal(layout.prompts,5);
+   assert.equal(layout.prompts,9);
    assert.equal(layout.forms,0);assert.equal(layout.calculatorHidden,true);
    assert.ok(layout.css);
    if(width===1280){
