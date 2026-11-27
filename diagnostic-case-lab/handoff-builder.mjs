@@ -1,6 +1,6 @@
 // Offline-only diagnostic report packaging. No customer messages, checkout, or network I/O.
 import { createHash } from 'node:crypto';
-import { mkdir, realpath, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, realpath, writeFile } from 'node:fs/promises';
 import { basename, dirname, isAbsolute, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -215,6 +215,29 @@ export async function resolvePrivateHandoffPath(path) {
   return physicalTarget;
 }
 
+export async function verifyHandoffPackage(reportPath) {
+  const report = await resolvePrivateHandoffPath(reportPath);
+  const directory = dirname(report);
+  const manifestPath = await resolvePrivateHandoffPath(join(directory, 'manifest.json'));
+  const [html, manifestText] = await Promise.all([readFile(report), readFile(manifestPath, 'utf8')]);
+  const manifest = JSON.parse(manifestText);
+  if (!manifest || manifest.schema !== 'wilke-one-issue-private-handoff-v1' ||
+      manifest.publicRelease !== false || manifest.externalSideEffects !== false ||
+      manifest.deliveredToCustomer !== false || manifest.customerAcceptanceRecorded !== false ||
+      manifest.paymentVerified !== false) {
+    throw new Error('Expected a private draft manifest with unconfirmed delivery, acceptance, and payment');
+  }
+  const reportSha256 = sha256(html);
+  if (reportSha256 !== manifest.reportHtmlSha256) throw new Error('Report HTML hash does not match the manifest');
+  let checklistSha256 = null;
+  if (Object.hasOwn(manifest, 'deliveryChecklistSha256')) {
+    const checklistPath = await resolvePrivateHandoffPath(join(directory, 'delivery-checklist.md'));
+    checklistSha256 = sha256(await readFile(checklistPath));
+    if (checklistSha256 !== manifest.deliveryChecklistSha256) throw new Error('Delivery checklist hash does not match the manifest');
+  }
+  return { reportSha256, checklistSha256 };
+}
+
 export async function writeHandoffPackage(raw, outDir, { css, preparedAt = new Date().toISOString() } = {}) {
   const report = validateReportInput(raw);
   if (typeof css !== 'string' || !css.includes('@media print')) throw new Error('Local printable report CSS required');
@@ -224,15 +247,6 @@ export async function writeHandoffPackage(raw, outDir, { css, preparedAt = new D
   const html = renderReportHtml(report, audit, css, preparedAt);
   const evidenceHash = sha256(JSON.stringify(report));
   const reportHash = sha256(html);
-  const manifest = {
-    schema: 'wilke-one-issue-private-handoff-v1', generatedAt: preparedAt,
-    classification: report.classification, reference: report.reference, issueType: report.issueType,
-    normalizedInputSha256: evidenceHash, reportHtmlSha256: reportHash,
-    evidenceCount: report.evidence.length, audit,
-    privacy: 'heuristic redaction check passed; manual authorized review still required',
-    publicRelease: false, externalSideEffects: false, deliveredToCustomer: false,
-    customerAcceptanceRecorded: false, paymentVerified: false, independentSourceVerification: false
-  };
   const checklist = `# ${report.reference} — PRIVATE handoff checklist\n\n` +
     `- [ ] Verify real customer/system owner and scope acceptance in the agreed private channel.\n` +
     `- [ ] Verify each evidence reference against the original authorized system; this generator cannot.\n` +
@@ -244,9 +258,18 @@ export async function writeHandoffPackage(raw, outDir, { css, preparedAt = new D
     `- [ ] Reconcile payment from a real processor/marketplace event; do not infer from report.\n` +
     `- [ ] Retain/delete sanitized artifacts on the agreed schedule.\n\n` +
     `Prepared only at ${preparedAt}; this tool sent nothing and confirmed no payment.\n`;
+  const manifest = {
+    schema: 'wilke-one-issue-private-handoff-v1', generatedAt: preparedAt,
+    classification: report.classification, reference: report.reference, issueType: report.issueType,
+    normalizedInputSha256: evidenceHash, reportHtmlSha256: reportHash,
+    deliveryChecklistSha256: sha256(checklist), evidenceCount: report.evidence.length, audit,
+    privacy: 'heuristic redaction check passed; manual authorized review still required',
+    publicRelease: false, externalSideEffects: false, deliveredToCustomer: false,
+    customerAcceptanceRecorded: false, paymentVerified: false, independentSourceVerification: false
+  };
   await mkdir(target); // Fail closed instead of overwriting an existing handoff.
   await writeFile(join(target, 'report.html'), html, { flag: 'wx' });
-  await writeFile(join(target, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n', { flag: 'wx' });
   await writeFile(join(target, 'delivery-checklist.md'), checklist, { flag: 'wx' });
+  await writeFile(join(target, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n', { flag: 'wx' });
   return { target, manifest, outputFiles: ['report.html', 'manifest.json', 'delivery-checklist.md'] };
 }
