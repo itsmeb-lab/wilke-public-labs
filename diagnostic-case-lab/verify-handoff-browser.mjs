@@ -6,10 +6,10 @@ import { spawn } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { access, mkdir, mkdtemp, readFile, rm, stat, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
-import { dirname, join } from 'node:path';
+import { join } from 'node:path';
 import { setTimeout as pause } from 'node:timers/promises';
 import { pathToFileURL } from 'node:url';
-import { resolvePrivateHandoffPath } from './handoff-builder.mjs';
+import { resolvePrivateHandoffPath, verifyHandoffPackage } from './handoff-builder.mjs';
 
 const arg = name => { const i = process.argv.indexOf(name); return i < 0 ? null : process.argv[i + 1]; };
 const report = arg('--report');
@@ -112,13 +112,9 @@ async function checkViewport(width) {
 }
 
 try {
-  const html = await readFile(htmlPath);
-  const manifest = JSON.parse(await readFile(join(dirname(htmlPath), 'manifest.json'), 'utf8'));
-  assert.equal(sha256(html), manifest.reportHtmlSha256, 'must verify exact generated report hash');
-  assert.equal(manifest.deliveredToCustomer, false);
-  assert.equal(manifest.customerAcceptanceRecorded, false);
-  assert.equal(manifest.paymentVerified, false);
-  summary.reportSha256 = sha256(html);
+  const integrity = await verifyHandoffPackage(htmlPath);
+  summary.reportSha256 = integrity.reportSha256;
+  summary.checklistSha256 = integrity.checklistSha256;
   const chrome = await installedChrome();
   browserProcess = spawn(chrome, ['--headless=new', '--no-first-run', '--no-default-browser-check',
     '--disable-background-networking', '--disable-extensions', '--disable-sync',
