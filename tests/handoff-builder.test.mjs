@@ -2,11 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash, randomUUID } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { mkdtemp, readFile, rm, rmdir, stat, symlink } from 'node:fs/promises';
+import { appendFile, mkdtemp, readFile, rm, rmdir, stat, symlink, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { auditClaims, renderReportHtml, resolvePrivateHandoffPath, validateReportInput, writeHandoffPackage } from '../diagnostic-case-lab/handoff-builder.mjs';
+import { auditClaims, renderReportHtml, resolvePrivateHandoffPath, validateReportInput, verifyHandoffPackage, writeHandoffPackage } from '../diagnostic-case-lab/handoff-builder.mjs';
 
 const repo = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const raw = JSON.parse(await readFile(new URL('../diagnostic-case-lab/fixtures/synthetic-false-success.json', import.meta.url), 'utf8'));
@@ -266,4 +266,42 @@ test('the actual CLI creates the same truthful, untransmitted package', async ()
     assert.equal(manifest.audit.verdict, 'CONTRADICTED SUCCESS CLAIM');
     assert.equal(manifest.publicRelease, false);
   } finally { await rm(scratch, { recursive: true, force: true }); }
+});
+
+test('offline integrity verifies the report and checklist bytes and rejects edits to either', async () => {
+  const scratch = await mkdtemp(join(tmpdir(), 'atlas-l04-integrity-'));
+  const directory = join(scratch, 'private-report');
+  const html = join(directory, 'report.html');
+  const checklist = join(directory, 'delivery-checklist.md');
+  try {
+    const { manifest } = await writeHandoffPackage(clone(), directory, { css });
+    assert.deepEqual(await verifyHandoffPackage(html), {
+      reportSha256: manifest.reportHtmlSha256, checklistSha256: manifest.deliveryChecklistSha256
+    });
+    const saved = await readFile(checklist);
+    await appendFile(checklist, '\nSynthetic edit.\n');
+    await assert.rejects(verifyHandoffPackage(html), /Delivery checklist hash does not match/);
+    await writeFile(checklist, saved);
+    await appendFile(html, '\n<!-- Synthetic edit. -->\n');
+    await assert.rejects(verifyHandoffPackage(html), /Report HTML hash does not match/);
+  } finally {
+    await clearSyntheticHandoff(directory);
+    await rmdir(scratch);
+  }
+});
+
+test('a legacy HTML-only manifest keeps its checklist integrity unknown', async () => {
+  const scratch = await mkdtemp(join(tmpdir(), 'atlas-l04-legacy-'));
+  const directory = join(scratch, 'private-report');
+  try {
+    const { manifest } = await writeHandoffPackage(clone(), directory, { css });
+    delete manifest.deliveryChecklistSha256;
+    await writeFile(join(directory, 'manifest.json'), JSON.stringify(manifest));
+    assert.deepEqual(await verifyHandoffPackage(join(directory, 'report.html')), {
+      reportSha256: manifest.reportHtmlSha256, checklistSha256: null
+    });
+  } finally {
+    await clearSyntheticHandoff(directory);
+    await rmdir(scratch);
+  }
 });
