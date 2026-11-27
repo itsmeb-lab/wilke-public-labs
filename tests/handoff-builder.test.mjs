@@ -1,12 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createHash } from 'node:crypto';
+import { createHash, randomUUID } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { mkdtemp, readFile, rm, stat } from 'node:fs/promises';
+import { mkdtemp, readFile, rm, rmdir, stat, symlink } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { auditClaims, renderReportHtml, validateReportInput, writeHandoffPackage } from '../diagnostic-case-lab/handoff-builder.mjs';
+import { auditClaims, renderReportHtml, resolvePrivateHandoffPath, validateReportInput, writeHandoffPackage } from '../diagnostic-case-lab/handoff-builder.mjs';
 
 const repo = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const raw = JSON.parse(await readFile(new URL('../diagnostic-case-lab/fixtures/synthetic-false-success.json', import.meta.url), 'utf8'));
@@ -217,6 +217,39 @@ test('Chrome report verifier refuses private artifacts inside public repository 
 test('refuses accidental output into the public Git repository', async () => {
   await assert.rejects(writeHandoffPackage(clone(), join(repo, 'public-evidence-should-not-exist'), { css }),
     /outside the public Git repository/);
+});
+
+async function clearSyntheticHandoff(directory) {
+  for (const name of ['report.html', 'manifest.json', 'delivery-checklist.md']) {
+    await rm(join(directory, name), { force: true });
+  }
+  try { await rmdir(directory); } catch (error) { if (error.code !== 'ENOENT') throw error; }
+}
+
+test('a dot-prefixed directory name cannot pass as a parent traversal', async () => {
+  const destination = join(repo, '..synthetic-private-' + randomUUID());
+  try {
+    await assert.rejects(writeHandoffPackage(clone(), destination, { css }), /outside the public Git repository/);
+  } finally {
+    await clearSyntheticHandoff(destination);
+  }
+});
+
+test('a private-looking alias into the public checkout is refused for reads and writes', async () => {
+  const scratch = await mkdtemp(join(tmpdir(), 'atlas-l04-alias-'));
+  const alias = join(scratch, 'synthetic-checkout-alias');
+  const name = 'synthetic-private-' + randomUUID();
+  try {
+    await symlink(repo, alias, process.platform === 'win32' ? 'junction' : 'dir');
+    await assert.rejects(writeHandoffPackage(clone(), join(alias, name), { css }), /outside the public Git repository/);
+    await assert.rejects(resolvePrivateHandoffPath(join(alias, 'README.md')), /outside the public Git repository/);
+    await assert.rejects(resolvePrivateHandoffPath(join(alias, name, 'nested')), /outside the public Git repository/);
+    await assert.rejects(stat(join(repo, name)), { code: 'ENOENT' });
+  } finally {
+    await clearSyntheticHandoff(join(repo, name));
+    await rm(alias, { force: true });
+    await rmdir(scratch);
+  }
 });
 
 test('the actual CLI creates the same truthful, untransmitted package', async () => {
