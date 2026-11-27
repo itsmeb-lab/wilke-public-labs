@@ -12,6 +12,8 @@ npm run build:handoff -- --input diagnostic-case-lab/fixtures/synthetic-false-su
 
 Outputs are `report.html`, `manifest.json` and `delivery-checklist.md`. The fictional case is labeled `SYNTHETIC TEACHING REPORT · NOT A CLIENT CASE`. The claim audit detects HTTP 200 + rejected application + zero saved records + a misleading Sent message. Recipient delivery stays **not tested**. No production database, inbox or customer has been examined.
 
+The builder and the browser verifier resolve Windows junctions and symbolic links before accepting a path. Use a private destination whose resolved location is outside the public checkout.
+
 For independent installed-Chrome rendering, run `npm run verify:handoff -- --report <private-output>/report.html --out-dir <private-receipt-root>`. The offline-only CDP check compares the HTML hash to the manifest, checks 320px/390px/1280px layouts, keyboard focus and no external requests, then prints an actual PDF and writes PNG/JSON receipts. It neither opens the real inquiry nor sends a report.
 
 ## Real one-issue job, after the actual approvals

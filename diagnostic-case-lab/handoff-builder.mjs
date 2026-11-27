@@ -1,7 +1,7 @@
 // Offline-only diagnostic report packaging. No customer messages, checkout, or network I/O.
 import { createHash } from 'node:crypto';
-import { mkdir, writeFile } from 'node:fs/promises';
-import { dirname, isAbsolute, join, relative, resolve } from 'node:path';
+import { mkdir, realpath, writeFile } from 'node:fs/promises';
+import { basename, dirname, isAbsolute, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const SCHEMA = 'wilke-one-issue-report-input-v1';
@@ -191,14 +191,35 @@ export function renderReportHtml(record, audit, css, preparedAt) {
 
 function sha256(value) { return createHash('sha256').update(value).digest('hex').toUpperCase(); }
 
+function isInside(root, path) {
+  const delta = relative(root, path);
+  return !isAbsolute(delta) && delta !== '..' && !delta.startsWith('..' + sep);
+}
+
+async function resolveExistingAncestors(path) {
+  try {
+    return await realpath(path);
+  } catch (error) {
+    const parent = dirname(path);
+    if (error.code !== 'ENOENT' || parent === path) throw error;
+    return join(await resolveExistingAncestors(parent), basename(path));
+  }
+}
+
+export async function resolvePrivateHandoffPath(path) {
+  const target = resolve(path);
+  const reason = 'Private report and QA paths must stay outside the public Git repository';
+  if (isInside(REPO_ROOT, target)) throw new Error(reason);
+  const [physicalRepo, physicalTarget] = await Promise.all([realpath(REPO_ROOT), resolveExistingAncestors(target)]);
+  if (isInside(physicalRepo, physicalTarget)) throw new Error(reason);
+  return physicalTarget;
+}
+
 export async function writeHandoffPackage(raw, outDir, { css, preparedAt = new Date().toISOString() } = {}) {
   const report = validateReportInput(raw);
   if (typeof css !== 'string' || !css.includes('@media print')) throw new Error('Local printable report CSS required');
   if (Number.isNaN(Date.parse(preparedAt)) || !/Z$/.test(preparedAt)) throw new Error('preparedAt must be a UTC ISO timestamp');
-  const target = resolve(outDir);
-  const rel = relative(REPO_ROOT, target);
-  if (rel === '' || (!rel.startsWith('..') && !isAbsolute(rel)))
-    throw new Error('Private report output must be outside the public Git repository');
+  const target = await resolvePrivateHandoffPath(outDir);
   const audit = auditClaims(report);
   const html = renderReportHtml(report, audit, css, preparedAt);
   const evidenceHash = sha256(JSON.stringify(report));
